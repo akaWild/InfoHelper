@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="InfoHelper.Controls.HuPostflopAggressorIpHud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfoHelper.Controls"
+             xmlns:utils="clr-namespace:InfoHelper.Utils"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="160">
+    <UserControl.Resources>
+        <utils:BoolToGridRowHeightConverter x:Key="RowVisibilityConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="{Binding IsHiddenRow, Converter={StaticResource RowVisibilityConverter}}"/>
+        </Grid.RowDefinitions>
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" Text="Flop"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" Text="Turn"></local:CellControl>
+        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" Text="River"></local:CellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource CbCellHeaderStyle}" Text="CB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" Data="{Binding CB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="1" Data="{Binding CB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="1"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource CbCellHeaderStyle}" Text="FCBvR"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="2"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource CbCellHeaderStyle}" Text="...&amp;BB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="3" Style="{StaticResource EmptyCellStyle}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="3"></local:DataCellControl>
+    </Grid>
+</UserControl>
