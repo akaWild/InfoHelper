@@ -1,6 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:InfoHelper.Controls">
+    <!--WindowInfos-->
+    <Color x:Key="OkFrontWindowBackgroundColor">LimeGreen</Color>
+    <Color x:Key="OkBackWindowBackgroundColor">#859ACD32</Color>
+    <Color x:Key="WrongCaptionWindowBackgroundColor">DarkOrange</Color>
+    <Color x:Key="ErrorWindowBackgroundColor">Red</Color>
+
     <!--Borders-->
     <Style x:Key="CellBorderStyle" TargetType="controls:CellControl">
         <Setter Property="BorderBrush" Value="Black"/>

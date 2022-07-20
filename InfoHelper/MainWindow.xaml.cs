@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InfoHelper.StatsEntities;
+using InfoHelper.ViewModel;
+using InfoHelper.ViewModel.DataEntities;
+using InfoHelper.ViewModel.States;
 
 namespace InfoHelper
 {
@@ -25,11 +28,13 @@ namespace InfoHelper
         {
             InitializeComponent();
 
-            WindowEntity win = new WindowEntity();
+            ViewModelMain win = new ViewModelMain();
 
-            DataContext = win;
+            DataContext = win.ControlsState;
 
-            grid1.PostflopPanel.DataContext = win[0].PostflopHud;
+            grid1.PostflopPanel.DataContext = win.HudsParentStates[0].AggressorIpPostflopHudState;
+
+            winInfo.DataContext = win.WindowsInfoState;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -43,18 +48,33 @@ namespace InfoHelper
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
         {
-            PostflopHudEntity hpe = (PostflopHudEntity)grid1.PostflopPanel.DataContext;
+            //ViewModelStatsHud hpe = (ViewModelStatsHud)grid1.PostflopPanel.DataContext;
 
-            StatsCell dc = new StatsCell("CB_F");
+            //StatsCell dc = new StatsCell("CB_F");
 
-            Random rnd = new Random();
+            //Random rnd = new Random();
 
-            dc.Mades = rnd.Next(0, 100);
-            dc.Attempts = rnd.Next(0, 100);
+            //dc.Mades = rnd.Next(0, 100);
+            //dc.Attempts = rnd.Next(0, 100);
 
-            hpe.LoadData(new DataCell[] {dc});
+            //hpe.SetData(new DataCell[] { dc });
 
-            hpe.UpdateBindings();
+            //hpe.SetRows(new string[] { "IsHiddenRow" });
+
+            //hpe.UpdateBindings();
+
+            ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)winInfo.DataContext;
+
+            WindowInfo[] rects = new WindowInfo[3]
+            {
+                new WindowInfo(new Rect(10, 10, 100, 100), ViewModel.DataEntities.WindowState.OkBack, false),
+                new WindowInfo(new Rect(50, 50, 100, 100), ViewModel.DataEntities.WindowState.WrongCaption, false),
+                new WindowInfo(new Rect(200, 200, 50, 50), ViewModel.DataEntities.WindowState.OkFront, false),
+            };
+
+            vmwip.WinInfos = rects;
+
+            vmwip.UpdateBindings();
         }
     }
 }

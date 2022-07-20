@@ -68,28 +68,6 @@ namespace InfoHelper.Utils
         }
     }
 
-    public class ValueColorConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            int.TryParse(value?.ToString(), out int result);
-
-            return Brushes.Black;
-
-            //return result switch
-            //{
-            //    < 35 => Brushes.DeepSkyBlue,
-            //    < 65 => Brushes.Blue,
-            //    _ => Brushes.BlueViolet
-            //};
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
     public class BoolToGridRowHeightConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
