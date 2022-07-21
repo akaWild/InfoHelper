@@ -1,8 +1,10 @@
-﻿namespace InfoHelper.ViewModel.States
+﻿using System.Windows.Threading;
+
+namespace InfoHelper.ViewModel.States
 {
     public class ViewModelMain
     {
-        public ViewModelControlsState ControlsState { get; } = new ViewModelControlsState();
+        public ViewModelControlsState ControlsState { get; }
 
         public ViewModelWindowsInfoState WindowsInfoState { get; } = new ViewModelWindowsInfoState();
 
@@ -16,5 +18,10 @@
             new ViewModelHudsParent(),
             new ViewModelHudsParent()
         };
+
+        public ViewModelMain(Dispatcher dispatcher)
+        {
+            ControlsState = new ViewModelControlsState(dispatcher);
+        }
     }
 }

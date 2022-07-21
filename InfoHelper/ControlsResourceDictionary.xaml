@@ -1,17 +1,24 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="clr-namespace:InfoHelper.Controls">
+                    xmlns:controls="clr-namespace:InfoHelper.Controls"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
     <!--WindowInfos-->
-    <Color x:Key="OkFrontWindowBackgroundColor">LimeGreen</Color>
-    <Color x:Key="OkBackWindowBackgroundColor">#859ACD32</Color>
-    <Color x:Key="WrongCaptionWindowBackgroundColor">DarkOrange</Color>
-    <Color x:Key="ErrorWindowBackgroundColor">Red</Color>
+    <SolidColorBrush x:Key="OkFrontWindowBackgroundBrush">LimeGreen</SolidColorBrush>
+    <SolidColorBrush x:Key="OkBackWindowBackgroundBrush">#5032CD32</SolidColorBrush>
+    <SolidColorBrush x:Key="WrongCaptionFrontWindowBackgroundBrush">Orange</SolidColorBrush>
+    <SolidColorBrush x:Key="WrongCaptionBackWindowBackgroundBrush">#50FFA500</SolidColorBrush>
+    <SolidColorBrush x:Key="ErrorFrontWindowBackgroundBrush">Red</SolidColorBrush>
+    <SolidColorBrush x:Key="ErrorBackWindowBackgroundBrush">#50FF0000</SolidColorBrush>
+    <Pen x:Key="WindowBorderPen" Brush="Black" Thickness="0.5"></Pen>
+    <BitmapImage x:Key="HeroActingImage" UriSource="Resources/bell.png"></BitmapImage>
+    <system:Double x:Key="HeroActingImageSizeRatio">0.2</system:Double>
 
-    <!--Borders-->
+    <!--Border-->
     <Style x:Key="CellBorderStyle" TargetType="controls:CellControl">
         <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="BorderThickness" Value="1"/>
     </Style>
+    <!--Header-->
     <Style x:Key="CellHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Background" Value="Gold"/>

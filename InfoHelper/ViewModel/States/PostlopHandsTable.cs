@@ -1,6 +1,6 @@
 ﻿namespace InfoHelper.ViewModel.States
 {
-    public class ViewModelPostlopHandsTableState : ViewModelDeferredBindableHeaderedState
+    public class ViewModelPostlopHandsTableState : ViewModelDeferredBindableState
     {
     }
 }

@@ -100,15 +100,15 @@ namespace InfoHelper.StatsEntities
     {
         public GeneralStatsSet()
         {
-            Cells.Add(new ValueCell("Hands"));
-            Cells.Add(new StatsCell("Vpip"));
-            Cells.Add(new StatsCell("Pfr"));
-            Cells.Add(new StatsCell("AggFq_F"));
-            Cells.Add(new StatsCell("AggFq_T"));
-            Cells.Add(new StatsCell("AggFq_R"));
-            Cells.Add(new StatsCell("WentToSd"));
-            Cells.Add(new StatsCell("WonOnSd"));
-            Cells.Add(new ValueCell("EvBb"));
+            Cells.Add(new ValueCell("Hands", "Total hands played"));
+            Cells.Add(new StatsCell("Vpip", "Voluntarily put in the pot"));
+            Cells.Add(new StatsCell("Pfr", "Preflop raise"));
+            Cells.Add(new StatsCell("AggFq_F", "Aggression frequency flop"));
+            Cells.Add(new StatsCell("AggFq_T", "Aggression frequency turn"));
+            Cells.Add(new StatsCell("AggFq_R", "Aggression frequency river"));
+            Cells.Add(new StatsCell("WentToSd", "Went to showdown"));
+            Cells.Add(new StatsCell("WonOnSd", "Won at showdown"));
+            Cells.Add(new ValueCell("EvBb", "EvBb/100 hands"));
         }
     }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfoHelper.ViewModel.States
 {
-    public class ViewModelPreflopGtoState : ViewModelDeferredBindableHeaderedState
+    public class ViewModelPreflopGtoState : ViewModelDeferredBindableState
     {
     }
 }

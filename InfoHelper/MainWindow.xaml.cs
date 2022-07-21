@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel;
 using InfoHelper.ViewModel.DataEntities;
@@ -24,17 +26,21 @@ namespace InfoHelper
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly ViewModelMain _win;
+
         public MainWindow()
         {
             InitializeComponent();
 
-            ViewModelMain win = new ViewModelMain();
+            _win = new ViewModelMain(Dispatcher);
 
-            DataContext = win.ControlsState;
+            DataContext = _win.ControlsState;
 
-            grid1.PostflopPanel.DataContext = win.HudsParentStates[0].AggressorIpPostflopHudState;
+            grid1.PostflopPanel.DataContext = _win.HudsParentStates[0].AggressorIpPostflopHudState;
 
-            winInfo.DataContext = win.WindowsInfoState;
+            winInfo.DataContext = _win.WindowsInfoState;
+
+            FlushPicturesProgressBar.DataContext = _win.ControlsState.ProgressBarState;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -48,33 +54,100 @@ namespace InfoHelper
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
         {
-            //ViewModelStatsHud hpe = (ViewModelStatsHud)grid1.PostflopPanel.DataContext;
+            ViewModelStatsHud hpe = (ViewModelStatsHud)grid1.PostflopPanel.DataContext;
 
-            //StatsCell dc = new StatsCell("CB_F");
+            StatsCell dc = new StatsCell("CB_F", string.Empty);
 
-            //Random rnd = new Random();
+            Random rnd = new Random();
 
-            //dc.Mades = rnd.Next(0, 100);
-            //dc.Attempts = rnd.Next(0, 100);
+            int iterations = 4400;
 
-            //hpe.SetData(new DataCell[] { dc });
-
-            //hpe.SetRows(new string[] { "IsHiddenRow" });
-
-            //hpe.UpdateBindings();
-
-            ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)winInfo.DataContext;
-
-            WindowInfo[] rects = new WindowInfo[3]
+            for (int i = 0; i < iterations; i++)
             {
-                new WindowInfo(new Rect(10, 10, 100, 100), ViewModel.DataEntities.WindowState.OkBack, false),
-                new WindowInfo(new Rect(50, 50, 100, 100), ViewModel.DataEntities.WindowState.WrongCaption, false),
-                new WindowInfo(new Rect(200, 200, 50, 50), ViewModel.DataEntities.WindowState.OkFront, false),
-            };
+                if(rnd.Next(0, 2) == 1)
+                    dc.IncrementValue();
 
-            vmwip.WinInfos = rects;
+                dc.IncrementSample();
+            }
 
-            vmwip.UpdateBindings();
+            hpe.SetData(new DataCell[] { dc });
+
+            hpe.SetRows(new string[] { "IsHiddenRow" });
+
+            hpe.UpdateBindings();
+
+
+            //Worker worker = new Worker(_win);
+
+            //worker.DoWork();
+
+
+            //ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)winInfo.DataContext;
+
+            //Application.Current.Resources["ClientScreenWidth"] = 1920;
+            //Application.Current.Resources["ClientScreenHeight"] = 1040;
+
+            //WindowInfo[] rects = new WindowInfo[6]
+            //{
+            //    new WindowInfo(new Rect(0, 0, 714, 520), ViewModel.DataEntities.WindowState.OkFront, true),
+            //    new WindowInfo(new Rect(699, 0, 714, 520), ViewModel.DataEntities.WindowState.OkBack, false),
+            //    new WindowInfo(new Rect(1418, 0, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionFront, false),
+            //    new WindowInfo(new Rect(0, 500, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionBack, false),
+            //    new WindowInfo(new Rect(699, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorFront, true),
+            //    new WindowInfo(new Rect(1418, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorBack, true)
+            //};
+
+            //vmwip.WinInfos = rects;
+
+            //vmwip.UpdateBindings();
+        }
+    }
+
+    public class Worker
+    {
+        private ViewModelMain _main;
+
+        public Worker(ViewModelMain main)
+        {
+            _main = main;
+        }
+
+        public void DoWork()
+        {
+            ViewModelControlsState vmcs = _main.ControlsState;
+
+            Thread thread = new Thread((() =>
+            {
+
+                vmcs.SetError(string.Empty);
+
+                vmcs.BeginFlushingPictures();
+
+                ViewModelProgressBarState vmpbs = vmcs.ProgressBarState;
+
+                vmpbs.MinValue = 0;
+
+                vmpbs.MaxValue = 100;
+
+                vmpbs.Visible = true;
+
+                for (int i = 0; i < vmpbs.MaxValue; i++)
+                {
+                    vmpbs.Value = i;
+
+                    vmcs.SetError($"{Math.Round(i * 100d / vmpbs.MaxValue)}%", true);
+
+                    Thread.Sleep(50);
+                }
+
+                vmpbs.Visible = false;
+
+                vmcs.EndFlushingPictures();
+
+                vmcs.SetError(string.Empty);
+            }));
+
+            thread.Start();
         }
     }
 }

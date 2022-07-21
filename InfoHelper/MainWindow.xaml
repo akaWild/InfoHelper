@@ -5,8 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InfoHelper"
         xmlns:controls="clr-namespace:InfoHelper.Controls"
+        xmlns:utils="clr-namespace:InfoHelper.Utils"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"  WindowState="Maximized">
+    <Window.Resources>
+        <Style TargetType="Border">
+            <Setter Property="BorderBrush" Value="Black"></Setter>
+        </Style>
+        <utils:BoolToHiddenVisibilityConverter x:Key="BoolToHiddenVisibilityConverter"/>
+    </Window.Resources>
     <DockPanel LastChildFill="True" Background="Azure">
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Exit" Command="{Binding ExitCommand}"/>
@@ -25,21 +32,38 @@
                 <RowDefinition Height="10*"/>
                 <RowDefinition Height="10*"/>
             </Grid.RowDefinitions>
-            <Border Grid.ColumnSpan="4" BorderThickness="0, 1, 0, 1" BorderBrush="Black">
+            <Border Grid.ColumnSpan="4" BorderThickness="0, 1, 0, 1">
                 <Viewbox HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal">
                         <Button Margin="5" Command="{Binding StartStopCommand}" Content="{Binding StartButtonText, UpdateSourceTrigger=PropertyChanged}">
                         </Button>
-                        <Button Margin="0, 5, 5, 5" Click="ButtonBase_OnClick1" Command="{Binding SaveCommand}">Save</Button>
+                        <Button Margin="0, 5, 5, 5" Command="{Binding FlushPicturesCommand}" Click="ButtonBase_OnClick1">Save</Button>
+                        <CheckBox Margin="0, 5, 5, 5" Content="Save pictures" VerticalAlignment="Center" Command="{Binding SavePicturesCommand}">
+                            <CheckBox.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <Trigger Property="CheckBox.IsChecked" Value="True">
+                                            <Setter Property="CheckBox.Foreground" Value="Red"></Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </CheckBox.Style>
+                        </CheckBox>
+                        <ProgressBar Margin="0, 5, 5, 5" x:Name="FlushPicturesProgressBar" Width="150" Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                     Minimum="{Binding MinValue, UpdateSourceTrigger=PropertyChanged}" Maximum="{Binding MaxValue, UpdateSourceTrigger=PropertyChanged}" 
+                                     Value="{Binding Value, UpdateSourceTrigger=PropertyChanged}">
+
+                        </ProgressBar>
+                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="Red" Text="{Binding Error}"></TextBlock>
                     </StackPanel>
                 </Viewbox>
             </Border>
-            <Border Grid.Column="0" Grid.Row="1" BorderThickness="0, 0, 0, 1" BorderBrush="Black">
+            <Border Grid.Column="0" Grid.Row="1" BorderThickness="0, 0, 0, 1">
                 <controls:WindowsInfoPanel x:Name="winInfo" Data="{Binding WinInfos}">
 
                 </controls:WindowsInfoPanel>
             </Border>
-            <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  BorderThickness="1, 0, 1, 1" BorderBrush="Black">
+            <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  BorderThickness="1, 0, 1, 1">
                 <controls:HudsPanel x:Name="grid1">
                 </controls:HudsPanel>
             </Border>

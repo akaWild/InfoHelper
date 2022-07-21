@@ -19,26 +19,13 @@ namespace InfoHelper.Utils
 
             string defaultValue = "---";
 
-            if (data != null)
+            DataCell dataCell = (DataCell)data;
+
+            if (dataCell != null)
             {
                 int.TryParse(values[1].ToString(), out int precision);
 
-                int mades = 0, attempts = 0;
-
-                if (data is StatsCell sc)
-                {
-                    mades = sc.Mades;
-                    attempts = sc.Attempts;
-
-                    return attempts == 0 ? defaultValue : $"{Math.Round((double)mades * 100 / attempts, precision)}";
-                }
-
-                if (data is ValueCell vc)
-                {
-                    attempts = vc.Attempts;
-
-                    return attempts == 0 ? defaultValue : $"{Math.Round((double)attempts, precision)}";
-                }
+                defaultValue = dataCell.Sample == 0 ? defaultValue : $"{Math.Round(dataCell.CalculatedValue, precision)}";
             }
 
             return defaultValue;
@@ -50,19 +37,23 @@ namespace InfoHelper.Utils
         }
     }
 
-    public class AttemptsConverter : IValueConverter
+    public class AttemptsConverter : IMultiValueConverter
     {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null)
-                return 0;
+            object data = values[0];
 
-            ValueCell data = (ValueCell)value;
+            string defaultValue = string.Empty;
 
-            return data.Attempts < 100 ? data.Attempts : "++";
+            DataCell dataCell = (DataCell)data;
+
+            if(dataCell != null && (bool)values[1])
+                defaultValue = dataCell.Sample < 100 ? dataCell.Sample.ToString() : "++";
+
+            return defaultValue;
         }
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        public object[] ConvertBack(object value, Type[] targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
         }
@@ -81,4 +72,16 @@ namespace InfoHelper.Utils
         }
     }
 
+    public class BoolToHiddenVisibilityConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return ((bool)value) ? Visibility.Visible : Visibility.Hidden;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

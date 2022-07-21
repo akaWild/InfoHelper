@@ -1,6 +1,6 @@
 ﻿namespace InfoHelper.ViewModel.States
 {
-    public class ViewModelPreflopMatrixState : ViewModelDeferredBindableHeaderedState
+    public class ViewModelPreflopMatrixState : ViewModelDeferredBindableState
     {
     }
 }

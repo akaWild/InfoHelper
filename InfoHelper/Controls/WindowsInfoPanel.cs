@@ -77,27 +77,69 @@ namespace InfoHelper.Controls
             if(Data == null)
                 return;
 
-            object GetBackgroundColor (WindowState winState)
+            object GetBackgroundBrush(WindowState winState)
             {
                 return winState switch
                 {
-                    WindowState.OkFront => Application.Current.TryFindResource("OkFrontWindowBackgroundColor"),
-                    WindowState.OkBack => Application.Current.TryFindResource("OkBackWindowBackgroundColor"),
-                    WindowState.WrongCaption => Application.Current.TryFindResource("WrongCaptionWindowBackgroundColor"),
-                    WindowState.Error => Application.Current.TryFindResource("ErrorWindowBackgroundColor"),
+                    WindowState.OkFront => Application.Current.TryFindResource("OkFrontWindowBackgroundBrush"),
+                    WindowState.OkBack => Application.Current.TryFindResource("OkBackWindowBackgroundBrush"),
+                    WindowState.WrongCaptionFront => Application.Current.TryFindResource("WrongCaptionFrontWindowBackgroundBrush"),
+                    WindowState.WrongCaptionBack => Application.Current.TryFindResource("WrongCaptionBackWindowBackgroundBrush"),
+                    WindowState.ErrorFront => Application.Current.TryFindResource("ErrorFrontWindowBackgroundBrush"),
+                    WindowState.ErrorBack => Application.Current.TryFindResource("ErrorBackWindowBackgroundBrush"),
                     _ => null
                 };
             }
 
             for (int i = 0; i < Data.Length; i++)
             {
-                object colorResx = GetBackgroundColor(Data[i].WindowState);
+                object brushResx = GetBackgroundBrush(Data[i].WindowState);
+                object penResx = Application.Current.TryFindResource("WindowBorderPen");
 
-                Color color;
-                if (colorResx != null)
-                    color = (Color)colorResx;
+                SolidColorBrush brush = null;
+                Pen pen = null;
 
-                drawingContext.DrawRectangle(new SolidColorBrush(color), new Pen(Brushes.Black, 1), Data[i].Rectangle);
+                if (brushResx != null)
+                    brush = (SolidColorBrush)brushResx;
+
+                if (penResx != null)
+                    pen = (Pen)penResx;
+
+                object clientScreenWidthResx = Application.Current.Resources["ClientScreenWidth"], clientScreenHeight = Application.Current.Resources["ClientScreenHeight"];
+
+                double xRatio = 0, yRatio = 0;
+
+                if (clientScreenWidthResx != null && clientScreenHeight != null)
+                {
+                    xRatio = RenderSize.Width / (int)clientScreenWidthResx;
+                    yRatio = RenderSize.Height / (int)clientScreenHeight;
+                }
+
+                Rect scaledRect = new Rect(Data[i].Rectangle.X * xRatio, Data[i].Rectangle.Y * yRatio, Data[i].Rectangle.Width * xRatio, Data[i].Rectangle.Height * yRatio);
+
+                drawingContext.DrawRectangle(brush, pen, scaledRect);
+
+                if(!Data[i].IsHeroActing)
+                    continue;
+
+                object imageResx = Application.Current.TryFindResource("HeroActingImage");
+                object imageSizeResx = Application.Current.TryFindResource("HeroActingImageSizeRatio");
+
+                BitmapImage image = null;
+
+                if (imageResx != null)
+                    image = (BitmapImage)imageResx;
+
+                int padding = 5;
+
+                if (imageSizeResx != null)
+                {
+                    double imageSize = (double)imageSizeResx * scaledRect.Width;
+
+                    Rect imageRect = new Rect(scaledRect.X + scaledRect.Width - padding - imageSize, scaledRect.Y + padding, imageSize, imageSize);
+
+                    drawingContext.DrawImage(image, imageRect);
+                }
             }
         }
     }

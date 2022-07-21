@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Controls.Primitives;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
@@ -12,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InfoHelper.StatsEntities;
 
 namespace InfoHelper.Controls
 {
@@ -44,11 +46,60 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:DataCellCustomControl/>
     ///
     /// </summary>
-    public class DataCellControl : ValueCellControl
+    public class DataCellControl : CellControl
     {
+        protected static Popup Popup { get; }
+
         static DataCellControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(DataCellControl), new FrameworkPropertyMetadata(typeof(DataCellControl)));
+
+            Popup = new Popup
+            {
+                StaysOpen = false,
+                Child = new Border() { BorderBrush = Brushes.Black, BorderThickness = new Thickness(1) },
+                Width = 300,
+                Height = 300
+            };
+        }
+
+        public DataCell Data
+        {
+            get => (DataCell)GetValue(DataProperty);
+            set => SetValue(DataProperty, value);
+        }
+
+        public static readonly DependencyProperty DataProperty =
+            DependencyProperty.Register("Data", typeof(DataCell), typeof(DataCellControl), new PropertyMetadata(null));
+
+        public int Precision
+        {
+            get => (int)GetValue(PrecisionProperty);
+            set => SetValue(PrecisionProperty, value);
+        }
+
+        public static readonly DependencyProperty PrecisionProperty =
+            DependencyProperty.Register("Precision", typeof(int), typeof(DataCellControl), new PropertyMetadata(0));
+
+        public bool ShowSample
+        {
+            get => (bool)GetValue(ShowSampleProperty);
+            set => SetValue(ShowSampleProperty, value);
+        }
+
+        public static readonly DependencyProperty ShowSampleProperty =
+            DependencyProperty.Register("ShowSample", typeof(bool), typeof(DataCellControl), new PropertyMetadata(true));
+
+        protected override void OnMouseLeftButtonUp(MouseButtonEventArgs e)
+        {
+            base.OnMouseLeftButtonUp(e);
+
+            Border popupContent = (Border)Popup.Child;
+
+            popupContent.Child = new Canvas(){Background = Brushes.Coral};
+
+            Popup.Placement = PlacementMode.Mouse;
+            Popup.IsOpen = true;
         }
     }
 }

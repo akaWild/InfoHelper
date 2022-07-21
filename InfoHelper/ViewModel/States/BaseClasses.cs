@@ -7,7 +7,18 @@ namespace InfoHelper.ViewModel.States
 {
     public abstract class ViewModelStateBase : DynamicObject, INotifyPropertyChanged
     {
-        public bool Visible { get; set; }
+        protected bool _visible;
+
+        public virtual bool Visible
+        {
+            get => _visible;
+            set
+            {
+                _visible = value;
+
+                OnPropertyChanged();
+            }
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -20,6 +31,12 @@ namespace InfoHelper.ViewModel.States
 
     public abstract class ViewModelDeferredBindableState : ViewModelStateBase
     {
+        public override bool Visible
+        {
+            get => _visible;
+            set => _visible = value;
+        }
+
         public void UpdateBindings()
         {
             OnPropertyChanged(string.Empty);

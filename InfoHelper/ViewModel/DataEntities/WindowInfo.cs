@@ -27,7 +27,9 @@ namespace InfoHelper.ViewModel.DataEntities
     {
         OkFront,
         OkBack,
-        WrongCaption,
-        Error
+        WrongCaptionFront,
+        WrongCaptionBack,
+        ErrorFront,
+        ErrorBack
     }
 }

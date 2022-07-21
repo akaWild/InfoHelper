@@ -17,6 +17,7 @@ namespace InfoHelper.Utils
             add => CommandManager.RequerySuggested += value;
             remove => CommandManager.RequerySuggested -= value;
         }
+
         public Command(Action<object> execute, Func<object, bool> canExecute = null)
         {
             _execute = execute;
