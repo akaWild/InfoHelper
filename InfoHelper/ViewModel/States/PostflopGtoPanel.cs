@@ -1,6 +1,6 @@
 ﻿namespace InfoHelper.ViewModel.States
 {
-    public class ViewModelPostflopGtoState : ViewModelDeferredBindableState
+    public class ViewModelPostflopGtoState : ViewModelDeferredBindableHeaderedState
     {
     }
 }

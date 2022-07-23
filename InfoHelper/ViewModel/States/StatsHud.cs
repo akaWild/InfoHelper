@@ -8,7 +8,7 @@ using InfoHelper.StatsEntities;
 
 namespace InfoHelper.ViewModel.States
 {
-    public class ViewModelStatsHud : ViewModelDeferredBindableHeaderedState
+    public class ViewModelStatsHud : ViewModelDeferredBindableState
     {
         private readonly Dictionary<string, DataCell> _cells = new Dictionary<string, DataCell>();
 

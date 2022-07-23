@@ -46,28 +46,11 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:WindowsInfoPanel/>
     ///
     /// </summary>
-    public class WindowsInfoPanel : Control
+    public class WindowsInfoPanel : BaseControl
     {
         static WindowsInfoPanel()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(WindowsInfoPanel), new FrameworkPropertyMetadata(typeof(WindowsInfoPanel)));
-        }
-
-        public WindowInfo[] Data
-        {
-            get => (WindowInfo[])GetValue(DataProperty);
-            set => SetValue(DataProperty, value);
-        }
-
-        public static readonly DependencyProperty DataProperty =
-            DependencyProperty.Register("Data", typeof(WindowInfo[]), typeof(WindowsInfoPanel), new PropertyMetadata(null));
-
-        protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)
-        {
-            base.OnPropertyChanged(e);
-
-            if(e.Property == DataProperty)
-                InvalidateVisual();
         }
 
         protected override void OnRender(DrawingContext drawingContext)
@@ -91,9 +74,11 @@ namespace InfoHelper.Controls
                 };
             }
 
-            for (int i = 0; i < Data.Length; i++)
+            WindowInfo[] data = (WindowInfo[])Data;
+
+            for (int i = 0; i < data.Length; i++)
             {
-                object brushResx = GetBackgroundBrush(Data[i].WindowState);
+                object brushResx = GetBackgroundBrush(data[i].WindowState);
                 object penResx = Application.Current.TryFindResource("WindowBorderPen");
 
                 SolidColorBrush brush = null;
@@ -115,11 +100,11 @@ namespace InfoHelper.Controls
                     yRatio = RenderSize.Height / (int)clientScreenHeight;
                 }
 
-                Rect scaledRect = new Rect(Data[i].Rectangle.X * xRatio, Data[i].Rectangle.Y * yRatio, Data[i].Rectangle.Width * xRatio, Data[i].Rectangle.Height * yRatio);
+                Rect scaledRect = new Rect(data[i].Rectangle.X * xRatio, data[i].Rectangle.Y * yRatio, data[i].Rectangle.Width * xRatio, data[i].Rectangle.Height * yRatio);
 
                 drawingContext.DrawRectangle(brush, pen, scaledRect);
 
-                if(!Data[i].IsHeroActing)
+                if(!data[i].IsHeroActing)
                     continue;
 
                 object imageResx = Application.Current.TryFindResource("HeroActingImage");

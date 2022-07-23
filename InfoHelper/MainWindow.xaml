@@ -16,8 +16,8 @@
     </Window.Resources>
     <DockPanel LastChildFill="True" Background="Azure">
         <Menu DockPanel.Dock="Top">
-            <MenuItem Header="Exit" Command="{Binding ExitCommand}"/>
-            <MenuItem Header="Options" Command="{Binding OptionsCommand}"/>
+            <MenuItem Header="Exit" Command="{Binding ControlsState.ExitCommand}"/>
+            <MenuItem Header="Options" Command="{Binding ControlsState.OptionsCommand}"/>
         </Menu>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -35,10 +35,10 @@
             <Border Grid.ColumnSpan="4" BorderThickness="0, 1, 0, 1">
                 <Viewbox HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal">
-                        <Button Margin="5" Command="{Binding StartStopCommand}" Content="{Binding StartButtonText, UpdateSourceTrigger=PropertyChanged}">
+                        <Button Margin="5" Command="{Binding ControlsState.StartStopCommand}" Content="{Binding ControlsState.StartButtonText, UpdateSourceTrigger=PropertyChanged}">
                         </Button>
-                        <Button Margin="0, 5, 5, 5" Command="{Binding FlushPicturesCommand}" Click="ButtonBase_OnClick1">Save</Button>
-                        <CheckBox Margin="0, 5, 5, 5" Content="Save pictures" VerticalAlignment="Center" Command="{Binding SavePicturesCommand}">
+                        <Button Margin="0, 5, 5, 5" Command="{Binding ControlsState.FlushPicturesCommand}" Click="ButtonBase_OnClick1">Save</Button>
+                        <CheckBox Margin="0, 5, 5, 5" Content="Save pictures" VerticalAlignment="Center" Command="{Binding ControlsState.SavePicturesCommand}">
                             <CheckBox.Style>
                                 <Style>
                                     <Style.Triggers>
@@ -49,22 +49,27 @@
                                 </Style>
                             </CheckBox.Style>
                         </CheckBox>
-                        <ProgressBar Margin="0, 5, 5, 5" x:Name="FlushPicturesProgressBar" Width="150" Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                        <ProgressBar Margin="0, 5, 5, 5" Width="150" Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
                                      Minimum="{Binding MinValue, UpdateSourceTrigger=PropertyChanged}" Maximum="{Binding MaxValue, UpdateSourceTrigger=PropertyChanged}" 
                                      Value="{Binding Value, UpdateSourceTrigger=PropertyChanged}">
-
+                            <ProgressBar.DataContext>
+                                <Binding RelativeSource="{RelativeSource AncestorType={x:Type Window}}" Path="DataContext.ControlsState.ProgressBarState"/>
+                            </ProgressBar.DataContext>
                         </ProgressBar>
-                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="Red" Text="{Binding Error}"></TextBlock>
+                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="Red" Text="{Binding  ControlsState.Error}"></TextBlock>
                     </StackPanel>
                 </Viewbox>
             </Border>
             <Border Grid.Column="0" Grid.Row="1" BorderThickness="0, 0, 0, 1">
-                <controls:WindowsInfoPanel x:Name="winInfo" Data="{Binding WinInfos}">
+                <controls:WindowsInfoPanel Data="{Binding WindowsInfoState.WinInfos}">
 
                 </controls:WindowsInfoPanel>
             </Border>
             <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  BorderThickness="1, 0, 1, 1">
-                <controls:HudsPanel x:Name="grid1">
+                <controls:HudsPanel>
+                    <controls:HudsPanel.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type Window}}" Path="DataContext.HudsParentStates[0]"/>
+                    </controls:HudsPanel.DataContext>
                 </controls:HudsPanel>
             </Border>
         </Grid>

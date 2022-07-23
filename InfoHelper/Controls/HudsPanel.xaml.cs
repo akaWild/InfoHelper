@@ -25,8 +25,6 @@ namespace InfoHelper.Controls
             InitializeComponent();
         }
 
-        public UserControl PostflopPanel => postflopHud;
-
         protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
         {
             base.OnRenderSizeChanged(sizeInfo);

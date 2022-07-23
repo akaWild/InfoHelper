@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfoHelper.ViewModel.States
+namespace InfoHelper.StatsEntities
 {
-    public class ViewModelPreflopGtoState : ViewModelDeferredBindableHeaderedState
+    public class PostflopData
     {
     }
 }

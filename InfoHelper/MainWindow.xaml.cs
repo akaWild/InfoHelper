@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using InfoHelper.StatsEntities;
+using InfoHelper.Utils;
 using InfoHelper.ViewModel;
 using InfoHelper.ViewModel.DataEntities;
 using InfoHelper.ViewModel.States;
@@ -34,13 +35,7 @@ namespace InfoHelper
 
             _win = new ViewModelMain(Dispatcher);
 
-            DataContext = _win.ControlsState;
-
-            grid1.PostflopPanel.DataContext = _win.HudsParentStates[0].AggressorIpPostflopHudState;
-
-            winInfo.DataContext = _win.WindowsInfoState;
-
-            FlushPicturesProgressBar.DataContext = _win.ControlsState.ProgressBarState;
+            DataContext = _win;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -54,9 +49,77 @@ namespace InfoHelper
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
         {
-            ViewModelStatsHud hpe = (ViewModelStatsHud)grid1.PostflopPanel.DataContext;
+            ViewModelActionsState vmas = _win.HudsParentStates[0].ActionsState;
 
-            StatsCell dc = new StatsCell("CB_F", string.Empty);
+            vmas.Actions = @"xb/rcfr/bbrxf";
+
+            vmas.UpdateBindings();
+
+            ViewModelStatsHud hpe = _win.HudsParentStates[0].AggressorIpPostflopHudState;
+
+            ViewModelPreflopMatrixState vmpms = _win.HudsParentStates[0].PreflopMatrixState;
+
+            PreflopData cbData = new PreflopData();
+
+            cbData.AddHand("9c", "Jd");
+
+            cbData.AddHand("As", "2s");
+            cbData.AddHand("As", "2s");
+
+            cbData.AddHand("6c", "6h");
+            cbData.AddHand("6c", "6h");
+            cbData.AddHand("6c", "6h");
+
+            cbData.AddHand("2s", "4s");
+            cbData.AddHand("2s", "4s");
+            cbData.AddHand("2s", "4s");
+            cbData.AddHand("2s", "4s");
+
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+
+            vmpms.Header = "";
+            vmpms.PreflopData = cbData;
+
+            vmpms.UpdateBindings();
+
+            PreflopData cxData = new PreflopData();
+
+            cxData.AddHand("Kc", "Kd");
+
+            cxData.AddHand("5s", "8s");
+            cxData.AddHand("5s", "8s");
+
+            StatsCell cxCell = new StatsCell("CX_F", "Continuation check flop") { CellData = cxData };
+
+            StatsCell cbCell = new StatsCell("CB_F", "Continuation bet flop") { CellData = cbData, ConnectedCells = new StatsCell[] {cxCell}};
 
             Random rnd = new Random();
 
@@ -64,13 +127,13 @@ namespace InfoHelper
 
             for (int i = 0; i < iterations; i++)
             {
-                if(rnd.Next(0, 2) == 1)
-                    dc.IncrementValue();
+                if (rnd.Next(0, 2) == 1)
+                    cbCell.IncrementValue();
 
-                dc.IncrementSample();
+                cbCell.IncrementSample();
             }
 
-            hpe.SetData(new DataCell[] { dc });
+            hpe.SetData(new DataCell[] { cbCell });
 
             hpe.SetRows(new string[] { "IsHiddenRow" });
 
@@ -82,24 +145,24 @@ namespace InfoHelper
             //worker.DoWork();
 
 
-            //ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)winInfo.DataContext;
+            ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)_win.WindowsInfoState;
 
-            //Application.Current.Resources["ClientScreenWidth"] = 1920;
-            //Application.Current.Resources["ClientScreenHeight"] = 1040;
+            Application.Current.Resources["ClientScreenWidth"] = 1920;
+            Application.Current.Resources["ClientScreenHeight"] = 1040;
 
-            //WindowInfo[] rects = new WindowInfo[6]
-            //{
-            //    new WindowInfo(new Rect(0, 0, 714, 520), ViewModel.DataEntities.WindowState.OkFront, true),
-            //    new WindowInfo(new Rect(699, 0, 714, 520), ViewModel.DataEntities.WindowState.OkBack, false),
-            //    new WindowInfo(new Rect(1418, 0, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionFront, false),
-            //    new WindowInfo(new Rect(0, 500, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionBack, false),
-            //    new WindowInfo(new Rect(699, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorFront, true),
-            //    new WindowInfo(new Rect(1418, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorBack, true)
-            //};
+            WindowInfo[] rects = new WindowInfo[6]
+            {
+                new WindowInfo(new Rect(0, 0, 714, 520), ViewModel.DataEntities.WindowState.OkFront, true),
+                new WindowInfo(new Rect(699, 0, 714, 520), ViewModel.DataEntities.WindowState.OkBack, false),
+                new WindowInfo(new Rect(1418, 0, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionFront, false),
+                new WindowInfo(new Rect(0, 500, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionBack, false),
+                new WindowInfo(new Rect(699, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorFront, true),
+                new WindowInfo(new Rect(1418, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorBack, true)
+            };
 
-            //vmwip.WinInfos = rects;
+            vmwip.WinInfos = rects;
 
-            //vmwip.UpdateBindings();
+            vmwip.UpdateBindings();
         }
     }
 

@@ -2,6 +2,15 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:controls="clr-namespace:InfoHelper.Controls"
                     xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <!--Actions panel-->
+    <SolidColorBrush x:Key="ActionsPanelDefaultForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="ActionsPanelBackgroundBrush">Beige</SolidColorBrush>
+
+    <Style TargetType="controls:ActionsControl">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
     <!--WindowInfos-->
     <SolidColorBrush x:Key="OkFrontWindowBackgroundBrush">LimeGreen</SolidColorBrush>
     <SolidColorBrush x:Key="OkBackWindowBackgroundBrush">#5032CD32</SolidColorBrush>
@@ -12,6 +21,43 @@
     <Pen x:Key="WindowBorderPen" Brush="Black" Thickness="0.5"></Pen>
     <BitmapImage x:Key="HeroActingImage" UriSource="Resources/bell.png"></BitmapImage>
     <system:Double x:Key="HeroActingImageSizeRatio">0.2</system:Double>
+
+    <!--Preflop matrix-->
+    <SolidColorBrush x:Key="PreflopMatrixHeaderForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="PreflopMatrixHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
+    <SolidColorBrush x:Key="PreflopMatrixForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="PreflopMatrixBackgroundBrush">Beige</SolidColorBrush>
+    <Pen x:Key="PreflopMatrixBorderPen" Brush="Black" Thickness="1"></Pen>
+
+    <Style TargetType="controls:PreflopMatrixControl">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+    </Style>
+
+    <x:Array x:Key="PreflopMatrixValueForegroundColors" Type="SolidColorBrush">
+        <SolidColorBrush>Black</SolidColorBrush>
+        <!--<SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>-->
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+    </x:Array>
+    <x:Array x:Key="PreflopMatrixValueBackgroundColors" Type="SolidColorBrush">
+        <SolidColorBrush>#C8FFFF</SolidColorBrush>
+        <!--<SolidColorBrush>#76FFFF</SolidColorBrush>
+        <SolidColorBrush>#34FFFF</SolidColorBrush>-->
+        <SolidColorBrush>#00F1FF</SolidColorBrush>
+        <SolidColorBrush>#00AFFF</SolidColorBrush>
+        <SolidColorBrush>#006DFF</SolidColorBrush>
+        <SolidColorBrush>#002BFF</SolidColorBrush>
+        <SolidColorBrush>#0000E8</SolidColorBrush>
+        <SolidColorBrush>#0000A6</SolidColorBrush>
+        <SolidColorBrush>#000064</SolidColorBrush>
+    </x:Array>
 
     <!--Border-->
     <Style x:Key="CellBorderStyle" TargetType="controls:CellControl">
