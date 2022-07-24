@@ -44,7 +44,7 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:HeaderedControl/>
     ///
     /// </summary>
-    public class HeaderedControl : BaseControl
+    public class HeaderedControl : BaseDataControl
     {
         static HeaderedControl()
         {

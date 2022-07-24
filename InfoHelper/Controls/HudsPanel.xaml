@@ -4,8 +4,12 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:InfoHelper.Controls"
+             xmlns:utils="clr-namespace:InfoHelper.Utils"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+    <Grid.Resources>
+        <utils:NameControlForegroundConverter x:Key="NameControlForegroundConverter"/>
+    </Grid.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -13,14 +17,32 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel Grid.Column="0" >
-            <local:ActionsControl VerticalAlignment="Top" Margin="5" Data="{Binding Actions, UpdateSourceTrigger=PropertyChanged}">
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <local:ActionsControl Margin="5, 5, 5, 0" Data="{Binding Actions, UpdateSourceTrigger=PropertyChanged}" 
+                                  Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                 <local:ActionsControl.DataContext>
                     <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.ActionsState"/>
                 </local:ActionsControl.DataContext>
             </local:ActionsControl>
-        </StackPanel>
-        <local:HuPostflopAggressorIpHud Grid.Column="2" VerticalAlignment="Top" Margin="5">
+            <Border Grid.Row="1" Margin="5, 5, 5, 0" Style="{StaticResource NamePanelBorderStyle}" Background="{StaticResource NamePanelBackgroundBrush}" 
+                    Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                <Border.DataContext>
+                    <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.NameState"/>
+                </Border.DataContext>
+                <Viewbox Stretch="Uniform" Margin="2, 0, 2, 0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <TextBlock Foreground="{Binding IsConfirmed, Converter={StaticResource NameControlForegroundConverter}, UpdateSourceTrigger=PropertyChanged}"  
+                               Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}">
+                    </TextBlock>
+                </Viewbox>
+            </Border>
+        </Grid>
+        <local:HuPostflopAggressorIpHud Grid.Column="2" VerticalAlignment="Top" Margin="5" 
+                                        Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:HuPostflopAggressorIpHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.AggressorIpPostflopHudState"/>
             </local:HuPostflopAggressorIpHud.DataContext>
@@ -31,12 +53,14 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <local:PreflopMatrixControl Grid.Row="0" Margin="0, 5, 5, 2.5" Data="{Binding PreflopData, UpdateSourceTrigger=PropertyChanged}">
+                <local:PreflopMatrixControl Grid.Row="0" Margin="0, 5, 5, 2.5" Data="{Binding PreflopData, UpdateSourceTrigger=PropertyChanged}" 
+                                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                     <local:PreflopMatrixControl.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PreflopMatrixState"/>
                     </local:PreflopMatrixControl.DataContext>
                 </local:PreflopMatrixControl>
-                <local:PreflopMatrixControl Grid.Row="1" Margin="0, 2.5, 5, 5" Data="{Binding PreflopData, UpdateSourceTrigger=PropertyChanged}">
+                <local:PreflopMatrixControl Grid.Row="1" Margin="0, 2.5, 5, 5" Data="{Binding PreflopData, UpdateSourceTrigger=PropertyChanged}"
+                                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                     <local:PreflopMatrixControl.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PreflopMatrixState"/>
                     </local:PreflopMatrixControl.DataContext>

@@ -9,6 +9,18 @@
     <Style TargetType="controls:ActionsControl">
         <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+    </Style>
+
+    <!--Name panel-->
+    <SolidColorBrush x:Key="NamePanelConfirmedForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="NamePanelUnconfirmedForegroundBrush">Red</SolidColorBrush>
+    <SolidColorBrush x:Key="NamePanelBackgroundBrush">Beige</SolidColorBrush>
+
+    <Style x:Key="NamePanelBorderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
     </Style>
 
     <!--WindowInfos-->
@@ -26,12 +38,13 @@
     <SolidColorBrush x:Key="PreflopMatrixHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PreflopMatrixHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
     <SolidColorBrush x:Key="PreflopMatrixForegroundBrush">Black</SolidColorBrush>
-    <SolidColorBrush x:Key="PreflopMatrixBackgroundBrush">Beige</SolidColorBrush>
+    <SolidColorBrush x:Key="PreflopMatrixBackgroundBrush">BlanchedAlmond</SolidColorBrush>
     <Pen x:Key="PreflopMatrixBorderPen" Brush="Black" Thickness="1"></Pen>
 
     <Style TargetType="controls:PreflopMatrixControl">
         <Setter Property="BorderBrush" Value="Black"/>
         <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
     </Style>
 
     <x:Array x:Key="PreflopMatrixValueForegroundColors" Type="SolidColorBrush">
@@ -59,11 +72,16 @@
         <SolidColorBrush>#000064</SolidColorBrush>
     </x:Array>
 
+    <!--Stats control cells-->
     <!--Border-->
     <Style x:Key="CellBorderStyle" TargetType="controls:CellControl">
         <Setter Property="BorderBrush" Value="Black"/>
-        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
     </Style>
+    <Thickness x:Key="CellTopLeftBorderThickness">1, 1, 1, 1</Thickness>
+    <Thickness x:Key="CellTopMiddleRightBorderThickness">0, 1, 1, 1</Thickness>
+    <Thickness x:Key="CellMiddleBottomLeftBorderThickness">1, 0, 1, 1</Thickness>
+    <Thickness x:Key="CellMiddleBottomMiddleRightBorderThickness">0, 0, 1, 1</Thickness>
     <!--Header-->
     <Style x:Key="CellHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>

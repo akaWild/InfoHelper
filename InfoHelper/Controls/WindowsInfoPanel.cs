@@ -46,7 +46,7 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:WindowsInfoPanel/>
     ///
     /// </summary>
-    public class WindowsInfoPanel : BaseControl
+    public class WindowsInfoPanel : BaseDataControl
     {
         static WindowsInfoPanel()
         {

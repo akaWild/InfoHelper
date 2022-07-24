@@ -12,7 +12,6 @@
         <Style TargetType="Border">
             <Setter Property="BorderBrush" Value="Black"></Setter>
         </Style>
-        <utils:BoolToHiddenVisibilityConverter x:Key="BoolToHiddenVisibilityConverter"/>
     </Window.Resources>
     <DockPanel LastChildFill="True" Background="Azure">
         <Menu DockPanel.Dock="Top">

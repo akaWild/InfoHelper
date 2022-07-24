@@ -23,21 +23,21 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="{Binding IsHiddenRow, Converter={StaticResource RowVisibilityConverter}}"/>
         </Grid.RowDefinitions>
-        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" Text="Flop"></local:CellControl>
-        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" Text="Turn"></local:CellControl>
-        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" Text="River"></local:CellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource CbCellHeaderStyle}" Text="CB"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="1" Data="{Binding CB_F}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="1" Data="{Binding CB_F}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="3" Grid.Row="1"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource CbCellHeaderStyle}" Text="FCBvR"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="2"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="2"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="3" Grid.Row="2"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource CbCellHeaderStyle}" Text="...&amp;BB"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="3" Style="{StaticResource EmptyCellStyle}"></local:CellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="3"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="3" Grid.Row="3"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Flop"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Turn"></local:CellControl>
+        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="River"></local:CellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource CbCellHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="CB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding CB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding CB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource CbCellHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FCBvR"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource CbCellHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;BB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="3" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:DataCellControl>
     </Grid>
 </UserControl>

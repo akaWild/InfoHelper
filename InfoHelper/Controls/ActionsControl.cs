@@ -45,7 +45,7 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:ActionsControl/>
     ///
     /// </summary>
-    public class ActionsControl : BaseControl
+    public class ActionsControl : BaseDataControl
     {
         private readonly Typeface _typeFace = new Typeface("Verdana");
 
@@ -54,16 +54,11 @@ namespace InfoHelper.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ActionsControl), new FrameworkPropertyMetadata(typeof(ActionsControl)));
         }
 
-        protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
-        {
-            Height = (double)Application.Current.Resources["CellHeight"];
-        }
-
         protected override void OnRender(DrawingContext drawingContext)
         {
             base.OnRender(drawingContext);
 
-            SolidColorBrush defaultForegroundColor = (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixForegroundBrush");
+            SolidColorBrush defaultForegroundColor = (SolidColorBrush)Application.Current.TryFindResource("ActionsPanelDefaultForegroundBrush");
             SolidColorBrush defaultBackgroundColor = (SolidColorBrush)Application.Current.TryFindResource("ActionsPanelBackgroundBrush");
 
             drawingContext.DrawRectangle(defaultBackgroundColor, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, RenderSize.Height)));
@@ -73,10 +68,10 @@ namespace InfoHelper.Controls
                 return symbol switch
                 {
                     'f' => Brushes.Red,
-                    'x' => Brushes.Orange,
+                    'x' => Brushes.DarkOrange,
                     'c' => Brushes.ForestGreen,
                     'b' => Brushes.DodgerBlue,
-                    'r' => Brushes.DarkMagenta,
+                    'r' => Brushes.Magenta,
                     _ => defaultForegroundColor
                 };
             }
@@ -90,7 +85,7 @@ namespace InfoHelper.Controls
 
             foreach (char symbol in actions)
             {
-                FormattedText text = new FormattedText(symbol.ToString(), CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, RenderSize.Height, GetForegroundBrush(symbol), 1);
+                FormattedText text = new FormattedText(symbol.ToString(), CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, RenderSize.Height - 4, GetForegroundBrush(symbol), 1);
 
                 Point textLocation = new Point(textIndent, RenderSize.Height / 2 - text.Height / 2);
 

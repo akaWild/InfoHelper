@@ -84,4 +84,17 @@ namespace InfoHelper.Utils
             throw new NotImplementedException();
         }
     }
+
+    public class NameControlForegroundConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return ((bool)value) ? Application.Current.TryFindResource("NamePanelConfirmedForegroundBrush") : Application.Current.TryFindResource("NamePanelUnconfirmedForegroundBrush");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

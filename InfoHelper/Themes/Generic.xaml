@@ -68,10 +68,10 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type controls:BaseControl}">
+    <Style TargetType="{x:Type controls:BaseDataControl}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type controls:BaseControl}">
+                <ControlTemplate TargetType="{x:Type controls:BaseDataControl}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">

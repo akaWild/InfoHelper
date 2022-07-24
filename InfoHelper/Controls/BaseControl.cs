@@ -44,11 +44,11 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:BaseControl/>
     ///
     /// </summary>
-    public class BaseControl : Control
+    public class BaseDataControl : Control
     {
-        static BaseControl()
+        static BaseDataControl()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(BaseControl), new FrameworkPropertyMetadata(typeof(BaseControl)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(BaseDataControl), new FrameworkPropertyMetadata(typeof(BaseDataControl)));
         }
 
         public object Data
@@ -58,7 +58,7 @@ namespace InfoHelper.Controls
         }
 
         public static readonly DependencyProperty DataProperty =
-            DependencyProperty.Register("Data", typeof(object), typeof(BaseControl), new PropertyMetadata(null));
+            DependencyProperty.Register("Data", typeof(object), typeof(BaseDataControl), new PropertyMetadata(null));
 
         protected override void OnPropertyChanged(DependencyPropertyChangedEventArgs e)
         {

@@ -51,9 +51,21 @@ namespace InfoHelper
         {
             ViewModelActionsState vmas = _win.HudsParentStates[0].ActionsState;
 
-            vmas.Actions = @"xb/rcfr/bbrxf";
+            vmas.Actions = @"xr/rcfr/bbrr";
+
+            vmas.Visible = !vmas.Visible;
 
             vmas.UpdateBindings();
+
+            ViewModelNameState vmns = _win.HudsParentStates[0].NameState;
+
+            vmns.Name = "akaWild!!!";
+
+            vmns.Visible = true;
+
+            vmns.IsConfirmed = !vmns.IsConfirmed;
+
+            vmns.UpdateBindings();
 
             ViewModelStatsHud hpe = _win.HudsParentStates[0].AggressorIpPostflopHudState;
 
@@ -107,6 +119,7 @@ namespace InfoHelper
 
             vmpms.Header = "";
             vmpms.PreflopData = cbData;
+            vmpms.Visible = !vmpms.Visible;
 
             vmpms.UpdateBindings();
 
@@ -136,6 +149,8 @@ namespace InfoHelper
             hpe.SetData(new DataCell[] { cbCell });
 
             hpe.SetRows(new string[] { "IsHiddenRow" });
+
+            hpe.Visible = !hpe.Visible;
 
             hpe.UpdateBindings();
 
