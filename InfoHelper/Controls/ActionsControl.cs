@@ -71,7 +71,7 @@ namespace InfoHelper.Controls
                     'x' => Brushes.DarkOrange,
                     'c' => Brushes.ForestGreen,
                     'b' => Brushes.DodgerBlue,
-                    'r' => Brushes.Magenta,
+                    'r' => Brushes.DarkOrchid,
                     _ => defaultForegroundColor
                 };
             }

@@ -61,13 +61,15 @@ namespace InfoHelper.Controls
         {
             base.OnRender(drawingContext);
 
+            VisualEdgeMode = EdgeMode.Aliased;
+
             SolidColorBrush[] foregroundBrushesList = (SolidColorBrush[])Application.Current.TryFindResource("PreflopMatrixValueForegroundColors");
             SolidColorBrush[] backgroundBrushesList = (SolidColorBrush[])Application.Current.TryFindResource("PreflopMatrixValueBackgroundColors");
 
             SolidColorBrush defaultForegroundColor = (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixForegroundBrush");
             SolidColorBrush defaultBackgroundColor = (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixBackgroundBrush");
 
-            Point SnapToPixel(double x, double y) => new Point(Math.Round(x), Math.Round(y));
+            Point GetPoint(double x, double y) => new Point(x, y);
 
             SolidColorBrush GetValueForegroundBrush(int sample)
             {
@@ -120,7 +122,7 @@ namespace InfoHelper.Controls
 
                 rowIndent += rowHeight;
 
-                drawingContext.DrawLine(pen, SnapToPixel(0, rowIndent), SnapToPixel(RenderSize.Width, rowIndent));
+                drawingContext.DrawLine(pen, GetPoint(0, rowIndent), GetPoint(RenderSize.Width, rowIndent));
             }
 
             for (int i = 0; i < 13; i++)
@@ -138,13 +140,13 @@ namespace InfoHelper.Controls
                     columnIndent += columnWidth;
 
                     if (j != 12)
-                        drawingContext.DrawLine(pen, SnapToPixel(columnIndent, rowIndent), SnapToPixel(columnIndent, rowIndent + rowHeight));
+                        drawingContext.DrawLine(pen, GetPoint(columnIndent, rowIndent), GetPoint(columnIndent, rowIndent + rowHeight));
                 }
 
                 rowIndent += rowHeight;
 
                 if (i != 12)
-                    drawingContext.DrawLine(pen, SnapToPixel(0, rowIndent), SnapToPixel(RenderSize.Width, rowIndent));
+                    drawingContext.DrawLine(pen, GetPoint(0, rowIndent), GetPoint(RenderSize.Width, rowIndent));
             }
         }
     }

@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace InfoHelper.StatsEntities
 {
+    public enum PanelType
+    {
+        General,
+        Preflop,
+        Postflop
+    }
+
     public enum Gametype
     {
         Hu,

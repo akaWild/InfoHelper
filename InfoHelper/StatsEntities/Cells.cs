@@ -16,7 +16,7 @@ namespace InfoHelper.StatsEntities
 
         public object CellData { get; set; }
 
-        public StatsCell[] ConnectedCells { get; set; }
+        public DataCell[] ConnectedCells { get; set; }
 
         public double DefaultValue { get; set; } = double.MinValue;
 

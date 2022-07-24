@@ -36,6 +36,8 @@ namespace InfoHelper
             _win = new ViewModelMain(Dispatcher);
 
             DataContext = _win;
+
+            new Controller(_win);
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -49,6 +51,8 @@ namespace InfoHelper
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
         {
+            //CellsManager.GetStatsSets();
+
             ViewModelActionsState vmas = _win.HudsParentStates[0].ActionsState;
 
             vmas.Actions = @"xr/rcfr/bbrr";
