@@ -12,13 +12,24 @@ namespace InfoHelper.StatsEntities
     {
         public static void GetStatsSets()
         {
-            using FileStream fs = File.Open("cell_sets.csv", FileMode.Open);
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cell_sets.csv");
+
+            if(!File.Exists(filePath))
+                throw new Exception("File \"cell_sets.csv\" doesn't exist in root application directory");
+
+            using FileStream fs = File.Open(filePath, FileMode.Open);
 
             StreamReader sr = new StreamReader(fs);
 
             string title = sr.ReadLine();
 
+            if(title == null)
+                throw new Exception("File \"cell_sets.csv\" doesn't contain header");
+
             string[] headerParts = title.Split(';');
+
+            if (headerParts.Length != 7)
+                throw new Exception("Header row in file \"cell_sets.csv\" contains less or more than 7 elements");
 
             Dictionary<string, List<DataCell>> cellGroups = new Dictionary<string, List<DataCell>>();
 
@@ -44,25 +55,61 @@ namespace InfoHelper.StatsEntities
 
                 List<DataCell> cellGroup = cellGroups[key];
 
-                Type type = Type.GetType($"{typeof(DataCell).Namespace}.{record[1]}");
+                Type cellType = Type.GetType($"{typeof(DataCell).Namespace}.{record[1]}");
 
-                DataCell dataCell = (DataCell)Activator.CreateInstance(type, record[2], record[3]);
+                if(cellType == null)
+                    throw new Exception($"{record[1]} cell type was not found");
 
-                cellGroup.Add(dataCell);
+                DataCell cell = (DataCell)Activator.CreateInstance(cellType, record[3], record[4]);
+
+                if(cell == null)
+                    throw new Exception($"Failed to create instance of type {cellType.Name}");
+
+                if (record[2] != string.Empty)
+                {
+                    Type dataCellType = Type.GetType($"{typeof(DataCell).Namespace}.{record[2]}");
+
+                    if (dataCellType == null)
+                        throw new Exception($"{record[2]} cell data type was not found");
+
+                    object cellData = Activator.CreateInstance(dataCellType);
+
+                    if (cellData == null)
+                        throw new Exception($"Failed to create instance of type {dataCellType.Name}");
+
+                    cell.CellData = cellData;
+                }
+
+                if (cellGroup.Count(c => c.Name == cell.Name) != 0)
+                    throw new Exception($"Cell {cell.Name} has been already added");
+
+                cellGroup.Add(cell);
             }
 
             foreach (string[] record in records)
             {
                 List<DataCell> cellGroup = cellGroups[record[0]];
 
-                DataCell dataCell = cellGroup.First(c => c.Name == record[2]);
+                DataCell dataCell = cellGroup.First(c => c.Name == record[3]);
 
                 string[] connectedCellsNames = record.TakeLast(2).Where(c => c != string.Empty).ToArray();
 
                 if(connectedCellsNames.Length == 0)
                     continue;
 
-                DataCell[] connectedCells = connectedCellsNames.Select(cc => cellGroup.First(c => c.Name == cc)).ToArray();
+                DataCell[] connectedCells = connectedCellsNames.Select(cc => cellGroup.FirstOrDefault(c => c.Name == cc)).ToArray();
+
+                if(connectedCells.Any(cc => cc == null))
+                    throw new Exception($"Connected cells of cell {dataCell.Name} contain invalid cell name");
+
+                if (connectedCells.Length == 2)
+                {
+                    if(connectedCells[0].Name == connectedCells[1].Name)
+                        throw new Exception($"Connected cells of cell {dataCell.Name} are identical");
+                }
+
+                if (connectedCells.Any(cc => cc.Name == dataCell.Name))
+                    throw new Exception($"Connected cells of cell {dataCell.Name} contain parent cell name");
 
                 dataCell.ConnectedCells = connectedCells;
             }

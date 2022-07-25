@@ -95,6 +95,7 @@
     <Style TargetType="controls:DataCellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Background" Value="Beige"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
     <!--Groups-->
     <Style x:Key="CbCellHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">

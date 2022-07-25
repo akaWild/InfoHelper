@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -70,6 +72,31 @@ namespace InfoHelper
             vmns.IsConfirmed = !vmns.IsConfirmed;
 
             vmns.UpdateBindings();
+
+            ViewModelStatsHud vmgh = _win.HudsParentStates[0].GeneralHudState;
+
+            ValueCell handsCell = new ValueCell("Hands", "Hands played");
+
+            handsCell.IncrementSample();
+
+            StatsCell vpipCell = new StatsCell("Vpip", "Vpip");
+
+            vpipCell.IncrementSample();
+            vpipCell.IncrementSample();
+            vpipCell.IncrementSample();
+            vpipCell.IncrementValue();
+
+            EvCell evCell = new EvCell("EvBb", "EvBb");
+
+            evCell.IncrementSample();
+            evCell.IncrementSample();
+            evCell.IncrementValue(50);
+
+            vmgh.Visible = true;
+
+            vmgh.SetData(new DataCell[] {handsCell, vpipCell, evCell});
+
+            vmgh.UpdateBindings();
 
             ViewModelStatsHud hpe = _win.HudsParentStates[0].AggressorIpPostflopHudState;
 

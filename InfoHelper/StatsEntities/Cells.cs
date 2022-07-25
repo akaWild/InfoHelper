@@ -18,7 +18,7 @@ namespace InfoHelper.StatsEntities
 
         public DataCell[] ConnectedCells { get; set; }
 
-        public double DefaultValue { get; set; } = double.MinValue;
+        public double DefaultValue { get; set; } = double.NaN;
 
         protected DataCell(string name, string description)
         {
@@ -53,22 +53,6 @@ namespace InfoHelper.StatsEntities
         public StatsCell(string name, string description): base(name, description) { }
 
         public override double CalculatedValue => Value * 100 / Sample;
-    }
-
-    public class PreflopStatsCell : StatsCell
-    {
-        public PreflopStatsCell(string name, string description) : base(name, description)
-        {
-            CellData = new PreflopData();
-        }
-    }
-
-    public class PostflopStatsCell : StatsCell
-    {
-        public PostflopStatsCell(string name, string description) : base(name, description)
-        {
-            CellData = new PostflopData();
-        }
     }
 
     public class EvCell : DataCell

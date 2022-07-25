@@ -40,6 +40,12 @@
                     </TextBlock>
                 </Viewbox>
             </Border>
+            <local:GeneralHud Grid.Row="2" Margin="5" VerticalAlignment="Top"  
+                              Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                <local:GeneralHud.DataContext>
+                    <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.GeneralHudState"/>
+                </local:GeneralHud.DataContext>
+            </local:GeneralHud>
         </Grid>
         <local:HuPostflopAggressorIpHud Grid.Column="2" VerticalAlignment="Top" Margin="5" 
                                         Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
