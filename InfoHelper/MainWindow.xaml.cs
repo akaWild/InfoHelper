@@ -53,8 +53,6 @@ namespace InfoHelper
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
         {
-            //CellsManager.GetStatsSets();
-
             ViewModelActionsState vmas = _win.HudsParentStates[0].ActionsState;
 
             vmas.Actions = @"xr/rcfr/bbrr";
@@ -72,6 +70,8 @@ namespace InfoHelper
             vmns.IsConfirmed = !vmns.IsConfirmed;
 
             vmns.UpdateBindings();
+
+            #region General
 
             ViewModelStatsHud vmgh = _win.HudsParentStates[0].GeneralHudState;
 
@@ -98,7 +98,26 @@ namespace InfoHelper
 
             vmgh.UpdateBindings();
 
-            ViewModelStatsHud hpe = _win.HudsParentStates[0].AggressorIpPostflopHudState;
+            #endregion
+
+            #region Preflop
+
+            ViewModelStatsHud preflopBtn = _win.HudsParentStates[0].BtnPreflopHudState;
+
+            StatsCell sc1 = new StatsCell("Btn_4bet_Fold", "BTN fold unopened pot");
+            sc1.IncrementSample();
+            sc1.IncrementSample();
+            sc1.IncrementValue();
+
+            preflopBtn.Visible = true;
+
+            preflopBtn.SetData(new DataCell[] {sc1});
+            preflopBtn.SetRows(new string[] { "" });
+
+            preflopBtn.UpdateBindings();
+
+            #endregion
+            ViewModelStatsHud hpe = _win.HudsParentStates[0].PostflopFlopHudState;
 
             ViewModelPreflopMatrixState vmpms = _win.HudsParentStates[0].PreflopMatrixState;
 

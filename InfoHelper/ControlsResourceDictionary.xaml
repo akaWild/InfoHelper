@@ -73,6 +73,7 @@
     </x:Array>
 
     <!--Stats control cells-->
+
     <!--Border-->
     <Style x:Key="CellBorderStyle" TargetType="controls:CellControl">
         <Setter Property="BorderBrush" Value="Black"/>
@@ -82,22 +83,82 @@
     <Thickness x:Key="CellTopMiddleRightBorderThickness">0, 1, 1, 1</Thickness>
     <Thickness x:Key="CellMiddleBottomLeftBorderThickness">1, 0, 1, 1</Thickness>
     <Thickness x:Key="CellMiddleBottomMiddleRightBorderThickness">0, 0, 1, 1</Thickness>
+
     <!--Header-->
-    <Style x:Key="CellHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+    <!--Preflop-->
+    <Style x:Key="CellPreflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="DarkGoldenrod"/>
+    </Style>
+    <!--Postflop-->
+    <Style x:Key="CellPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Background" Value="Gold"/>
     </Style>
+
     <!--Content-->
+    <!--General panel-->
+    <SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
+    <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
+    <!--Other panels-->
     <Style x:Key="EmptyCellStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Background" Value="Beige"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
     <Style TargetType="controls:DataCellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Background" Value="Beige"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
+
     <!--Groups-->
+    <!--Preflop-->
+    <Style x:Key="UnopenedHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="Yellow"/>
+    </Style>
+    <Style x:Key="LimpHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="LimeGreen"/>
+    </Style>
+    <Style x:Key="LimpVsHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="LightGreen"/>
+    </Style>
+    <Style x:Key="RaiseHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="DarkOrange"/>
+    </Style>
+    <Style x:Key="RaiseVsHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="Orange"/>
+    </Style>
+    <Style x:Key="IsolateHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="Tan"/>
+    </Style>
+    <Style x:Key="SqueezeHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="DeepPink"/>
+    </Style>
+    <Style x:Key="RaiseIsolateHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="DarkGray"/>
+    </Style>
+    <Style x:Key="ThreeBetHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Blue"/>
+    </Style>
+    <Style x:Key="ThreeBetVsHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="DodgerBlue"/>
+    </Style>
+    <Style x:Key="FourBetHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="DarkViolet"/>
+    </Style>
+    <!--Postflop-->
     <Style x:Key="CbCellHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="Background" Value="DarkOrange"/>

@@ -59,6 +59,6 @@ namespace InfoHelper.StatsEntities
     {
         public EvCell(string name, string description) : base(name, description) { }
 
-        public override double CalculatedValue => Value / 100;
+        public override double CalculatedValue => Value * 100 / Sample;
     }
 }

@@ -82,6 +82,14 @@ namespace InfoHelper.StatsEntities
     }
 
     [Flags]
+    public enum PlayersOnFlop
+    {
+        Hu = 0x01,
+        Multiway = 0x02,
+        Any = 0x03
+    }
+
+    [Flags]
     public enum RelativePosition
     {
         Ip = 0x01,
@@ -98,44 +106,12 @@ namespace InfoHelper.StatsEntities
         Any = 0x07
     }
 
-    public class StatsSetBase
+    public class StatsSet
     {
         public List<DataCell> Cells { get; } = new List<DataCell>();
-    }
 
-    public class GeneralStatsSet : StatsSetBase
-    {
-        public GeneralStatsSet()
-        {
-            Cells.Add(new ValueCell("Hands", "Total hands played"));
-            Cells.Add(new StatsCell("Vpip", "Voluntarily put in the pot"));
-            Cells.Add(new StatsCell("Pfr", "Preflop raise"));
-            Cells.Add(new StatsCell("AggFq_F", "Aggression frequency flop"));
-            Cells.Add(new StatsCell("AggFq_T", "Aggression frequency turn"));
-            Cells.Add(new StatsCell("AggFq_R", "Aggression frequency river"));
-            Cells.Add(new StatsCell("WentToSd", "Went to showdown"));
-            Cells.Add(new StatsCell("WonOnSd", "Won at showdown"));
-            Cells.Add(new ValueCell("EvBb", "EvBb/100 hands"));
-        }
-    }
+        public PanelType PanelType { get; }
 
-    public class PreflopStatsSet : StatsSetBase
-    {
-        public Gametype GameType { get; }
-
-        public Position Position { get; }
-
-        public PreflopStatsSet(Gametype gameType, Position position)
-        {
-            GameType = gameType;
-            Position = position;
-
-            Cells.AddRange(CellsManager.GetPreflopCells(gameType, position));
-        }
-    }
-
-    public class PostflopStatsSet : StatsSetBase
-    {
         public Gametype GameType { get; }
 
         public Position Position { get; }
@@ -148,21 +124,10 @@ namespace InfoHelper.StatsEntities
 
         public PrevRoundActingType PrevRoundActingType { get; }
 
+        public PlayersOnFlop PlayersOnFlop { get; }
+
         public RelativePosition RelativePosition { get; }
 
         public PostflopRound PostflopRound { get; }
-
-        public PostflopStatsSet(Gametype gameType, Position position, VsPosition vsPosition, PreflopPotType preflopPotType, PreflopActingType preflopActingType, PrevRoundActingType prevRoundActingType,
-            RelativePosition relativePosition, PostflopRound postflopRound)
-        {
-            GameType = gameType;
-            Position = position;
-            VsPosition = vsPosition;
-            PreflopPotType = preflopPotType;
-            PreflopActingType = preflopActingType;
-            PrevRoundActingType = prevRoundActingType;
-            RelativePosition = relativePosition;
-            PostflopRound = postflopRound;
-        }
     }
 }

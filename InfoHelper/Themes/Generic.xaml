@@ -16,7 +16,8 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <Viewbox Stretch="Uniform" Margin="2, 0, 2, 0" HorizontalAlignment="Left" VerticalAlignment="Center">
+                        <Viewbox Stretch="Uniform" Margin="2, 0, 2, 0" HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
+                                 VerticalAlignment="Center">
                             <TextBlock Text="{TemplateBinding Text}"/>
                         </Viewbox>
                     </Border>
@@ -42,7 +43,7 @@
                                 <ColumnDefinition Width="6*"/>
                             </Grid.ColumnDefinitions>
                             <Viewbox Grid.Column="0" Grid.Row="0" Stretch="Uniform" Margin="2, 0, 0, 0" 
-                                     HorizontalAlignment="{Binding RelativeSource={RelativeSource AncestorType={x:Type controls:DataCellControl}}, Path=HorizontalContentAlignment}" 
+                                     HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
                                      VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
                                 <TextBlock>
                                     <TextBlock.Text>

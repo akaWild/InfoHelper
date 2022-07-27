@@ -24,19 +24,11 @@
 
         public ViewModelStatsHud BbvsSbPreflopHudState { get; } = new ViewModelStatsHud();
 
-        public ViewModelStatsHud AggressorIpPostflopHudState { get; } = new ViewModelStatsHud();
+        public ViewModelStatsHud PostflopFlopHudState { get; } = new ViewModelStatsHud();
 
-        public ViewModelStatsHud AggressorOopPostflopHudState { get; } = new ViewModelStatsHud();
+        public ViewModelStatsHud PostflopTurnHudState { get; } = new ViewModelStatsHud();
 
-        public ViewModelStatsHud CallerIpPostflopHudState { get; } = new ViewModelStatsHud();
-
-        public ViewModelStatsHud CallerOopPostflopHudState { get; } = new ViewModelStatsHud();
-
-        public ViewModelStatsHud FlopMultiwayPostflopHudState { get; } = new ViewModelStatsHud();
-
-        public ViewModelStatsHud TurnMultiwayPostflopHudState { get; } = new ViewModelStatsHud();
-
-        public ViewModelStatsHud RiverMultiwayPostflopHudState { get; } = new ViewModelStatsHud();
+        public ViewModelStatsHud PostflopRiverHudState { get; } = new ViewModelStatsHud();
 
         public ViewModelPreflopMatrixState PreflopMatrixState { get; } = new ViewModelPreflopMatrixState();
 

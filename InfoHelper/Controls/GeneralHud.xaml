@@ -17,7 +17,7 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <local:DataCellControl Grid.Column="0" Grid.Row="0" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Data="{Binding Hands}" ShowSample="False"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="0" Grid.Row="0" Foreground="{StaticResource HandsForeground}" Background="{StaticResource HandsBackground}" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Data="{Binding Hands}" ShowSample="False"></local:DataCellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding Vpip}" ShowSample="False"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="0" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding Pfr}" ShowSample="False"></local:DataCellControl>
         <local:DataCellControl Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Data="{Binding AggFq_F}" ShowSample="False"></local:DataCellControl>

@@ -1,0 +1,149 @@
+﻿<UserControl x:Class="InfoHelper.Controls.PreflopButtonHud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfoHelper.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+                <ColumnDefinition Width="1*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Limp_Vs_Ep_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Limp_Vs_Mp_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Limp_Vs_Co_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Limp_Vs_Multi_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Raise_Vs_Ep_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Raise_Vs_Mp_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Raise_Vs_Co_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Raise_Vs_Multi_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Isolate_CC_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Isolate_Limper_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Squeeze_CC_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Squeeze_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_Squeeze_Caller_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_RaiseIsolate_CC_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_RaiseIsolate_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_RaiseIsolate_Limper_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_3bet_CC_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_3bet_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_3bet_Raiser_Vs_Sb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_3bet_Raiser_Vs_Bb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_3bet_Raiser_Vs_Multi_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Btn_4bet_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+        </Grid.RowDefinitions>
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="SbvBb"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellPreflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Fold"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellPreflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Call"></local:CellControl>
+        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellPreflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Raise"></local:CellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource UnopenedHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Unopened"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Unopened_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Unopened_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Unopened_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource LimpHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Limp p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs EP"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Ep_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Ep_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Ep_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs MP"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Mp_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Mp_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Mp_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="5" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs CO"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Co_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Co_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Co_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="6" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="multiway"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Multi_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Multi_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Limp_Vs_Multi_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="7" Style="{StaticResource RaiseHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Raise p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="8" Style="{StaticResource RaiseVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs EP"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="8" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Ep_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="8" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Ep_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="8" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Ep_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="9" Style="{StaticResource RaiseVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs MP"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="9" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Mp_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="9" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Mp_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="9" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Mp_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="10" Style="{StaticResource RaiseVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs CO"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="10" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Co_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="10" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Co_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="10" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Co_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="11" Style="{StaticResource RaiseVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="multiway"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="11" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Multi_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="11" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Multi_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="11" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Raise_Vs_Multi_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="12" Style="{StaticResource IsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Iso (CC) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="12" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Isolate_CC_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="12" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Isolate_CC_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="12" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Isolate_CC_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="13" Style="{StaticResource IsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Iso (lr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="13" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Isolate_Limper_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="13" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Isolate_Limper_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="13" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Isolate_Limper_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="14" Style="{StaticResource SqueezeHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Sqz (CC) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_CC_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_CC_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_CC_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="15" Style="{StaticResource SqueezeHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Sqz (rr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_Raiser_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_Raiser_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_Raiser_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="16" Style="{StaticResource SqueezeHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Sqz (cr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_Caller_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_Caller_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_Squeeze_Caller_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="17" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (CC) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="17" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_CC_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="17" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_CC_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="17" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_CC_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="18" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (rr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="18" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_Raiser_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="18" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_Raiser_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="18" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_Raiser_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="19" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (lr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="19" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_Limper_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="19" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_Limper_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="19" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_RaiseIsolate_Limper_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="20" Style="{StaticResource ThreeBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3b (CC) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_CC_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_CC_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_CC_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="21" Style="{StaticResource ThreeBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3b (rr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="22" Style="{StaticResource ThreeBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs SB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="22" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Sb_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="22" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Sb_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="22" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Sb_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="23" Style="{StaticResource ThreeBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs BB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="23" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Bb_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="23" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Bb_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="23" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Bb_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="24" Style="{StaticResource ThreeBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="multiway"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Multi_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Multi_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_3bet_Raiser_Vs_Multi_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="25" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4bet p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_4bet_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_4bet_Call}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Btn_4bet_Raise}"></local:DataCellControl>
+    </Grid>
+</UserControl>

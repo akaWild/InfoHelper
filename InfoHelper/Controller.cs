@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.States;
 
 namespace InfoHelper
@@ -17,6 +18,8 @@ namespace InfoHelper
             _mainWindowState = window;
 
             _mainWindowState.ControlsState.ExitRequested += ControlsState_ExitRequested;
+
+            StatsManager.LoadCells();
         }
 
         private void ControlsState_ExitRequested(object sender, EventArgs e)
