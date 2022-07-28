@@ -47,18 +47,72 @@
                 </local:GeneralHud.DataContext>
             </local:GeneralHud>
         </Grid>
-        <local:PreflopButtonHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+        <local:PreflopBtnHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
                                         Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
-            <local:PreflopButtonHud.DataContext>
+            <local:PreflopBtnHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.BtnPreflopHudState"/>
-            </local:PreflopButtonHud.DataContext>
-        </local:PreflopButtonHud>
-        <local:HuPostflopAggressorIpHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+            </local:PreflopBtnHud.DataContext>
+        </local:PreflopBtnHud>
+        <local:PreflopSbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                                Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopSbHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.SbPreflopHudState"/>
+            </local:PreflopSbHud.DataContext>
+        </local:PreflopSbHud>
+        <local:PreflopBbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopBbHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.BbPreflopHudState"/>
+            </local:PreflopBbHud.DataContext>
+        </local:PreflopBbHud>
+        <local:PreflopEpHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopEpHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.EpPreflopHudState"/>
+            </local:PreflopEpHud.DataContext>
+        </local:PreflopEpHud>
+        <local:PreflopMpHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopMpHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.MpPreflopHudState"/>
+            </local:PreflopMpHud.DataContext>
+        </local:PreflopMpHud>
+        <local:PreflopCoHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopCoHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.CoPreflopHudState"/>
+            </local:PreflopCoHud.DataContext>
+        </local:PreflopCoHud>
+        <local:PreflopSbvsBbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopSbvsBbHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.SbvsBbPreflopHudState"/>
+            </local:PreflopSbvsBbHud.DataContext>
+        </local:PreflopSbvsBbHud>
+        <local:PreflopBbvsSbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                                Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:PreflopBbvsSbHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.BbvsSbPreflopHudState"/>
+            </local:PreflopBbvsSbHud.DataContext>
+        </local:PreflopBbvsSbHud>
+        <local:FlopHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
                                         Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
-            <local:HuPostflopAggressorIpHud.DataContext>
+            <local:FlopHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopFlopHudState"/>
-            </local:HuPostflopAggressorIpHud.DataContext>
-        </local:HuPostflopAggressorIpHud>
+            </local:FlopHud.DataContext>
+        </local:FlopHud>
+        <local:TurnHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                       Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:TurnHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopTurnHudState"/>
+            </local:TurnHud.DataContext>
+        </local:TurnHud>
+        <local:RiverHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
+                       Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+            <local:RiverHud.DataContext>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopRiverHudState"/>
+            </local:RiverHud.DataContext>
+        </local:RiverHud>
         <Grid Column="3">
             <Grid>
                 <Grid.RowDefinitions>

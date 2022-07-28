@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace InfoHelper.Controls
 {
     /// <summary>
-    /// Interaction logic for HuPostflopAggressorIpHud.xaml
+    /// Interaction logic for PreflopButtonHud.xaml
     /// </summary>
-    public partial class HuPostflopAggressorIpHud : UserControl
+    public partial class PreflopBtnHud : UserControl
     {
-        public HuPostflopAggressorIpHud()
+        public PreflopBtnHud()
         {
             InitializeComponent();
         }
