@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PokerCommonUtility;
 
 namespace InfoHelper.StatsEntities
 {
@@ -20,19 +21,22 @@ namespace InfoHelper.StatsEntities
     }
 
     [Flags]
-    public enum Position
+    public enum PreflopActingType
     {
-        Sb = 0x01,
-        Bb = 0x02,
-        Ep = 0x04,
-        Mp = 0x08,
-        Co = 0x10,
-        Btn = 0x20,
-        Any = 0x3F
+        Caller = 0x01,
+        ColdCaller = 0x02,
+        LimpCaller = 0x04,
+        CallerCaller = 0x08,
+        RaiseCaller = 0x10,
+        Raiser = 0x20,
+        LimpRaiser = 0x40,
+        CallerRaiser = 0x80,
+        Any = 0xFF
     }
 
+
     [Flags]
-    public enum VsPosition
+    public enum PlayerPosition
     {
         Sb = 0x01,
         Bb = 0x02,
@@ -56,20 +60,6 @@ namespace InfoHelper.StatsEntities
         FourBet = 0x80,
         FiveBet = 0x100,
         Any = 0x1FF
-    }
-
-    [Flags]
-    public enum PreflopActingType
-    {
-        Caller = 0x01,
-        ColdCaller = 0x02,
-        LimpCaller = 0x04,
-        CallerCaller = 0x08,
-        RaiseCaller = 0x10,
-        Raiser = 0x20,
-        LimpRaiser = 0x40,
-        CallerRaiser = 0x80,
-        Any = 0xFF
     }
 
     [Flags]
@@ -114,9 +104,9 @@ namespace InfoHelper.StatsEntities
 
         public Gametype GameType { get; }
 
-        public Position Position { get; }
+        public PlayerPosition Position { get; }
 
-        public VsPosition VsPosition { get; }
+        public PlayerPosition VsPosition { get; }
 
         public PreflopPotType PreflopPotType { get; }
 

@@ -16,6 +16,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="PokerCommonUtility">
+      <HintPath>..\..\PokerCommonUtility\PokerCommonUtility\bin\Release\net5.0\PokerCommonUtility.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\bell.png" />
   </ItemGroup>
 
