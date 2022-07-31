@@ -7,7 +7,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="ControlsResourceDictionary.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources\ControlsResourceDictionary.xaml"></ResourceDictionary>
+                <ResourceDictionary Source="Resources\OptionsResourceDictionary.xaml"></ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
             <utils:BoolToGridRowHeightConverter x:Key="RowVisibilityConverter"/>
             <utils:BoolToHiddenVisibilityConverter x:Key="BoolToHiddenVisibilityConverter"/>

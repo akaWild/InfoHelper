@@ -1,4 +1,5 @@
 ﻿using System.Windows.Threading;
+using InfoHelper.DataProcessor;
 
 namespace InfoHelper.ViewModel.States
 {
@@ -22,6 +23,8 @@ namespace InfoHelper.ViewModel.States
         public ViewModelMain(Dispatcher dispatcher)
         {
             ControlsState = new ViewModelControlsState(dispatcher);
+
+            new Controller(this);
         }
     }
 }

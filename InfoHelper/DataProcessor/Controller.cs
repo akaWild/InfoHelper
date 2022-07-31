@@ -7,7 +7,7 @@ using System.Windows;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.States;
 
-namespace InfoHelper
+namespace InfoHelper.DataProcessor
 {
     public class Controller
     {
@@ -19,7 +19,16 @@ namespace InfoHelper
 
             _mainWindowState.ControlsState.ExitRequested += ControlsState_ExitRequested;
 
+            _mainWindowState.ControlsState.ShowOptionsRequested += ControlsState_ShowOptionsRequested; ;
+
             StatsManager.LoadCells();
+        }
+
+        private void ControlsState_ShowOptionsRequested(object sender, EventArgs e)
+        {
+            OptionsWindow optionsWindow = new OptionsWindow();
+
+            optionsWindow.ShowDialog();
         }
 
         private void ControlsState_ExitRequested(object sender, EventArgs e)

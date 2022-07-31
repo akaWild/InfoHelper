@@ -1,0 +1,321 @@
+﻿<Window x:Class="InfoHelper.OptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InfoHelper"
+        mc:Ignorable="d"
+        Title="Options" Height="500" Width="400" ResizeMode="NoResize">
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="11"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TabControl>
+            <TabItem Header="General">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5">Save folder</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 5, 5, 5" Grid.ColumnSpan="2" Name="txtSaveFolder"/>
+                        <Button Grid.Column="3" Margin="0, 5, 5, 5" Name="btnSave"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Snapshots folder</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSnapshotsFolder"/>
+                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnSnapshots"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Bitmaps buffer</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtBitmapsBuffer"/>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Get last</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtLastNHands"/>
+                        <TextBlock Grid.Column="2" Grid.Row="0" Margin="0, 0 5, 5">hands</TextBlock>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Timer interval (ms)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtTimerInterval"/>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Margin="5, 0 5, 5">Screenshot save interval (ms)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtScreenshotSaveInterval"/>
+                    </Grid>
+                    <Grid Grid.Row="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Window expire timeout (s)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtWindowExpireTimeout"/>
+                    </Grid>
+                    <Grid Grid.Row="7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Grid.Row="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Client mouse cursor template</TextBlock>
+                        <ComboBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0 5, 5" Name="cbxCursors"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Server">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 5 5, 5">Server name</TextBlock>
+                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 5, 5, 5" Name="txtServerName"/>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">DB name</TextBlock>
+                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0, 5, 5" Name="txtDBName"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Solver">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid Grid.Row="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <RadioButton Grid.Column="0" Margin="5, 5 5, 5" IsChecked="True" Name="rdbLocalSolver">Use local solver</RadioButton>
+                        <RadioButton Grid.Column="1" Margin="0, 5 5, 5" Name="rdbRemoteSolver">Use remote solver</RadioButton>
+                    </Grid>
+                    <Grid Grid.Row="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverFolder">Solver folder</TextBlock>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverPort">Solver port</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverFolder"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverPort"/>
+                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnSolverFolder"/>
+                    </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverFile">Solver file</TextBlock>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverIp">Solver ip</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverFile"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverIp"/>
+                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnSolverFile"/>
+                    </Grid>
+                    <Grid Grid.Row="3">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Turn solver duration (s)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtTurnSolverDuration"/>
+                    </Grid>
+                    <Grid Grid.Row="4">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">River solver duration (s)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtRiverSolverDuration"/>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Turn solver accuracy (% pot)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtTurnSolverAccuracy"/>
+                    </Grid>
+                    <Grid Grid.Row="6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">River solver accuracy (% pot)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtRiverSolverAccuracy"/>
+                    </Grid>
+                    <Grid Grid.Row="7">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Min line frequency (%)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtMinLineFrequency"/>
+                    </Grid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Sites">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <GroupBox Header="GG poker" BorderBrush="Black">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid Grid.Row="0">
+                                <CheckBox Grid.Column="0" Margin="5" Name="chbScanGg" IsChecked="True">Scan tables</CheckBox>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Card back</TextBlock>
+                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbCardBack1" Tag="1"/>
+                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbCardBack2" Tag="1"/>
+                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbCardBack3" Tag="1"/>
+                            </Grid>
+                            <Grid Grid.Row="2">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="1.5*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Deck</TextBlock>
+                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbDeck1" Tag="1"/>
+                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbDeck2" Tag="1"/>
+                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbDeck3" Tag="1"/>
+                            </Grid>
+                            <Grid Grid.Row="3">
+                                <CheckBox Grid.Column="0" Margin="5, 0, 5, 5" Name="chbSavePicturesPerHandGg" IsChecked="True">Save pictures per hand</CheckBox>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Pictures save folder</TextBlock>
+                                <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtPicturesSaveFolderGg"/>
+                                <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnPicturesSaveFolderGg"/>
+                            </Grid>
+                        </Grid>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Margin="10, 10, 5, 10" HorizontalAlignment="Stretch" Click="Button_Ok_Click">Ok</Button>
+            <Button Grid.Column="1" Margin="5, 10, 10, 10" HorizontalAlignment="Stretch" Click="Button_Cancel_Click">Cancel</Button>
+        </Grid>
+    </Grid>
+</Window>

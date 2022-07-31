@@ -16,6 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using InfoHelper.DataProcessor;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
 using InfoHelper.ViewModel;
@@ -38,17 +39,10 @@ namespace InfoHelper
             _win = new ViewModelMain(Dispatcher);
 
             DataContext = _win;
-
-            new Controller(_win);
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
         {
-            //PostflopHudEntity hpe = (PostflopHudEntity)grid1.PostflopPanel.DataContext;
-
-            //hpe.IsHiddenRow = !hpe.IsHiddenRow;
-
-            //hpe.UpdateBindings();
         }
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
@@ -102,117 +96,118 @@ namespace InfoHelper
 
             #region Preflop
 
-            ViewModelStatsHud postflop = _win.HudsParentStates[0].PostflopRiverHudState;
+            //ViewModelStatsHud postflop = _win.HudsParentStates[0].PostflopRiverHudState;
 
-            StatsCell sc1 = new StatsCell("Sb_Isolate_CC_Fold", "BTN fold unopened pot");
-            sc1.IncrementSample();
-            sc1.IncrementSample();
-            sc1.IncrementValue();
+            //StatsCell sc1 = new StatsCell("Sb_Isolate_CC_Fold", "BTN fold unopened pot");
+            //sc1.IncrementSample();
+            //sc1.IncrementSample();
+            //sc1.IncrementValue();
 
-            postflop.Visible = true;
+            //postflop.Visible = true;
 
-            postflop.SetData(new DataCell[] {sc1});
-            postflop.SetRows(new string[]
-            {
-                "FvRaise_R_Row",
-                "Threebet_R_Row",
-                //"FvBet_T_B_Row",
-                //"FvBet_RvsX_Row",
-                //"Raise_T_B_Row",
-                //"FvRaise_T_Row",
-                //"FvRaise_T_B_Row",
-                //"Threebet_T_Row",
-            });
+            //postflop.SetData(new DataCell[] {sc1});
+            //postflop.SetRows(new string[]
+            //{
+            //    //"FvRaise_R_Row",
+            //    //"Threebet_R_Row",
+            //    //"FvBet_T_B_Row",
+            //    //"FvBet_RvsX_Row",
+            //    //"Raise_T_B_Row",
+            //    //"FvRaise_T_Row",
+            //    //"FvRaise_T_B_Row",
+            //    //"Threebet_T_Row",
+            //});
 
-            postflop.UpdateBindings();
+            //postflop.UpdateBindings();
 
             #endregion
-            //ViewModelStatsHud hpe = _win.HudsParentStates[0].PostflopFlopHudState;
 
-            //ViewModelPreflopMatrixState vmpms = _win.HudsParentStates[0].PreflopMatrixState;
+            ViewModelStatsHud hpe = _win.HudsParentStates[0].PostflopFlopHudState;
 
-            //PreflopData cbData = new PreflopData();
+            ViewModelPreflopMatrixState vmpms = _win.HudsParentStates[0].PreflopMatrixState;
 
-            //cbData.AddHand("9c", "Jd");
+            PreflopData cbData = new PreflopData();
 
-            //cbData.AddHand("As", "2s");
-            //cbData.AddHand("As", "2s");
+            cbData.AddHand("9c", "Jd");
 
-            //cbData.AddHand("6c", "6h");
-            //cbData.AddHand("6c", "6h");
-            //cbData.AddHand("6c", "6h");
+            cbData.AddHand("As", "2s");
+            cbData.AddHand("As", "2s");
 
-            //cbData.AddHand("2s", "4s");
-            //cbData.AddHand("2s", "4s");
-            //cbData.AddHand("2s", "4s");
-            //cbData.AddHand("2s", "4s");
+            cbData.AddHand("6c", "6h");
+            cbData.AddHand("6c", "6h");
+            cbData.AddHand("6c", "6h");
 
-            //cbData.AddHand("5h", "Qh");
-            //cbData.AddHand("5h", "Qh");
-            //cbData.AddHand("5h", "Qh");
-            //cbData.AddHand("5h", "Qh");
-            //cbData.AddHand("5h", "Qh");
+            cbData.AddHand("2s", "4s");
+            cbData.AddHand("2s", "4s");
+            cbData.AddHand("2s", "4s");
+            cbData.AddHand("2s", "4s");
 
-            //cbData.AddHand("7h", "6d");
-            //cbData.AddHand("7h", "6d");
-            //cbData.AddHand("7h", "6d");
-            //cbData.AddHand("7h", "6d");
-            //cbData.AddHand("7h", "6d");
-            //cbData.AddHand("7h", "6d");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
+            cbData.AddHand("5h", "Qh");
 
-            //cbData.AddHand("Th", "Tc");
-            //cbData.AddHand("Th", "Tc");
-            //cbData.AddHand("Th", "Tc");
-            //cbData.AddHand("Th", "Tc");
-            //cbData.AddHand("Th", "Tc");
-            //cbData.AddHand("Th", "Tc");
-            //cbData.AddHand("Th", "Tc");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
+            cbData.AddHand("7h", "6d");
 
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
-            //cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
+            cbData.AddHand("Th", "Tc");
 
-            //vmpms.Header = "";
-            //vmpms.PreflopData = cbData;
-            //vmpms.Visible = !vmpms.Visible;
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
+            cbData.AddHand("Qh", "Qc");
 
-            //vmpms.UpdateBindings();
+            vmpms.Header = "";
+            vmpms.PreflopData = cbData;
+            vmpms.Visible = !vmpms.Visible;
 
-            //PreflopData cxData = new PreflopData();
+            vmpms.UpdateBindings();
 
-            //cxData.AddHand("Kc", "Kd");
+            PreflopData cxData = new PreflopData();
 
-            //cxData.AddHand("5s", "8s");
-            //cxData.AddHand("5s", "8s");
+            cxData.AddHand("Kc", "Kd");
 
-            //StatsCell cxCell = new StatsCell("CX_F", "Continuation check flop") { CellData = cxData };
+            cxData.AddHand("5s", "8s");
+            cxData.AddHand("5s", "8s");
 
-            //StatsCell cbCell = new StatsCell("CB_F", "Continuation bet flop") { CellData = cbData, ConnectedCells = new StatsCell[] {cxCell}};
+            StatsCell cxCell = new StatsCell("CX_F", "Continuation check flop") { CellData = cxData };
 
-            //Random rnd = new Random();
+            StatsCell cbCell = new StatsCell("CB_F", "Continuation bet flop") { CellData = cbData, ConnectedCells = new DataCell[] { cxCell } };
 
-            //int iterations = 4400;
+            Random rnd = new Random();
 
-            //for (int i = 0; i < iterations; i++)
-            //{
-            //    if (rnd.Next(0, 2) == 1)
-            //        cbCell.IncrementValue();
+            int iterations = 4400;
 
-            //    cbCell.IncrementSample();
-            //}
+            for (int i = 0; i < iterations; i++)
+            {
+                if (rnd.Next(0, 2) == 1)
+                    cbCell.IncrementValue();
 
-            //hpe.SetData(new DataCell[] { cbCell });
+                cbCell.IncrementSample();
+            }
 
-            //hpe.SetRows(new string[] { "IsHiddenRow" });
+            hpe.SetData(new DataCell[] { cbCell });
 
-            //hpe.Visible = !hpe.Visible;
+            hpe.SetRows(new string[] { "IsHiddenRow" });
 
-            //hpe.UpdateBindings();
+            hpe.Visible = !hpe.Visible;
+
+            hpe.UpdateBindings();
 
 
             //Worker worker = new Worker(_win);
