@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Media;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.States;
 
@@ -28,7 +29,14 @@ namespace InfoHelper.DataProcessor
         {
             OptionsWindow optionsWindow = new OptionsWindow();
 
-            optionsWindow.ShowDialog();
+            if ((bool)optionsWindow.ShowDialog())
+            {
+                _mainWindowState.ControlsState.SetError("Settings not found", ErrorType.Settings);
+            }
+            else
+            {
+                _mainWindowState.ControlsState.SetError("", ErrorType.Critical);
+            }
         }
 
         private void ControlsState_ExitRequested(object sender, EventArgs e)

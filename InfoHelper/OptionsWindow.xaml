@@ -4,11 +4,54 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:InfoHelper"
+        xmlns:system="clr-namespace:System;assembly=System.Runtime"
+        xmlns:utils="clr-namespace:InfoHelper.Utils"
         mc:Ignorable="d"
-        Title="Options" Height="500" Width="400" ResizeMode="NoResize">
+        Title="Options" Height="520" Width="400" ResizeMode="NoResize" SourceInitialized="OptionsWindow_SourceInitialized">
     <Window.Resources>
+        <utils:CardRadioButtonCheckedConverter x:Key="CardRadioButtonCheckedConverter"/>
+        <system:Double x:Key="FontSize">11</system:Double>
         <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="11"></Setter>
+            <Setter Property="FontSize" Value="{StaticResource FontSize}"></Setter>
+        </Style>
+        <Style x:Key="LocalSolverCheckedStyle">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=rdbLocalSolver}" Value="True">
+                    <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                    <Setter Property="TextBox.Visibility" Value="Visible"></Setter>
+                    <Setter Property="Button.Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=rdbRemoteSolver}" Value="True">
+                    <Setter Property="TextBlock.Visibility" Value="Hidden"></Setter>
+                    <Setter Property="TextBox.Visibility" Value="Hidden"></Setter>
+                    <Setter Property="Button.Visibility" Value="Hidden"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="RemoteSolverCheckedStyle">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=rdbLocalSolver}" Value="True">
+                    <Setter Property="TextBlock.Visibility" Value="Hidden"></Setter>
+                    <Setter Property="TextBox.Visibility" Value="Hidden"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=rdbRemoteSolver}" Value="True">
+                    <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
+                    <Setter Property="TextBox.Visibility" Value="Visible"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="GgRadioButtonEnabledStyle" TargetType="RadioButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
+            <Style.Triggers>
+                <Trigger Property="IsChecked" Value="True">
+                    <Setter Property="BorderThickness" Value="2"/>
+                </Trigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True">
+                    <Setter Property="IsEnabled" Value="True"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                    <Setter Property="IsEnabled" Value="False"></Setter>
+                </DataTrigger>
+            </Style.Triggers>
         </Style>
     </Window.Resources>
     <Grid>
@@ -28,6 +71,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
@@ -37,8 +81,8 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5">Save folder</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 5, 5, 5" Grid.ColumnSpan="2" Name="txtSaveFolder"/>
-                        <Button Grid.Column="3" Margin="0, 5, 5, 5" Name="btnSave"/>
+                        <TextBox Grid.Column="1" Margin="0, 5, 5, 5" Grid.ColumnSpan="2" Text="{Binding SaveFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Grid.Column="3" Margin="0, 5, 5, 5" Click="btnSave_Click"/>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -48,8 +92,8 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Snapshots folder</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSnapshotsFolder"/>
-                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnSnapshots"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Text="{Binding SnapshotsFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Click="btnSnapshots_Click"/>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
@@ -59,7 +103,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Bitmaps buffer</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtBitmapsBuffer"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding BitmapsBuffer, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
@@ -69,7 +113,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Get last</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtLastNHands"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding GetLastNHands, Mode=TwoWay}"/>
                         <TextBlock Grid.Column="2" Grid.Row="0" Margin="0, 0 5, 5">hands</TextBlock>
                     </Grid>
                     <Grid Grid.Row="4">
@@ -80,7 +124,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Timer interval (ms)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtTimerInterval"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding TimerInterval, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="5">
                         <Grid.ColumnDefinitions>
@@ -90,7 +134,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Grid.Row="0" Margin="5, 0 5, 5">Screenshot save interval (ms)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtScreenshotSaveInterval"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding ScreenshotSaveInterval, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="6">
                         <Grid.ColumnDefinitions>
@@ -100,7 +144,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Window expire timeout (s)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtWindowExpireTimeout"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding WindowExpireTimeout, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="7">
                         <Grid.ColumnDefinitions>
@@ -110,7 +154,19 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Grid.Row="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Client mouse cursor template</TextBlock>
-                        <ComboBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0 5, 5" Name="cbxCursors"/>
+                        <ComboBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0 5, 5" ItemsSource="{Binding ClientMouseCursorTemplates}" SelectedItem="{Binding SelectedClientMouseCursorTemplate}"/>
+                    </Grid>
+                    <Grid Grid.Row="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Form back color</TextBlock>
+                        <Border Grid.Column="1" Margin="0, 0, 5, 5" BorderBrush="Black" BorderThickness="1" SnapsToDevicePixels="True">
+                            <TextBlock Background="{Binding BackColor, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" PreviewMouseUp="UIElement_OnPreviewMouseUp"/>
+                        </Border>
                     </Grid>
                 </Grid>
             </TabItem>
@@ -128,7 +184,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 5 5, 5">Server name</TextBlock>
-                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 5, 5, 5" Name="txtServerName"/>
+                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 5, 5, 5" Text="{Binding ServerName, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -138,7 +194,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">DB name</TextBlock>
-                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0, 5, 5" Name="txtDBName"/>
+                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0, 5, 5" Text="{Binding DbName, Mode=TwoWay}"/>
                     </Grid>
                 </Grid>
             </TabItem>
@@ -161,8 +217,8 @@
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
-                        <RadioButton Grid.Column="0" Margin="5, 5 5, 5" IsChecked="True" Name="rdbLocalSolver">Use local solver</RadioButton>
-                        <RadioButton Grid.Column="1" Margin="0, 5 5, 5" Name="rdbRemoteSolver">Use remote solver</RadioButton>
+                        <RadioButton Grid.Column="0" Margin="5, 5 5, 5" FontSize="{StaticResource FontSize}" Name="rdbLocalSolver" IsChecked="{Binding IsLocalServer, Mode=TwoWay}">Use local solver</RadioButton>
+                        <RadioButton Grid.Column="1" Margin="0, 5 5, 5" FontSize="{StaticResource FontSize}"  Name="rdbRemoteSolver" IsChecked="{Binding IsRemoteServer, Mode=TwoWay}">Use remote solver</RadioButton>
                     </Grid>
                     <Grid Grid.Row="1">
                         <Grid.ColumnDefinitions>
@@ -171,11 +227,11 @@
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverFolder">Solver folder</TextBlock>
-                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverPort">Solver port</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverFolder"/>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverPort"/>
-                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnSolverFolder"/>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Style="{StaticResource LocalSolverCheckedStyle}">Solver folder</TextBlock>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Style="{StaticResource RemoteSolverCheckedStyle}">Solver port</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Style="{StaticResource LocalSolverCheckedStyle}" Text="{Binding SolverFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Style="{StaticResource RemoteSolverCheckedStyle}" Text="{Binding SolverPort, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Style="{StaticResource LocalSolverCheckedStyle}" Click="btnSolverFolder_Click"/>
                     </Grid>
                     <Grid Grid.Row="2">
                         <Grid.ColumnDefinitions>
@@ -184,11 +240,11 @@
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverFile">Solver file</TextBlock>
-                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Name="tblSolverIp">Solver ip</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverFile"/>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtSolverIp"/>
-                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnSolverFile"/>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Style="{StaticResource LocalSolverCheckedStyle}">Solver file</TextBlock>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5" Style="{StaticResource RemoteSolverCheckedStyle}">Solver ip</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Style="{StaticResource LocalSolverCheckedStyle}" Text="{Binding SolverFile, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Style="{StaticResource RemoteSolverCheckedStyle}" Text="{Binding SolverIp, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                        <Button Grid.Column="3" Margin="0, 0, 5, 5" Style="{StaticResource LocalSolverCheckedStyle}" Click="btnSolverFile_Click"/>
                     </Grid>
                     <Grid Grid.Row="3">
                         <Grid.ColumnDefinitions>
@@ -198,7 +254,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Turn solver duration (s)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtTurnSolverDuration"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding TurnSolverDuration, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="4">
                         <Grid.ColumnDefinitions>
@@ -208,7 +264,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">River solver duration (s)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtRiverSolverDuration"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding RiverSolverDuration, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="5">
                         <Grid.ColumnDefinitions>
@@ -218,7 +274,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Turn solver accuracy (% pot)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtTurnSolverAccuracy"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding TurnSolverAccuracy, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="6">
                         <Grid.ColumnDefinitions>
@@ -228,7 +284,7 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">River solver accuracy (% pot)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtRiverSolverAccuracy"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding RiverSolverAccuracy, Mode=TwoWay}"/>
                     </Grid>
                     <Grid Grid.Row="7">
                         <Grid.ColumnDefinitions>
@@ -238,17 +294,21 @@
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Min line frequency (%)</TextBlock>
-                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Name="txtMinLineFrequency"/>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding MinLineFrequency, Mode=TwoWay}"/>
                     </Grid>
                 </Grid>
             </TabItem>
-            <TabItem Header="Sites">
+            <TabItem Header="Rooms">
                 <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60*"/>
+                        <ColumnDefinition Width="137*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="GG poker" BorderBrush="Black">
+                    <GroupBox Header="GG poker" BorderBrush="Black" Grid.ColumnSpan="2">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -258,40 +318,62 @@
                                 <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
-                                <CheckBox Grid.Column="0" Margin="5" Name="chbScanGg" IsChecked="True">Scan tables</CheckBox>
+                                <CheckBox Grid.Column="0" Margin="5" Name="chbScanGg" IsChecked="{Binding ScanTablesGg, Mode=TwoWay}">Scan tables</CheckBox>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="1.7*"/>
+                                    <ColumnDefinition Width="1.7*"/>
+                                    <ColumnDefinition Width="1.7*"/>
                                     <ColumnDefinition Width="1.5*"/>
                                     <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="0.9*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Card back</TextBlock>
-                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbCardBack1" Tag="1"/>
-                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbCardBack2" Tag="1"/>
-                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbCardBack3" Tag="1"/>
+                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=1, Mode=TwoWay}">
+                                    <Image Source="/Resources/Images/cardBack1.png" Stretch="Fill"/>
+                                </RadioButton>
+                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=2, Mode=TwoWay}">
+                                    <Image Source="/Resources/Images/cardBack2.png" Stretch="Fill"/>
+                                </RadioButton>
+                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=3, Mode=TwoWay}">
+                                    <Image Source="/Resources/Images/cardBack3.png" Stretch="Fill"/>
+                                </RadioButton>
                             </Grid>
                             <Grid Grid.Row="2">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="1.7*"/>
+                                    <ColumnDefinition Width="1.7*"/>
+                                    <ColumnDefinition Width="1.7*"/>
                                     <ColumnDefinition Width="1.5*"/>
                                     <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
-                                    <ColumnDefinition Width="1.5*"/>
+                                    <ColumnDefinition Width="0.9*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Deck</TextBlock>
-                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbDeck1" Tag="1"/>
-                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbDeck2" Tag="1"/>
-                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource {x:Type ToggleButton}}" Name="rdbDeck3" Tag="1"/>
+                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding DeckIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=1, Mode=TwoWay}">
+                                    <Image Source="/Resources/Images/deck1.png" Stretch="Fill"/>
+                                </RadioButton>
+                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding DeckIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=2, Mode=TwoWay}">
+                                    <Image Source="/Resources/Images/deck2.png" Stretch="Fill"/>
+                                </RadioButton>
                             </Grid>
                             <Grid Grid.Row="3">
-                                <CheckBox Grid.Column="0" Margin="5, 0, 5, 5" Name="chbSavePicturesPerHandGg" IsChecked="True">Save pictures per hand</CheckBox>
+                                <CheckBox Grid.Column="0" Margin="5, 0, 5, 5" Name="chbSavePicturesPerHandGg" IsChecked="{Binding SavePicturesGg, Mode=TwoWay}" Content="Save pictures per hand">
+                                    <CheckBox.Style>
+                                        <Style>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True">
+                                                    <Setter Property="CheckBox.IsEnabled" Value="True"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                                                    <Setter Property="CheckBox.IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </CheckBox.Style>
+                                </CheckBox>
                             </Grid>
                             <Grid Grid.Row="4">
                                 <Grid.ColumnDefinitions>
@@ -301,8 +383,48 @@
                                     <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Pictures save folder</TextBlock>
-                                <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Name="txtPicturesSaveFolderGg"/>
-                                <Button Grid.Column="3" Margin="0, 0, 5, 5" Name="btnPicturesSaveFolderGg"/>
+                                <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Text="{Binding SavePicturesFolderGg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                    <TextBox.Style>
+                                        <Style>
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True"/>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="True"/>
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="TextBox.IsEnabled" Value="True"/>
+                                                </MultiDataTrigger>
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                                                    <Setter Property="TextBox.IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="False">
+                                                    <Setter Property="TextBox.IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBox.Style>
+                                </TextBox>
+                                <Button Grid.Column="3" Margin="0, 0, 5, 5" Click="btnPicturesSaveFolder_Click">
+                                    <Button.Style>
+                                        <Style>
+                                            <Style.Triggers>
+                                                <MultiDataTrigger>
+                                                    <MultiDataTrigger.Conditions>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True"/>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="True"/>
+                                                    </MultiDataTrigger.Conditions>
+                                                    <Setter Property="Button.IsEnabled" Value="True"/>
+                                                </MultiDataTrigger>
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                                                    <Setter Property="Button.IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="False">
+                                                    <Setter Property="Button.IsEnabled" Value="False"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Button.Style>
+                                </Button>
                             </Grid>
                         </Grid>
                     </GroupBox>

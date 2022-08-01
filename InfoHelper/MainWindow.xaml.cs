@@ -210,9 +210,9 @@ namespace InfoHelper
             hpe.UpdateBindings();
 
 
-            //Worker worker = new Worker(_win);
+            Worker worker = new Worker(_win);
 
-            //worker.DoWork();
+            worker.DoWork();
 
 
             ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)_win.WindowsInfoState;
@@ -252,7 +252,7 @@ namespace InfoHelper
             Thread thread = new Thread((() =>
             {
 
-                vmcs.SetError(string.Empty);
+                vmcs.SetError(string.Empty, ErrorType.NoError);
 
                 vmcs.BeginFlushingPictures();
 
@@ -268,7 +268,7 @@ namespace InfoHelper
                 {
                     vmpbs.Value = i;
 
-                    vmcs.SetError($"{Math.Round(i * 100d / vmpbs.MaxValue)}%", true);
+                    vmcs.SetError($"{Math.Round(i * 100d / vmpbs.MaxValue)}%", ErrorType.Ordinary);
 
                     Thread.Sleep(50);
                 }
@@ -277,7 +277,7 @@ namespace InfoHelper
 
                 vmcs.EndFlushingPictures();
 
-                vmcs.SetError(string.Empty);
+                vmcs.SetError(string.Empty, ErrorType.NoError);
             }));
 
             thread.Start();

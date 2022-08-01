@@ -75,13 +75,13 @@ namespace InfoHelper.ViewModel.States
             }
         }
 
-        private bool _isCriticalError;
-        public bool IsCriticalError
+        private ErrorType _errorType = ErrorType.NoError;
+        public ErrorType ErrorType
         {
-            get => _isCriticalError;
+            get => _errorType;
             private set
             {
-                _isCriticalError = value;
+                _errorType = value;
 
                 CommandManager.InvalidateRequerySuggested();
             }
@@ -97,7 +97,7 @@ namespace InfoHelper.ViewModel.States
         public Command OptionsCommand => _optionsCommand ??= new Command(obj =>
         {
             ShowOptionsRequested?.Invoke(this, EventArgs.Empty);
-        }, (obj) => !IsRunning && !FlushPicturesInProgress);
+        }, (obj) => !IsRunning && !FlushPicturesInProgress && ErrorType != ErrorType.Critical);
 
         private Command _startStopCommand;
         public Command StartStopCommand => _startStopCommand ??= new Command(obj =>
@@ -105,19 +105,19 @@ namespace InfoHelper.ViewModel.States
             StartStop();
 
             RunningStateChanged?.Invoke(this, EventArgs.Empty);
-        }, (obj) => !FlushPicturesInProgress && !IsCriticalError);
+        }, (obj) => !FlushPicturesInProgress && ErrorType != ErrorType.Critical && ErrorType != ErrorType.Settings);
 
         private Command _flushPicturesCommand;
         public Command FlushPicturesCommand => _flushPicturesCommand ??= new Command(obj =>
         {
             FlushPicturesRequested?.Invoke(this, EventArgs.Empty);
-        }, (obj) => !IsRunning && !FlushPicturesInProgress && !IsCriticalError);
+        }, (obj) => !IsRunning && !FlushPicturesInProgress && ErrorType != ErrorType.Critical && ErrorType != ErrorType.Settings);
 
         private Command _savePicturesCommand;
         public Command SavePicturesCommand => _savePicturesCommand ??= new Command(obj =>
         {
             SavePictures = !SavePictures;
-        }, (obj) => !FlushPicturesInProgress);
+        });
 
         public void StartStop()
         {
@@ -136,14 +136,24 @@ namespace InfoHelper.ViewModel.States
             _dispatcher.Invoke(() => FlushPicturesInProgress = false);
         }
 
-        public void SetError(string error, bool isCriticalError = false)
+        public void SetError(string error, ErrorType errorType)
         {
-            if (isCriticalError)
+            if (errorType == ErrorType.Settings)
+                error = error.Insert(0, "Settings error!!! ");
+            else if (errorType == ErrorType.Critical)
                 error = error.Insert(0, "Critical error!!! ");
 
             Error = error;
 
-            IsCriticalError = isCriticalError;
+            ErrorType = errorType;
         }
+    }
+
+    public enum ErrorType
+    {
+        NoError,
+        Ordinary,
+        Settings,
+        Critical
     }
 }

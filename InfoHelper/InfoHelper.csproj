@@ -4,11 +4,17 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\bell.png" />
+    <None Remove="Resources\cardBack1.png" />
+    <None Remove="Resources\cardBack2.png" />
+    <None Remove="Resources\cardBack3.png" />
+    <None Remove="Resources\deck1.png" />
+    <None Remove="Resources\deck2.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +28,24 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\bell.png" />
+    <Resource Include="Resources\Images\bell.png" />
+    <Resource Include="Resources\Images\cardBack1.png" />
+    <Resource Include="Resources\Images\cardBack2.png" />
+    <Resource Include="Resources\Images\cardBack3.png" />
+    <Resource Include="Resources\Images\deck1.png" />
+    <Resource Include="Resources\Images\deck2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\Cursors\cursor_tolian.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Cursors\cursor_vanek.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\Cursors\cursor_vanek1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
