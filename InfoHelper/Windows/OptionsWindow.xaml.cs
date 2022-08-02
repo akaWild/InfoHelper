@@ -12,6 +12,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Forms;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Xml;
@@ -23,7 +24,7 @@ using MessageBox = System.Windows.MessageBox;
 using Path = System.Windows.Shapes.Path;
 using Point = System.Windows.Point;
 
-namespace InfoHelper
+namespace InfoHelper.Windows
 {
     /// <summary>
     /// Interaction logic for OptionsWindow.xaml
@@ -51,10 +52,6 @@ namespace InfoHelper
             _viewModel.ClientMouseCursorTemplates = cursorFiles;
 
             string optionsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Settings.xml");
-
-            //string selectedCursor = string.Empty;
-
-            string formBackColorString = string.Empty;
 
             if (File.Exists(optionsPath))
             {
@@ -126,7 +123,7 @@ namespace InfoHelper
 
                                 case "FormBackColor":
 
-                                    formBackColorString = node.Attributes["Value"].Value;
+                                    string formBackColorString = node.Attributes["Value"].Value;
 
                                     try
                                     {
@@ -440,6 +437,11 @@ namespace InfoHelper
                 _viewModel.SnapshotsFolder = folderSave.SelectedPath;
         }
 
+        private void btnDefaultColor_Click(object sender, EventArgs e)
+        {
+            _viewModel.BackColor = (SolidColorBrush)System.Windows.Application.Current.TryFindResource("DefaultFormBackColor");
+        }
+
         private void btnSolverFolder_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderSolver = new FolderBrowserDialog();
@@ -486,6 +488,10 @@ namespace InfoHelper
         {
             try
             {
+                IntPtr hwnd = new WindowInteropHelper(this).Handle;
+
+                WinAPI.SetWindowLong(hwnd, WinAPI.GWL_STYLE, WinAPI.GetWindowLong(hwnd, WinAPI.GWL_STYLE) & ~WinAPI.WS_SYSMENU);
+
                 LoadData();
 
                 DataContext = _viewModel;

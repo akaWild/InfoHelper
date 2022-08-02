@@ -14,7 +14,7 @@ namespace InfoHelper.StatsEntities
 
         public static void LoadCells()
         {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "cell_sets.csv");
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\StatsCsvFiles\\cell_sets.csv");
 
             if(!File.Exists(filePath))
                 throw new Exception("File \"cell_sets.csv\" doesn't exist in root application directory");

@@ -7,6 +7,7 @@ using System.Windows;
 using System.Windows.Media;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.States;
+using InfoHelper.Windows;
 
 namespace InfoHelper.DataProcessor
 {

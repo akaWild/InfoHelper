@@ -46,6 +46,13 @@
     <None Update="Resources\Cursors\cursor_vanek1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\StatsCsvFiles\cell_sets.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\StatsCsvFiles\" />
   </ItemGroup>
 
 </Project>
