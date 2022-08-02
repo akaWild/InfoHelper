@@ -136,7 +136,6 @@ namespace InfoHelper.Windows
                                         // ignored
                                     }
 
-
                                     break;
 
                                 #endregion
@@ -226,6 +225,8 @@ namespace InfoHelper.Windows
 
                                 #region Rooms
 
+                                #region GGPoker
+
                                 case "ScanTablesGg":
 
                                     if (bool.TryParse(node.Attributes["Value"].Value, out bool scanTablesGg))
@@ -258,7 +259,9 @@ namespace InfoHelper.Windows
 
                                     break;
 
-                                    #endregion
+                                #endregion
+
+                                #endregion
                             }
                         }
                     }

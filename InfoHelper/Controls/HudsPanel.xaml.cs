@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InfoHelper.Utils;
 
 namespace InfoHelper.Controls
 {
@@ -29,7 +30,7 @@ namespace InfoHelper.Controls
         {
             base.OnRenderSizeChanged(sizeInfo);
 
-            Application.Current.Resources["CellHeight"] = 0.06 * sizeInfo.NewSize.Height;
+            Shared.CellHeight = 0.06 * sizeInfo.NewSize.Height;
         }
     }
 }

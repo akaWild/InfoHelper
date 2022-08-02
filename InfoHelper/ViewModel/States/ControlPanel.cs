@@ -136,7 +136,7 @@ namespace InfoHelper.ViewModel.States
             _dispatcher.Invoke(() => FlushPicturesInProgress = false);
         }
 
-        public void SetError(string error, ErrorType errorType)
+        public void SetError(string error, ErrorType errorType = ErrorType.Ordinary)
         {
             if (errorType == ErrorType.Settings)
                 error = error.Insert(0, "Settings error!!! ");
@@ -146,6 +146,13 @@ namespace InfoHelper.ViewModel.States
             Error = error;
 
             ErrorType = errorType;
+        }
+
+        public void ResetError()
+        {
+            Error = null;
+
+            ErrorType = ErrorType.NoError;
         }
     }
 
