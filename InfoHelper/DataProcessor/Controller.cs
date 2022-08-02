@@ -1,13 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
+using System.Windows.Forms;
 using System.Windows.Media;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.States;
 using InfoHelper.Windows;
+using PokerCommonUtility;
+using Application = System.Windows.Application;
 
 namespace InfoHelper.DataProcessor
 {
@@ -27,10 +30,17 @@ namespace InfoHelper.DataProcessor
 
             _settingsManager = new SettingsManager();
 
-            StatsManager.LoadCells();
-
             if (!_settingsManager.RetrieveSettings())
                 _mainWindowState.ControlsState.SetError(_settingsManager.Error, ErrorType.Settings);
+
+            try
+            {
+                StatsManager.LoadCells();
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex, ErrorType.Critical);
+            }
         }
 
         private void ControlsState_ShowOptionsRequested(object sender, EventArgs e)
@@ -51,6 +61,33 @@ namespace InfoHelper.DataProcessor
         private void ControlsState_ExitRequested(object sender, EventArgs e)
         {
             Application.Current.Shutdown(0);
+        }
+
+        private void HandleException(Exception ex, ErrorType errorType)
+        {
+            try
+            {
+                try
+                {
+                    Logger.AddRecord(AppDomain.CurrentDomain.BaseDirectory, $"{ex.Message}. {ex.InnerException?.StackTrace ?? string.Empty}{ex.StackTrace}");
+
+                    StackTrace st = new StackTrace(ex, true);
+
+                    StackFrame[] frames = st.GetFrames();
+
+                    string message = $"{ex.Message}. {frames[0]}".Replace(Environment.NewLine, " ");
+
+                    _mainWindowState.ControlsState.SetError(message, errorType);
+                }
+                catch (Exception)
+                {
+                    // ignored
+                }
+            }
+            catch (Exception)
+            {
+                // ignored
+            }
         }
     }
 }
