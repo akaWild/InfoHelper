@@ -9,6 +9,10 @@ namespace InfoHelper.Utils
 {
     public static class Shared
     {
+        public static int ClientWorkSpaceWidth { get; set; } = 1920;
+        public static int ClientWorkSpaceHeight { get; set; } = 1040;
+        public static int ClientTaskBarHeight { get; set; } = 40;
+
         public static double CellHeight { get; set; }
 
         public static string SaveFolder { get; set; }

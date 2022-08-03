@@ -102,8 +102,6 @@ namespace InfoHelper.ViewModel.States
         private Command _startStopCommand;
         public Command StartStopCommand => _startStopCommand ??= new Command(obj =>
         {
-            StartStop();
-
             RunningStateChanged?.Invoke(this, EventArgs.Empty);
         }, (obj) => !FlushPicturesInProgress && ErrorType != ErrorType.Critical && ErrorType != ErrorType.Settings);
 
@@ -119,11 +117,18 @@ namespace InfoHelper.ViewModel.States
             SavePictures = !SavePictures;
         });
 
-        public void StartStop()
+        public void Start()
         {
-            IsRunning = !IsRunning;
+            IsRunning = true;
 
-            StartButtonText = IsRunning ? "Stop" : "Start";
+            StartButtonText = "Stop";
+        }
+
+        public void Stop()
+        {
+            IsRunning = false;
+
+            StartButtonText = "Start";
         }
 
         public void BeginFlushingPictures()

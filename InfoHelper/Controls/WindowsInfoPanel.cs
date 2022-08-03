@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using InfoHelper.Utils;
 using InfoHelper.ViewModel.DataEntities;
 using WindowState = InfoHelper.ViewModel.DataEntities.WindowState;
 
@@ -90,15 +91,11 @@ namespace InfoHelper.Controls
                 if (penResx != null)
                     pen = (Pen)penResx;
 
-                object clientScreenWidthResx = Application.Current.Resources["ClientScreenWidth"], clientScreenHeight = Application.Current.Resources["ClientScreenHeight"];
 
                 double xRatio = 0, yRatio = 0;
 
-                if (clientScreenWidthResx != null && clientScreenHeight != null)
-                {
-                    xRatio = RenderSize.Width / (int)clientScreenWidthResx;
-                    yRatio = RenderSize.Height / (int)clientScreenHeight;
-                }
+                xRatio = RenderSize.Width / Shared.ClientWorkSpaceWidth;
+                yRatio = RenderSize.Height / Shared.ClientWorkSpaceHeight;
 
                 Rect scaledRect = new Rect(data[i].Rectangle.X * xRatio, data[i].Rectangle.Y * yRatio, data[i].Rectangle.Width * xRatio, data[i].Rectangle.Height * yRatio);
 

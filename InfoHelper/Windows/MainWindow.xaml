@@ -36,7 +36,7 @@
                     <StackPanel Orientation="Horizontal">
                         <Button Margin="5" Command="{Binding ControlsState.StartStopCommand}" Content="{Binding ControlsState.StartButtonText, UpdateSourceTrigger=PropertyChanged}">
                         </Button>
-                        <Button Margin="0, 5, 5, 5" Command="{Binding ControlsState.FlushPicturesCommand}" Click="ButtonBase_OnClick1">Save</Button>
+                        <Button Margin="0, 5, 5, 5" Command="{Binding ControlsState.FlushPicturesCommand}">Save</Button>
                         <CheckBox Margin="0, 5, 5, 5" Content="Save pictures" VerticalAlignment="Center" Command="{Binding ControlsState.SavePicturesCommand}">
                             <CheckBox.Style>
                                 <Style>

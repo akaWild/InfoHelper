@@ -20,5 +20,17 @@ namespace InfoHelper.Utils
         {
             return System.Windows.Media.Color.FromArgb(drawingColor.A, drawingColor.R, drawingColor.G, drawingColor.B);
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Drawing.Rectangle ToDrawingRectangle(this System.Windows.Rect windowsRect)
+        {
+            return new System.Drawing.Rectangle((int)windowsRect.X, (int)windowsRect.Y, (int)windowsRect.Width, (int)windowsRect.Height);
+        }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static System.Windows.Rect ToWindowsRect(this System.Drawing.Rectangle drawingRectangle)
+        {
+            return new System.Windows.Rect(drawingRectangle.X, drawingRectangle.Y, drawingRectangle.Width, drawingRectangle.Height);
+        }
     }
 }

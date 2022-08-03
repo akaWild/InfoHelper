@@ -17,5 +17,8 @@ namespace InfoHelper.Utils
 
         [DllImport("user32.dll")]
         public static extern int SetWindowLong(IntPtr hWnd, int nIndex, int dwNewLong);
+
+        [DllImport("msvcrt.dll", CallingConvention = CallingConvention.Cdecl, EntryPoint = "memcpy")]
+        public static extern unsafe int Memcpy(byte* dest, byte* src, long count);
     }
 }

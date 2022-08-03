@@ -8,6 +8,14 @@
     <Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="Resources\bell.png" />
     <None Remove="Resources\cardBack1.png" />
@@ -19,14 +27,24 @@
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+    <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="BitmapDecorator">
       <HintPath>..\..\..\Projects_new\BitmapDecorator\BitmapDecorator\bin\Release\BitmapDecorator.dll</HintPath>
     </Reference>
+    <Reference Include="LibVBKernel32">
+      <HintPath>..\..\..\Projects_Party_version\InfoHelper_v3\InfoHelper\bin\x64\Release\LibVBKernel32.dll</HintPath>
+    </Reference>
+    <Reference Include="LibVBMWCapture">
+      <HintPath>..\..\..\Projects_Party_version\InfoHelper_v3\InfoHelper\bin\x64\Release\LibVBMWCapture.dll</HintPath>
+    </Reference>
     <Reference Include="PokerCommonUtility">
       <HintPath>..\..\PokerCommonUtility\PokerCommonUtility\bin\Release\net5.0\PokerCommonUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="PokerWindowsUtility">
+      <HintPath>..\..\PokerWindowsUtility\PokerWindowsUtility\bin\Release\net5.0\PokerWindowsUtility.dll</HintPath>
     </Reference>
   </ItemGroup>
 
@@ -49,6 +67,12 @@
     <None Update="Resources\Cursors\cursor_vanek1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="Resources\DeferredLoadedAssemblies\GGPoker\PokerWindowsManager.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\DeferredLoadedAssemblies\GGPoker\PokerWindowsManager.pdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Resources\StatsCsvFiles\cell_sets.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -58,6 +82,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Resources\DeferredLoadedAssemblies\GGPoker\" />
     <Folder Include="Resources\StatsCsvFiles\" />
   </ItemGroup>
 

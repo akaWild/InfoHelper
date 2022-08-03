@@ -197,24 +197,21 @@ namespace InfoHelper.Windows
             //worker.DoWork();
 
 
-            ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)_win.WindowsInfoState;
+            //ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)_win.WindowsInfoState;
 
-            Application.Current.Resources["ClientScreenWidth"] = 1920;
-            Application.Current.Resources["ClientScreenHeight"] = 1040;
+            //WindowInfo[] rects = new WindowInfo[6]
+            //{
+            //    new WindowInfo(new Rect(0, 0, 714, 520), ViewModel.DataEntities.WindowState.OkFront, true),
+            //    new WindowInfo(new Rect(699, 0, 714, 520), ViewModel.DataEntities.WindowState.OkBack, false),
+            //    new WindowInfo(new Rect(1418, 0, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionFront, false),
+            //    new WindowInfo(new Rect(0, 500, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionBack, false),
+            //    new WindowInfo(new Rect(699, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorFront, true),
+            //    new WindowInfo(new Rect(1418, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorBack, true)
+            //};
 
-            WindowInfo[] rects = new WindowInfo[6]
-            {
-                new WindowInfo(new Rect(0, 0, 714, 520), ViewModel.DataEntities.WindowState.OkFront, true),
-                new WindowInfo(new Rect(699, 0, 714, 520), ViewModel.DataEntities.WindowState.OkBack, false),
-                new WindowInfo(new Rect(1418, 0, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionFront, false),
-                new WindowInfo(new Rect(0, 500, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionBack, false),
-                new WindowInfo(new Rect(699, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorFront, true),
-                new WindowInfo(new Rect(1418, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorBack, true)
-            };
+            //vmwip.WinInfos = rects;
 
-            vmwip.WinInfos = rects;
-
-            vmwip.UpdateBindings();
+            //vmwip.UpdateBindings();
         }
     }
 
