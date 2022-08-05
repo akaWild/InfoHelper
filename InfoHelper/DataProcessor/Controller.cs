@@ -46,7 +46,7 @@ namespace InfoHelper.DataProcessor
 
             _mainWindowState.ControlsState.ExitRequested += ControlsState_ExitRequested;
 
-            _mainWindowState.ControlsState.ShowOptionsRequested += ControlsState_ShowOptionsRequested; ;
+            _mainWindowState.ControlsState.ShowOptionsRequested += ControlsState_ShowOptionsRequested;
 
             _mainWindowState.ControlsState.RunningStateChanged += ControlsState_RunningStateChanged;
 
@@ -290,6 +290,7 @@ namespace InfoHelper.DataProcessor
                 _mainWindowState.ControlsState.EndFlushingPictures();
             }
         }
+
         private void HandleException(Exception ex, ErrorType errorType)
         {
             try

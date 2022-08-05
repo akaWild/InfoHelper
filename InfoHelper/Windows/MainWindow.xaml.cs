@@ -21,6 +21,8 @@ namespace InfoHelper.Windows
             _win = new ViewModelMain(Dispatcher);
 
             DataContext = _win;
+
+            //_win.HudsParentStates[0].PreflopMatrixState.Visible = true;
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)

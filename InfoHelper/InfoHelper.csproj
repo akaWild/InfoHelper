@@ -32,7 +32,7 @@
 
   <ItemGroup>
     <Reference Include="BitmapDecorator">
-      <HintPath>..\..\..\Projects_new\BitmapDecorator\BitmapDecorator\bin\Release\BitmapDecorator.dll</HintPath>
+      <HintPath>..\..\BitmapDecorator\BitmapDecorator\bin\Release\net5.0\BitmapDecorator.dll</HintPath>
     </Reference>
     <Reference Include="LibVBKernel32">
       <HintPath>..\..\..\Projects_Party_version\InfoHelper_v3\InfoHelper\bin\x64\Release\LibVBKernel32.dll</HintPath>
