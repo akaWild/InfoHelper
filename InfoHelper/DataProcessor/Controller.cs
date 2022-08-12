@@ -18,6 +18,7 @@ using InfoHelper.ViewModel.States;
 using InfoHelper.Windows;
 using PokerCommonUtility;
 using PokerWindowsUtility;
+using ScreenParserUtility;
 using Application = System.Windows.Application;
 
 namespace InfoHelper.DataProcessor
@@ -39,6 +40,8 @@ namespace InfoHelper.DataProcessor
         private readonly CaptureCardManager _captureCardManager;
 
         private readonly MethodInfo _findWindowsGg;
+
+        private readonly Type _screenParserTypeGg;
 
         public Controller(ViewModelMain window)
         {
@@ -63,16 +66,33 @@ namespace InfoHelper.DataProcessor
 
             try
             {
+                AppDomain.CurrentDomain.AssemblyResolve += (sender, args) =>
+                {
+                    string currentAssemblyFolder = Path.GetDirectoryName(args.RequestingAssembly.Location);
+
+                    FileInfo[] neighborAssemblies = new DirectoryInfo(currentAssemblyFolder).GetFiles("*.dll");
+
+                    FileInfo requiredAssembly = neighborAssemblies.FirstOrDefault(a => args.Name.Contains(Path.GetFileNameWithoutExtension(a.Name)));
+
+                    if (requiredAssembly == null)
+                        return null;
+
+                    return Assembly.LoadFrom(requiredAssembly.FullName);
+                };
+
                 StatsManager.LoadCells();
 
                 _captureCardManager = new CaptureCardManager();
 
-                Assembly assemblyWindowsManagerGg = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedAssemblies\\GGPoker\\PokerWindowsManager.dll"));
+                Assembly assemblyWindowsManagerGg = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
 
                 Type windowsManagerTypeGg = assemblyWindowsManagerGg.GetType("PokerWindowsManager.PokerWindowsManager");
 
                 _findWindowsGg = windowsManagerTypeGg.GetMethod("FindWindows", new Type[] { typeof(BitmapDecorator) });
 
+                Assembly assemblyScreenParserGg = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ScreenParser.dll"));
+
+                _screenParserTypeGg = assemblyScreenParserGg.GetType("Parser.ScreenParser");
             }
             catch (Exception ex)
             {
@@ -181,6 +201,27 @@ namespace InfoHelper.DataProcessor
                         winInfos[i] = new WindowInfo(windows[i].Position.ToWindowsRect(), winState, false);
                     else
                         winInfos[i] = new WindowInfo(windows[i].Position.ToWindowsRect(), winState, false);
+                }
+
+                for (int i = 0; i < windows.Length; i++)
+                {
+                    PokerWindow window = windows[i];
+
+                    if (windows[i].CaptionMatched && windows[i].IsFocused)
+                    {
+                        if (windows[i].PokerRoom == PokerRoom.GGPoker)
+                        {
+                            ConstructorInfo ci = _screenParserTypeGg.GetConstructor(new[]
+                            {
+                                typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int),
+                                typeof(int)
+                            });
+
+                            IScreenParser screenParser = (IScreenParser)ci.Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
+
+                            ScreenParserData screenData = screenParser.ParseWindow();
+                        }
+                    }
                 }
 
                 _mainWindowState.WindowsInfoState.WinInfos = winInfos;

@@ -46,6 +46,9 @@
     <Reference Include="PokerWindowsUtility">
       <HintPath>..\..\PokerWindowsUtility\PokerWindowsUtility\bin\Release\net5.0\PokerWindowsUtility.dll</HintPath>
     </Reference>
+    <Reference Include="ScreenParserUtility">
+      <HintPath>..\..\ScreenParserUtility\ScreenParserUtility\bin\Release\net5.0\ScreenParserUtility.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>
@@ -67,12 +70,6 @@
     <None Update="Resources\Cursors\cursor_vanek1.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\DeferredLoadedAssemblies\GGPoker\PokerWindowsManager.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Update="Resources\DeferredLoadedAssemblies\GGPoker\PokerWindowsManager.pdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Update="Resources\StatsCsvFiles\cell_sets.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
@@ -82,8 +79,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\DeferredLoadedAssemblies\GGPoker\" />
     <Folder Include="Resources\StatsCsvFiles\" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="XCOPY &quot;$(ProjectDir)Resources\DeferredLoadedData&quot; &quot;$(TargetDir)Resources&quot; /S /Y /D" />
+  </Target>
 
 </Project>
