@@ -6,6 +6,8 @@
     <UseWPF>true</UseWPF>
     <UseWindowsForms>true</UseWindowsForms>
     <Platforms>AnyCPU;x64</Platforms>
+    <ApplicationIcon />
+    <StartupObject />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

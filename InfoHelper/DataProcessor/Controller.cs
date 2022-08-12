@@ -211,13 +211,10 @@ namespace InfoHelper.DataProcessor
                     {
                         if (windows[i].PokerRoom == PokerRoom.GGPoker)
                         {
-                            ConstructorInfo ci = _screenParserTypeGg.GetConstructor(new[]
+                            IScreenParser screenParser = (IScreenParser)_screenParserTypeGg.GetConstructor(new[]
                             {
-                                typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int),
-                                typeof(int)
-                            });
-
-                            IScreenParser screenParser = (IScreenParser)ci.Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
+                                typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
+                            }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
 
                             ScreenParserData screenData = screenParser.ParseWindow();
                         }
@@ -338,7 +335,7 @@ namespace InfoHelper.DataProcessor
             {
                 try
                 {
-                    Logger.AddRecord(AppDomain.CurrentDomain.BaseDirectory, $"{ex.Message}. {ex.InnerException?.StackTrace ?? string.Empty}{ex.StackTrace}");
+                    Logger.AddRecord(AppDomain.CurrentDomain.BaseDirectory, $"{ex.Message}. {ex.InnerException?.Message ?? string.Empty}. {ex.InnerException?.StackTrace ?? string.Empty}{ex.StackTrace}");
 
                     StackTrace st = new StackTrace(ex, true);
 
