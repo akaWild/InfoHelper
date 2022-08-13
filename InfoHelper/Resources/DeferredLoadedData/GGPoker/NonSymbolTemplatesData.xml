@@ -773,79 +773,159 @@
           </GgRecords>
         </GgTemplateInfo>
 
-        <!--Stack validity-->
-        <GgTemplateInfo TemplateName="StackValidity" TemplatesFolder="Templates\Default\StackValidity" Position="1">
+        <!--Stack validity (top)-->
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="1">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="414, 164, 20, 1">
+                <GgRecordItemInfo Rectangle="384, 144, 82, 1">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageName="1_stval_dflt" Value="Ok" />
+                    <GgRecordItemValueInfo ItemImageName="1_stvalu_dflt" Value="Ok" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidity" TemplatesFolder="Templates\Default\StackValidity" Position="2">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="2">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="720, 224, 20, 1">
+                <GgRecordItemInfo Rectangle="690, 204, 82, 1">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageName="2_stval_dflt" Value="Ok" />
+                    <GgRecordItemValueInfo ItemImageName="2_stvalu_dflt" Value="Ok" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidity" TemplatesFolder="Templates\Default\StackValidity" Position="3">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="3">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="746, 471, 20, 1">
+                <GgRecordItemInfo Rectangle="716, 451, 82, 1">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageName="3_stval_dflt" Value="Ok" />
+                    <GgRecordItemValueInfo ItemImageName="3_stvalu_dflt" Value="Ok" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidity" TemplatesFolder="Templates\Default\StackValidity" Position="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="4">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="414, 577, 25, 1">
+                <GgRecordItemInfo Rectangle="380, 556, 91, 1">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageName="4_stval_dflt" Value="Ok" />
+                    <GgRecordItemValueInfo ItemImageName="4_stvalu_dflt" Value="Ok" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidity" TemplatesFolder="Templates\Default\StackValidity" Position="5">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="82, 471, 20, 1">
+                <GgRecordItemInfo Rectangle="52, 451, 82, 1">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageName="5_stval_dflt" Value="Ok" />
+                    <GgRecordItemValueInfo ItemImageName="5_stvalu_dflt" Value="Ok" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidity" TemplatesFolder="Templates\Default\StackValidity" Position="6">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="6">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="109, 224, 20, 1">
+                <GgRecordItemInfo Rectangle="79, 204, 82, 1">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageName="6_stval_dflt" Value="Ok" />
+                    <GgRecordItemValueInfo ItemImageName="6_stvalu_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+
+        <!--Stack validity (bottom)-->
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="1">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="384, 164, 82, 1">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_stvalb_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="2">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="690, 224, 82, 1">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_stvalb_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="3">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="716, 471, 82, 1">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_stvalb_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="4">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="380, 577, 91, 1">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_stvalb_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="5">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="52, 471, 82, 1">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_stvalb_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="6">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="79, 224, 82, 1">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_stvalb_dflt" Value="Ok" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>

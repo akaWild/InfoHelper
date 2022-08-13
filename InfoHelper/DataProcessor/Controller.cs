@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -42,7 +43,7 @@ namespace InfoHelper.DataProcessor
         private readonly MethodInfo _findWindowsGg;
 
         private readonly Type _screenParserTypeGg;
-
+        
         public Controller(ViewModelMain window)
         {
             _mainWindowState = window;
@@ -104,13 +105,15 @@ namespace InfoHelper.DataProcessor
         {
             try
             {
-                ProcessData();
+                Process();
             }
             catch (Exception ex)
             {
                 HandleException(ex, ErrorType.Ordinary);
 
                 Stop();
+
+                Task.Factory.StartNew(SavePictures);
             }
         }
 
@@ -147,7 +150,7 @@ namespace InfoHelper.DataProcessor
             Application.Current.Shutdown(0);
         }
 
-        private void ProcessData()
+        private void Process()
         {
             Bitmap clientScreenBitmap = null;
 
@@ -178,47 +181,60 @@ namespace InfoHelper.DataProcessor
                 if (Shared.ScanTablesGg)
                     windows = (PokerWindow[])_findWindowsGg.Invoke(null, new object[] { bmpDecor });
 
-                for (int i = 0; i < windows.Length; i++)
-                    windows[i].IsFocused = cursor != null && windows[i].Position.Contains(cursor.Value);
-
-                PokerWindow okForegroundWindow = windows.FirstOrDefault(window => window.IsFullyVisible && window.IsFocused);
-
                 WindowInfo[] winInfos = new WindowInfo[windows.Length];
 
                 for (int i = 0; i < windows.Length; i++)
                 {
-                    WindowState winState = WindowState.OkFront;
+                    WindowState winState;
 
-                    if (windows[i].IsFocused)
-                    {
-                        if (!windows[i].CaptionMatched)
-                            winState = WindowState.WrongCaptionFront;
-                    }
-                    else
-                        winState = windows[i].CaptionMatched ? WindowState.OkBack : WindowState.WrongCaptionBack;
+                    windows[i].IsFocused = cursor != null && windows[i].Position.Contains(cursor.Value);
 
-                    if (windows[i].IsFocused)
-                        winInfos[i] = new WindowInfo(windows[i].Position.ToWindowsRect(), winState, false);
-                    else
-                        winInfos[i] = new WindowInfo(windows[i].Position.ToWindowsRect(), winState, false);
-                }
-
-                for (int i = 0; i < windows.Length; i++)
-                {
                     PokerWindow window = windows[i];
 
-                    if (windows[i].CaptionMatched && windows[i].IsFocused)
+                    bool isHeroActing = false;
+
+                    if(!window.CaptionMatched)
+                        winState = window.IsFocused ? WindowState.WrongCaptionFront : WindowState.WrongCaptionBack;
+                    else
                     {
-                        if (windows[i].PokerRoom == PokerRoom.GGPoker)
+                        bool hasError = false;
+
+                        Type screenParserType = null;
+
+                        if (window.PokerRoom == PokerRoom.GGPoker)
+                            screenParserType = _screenParserTypeGg;
+
+                        if (screenParserType != null)
                         {
-                            IScreenParser screenParser = (IScreenParser)_screenParserTypeGg.GetConstructor(new[]
+                            IScreenParser screenParser = (IScreenParser)screenParserType.GetConstructor(new[]
                             {
                                 typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
                             }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
 
-                            ScreenParserData screenData = screenParser.ParseWindow();
+                            Rectangle mouseRect = default;
+
+                            if (cursor != null)
+                                mouseRect = new Rectangle(cursor.Value.X - window.Position.X, cursor.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
+
+                            hasError = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
+
+                            if (!hasError)
+                            {
+                                ScreenParserData screenData = screenParser.ParseWindow();
+
+                                PokerRoomManager.ProcessData(window, screenData, bmpDecor);
+
+                                isHeroActing = screenData.IsHeroActing;
+                            }
                         }
+
+                        if(hasError)
+                            winState = window.IsFocused ? WindowState.ErrorFront : WindowState.ErrorBack;
+                        else
+                            winState = window.IsFocused ? WindowState.OkFront : WindowState.OkBack;
                     }
+
+                    winInfos[i] = new WindowInfo(window.Position.ToWindowsRect(), winState, isHeroActing);
                 }
 
                 _mainWindowState.WindowsInfoState.WinInfos = winInfos;
@@ -267,6 +283,8 @@ namespace InfoHelper.DataProcessor
             }
             finally
             {
+                ResetControls();
+
                 _mainWindowState.ControlsState.Stop();
 
                 _shouldStop = true;
@@ -354,6 +372,13 @@ namespace InfoHelper.DataProcessor
             {
                 // ignored
             }
+        }
+
+        private void ResetControls()
+        {
+            _mainWindowState.WindowsInfoState.WinInfos = null;
+
+            _mainWindowState.WindowsInfoState.UpdateBindings();
         }
     }
 }

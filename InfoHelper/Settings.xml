@@ -1,1 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8"?><Settings><ServerName Value="DEERDICK" /><DBName Value="PokerHandsDB" /><SaveFolder Value="D:\InfoHelper Folders\Saved pictures" /><SnapshotsFolder Value="D:\InfoHelper Folders\Screenshots\PokerStars" /><TimerInterval Value="1" /><BitmapsBuffer Value="1" /><GetLastNHands Value="50" /><ScreenshotSaveInterval Value="3" /><IsLocalServer Value="True" /><SolverFolder Value="D:\PioSolver\jesolver_pro_1060" /><SolverFile Value="jesolver_pro_avx_1060.exe" /><SolverPort Value="fdhgfhg" /><SolverIp Value="localhost" /><WindowExpireTimeout Value="15" /><MouseCursor Value="cursor_tolian.png" /><TurnSolverDuration Value="3" /><RiverSolverDuration Value="1" /><TurnSolverAccuracy Value="0.25" /><RiverSolverAccuracy Value="0.01" /><MinLineFrequency Value="3" /><FormBackColor Value="#FFDCDCDC" /><ScanTablesGg Value="False" /><CardBackIndexGg Value="3" /><DeckIndexGg Value="1" /><SavePicturesPerHandGg Value="True" /><PicturesSaveFolderGg Value="C:\Users\Tolian\Pictures\Screenshots" /></Settings>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <ServerName Value="DEERDICK" />
+  <DBName Value="PokerHandsDB" />
+  <SaveFolder Value="D:\InfoHelper Folders\Saved pictures" />
+  <SnapshotsFolder Value="D:\InfoHelper Folders\Screenshots\PokerStars" />
+  <TimerInterval Value="1" />
+  <BitmapsBuffer Value="1" />
+  <GetLastNHands Value="50" />
+  <ScreenshotSaveInterval Value="3" />
+  <IsLocalServer Value="True" />
+  <SolverFolder Value="D:\PioSolver\jesolver_pro_1060" />
+  <SolverFile Value="jesolver_pro_avx_1060.exe" />
+  <SolverPort Value="fdhgfhg" />
+  <SolverIp Value="localhost" />
+  <WindowExpireTimeout Value="15" />
+  <MouseCursor Value="cursor_tolian.png" />
+  <TurnSolverDuration Value="3" />
+  <RiverSolverDuration Value="1" />
+  <TurnSolverAccuracy Value="0.25" />
+  <RiverSolverAccuracy Value="0.01" />
+  <MinLineFrequency Value="3" />
+  <FormBackColor Value="#FFDCDCDC" />
+  <ScanTablesGg Value="False" />
+  <CardBackIndexGg Value="3" />
+  <DeckIndexGg Value="1" />
+  <SavePicturesPerHandGg Value="False" />
+  <PicturesSaveFolderGg Value="C:\Users\Tolian\Pictures\Screenshots" />
+</Settings>

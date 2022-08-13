@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
@@ -31,6 +32,17 @@ namespace InfoHelper.Utils
         public static System.Windows.Rect ToWindowsRect(this System.Drawing.Rectangle drawingRectangle)
         {
             return new System.Windows.Rect(drawingRectangle.X, drawingRectangle.Y, drawingRectangle.Width, drawingRectangle.Height);
+        }
+
+        public static bool ContainsRect(this Rectangle[] rects, Rectangle rectToTest)
+        {
+            foreach (Rectangle rect in rects)
+            {
+                if (rect.IntersectsWith(rectToTest))
+                    return true;
+            }
+
+            return false;
         }
     }
 }
