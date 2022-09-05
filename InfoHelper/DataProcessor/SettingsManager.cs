@@ -822,7 +822,7 @@ namespace InfoHelper.DataProcessor
             Shared.MouseCursor = cursorImage;
             Application.Current.Resources["CurrentFormBackColor"] = windowBackground;
             Shared.ServerName = serverName;
-            Shared.DBName = dbName;
+            Shared.DbName = dbName;
             Shared.IsLocalServer = isLocalSolver;
             Shared.SolverFolder = solverFolder;
             Shared.SolverFile = solverFile;

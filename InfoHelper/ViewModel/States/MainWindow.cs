@@ -23,8 +23,6 @@ namespace InfoHelper.ViewModel.States
         public ViewModelMain(Dispatcher dispatcher)
         {
             ControlsState = new ViewModelControlsState(dispatcher);
-
-            new Controller(this);
         }
     }
 }

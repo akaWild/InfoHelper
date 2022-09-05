@@ -29,6 +29,8 @@ namespace InfoHelper
                 Current.Shutdown();
             }
 
+            Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
+
             base.OnStartup(e);
         }
     }

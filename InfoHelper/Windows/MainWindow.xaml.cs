@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using System.Windows;
+using InfoHelper.DataProcessor;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.DataEntities;
 using InfoHelper.ViewModel.States;
@@ -12,15 +13,21 @@ namespace InfoHelper.Windows
     /// </summary>
     public partial class MainWindow : Window
     {
-        private readonly ViewModelMain _win;
+        private readonly ViewModelMain _vmMain;
+
+        private readonly ViewModelPlayers _vmPlayers;
 
         public MainWindow()
         {
             InitializeComponent();
 
-            _win = new ViewModelMain(Dispatcher);
+            _vmMain = new ViewModelMain(Dispatcher);
 
-            DataContext = _win;
+            _vmPlayers = new ViewModelPlayers();
+
+            DataContext = _vmMain;
+
+            new Controller(_vmMain, _vmPlayers);
 
             //_win.HudsParentStates[0].PreflopMatrixState.Visible = true;
         }
@@ -31,7 +38,7 @@ namespace InfoHelper.Windows
 
         private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
         {
-            ViewModelActionsState vmas = _win.HudsParentStates[0].ActionsState;
+            ViewModelActionsState vmas = _vmMain.HudsParentStates[0].ActionsState;
 
             vmas.Actions = @"xr/rcfr/bbrr";
 
@@ -39,7 +46,7 @@ namespace InfoHelper.Windows
 
             vmas.UpdateBindings();
 
-            ViewModelNameState vmns = _win.HudsParentStates[0].NameState;
+            ViewModelNameState vmns = _vmMain.HudsParentStates[0].NameState;
 
             vmns.Name = "akaWild!!!";
 
@@ -51,7 +58,7 @@ namespace InfoHelper.Windows
 
             #region General
 
-            ViewModelStatsHud vmgh = _win.HudsParentStates[0].GeneralHudState;
+            ViewModelStatsHud vmgh = _vmMain.HudsParentStates[0].GeneralHudState;
 
             ValueCell handsCell = new ValueCell("Hands", "Hands played");
 
@@ -106,9 +113,9 @@ namespace InfoHelper.Windows
 
             #endregion
 
-            ViewModelStatsHud hpe = _win.HudsParentStates[0].PostflopFlopHudState;
+            ViewModelStatsHud hpe = _vmMain.HudsParentStates[0].PostflopFlopHudState;
 
-            ViewModelPreflopMatrixState vmpms = _win.HudsParentStates[0].PreflopMatrixState;
+            ViewModelPreflopMatrixState vmpms = _vmMain.HudsParentStates[0].PreflopMatrixState;
 
             PreflopData cbData = new PreflopData();
 

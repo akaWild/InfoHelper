@@ -24,7 +24,7 @@ namespace InfoHelper.Utils
         public static TimeSpan WindowExpireTimeout { get; set; }
         public static BitmapDecorator MouseCursor { get; set; }
         public static string ServerName { get; set; }
-        public static string DBName { get; set; }
+        public static string DbName { get; set; }
         public static bool IsLocalServer { get; set; }
         public static string SolverFolder { get; set; }
         public static string SolverFile { get; set; }

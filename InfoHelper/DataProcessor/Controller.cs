@@ -30,9 +30,11 @@ namespace InfoHelper.DataProcessor
 
         private DateTime _lastScreenshotSaveTime;
 
-        private bool _shouldStop = true;
+        private PlayersManager _playersManager;
 
         private readonly ViewModelMain _mainWindowState;
+
+        private readonly ViewModelPlayers _playersWindowState;
 
         private readonly DispatcherTimer _timer;
 
@@ -43,18 +45,28 @@ namespace InfoHelper.DataProcessor
         private readonly MethodInfo _findWindowsGg;
 
         private readonly Type _screenParserTypeGg;
-        
-        public Controller(ViewModelMain window)
+
+        private readonly PlayersWindow _playersWindow;
+
+        public Controller(ViewModelMain vmMain, ViewModelPlayers vmPlayers)
         {
-            _mainWindowState = window;
+            _mainWindowState = vmMain;
+
+            _playersWindowState = vmPlayers;
 
             _mainWindowState.ControlsState.ExitRequested += ControlsState_ExitRequested;
 
             _mainWindowState.ControlsState.ShowOptionsRequested += ControlsState_ShowOptionsRequested;
 
+            _mainWindowState.ControlsState.ShowPlayersRequested += ControlsState_ShowPlayersRequested;
+
             _mainWindowState.ControlsState.RunningStateChanged += ControlsState_RunningStateChanged;
 
             _mainWindowState.ControlsState.FlushPicturesRequested += ControlsState_FlushPicturesRequested;
+
+            _playersWindow = new PlayersWindow { DataContext = _playersWindowState };
+
+            _playersWindow.IsVisibleChanged += (sender, args) => _mainWindowState.ControlsState.PlayersWindowVisible = _playersWindow.IsVisible;
 
             _timer = new DispatcherTimer();
 
@@ -145,6 +157,11 @@ namespace InfoHelper.DataProcessor
             }
         }
 
+        private void ControlsState_ShowPlayersRequested(object sender, EventArgs e)
+        {
+            _playersWindow.Show();
+        }
+
         private void ControlsState_ExitRequested(object sender, EventArgs e)
         {
             Application.Current.Shutdown(0);
@@ -225,6 +242,15 @@ namespace InfoHelper.DataProcessor
                                 PokerRoomManager.ProcessData(window, screenData, bmpDecor);
 
                                 isHeroActing = screenData.IsHeroActing;
+
+                                if (isHeroActing)
+                                {
+                                    for (int j = 0; j < screenData.Nicks.Length; j++)
+                                    {
+                                        if (!screenData.IsNickOverlapped[j] && !screenData.IsStackOverlapped[j])
+                                            _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
+                                    }
+                                }
                             }
                         }
 
@@ -251,22 +277,29 @@ namespace InfoHelper.DataProcessor
 
         private void Start()
         {
-            _shouldStop = false;
+            try
+            {
+                _mainWindowState.ControlsState.ResetError();
 
-            _mainWindowState.ControlsState.ResetError();
+                if (_bitmapContainer == null)
+                    _bitmapContainer = new BitmapsContainer(Shared.BitmapsBuffer);
+                else
+                    _bitmapContainer.Capacity = Shared.BitmapsBuffer;
 
-            if (_bitmapContainer == null)
-                _bitmapContainer = new BitmapsContainer(Shared.BitmapsBuffer);
-            else
-                _bitmapContainer.Capacity = Shared.BitmapsBuffer;
+                _playersManager = new PlayersManager(_playersWindowState);
 
-            _captureCardManager.Initialize();
+                _captureCardManager.Initialize();
 
-            _timer.Interval = TimeSpan.FromMilliseconds(Shared.TimerInterval);
+                _timer.Interval = TimeSpan.FromMilliseconds(Shared.TimerInterval);
 
-            _timer.Start();
+                _timer.Start();
 
-            _mainWindowState.ControlsState.Start();
+                _mainWindowState.ControlsState.Start();
+            }
+            catch (Exception ex)
+            {
+                HandleException(ex, ErrorType.Ordinary);
+            }
         }
 
         private void Stop()
@@ -286,8 +319,6 @@ namespace InfoHelper.DataProcessor
                 ResetControls();
 
                 _mainWindowState.ControlsState.Stop();
-
-                _shouldStop = true;
             }
         }
 

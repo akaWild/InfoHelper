@@ -18,6 +18,8 @@ namespace InfoHelper.ViewModel.States
 
         public event EventHandler ShowOptionsRequested;
 
+        public event EventHandler ShowPlayersRequested;
+
         public ViewModelControlsState(Dispatcher dispatcher)
         {
             _dispatcher = dispatcher;
@@ -87,6 +89,18 @@ namespace InfoHelper.ViewModel.States
             }
         }
 
+        private bool _playersWindowVisible;
+        public bool PlayersWindowVisible
+        {
+            get => _playersWindowVisible;
+            set
+            {
+                _playersWindowVisible = value;
+
+                CommandManager.InvalidateRequerySuggested();
+            }
+        }
+
         private Command _exitCommand;
         public Command ExitCommand => _exitCommand ??= new Command(obj =>
         {
@@ -98,6 +112,12 @@ namespace InfoHelper.ViewModel.States
         {
             ShowOptionsRequested?.Invoke(this, EventArgs.Empty);
         }, (obj) => !IsRunning && !FlushPicturesInProgress && ErrorType != ErrorType.Critical);
+
+        private Command _playersCommand;
+        public Command PlayersCommand => _playersCommand ??= new Command(obj =>
+        {
+            ShowPlayersRequested?.Invoke(this, EventArgs.Empty);
+        }, (obj) => ErrorType != ErrorType.Critical && ErrorType != ErrorType.Settings && !PlayersWindowVisible);
 
         private Command _startStopCommand;
         public Command StartStopCommand => _startStopCommand ??= new Command(obj =>

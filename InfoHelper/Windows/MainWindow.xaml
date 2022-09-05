@@ -17,6 +17,7 @@
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="Exit" Command="{Binding ControlsState.ExitCommand}"/>
             <MenuItem Header="Options" Command="{Binding ControlsState.OptionsCommand}"/>
+            <MenuItem Header="Players" Command="{Binding ControlsState.PlayersCommand}"/>
         </Menu>
         <Grid>
             <Grid.ColumnDefinitions>

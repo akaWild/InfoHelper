@@ -28,9 +28,9 @@ namespace InfoHelper.DataProcessor
 
                         bool CheckParsedInfo()
                         {
-                            for (int i = 0; i < screenData.NickHashes.Length; i++)
+                            for (int i = 0; i < screenData.Nicks.Length; i++)
                             {
-                                if (screenData.NickHashes[i] == null && screenData.Stacks[i] != null)
+                                if (screenData.Nicks[i] == null && screenData.Stacks[i] != null)
                                     return false;
                             }
 

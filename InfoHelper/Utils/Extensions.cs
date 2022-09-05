@@ -5,33 +5,47 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Interop;
+using System.Windows.Media.Imaging;
 
 namespace InfoHelper.Utils
 {
     public static class Extensions
     {
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static System.Drawing.Color ToDrawingColor(this System.Windows.Media.Color mediaColor)
+        public static Color ToDrawingColor(this System.Windows.Media.Color mediaColor)
         {
-            return System.Drawing.Color.FromArgb(mediaColor.A, mediaColor.R, mediaColor.G, mediaColor.B);
+            return Color.FromArgb(mediaColor.A, mediaColor.R, mediaColor.G, mediaColor.B);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static System.Windows.Media.Color ToMediaColor(this System.Drawing.Color drawingColor)
+        public static System.Windows.Media.Color ToMediaColor(this Color drawingColor)
         {
             return System.Windows.Media.Color.FromArgb(drawingColor.A, drawingColor.R, drawingColor.G, drawingColor.B);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static System.Drawing.Rectangle ToDrawingRectangle(this System.Windows.Rect windowsRect)
+        public static Rectangle ToDrawingRectangle(this Rect windowsRect)
         {
-            return new System.Drawing.Rectangle((int)windowsRect.X, (int)windowsRect.Y, (int)windowsRect.Width, (int)windowsRect.Height);
+            return new Rectangle((int)windowsRect.X, (int)windowsRect.Y, (int)windowsRect.Width, (int)windowsRect.Height);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static System.Windows.Rect ToWindowsRect(this System.Drawing.Rectangle drawingRectangle)
+        public static Rect ToWindowsRect(this Rectangle drawingRectangle)
         {
-            return new System.Windows.Rect(drawingRectangle.X, drawingRectangle.Y, drawingRectangle.Width, drawingRectangle.Height);
+            return new Rect(drawingRectangle.X, drawingRectangle.Y, drawingRectangle.Width, drawingRectangle.Height);
+        }
+
+        public static BitmapSource ToBitmapSource(this Bitmap bitmap)
+        {
+            BitmapSource bs = Imaging.CreateBitmapSourceFromHBitmap(
+                bitmap.GetHbitmap(),
+                IntPtr.Zero,
+                Int32Rect.Empty,
+                BitmapSizeOptions.FromEmptyOptions());
+
+            return bs;
         }
 
         public static bool ContainsRect(this Rectangle[] rects, Rectangle rectToTest)

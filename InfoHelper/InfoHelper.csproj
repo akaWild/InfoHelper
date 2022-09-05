@@ -29,27 +29,32 @@
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="BitmapDecorator">
-      <HintPath>..\..\BitmapDecorator\BitmapDecorator\bin\Release\net5.0\BitmapDecorator.dll</HintPath>
+      <HintPath>..\..\..\BitmapDecorator\BitmapDecorator\bin\Release\net5.0\BitmapDecorator.dll</HintPath>
     </Reference>
     <Reference Include="LibVBKernel32">
-      <HintPath>..\..\..\Projects_Party_version\InfoHelper_v3\InfoHelper\bin\x64\Release\LibVBKernel32.dll</HintPath>
+      <HintPath>C:\Users\Tolian\Desktop\EXE_NEW\Info Helper\LibVBKernel32.dll</HintPath>
     </Reference>
     <Reference Include="LibVBMWCapture">
-      <HintPath>..\..\..\Projects_Party_version\InfoHelper_v3\InfoHelper\bin\x64\Release\LibVBMWCapture.dll</HintPath>
+      <HintPath>C:\Users\Tolian\Desktop\EXE_NEW\Info Helper\LibVBMWCapture.dll</HintPath>
+    </Reference>
+    <Reference Include="PlayerControlsLibrary">
+      <HintPath>..\..\PlayerControlsLibrary\PlayerControlsLibrary\bin\Release\net5.0-windows\PlayerControlsLibrary.dll</HintPath>
     </Reference>
     <Reference Include="PokerCommonUtility">
-      <HintPath>..\..\PokerCommonUtility\PokerCommonUtility\bin\Release\net5.0\PokerCommonUtility.dll</HintPath>
+      <HintPath>..\..\..\PokerCommonUtility\PokerCommonUtility\bin\Release\net5.0\PokerCommonUtility.dll</HintPath>
     </Reference>
     <Reference Include="PokerWindowsUtility">
-      <HintPath>..\..\PokerWindowsUtility\PokerWindowsUtility\bin\Release\net5.0\PokerWindowsUtility.dll</HintPath>
+      <HintPath>..\..\..\PokerWindowsUtility\PokerWindowsUtility\bin\Release\net5.0\PokerWindowsUtility.dll</HintPath>
     </Reference>
     <Reference Include="ScreenParserUtility">
-      <HintPath>..\..\ScreenParserUtility\ScreenParserUtility\bin\Release\net5.0\ScreenParserUtility.dll</HintPath>
+      <HintPath>..\..\..\ScreenParserUtility\ScreenParserUtility\bin\Release\net5.0\ScreenParserUtility.dll</HintPath>
     </Reference>
   </ItemGroup>
 
