@@ -45,11 +45,13 @@ namespace InfoHelper.DataProcessor
 
         private readonly CaptureCardManager _captureCardManager;
 
-        private readonly MethodInfo _findWindowsGg;
+        private readonly HudsManager _hudsManager;
+
+        private readonly MethodInfo _findWindows;
 
         private readonly MethodInfo _analyzeParserData;
 
-        private readonly Type _screenParserTypeGg;
+        private readonly Type _screenParserType;
 
         private readonly PlayersWindow _playersWindow;
 
@@ -104,15 +106,17 @@ namespace InfoHelper.DataProcessor
 
                 _captureCardManager = new CaptureCardManager();
 
-                Assembly assemblyWindowsManagerGg = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
+                _hudsManager = new HudsManager(_mainWindowState);
 
-                Type windowsManagerTypeGg = assemblyWindowsManagerGg.GetType("PokerWindowsManager.PokerWindowsManager");
+                Assembly assemblyWindowsManager = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
 
-                _findWindowsGg = windowsManagerTypeGg.GetMethod("FindWindows", new Type[] { typeof(BitmapDecorator) });
+                Type windowsManagerType = assemblyWindowsManager.GetType("PokerWindowsManager.PokerWindowsManager");
 
-                Assembly assemblyScreenParserGg = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ScreenParser.dll"));
+                _findWindows = windowsManagerType.GetMethod("FindWindows", new Type[] { typeof(BitmapDecorator) });
 
-                _screenParserTypeGg = assemblyScreenParserGg.GetType("Parser.ScreenParser");
+                Assembly assemblyScreenParser = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ScreenParser.dll"));
+
+                _screenParserType = assemblyScreenParser.GetType("Parser.ScreenParser");
 
                 Assembly assemblyParserDataAnalyzer = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ParserDataAnalyzer.dll"));
 
@@ -209,7 +213,7 @@ namespace InfoHelper.DataProcessor
                 PokerWindow[] windows = new PokerWindow[] { };
 
                 if (Shared.ScanTablesGg)
-                    windows = (PokerWindow[])_findWindowsGg.Invoke(null, new object[] { bmpDecor });
+                    windows = (PokerWindow[])_findWindows.Invoke(null, new object[] { bmpDecor });
 
                 List<WindowContextInfo> winContextInfosCopy = null;
 
@@ -218,7 +222,7 @@ namespace InfoHelper.DataProcessor
 
                 WindowInfo[] winInfos = new WindowInfo[windows.Length];
 
-                string analyzerInfo = string.Empty;
+                GameContext foregroundGameContext = null;
 
                 for (int i = 0; i < windows.Length; i++)
                 {
@@ -247,52 +251,44 @@ namespace InfoHelper.DataProcessor
 
                         bool regionsOverlapped = false;
 
-                        Type screenParserType = null;
-
-                        if (window.PokerRoom == PokerRoom.GGPoker)
-                            screenParserType = _screenParserTypeGg;
-
-                        if (screenParserType != null)
+                        IScreenParser screenParser = (IScreenParser)_screenParserType.GetConstructor(new[]
                         {
-                            IScreenParser screenParser = (IScreenParser)screenParserType.GetConstructor(new[]
+                            typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
+                        }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
+
+                        Rectangle mouseRect = default;
+
+                        if (cursor != null)
+                            mouseRect = new Rectangle(cursor.Value.X - window.Position.X, cursor.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
+
+                        regionsOverlapped = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
+
+                        if (!regionsOverlapped)
+                        {
+                            ScreenParserData screenData = screenParser.ParseWindow();
+
+                            PokerRoomManager.ProcessData(window, screenData, bmpDecor);
+
+                            bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, winContextInfo.GameContext });
+
+                            if (analyzeResult)
                             {
-                                typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
-                            }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
+                                isHeroActing = true;
 
-                            Rectangle mouseRect = default;
-
-                            if (cursor != null)
-                                mouseRect = new Rectangle(cursor.Value.X - window.Position.X, cursor.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
-
-                            regionsOverlapped = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
-
-                            if (!regionsOverlapped)
-                            {
-                                ScreenParserData screenData = screenParser.ParseWindow();
-
-                                PokerRoomManager.ProcessData(window, screenData, bmpDecor);
-
-                                isHeroActing = screenData.IsHeroActing;
-
-                                if (isHeroActing)
+                                for (int j = 0; j < screenData.Nicks.Length; j++)
                                 {
-                                    bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, winContextInfo.GameContext });
+                                    (string name, bool isConfirmed) = (null, false);
 
-                                    for (int j = 0; j < screenData.Nicks.Length; j++)
-                                    {
-                                        if (!screenData.IsNickOverlapped[j] && !screenData.IsStackOverlapped[j])
-                                            _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
-                                    }
+                                    if (!screenData.IsNickOverlapped[j] && !screenData.IsStackOverlapped[j])
+                                        (name, isConfirmed) = _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
 
-                                    if (window.IsFocused)
-                                        analyzerInfo = winContextInfo.GameContext.Error;
-                                }
-                                else
-                                {
-                                    if (window.IsFocused)
-                                        analyzerInfo = "It's not hero's turn to act";
+                                    winContextInfo.GameContext.Players[j] = name;
+                                    winContextInfo.GameContext.IsPlayerConfirmed[j] = isConfirmed;
                                 }
                             }
+
+                            if (window.IsFocused)
+                                foregroundGameContext = winContextInfo.GameContext;
                         }
 
                         if(regionsOverlapped)
@@ -309,11 +305,9 @@ namespace InfoHelper.DataProcessor
                 lock (_winContextLock)
                     _winContextInfos = winContextInfosUpdated;
 
-                _mainWindowState.WindowsInfoState.WinInfos = winInfos;
+                _hudsManager.UpdateWindows(winInfos);
 
-                _mainWindowState.WindowsInfoState.UpdateBindings();
-
-                _mainWindowState.AnalyzerInfoState.Info = analyzerInfo;
+                _hudsManager.UpdateHuds(foregroundGameContext);
             }
             finally
             {
@@ -364,7 +358,7 @@ namespace InfoHelper.DataProcessor
             }
             finally
             {
-                ResetControls();
+                _hudsManager.ResetControls();
 
                 _mainWindowState.ControlsState.Stop();
             }
@@ -451,15 +445,6 @@ namespace InfoHelper.DataProcessor
             {
                 // ignored
             }
-        }
-
-        private void ResetControls()
-        {
-            _mainWindowState.WindowsInfoState.WinInfos = null;
-
-            _mainWindowState.WindowsInfoState.UpdateBindings();
-
-            _mainWindowState.AnalyzerInfoState.Info = string.Empty;
         }
 
         private class WindowContextInfo

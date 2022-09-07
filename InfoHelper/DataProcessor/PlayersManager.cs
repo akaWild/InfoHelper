@@ -51,7 +51,7 @@ namespace InfoHelper.DataProcessor
             BindingOperations.EnableCollectionSynchronization(_playersViewModel.Players, _lock);
         }
 
-        public Player GetPlayer(BitmapSource image, string hash)
+        public (string name, bool isConfirmed) GetPlayer(BitmapSource image, string hash)
         {
             Player matchPlayer = null;
 
@@ -74,7 +74,7 @@ namespace InfoHelper.DataProcessor
                     _playersViewModel.Players.Add(matchPlayer);
             }
 
-            return matchPlayer;
+            return (matchPlayer.Name, matchPlayer.IsConfirmed);
         }
 
         private void Player_Confirmed(object sender, EventArgs e)

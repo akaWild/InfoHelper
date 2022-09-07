@@ -13,8 +13,9 @@ namespace InfoHelper.ViewModel.States
 
         public ViewModelGtoParentState GtoParentState { get; } = new ViewModelGtoParentState();
 
-        public ViewModelHudsParent[] HudsParentStates { get; } = new ViewModelHudsParent[5]
+        public ViewModelHudsParent[] HudsParentStates { get; } = new ViewModelHudsParent[6]
         {
+            new ViewModelHudsParent(),
             new ViewModelHudsParent(),
             new ViewModelHudsParent(),
             new ViewModelHudsParent(),
