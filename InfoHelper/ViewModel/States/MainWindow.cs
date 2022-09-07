@@ -9,6 +9,8 @@ namespace InfoHelper.ViewModel.States
 
         public ViewModelWindowsInfoState WindowsInfoState { get; } = new ViewModelWindowsInfoState();
 
+        public ViewModelAnalyzerInfo AnalyzerInfoState { get; } = new ViewModelAnalyzerInfo();
+
         public ViewModelGtoParentState GtoParentState { get; } = new ViewModelGtoParentState();
 
         public ViewModelHudsParent[] HudsParentStates { get; } = new ViewModelHudsParent[5]

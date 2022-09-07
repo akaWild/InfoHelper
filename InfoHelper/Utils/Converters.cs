@@ -110,4 +110,20 @@ namespace InfoHelper.Utils
             return (bool)value ? parameter : null;
         }
     }
+
+    public class AnalyzerInfoForegroundConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null)
+                return Application.Current.TryFindResource("AnalyzerDefault");
+
+            return value.ToString() == "It's not hero's turn to act" ? Application.Current.TryFindResource("AnalyzerInfo") : Application.Current.TryFindResource("AnalyzerError");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

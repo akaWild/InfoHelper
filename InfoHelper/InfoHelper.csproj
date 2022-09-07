@@ -38,6 +38,9 @@
     <Reference Include="BitmapDecorator">
       <HintPath>..\..\..\BitmapDecorator\BitmapDecorator\bin\Release\net5.0\BitmapDecorator.dll</HintPath>
     </Reference>
+    <Reference Include="GameInformationUtility">
+      <HintPath>..\..\..\GameInformationUtility\GameInformationUtility\bin\Release\net5.0\GameInformationUtility.dll</HintPath>
+    </Reference>
     <Reference Include="LibVBKernel32">
       <HintPath>C:\Users\Tolian\Desktop\EXE_NEW\Info Helper\LibVBKernel32.dll</HintPath>
     </Reference>
@@ -55,6 +58,9 @@
     </Reference>
     <Reference Include="ScreenParserUtility">
       <HintPath>..\..\..\ScreenParserUtility\ScreenParserUtility\bin\Release\net5.0\ScreenParserUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="SolverUtility">
+      <HintPath>..\..\..\..\Projects_new\SolverUtility v1.2\SolverUtility\bin\Release\SolverUtility.dll</HintPath>
     </Reference>
   </ItemGroup>
 

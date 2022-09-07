@@ -34,6 +34,11 @@
     <BitmapImage x:Key="HeroActingImage" UriSource="../Images/bell.png"></BitmapImage>
     <system:Double x:Key="HeroActingImageSizeRatio">0.2</system:Double>
 
+    <!--AnalyzerInfo-->
+    <SolidColorBrush x:Key="AnalyzerInfo">Green</SolidColorBrush>
+    <SolidColorBrush x:Key="AnalyzerError">Red</SolidColorBrush>
+    <SolidColorBrush x:Key="AnalyzerDefault">Black</SolidColorBrush>
+
     <!--Preflop matrix-->
     <SolidColorBrush x:Key="PreflopMatrixHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PreflopMatrixHeaderBackgroundBrush">BurlyWood</SolidColorBrush>

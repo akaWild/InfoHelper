@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Threading;
 using BitmapHelper;
+using GameInformationUtility;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
 using InfoHelper.ViewModel.DataEntities;
@@ -26,6 +27,8 @@ namespace InfoHelper.DataProcessor
 {
     public class Controller
     {
+        private List<WindowContextInfo> _winContextInfos = new List<WindowContextInfo>();
+
         private BitmapsContainer _bitmapContainer;
 
         private DateTime _lastScreenshotSaveTime;
@@ -44,9 +47,13 @@ namespace InfoHelper.DataProcessor
 
         private readonly MethodInfo _findWindowsGg;
 
+        private readonly MethodInfo _analyzeParserData;
+
         private readonly Type _screenParserTypeGg;
 
         private readonly PlayersWindow _playersWindow;
+
+        private readonly object _winContextLock = new object();
 
         public Controller(ViewModelMain vmMain, ViewModelPlayers vmPlayers)
         {
@@ -106,6 +113,12 @@ namespace InfoHelper.DataProcessor
                 Assembly assemblyScreenParserGg = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ScreenParser.dll"));
 
                 _screenParserTypeGg = assemblyScreenParserGg.GetType("Parser.ScreenParser");
+
+                Assembly assemblyParserDataAnalyzer = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ParserDataAnalyzer.dll"));
+
+                Type parserDataAnalyzer = assemblyParserDataAnalyzer.GetType("ParserDataAnalyzer.ParserDataAnalyzer");
+
+                _analyzeParserData = parserDataAnalyzer.GetMethod("AnalyzeParserData", BindingFlags.Static | BindingFlags.Public | BindingFlags.CreateInstance);
             }
             catch (Exception ex)
             {
@@ -198,7 +211,14 @@ namespace InfoHelper.DataProcessor
                 if (Shared.ScanTablesGg)
                     windows = (PokerWindow[])_findWindowsGg.Invoke(null, new object[] { bmpDecor });
 
+                List<WindowContextInfo> winContextInfosCopy = null;
+
+                lock (_winContextLock)
+                    winContextInfosCopy = _winContextInfos.ToList();
+
                 WindowInfo[] winInfos = new WindowInfo[windows.Length];
+
+                string analyzerInfo = string.Empty;
 
                 for (int i = 0; i < windows.Length; i++)
                 {
@@ -214,7 +234,18 @@ namespace InfoHelper.DataProcessor
                         winState = window.IsFocused ? WindowState.WrongCaptionFront : WindowState.WrongCaptionBack;
                     else
                     {
-                        bool hasError = false;
+                        WindowContextInfo winContextInfo = winContextInfosCopy.FirstOrDefault(wci => wci.GameContext.TableId == window.PokerWindowInfo.TableId);
+
+                        if (winContextInfo == null)
+                        {
+                            winContextInfo = new WindowContextInfo(new GameContext(window.PokerWindowInfo.TableId));
+
+                            winContextInfosCopy.Add(winContextInfo);
+                        }
+                        else
+                            winContextInfo.LastAccessTime = DateTime.Now;
+
+                        bool regionsOverlapped = false;
 
                         Type screenParserType = null;
 
@@ -233,9 +264,9 @@ namespace InfoHelper.DataProcessor
                             if (cursor != null)
                                 mouseRect = new Rectangle(cursor.Value.X - window.Position.X, cursor.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
 
-                            hasError = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
+                            regionsOverlapped = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
 
-                            if (!hasError)
+                            if (!regionsOverlapped)
                             {
                                 ScreenParserData screenData = screenParser.ParseWindow();
 
@@ -245,16 +276,26 @@ namespace InfoHelper.DataProcessor
 
                                 if (isHeroActing)
                                 {
+                                    bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, winContextInfo.GameContext });
+
                                     for (int j = 0; j < screenData.Nicks.Length; j++)
                                     {
                                         if (!screenData.IsNickOverlapped[j] && !screenData.IsStackOverlapped[j])
                                             _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
                                     }
+
+                                    if (window.IsFocused)
+                                        analyzerInfo = winContextInfo.GameContext.Error;
+                                }
+                                else
+                                {
+                                    if (window.IsFocused)
+                                        analyzerInfo = "It's not hero's turn to act";
                                 }
                             }
                         }
 
-                        if(hasError)
+                        if(regionsOverlapped)
                             winState = window.IsFocused ? WindowState.ErrorFront : WindowState.ErrorBack;
                         else
                             winState = window.IsFocused ? WindowState.OkFront : WindowState.OkBack;
@@ -263,9 +304,16 @@ namespace InfoHelper.DataProcessor
                     winInfos[i] = new WindowInfo(window.Position.ToWindowsRect(), winState, isHeroActing);
                 }
 
+                List<WindowContextInfo> winContextInfosUpdated = winContextInfosCopy.Where(wci => DateTime.Now.Subtract(wci.LastAccessTime) < Shared.WindowExpireTimeout).ToList();
+
+                lock (_winContextLock)
+                    _winContextInfos = winContextInfosUpdated;
+
                 _mainWindowState.WindowsInfoState.WinInfos = winInfos;
 
                 _mainWindowState.WindowsInfoState.UpdateBindings();
+
+                _mainWindowState.AnalyzerInfoState.Info = analyzerInfo;
             }
             finally
             {
@@ -410,6 +458,22 @@ namespace InfoHelper.DataProcessor
             _mainWindowState.WindowsInfoState.WinInfos = null;
 
             _mainWindowState.WindowsInfoState.UpdateBindings();
+
+            _mainWindowState.AnalyzerInfoState.Info = string.Empty;
+        }
+
+        private class WindowContextInfo
+        {
+            public GameContext GameContext { get; }
+
+            public DateTime LastAccessTime { get; set; }
+
+            public WindowContextInfo(GameContext gc)
+            {
+                GameContext = gc;
+
+                LastAccessTime = DateTime.Now;
+            }
         }
     }
 }
