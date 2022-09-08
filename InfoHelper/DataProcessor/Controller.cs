@@ -273,19 +273,19 @@ namespace InfoHelper.DataProcessor
 
                             if (analyzeResult)
                             {
-                                isHeroActing = true;
-
                                 for (int j = 0; j < screenData.Nicks.Length; j++)
                                 {
-                                    (string name, bool isConfirmed) = (null, false);
+                                    if (!screenData.IsNickOverlapped[j])
+                                    {
+                                        (string name, bool isConfirmed) = _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
 
-                                    if (!screenData.IsNickOverlapped[j] && !screenData.IsStackOverlapped[j])
-                                        (name, isConfirmed) = _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
-
-                                    winContextInfo.GameContext.Players[j] = name;
-                                    winContextInfo.GameContext.IsPlayerConfirmed[j] = isConfirmed;
+                                        winContextInfo.GameContext.Players[j] = name;
+                                        winContextInfo.GameContext.IsPlayerConfirmed[j] = isConfirmed;
+                                    }
                                 }
                             }
+
+                            isHeroActing = winContextInfo.GameContext.Error == string.Empty;
 
                             if (window.IsFocused)
                                 foregroundGameContext = winContextInfo.GameContext;

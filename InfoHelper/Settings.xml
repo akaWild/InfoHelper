@@ -21,8 +21,8 @@
   <RiverSolverAccuracy Value="0.01" />
   <MinLineFrequency Value="3" />
   <FormBackColor Value="#FFDCDCDC" />
-  <ScanTablesGg Value="False" />
-  <CardBackIndexGg Value="3" />
+  <ScanTablesGg Value="True" />
+  <CardBackIndexGg Value="1" />
   <DeckIndexGg Value="1" />
   <SavePicturesPerHandGg Value="False" />
   <PicturesSaveFolderGg Value="C:\Users\Tolian\Pictures\Screenshots" />
