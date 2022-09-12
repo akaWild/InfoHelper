@@ -54,10 +54,6 @@ namespace InfoHelper.ViewModel.States
 
         public void ResetControls()
         {
-            _vmMain.WindowsInfoState.WinInfos = null;
-
-            _vmMain.WindowsInfoState.UpdateBindings();
-
             _vmMain.AnalyzerInfoState.Info = null;
 
             foreach (ViewModelHudsParent vmHudsParent in _vmMain.HudsParentStates)
@@ -66,6 +62,13 @@ namespace InfoHelper.ViewModel.States
 
                 vmHudsParent.NameState.UpdateBindings();
             }
+        }
+
+        public void ResetWindowPanel()
+        {
+            _vmMain.WindowsInfoState.WinInfos = null;
+
+            _vmMain.WindowsInfoState.UpdateBindings();
         }
     }
 }

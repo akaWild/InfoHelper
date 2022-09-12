@@ -2577,7 +2577,72 @@
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="656, 383, 15, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_d_6_1_3_bet_dflt" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="645, 383, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_2_3_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_2_3_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_2_3_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_2_3_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_2_3_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_2_3_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_2_3_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_2_3_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_2_3_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="642, 383, 2, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="._d_6_3_3_bet_dflt" Value="." />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="634, 383, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="0_d_6_4_3_bet_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_4_3_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_4_3_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_4_3_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_4_3_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_4_3_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_4_3_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_4_3_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_4_3_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_4_3_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="626, 383, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="0_d_6_5_3_bet_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_5_3_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_5_3_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_5_3_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_5_3_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_5_3_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_5_3_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_5_3_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_5_3_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_5_3_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="618, 383, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_6_3_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_6_3_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_6_3_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_6_3_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_6_3_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_6_3_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_6_3_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_6_3_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_6_3_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems />

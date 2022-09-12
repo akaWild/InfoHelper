@@ -30,7 +30,7 @@ namespace InfoHelper.DataProcessor
                         {
                             for (int i = 0; i < screenData.Nicks.Length; i++)
                             {
-                                if (screenData.Nicks[i] == null && screenData.Stacks[i] != null)
+                                if (screenData.Nicks[i] == null && (screenData.Stacks[i] != null || screenData.PlayerActiveStatuses[i] == PlayerActiveStatus.SittingOut))
                                     return false;
                             }
 

@@ -269,7 +269,8 @@ namespace InfoHelper.DataProcessor
 
                             PokerRoomManager.ProcessData(window, screenData, bmpDecor);
 
-                            bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, winContextInfo.GameContext });
+                            bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
+                                winContextInfo.GameContext });
 
                             if (analyzeResult)
                             {
@@ -358,7 +359,12 @@ namespace InfoHelper.DataProcessor
             }
             finally
             {
+                lock(_winContextLock)
+                    _winContextInfos = new List<WindowContextInfo>();
+
                 _hudsManager.ResetControls();
+
+                _hudsManager.ResetWindowPanel();
 
                 _mainWindowState.ControlsState.Stop();
             }
