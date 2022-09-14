@@ -47,6 +47,8 @@ namespace InfoHelper.DataProcessor
 
         private readonly HudsManager _hudsManager;
 
+        private readonly GtoManager _gtoManager;
+
         private readonly MethodInfo _findWindows;
 
         private readonly MethodInfo _analyzeParserData;
@@ -107,6 +109,8 @@ namespace InfoHelper.DataProcessor
                 _captureCardManager = new CaptureCardManager();
 
                 _hudsManager = new HudsManager(_mainWindowState);
+
+                _gtoManager = new GtoManager();
 
                 Assembly assemblyWindowsManager = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
 

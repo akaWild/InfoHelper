@@ -41,6 +41,9 @@
     <Reference Include="GameInformationUtility">
       <HintPath>..\..\..\GameInformationUtility\GameInformationUtility\bin\Release\net5.0\GameInformationUtility.dll</HintPath>
     </Reference>
+    <Reference Include="GtoUtility">
+      <HintPath>..\..\..\GtoUtility\GtoUtility\bin\Release\net5.0\GtoUtility.dll</HintPath>
+    </Reference>
     <Reference Include="LibVBKernel32">
       <HintPath>C:\Users\Tolian\Desktop\EXE_NEW\Info Helper\LibVBKernel32.dll</HintPath>
     </Reference>

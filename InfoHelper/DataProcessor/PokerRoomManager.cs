@@ -26,18 +26,7 @@ namespace InfoHelper.DataProcessor
                     {
                         string hc1 = screenData.HoleCards[3][0], hc2 = screenData.HoleCards[3][1];
 
-                        bool CheckParsedInfo()
-                        {
-                            for (int i = 0; i < screenData.Nicks.Length; i++)
-                            {
-                                if (screenData.Nicks[i] == null && (screenData.Stacks[i] != null || screenData.PlayerActiveStatuses[i] == PlayerActiveStatus.SittingOut))
-                                    return false;
-                            }
-
-                            return true;
-                        }
-
-                        if (screenData.DealerPosition != null && !string.IsNullOrEmpty(hc1) && !string.IsNullOrEmpty(hc2) && CheckParsedInfo())
+                        if (screenData.DealerPosition != null && !string.IsNullOrEmpty(hc1) && !string.IsNullOrEmpty(hc2))
                         {
                             string tableId = $"{pokerWindow.PokerWindowInfo.TableId}";
 
