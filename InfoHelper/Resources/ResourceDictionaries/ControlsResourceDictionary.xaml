@@ -39,6 +39,11 @@
     <SolidColorBrush x:Key="AnalyzerError">Red</SolidColorBrush>
     <SolidColorBrush x:Key="AnalyzerDefault">Black</SolidColorBrush>
 
+    <!--SolverInfo-->
+    <SolidColorBrush x:Key="SolverRunning">Blue</SolidColorBrush>
+    <SolidColorBrush x:Key="SolverError">Red</SolidColorBrush>
+    <SolidColorBrush x:Key="SolverDefault">Black</SolidColorBrush>
+
     <!--Preflop matrix-->
     <SolidColorBrush x:Key="PreflopMatrixHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PreflopMatrixHeaderBackgroundBrush">BurlyWood</SolidColorBrush>

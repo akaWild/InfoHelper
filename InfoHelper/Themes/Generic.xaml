@@ -137,10 +137,10 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type controls:GtoParentPanel}">
+    <Style TargetType="{x:Type controls:PreflopGtoControl}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type controls:GtoParentPanel}">
+                <ControlTemplate TargetType="{x:Type controls:PreflopGtoControl}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">

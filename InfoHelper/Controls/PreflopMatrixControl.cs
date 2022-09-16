@@ -16,7 +16,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
-using PokerCommonUtility;
 
 namespace InfoHelper.Controls
 {
@@ -132,7 +131,7 @@ namespace InfoHelper.Controls
 
                 for (int j = 0; j < 13; j++)
                 {
-                    FormattedText text = new FormattedText(PokerUtility.HoleCards[i * 13 + j], CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, GetValueForegroundBrush(((PreflopData)Data)?[i * 13 + j] ?? 0), 1);
+                    FormattedText text = new FormattedText(Common.HoleCards[i * 13 + j], CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, GetValueForegroundBrush(((PreflopData)Data)?[i * 13 + j] ?? 0), 1);
 
                     Point textLocation = new Point(columnIndent + columnWidth / 2 - text.Width / 2, rowIndent + rowHeight / 2 - text.Height / 2);
 

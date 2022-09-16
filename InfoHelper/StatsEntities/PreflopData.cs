@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InfoHelper.Utils;
-using PokerCommonUtility;
 
 namespace InfoHelper.StatsEntities
 {
@@ -16,7 +15,7 @@ namespace InfoHelper.StatsEntities
         {
             (char firstCardFaceValue, char secondCardFaceValue) = (hc1[0], hc2[0]);
 
-            if (Array.IndexOf(PokerUtility.FaceValues, firstCardFaceValue) < Array.IndexOf(PokerUtility.FaceValues, secondCardFaceValue))
+            if (Array.IndexOf(Common.FaceValues, firstCardFaceValue) < Array.IndexOf(Common.FaceValues, secondCardFaceValue))
                 (firstCardFaceValue, secondCardFaceValue) = (hc2[0], hc1[0]);
 
             string hand = $"{firstCardFaceValue}{secondCardFaceValue}";
@@ -24,7 +23,7 @@ namespace InfoHelper.StatsEntities
             if (firstCardFaceValue != secondCardFaceValue)
                 hand += hc1[1] == hc2[1] ? "s" : "o";
 
-            _data[Array.IndexOf(PokerUtility.HoleCards, hand)]++;
+            _data[Array.IndexOf(Common.HoleCards, hand)]++;
         }
 
         public int this[int index] => _data[index];

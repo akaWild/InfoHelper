@@ -53,9 +53,6 @@
     <Reference Include="PlayerControlsLibrary">
       <HintPath>..\..\PlayerControlsLibrary\PlayerControlsLibrary\bin\Release\net5.0-windows\PlayerControlsLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="PokerCommonUtility">
-      <HintPath>..\..\..\PokerCommonUtility\PokerCommonUtility\bin\Release\net5.0\PokerCommonUtility.dll</HintPath>
-    </Reference>
     <Reference Include="PokerWindowsUtility">
       <HintPath>..\..\..\PokerWindowsUtility\PokerWindowsUtility\bin\Release\net5.0\PokerWindowsUtility.dll</HintPath>
     </Reference>

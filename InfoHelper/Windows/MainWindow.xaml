@@ -14,6 +14,8 @@
             <Setter Property="SnapsToDevicePixels" Value="True"/>
         </Style>
         <utils:AnalyzerInfoForegroundConverter x:Key="AnalyzerInfoForegroundConverter"/>
+        <utils:SolverInfoTextConverter x:Key="SolverInfoTextConverter"/>
+        <utils:SolverInfoForegroundConverter x:Key="SolverInfoForegroundConverter"/>
     </Window.Resources>
     <DockPanel LastChildFill="True"  Background="{DynamicResource CurrentFormBackColor}">
         <Menu DockPanel.Dock="Top">
@@ -70,29 +72,37 @@
                 <Border Grid.Row="0" BorderThickness="0, 0, 1, 1">
                     <controls:WindowsInfoPanel Data="{Binding WindowsInfoState.WinInfos}"/>
                 </Border>
-                <Border Grid.Row="1" BorderThickness="0, 0, 1, 1">
-                    <controls:AnalyzerInfoTextBlock  VerticalAlignment="Center" Margin="5, 0, 0, 0" Text="{Binding AnalyzerInfoState.Info}" 
+                <Border Grid.Row="1" BorderThickness="0, 0, 1, 0">
+                    <controls:SizeableTextBlock VerticalAlignment="Center" Margin="5, 0, 0, 0" Text="{Binding AnalyzerInfoState.Info}" 
                                                      Foreground="{Binding AnalyzerInfoState.Info, Converter={StaticResource AnalyzerInfoForegroundConverter}}"/>
                 </Border>
             </Grid>
-            <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  BorderThickness="0, 0, 1, 1">
+            <Border Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"  BorderThickness="0, 0, 1, 0">
                 <controls:HudsPanel>
                     <controls:HudsPanel.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type Window}}" Path="DataContext.HudsParentStates[0]"/>
                     </controls:HudsPanel.DataContext>
                 </controls:HudsPanel>
             </Border>
-            <Border  Grid.Column="3" Grid.Row="1" BorderThickness="0, 0, 0, 1">
-                <controls:GtoParentPanel/>
-            </Border>
-            <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  BorderThickness="0, 0, 1, 1">
+            <controls:SizeableTextBlock Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" Margin="5, 0, 0, 0" FontSize="16"
+                                        Foreground="{Binding GtoParentState.IsSolverRunning, Converter={StaticResource SolverInfoForegroundConverter}}">
+                <controls:SizeableTextBlock.Text>
+                    <MultiBinding Converter="{StaticResource SolverInfoTextConverter}">
+                        <Binding Path="GtoParentState.Error"/>
+                        <Binding Path="GtoParentState.IsSolverRunning"/>
+                    </MultiBinding>
+                </controls:SizeableTextBlock.Text>
+            </controls:SizeableTextBlock>
+            <controls:PreflopGtoControl Grid.Column="3" Grid.Row="1" Visibility="{Binding GtoParentState.PreflopGtoState.Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                        Data="{Binding GtoParentState.PreflopGtoState.PreflopGtoInfo}" Background="BlueViolet"/>
+            <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  BorderThickness="0, 1, 1, 1">
                 <controls:HudsPanel>
                     <controls:HudsPanel.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type Window}}" Path="DataContext.HudsParentStates[5]"/>
                     </controls:HudsPanel.DataContext>
                 </controls:HudsPanel>
             </Border>
-            <Border Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"  BorderThickness="0, 0, 0, 1">
+            <Border Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"  BorderThickness="0, 1, 0, 1">
                 <controls:HudsPanel>
                     <controls:HudsPanel.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type Window}}" Path="DataContext.HudsParentStates[1]"/>

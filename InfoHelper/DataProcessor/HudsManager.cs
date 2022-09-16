@@ -19,14 +19,7 @@ namespace InfoHelper.ViewModel.States
 
         public void UpdateHuds(GameContext gc)
         {
-            _vmMain.AnalyzerInfoState.Info = gc?.Error;
-
-            if (gc == null)
-            {
-                ResetControls();
-
-                return;
-            }
+            _vmMain.AnalyzerInfoState.Info = gc.Error;
 
             for (int i = 0; i < gc.Players.Length; i++)
             {
@@ -43,6 +36,16 @@ namespace InfoHelper.ViewModel.States
 
                 _vmMain.HudsParentStates[i].NameState.UpdateBindings();
             }
+
+            _vmMain.GtoParentState.Error = gc.Error != string.Empty ? null : gc.GtoError;
+
+            _vmMain.GtoParentState.IsSolverRunning = gc.Error == string.Empty && gc.IsSolving;
+
+            _vmMain.GtoParentState.PreflopGtoState.Visible = gc.Round == 1 && gc.Error == string.Empty && gc.GtoError == null && !gc.IsSolving;
+
+            _vmMain.GtoParentState.PreflopGtoState.PreflopGtoInfo = (PreflopGtoInfo)gc.PreflopGtoData;
+
+            _vmMain.GtoParentState.PreflopGtoState.UpdateBindings();
         }
 
         public void UpdateWindows(WindowInfo[] winInfos)
@@ -62,9 +65,21 @@ namespace InfoHelper.ViewModel.States
 
                 vmHudsParent.NameState.UpdateBindings();
             }
+
+            _vmMain.GtoParentState.Error = string.Empty;
+
+            _vmMain.GtoParentState.IsSolverRunning = false;
+
+            _vmMain.GtoParentState.PreflopGtoState.Visible = false;
+
+            _vmMain.GtoParentState.PreflopGtoState.UpdateBindings();
+
+            _vmMain.GtoParentState.PostflopGtoState.Visible = false;
+
+            _vmMain.GtoParentState.PostflopGtoState.UpdateBindings();
         }
 
-        public void ResetWindowPanel()
+        public void ResetWindowsPanel()
         {
             _vmMain.WindowsInfoState.WinInfos = null;
 

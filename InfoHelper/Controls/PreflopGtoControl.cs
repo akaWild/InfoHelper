@@ -44,11 +44,11 @@ namespace InfoHelper.Controls
     ///     <MyNamespace:GtoParentPanel/>
     ///
     /// </summary>
-    public class GtoParentPanel : BaseDataControl
+    public class PreflopGtoControl : BaseDataControl
     {
-        static GtoParentPanel()
+        static PreflopGtoControl()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(GtoParentPanel), new FrameworkPropertyMetadata(typeof(GtoParentPanel)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(PreflopGtoControl), new FrameworkPropertyMetadata(typeof(PreflopGtoControl)));
         }
     }
 }

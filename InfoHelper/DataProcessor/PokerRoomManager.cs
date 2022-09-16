@@ -22,31 +22,23 @@ namespace InfoHelper.DataProcessor
             {
                 if (Shared.SavePicturesPerHandGg)
                 {
-                    if (screenData.IsHeroActing)
+                    string hc1 = screenData.HoleCards[3][0], hc2 = screenData.HoleCards[3][1];
+
+                    if (screenData.DealerPosition != null && !string.IsNullOrEmpty(hc1) && !string.IsNullOrEmpty(hc2))
                     {
-                        string hc1 = screenData.HoleCards[3][0], hc2 = screenData.HoleCards[3][1];
+                        string tableId = $"{pokerWindow.PokerWindowInfo.TableId}";
 
-                        if (screenData.DealerPosition != null && !string.IsNullOrEmpty(hc1) && !string.IsNullOrEmpty(hc2))
+                        string handId = $"{hc1}{hc2}";
+
+                        string dealerId = $"{screenData.DealerPosition}";
+
+                        string fileName = $"{tableId}_{handId}_{dealerId}";
+
+                        if (!SavedFilesGg.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFilesGg[fileName]).TotalSeconds > 20)
                         {
-                            string tableId = $"{pokerWindow.PokerWindowInfo.TableId}";
+                            bmp.Crop(pokerWindow.Position).Save(Path.Combine(Shared.PicturesSaveFolderGg, $"{fileName}_{DateTime.Now.Ticks}.bmp"));
 
-                            string handId = $"{hc1}{hc2}";
-
-                            string dealerId = $"{screenData.DealerPosition}";
-
-                            string fileName = $"{tableId}_{handId}_{dealerId}";
-
-                            if (!SavedFilesGg.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFilesGg[fileName]).TotalSeconds > 30)
-                            {
-                                string saveDir = Path.Combine(Shared.PicturesSaveFolderGg, DateTime.Now.Ticks.ToString());
-
-                                if (!Directory.Exists(saveDir))
-                                    Directory.CreateDirectory(saveDir);
-
-                                bmp.Crop(pokerWindow.Position).Save(Path.Combine(saveDir, $"{fileName}.bmp"));
-
-                                SavedFilesGg[fileName] = DateTime.Now;
-                            }
+                            SavedFilesGg[fileName] = DateTime.Now;
                         }
                     }
                 }

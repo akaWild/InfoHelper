@@ -18,7 +18,6 @@ using InfoHelper.Utils;
 using InfoHelper.ViewModel.DataEntities;
 using InfoHelper.ViewModel.States;
 using InfoHelper.Windows;
-using PokerCommonUtility;
 using PokerWindowsUtility;
 using ScreenParserUtility;
 using Application = System.Windows.Application;
@@ -271,8 +270,6 @@ namespace InfoHelper.DataProcessor
                         {
                             ScreenParserData screenData = screenParser.ParseWindow();
 
-                            PokerRoomManager.ProcessData(window, screenData, bmpDecor);
-
                             bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
                                 winContextInfo.GameContext });
 
@@ -288,7 +285,12 @@ namespace InfoHelper.DataProcessor
                                         winContextInfo.GameContext.IsPlayerConfirmed[j] = isConfirmed;
                                     }
                                 }
+
+                                PokerRoomManager.ProcessData(window, screenData, bmpDecor);
                             }
+
+                            if (winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
+                                _gtoManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
 
                             isHeroActing = winContextInfo.GameContext.Error == string.Empty;
 
@@ -312,7 +314,10 @@ namespace InfoHelper.DataProcessor
 
                 _hudsManager.UpdateWindows(winInfos);
 
-                _hudsManager.UpdateHuds(foregroundGameContext);
+                if (foregroundGameContext == null)
+                    _hudsManager.ResetControls();
+                else
+                    _hudsManager.UpdateHuds(foregroundGameContext);
             }
             finally
             {
@@ -368,7 +373,7 @@ namespace InfoHelper.DataProcessor
 
                 _hudsManager.ResetControls();
 
-                _hudsManager.ResetWindowPanel();
+                _hudsManager.ResetWindowsPanel();
 
                 _mainWindowState.ControlsState.Stop();
             }

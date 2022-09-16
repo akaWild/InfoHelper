@@ -8,7 +8,7 @@ using System.Windows.Controls;
 
 namespace InfoHelper.Controls
 {
-    public class AnalyzerInfoTextBlock : TextBlock
+    public class SizeableTextBlock : TextBlock
     {
         protected override void OnRenderSizeChanged(SizeChangedInfo sizeInfo)
         {

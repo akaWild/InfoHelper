@@ -126,4 +126,45 @@ namespace InfoHelper.Utils
             throw new NotImplementedException();
         }
     }
+
+    public class SolverInfoTextConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (values == null)
+                return null;
+
+            string error = (string)values[0];
+
+            bool isSolving = (bool)values[1];
+
+            if (isSolving)
+                return "Solver is running";
+
+            return error;
+        }
+
+        public object[] ConvertBack(object values, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class SolverInfoForegroundConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null)
+                return Application.Current.TryFindResource("SolverDefault");
+
+            return (bool)value ? Application.Current.TryFindResource("SolverRunning") : Application.Current.TryFindResource("SolverError");
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+
 }
