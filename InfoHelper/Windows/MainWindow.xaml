@@ -7,7 +7,7 @@
         xmlns:controls="clr-namespace:InfoHelper.Controls"
         xmlns:utils="clr-namespace:InfoHelper.Utils"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" WindowState="Maximized">
+        Title="MainWindow" Height="450" Width="800" WindowState="Maximized" WindowStyle="None" WindowStartupLocation="CenterScreen">
     <Window.Resources>
         <Style TargetType="Border">
             <Setter Property="BorderBrush" Value="Black"/>
@@ -93,8 +93,8 @@
                     </MultiBinding>
                 </controls:SizeableTextBlock.Text>
             </controls:SizeableTextBlock>
-            <controls:PreflopGtoControl Grid.Column="3" Grid.Row="1" Visibility="{Binding GtoParentState.PreflopGtoState.Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
-                                        Data="{Binding GtoParentState.PreflopGtoState.PreflopGtoInfo}" Background="BlueViolet"/>
+            <controls:GtoControl Grid.Column="3" Grid.Row="1" Visibility="{Binding GtoParentState.PreflopGtoState.Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                        Data="{Binding GtoParentState.PreflopGtoState.PreflopGtoInfo}"/>
             <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  BorderThickness="0, 1, 1, 1">
                 <controls:HudsPanel>
                     <controls:HudsPanel.DataContext>

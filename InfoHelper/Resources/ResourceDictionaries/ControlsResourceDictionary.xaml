@@ -44,6 +44,33 @@
     <SolidColorBrush x:Key="SolverError">Red</SolidColorBrush>
     <SolidColorBrush x:Key="SolverDefault">Black</SolidColorBrush>
 
+    <!--Gto control-->
+    <SolidColorBrush x:Key="GtoHeaderForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="GtoHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
+    <SolidColorBrush x:Key="GtoForegroundBrush">Black</SolidColorBrush>
+    <Pen x:Key="GtoBorderPen" Brush="Black" Thickness="1"></Pen>
+    <Pen x:Key="GtoSelectedHandBorderPen" Brush="Blue" Thickness="2"></Pen>
+    <SolidColorBrush x:Key="GtoFoldBrush">#FF5956</SolidColorBrush>
+    <SolidColorBrush x:Key="GtoCheckCallBrush">#FFFF33</SolidColorBrush>
+
+    <x:Array x:Key="GtoRaiseBrushes" Type="SolidColorBrush">
+        <SolidColorBrush>#8FFF8F</SolidColorBrush>
+        <SolidColorBrush>#28CC28</SolidColorBrush>
+        <SolidColorBrush>LightSkyBlue</SolidColorBrush>
+    </x:Array>
+
+    <x:Array x:Key="GtoDiffBrushes" Type="SolidColorBrush">
+        <SolidColorBrush>#A9FEAD</SolidColorBrush>
+        <SolidColorBrush>#48FD52</SolidColorBrush>
+        <SolidColorBrush>#02BF0C</SolidColorBrush>
+        <SolidColorBrush>#017E07</SolidColorBrush>
+        <SolidColorBrush>#9B1502</SolidColorBrush>
+        <SolidColorBrush>#E81F02</SolidColorBrush>
+        <SolidColorBrush>#FE806D</SolidColorBrush>
+        <SolidColorBrush>#FEC0B8</SolidColorBrush>
+    </x:Array>
+
+
     <!--Preflop matrix-->
     <SolidColorBrush x:Key="PreflopMatrixHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PreflopMatrixHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
@@ -59,8 +86,6 @@
 
     <x:Array x:Key="PreflopMatrixValueForegroundColors" Type="SolidColorBrush">
         <SolidColorBrush>Black</SolidColorBrush>
-        <!--<SolidColorBrush>Black</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>-->
         <SolidColorBrush>Black</SolidColorBrush>
         <SolidColorBrush>Black</SolidColorBrush>
         <SolidColorBrush>White</SolidColorBrush>
@@ -71,8 +96,6 @@
     </x:Array>
     <x:Array x:Key="PreflopMatrixValueBackgroundColors" Type="SolidColorBrush">
         <SolidColorBrush>#C8FFFF</SolidColorBrush>
-        <!--<SolidColorBrush>#76FFFF</SolidColorBrush>
-        <SolidColorBrush>#34FFFF</SolidColorBrush>-->
         <SolidColorBrush>#00F1FF</SolidColorBrush>
         <SolidColorBrush>#00AFFF</SolidColorBrush>
         <SolidColorBrush>#006DFF</SolidColorBrush>

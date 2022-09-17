@@ -289,7 +289,7 @@ namespace InfoHelper.DataProcessor
                                 PokerRoomManager.ProcessData(window, screenData, bmpDecor);
                             }
 
-                            if (winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
+                            if (winContextInfo.GameContext.Round == 1 && winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
                                 _gtoManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
 
                             isHeroActing = winContextInfo.GameContext.Error == string.Empty;

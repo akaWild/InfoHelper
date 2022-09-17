@@ -87,9 +87,15 @@ namespace InfoHelper.Utils
 
     public class NameControlForegroundConverter : IValueConverter
     {
+        private object _confirmedForegroundBrush;
+        private object _unconfirmedForegroundBrush;
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return ((bool)value) ? Application.Current.TryFindResource("NamePanelConfirmedForegroundBrush") : Application.Current.TryFindResource("NamePanelUnconfirmedForegroundBrush");
+            _confirmedForegroundBrush ??= Application.Current.TryFindResource("NamePanelConfirmedForegroundBrush");
+            _unconfirmedForegroundBrush ??= Application.Current.TryFindResource("NamePanelUnconfirmedForegroundBrush");
+
+            return ((bool)value) ? _confirmedForegroundBrush : _unconfirmedForegroundBrush;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -113,12 +119,20 @@ namespace InfoHelper.Utils
 
     public class AnalyzerInfoForegroundConverter : IValueConverter
     {
+        private object _analyzerDefault;
+        private object _analyzerInfo;
+        private object _analyzerError;
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null)
-                return Application.Current.TryFindResource("AnalyzerDefault");
+            _analyzerDefault ??= Application.Current.TryFindResource("AnalyzerDefault");
+            _analyzerInfo ??= Application.Current.TryFindResource("AnalyzerInfo");
+            _analyzerError ??= Application.Current.TryFindResource("AnalyzerError");
 
-            return value.ToString() == "It's not hero's turn to act" ? Application.Current.TryFindResource("AnalyzerInfo") : Application.Current.TryFindResource("AnalyzerError");
+            if (value == null)
+                return _analyzerDefault;
+
+            return value.ToString() == "It's not hero's turn to act" ? _analyzerInfo : _analyzerError;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -152,12 +166,20 @@ namespace InfoHelper.Utils
 
     public class SolverInfoForegroundConverter : IValueConverter
     {
+        private object _solverDefault;
+        private object _solverRunning;
+        private object _solverError;
+
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            if (value == null)
-                return Application.Current.TryFindResource("SolverDefault");
+            _solverDefault ??= Application.Current.TryFindResource("SolverDefault");
+            _solverRunning ??= Application.Current.TryFindResource("SolverRunning");
+            _solverError ??= Application.Current.TryFindResource("SolverError");
 
-            return (bool)value ? Application.Current.TryFindResource("SolverRunning") : Application.Current.TryFindResource("SolverError");
+            if (value == null)
+                return _solverDefault;
+
+            return (bool)value ? _solverRunning : _solverError;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

@@ -12,6 +12,8 @@ namespace InfoHelper.Utils
     {
         public static readonly char[] FaceValues = { '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A' };
 
+        public static readonly char[] FaceValuesRevert = { 'A', 'K', 'Q', 'J', 'T', '9', '8', '7', '6', '5', '4', '3', '2' };
+
         public static readonly string[] HoleCards = new string[169]
         {
             "AA", "AKs", "AQs", "AJs", "ATs", "A9s", "A8s", "A7s", "A6s", "A5s", "A4s", "A3s", "A2s",

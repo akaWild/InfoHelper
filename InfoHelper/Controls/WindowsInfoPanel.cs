@@ -49,6 +49,17 @@ namespace InfoHelper.Controls
     /// </summary>
     public class WindowsInfoPanel : BaseDataControl
     {
+        private object _okFrontWindowBrush;
+        private object _okBackWindowBrush;
+        private object _wrongCaptionFrontWindowBrush;
+        private object _wrongCaptionBackWindowBrush;
+        private object _errorFrontWindowBrush;
+        private object _errorBackWindowBrush;
+
+        private object _windowBorderPen;
+        private object _heroActingImage;
+        private object _heroActingImageSizeRatio;
+
         static WindowsInfoPanel()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(WindowsInfoPanel), new FrameworkPropertyMetadata(typeof(WindowsInfoPanel)));
@@ -61,16 +72,27 @@ namespace InfoHelper.Controls
             if(Data == null)
                 return;
 
+            _okFrontWindowBrush ??= Application.Current.TryFindResource("OkFrontWindowBackgroundBrush");
+            _okBackWindowBrush ??= Application.Current.TryFindResource("OkBackWindowBackgroundBrush");
+            _wrongCaptionFrontWindowBrush ??= Application.Current.TryFindResource("WrongCaptionFrontWindowBackgroundBrush");
+            _wrongCaptionBackWindowBrush ??= Application.Current.TryFindResource("WrongCaptionBackWindowBackgroundBrush");
+            _errorFrontWindowBrush ??= Application.Current.TryFindResource("ErrorFrontWindowBackgroundBrush");
+            _errorBackWindowBrush ??= Application.Current.TryFindResource("ErrorBackWindowBackgroundBrush");
+
+            _windowBorderPen ??= Application.Current.TryFindResource("WindowBorderPen");
+            _heroActingImage ??= Application.Current.TryFindResource("HeroActingImage");
+            _heroActingImageSizeRatio ??= Application.Current.TryFindResource("HeroActingImageSizeRatio");
+
             object GetBackgroundBrush(WindowState winState)
             {
                 return winState switch
                 {
-                    WindowState.OkFront => Application.Current.TryFindResource("OkFrontWindowBackgroundBrush"),
-                    WindowState.OkBack => Application.Current.TryFindResource("OkBackWindowBackgroundBrush"),
-                    WindowState.WrongCaptionFront => Application.Current.TryFindResource("WrongCaptionFrontWindowBackgroundBrush"),
-                    WindowState.WrongCaptionBack => Application.Current.TryFindResource("WrongCaptionBackWindowBackgroundBrush"),
-                    WindowState.ErrorFront => Application.Current.TryFindResource("ErrorFrontWindowBackgroundBrush"),
-                    WindowState.ErrorBack => Application.Current.TryFindResource("ErrorBackWindowBackgroundBrush"),
+                    WindowState.OkFront => _okFrontWindowBrush,
+                    WindowState.OkBack => _okBackWindowBrush,
+                    WindowState.WrongCaptionFront => _wrongCaptionFrontWindowBrush,
+                    WindowState.WrongCaptionBack => _wrongCaptionBackWindowBrush,
+                    WindowState.ErrorFront => _errorFrontWindowBrush,
+                    WindowState.ErrorBack => _errorBackWindowBrush,
                     _ => null
                 };
             }
@@ -80,7 +102,7 @@ namespace InfoHelper.Controls
             for (int i = 0; i < data.Length; i++)
             {
                 object brushResx = GetBackgroundBrush(data[i].WindowState);
-                object penResx = Application.Current.TryFindResource("WindowBorderPen");
+                object penResx = _windowBorderPen;
 
                 SolidColorBrush brush = null;
                 Pen pen = null;
@@ -104,8 +126,8 @@ namespace InfoHelper.Controls
                 if(!data[i].IsHeroActing)
                     continue;
 
-                object imageResx = Application.Current.TryFindResource("HeroActingImage");
-                object imageSizeResx = Application.Current.TryFindResource("HeroActingImageSizeRatio");
+                object imageResx = _heroActingImage;
+                object imageSizeResx = _heroActingImageSizeRatio;
 
                 BitmapImage image = null;
 

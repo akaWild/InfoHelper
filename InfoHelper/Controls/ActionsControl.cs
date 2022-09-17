@@ -49,6 +49,9 @@ namespace InfoHelper.Controls
     {
         private readonly Typeface _typeFace = new Typeface("Verdana");
 
+        private SolidColorBrush _defaultForegroundColor;
+        private SolidColorBrush _defaultBackgroundColor;
+
         static ActionsControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ActionsControl), new FrameworkPropertyMetadata(typeof(ActionsControl)));
@@ -58,10 +61,10 @@ namespace InfoHelper.Controls
         {
             base.OnRender(drawingContext);
 
-            SolidColorBrush defaultForegroundColor = (SolidColorBrush)Application.Current.TryFindResource("ActionsPanelDefaultForegroundBrush");
-            SolidColorBrush defaultBackgroundColor = (SolidColorBrush)Application.Current.TryFindResource("ActionsPanelBackgroundBrush");
+            _defaultForegroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("ActionsPanelDefaultForegroundBrush");
+            _defaultBackgroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("ActionsPanelBackgroundBrush");
 
-            drawingContext.DrawRectangle(defaultBackgroundColor, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, RenderSize.Height)));
+            drawingContext.DrawRectangle(_defaultBackgroundColor, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, RenderSize.Height)));
 
             SolidColorBrush GetForegroundBrush(char symbol)
             {
@@ -72,7 +75,7 @@ namespace InfoHelper.Controls
                     'c' => Brushes.ForestGreen,
                     'b' => Brushes.DodgerBlue,
                     'r' => Brushes.DarkOrchid,
-                    _ => defaultForegroundColor
+                    _ => _defaultForegroundColor
                 };
             }
 

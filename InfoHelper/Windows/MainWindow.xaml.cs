@@ -15,28 +15,24 @@ namespace InfoHelper.Windows
     {
         private readonly ViewModelMain _vmMain;
 
-        private readonly ViewModelPlayers _vmPlayers;
-
         public MainWindow()
         {
             InitializeComponent();
 
+            MaxHeight = SystemParameters.MaximizedPrimaryScreenHeight;
+
             _vmMain = new ViewModelMain(Dispatcher);
 
-            _vmPlayers = new ViewModelPlayers();
+            ViewModelPlayers vmPlayers = new ViewModelPlayers();
 
             DataContext = _vmMain;
 
-            new Controller(_vmMain, _vmPlayers);
+            //Test();
 
-            //_win.HudsParentStates[0].PreflopMatrixState.Visible = true;
+            new Controller(_vmMain, vmPlayers);
         }
 
-        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
-        {
-        }
-
-        private void ButtonBase_OnClick1(object sender, RoutedEventArgs e)
+        private void Test()
         {
             ViewModelActionsState vmas = _vmMain.HudsParentStates[0].ActionsState;
 
@@ -163,9 +159,9 @@ namespace InfoHelper.Windows
             cbData.AddHand("Qh", "Qc");
             cbData.AddHand("Qh", "Qc");
 
-            vmpms.Header = "";
+            vmpms.Header = "Test header";
             vmpms.PreflopData = cbData;
-            vmpms.Visible = !vmpms.Visible;
+            vmpms.Visible = true;
 
             vmpms.UpdateBindings();
 
@@ -196,79 +192,9 @@ namespace InfoHelper.Windows
 
             hpe.SetRows(new string[] { "IsHiddenRow" });
 
-            hpe.Visible = !hpe.Visible;
+            hpe.Visible = true;
 
             hpe.UpdateBindings();
-
-
-            //Worker worker = new Worker(_win);
-
-            //worker.DoWork();
-
-
-            //ViewModelWindowsInfoState vmwip = (ViewModelWindowsInfoState)_win.WindowsInfoState;
-
-            //WindowInfo[] rects = new WindowInfo[6]
-            //{
-            //    new WindowInfo(new Rect(0, 0, 714, 520), ViewModel.DataEntities.WindowState.OkFront, true),
-            //    new WindowInfo(new Rect(699, 0, 714, 520), ViewModel.DataEntities.WindowState.OkBack, false),
-            //    new WindowInfo(new Rect(1418, 0, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionFront, false),
-            //    new WindowInfo(new Rect(0, 500, 714, 520), ViewModel.DataEntities.WindowState.WrongCaptionBack, false),
-            //    new WindowInfo(new Rect(699, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorFront, true),
-            //    new WindowInfo(new Rect(1418, 500, 714, 520), ViewModel.DataEntities.WindowState.ErrorBack, true)
-            //};
-
-            //vmwip.WinInfos = rects;
-
-            //vmwip.UpdateBindings();
-        }
-    }
-
-    public class Worker
-    {
-        private ViewModelMain _main;
-
-        public Worker(ViewModelMain main)
-        {
-            _main = main;
-        }
-
-        public void DoWork()
-        {
-            ViewModelControlsState vmcs = _main.ControlsState;
-
-            Thread thread = new Thread((() =>
-            {
-
-                vmcs.ResetError();
-
-                vmcs.BeginFlushingPictures();
-
-                ViewModelProgressBarState vmpbs = vmcs.ProgressBarState;
-
-                vmpbs.MinValue = 0;
-
-                vmpbs.MaxValue = 100;
-
-                vmpbs.Visible = true;
-
-                for (int i = 0; i < vmpbs.MaxValue; i++)
-                {
-                    vmpbs.Value = i;
-
-                    vmcs.SetError($"{Math.Round(i * 100d / vmpbs.MaxValue)}%");
-
-                    Thread.Sleep(50);
-                }
-
-                vmpbs.Visible = false;
-
-                vmcs.EndFlushingPictures();
-
-                vmcs.ResetError();
-            }));
-
-            thread.Start();
         }
     }
 }

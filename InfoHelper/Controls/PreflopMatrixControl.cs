@@ -52,6 +52,14 @@ namespace InfoHelper.Controls
     {
         private readonly Typeface _typeFace = new Typeface("Tahoma");
 
+        private Pen _borderPen;
+        private SolidColorBrush _headerForegroundBrush;
+        private SolidColorBrush _headerBackgroundBrush;
+        private SolidColorBrush[] _foregroundBrushesList;
+        private SolidColorBrush[] _backgroundBrushesList;
+        private SolidColorBrush _defaultForegroundColor;
+        private SolidColorBrush _defaultBackgroundColor;
+
         static PreflopMatrixControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PreflopMatrixControl), new FrameworkPropertyMetadata(typeof(PreflopMatrixControl)));
@@ -63,42 +71,47 @@ namespace InfoHelper.Controls
 
             VisualEdgeMode = EdgeMode.Aliased;
 
-            SolidColorBrush[] foregroundBrushesList = (SolidColorBrush[])Application.Current.TryFindResource("PreflopMatrixValueForegroundColors");
-            SolidColorBrush[] backgroundBrushesList = (SolidColorBrush[])Application.Current.TryFindResource("PreflopMatrixValueBackgroundColors");
+            _borderPen ??= (Pen)Application.Current.TryFindResource("PreflopMatrixBorderPen");
 
-            SolidColorBrush defaultForegroundColor = (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixForegroundBrush");
-            SolidColorBrush defaultBackgroundColor = (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixBackgroundBrush");
+            _headerForegroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixHeaderForegroundBrush");
+            _headerBackgroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixHeaderBackgroundBrush");
+
+            _foregroundBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("PreflopMatrixValueForegroundColors");
+            _backgroundBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("PreflopMatrixValueBackgroundColors");
+
+            _defaultForegroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixForegroundBrush");
+            _defaultBackgroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixBackgroundBrush");
 
             Point GetPoint(double x, double y) => new Point(x, y);
 
             SolidColorBrush GetValueForegroundBrush(int sample)
             {
-                if (sample == 0 || foregroundBrushesList == null)
-                    return defaultForegroundColor;
+                if (sample == 0 || _foregroundBrushesList == null)
+                    return _defaultForegroundColor;
 
-                if (sample > foregroundBrushesList.Length)
-                    return foregroundBrushesList[^1];
+                if (sample > _foregroundBrushesList.Length)
+                    return _foregroundBrushesList[^1];
 
-                return foregroundBrushesList[sample - 1];
+                return _foregroundBrushesList[sample - 1];
             }
 
             SolidColorBrush GetValueBackgroundBrush(int sample)
             {
-                if (sample == 0 || backgroundBrushesList == null)
-                    return defaultBackgroundColor;
+                if (sample == 0 || _backgroundBrushesList == null)
+                    return _defaultBackgroundColor;
 
-                if (sample > backgroundBrushesList.Length)
-                    return backgroundBrushesList[^1];
+                if (sample > _backgroundBrushesList.Length)
+                    return _backgroundBrushesList[^1];
 
-                return backgroundBrushesList[sample - 1];
+                return _backgroundBrushesList[sample - 1];
             }
 
-            drawingContext.DrawRectangle((SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixBackgroundBrush"), null, new Rect(new Point(0, 0), new Size(RenderSize.Width, RenderSize.Height)));
+            drawingContext.DrawRectangle(_defaultBackgroundColor, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, RenderSize.Height)));
 
             double columnWidth = RenderSize.Width / 13, rowHeight = RenderSize.Height / (string.IsNullOrEmpty(Header) ? 13 : 14);
 
             if(!string.IsNullOrEmpty(Header))
-                drawingContext.DrawRectangle((SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixHeaderBackgroundBrush"), null, new Rect(new Point(0, 0), new Size(RenderSize.Width, rowHeight)));
+                drawingContext.DrawRectangle(_headerForegroundBrush, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, rowHeight)));
 
             double headerHeight = !string.IsNullOrEmpty(Header) ? rowHeight : 0;
 
@@ -110,11 +123,9 @@ namespace InfoHelper.Controls
 
             double rowIndent = 0;
 
-            Pen pen = (Pen)Application.Current.TryFindResource("PreflopMatrixBorderPen");
-
             if (!string.IsNullOrEmpty(Header))
             {
-                FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, (SolidColorBrush)Application.Current.TryFindResource("PreflopMatrixHeaderForegroundBrush"), 1);
+                FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, _headerBackgroundBrush, 1);
 
                 Point textLocation = new Point(RenderSize.Width / 2 - text.Width / 2, rowHeight / 2 - text.Height / 2);
 
@@ -122,7 +133,7 @@ namespace InfoHelper.Controls
 
                 rowIndent += rowHeight;
 
-                drawingContext.DrawLine(pen, GetPoint(0, rowIndent), GetPoint(RenderSize.Width, rowIndent));
+                drawingContext.DrawLine(_borderPen, GetPoint(0, rowIndent), GetPoint(RenderSize.Width, rowIndent));
             }
 
             for (int i = 0; i < 13; i++)
@@ -140,13 +151,13 @@ namespace InfoHelper.Controls
                     columnIndent += columnWidth;
 
                     if (j != 12)
-                        drawingContext.DrawLine(pen, GetPoint(columnIndent, rowIndent), GetPoint(columnIndent, rowIndent + rowHeight));
+                        drawingContext.DrawLine(_borderPen, GetPoint(columnIndent, rowIndent), GetPoint(columnIndent, rowIndent + rowHeight));
                 }
 
                 rowIndent += rowHeight;
 
                 if (i != 12)
-                    drawingContext.DrawLine(pen, GetPoint(0, rowIndent), GetPoint(RenderSize.Width, rowIndent));
+                    drawingContext.DrawLine(_borderPen, GetPoint(0, rowIndent), GetPoint(RenderSize.Width, rowIndent));
             }
         }
     }

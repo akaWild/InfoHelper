@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using BitmapHelper;
 using InfoHelper.Utils;
+using Microsoft.Win32;
 using PokerWindowsUtility;
 using ScreenParserUtility;
 
