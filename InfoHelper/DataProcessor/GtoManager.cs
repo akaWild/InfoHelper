@@ -346,15 +346,28 @@ namespace InfoHelper.DataProcessor
                     title += " (Unopened)";
                 else
                 {
-                    GtoActionInfo lastNonFoldGtoAction = gtoActions.LastOrDefault(a => a.Action is GtoAction.Raise or GtoAction.Call);
+                    float[] gtoPlayerBets = new float[6];
 
-                    if (lastNonFoldGtoAction != default)
+                    gtoPlayerBets[gc.SmallBlindPosition - 1] = 0.5f;
+                    gtoPlayerBets[gc.BigBlindPosition - 1] = 1;
+
+                    foreach (GtoActionInfo gtoAction in gtoActions)
                     {
-                        float minAmount = (float)(gc.AmountToCall + (gc.Actions.LastOrDefault(a => a.Player == gc.HeroPosition && a.Round == gc.Round)?.Amount ?? 0));
+                        int playerIndex = Array.IndexOf(playerRelativePositions, gtoAction.Player);
 
-                        amountDiff = lastNonFoldGtoAction.Amount - minAmount;
-                        amountDiffPercent = amountDiff == 0 ? 0 : amountDiff * 100 / minAmount;
+                        if (gtoAction.Amount > gtoPlayerBets[playerIndex])
+                            gtoPlayerBets[playerIndex] = gtoAction.Amount;
                     }
+
+                    float gtoPot = gtoPlayerBets.Sum();
+                    float gtoAmtToCall = gtoPlayerBets.Max() - gtoPlayerBets[3];
+
+                    float gtoPotOdds = gtoAmtToCall / (gtoPot + gtoAmtToCall);
+
+                    float potOdds = (float)(gc.AmountToCall / (gc.TotalPot + gc.AmountToCall));
+
+                    amountDiff = gtoPotOdds - potOdds;
+                    amountDiffPercent = amountDiff * 100 / potOdds;
 
                     title += " (";
 
@@ -537,6 +550,12 @@ namespace InfoHelper.DataProcessor
                     gc.GtoError = "There is no suitable preflop GTO strategy for current situation";
                 }
             }
+        }
+
+        public void GetPostflopGtoStrategy(GameContext gc)
+        {
+            lock (gc.GtoLock)
+                gc.GtoError = "There is no suitable postflop GTO strategy for current situation";
         }
 
         #region Private classes

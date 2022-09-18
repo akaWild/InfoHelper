@@ -372,7 +372,7 @@ namespace InfoHelper.Controls
             renderInfo.Add(new DrawRect(amtDiffRect, GetDiffsBrush(preflopGtoData.GtoDiffs.AmountDiffPercent), null));
 
             string amtDiffSign = preflopGtoData.GtoDiffs.AmountDiff > 0 ? "+" : "";
-            string amtDiffText = $"ΔAmt: {amtDiffSign}{Math.Round(preflopGtoData.GtoDiffs.AmountDiff, 2).ToString(CultureInfo.InvariantCulture)} ({amtDiffSign}{Math.Round(preflopGtoData.GtoDiffs.AmountDiffPercent, 2).ToString(CultureInfo.InvariantCulture)}%)";
+            string amtDiffText = $"P/O: {amtDiffSign}{Math.Round(preflopGtoData.GtoDiffs.AmountDiff, 2).ToString(CultureInfo.InvariantCulture)} ({amtDiffSign}{Math.Round(preflopGtoData.GtoDiffs.AmountDiffPercent, 2).ToString(CultureInfo.InvariantCulture)}%)";
 
             FormattedText amtDiffsText = new FormattedText(amtDiffText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, diffsHeight - 6, _foregroundBrush, 1);
 

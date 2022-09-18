@@ -211,12 +211,12 @@ namespace InfoHelper.DataProcessor
 
                 _bitmapContainer.Add(bmpDecor.Copy());
 
-                Point? cursor = CursorManager.FindCursor(bmpDecor);
-
                 PokerWindow[] windows = new PokerWindow[] { };
 
                 if (Shared.ScanTablesGg)
                     windows = (PokerWindow[])_findWindows.Invoke(null, new object[] { bmpDecor });
+
+                Point? cursor = windows.Length > 0 ? CursorManager.FindCursor(bmpDecor) : null;
 
                 List<WindowContextInfo> winContextInfosCopy = null;
 
@@ -289,8 +289,13 @@ namespace InfoHelper.DataProcessor
                                 PokerRoomManager.ProcessData(window, screenData, bmpDecor);
                             }
 
-                            if (winContextInfo.GameContext.Round == 1 && winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
-                                _gtoManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
+                            if (winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
+                            {
+                                if(winContextInfo.GameContext.Round == 1)
+                                    _gtoManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
+                                else
+                                    _gtoManager.GetPostflopGtoStrategy(winContextInfo.GameContext);
+                            }
 
                             isHeroActing = winContextInfo.GameContext.Error == string.Empty;
 
