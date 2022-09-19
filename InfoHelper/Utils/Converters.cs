@@ -85,6 +85,21 @@ namespace InfoHelper.Utils
         }
     }
 
+    public class ErrorMessageConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            string error = value?.ToString();
+
+            return string.IsNullOrEmpty(error) || error.Length < 200 ? error : $"{error.Substring(0, 200)}..."; 
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public class NameControlForegroundConverter : IValueConverter
     {
         private object _confirmedForegroundBrush;
@@ -187,6 +202,4 @@ namespace InfoHelper.Utils
             throw new NotImplementedException();
         }
     }
-
-
 }

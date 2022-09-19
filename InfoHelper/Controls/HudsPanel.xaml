@@ -24,13 +24,13 @@
                 <RowDefinition Height="20*"/>
             </Grid.RowDefinitions>
             <local:ActionsControl Margin="5, 5, 5, 0" Data="{Binding Actions, UpdateSourceTrigger=PropertyChanged}" 
-                                  Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                  Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                 <local:ActionsControl.DataContext>
                     <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.ActionsState"/>
                 </local:ActionsControl.DataContext>
             </local:ActionsControl>
             <Border Grid.Row="1" Margin="5, 5, 5, 0" Style="{StaticResource NamePanelBorderStyle}" Background="{StaticResource NamePanelBackgroundBrush}" 
-                    Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                 <Border.DataContext>
                     <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.NameState"/>
                 </Border.DataContext>
@@ -41,74 +41,74 @@
                 </Viewbox>
             </Border>
             <local:GeneralHud Grid.Row="2" Margin="5" VerticalAlignment="Top"  
-                              Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                              Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                 <local:GeneralHud.DataContext>
                     <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.GeneralHudState"/>
                 </local:GeneralHud.DataContext>
             </local:GeneralHud>
         </Grid>
         <local:PreflopBtnHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                                        Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                        Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopBtnHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.BtnPreflopHudState"/>
             </local:PreflopBtnHud.DataContext>
         </local:PreflopBtnHud>
         <local:PreflopSbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                                Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopSbHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.SbPreflopHudState"/>
             </local:PreflopSbHud.DataContext>
         </local:PreflopSbHud>
         <local:PreflopBbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopBbHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.BbPreflopHudState"/>
             </local:PreflopBbHud.DataContext>
         </local:PreflopBbHud>
         <local:PreflopEpHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopEpHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.EpPreflopHudState"/>
             </local:PreflopEpHud.DataContext>
         </local:PreflopEpHud>
         <local:PreflopMpHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopMpHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.MpPreflopHudState"/>
             </local:PreflopMpHud.DataContext>
         </local:PreflopMpHud>
         <local:PreflopCoHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopCoHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.CoPreflopHudState"/>
             </local:PreflopCoHud.DataContext>
         </local:PreflopCoHud>
         <local:PreflopSbvsBbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopSbvsBbHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.SbvsBbPreflopHudState"/>
             </local:PreflopSbvsBbHud.DataContext>
         </local:PreflopSbvsBbHud>
         <local:PreflopBbvsSbHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                                Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:PreflopBbvsSbHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.BbvsSbPreflopHudState"/>
             </local:PreflopBbvsSbHud.DataContext>
         </local:PreflopBbvsSbHud>
         <local:FlopHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                                        Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                        Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:FlopHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopFlopHudState"/>
             </local:FlopHud.DataContext>
         </local:FlopHud>
         <local:TurnHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                       Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                       Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:TurnHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopTurnHudState"/>
             </local:TurnHud.DataContext>
         </local:TurnHud>
         <local:RiverHud Grid.Column="2" VerticalAlignment="Top" Margin="0, 5, 5, 5" 
-                       Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                       Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
             <local:RiverHud.DataContext>
                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopRiverHudState"/>
             </local:RiverHud.DataContext>
@@ -120,13 +120,13 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <local:PreflopMatrixControl Grid.Row="0" Margin="0, 5, 5, 2.5" Data="{Binding PreflopData, UpdateSourceTrigger=PropertyChanged}" 
-                                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                     <local:PreflopMatrixControl.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PreflopMatrixState"/>
                     </local:PreflopMatrixControl.DataContext>
                 </local:PreflopMatrixControl>
                 <local:PreflopMatrixControl Grid.Row="1" Margin="0, 2.5, 5, 5" Data="{Binding PreflopData, UpdateSourceTrigger=PropertyChanged}"
-                                            Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                     <local:PreflopMatrixControl.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PreflopMatrixState"/>
                     </local:PreflopMatrixControl.DataContext>

@@ -86,7 +86,7 @@
     <None Update="Resources\StatsCsvFiles\cell_sets.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Settings.xml">
+    <None Update="Resources\DeferredLoadedData\Settings.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

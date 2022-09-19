@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -82,6 +83,14 @@ namespace InfoHelper.DataProcessor
             using PlayerContext plContext = new PlayerContext(_connectionString, false);
 
             Player player = (Player)sender;
+
+            using FileStream fileStream = new FileStream(Path.Combine(Shared.PlayersImagesFolder, $"{player.Hash}.png"), FileMode.Create);
+
+            BitmapEncoder encoder = new PngBitmapEncoder();
+
+            encoder.Frames.Add(BitmapFrame.Create(player.Image));
+
+            encoder.Save(fileStream);
 
             if (!plContext.Players.Contains(player))
                 plContext.Players.Add(player);

@@ -12,44 +12,64 @@
         <utils:CardRadioButtonCheckedConverter x:Key="CardRadioButtonCheckedConverter"/>
         <system:Double x:Key="FontSize">11</system:Double>
         <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="{StaticResource FontSize}"></Setter>
+            <Setter Property="FontSize" Value="{StaticResource FontSize}"/>
         </Style>
         <Style x:Key="LocalSolverCheckedStyle">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding IsChecked, ElementName=rdbLocalSolver}" Value="True">
-                    <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
-                    <Setter Property="TextBox.Visibility" Value="Visible"></Setter>
-                    <Setter Property="Button.Visibility" Value="Visible"></Setter>
+                    <Setter Property="TextBlock.Visibility" Value="Visible"/>
+                    <Setter Property="TextBox.Visibility" Value="Visible"/>
+                    <Setter Property="Button.Visibility" Value="Visible"/>
                 </DataTrigger>
                 <DataTrigger Binding="{Binding IsChecked, ElementName=rdbRemoteSolver}" Value="True">
-                    <Setter Property="TextBlock.Visibility" Value="Hidden"></Setter>
-                    <Setter Property="TextBox.Visibility" Value="Hidden"></Setter>
-                    <Setter Property="Button.Visibility" Value="Hidden"></Setter>
+                    <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+                    <Setter Property="TextBox.Visibility" Value="Hidden"/>
+                    <Setter Property="Button.Visibility" Value="Hidden"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
         <Style x:Key="RemoteSolverCheckedStyle">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding IsChecked, ElementName=rdbLocalSolver}" Value="True">
-                    <Setter Property="TextBlock.Visibility" Value="Hidden"></Setter>
-                    <Setter Property="TextBox.Visibility" Value="Hidden"></Setter>
+                    <Setter Property="TextBlock.Visibility" Value="Hidden"/>
+                    <Setter Property="TextBox.Visibility" Value="Hidden"/>
                 </DataTrigger>
                 <DataTrigger Binding="{Binding IsChecked, ElementName=rdbRemoteSolver}" Value="True">
-                    <Setter Property="TextBlock.Visibility" Value="Visible"></Setter>
-                    <Setter Property="TextBox.Visibility" Value="Visible"></Setter>
+                    <Setter Property="TextBlock.Visibility" Value="Visible"/>
+                    <Setter Property="TextBox.Visibility" Value="Visible"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
-        <Style x:Key="GgRadioButtonEnabledStyle" TargetType="RadioButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
+        <Style x:Key="RadioButtonEnabledStyle" TargetType="RadioButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
             <Style.Triggers>
                 <Trigger Property="IsChecked" Value="True">
                     <Setter Property="BorderThickness" Value="2"/>
                 </Trigger>
-                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True">
-                    <Setter Property="IsEnabled" Value="True"></Setter>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="True">
+                    <Setter Property="IsEnabled" Value="True"/>
                 </DataTrigger>
-                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
-                    <Setter Property="IsEnabled" Value="False"></Setter>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="False">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="PlayersImagesTextboxEnabledStyle" TargetType="TextBox">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="True">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="False">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="PlayersImagesButtonEnabledStyle" TargetType="Button">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="True">
+                    <Setter Property="IsEnabled" Value="True"/>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="False">
+                    <Setter Property="IsEnabled" Value="False"/>
                 </DataTrigger>
             </Style.Triggers>
         </Style>
@@ -307,9 +327,8 @@
                     </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
-                        <RowDefinition Height="1*"/>
                     </Grid.RowDefinitions>
-                    <GroupBox Header="GG poker" BorderBrush="Black" Grid.ColumnSpan="2">
+                    <GroupBox Header="GG poker" BorderBrush="Black" Grid.ColumnSpan="2" Margin="0">
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
@@ -317,9 +336,14 @@
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
                             </Grid.RowDefinitions>
                             <Grid Grid.Row="0">
-                                <CheckBox Grid.Column="0" Margin="5" Name="chbScanGg" IsChecked="{Binding ScanTablesGg, Mode=TwoWay}">Scan tables</CheckBox>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="39*"/>
+                                    <ColumnDefinition Width="343*"/>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox Grid.Column="0" Margin="5,5,5,5" Name="chbScan" IsChecked="{Binding ScanTables, Mode=TwoWay}" Grid.ColumnSpan="2">Scan tables</CheckBox>
                             </Grid>
                             <Grid Grid.Row="1">
                                 <Grid.ColumnDefinitions>
@@ -332,13 +356,13 @@
                                     <ColumnDefinition Width="0.9*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Card back</TextBlock>
-                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=1, Mode=TwoWay}">
+                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource RadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndex, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=1, Mode=TwoWay}">
                                     <Image Source="/Resources/Images/cardBack1.png" Stretch="Fill"/>
                                 </RadioButton>
-                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=2, Mode=TwoWay}">
+                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource RadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndex, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=2, Mode=TwoWay}">
                                     <Image Source="/Resources/Images/cardBack2.png" Stretch="Fill"/>
                                 </RadioButton>
-                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=3, Mode=TwoWay}">
+                                <RadioButton Grid.Column="3" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource RadioButtonEnabledStyle}" IsChecked="{Binding CardBackIndex, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=3, Mode=TwoWay}">
                                     <Image Source="/Resources/Images/cardBack3.png" Stretch="Fill"/>
                                 </RadioButton>
                             </Grid>
@@ -353,22 +377,34 @@
                                     <ColumnDefinition Width="0.9*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Deck</TextBlock>
-                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding DeckIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=1, Mode=TwoWay}">
+                                <RadioButton Grid.Column="1" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource RadioButtonEnabledStyle}" IsChecked="{Binding DeckIndex, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=1, Mode=TwoWay}">
                                     <Image Source="/Resources/Images/deck1.png" Stretch="Fill"/>
                                 </RadioButton>
-                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource GgRadioButtonEnabledStyle}" IsChecked="{Binding DeckIndexGg, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=2, Mode=TwoWay}">
+                                <RadioButton Grid.Column="2" Margin="0, 0, 5, 5" Height =" 50" Style="{StaticResource RadioButtonEnabledStyle}" IsChecked="{Binding DeckIndex, Converter={StaticResource CardRadioButtonCheckedConverter}, ConverterParameter=2, Mode=TwoWay}">
                                     <Image Source="/Resources/Images/deck2.png" Stretch="Fill"/>
                                 </RadioButton>
                             </Grid>
                             <Grid Grid.Row="3">
-                                <CheckBox Grid.Column="0" Margin="5, 0, 5, 5" Name="chbSavePicturesPerHandGg" IsChecked="{Binding SavePicturesGg, Mode=TwoWay}" Content="Save pictures per hand">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="7*"/>
+                                    <ColumnDefinition Width="3*"/>
+                                    <ColumnDefinition Width="5*"/>
+                                    <ColumnDefinition Width="1*"/>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Player images folder</TextBlock>
+                                <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Text="{Binding PlayersImagesFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                         Style="{StaticResource PlayersImagesTextboxEnabledStyle}"/>
+                                <Button Grid.Column="3" Margin="0, 0, 5, 5" Click="btnPlayersImagesFolder_Click" Style="{StaticResource PlayersImagesButtonEnabledStyle}"/>
+                            </Grid>
+                            <Grid Grid.Row="4">
+                                <CheckBox Grid.Column="0" Margin="5, 0, 5, 5" Name="chbSavePicturesPerHand" IsChecked="{Binding SavePictures, Mode=TwoWay}" Content="Save pictures per hand">
                                     <CheckBox.Style>
                                         <Style>
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True">
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="True">
                                                     <Setter Property="CheckBox.IsEnabled" Value="True"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="False">
                                                     <Setter Property="CheckBox.IsEnabled" Value="False"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -376,7 +412,7 @@
                                     </CheckBox.Style>
                                 </CheckBox>
                             </Grid>
-                            <Grid Grid.Row="4">
+                            <Grid Grid.Row="5">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="7*"/>
                                     <ColumnDefinition Width="3*"/>
@@ -384,21 +420,21 @@
                                     <ColumnDefinition Width="1*"/>
                                 </Grid.ColumnDefinitions>
                                 <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Pictures save folder</TextBlock>
-                                <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Text="{Binding SavePicturesFolderGg, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
+                                <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Grid.ColumnSpan="2" Text="{Binding SavePicturesFolder, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}">
                                     <TextBox.Style>
                                         <Style>
                                             <Style.Triggers>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True"/>
-                                                        <Condition Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="True"/>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbScan}" Value="True"/>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHand}" Value="True"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="TextBox.IsEnabled" Value="True"/>
                                                 </MultiDataTrigger>
-                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="False">
                                                     <Setter Property="TextBox.IsEnabled" Value="False"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="False">
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHand}" Value="False">
                                                     <Setter Property="TextBox.IsEnabled" Value="False"/>
                                                 </DataTrigger>
                                             </Style.Triggers>
@@ -411,15 +447,15 @@
                                             <Style.Triggers>
                                                 <MultiDataTrigger>
                                                     <MultiDataTrigger.Conditions>
-                                                        <Condition Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="True"/>
-                                                        <Condition Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="True"/>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbScan}" Value="True"/>
+                                                        <Condition Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHand}" Value="True"/>
                                                     </MultiDataTrigger.Conditions>
                                                     <Setter Property="Button.IsEnabled" Value="True"/>
                                                 </MultiDataTrigger>
-                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScanGg}" Value="False">
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbScan}" Value="False">
                                                     <Setter Property="Button.IsEnabled" Value="False"/>
                                                 </DataTrigger>
-                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHandGg}" Value="False">
+                                                <DataTrigger Binding="{Binding IsChecked, ElementName=chbSavePicturesPerHand}" Value="False">
                                                     <Setter Property="Button.IsEnabled" Value="False"/>
                                                 </DataTrigger>
                                             </Style.Triggers>

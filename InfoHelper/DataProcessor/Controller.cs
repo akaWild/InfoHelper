@@ -213,7 +213,7 @@ namespace InfoHelper.DataProcessor
 
                 PokerWindow[] windows = new PokerWindow[] { };
 
-                if (Shared.ScanTablesGg)
+                if (Shared.ScanTables)
                     windows = (PokerWindow[])_findWindows.Invoke(null, new object[] { bmpDecor });
 
                 Point? cursor = windows.Length > 0 ? CursorManager.FindCursor(bmpDecor) : null;
@@ -257,7 +257,7 @@ namespace InfoHelper.DataProcessor
                         IScreenParser screenParser = (IScreenParser)_screenParserType.GetConstructor(new[]
                         {
                             typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
-                        }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndexGg, Shared.DeckIndexGg });
+                        }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndex, Shared.DeckIndex });
 
                         Rectangle mouseRect = default;
 

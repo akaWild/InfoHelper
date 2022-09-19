@@ -15,13 +15,13 @@ namespace InfoHelper.DataProcessor
 {
     public class PokerRoomManager
     {
-        private static readonly Dictionary<string, DateTime> SavedFilesGg = new Dictionary<string, DateTime>();
+        private static readonly Dictionary<string, DateTime> SavedFiles = new Dictionary<string, DateTime>();
 
         public static void ProcessData(PokerWindow pokerWindow, ScreenParserData screenData, BitmapDecorator bmp)
         {
             if (pokerWindow.PokerRoom == PokerRoom.GGPoker)
             {
-                if (Shared.SavePicturesPerHandGg)
+                if (Shared.SavePicturesPerHand)
                 {
                     string hc1 = screenData.HoleCards[3][0], hc2 = screenData.HoleCards[3][1];
 
@@ -35,11 +35,11 @@ namespace InfoHelper.DataProcessor
 
                         string fileName = $"{tableId}_{handId}_{dealerId}";
 
-                        if (!SavedFilesGg.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFilesGg[fileName]).TotalSeconds > 20)
+                        if (!SavedFiles.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFiles[fileName]).TotalSeconds > 20)
                         {
-                            bmp.Crop(pokerWindow.Position).Save(Path.Combine(Shared.PicturesSaveFolderGg, $"{fileName}_{DateTime.Now.Ticks}.bmp"));
+                            bmp.Crop(pokerWindow.Position).Save(Path.Combine(Shared.PicturesSaveFolder, $"{fileName}_{DateTime.Now.Ticks}.bmp"));
 
-                            SavedFilesGg[fileName] = DateTime.Now;
+                            SavedFiles[fileName] = DateTime.Now;
                         }
                     }
                 }

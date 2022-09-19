@@ -24,7 +24,7 @@ namespace InfoHelper.DataProcessor
         {
             Error = null;
 
-            string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Settings.xml");
+            string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedData\\Settings.xml");
 
             string saveFolder = string.Empty;
 
@@ -70,15 +70,17 @@ namespace InfoHelper.DataProcessor
 
             #region GG Poker
 
-            string scanTablesGgStr = string.Empty;
+            string scanTablesStr = string.Empty;
 
-            string cardBackGgStr = string.Empty;
+            string cardBackStr = string.Empty;
 
-            string deckGgStr = string.Empty;
+            string deckStr = string.Empty;
 
-            string savePicturesGgStr = string.Empty;
+            string playersImagesFolder = string.Empty;
 
-            string savePicturesFolderGg = string.Empty;
+            string savePicturesStr = string.Empty;
+
+            string savePicturesFolder = string.Empty;
 
             #endregion
 
@@ -245,33 +247,39 @@ namespace InfoHelper.DataProcessor
 
                             #region GGPoker
 
-                            case "ScanTablesGg":
+                            case "ScanTables":
 
-                                scanTablesGgStr = node.Attributes["Value"].Value;
-
-                                break;
-
-                            case "CardBackIndexGg":
-
-                                cardBackGgStr = node.Attributes["Value"].Value;
+                                scanTablesStr = node.Attributes["Value"].Value;
 
                                 break;
 
-                            case "DeckIndexGg":
+                            case "CardBackIndex":
 
-                                deckGgStr = node.Attributes["Value"].Value;
-
-                                break;
-
-                            case "SavePicturesPerHandGg":
-
-                                savePicturesGgStr = node.Attributes["Value"].Value;
+                                cardBackStr = node.Attributes["Value"].Value;
 
                                 break;
 
-                            case "PicturesSaveFolderGg":
+                            case "DeckIndex":
 
-                                savePicturesFolderGg = node.Attributes["Value"].Value;
+                                deckStr = node.Attributes["Value"].Value;
+
+                                break;
+
+                            case "PlayersImagesFolder":
+
+                                playersImagesFolder = node.Attributes["Value"].Value;
+
+                                break;
+
+                            case "SavePicturesPerHand":
+
+                                savePicturesStr = node.Attributes["Value"].Value;
+
+                                break;
+
+                            case "PicturesSaveFolder":
+
+                                savePicturesFolder = node.Attributes["Value"].Value;
 
                                 break;
 
@@ -705,42 +713,42 @@ namespace InfoHelper.DataProcessor
             #region GGPoker
 
             //Scan GGPoker tables
-            if (string.IsNullOrEmpty(scanTablesGgStr))
+            if (string.IsNullOrEmpty(scanTablesStr))
             {
                 Error = "Scan GGPoker tables option is not specified";
 
                 return false;
             }
 
-            if (!bool.TryParse(scanTablesGgStr, out bool scanTablesGg))
+            if (!bool.TryParse(scanTablesStr, out bool scanTables))
             {
                 Error = "Scan GGPoker tables option has incorrect format";
 
                 return false;
             }
 
-            int cardBackGg = 0;
-            int deckGg = 0;
-            bool savePicturesGg = false;
+            int cardBack = 0;
+            int deck = 0;
+            bool savePictures = false;
 
-            if (scanTablesGg)
+            if (scanTables)
             {
                 //Card back GGPoker
-                if (string.IsNullOrEmpty(cardBackGgStr))
+                if (string.IsNullOrEmpty(cardBackStr))
                 {
                     Error = "GGPoker card back is not specified";
 
                     return false;
                 }
 
-                if (!int.TryParse(cardBackGgStr, out cardBackGg))
+                if (!int.TryParse(cardBackStr, out cardBack))
                 {
                     Error = "GGPoker card back has incorrect format";
 
                     return false;
                 }
 
-                if (cardBackGg < 1)
+                if (cardBack < 1)
                 {
                     Error = "GGPoker card back value should be greater than 0";
 
@@ -748,53 +756,69 @@ namespace InfoHelper.DataProcessor
                 }
 
                 //Deck GGPoker
-                if (string.IsNullOrEmpty(deckGgStr))
+                if (string.IsNullOrEmpty(deckStr))
                 {
                     Error = "GGPoker deck is not specified";
 
                     return false;
                 }
 
-                if (!int.TryParse(deckGgStr, out deckGg))
+                if (!int.TryParse(deckStr, out deck))
                 {
                     Error = "GGPoker deck has incorrect format";
 
                     return false;
                 }
 
-                if (deckGg < 1)
+                if (deck < 1)
                 {
                     Error = "GGPoker deck value should be greater than 0";
 
                     return false;
                 }
 
+                //Players images folder on GGPoker
+                if (string.IsNullOrEmpty(playersImagesFolder))
+                {
+                    Error = "Players images folder on GGPoker is not specified";
+
+                    return false;
+                }
+
+                if (!Directory.Exists(playersImagesFolder))
+                {
+                    Error = "Players images folder on GGPoker doesn't exist";
+
+                    return false;
+
+                }
+
                 //Save pictures per hand on GGPoker
-                if (string.IsNullOrEmpty(savePicturesGgStr))
+                if (string.IsNullOrEmpty(savePicturesStr))
                 {
                     Error = "Save pictures per hand option on GGPoker is not specified";
 
                     return false;
                 }
 
-                if (!bool.TryParse(savePicturesGgStr, out savePicturesGg))
+                if (!bool.TryParse(savePicturesStr, out savePictures))
                 {
                     Error = "Save pictures per hand option on GGPoker has incorrect format";
 
                     return false;
                 }
 
-                if (savePicturesGg)
+                if (savePictures)
                 {
                     //Save pictures folder on GGPoker
-                    if (string.IsNullOrEmpty(savePicturesFolderGg))
+                    if (string.IsNullOrEmpty(savePicturesFolder))
                     {
                         Error = "Save pictures folder on GGPoker is not specified";
 
                         return false;
                     }
 
-                    if (!Directory.Exists(savePicturesFolderGg))
+                    if (!Directory.Exists(savePicturesFolder))
                     {
                         Error = "Save pictures folder on GGPoker doesn't exist";
 
@@ -833,11 +857,12 @@ namespace InfoHelper.DataProcessor
             Shared.TurnSolverAccuracy = turnSolverAccuracy;
             Shared.RiverSolverAccuracy = riverSolverAccuracy;
             Shared.MinLineFrequency = minLineFrequency;
-            Shared.ScanTablesGg = scanTablesGg;
-            Shared.CardBackIndexGg = cardBackGg;
-            Shared.DeckIndexGg = deckGg;
-            Shared.SavePicturesPerHandGg = savePicturesGg;
-            Shared.PicturesSaveFolderGg = savePicturesFolderGg;
+            Shared.ScanTables = scanTables;
+            Shared.CardBackIndex = cardBack;
+            Shared.DeckIndex = deck;
+            Shared.PlayersImagesFolder = playersImagesFolder;
+            Shared.SavePicturesPerHand = savePictures;
+            Shared.PicturesSaveFolder = savePicturesFolder;
 
             #endregion
 

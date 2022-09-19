@@ -16,6 +16,7 @@
         <utils:AnalyzerInfoForegroundConverter x:Key="AnalyzerInfoForegroundConverter"/>
         <utils:SolverInfoTextConverter x:Key="SolverInfoTextConverter"/>
         <utils:SolverInfoForegroundConverter x:Key="SolverInfoForegroundConverter"/>
+        <utils:ErrorMessageConverter x:Key="ErrorMessageConverter"/>
     </Window.Resources>
     <DockPanel LastChildFill="True"  Background="{DynamicResource CurrentFormBackColor}">
         <Menu DockPanel.Dock="Top">
@@ -60,7 +61,7 @@
                                 <Binding RelativeSource="{RelativeSource AncestorType={x:Type Window}}" Path="DataContext.ControlsState.ProgressBarState"/>
                             </ProgressBar.DataContext>
                         </ProgressBar>
-                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="Red" Text="{Binding  ControlsState.Error}"></TextBlock>
+                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="Red" Text="{Binding  ControlsState.Error, Converter={StaticResource ErrorMessageConverter}}"/>
                     </StackPanel>
                 </Viewbox>
             </Border>

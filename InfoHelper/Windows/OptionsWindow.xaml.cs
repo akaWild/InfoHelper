@@ -51,7 +51,7 @@ namespace InfoHelper.Windows
 
             _viewModel.ClientMouseCursorTemplates = cursorFiles;
 
-            string optionsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Settings.xml");
+            string optionsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedData\\Settings.xml");
 
             if (File.Exists(optionsPath))
             {
@@ -227,35 +227,41 @@ namespace InfoHelper.Windows
 
                                 #region GGPoker
 
-                                case "ScanTablesGg":
+                                case "ScanTables":
 
-                                    if (bool.TryParse(node.Attributes["Value"].Value, out bool scanTablesGg))
-                                        _viewModel.ScanTablesGg = scanTablesGg;
-
-                                    break;
-
-                                case "CardBackIndexGg":
-
-                                    _viewModel.CardBackIndexGg = node.Attributes["Value"].Value;
+                                    if (bool.TryParse(node.Attributes["Value"].Value, out bool scanTables))
+                                        _viewModel.ScanTables = scanTables;
 
                                     break;
 
-                                case "DeckIndexGg":
+                                case "CardBackIndex":
 
-                                    _viewModel.DeckIndexGg = node.Attributes["Value"].Value;
-
-                                    break;
-
-                                case "SavePicturesPerHandGg":
-
-                                    if (bool.TryParse(node.Attributes["Value"].Value, out bool savePicturesGg))
-                                        _viewModel.SavePicturesGg = savePicturesGg;
+                                    _viewModel.CardBackIndex = node.Attributes["Value"].Value;
 
                                     break;
 
-                                case "PicturesSaveFolderGg":
+                                case "DeckIndex":
 
-                                    _viewModel.SavePicturesFolderGg = node.Attributes["Value"].Value;
+                                    _viewModel.DeckIndex = node.Attributes["Value"].Value;
+
+                                    break;
+
+                                case "PlayersImagesFolder":
+
+                                    _viewModel.PlayersImagesFolder = node.Attributes["Value"].Value;
+
+                                    break;
+
+                                case "SavePicturesPerHand":
+
+                                    if (bool.TryParse(node.Attributes["Value"].Value, out bool savePictures))
+                                        _viewModel.SavePictures = savePictures;
+
+                                    break;
+
+                                case "PicturesSaveFolder":
+
+                                    _viewModel.SavePicturesFolder = node.Attributes["Value"].Value;
 
                                     break;
 
@@ -272,7 +278,7 @@ namespace InfoHelper.Windows
 
         private void SaveData()
         {
-            FileStream fileStream = new FileStream(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Settings.xml"), FileMode.Create); ;
+            FileStream fileStream = new FileStream(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedData\\Settings.xml"), FileMode.Create); ;
 
             XmlWriter xmlWriter = XmlWriter.Create(fileStream);
 
@@ -362,24 +368,28 @@ namespace InfoHelper.Windows
             xmlWriter.WriteAttributeString("Value", _viewModel.BackColor.ToString());
             xmlWriter.WriteEndElement();
 
-            xmlWriter.WriteStartElement("ScanTablesGg");
-            xmlWriter.WriteAttributeString("Value", _viewModel.ScanTablesGg.ToString());
+            xmlWriter.WriteStartElement("ScanTables");
+            xmlWriter.WriteAttributeString("Value", _viewModel.ScanTables.ToString());
             xmlWriter.WriteEndElement();
 
-            xmlWriter.WriteStartElement("CardBackIndexGg");
-            xmlWriter.WriteAttributeString("Value", _viewModel.CardBackIndexGg);
+            xmlWriter.WriteStartElement("CardBackIndex");
+            xmlWriter.WriteAttributeString("Value", _viewModel.CardBackIndex);
             xmlWriter.WriteEndElement();
 
-            xmlWriter.WriteStartElement("DeckIndexGg");
-            xmlWriter.WriteAttributeString("Value", _viewModel.DeckIndexGg);
+            xmlWriter.WriteStartElement("DeckIndex");
+            xmlWriter.WriteAttributeString("Value", _viewModel.DeckIndex);
             xmlWriter.WriteEndElement();
 
-            xmlWriter.WriteStartElement("SavePicturesPerHandGg");
-            xmlWriter.WriteAttributeString("Value", _viewModel.SavePicturesGg.ToString());
+            xmlWriter.WriteStartElement("PlayersImagesFolder");
+            xmlWriter.WriteAttributeString("Value", _viewModel.PlayersImagesFolder);
             xmlWriter.WriteEndElement();
 
-            xmlWriter.WriteStartElement("PicturesSaveFolderGg");
-            xmlWriter.WriteAttributeString("Value", _viewModel.SavePicturesFolderGg);
+            xmlWriter.WriteStartElement("SavePicturesPerHand");
+            xmlWriter.WriteAttributeString("Value", _viewModel.SavePictures.ToString());
+            xmlWriter.WriteEndElement();
+
+            xmlWriter.WriteStartElement("PicturesSaveFolder");
+            xmlWriter.WriteAttributeString("Value", _viewModel.SavePicturesFolder);
             xmlWriter.WriteEndElement();
 
             xmlWriter.WriteEndElement();
@@ -465,14 +475,24 @@ namespace InfoHelper.Windows
                 _viewModel.SolverFile = System.IO.Path.GetFileName(solverFileDialog.FileName);
         }
 
-        private void btnPicturesSaveFolder_Click(object sender, EventArgs e)
+        private void btnPlayersImagesFolder_Click(object sender, RoutedEventArgs e)
         {
-            FolderBrowserDialog folderSavePicturesGg = new FolderBrowserDialog();
+            FolderBrowserDialog folderPlayersImages = new FolderBrowserDialog();
 
-            DialogResult result = folderSavePicturesGg.ShowDialog();
+            DialogResult result = folderPlayersImages.ShowDialog();
 
             if (result == System.Windows.Forms.DialogResult.OK)
-                _viewModel.SavePicturesFolderGg = folderSavePicturesGg.SelectedPath;
+                _viewModel.PlayersImagesFolder = folderPlayersImages.SelectedPath;
+        }
+
+        private void btnPicturesSaveFolder_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderSavePictures = new FolderBrowserDialog();
+
+            DialogResult result = folderSavePictures.ShowDialog();
+
+            if (result == System.Windows.Forms.DialogResult.OK)
+                _viewModel.SavePicturesFolder = folderSavePictures.SelectedPath;
         }
         
         private void UIElement_OnPreviewMouseUp(object sender, MouseButtonEventArgs e)
@@ -609,43 +629,55 @@ namespace InfoHelper.Windows
 
             public string MinLineFrequency { get; set; }
 
-            public bool ScanTablesGg { get; set; } = true;
+            public bool ScanTables { get; set; } = true;
 
-            private string _cardBackIndexGg;
-            public string CardBackIndexGg
+            private string _cardBackIndex;
+            public string CardBackIndex
             {
-                get => _cardBackIndexGg;
+                get => _cardBackIndex;
                 set
                 {
                     if (value == null)
                         return;
 
-                    _cardBackIndexGg = value;
+                    _cardBackIndex = value;
                 }
             }
 
-            private string _deckIndexGg;
-            public string DeckIndexGg
+            private string _deckIndex;
+            public string DeckIndex
             {
-                get => _deckIndexGg;
+                get => _deckIndex;
                 set
                 {
                     if (value == null)
                         return;
 
-                    _deckIndexGg = value;
+                    _deckIndex = value;
                 }
             }
 
-            public bool SavePicturesGg { get; set; } = true;
+            public bool SavePictures { get; set; } = true;
 
-            private string _savePicturesFolderGg;
-            public string SavePicturesFolderGg
+            private string _savePicturesFolder;
+            public string SavePicturesFolder
             {
-                get => _savePicturesFolderGg;
+                get => _savePicturesFolder;
                 set
                 {
-                    _savePicturesFolderGg = value;
+                    _savePicturesFolder = value;
+
+                    OnPropertyChanged();
+                }
+            }
+
+            private string _playersImagesFolder;
+            public string PlayersImagesFolder
+            {
+                get => _playersImagesFolder;
+                set
+                {
+                    _playersImagesFolder = value;
 
                     OnPropertyChanged();
                 }

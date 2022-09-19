@@ -93,66 +93,79 @@ namespace InfoHelper.DataProcessor
 
                 actionsCounter = 0;
 
-                for (int i = 0; i < at.Key.Actions.Length; i++)
+                if (at.Key.Actions.Length != 0)
                 {
-                    BettingActionType gtoActionType = Common.ConvertAction(at.Key.Actions[i].Action);
-
-                    int gtoPlayerPosition = Array.IndexOf(playerRelativePositions, at.Key.Actions[i].Player);
-
-                    if (gtoActionType == BettingActionType.Fold)
-                    {
-                        if (gc.IsPlayerIn[gtoPlayerPosition] == null)
-                        {
-                            //OK
-                        }
-                        else if (actionsCounter < actions.Length && actions[actionsCounter].ActionType == BettingActionType.Fold && gtoPlayerPosition == actions[actionsCounter].Player - 1)
-                        {
-                            //OK
-                            actionsCounter++;
-                        }
-                        else
-                        {
-                            okActionType = false;
-
-                            break;
-                        }
-                    }
-                    else if (gtoActionType == BettingActionType.Call)
-                    {
-                        if (actionsCounter < actions.Length && actions[actionsCounter].ActionType == BettingActionType.Call && gtoPlayerPosition == actions[actionsCounter].Player - 1)
-                        {
-                            //OK
-                            actionsCounter++;
-                        }
-                        else if (gc.IsPlayerAllIn[gtoPlayerPosition])
-                        {
-                            //OK
-                        }
-                        else
-                        {
-                            okActionType = false;
-
-                            break;
-                        }
-                    }
+                    if (actions.Length == 0)
+                        okActionType = false;
                     else
                     {
-                        if (actionsCounter >= actions.Length || gtoActionType != actions[actionsCounter].ActionType || gtoPlayerPosition != actions[actionsCounter].Player - 1)
+                        for (int i = 0; i < at.Key.Actions.Length; i++)
                         {
-                            okActionType = false;
+                            BettingActionType gtoActionType = Common.ConvertAction(at.Key.Actions[i].Action);
 
-                            break;
+                            int gtoPlayerPosition = Array.IndexOf(playerRelativePositions, at.Key.Actions[i].Player);
+
+                            if (gtoActionType == BettingActionType.Fold)
+                            {
+                                if (gc.IsPlayerIn[gtoPlayerPosition] == null)
+                                {
+                                    //OK
+                                }
+                                else if (actionsCounter < actions.Length && actions[actionsCounter].ActionType == BettingActionType.Fold && gtoPlayerPosition == actions[actionsCounter].Player - 1)
+                                {
+                                    //OK
+                                    actionsCounter++;
+                                }
+                                else
+                                {
+                                    okActionType = false;
+
+                                    break;
+                                }
+                            }
+                            else if (gtoActionType == BettingActionType.Call)
+                            {
+                                if (actionsCounter < actions.Length && actions[actionsCounter].ActionType == BettingActionType.Call && gtoPlayerPosition == actions[actionsCounter].Player - 1)
+                                {
+                                    //OK
+                                    actionsCounter++;
+                                }
+                                else if (gc.IsPlayerAllIn[gtoPlayerPosition])
+                                {
+                                    //OK
+                                }
+                                else
+                                {
+                                    okActionType = false;
+
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                if (actionsCounter >= actions.Length || gtoActionType != actions[actionsCounter].ActionType || gtoPlayerPosition != actions[actionsCounter].Player - 1)
+                                {
+                                    okActionType = false;
+
+                                    break;
+                                }
+
+                                //OK
+                                actionsCounter++;
+                            }
+
+                            if (i == at.Key.Actions.Length - 1)
+                            {
+                                if (actionsCounter != actions.Length)
+                                    okActionType = false;
+                            }
                         }
-
-                        //OK
-                        actionsCounter++;
                     }
-
-                    if (i == at.Key.Actions.Length - 1)
-                    {
-                        if (actionsCounter != actions.Length)
-                            okActionType = false;
-                    }
+                }
+                else
+                {
+                    if (actions.Length != 0)
+                        okActionType = false;
                 }
 
                 if (okActionType)
@@ -203,6 +216,9 @@ namespace InfoHelper.DataProcessor
             bbDiffPercent = bbDiff * 100 / effStack;
 
             KeyValuePair<KeyGto, GtoStrategyContainer>[] keyValues = filteredStrategies.Where(a => Math.Abs(a.Key.EffectiveStack - destEs) < 0.001).ToArray();
+
+            if(keyValues.Length == 0)
+                goto Skip;
 
             List<KeyValuePair<KeyGto, GtoStrategyContainer>> outputKeys = new List<KeyValuePair<KeyGto, GtoStrategyContainer>>(keyValues);
 
@@ -328,6 +344,7 @@ namespace InfoHelper.DataProcessor
 
             keyValues = outputKeys.ToArray();
 
+        Skip:
             GtoStrategyContainer gtoStrategyContainer = null;
 
             string title = "PREFLOP: ";

@@ -35,10 +35,11 @@ namespace InfoHelper.Utils
         public static double TurnSolverAccuracy { get; set; }
         public static double RiverSolverAccuracy { get; set; }
         public static int MinLineFrequency { get; set; }
-        public static bool ScanTablesGg { get; set; }
-        public static int CardBackIndexGg { get; set; }
-        public static int DeckIndexGg { get; set; }
-        public static bool SavePicturesPerHandGg { get; set; }
-        public static string PicturesSaveFolderGg { get; set; }
+        public static bool ScanTables { get; set; }
+        public static int CardBackIndex { get; set; }
+        public static int DeckIndex { get; set; }
+        public static string PlayersImagesFolder { get; set; }
+        public static bool SavePicturesPerHand { get; set; }
+        public static string PicturesSaveFolder { get; set; }
     }
 }
