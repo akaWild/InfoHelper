@@ -15,7 +15,7 @@ namespace InfoHelper.DataProcessor
         {
             Point? cursorPosition = null;
 
-            Parallel.For(0, bitmap.Width, (i, state) => {
+            Parallel.For(0, bitmap.Width, new ParallelOptions {MaxDegreeOfParallelism = Shared.CursorSearchThreads}, (i, state) => {
                 bool innerLoopBreak = false;
 
                 for (int j = 0; j < bitmap.Height; j++)

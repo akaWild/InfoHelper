@@ -92,6 +92,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
@@ -177,6 +178,16 @@
                         <ComboBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0 5, 5" ItemsSource="{Binding ClientMouseCursorTemplates}" SelectedItem="{Binding SelectedClientMouseCursorTemplate}"/>
                     </Grid>
                     <Grid Grid.Row="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Cursor search threads (-1 dflt)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding CursorSearchThreads, Mode=TwoWay}"/>
+                    </Grid>
+                    <Grid Grid.Row="9">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="7*"/>
                             <ColumnDefinition Width="3*"/>

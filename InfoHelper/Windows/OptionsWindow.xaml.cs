@@ -51,7 +51,7 @@ namespace InfoHelper.Windows
 
             _viewModel.ClientMouseCursorTemplates = cursorFiles;
 
-            string optionsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedData\\Settings.xml");
+            string optionsPath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Settings\\Settings.xml");
 
             if (File.Exists(optionsPath))
             {
@@ -118,6 +118,12 @@ namespace InfoHelper.Windows
                                     string selectedCursor = node.Attributes["Value"].Value;
 
                                     _viewModel.SelectedClientMouseCursorTemplate = cursorFiles.FirstOrDefault(cf => cf == selectedCursor);
+
+                                    break;
+
+                                case "CursorSearchThreads":
+
+                                    _viewModel.CursorSearchThreads = node.Attributes["Value"].Value;
 
                                     break;
 
@@ -278,7 +284,7 @@ namespace InfoHelper.Windows
 
         private void SaveData()
         {
-            FileStream fileStream = new FileStream(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedData\\Settings.xml"), FileMode.Create); ;
+            FileStream fileStream = new FileStream(System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Settings\\Settings.xml"), FileMode.Create); ;
 
             XmlWriter xmlWriter = XmlWriter.Create(fileStream);
 
@@ -342,6 +348,10 @@ namespace InfoHelper.Windows
 
             xmlWriter.WriteStartElement("MouseCursor");
             xmlWriter.WriteAttributeString("Value", _viewModel.SelectedClientMouseCursorTemplate);
+            xmlWriter.WriteEndElement();
+
+            xmlWriter.WriteStartElement("CursorSearchThreads");
+            xmlWriter.WriteAttributeString("Value", _viewModel.CursorSearchThreads);
             xmlWriter.WriteEndElement();
 
             xmlWriter.WriteStartElement("TurnSolverDuration");
@@ -568,6 +578,8 @@ namespace InfoHelper.Windows
             public string WindowExpireTimeout { get; set; }
 
             public string[] ClientMouseCursorTemplates { get; set; }
+
+            public string CursorSearchThreads { get; set; }
 
             public string SelectedClientMouseCursorTemplate { get; set; }
 

@@ -86,7 +86,7 @@
     <None Update="Resources\StatsCsvFiles\cell_sets.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\DeferredLoadedData\Settings.xml">
+    <None Update="Resources\Settings\Settings.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
@@ -96,7 +96,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="XCOPY &quot;$(ProjectDir)Resources\DeferredLoadedData&quot; &quot;$(TargetDir)Resources&quot; /S /Y /D" />
+    <Exec Command="XCOPY &quot;$(ProjectDir)Resources\DeferredLoadedData&quot; &quot;$(TargetDir)Resources\&quot; /S /Y /D /I" />
   </Target>
 
 </Project>

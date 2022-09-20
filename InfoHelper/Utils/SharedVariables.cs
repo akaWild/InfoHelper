@@ -23,6 +23,7 @@ namespace InfoHelper.Utils
         public static int ScreenshotSaveInterval { get; set; }
         public static TimeSpan WindowExpireTimeout { get; set; }
         public static BitmapDecorator MouseCursor { get; set; }
+        public static int CursorSearchThreads { get; set; }
         public static string ServerName { get; set; }
         public static string DbName { get; set; }
         public static bool IsLocalServer { get; set; }

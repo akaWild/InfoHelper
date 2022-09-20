@@ -24,7 +24,7 @@ namespace InfoHelper.DataProcessor
         {
             Error = null;
 
-            string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\DeferredLoadedData\\Settings.xml");
+            string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Settings\\Settings.xml");
 
             string saveFolder = string.Empty;
 
@@ -41,6 +41,8 @@ namespace InfoHelper.DataProcessor
             string windowExpireTimeoutStr = string.Empty;
 
             string mouseCursorStr = string.Empty;
+
+            string cursorSearchThreadsStr = string.Empty;
 
             string windowsBackColorStr = string.Empty;
 
@@ -152,6 +154,12 @@ namespace InfoHelper.DataProcessor
                             case "MouseCursor":
 
                                 mouseCursorStr = node.Attributes["Value"].Value;
+
+                                break;
+
+                            case "CursorSearchThreads":
+
+                                cursorSearchThreadsStr = node.Attributes["Value"].Value;
 
                                 break;
 
@@ -463,6 +471,28 @@ namespace InfoHelper.DataProcessor
             catch
             {
                 Error = "Unable create cursor image from file";
+
+                return false;
+            }
+
+            //Cursor search threads
+            if (string.IsNullOrEmpty(cursorSearchThreadsStr))
+            {
+                Error = "Cursor search threads value is not specified";
+
+                return false;
+            }
+
+            if (!int.TryParse(cursorSearchThreadsStr, out int cursorSearchThreads))
+            {
+                Error = "Cursor search threads value has incorrect format";
+
+                return false;
+            }
+
+            if (cursorSearchThreads != -1 && (cursorSearchThreads < 1 || cursorSearchThreads > Environment.ProcessorCount))
+            {
+                Error = $"Cursor search threads value should be between 1 and {Environment.ProcessorCount} or -1 as default";
 
                 return false;
             }
@@ -844,6 +874,7 @@ namespace InfoHelper.DataProcessor
             Shared.ScreenshotSaveInterval = screenshotSaveInterval;
             Shared.WindowExpireTimeout = windowInfoExpireTimeout;
             Shared.MouseCursor = cursorImage;
+            Shared.CursorSearchThreads = cursorSearchThreads;
             Application.Current.Resources["CurrentFormBackColor"] = windowBackground;
             Shared.ServerName = serverName;
             Shared.DbName = dbName;
