@@ -4,7 +4,7 @@
     <GgTableInfo TableType="Default">
       <GgTemplates>
         <!--Board card V1-->
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="1">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -68,7 +68,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="2">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -132,7 +132,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="3">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -196,7 +196,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="4">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -260,7 +260,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="5">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -325,8 +325,330 @@
           </GgRecords>
         </GgTemplateInfo>
 
+        <!--Board card V2-->
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="257, 259, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_bc_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_bc_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_bc_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_bc_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_bc_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_bc_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_bc_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_bc_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_bc_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_bc_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_bc_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_bc_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_bc_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_bc_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_bc_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_bc_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_bc_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_bc_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_bc_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_bc_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_bc_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_bc_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_bc_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_bc_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_bc_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_bc_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_bc_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_bc_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_bc_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_bc_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_bc_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_bc_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_bc_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_bc_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_bc_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_bc_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_bc_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_bc_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_bc_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_bc_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_bc_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_bc_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_bc_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_bc_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_bc_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_bc_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_bc_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_bc_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_bc_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_bc_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_bc_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_bc_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="329, 259, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_bc_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_bc_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_bc_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_bc_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_bc_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_bc_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_bc_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_bc_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_bc_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_bc_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_bc_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_bc_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_bc_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_bc_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_bc_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_bc_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_bc_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_bc_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_bc_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_bc_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_bc_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_bc_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_bc_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_bc_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_bc_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_bc_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_bc_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_bc_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_bc_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_bc_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_bc_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_bc_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_bc_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_bc_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_bc_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_bc_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_bc_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_bc_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_bc_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_bc_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_bc_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_bc_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_bc_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_bc_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_bc_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_bc_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_bc_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_bc_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_bc_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_bc_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_bc_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_bc_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="401, 259, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_bc_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_bc_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_bc_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_bc_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_bc_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_bc_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_bc_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_bc_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_bc_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_bc_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_bc_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_bc_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_bc_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_bc_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_bc_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_bc_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_bc_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_bc_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_bc_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_bc_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_bc_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_bc_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_bc_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_bc_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_bc_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_bc_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_bc_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_bc_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_bc_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_bc_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_bc_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_bc_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_bc_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_bc_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_bc_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_bc_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_bc_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_bc_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_bc_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_bc_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_bc_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_bc_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_bc_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_bc_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_bc_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_bc_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_bc_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_bc_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_bc_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_bc_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_bc_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_bc_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="473, 259, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_bc_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_bc_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_bc_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_bc_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_bc_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_bc_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_bc_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_bc_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_bc_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_bc_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_bc_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_bc_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_bc_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_bc_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_bc_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_bc_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_bc_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_bc_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_bc_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_bc_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_bc_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_bc_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_bc_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_bc_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_bc_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_bc_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_bc_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_bc_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_bc_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_bc_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_bc_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_bc_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_bc_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_bc_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_bc_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_bc_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_bc_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_bc_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_bc_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_bc_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_bc_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_bc_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_bc_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_bc_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_bc_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_bc_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_bc_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_bc_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_bc_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_bc_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_bc_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_bc_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="545, 259, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_bc_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_bc_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_bc_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_bc_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_bc_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_bc_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_bc_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_bc_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_bc_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_bc_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_bc_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_bc_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_bc_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_bc_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_bc_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_bc_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_bc_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_bc_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_bc_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_bc_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_bc_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_bc_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_bc_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_bc_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_bc_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_bc_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_bc_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_bc_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_bc_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_bc_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_bc_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_bc_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_bc_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_bc_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_bc_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_bc_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_bc_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_bc_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_bc_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_bc_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_bc_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_bc_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_bc_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_bc_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_bc_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_bc_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_bc_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_bc_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_bc_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_bc_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_bc_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_bc_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+
         <!--Hole card V1-->
-        <GgTemplateInfo TemplateName="HoleCard1V1" TemplatesFolder="Templates\Default\HoleCard" Position="4">
+        <GgTemplateInfo TemplateName="HoleCard1V1" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -390,7 +712,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCard2V1" TemplatesFolder="Templates\Default\HoleCard" Position="4">
+        <GgTemplateInfo TemplateName="HoleCard2V1" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -455,8 +777,138 @@
           </GgRecords>
         </GgTemplateInfo>
 
+        <!--Hole card V2-->
+        <GgTemplateInfo TemplateName="HoleCard1V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="375, 463, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_hc1_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_hc1_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_hc1_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_hc1_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_hc1_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_hc1_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_hc1_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_hc1_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_hc1_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_hc1_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_hc1_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_hc1_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_hc1_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_hc1_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_hc1_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_hc1_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_hc1_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_hc1_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_hc1_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_hc1_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_hc1_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_hc1_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_hc1_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_hc1_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_hc1_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_hc1_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_hc1_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_hc1_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_hc1_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_hc1_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_hc1_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_hc1_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_hc1_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_hc1_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_hc1_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_hc1_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_hc1_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_hc1_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_hc1_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_hc1_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_hc1_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_hc1_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_hc1_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_hc1_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_hc1_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_hc1_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_hc1_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_hc1_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_hc1_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_hc1_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_hc1_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_hc1_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCard2V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="423, 458, 10, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2c_v2_hc2_dflt" Value="2c" />
+                    <GgRecordItemValueInfo ItemImageName="2s_v2_hc2_dflt" Value="2s" />
+                    <GgRecordItemValueInfo ItemImageName="2d_v2_hc2_dflt" Value="2d" />
+                    <GgRecordItemValueInfo ItemImageName="2h_v2_hc2_dflt" Value="2h" />
+                    <GgRecordItemValueInfo ItemImageName="3c_v2_hc2_dflt" Value="3c" />
+                    <GgRecordItemValueInfo ItemImageName="3s_v2_hc2_dflt" Value="3s" />
+                    <GgRecordItemValueInfo ItemImageName="3d_v2_hc2_dflt" Value="3d" />
+                    <GgRecordItemValueInfo ItemImageName="3h_v2_hc2_dflt" Value="3h" />
+                    <GgRecordItemValueInfo ItemImageName="4c_v2_hc2_dflt" Value="4c" />
+                    <GgRecordItemValueInfo ItemImageName="4s_v2_hc2_dflt" Value="4s" />
+                    <GgRecordItemValueInfo ItemImageName="4d_v2_hc2_dflt" Value="4d" />
+                    <GgRecordItemValueInfo ItemImageName="4h_v2_hc2_dflt" Value="4h" />
+                    <GgRecordItemValueInfo ItemImageName="5c_v2_hc2_dflt" Value="5c" />
+                    <GgRecordItemValueInfo ItemImageName="5s_v2_hc2_dflt" Value="5s" />
+                    <GgRecordItemValueInfo ItemImageName="5d_v2_hc2_dflt" Value="5d" />
+                    <GgRecordItemValueInfo ItemImageName="5h_v2_hc2_dflt" Value="5h" />
+                    <GgRecordItemValueInfo ItemImageName="6c_v2_hc2_dflt" Value="6c" />
+                    <GgRecordItemValueInfo ItemImageName="6s_v2_hc2_dflt" Value="6s" />
+                    <GgRecordItemValueInfo ItemImageName="6d_v2_hc2_dflt" Value="6d" />
+                    <GgRecordItemValueInfo ItemImageName="6h_v2_hc2_dflt" Value="6h" />
+                    <GgRecordItemValueInfo ItemImageName="7c_v2_hc2_dflt" Value="7c" />
+                    <GgRecordItemValueInfo ItemImageName="7s_v2_hc2_dflt" Value="7s" />
+                    <GgRecordItemValueInfo ItemImageName="7d_v2_hc2_dflt" Value="7d" />
+                    <GgRecordItemValueInfo ItemImageName="7h_v2_hc2_dflt" Value="7h" />
+                    <GgRecordItemValueInfo ItemImageName="8c_v2_hc2_dflt" Value="8c" />
+                    <GgRecordItemValueInfo ItemImageName="8s_v2_hc2_dflt" Value="8s" />
+                    <GgRecordItemValueInfo ItemImageName="8d_v2_hc2_dflt" Value="8d" />
+                    <GgRecordItemValueInfo ItemImageName="8h_v2_hc2_dflt" Value="8h" />
+                    <GgRecordItemValueInfo ItemImageName="9c_v2_hc2_dflt" Value="9c" />
+                    <GgRecordItemValueInfo ItemImageName="9s_v2_hc2_dflt" Value="9s" />
+                    <GgRecordItemValueInfo ItemImageName="9d_v2_hc2_dflt" Value="9d" />
+                    <GgRecordItemValueInfo ItemImageName="9h_v2_hc2_dflt" Value="9h" />
+                    <GgRecordItemValueInfo ItemImageName="Tc_v2_hc2_dflt" Value="Tc" />
+                    <GgRecordItemValueInfo ItemImageName="Ts_v2_hc2_dflt" Value="Ts" />
+                    <GgRecordItemValueInfo ItemImageName="Td_v2_hc2_dflt" Value="Td" />
+                    <GgRecordItemValueInfo ItemImageName="Th_v2_hc2_dflt" Value="Th" />
+                    <GgRecordItemValueInfo ItemImageName="Jc_v2_hc2_dflt" Value="Jc" />
+                    <GgRecordItemValueInfo ItemImageName="Js_v2_hc2_dflt" Value="Js" />
+                    <GgRecordItemValueInfo ItemImageName="Jd_v2_hc2_dflt" Value="Jd" />
+                    <GgRecordItemValueInfo ItemImageName="Jh_v2_hc2_dflt" Value="Jh" />
+                    <GgRecordItemValueInfo ItemImageName="Qc_v2_hc2_dflt" Value="Qc" />
+                    <GgRecordItemValueInfo ItemImageName="Qs_v2_hc2_dflt" Value="Qs" />
+                    <GgRecordItemValueInfo ItemImageName="Qd_v2_hc2_dflt" Value="Qd" />
+                    <GgRecordItemValueInfo ItemImageName="Qh_v2_hc2_dflt" Value="Qh" />
+                    <GgRecordItemValueInfo ItemImageName="Kc_v2_hc2_dflt" Value="Kc" />
+                    <GgRecordItemValueInfo ItemImageName="Ks_v2_hc2_dflt" Value="Ks" />
+                    <GgRecordItemValueInfo ItemImageName="Kd_v2_hc2_dflt" Value="Kd" />
+                    <GgRecordItemValueInfo ItemImageName="Kh_v2_hc2_dflt" Value="Kh" />
+                    <GgRecordItemValueInfo ItemImageName="Ac_v2_hc2_dflt" Value="Ac" />
+                    <GgRecordItemValueInfo ItemImageName="As_v2_hc2_dflt" Value="As" />
+                    <GgRecordItemValueInfo ItemImageName="Ad_v2_hc2_dflt" Value="Ad" />
+                    <GgRecordItemValueInfo ItemImageName="Ah_v2_hc2_dflt" Value="Ah" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+
         <!--Dealer-->
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="1">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="1" Deviation="20">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -469,7 +921,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="2">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="2" Deviation="20">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -482,7 +934,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="3">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="3" Deviation="20">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -495,7 +947,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="4">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="4" Deviation="20">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -508,7 +960,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="5">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="5" Deviation="20">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -521,7 +973,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="6">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="6" Deviation="20">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -536,7 +988,7 @@
         </GgTemplateInfo>
 
         <!--Hole card validity V1-->
-        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1">
+        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -549,7 +1001,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2">
+        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -562,7 +1014,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3">
+        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -575,7 +1027,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4">
+        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -588,7 +1040,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5">
+        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -601,7 +1053,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6">
+        <GgTemplateInfo TemplateName="HoleCardValidity1V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -614,7 +1066,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1">
+        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -627,7 +1079,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2">
+        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -640,7 +1092,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3">
+        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -653,7 +1105,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4">
+        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -666,7 +1118,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5">
+        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -679,7 +1131,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6">
+        <GgTemplateInfo TemplateName="HoleCardValidity2V1" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -693,8 +1145,482 @@
           </GgRecords>
         </GgTemplateInfo>
 
+        <!--Hole card validity V2-->
+        <GgTemplateInfo TemplateName="HoleCardValidity1V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="376, 72, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_v2_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="681, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_v2_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="708, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_v2_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="371, 477, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_v2_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="44, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_v2_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="70, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_v2_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="470, 72, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_v2_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="775, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_v2_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="802, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_v2_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="474, 477, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_v2_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="138, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_v2_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V2" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="164, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_v2_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+
+        <!--Hole card validity V3-->
+        <GgTemplateInfo TemplateName="HoleCardValidity1V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="376, 72, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_v3_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="681, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_v3_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="708, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_v3_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="371, 477, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_v3_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="44, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_v3_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="70, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_v3_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="470, 72, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_v3_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="775, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_v3_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="802, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_v3_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="474, 477, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_v3_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="138, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_v3_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V3" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="164, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_v3_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+
+        <!--Hole card validity V4-->
+        <GgTemplateInfo TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="376, 72, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_v4_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="681, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_v4_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="708, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_v4_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="371, 477, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_v4_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="44, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_v4_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="70, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_v4_hcval1_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="1" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="470, 72, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_v4_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="2" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="775, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="2_v4_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="3" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="802, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="3_v4_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="4" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="474, 477, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="4_v4_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="5" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="138, 379, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="5_v4_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+        <GgTemplateInfo TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Default\HoleCardValidity" Position="6" Deviation="0">
+          <GgRecords>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="164, 132, 3, 3">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="6_v4_hcval2_dflt" Value="Ok" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+          </GgRecords>
+        </GgTemplateInfo>
+
         <!--Nick validity-->
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="1">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -707,7 +1633,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="2">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -720,7 +1646,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="3">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -733,7 +1659,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="4">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -746,7 +1672,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="5">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -759,7 +1685,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="6">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -774,7 +1700,7 @@
         </GgTemplateInfo>
 
         <!--Stack validity (top)-->
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="1">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -787,7 +1713,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="2">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -800,7 +1726,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="3">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -813,7 +1739,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -826,7 +1752,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="5">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -839,7 +1765,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="6">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -854,7 +1780,7 @@
         </GgTemplateInfo>
 
         <!--Stack validity (bottom)-->
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="1">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -867,7 +1793,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="2">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -880,7 +1806,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="3">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -893,7 +1819,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -906,7 +1832,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="5">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -919,7 +1845,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="6">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -934,7 +1860,7 @@
         </GgTemplateInfo>
 
         <!--Button-->
-        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="1">
+        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -947,7 +1873,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="2">
+        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -960,7 +1886,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="3">
+        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -973,7 +1899,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="4">
+        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -986,7 +1912,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="5">
+        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -999,7 +1925,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="6">
+        <GgTemplateInfo TemplateName="Button" TemplatesFolder="Templates\Default\Button" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>

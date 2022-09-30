@@ -3,7 +3,7 @@
   <GgTables>
     <GgTableInfo TableType="Default">
       <GgTemplates>
-        <GgTemplateInfo TemplateName="Pot" TemplatesFolder="Templates\Default\Pot" Position="0">
+        <GgTemplateInfo TemplateName="Pot" TemplatesFolder="Templates\Default\Pot" Position="0" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -284,7 +284,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="RoundPot" TemplatesFolder="Templates\Default\RoundPot" Position="0">
+        <GgTemplateInfo TemplateName="RoundPot" TemplatesFolder="Templates\Default\RoundPot" Position="0" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -565,7 +565,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="1">
+        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -798,7 +798,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="1">
+        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1031,7 +1031,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="1">
+        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="1" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1200,7 +1200,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="2">
+        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1212,7 +1212,26 @@
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="729, 208, 17, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_nd_2_1_2_st_in_dflt" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="716, 208, 8, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_nd_2_2_2_st_in_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_nd_2_2_2_st_in_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_nd_2_2_2_st_in_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_nd_2_2_2_st_in_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_nd_2_2_2_st_in_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_nd_2_2_2_st_in_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_nd_2_2_2_st_in_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_nd_2_2_2_st_in_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_nd_2_2_2_st_in_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1304,7 +1323,45 @@
               <GgRecordItems />
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="736, 208, 17, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_d_4_1_2_st_in_dflt" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="723, 208, 8, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_d_4_2_2_st_in_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_4_2_2_st_in_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_4_2_2_st_in_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_4_2_2_st_in_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_4_2_2_st_in_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_4_2_2_st_in_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_4_2_2_st_in_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_4_2_2_st_in_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_4_2_2_st_in_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="718, 208, 4, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="._d_4_3_2_st_in_dflt" Value="." />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="709, 208, 8, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="0_d_4_4_2_st_in_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageName="1_d_4_4_2_st_in_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_4_4_2_st_in_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_4_4_2_st_in_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_4_4_2_st_in_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_4_4_2_st_in_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_4_4_2_st_in_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_4_4_2_st_in_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_4_4_2_st_in_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_4_4_2_st_in_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1433,7 +1490,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="2">
+        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1445,7 +1502,26 @@
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="729, 208, 17, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_nd_2_1_2_st_out_dflt" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="716, 208, 8, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_nd_2_2_2_st_out_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_nd_2_2_2_st_out_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_nd_2_2_2_st_out_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_nd_2_2_2_st_out_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_nd_2_2_2_st_out_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_nd_2_2_2_st_out_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_nd_2_2_2_st_out_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_nd_2_2_2_st_out_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_nd_2_2_2_st_out_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1537,7 +1613,45 @@
               <GgRecordItems />
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="736, 208, 17, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_d_4_1_2_st_out_dflt" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="723, 208, 8, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_d_4_2_2_st_out_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_4_2_2_st_out_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_4_2_2_st_out_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_4_2_2_st_out_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_4_2_2_st_out_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_4_2_2_st_out_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_4_2_2_st_out_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_4_2_2_st_out_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_4_2_2_st_out_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="718, 208, 4, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="._d_4_3_2_st_out_dflt" Value="." />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="709, 208, 8, 13">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="0_d_4_4_2_st_out_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageName="1_d_4_4_2_st_out_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_4_4_2_st_out_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_4_4_2_st_out_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_4_4_2_st_out_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_4_4_2_st_out_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_4_4_2_st_out_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_4_4_2_st_out_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_4_4_2_st_out_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_4_4_2_st_out_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1666,7 +1780,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="2">
+        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="2" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1828,14 +1942,79 @@
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="636, 238, 15, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_d_6_1_2_bet_dflt" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="625, 238, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_2_2_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_2_2_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_2_2_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_2_2_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_2_2_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_2_2_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_2_2_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_2_2_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_2_2_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="622, 238, 2, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="._d_6_3_2_bet_dflt" Value="." />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="614, 238, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="0_d_6_4_2_bet_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_4_2_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_4_2_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_4_2_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_4_2_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_4_2_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_4_2_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_4_2_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_4_2_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_4_2_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="606, 238, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="0_d_6_5_2_bet_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_5_2_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_5_2_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_5_2_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_5_2_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_5_2_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_5_2_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_5_2_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_5_2_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_5_2_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="598, 238, 7, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_d_6_6_2_bet_dflt" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_d_6_6_2_bet_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_d_6_6_2_bet_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_d_6_6_2_bet_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_d_6_6_2_bet_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_d_6_6_2_bet_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_d_6_6_2_bet_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_d_6_6_2_bet_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_d_6_6_2_bet_dflt" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems />
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="3">
+        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2125,7 +2304,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="3">
+        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2415,7 +2594,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="3">
+        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="3" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2649,7 +2828,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="4">
+        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2939,7 +3118,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="4">
+        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -3229,7 +3408,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="4">
+        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="4" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -3463,7 +3642,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="5">
+        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -3696,7 +3875,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="5">
+        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -3929,7 +4108,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="5">
+        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="5" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -4098,7 +4277,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="6">
+        <GgTemplateInfo TemplateName="Stack_In" TemplatesFolder="Templates\Default\Stack\In" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -4388,7 +4567,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="6">
+        <GgTemplateInfo TemplateName="Stack_Out" TemplatesFolder="Templates\Default\Stack\Out" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -4678,7 +4857,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="6">
+        <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="6" Deviation="0">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>

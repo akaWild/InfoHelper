@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -20,11 +21,9 @@ namespace InfoHelper.DataProcessor
 
         public GtoManager()
         {
-            BinaryFormatter formatter = new BinaryFormatter();
+            byte[] dataBytes = File.ReadAllBytes("Resources\\gtoPreflop.bin");
 
-            using FileStream gtosbvsbb = File.Open("Resources\\gtoPreflop.bin", FileMode.Open);
-
-            _dictGtoPreflop = (Dictionary<KeyGto, GtoStrategyContainer>)formatter.Deserialize(gtosbvsbb);
+            _dictGtoPreflop = GtoFormatter.Deserialize(dataBytes);
         }
 
         public void GetPreflopGtoStrategy(GameContext gc)
@@ -58,7 +57,28 @@ namespace InfoHelper.DataProcessor
 
             int?[] playerRelativePositions = new int?[6];
 
-            int nextToAct = gc.BigBlindPosition + 1;
+            int playersOutOfGameBehindHero = 0;
+
+            int nextToAct = gc.HeroPosition;
+
+            if (nextToAct == 7)
+                nextToAct = 1;
+
+            while (true)
+            {
+                if (nextToAct == gc.BigBlindPosition)
+                    break;
+
+                if (gc.IsPlayerIn[nextToAct - 1] == null)
+                    playersOutOfGameBehindHero++;
+
+                nextToAct++;
+
+                if (nextToAct == 7)
+                    nextToAct = 1;
+            }
+
+            nextToAct = gc.BigBlindPosition + 1;
 
             if (nextToAct == 7)
                 nextToAct = 1;
@@ -67,9 +87,19 @@ namespace InfoHelper.DataProcessor
 
             while (true)
             {
-                playerRelativePositions[nextToAct - 1] = relPositionCounter;
+                if (gc.IsPlayerIn[nextToAct - 1] != null)
+                {
+                    if (nextToAct == gc.SmallBlindPosition)
+                        playerRelativePositions[nextToAct - 1] = 4;
+                    else if (nextToAct == gc.BigBlindPosition)
+                        playerRelativePositions[nextToAct - 1] = 5;
+                    else if (nextToAct == gc.ButtonPosition)
+                        playerRelativePositions[nextToAct - 1] = 3;
+                    else
+                        playerRelativePositions[nextToAct - 1] = relPositionCounter + playersOutOfGameBehindHero;
+                }
 
-                if(nextToAct == gc.BigBlindPosition)
+                if (nextToAct == gc.BigBlindPosition)
                     break;
 
                 nextToAct++;
@@ -96,7 +126,29 @@ namespace InfoHelper.DataProcessor
                 if (at.Key.Actions.Length != 0)
                 {
                     if (actions.Length == 0)
-                        okActionType = false;
+                    {
+                        if (at.Key.Actions.All(a => a.Action == GtoAction.Fold))
+                        {
+                            if (at.Key.Actions.Length== playerRelativePositions.Count(p => p == null))
+                            {
+                                foreach (GtoActionInfo actionInfo in at.Key.Actions)
+                                {
+                                    int gtoPlayerPosition = Array.IndexOf(playerRelativePositions, actionInfo.Player);
+
+                                    if (gtoPlayerPosition == -1) 
+                                        continue;
+
+                                    okActionType = false;
+
+                                    break;
+                                }
+                            }
+                            else
+                                okActionType = false;
+                        }
+                        else
+                            okActionType = false;
+                    }
                     else
                     {
                         for (int i = 0; i < at.Key.Actions.Length; i++)
@@ -107,7 +159,11 @@ namespace InfoHelper.DataProcessor
 
                             if (gtoActionType == BettingActionType.Fold)
                             {
-                                if (gc.IsPlayerIn[gtoPlayerPosition] == null)
+                                if (gtoPlayerPosition == -1)
+                                {
+                                    //OK
+                                }
+                                else if (gc.IsPlayerIn[gtoPlayerPosition] == null)
                                 {
                                     //OK
                                 }
@@ -125,12 +181,12 @@ namespace InfoHelper.DataProcessor
                             }
                             else if (gtoActionType == BettingActionType.Call)
                             {
-                                if (actionsCounter < actions.Length && actions[actionsCounter].ActionType == BettingActionType.Call && gtoPlayerPosition == actions[actionsCounter].Player - 1)
+                                if (actionsCounter < actions.Length && actions[actionsCounter].ActionType == BettingActionType.Call && gtoPlayerPosition != -1 && gtoPlayerPosition == actions[actionsCounter].Player - 1)
                                 {
                                     //OK
                                     actionsCounter++;
                                 }
-                                else if (gc.IsPlayerAllIn[gtoPlayerPosition])
+                                else if (gtoPlayerPosition != -1 && gc.IsPlayerAllIn[gtoPlayerPosition])
                                 {
                                     //OK
                                 }
@@ -143,7 +199,7 @@ namespace InfoHelper.DataProcessor
                             }
                             else
                             {
-                                if (actionsCounter >= actions.Length || gtoActionType != actions[actionsCounter].ActionType || gtoPlayerPosition != actions[actionsCounter].Player - 1)
+                                if (actionsCounter >= actions.Length || gtoActionType != actions[actionsCounter].ActionType || gtoPlayerPosition == -1 || gtoPlayerPosition != actions[actionsCounter].Player - 1)
                                 {
                                     okActionType = false;
 
@@ -363,29 +419,6 @@ namespace InfoHelper.DataProcessor
                     title += " (Unopened)";
                 else
                 {
-                    float[] gtoPlayerBets = new float[6];
-
-                    gtoPlayerBets[gc.SmallBlindPosition - 1] = 0.5f;
-                    gtoPlayerBets[gc.BigBlindPosition - 1] = 1;
-
-                    foreach (GtoActionInfo gtoAction in gtoActions)
-                    {
-                        int playerIndex = Array.IndexOf(playerRelativePositions, gtoAction.Player);
-
-                        if (gtoAction.Amount > gtoPlayerBets[playerIndex])
-                            gtoPlayerBets[playerIndex] = gtoAction.Amount;
-                    }
-
-                    float gtoPot = gtoPlayerBets.Sum();
-                    float gtoAmtToCall = gtoPlayerBets.Max() - gtoPlayerBets[3];
-
-                    float gtoPotOdds = gtoAmtToCall / (gtoPot + gtoAmtToCall);
-
-                    float potOdds = (float)(gc.AmountToCall / (gc.TotalPot + gc.AmountToCall));
-
-                    amountDiff = gtoPotOdds - potOdds;
-                    amountDiffPercent = amountDiff * 100 / potOdds;
-
                     title += " (";
 
                     string ConvertAction(GtoActionInfo action, bool hero)
@@ -416,6 +449,29 @@ namespace InfoHelper.DataProcessor
                         title += i == gtoActions.Length - 1 ? ")" : " - ";
                     }
                 }
+
+                float[] gtoPlayerBets = new float[6];
+
+                gtoPlayerBets[gc.SmallBlindPosition - 1] = 0.5f;
+                gtoPlayerBets[gc.BigBlindPosition - 1] = 1;
+
+                foreach (GtoActionInfo gtoAction in gtoActions)
+                {
+                    int playerIndex = Array.IndexOf(playerRelativePositions, gtoAction.Player);
+
+                    if (playerIndex != -1 && gtoAction.Amount > gtoPlayerBets[playerIndex])
+                        gtoPlayerBets[playerIndex] = gtoAction.Amount;
+                }
+
+                float gtoPot = gtoPlayerBets.Sum();
+                float gtoAmtToCall = gtoPlayerBets.Max() - gtoPlayerBets[3];
+
+                float gtoPotOdds = gtoAmtToCall / (gtoPot + gtoAmtToCall);
+
+                float potOdds = (float)(gc.AmountToCall / (gc.TotalPot + gc.AmountToCall));
+
+                amountDiff = gtoPotOdds - potOdds;
+                amountDiffPercent = amountDiff * 100 / potOdds;
 
                 gtoStrategyContainer = lastKeyValue.Value;
             }

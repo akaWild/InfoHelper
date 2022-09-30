@@ -279,7 +279,6 @@ namespace InfoHelper.Windows
                     }
                 }
             }
-
         }
 
         private void SaveData()

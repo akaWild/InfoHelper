@@ -25,10 +25,12 @@
     <None Remove="Resources\cardBack3.png" />
     <None Remove="Resources\deck1.png" />
     <None Remove="Resources\deck2.png" />
+    <None Remove="Resources\Images\cardBack4.png" />
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
+    <PackageReference Include="K4os.Compression.LZ4" Version="1.2.16" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.17" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.17" />
     <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
@@ -40,6 +42,9 @@
     </Reference>
     <Reference Include="GameInformationUtility">
       <HintPath>..\..\..\GameInformationUtility\GameInformationUtility\bin\Release\net5.0\GameInformationUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="GtoDbUtility">
+      <HintPath>..\..\..\GtoDbUtility\GtoDbUtility\bin\Release\net5.0\GtoDbUtility.dll</HintPath>
     </Reference>
     <Reference Include="GtoUtility">
       <HintPath>..\..\..\GtoUtility\GtoUtility\bin\Release\net5.0\GtoUtility.dll</HintPath>
@@ -69,6 +74,7 @@
     <Resource Include="Resources\Images\cardBack1.png" />
     <Resource Include="Resources\Images\cardBack2.png" />
     <Resource Include="Resources\Images\cardBack3.png" />
+    <Resource Include="Resources\Images\cardBack4.png" />
     <Resource Include="Resources\Images\deck1.png" />
     <Resource Include="Resources\Images\deck2.png" />
   </ItemGroup>
