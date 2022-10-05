@@ -64,6 +64,11 @@ namespace InfoHelper.Controls
         private SolidColorBrush[] _raiseBrushes;
         private SolidColorBrush[] _diffsBrushes;
 
+        private readonly SolidColorBrush _heartsBrush = Brushes.Red;
+        private readonly SolidColorBrush _diamondsBrush = Brushes.Blue;
+        private readonly SolidColorBrush _clubsBrush = Brushes.Green;
+        private readonly SolidColorBrush _spadesBrush = Brushes.Black;
+
         private readonly Typeface _typeFace = new Typeface("Times New Roman");
 
         private const double HeaderHeight = 0.07;
@@ -152,13 +157,17 @@ namespace InfoHelper.Controls
 
             VisualEdgeMode = EdgeMode.Aliased;
 
-            GtoRenderInfo renderInfo = null;
+            _borderPen ??= (Pen)Application.Current.TryFindResource("GtoBorderPen");
+            _selectedHandBorderPen ??= (Pen)Application.Current.TryFindResource("GtoSelectedHandBorderPen");
+            _headerForegroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoHeaderForegroundBrush");
+            _headerBackgroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoHeaderBackgroundBrush");
+            _foregroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoForegroundBrush");
+            _foldBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoFoldBrush");
+            _checkOrCallBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoCheckCallBrush");
+            _raiseBrushes = (SolidColorBrush[])Application.Current.TryFindResource("GtoRaiseBrushes");
+            _diffsBrushes = (SolidColorBrush[])Application.Current.TryFindResource("GtoDiffBrushes");
 
-            if (Data is PreflopGtoInfo preflopGtoData)
-                renderInfo = GetRenderInfoPreflop(preflopGtoData);
-
-            if(renderInfo == null)
-                return;
+            GtoRenderInfo renderInfo = GetRenderInfo((GtoInfo)Data);
 
             foreach (object drawItem in renderInfo.DrawItems)
             {
@@ -171,18 +180,8 @@ namespace InfoHelper.Controls
             }
         }
 
-        private GtoRenderInfo GetRenderInfoPreflop(PreflopGtoInfo preflopGtoData)
+        private GtoRenderInfo GetRenderInfo(GtoInfo gtoData)
         {
-            _borderPen ??= (Pen)Application.Current.TryFindResource("GtoBorderPen");
-            _selectedHandBorderPen ??= (Pen)Application.Current.TryFindResource("GtoSelectedHandBorderPen");
-            _headerForegroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoHeaderForegroundBrush");
-            _headerBackgroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoHeaderBackgroundBrush");
-            _foregroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoForegroundBrush");
-            _foldBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoFoldBrush");
-            _checkOrCallBrush ??= (SolidColorBrush)Application.Current.TryFindResource("GtoCheckCallBrush");
-            _raiseBrushes = (SolidColorBrush[])Application.Current.TryFindResource("GtoRaiseBrushes");
-            _diffsBrushes = (SolidColorBrush[])Application.Current.TryFindResource("GtoDiffBrushes");
-
             GtoRenderInfo renderInfo = new GtoRenderInfo();
 
             //Header
@@ -190,7 +189,7 @@ namespace InfoHelper.Controls
 
             renderInfo.Add(new DrawRect(new Rect(new Point(0, 0), new Size(RenderSize.Width, headerHeight)), _headerBackgroundBrush, null));
 
-            FormattedText headerText = new FormattedText(preflopGtoData.Title, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, headerHeight - 6, _headerForegroundBrush, 1);
+            FormattedText headerText = new FormattedText(gtoData.Title, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, headerHeight - 6, _headerForegroundBrush, 1);
 
             Point headerTextLocation = new Point(RenderSize.Width / 2 - headerText.Width / 2, headerHeight / 2 - headerText.Height / 2);
 
@@ -208,7 +207,7 @@ namespace InfoHelper.Controls
 
             if (_normalizeSquares)
             {
-                float maxAbsValue = preflopGtoData.GtoStrategyContainer.Values.Max(v => v[0].Abs / 100);
+                float maxAbsValue = gtoData.GtoStrategyContainer.Values.Max(v => v[0].Abs / 100);
 
                 normCoeff = maxAbsValue == 0 ? normCoeff : 1 / maxAbsValue;
             }
@@ -234,14 +233,14 @@ namespace InfoHelper.Controls
 
                     Rect cellRect = new Rect(cellWidth * j, headerHeight + cellHeight * i, cellWidth, cellHeight);
 
-                    if (pocket == preflopGtoData.Pocket)
+                    if (pocket == gtoData.Pocket)
                         selectedHandRect = cellRect;
 
-                    if (preflopGtoData.GtoStrategyContainer[pocket][0].Abs > 0)
+                    if (gtoData.GtoStrategyContainer[pocket][0].Abs > 0)
                     {
-                        double fillHeight = cellHeight * (_squareSizeProportionalToWeight ? preflopGtoData.GtoStrategyContainer[pocket][0].Abs / 100 * normCoeff : 1);
+                        double fillHeight = cellHeight * (_squareSizeProportionalToWeight ? gtoData.GtoStrategyContainer[pocket][0].Abs / 100 * normCoeff : 1);
 
-                        strategies = preflopGtoData.GtoStrategyContainer[pocket];
+                        strategies = gtoData.GtoStrategyContainer[pocket];
 
                         stratXIndent = 0;
 
@@ -249,7 +248,7 @@ namespace InfoHelper.Controls
 
                         foreach (GtoStrategy strategy in strategies)
                         {
-                            if (strategy.ActionInfo.Action == GtoAction.Raise)
+                            if (strategy.ActionInfo.Action is GtoAction.Raise or GtoAction.Bet)
                                 raisesCounter++;
 
                             double stratWidth = cellWidth * strategy.Percent;
@@ -274,13 +273,13 @@ namespace InfoHelper.Controls
             double legendHeight = RenderSize.Height * LegendHeight / 2;
             double legendWidth = RenderSize.Width * 0.2;
 
-            strategies = preflopGtoData.GtoStrategyContainer[preflopGtoData.Pocket];
+            strategies = gtoData.PocketStrategies;
 
             raisesCounter = 0;
 
             for (int i = 0; i < strategies.Length; i++)
             {
-                if (strategies[i].ActionInfo.Action == GtoAction.Raise)
+                if (strategies[i].ActionInfo.Action is GtoAction.Raise or GtoAction.Bet)
                     raisesCounter++;
 
                 Rect legendRect = default;
@@ -305,12 +304,12 @@ namespace InfoHelper.Controls
                 string outputText = $"{ConvertAction(strategies[i].ActionInfo.Action)}";
 
                 if (strategies[i].ActionInfo.Amount > 0)
-                    outputText += $" {strategies[i].ActionInfo.Amount.ToString(CultureInfo.InvariantCulture)}";
+                    outputText += $"{Math.Round(strategies[i].ActionInfo.Amount, gtoData.Round == 1 ? 2 : 1).ToString(CultureInfo.InvariantCulture)}";
 
                 if(strategies[i].Abs > 0)
-                    outputText += $" ({Math.Round(strategies[i].Ev, 2).ToString(CultureInfo.InvariantCulture)})";
+                    outputText += $" ({Math.Round(strategies[i].Ev, gtoData.Round == 1 ? 2 : 1).ToString(CultureInfo.InvariantCulture)})";
 
-                FormattedText text = new FormattedText(outputText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHeight - 16, _foregroundBrush, 1);
+                FormattedText text = new FormattedText(outputText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHeight - 17, _foregroundBrush, 1);
 
                 Point textLocation = new Point(legendRect.X + xIndent, legendRect.Y + legendRect.Height / 2 - text.Height / 2);
 
@@ -323,7 +322,7 @@ namespace InfoHelper.Controls
 
             Rect legendHandRect = new Rect(RenderSize.Width - legendHandWidth, headerHeight + bodyHeight, legendHandWidth, legendHandHeight);
 
-            if (preflopGtoData.GtoStrategyContainer[preflopGtoData.Pocket][0].Abs > 0)
+            if (strategies[0].Abs > 0)
             {
                 stratXIndent = 0;
 
@@ -331,7 +330,7 @@ namespace InfoHelper.Controls
 
                 foreach (GtoStrategy strategy in strategies)
                 {
-                    if (strategy.ActionInfo.Action == GtoAction.Raise)
+                    if (strategy.ActionInfo.Action is GtoAction.Raise or GtoAction.Bet)
                         raisesCounter++;
 
                     double stratWidth = legendHandWidth * strategy.Percent;
@@ -344,11 +343,26 @@ namespace InfoHelper.Controls
                 }
             }
 
-            FormattedText legendHandText = new FormattedText(preflopGtoData.Pocket, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHandHeight - 22, _foregroundBrush, 1);
+            string renderHand = gtoData.Round == 1 ? gtoData.PocketRender : string.Join("", gtoData.PocketRender.Select(GetLetterSymbol).ToArray());
+
+            FormattedText legendHandText = new FormattedText(gtoData.PocketRender, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHandHeight - 22, _foregroundBrush, 1);
 
             Point legendHandTextLocation = new Point(legendHandRect.X + legendHandWidth / 2 - legendHandText.Width / 2, legendHandRect.Y + legendHandRect.Height / 2 - legendHandText.Height / 2);
 
-            renderInfo.Add(new DrawText(legendHandText, legendHandTextLocation));
+            double charXIndent = 0;
+
+            for (int i = 0; i < renderHand.Length; i++)
+            {
+                char nextChar = renderHand[i];
+
+                FormattedText charText = new FormattedText($"{nextChar}", CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHandHeight - 22, GetLetterBrush(nextChar), 1);
+
+                Point charLocation = new Point(legendHandTextLocation.X + charXIndent, legendHandTextLocation.Y);
+
+                charXIndent += charText.Width;
+
+                renderInfo.Add(new DrawText(charText, charLocation));
+            }
 
             //Diffs
             double diffsHeight = RenderSize.Height * DiffsHeight;
@@ -356,10 +370,10 @@ namespace InfoHelper.Controls
 
             Rect bbDiffRect = new Rect(0, headerHeight + bodyHeight + legendHandHeight, diffsWidth, diffsHeight);
 
-            renderInfo.Add(new DrawRect(bbDiffRect, GetDiffsBrush(preflopGtoData.GtoDiffs.BbDiffPercent), null));
+            renderInfo.Add(new DrawRect(bbDiffRect, GetDiffsBrush(gtoData.GtoDiffs.BbDiffPercent), null));
 
-            string bbDiffSign = preflopGtoData.GtoDiffs.BbDiff > 0 ? "+" : "";
-            string bbDiffText = $"ΔBB: {bbDiffSign}{Math.Round(preflopGtoData.GtoDiffs.BbDiff, 2).ToString(CultureInfo.InvariantCulture)} ({bbDiffSign}{Math.Round(preflopGtoData.GtoDiffs.BbDiffPercent, 2).ToString(CultureInfo.InvariantCulture)}%)";
+            string bbDiffSign = gtoData.GtoDiffs.BbDiff > 0 ? "+" : "";
+            string bbDiffText = $"ΔBB: {bbDiffSign}{Math.Round(gtoData.GtoDiffs.BbDiff, 2).ToString(CultureInfo.InvariantCulture)} ({bbDiffSign}{Math.Round(gtoData.GtoDiffs.BbDiffPercent, 2).ToString(CultureInfo.InvariantCulture)}%)";
 
             FormattedText bbDiffsText = new FormattedText(bbDiffText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, diffsHeight - 6, _foregroundBrush, 1);
 
@@ -369,10 +383,10 @@ namespace InfoHelper.Controls
 
             Rect amtDiffRect = new Rect(diffsWidth, headerHeight + bodyHeight + legendHandHeight, diffsWidth, diffsHeight);
 
-            renderInfo.Add(new DrawRect(amtDiffRect, GetDiffsBrush(preflopGtoData.GtoDiffs.AmountDiffPercent), null));
+            renderInfo.Add(new DrawRect(amtDiffRect, GetDiffsBrush(gtoData.GtoDiffs.AmountDiffPercent), null));
 
-            string amtDiffSign = preflopGtoData.GtoDiffs.AmountDiff > 0 ? "+" : "";
-            string amtDiffText = $"P/O: {amtDiffSign}{Math.Round(preflopGtoData.GtoDiffs.AmountDiff, 2).ToString(CultureInfo.InvariantCulture)} ({amtDiffSign}{Math.Round(preflopGtoData.GtoDiffs.AmountDiffPercent, 2).ToString(CultureInfo.InvariantCulture)}%)";
+            string amtDiffSign = gtoData.GtoDiffs.AmountDiff > 0 ? "+" : "";
+            string amtDiffText = $"P/O: {amtDiffSign}{Math.Round(gtoData.GtoDiffs.AmountDiff, 2).ToString(CultureInfo.InvariantCulture)} ({amtDiffSign}{Math.Round(gtoData.GtoDiffs.AmountDiffPercent, 2).ToString(CultureInfo.InvariantCulture)}%)";
 
             FormattedText amtDiffsText = new FormattedText(amtDiffText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, diffsHeight - 6, _foregroundBrush, 1);
 
@@ -409,6 +423,26 @@ namespace InfoHelper.Controls
             renderInfo.Add(new DrawLine(_borderPen, new Point(diffsWidth, headerHeight + bodyHeight + legendHandHeight), new Point(diffsWidth, headerHeight + bodyHeight + legendHandHeight + diffsHeight)));
 
             return renderInfo;
+
+            SolidColorBrush GetLetterBrush(char letter) =>
+                letter switch
+                {
+                    '♠' => _spadesBrush,
+                    '♣' => _clubsBrush,
+                    '♥' => _heartsBrush,
+                    '♦' => _diamondsBrush,
+                    _ => Brushes.Black
+                };
+
+            string GetLetterSymbol(char letter) =>
+                letter switch
+                {
+                    's' => "♠",
+                    'c' => "♣",
+                    'h' => "♥",
+                    'd' => "♦",
+                    _ => $"{letter}"
+                };
         }
 
         private SolidColorBrush GetActionBrush(GtoAction action, int raisesCounter)
@@ -420,6 +454,9 @@ namespace InfoHelper.Controls
                 (GtoAction.Raise, 1) => _raiseBrushes[0],
                 (GtoAction.Raise, 2) => _raiseBrushes[1],
                 (GtoAction.Raise, 3) => _raiseBrushes[2],
+                (GtoAction.Bet, 1) => _raiseBrushes[0],
+                (GtoAction.Bet, 2) => _raiseBrushes[1],
+                (GtoAction.Bet, 3) => _raiseBrushes[2],
                 _ => null
             };
         }
@@ -457,6 +494,7 @@ namespace InfoHelper.Controls
                 GtoAction.Fold => "F",
                 GtoAction.Check => "X",
                 GtoAction.Call => "C",
+                GtoAction.Bet => "B",
                 GtoAction.Raise => "R",
                 _ => null
             };

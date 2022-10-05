@@ -160,6 +160,12 @@ namespace InfoHelper.Windows
 
                                     break;
 
+                                case "GTODBName":
+
+                                    _viewModel.GtoDbName = node.Attributes["Value"].Value;
+
+                                    break;
+
                                 #endregion
 
                                 #region Solver
@@ -224,6 +230,12 @@ namespace InfoHelper.Windows
                                 case "MinLineFrequency":
 
                                     _viewModel.MinLineFrequency = node.Attributes["Value"].Value;
+
+                                    break;
+
+                                case "AllInThreshold":
+
+                                    _viewModel.AllInThreshold = node.Attributes["Value"].Value;
 
                                     break;
 
@@ -295,6 +307,10 @@ namespace InfoHelper.Windows
 
             xmlWriter.WriteStartElement("DBName");
             xmlWriter.WriteAttributeString("Value", _viewModel.DbName);
+            xmlWriter.WriteEndElement();
+
+            xmlWriter.WriteStartElement("GTODBName");
+            xmlWriter.WriteAttributeString("Value", _viewModel.GtoDbName);
             xmlWriter.WriteEndElement();
 
             xmlWriter.WriteStartElement("SaveFolder");
@@ -371,6 +387,10 @@ namespace InfoHelper.Windows
 
             xmlWriter.WriteStartElement("MinLineFrequency");
             xmlWriter.WriteAttributeString("Value", _viewModel.MinLineFrequency);
+            xmlWriter.WriteEndElement();
+
+            xmlWriter.WriteStartElement("AllInThreshold");
+            xmlWriter.WriteAttributeString("Value", _viewModel.AllInThreshold);
             xmlWriter.WriteEndElement();
 
             xmlWriter.WriteStartElement("FormBackColor");
@@ -598,6 +618,8 @@ namespace InfoHelper.Windows
 
             public string DbName { get; set; }
 
+            public string GtoDbName { get; set; }
+
             public bool IsLocalServer { get; set; } = true;
 
             public bool IsRemoteServer { get; set; }
@@ -639,6 +661,8 @@ namespace InfoHelper.Windows
             public string RiverSolverAccuracy { get; set; }
 
             public string MinLineFrequency { get; set; }
+
+            public string AllInThreshold { get; set; }
 
             public bool ScanTables { get; set; } = true;
 

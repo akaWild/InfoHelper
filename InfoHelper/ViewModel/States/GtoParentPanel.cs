@@ -30,9 +30,7 @@ namespace InfoHelper.ViewModel.States
             }
         }
 
-        public ViewModelPreflopGtoState PreflopGtoState { get; } = new ViewModelPreflopGtoState();
-
-        public ViewModelPostflopGtoState PostflopGtoState { get; } = new ViewModelPostflopGtoState();
+        public ViewModelGtoState GtoState { get; } = new ViewModelGtoState();
 
         public event PropertyChangedEventHandler PropertyChanged;
 

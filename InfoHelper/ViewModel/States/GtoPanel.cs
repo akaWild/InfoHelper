@@ -7,8 +7,8 @@ using InfoHelper.ViewModel.DataEntities;
 
 namespace InfoHelper.ViewModel.States
 {
-    public class ViewModelPreflopGtoState : ViewModelDeferredBindableState
+    public class ViewModelGtoState : ViewModelDeferredBindableState
     {
-        public PreflopGtoInfo PreflopGtoInfo { get; set; }
+        public GtoInfo GtoInfo { get; set; }
     }
 }

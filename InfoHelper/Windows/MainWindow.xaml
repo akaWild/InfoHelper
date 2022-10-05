@@ -85,7 +85,7 @@
                     </controls:HudsPanel.DataContext>
                 </controls:HudsPanel>
             </Border>
-            <controls:SizeableTextBlock Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" Margin="5, 0, 0, 0" FontSize="16"
+            <controls:SizeableTextBlock Grid.Column="3" Grid.Row="1" VerticalAlignment="Top" Margin="5, 0, 0, 0" FontSize="14"
                                         Foreground="{Binding GtoParentState.IsSolverRunning, Converter={StaticResource SolverInfoForegroundConverter}}">
                 <controls:SizeableTextBlock.Text>
                     <MultiBinding Converter="{StaticResource SolverInfoTextConverter}">
@@ -94,8 +94,8 @@
                     </MultiBinding>
                 </controls:SizeableTextBlock.Text>
             </controls:SizeableTextBlock>
-            <controls:GtoControl Grid.Column="3" Grid.Row="1" Visibility="{Binding GtoParentState.PreflopGtoState.Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
-                                        Data="{Binding GtoParentState.PreflopGtoState.PreflopGtoInfo}"/>
+            <controls:GtoControl Grid.Column="3" Grid.Row="1" Visibility="{Binding GtoParentState.GtoState.Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                        Data="{Binding GtoParentState.GtoState.GtoInfo}"/>
             <Border Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2"  BorderThickness="0, 1, 1, 1">
                 <controls:HudsPanel>
                     <controls:HudsPanel.DataContext>

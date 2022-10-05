@@ -207,6 +207,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
@@ -228,11 +229,22 @@
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">DB name</TextBlock>
                         <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0, 5, 5" Text="{Binding DbName, Mode=TwoWay}"/>
                     </Grid>
+                    <Grid Grid.Row="2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">GTO DB name</TextBlock>
+                        <TextBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0, 5, 5" Text="{Binding GtoDbName, Mode=TwoWay}"/>
+                    </Grid>
                 </Grid>
             </TabItem>
             <TabItem Header="Solver">
                 <Grid Background="#FFE5E5E5">
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
@@ -327,6 +339,16 @@
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Min line frequency (%)</TextBlock>
                         <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding MinLineFrequency, Mode=TwoWay}"/>
+                    </Grid>
+                    <Grid Grid.Row="8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">All in threshold (%)</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding AllInThreshold, Mode=TwoWay}"/>
                     </Grid>
                 </Grid>
             </TabItem>

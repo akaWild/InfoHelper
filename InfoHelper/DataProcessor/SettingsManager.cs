@@ -24,6 +24,22 @@ namespace InfoHelper.DataProcessor
         {
             Error = null;
 
+            try
+            {
+                RetrieveSettingsPrivate();
+            }
+            catch (Exception e)
+            {
+                Error = e.Message;
+
+                return false;
+            }
+
+            return true;
+        }
+
+        private void RetrieveSettingsPrivate()
+        {
             string settingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Settings\\Settings.xml");
 
             string saveFolder = string.Empty;
@@ -50,6 +66,8 @@ namespace InfoHelper.DataProcessor
 
             string dbName = string.Empty;
 
+            string gtoDbName = string.Empty;
+
             string isLocalSolverStr = string.Empty;
 
             string solverFolder = string.Empty;
@@ -70,6 +88,8 @@ namespace InfoHelper.DataProcessor
 
             string minLineFrequencyStr = string.Empty;
 
+            string allInThresholdStr = string.Empty;
+
             #region GG Poker
 
             string scanTablesStr = string.Empty;
@@ -89,11 +109,7 @@ namespace InfoHelper.DataProcessor
             XmlDocument xmlDoc = new XmlDocument();
 
             if (!File.Exists(settingsPath))
-            {
-                Error = "Settings file doesn't exist in current directory";
-
-                return false;
-            }
+                throw new Exception("Settings file doesn't exist in current directory");
 
             xmlDoc.Load(settingsPath);
 
@@ -185,6 +201,12 @@ namespace InfoHelper.DataProcessor
 
                                 break;
 
+                            case "GTODBName":
+
+                                gtoDbName = node.Attributes["Value"].Value;
+
+                                break;
+
                             #endregion
 
                             #region Solver
@@ -249,6 +271,12 @@ namespace InfoHelper.DataProcessor
 
                                 break;
 
+                            case "AllInThreshold":
+
+                                allInThresholdStr = node.Attributes["Value"].Value;
+
+                                break;
+
                             #endregion
 
                             #region Rooms
@@ -305,162 +333,78 @@ namespace InfoHelper.DataProcessor
 
             //Save folder
             if (string.IsNullOrEmpty(saveFolder))
-            {
-                Error = "Pictures save directory is not specified";
-
-                return false;
-            }
+                throw new Exception("Pictures save directory is not specified");
 
             if (!Directory.Exists(saveFolder))
-            {
-                Error = "Pictures save directory doesn't exist";
-
-                return false;
-            }
+                throw new Exception("Pictures save directory doesn't exist");
 
             //Snapshots folder
             if (string.IsNullOrEmpty(snapshotsFolder))
-            {
-                Error = "Snapshots save directory is not specified";
-
-                return false;
-            }
+                throw new Exception("Snapshots save directory is not specified");
 
             if (!Directory.Exists(snapshotsFolder))
-            {
-                Error = "Snapshots save directory doesn't exist";
-
-                return false;
-            }
+                throw new Exception("Snapshots save directory doesn't exist");
 
             //Bitmaps buffer
             if (string.IsNullOrEmpty(bitmapsBufferStr))
-            {
-                Error = "Bitmaps buffer is not specified";
-
-                return false;
-            }
+                throw new Exception("Bitmaps buffer is not specified");
 
             if (!int.TryParse(bitmapsBufferStr, out int bitmapsBuffer))
-            {
-                Error = "Bitmaps buffer has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Bitmaps buffer has incorrect format");
 
             if (bitmapsBuffer < 1)
-            {
-                Error = "Bitmaps buffer should be more than 0";
-
-                return false;
-            }
+                throw new Exception("Bitmaps buffer should be more than 0");
 
             //Get last n hands
             if (string.IsNullOrEmpty(getLastNHandsStr))
-            {
-                Error = "Get last n hands value is not specified";
-
-                return false;
-            }
+                throw new Exception("Get last n hands value is not specified");
 
             if (!int.TryParse(getLastNHandsStr, out int getLastNHands))
-            {
-                Error = "Get last n hands value has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Get last n hands value has incorrect format");
 
             if (getLastNHands < 1)
-            {
-                Error = "Get last n hands value should be more than 0";
-
-                return false;
-            }
+                throw new Exception("Get last n hands value should be more than 0");
 
             //Timer
             if (string.IsNullOrEmpty(timerIntervalStr))
-            {
-                Error = "Timer interval is not specified";
-
-                return false;
-            }
+                throw new Exception("Timer interval is not specified");
 
             if (!int.TryParse(timerIntervalStr, out int timerInterval))
-            {
-                Error = "Timer interval has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Timer interval has incorrect format");
 
             if (timerInterval < 1 || timerInterval > 1000)
-            {
-                Error = "Timer interval should be between 1 and 1000";
-
-                return false;
-            }
+                throw new Exception("Timer interval should be between 1 and 1000");
 
             //Screenshot save interval
             if (string.IsNullOrEmpty(screenshotSaveIntervalStr))
-            {
-                Error = "Screenshots save interval is not specified";
-
-                return false;
-            }
+                throw new Exception("Screenshots save interval is not specified");
 
             if (!int.TryParse(screenshotSaveIntervalStr, out int screenshotSaveInterval))
-            {
-                Error = "Screenshots save interval has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Screenshots save interval has incorrect format");
 
             if (screenshotSaveInterval < 1)
-            {
-                Error = "Screenshots save interval should be more than 0";
-
-                return false;
-            }
+                throw new Exception("Screenshots save interval should be more than 0");
 
             //Window expire timeout
             if (string.IsNullOrEmpty(windowExpireTimeoutStr))
-            {
-                Error = "Window expire timeout is not specified";
-
-                return false;
-            }
+                throw new Exception("Window expire timeout is not specified");
 
             if (!int.TryParse(windowExpireTimeoutStr, out int windowExpireTimeout))
-            {
-                Error = "Window expire timeout has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Window expire timeout has incorrect format");
 
             if (windowExpireTimeout <= 0 || windowExpireTimeout > 59)
-            {
-                Error = "Window expire timeout should be between 1 and 59";
-
-                return false;
-            }
+                throw new Exception("Window expire timeout should be between 1 and 59");
 
             TimeSpan windowInfoExpireTimeout = new TimeSpan(0, 0, 0, windowExpireTimeout);
 
             //Mouse cursor
             if (string.IsNullOrEmpty(mouseCursorStr))
-            {
-                Error = "Mouse cursor is not specified";
-
-                return false;
-            }
+                throw new Exception("Mouse cursor is not specified");
 
             string cursorFilePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Cursors", mouseCursorStr);
 
             if (!File.Exists(cursorFilePath))
-            {
-                Error = "Mouse cursor file doesn't exist";
-
-                return false;
-            }
+                throw new Exception("Mouse cursor file doesn't exist");
 
             BitmapDecorator cursorImage = null;
 
@@ -470,42 +414,24 @@ namespace InfoHelper.DataProcessor
             }
             catch
             {
-                Error = "Unable create cursor image from file";
-
-                return false;
+                throw new Exception("Unable create cursor image from file");
             }
 
             //Cursor search threads
             if (string.IsNullOrEmpty(cursorSearchThreadsStr))
-            {
-                Error = "Cursor search threads value is not specified";
-
-                return false;
-            }
+                throw new Exception("Cursor search threads value is not specified");
 
             if (!int.TryParse(cursorSearchThreadsStr, out int cursorSearchThreads))
-            {
-                Error = "Cursor search threads value has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Cursor search threads value has incorrect format");
 
             if (cursorSearchThreads != -1 && (cursorSearchThreads < 1 || cursorSearchThreads > Environment.ProcessorCount))
-            {
-                Error = $"Cursor search threads value should be between 1 and {Environment.ProcessorCount} or -1 as default";
-
-                return false;
-            }
+                throw new Exception($"Cursor search threads value should be between 1 and {Environment.ProcessorCount} or -1 as default");
 
             //Window back color brush
             SolidColorBrush windowBackground = null;
 
             if (string.IsNullOrEmpty(windowsBackColorStr))
-            {
-                Error = "Window back color is not specified";
-
-                return false;
-            }
+                throw new Exception("Window back color is not specified");
 
             try
             {
@@ -515,9 +441,7 @@ namespace InfoHelper.DataProcessor
             }
             catch
             {
-                Error = "Window back color has incorrect format";
-
-                return false;
+                throw new Exception("Window back color has incorrect format");
             }
 
             #endregion
@@ -526,19 +450,15 @@ namespace InfoHelper.DataProcessor
 
             //Server name
             if (string.IsNullOrEmpty(serverName))
-            {
-                Error = "Server name is empty";
-
-                return false;
-            }
+                throw new Exception("Server name is empty");
 
             //Db name
             if (string.IsNullOrEmpty(dbName))
-            {
-                Error = "Database name is empty";
+                throw new Exception("Database name is empty");
 
-                return false;
-            }
+            //Gto db name
+            if (string.IsNullOrEmpty(gtoDbName))
+                throw new Exception("Gto database name is empty");
 
             #endregion
 
@@ -546,18 +466,10 @@ namespace InfoHelper.DataProcessor
 
             //Solver mode
             if (string.IsNullOrEmpty(isLocalSolverStr))
-            {
-                Error = "Solver mode selector is empty";
-
-                return false;
-            }
+                throw new Exception("Solver mode selector is empty");
 
             if (!bool.TryParse(isLocalSolverStr, out bool isLocalSolver))
-            {
-                Error = "Solver mode selector has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Solver mode selector has incorrect format");
 
             uint solverPort = 0;
 
@@ -565,176 +477,94 @@ namespace InfoHelper.DataProcessor
             {
                 //Solver folder
                 if (string.IsNullOrEmpty(solverFolder))
-                {
-                    Error = "Solver directory is not specified";
-
-                    return false;
-                }
+                    throw new Exception("Solver directory is not specified");
 
                 if (!Directory.Exists(solverFolder))
-                {
-                    Error = "Solver directory doesn't exist";
-
-                    return false;
-                }
+                    throw new Exception("Solver directory doesn't exist");
 
                 //Solver file
                 if (string.IsNullOrEmpty(solverFile))
-                {
-                    Error = "Solver file is not specified";
-
-                    return false;
-                }
+                    throw new Exception("Solver file is not specified");
 
                 if (!File.Exists(Path.Combine(solverFolder, solverFile)))
-                {
-                    Error = "Solver file doesn't exist";
-
-                    return false;
-                }
+                    throw new Exception("Solver file doesn't exist");
             }
             else
             {
                 //Solver port
                 if (string.IsNullOrEmpty(solverPortStr))
-                {
-                    Error = "Remote solver port is not specified";
-
-                    return false;
-                }
+                    throw new Exception("Remote solver port is not specified");
 
                 if (!uint.TryParse(solverPortStr, out solverPort))
-                {
-                    Error = "Remote solver port has incorrect format (should be between 0 and 65535)";
-
-                    return false;
-                }
+                    throw new Exception("Remote solver port has incorrect format (should be between 0 and 65535)");
 
                 //Solver ip
                 if (string.IsNullOrEmpty(solverIp))
-                {
-                    Error = "Remote solver ip is not specified";
-
-                    return false;
-                }
+                    throw new Exception("Remote solver ip is not specified");
 
                 if (!Regex.IsMatch(solverIp, @"(localhost)|(\d{1,3}[.]\d{1,3}[.]\d{1,3}[.]\d{1,3})"))
-                {
-                    Error = "Remote solver ip has incorrect format";
-
-                    return false;
-                }
+                    throw new Exception("Remote solver ip has incorrect format");
             }
 
             //Turn solver duration
             if (string.IsNullOrEmpty(turnSolverDurationStr))
-            {
-                Error = "Turn solver duration is not specified";
-
-                return false;
-            }
+                throw new Exception("Turn solver duration is not specified");
 
             if (!int.TryParse(turnSolverDurationStr, out int turnSolverMaxDuration))
-            {
-                Error = "Turn solver duration has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Turn solver duration has incorrect format");
 
             if (turnSolverMaxDuration <= 0 || turnSolverMaxDuration > 100)
-            {
-                Error = "Turn solver duration should be between 1 and 100";
-
-                return false;
-            }
+                throw new Exception("Turn solver duration should be between 1 and 100");
 
             //River solver duration
             if (string.IsNullOrEmpty(riverSolverDurationStr))
-            {
-                Error = "River solver duration is not specified";
-
-                return false;
-            }
+                throw new Exception("River solver duration is not specified");
 
             if (!int.TryParse(riverSolverDurationStr, out int riverSolverMaxDuration))
-            {
-                Error = "River solver duration has incorrect format";
-
-                return false;
-            }
+                throw new Exception("River solver duration has incorrect format");
 
             if (riverSolverMaxDuration <= 0 || riverSolverMaxDuration > 100)
-            {
-                Error = "River solver duration should be between 1 and 100";
-
-                return false;
-            }
+                throw new Exception("River solver duration should be between 1 and 100");
 
             //Turn solver accuracy
             if (string.IsNullOrEmpty(turnSolverAccuracyStr))
-            {
-                Error = "Turn solver accuracy is not specified";
-
-                return false;
-            }
+                throw new Exception("Turn solver accuracy is not specified");
 
             if (!double.TryParse(turnSolverAccuracyStr, NumberStyles.Any, new CultureInfo("en-US"), out double turnSolverAccuracy))
-            {
-                Error = "Turn solver accuracy has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Turn solver accuracy has incorrect format");
 
             if (turnSolverAccuracy <= 0 || turnSolverAccuracy > 100)
-            {
-                Error = "Turn solver accuracy should be between 1 and 100";
-
-                return false;
-            }
+                throw new Exception("Turn solver accuracy should be between 1 and 100");
 
             //River solver accuracy
             if (string.IsNullOrEmpty(riverSolverAccuracyStr))
-            {
-                Error = "River solver accuracy is not specified";
-
-                return false;
-            }
+                throw new Exception("River solver accuracy is not specified");
 
             if (!double.TryParse(riverSolverAccuracyStr, NumberStyles.Any, new CultureInfo("en-US"), out double riverSolverAccuracy))
-            {
-                Error = "River solver accuracy has incorrect format";
-
-                return false;
-            }
+                throw new Exception("River solver accuracy has incorrect format");
 
             if (riverSolverAccuracy <= 0 || riverSolverAccuracy > 100)
-            {
-                Error = "River solver accuracy should be between 1 and 100";
-
-                return false;
-            }
+                throw new Exception("River solver accuracy should be between 1 and 100");
 
             //Min line frequency
             if (string.IsNullOrEmpty(minLineFrequencyStr))
-            {
-                Error = "Min line frequency is not specified";
-
-                return false;
-            }
+                throw new Exception("Min line frequency is not specified");
 
             if (!int.TryParse(minLineFrequencyStr, out int minLineFrequency))
-            {
-                Error = "Min line frequency has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Min line frequency has incorrect format");
 
             if (minLineFrequency < 0 || minLineFrequency > 100)
-            {
-                Error = "Min line frequency should be between 0 and 100";
+                throw new Exception("Min line frequency should be between 0 and 100");
 
-                return false;
-            }
+            //All in threshold
+            if (string.IsNullOrEmpty(allInThresholdStr))
+                throw new Exception("All in threshold is not specified");
+
+            if (!int.TryParse(allInThresholdStr, out int allInThreshold))
+                throw new Exception("All in threshold has incorrect format");
+
+            if (allInThreshold < 0 || allInThreshold > 100)
+                throw new Exception("All in threshold be between 0 and 100");
 
             #endregion
 
@@ -744,18 +574,10 @@ namespace InfoHelper.DataProcessor
 
             //Scan GGPoker tables
             if (string.IsNullOrEmpty(scanTablesStr))
-            {
-                Error = "Scan GGPoker tables option is not specified";
-
-                return false;
-            }
+                throw new Exception("Scan GGPoker tables option is not specified");
 
             if (!bool.TryParse(scanTablesStr, out bool scanTables))
-            {
-                Error = "Scan GGPoker tables option has incorrect format";
-
-                return false;
-            }
+                throw new Exception("Scan GGPoker tables option has incorrect format");
 
             int cardBack = 0;
             int deck = 0;
@@ -765,96 +587,46 @@ namespace InfoHelper.DataProcessor
             {
                 //Card back GGPoker
                 if (string.IsNullOrEmpty(cardBackStr))
-                {
-                    Error = "GGPoker card back is not specified";
-
-                    return false;
-                }
+                    throw new Exception("GGPoker card back is not specified");
 
                 if (!int.TryParse(cardBackStr, out cardBack))
-                {
-                    Error = "GGPoker card back has incorrect format";
-
-                    return false;
-                }
+                    throw new Exception("GGPoker card back has incorrect format");
 
                 if (cardBack < 1)
-                {
-                    Error = "GGPoker card back value should be greater than 0";
-
-                    return false;
-                }
+                    throw new Exception("GGPoker card back value should be greater than 0");
 
                 //Deck GGPoker
                 if (string.IsNullOrEmpty(deckStr))
-                {
-                    Error = "GGPoker deck is not specified";
-
-                    return false;
-                }
+                    throw new Exception("GGPoker deck is not specified");
 
                 if (!int.TryParse(deckStr, out deck))
-                {
-                    Error = "GGPoker deck has incorrect format";
-
-                    return false;
-                }
+                    throw new Exception("GGPoker deck has incorrect format");
 
                 if (deck < 1)
-                {
-                    Error = "GGPoker deck value should be greater than 0";
-
-                    return false;
-                }
+                    throw new Exception("GGPoker deck value should be greater than 0");
 
                 //Players images folder on GGPoker
                 if (string.IsNullOrEmpty(playersImagesFolder))
-                {
-                    Error = "Players images folder on GGPoker is not specified";
-
-                    return false;
-                }
+                    throw new Exception("Players images folder on GGPoker is not specified");
 
                 if (!Directory.Exists(playersImagesFolder))
-                {
-                    Error = "Players images folder on GGPoker doesn't exist";
-
-                    return false;
-
-                }
+                    throw new Exception("Players images folder on GGPoker doesn't exist");
 
                 //Save pictures per hand on GGPoker
                 if (string.IsNullOrEmpty(savePicturesStr))
-                {
-                    Error = "Save pictures per hand option on GGPoker is not specified";
-
-                    return false;
-                }
+                    throw new Exception("Save pictures per hand option on GGPoker is not specified");
 
                 if (!bool.TryParse(savePicturesStr, out savePictures))
-                {
-                    Error = "Save pictures per hand option on GGPoker has incorrect format";
-
-                    return false;
-                }
+                    throw new Exception("Save pictures per hand option on GGPoker has incorrect format");
 
                 if (savePictures)
                 {
                     //Save pictures folder on GGPoker
                     if (string.IsNullOrEmpty(savePicturesFolder))
-                    {
-                        Error = "Save pictures folder on GGPoker is not specified";
-
-                        return false;
-                    }
+                        throw new Exception("Save pictures folder on GGPoker is not specified");
 
                     if (!Directory.Exists(savePicturesFolder))
-                    {
-                        Error = "Save pictures folder on GGPoker doesn't exist";
-
-                        return false;
-
-                    }
+                        throw new Exception("Save pictures folder on GGPoker doesn't exist");
                 }
             }
 
@@ -878,6 +650,7 @@ namespace InfoHelper.DataProcessor
             Application.Current.Resources["CurrentFormBackColor"] = windowBackground;
             Shared.ServerName = serverName;
             Shared.DbName = dbName;
+            Shared.GtoDbName = gtoDbName;
             Shared.IsLocalServer = isLocalSolver;
             Shared.SolverFolder = solverFolder;
             Shared.SolverFile = solverFile;
@@ -888,6 +661,7 @@ namespace InfoHelper.DataProcessor
             Shared.TurnSolverAccuracy = turnSolverAccuracy;
             Shared.RiverSolverAccuracy = riverSolverAccuracy;
             Shared.MinLineFrequency = minLineFrequency;
+            Shared.AllInThreshold = allInThreshold;
             Shared.ScanTables = scanTables;
             Shared.CardBackIndex = cardBack;
             Shared.DeckIndex = deck;
@@ -897,7 +671,89 @@ namespace InfoHelper.DataProcessor
 
             #endregion
 
-            return true;
+            //Solver sizings
+            string solverSizingsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\Settings\\SolverSizingSettings.xml");
+
+            xmlDoc = new XmlDocument();
+
+            if (!File.Exists(solverSizingsPath))
+                throw new Exception("Solver sizing settings file doesn't exist");
+
+            xmlDoc.Load(solverSizingsPath);
+
+            //Turn tree
+            //Hero oop
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/TurnTree/HeroOop/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/TurnTree/HeroIp/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            //River tree
+            //Hero oop
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RiverTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RiverTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            float[] ConvertNodesToSizingsArray(XmlNodeList nodeList)
+            {
+                if (nodeList == null)
+                    return new float[] { };
+
+                List<float> values = new List<float>();
+
+                foreach (object obj in nodeList)
+                {
+                    XmlNode node = obj as XmlNode;
+
+                    if (!float.TryParse(node.InnerText, NumberStyles.Any, CultureInfo.InvariantCulture, out float value))
+                        throw new FormatException($"Node {node.Name} has incorrect value");
+
+                    values.Add(value);
+                }
+
+                return values.ToArray();
+            }
         }
     }
 }

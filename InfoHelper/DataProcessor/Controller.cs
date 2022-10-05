@@ -7,6 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
@@ -26,6 +27,8 @@ namespace InfoHelper.DataProcessor
 {
     public class Controller
     {
+        private bool _isProcessingFinished = true;
+
         private List<WindowContextInfo> _winContextInfos = new List<WindowContextInfo>();
 
         private BitmapsContainer _bitmapContainer;
@@ -33,6 +36,8 @@ namespace InfoHelper.DataProcessor
         private DateTime _lastScreenshotSaveTime;
 
         private PlayersManager _playersManager;
+
+        private PostflopGtoManager _gtoPostflopManager;
 
         private readonly ViewModelMain _mainWindowState;
 
@@ -46,7 +51,7 @@ namespace InfoHelper.DataProcessor
 
         private readonly HudsManager _hudsManager;
 
-        private readonly GtoManager _gtoManager;
+        private readonly PreflopGtoManager _gtoPreflopManager;
 
         private readonly MethodInfo _findWindows;
 
@@ -109,7 +114,7 @@ namespace InfoHelper.DataProcessor
 
                 _hudsManager = new HudsManager(_mainWindowState);
 
-                _gtoManager = new GtoManager();
+                _gtoPreflopManager = new PreflopGtoManager();
 
                 Assembly assemblyWindowsManager = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
 
@@ -192,6 +197,8 @@ namespace InfoHelper.DataProcessor
             Bitmap clientScreenBitmap = null;
 
             BitmapDecorator bmpDecor = null;
+
+            _isProcessingFinished = false;
 
             try
             {
@@ -286,15 +293,16 @@ namespace InfoHelper.DataProcessor
                                     }
                                 }
 
-                                PokerRoomManager.ProcessData(window, screenData, bmpDecor);
+                                if(winContextInfo.GameContext.Round == 1)
+                                    PokerRoomManager.ProcessData(window, screenData, bmpDecor);
                             }
 
                             if (winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
                             {
                                 if(winContextInfo.GameContext.Round == 1)
-                                    _gtoManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
+                                    _gtoPreflopManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
                                 else
-                                    _gtoManager.GetPostflopGtoStrategy(winContextInfo.GameContext);
+                                    _gtoPostflopManager.GetPostflopGtoStrategy(winContextInfo.GameContext);
                             }
 
                             isHeroActing = winContextInfo.GameContext.Error == string.Empty;
@@ -329,6 +337,8 @@ namespace InfoHelper.DataProcessor
                 bmpDecor?.Dispose();
 
                 clientScreenBitmap?.Dispose();
+
+                _isProcessingFinished = true;
             }
         }
 
@@ -336,6 +346,9 @@ namespace InfoHelper.DataProcessor
         {
             try
             {
+                while (!_isProcessingFinished)
+                    Thread.Sleep(10);
+
                 _mainWindowState.ControlsState.ResetError();
 
                 if (_bitmapContainer == null)
@@ -344,6 +357,17 @@ namespace InfoHelper.DataProcessor
                     _bitmapContainer.Capacity = Shared.BitmapsBuffer;
 
                 _playersManager = new PlayersManager(_playersWindowState);
+
+                _gtoPostflopManager = new PostflopGtoManager();
+
+                _gtoPostflopManager.SolverExceptionThrown += exception =>
+                {
+                    HandleException(exception, ErrorType.Ordinary);
+
+                    Stop();
+
+                    Task.Factory.StartNew(SavePictures);
+                };
 
                 _captureCardManager.Initialize();
 
@@ -365,6 +389,9 @@ namespace InfoHelper.DataProcessor
 
             try
             {
+                while (!_isProcessingFinished)
+                    Thread.Sleep(10);
+
                 _captureCardManager.DisposeResources();
             }
             catch (Exception ex)
@@ -453,12 +480,14 @@ namespace InfoHelper.DataProcessor
                     StackFrame[] frames = st.GetFrames();
 
                     string message = $"{ex.Message}. {frames[0]}".Replace(Environment.NewLine, " ");
-
-                    _mainWindowState.ControlsState.SetError(message, errorType);
                 }
                 catch (Exception)
                 {
                     // ignored
+                }
+                finally
+                {
+                    _mainWindowState.ControlsState.SetError(ex.Message, errorType);
                 }
             }
             catch (Exception)

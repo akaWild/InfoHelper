@@ -9,17 +9,20 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using GameInformationUtility;
+using GtoDbUtility;
 using GtoUtility;
+using InfoHelper.Db;
 using InfoHelper.Utils;
 using InfoHelper.ViewModel.DataEntities;
+using Microsoft.Data.SqlClient;
 
 namespace InfoHelper.DataProcessor
 {
-    public class GtoManager
+    public class PreflopGtoManager
     {
         private readonly Dictionary<KeyGto, GtoStrategyContainer> _dictGtoPreflop;
 
-        public GtoManager()
+        public PreflopGtoManager()
         {
             byte[] dataBytes = File.ReadAllBytes("Resources\\gtoPreflop.bin");
 
@@ -33,9 +36,7 @@ namespace InfoHelper.DataProcessor
 
             string pocket = Common.ConvertPocket($"{hc1}{hc2}");
 
-            int playersCount = gc.IsPlayerIn.Count(p => p.HasValue);
-
-            GameType gameType = playersCount == 2 ? GameType.Hu : GameType.SixMax;
+            GameType gameType = gc.SmallBlindPosition == gc.BigBlindPosition ? GameType.Hu : GameType.SixMax;
 
             float heroInitStack = (float)gc.InitialStacks[gc.HeroPosition - 1];
 
@@ -153,7 +154,7 @@ namespace InfoHelper.DataProcessor
                     {
                         for (int i = 0; i < at.Key.Actions.Length; i++)
                         {
-                            BettingActionType gtoActionType = Common.ConvertAction(at.Key.Actions[i].Action);
+                            BettingActionType gtoActionType = Common.ConvertGtoAction(at.Key.Actions[i].Action);
 
                             int gtoPlayerPosition = Array.IndexOf(playerRelativePositions, at.Key.Actions[i].Player);
 
@@ -228,12 +229,6 @@ namespace InfoHelper.DataProcessor
                     filteredStrategies.Add(at);
             }
 
-            float bbDiff = 0;
-            float bbDiffPercent = 0;
-
-            float amountDiff = 0;
-            float amountDiffPercent = 0;
-
             filteredStrategies.Sort(new ActionTypeEsComparer());
 
             float destEs = 0;
@@ -268,8 +263,8 @@ namespace InfoHelper.DataProcessor
                 break;
             }
 
-            bbDiff = destEs - effStack;
-            bbDiffPercent = bbDiff * 100 / effStack;
+            float bbDiff = destEs - effStack;
+            float bbDiffPercent = bbDiff * 100 / effStack;
 
             KeyValuePair<KeyGto, GtoStrategyContainer>[] keyValues = filteredStrategies.Where(a => Math.Abs(a.Key.EffectiveStack - destEs) < 0.001).ToArray();
 
@@ -376,7 +371,8 @@ namespace InfoHelper.DataProcessor
 
                                 break;
                             }
-                            else if (nextDelta < delta)
+
+                            if (nextDelta < delta)
                             {
                                 delta = nextDelta;
 
@@ -403,6 +399,9 @@ namespace InfoHelper.DataProcessor
         Skip:
             GtoStrategyContainer gtoStrategyContainer = null;
 
+            float amountDiff = 0;
+            float amountDiffPercent = 0;
+
             string title = "PREFLOP: ";
 
             if (keyValues.Length > 0)
@@ -411,7 +410,7 @@ namespace InfoHelper.DataProcessor
 
                 GtoActionInfo[] gtoActions = lastKeyValue.Key.Actions;
 
-                title += playersCount == 2 ? "HU " : "6 max ";
+                title += gameType == GameType.Hu ? "HU " : "6 max ";
 
                 title += lastKeyValue.Key.EffectiveStack + " bbs";
 
@@ -464,14 +463,14 @@ namespace InfoHelper.DataProcessor
                 }
 
                 float gtoPot = gtoPlayerBets.Sum();
-                float gtoAmtToCall = gtoPlayerBets.Max() - gtoPlayerBets[3];
+                float gtoAmtToCall = gtoPlayerBets.Max() - gtoPlayerBets[gc.HeroPosition - 1];
 
                 float gtoPotOdds = gtoAmtToCall / (gtoPot + gtoAmtToCall);
 
                 float potOdds = (float)(gc.AmountToCall / (gc.TotalPot + gc.AmountToCall));
 
                 amountDiff = gtoPotOdds - potOdds;
-                amountDiffPercent = amountDiff * 100 / potOdds;
+                amountDiffPercent = potOdds == 0 ? 0 : amountDiff * 100 / potOdds;
 
                 gtoStrategyContainer = lastKeyValue.Value;
             }
@@ -586,7 +585,7 @@ namespace InfoHelper.DataProcessor
                         }
                     }
 
-                    PreflopGtoInfo preflopGtoInfo = new PreflopGtoInfo()
+                    GtoInfo preflopGtoInfo = new GtoInfo()
                     {
                         GtoDiffs = new GtoDiffs()
                         {
@@ -596,39 +595,28 @@ namespace InfoHelper.DataProcessor
                             BbDiffPercent = bbDiffPercent
                         },
                         GtoStrategyContainer = gtoStrategyContainer,
+                        PocketStrategies = gtoStrategyContainer[pocket],
                         Pocket = pocket,
-                        Title = title
+                        PocketRender = pocket,
+                        Title = title,
+                        Round = 1
                     };
 
                     lock (gc.GtoLock)
                     {
-                        gc.PreflopGtoData = preflopGtoInfo;
+                        gc.GtoData = preflopGtoInfo;
 
                         gc.GtoError = null;
                     }
                 }
                 else
-                {
-                    gc.PreflopGtoData = null;
-
                     gc.GtoError = "There are no hands for current GTO situation";
-                }
             }
             else
             {
                 lock (gc.GtoLock)
-                {
-                    gc.PreflopGtoData = null;
-
                     gc.GtoError = "There is no suitable preflop GTO strategy for current situation";
-                }
             }
-        }
-
-        public void GetPostflopGtoStrategy(GameContext gc)
-        {
-            lock (gc.GtoLock)
-                gc.GtoError = "There is no suitable postflop GTO strategy for current situation";
         }
 
         #region Private classes

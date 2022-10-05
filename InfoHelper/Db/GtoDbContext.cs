@@ -14,6 +14,7 @@ namespace InfoHelper.Db
         private readonly string _connectionString;
 
         public DbSet<PostflopEntry> PostflopEntries { get; set; } = null!;
+
         public DbSet<PostflopData> PostflopData { get; set; } = null!;
 
         public GtoDbContext(string connectionString)
@@ -24,6 +25,13 @@ namespace InfoHelper.Db
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(_connectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<PostflopData>().HasKey(data => new { data.PostflopEntryId, data.FlopMask });
+
+            modelBuilder.Entity<PostflopEntry>().Property(p => p.Id).ValueGeneratedNever();
         }
     }
 }

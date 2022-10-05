@@ -35,7 +35,7 @@ namespace InfoHelper.DataProcessor
 
                         string fileName = $"{tableId}_{handId}_{dealerId}";
 
-                        if (!SavedFiles.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFiles[fileName]).TotalSeconds > 20)
+                        if (!SavedFiles.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFiles[fileName]).TotalSeconds > 10)
                         {
                             bmp.Crop(pokerWindow.Position).Save(Path.Combine(Shared.PicturesSaveFolder, $"{fileName}_{DateTime.Now.Ticks}.bmp"));
 

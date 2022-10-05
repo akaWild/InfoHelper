@@ -41,11 +41,11 @@ namespace InfoHelper.ViewModel.States
 
             _vmMain.GtoParentState.IsSolverRunning = gc.Error == string.Empty && gc.IsSolving;
 
-            _vmMain.GtoParentState.PreflopGtoState.Visible = gc.Round == 1 && gc.Error == string.Empty && gc.GtoError == null && !gc.IsSolving;
+            _vmMain.GtoParentState.GtoState.Visible = gc.Error == string.Empty && gc.GtoError == null && !gc.IsSolving;
 
-            _vmMain.GtoParentState.PreflopGtoState.PreflopGtoInfo = (PreflopGtoInfo)gc.PreflopGtoData;
+            _vmMain.GtoParentState.GtoState.GtoInfo = _vmMain.GtoParentState.GtoState.Visible ? (GtoInfo)gc.GtoData : null;
 
-            _vmMain.GtoParentState.PreflopGtoState.UpdateBindings();
+            _vmMain.GtoParentState.GtoState.UpdateBindings();
         }
 
         public void UpdateWindows(WindowInfo[] winInfos)
@@ -70,13 +70,9 @@ namespace InfoHelper.ViewModel.States
 
             _vmMain.GtoParentState.IsSolverRunning = false;
 
-            _vmMain.GtoParentState.PreflopGtoState.Visible = false;
+            _vmMain.GtoParentState.GtoState.Visible = false;
 
-            _vmMain.GtoParentState.PreflopGtoState.UpdateBindings();
-
-            _vmMain.GtoParentState.PostflopGtoState.Visible = false;
-
-            _vmMain.GtoParentState.PostflopGtoState.UpdateBindings();
+            _vmMain.GtoParentState.GtoState.UpdateBindings();
         }
 
         public void ResetWindowsPanel()
