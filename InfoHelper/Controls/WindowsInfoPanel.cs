@@ -72,6 +72,8 @@ namespace InfoHelper.Controls
             if(Data == null)
                 return;
 
+            VisualEdgeMode = EdgeMode.Aliased;
+
             _okFrontWindowBrush ??= Application.Current.TryFindResource("OkFrontWindowBackgroundBrush");
             _okBackWindowBrush ??= Application.Current.TryFindResource("OkBackWindowBackgroundBrush");
             _wrongCaptionFrontWindowBrush ??= Application.Current.TryFindResource("WrongCaptionFrontWindowBackgroundBrush");
@@ -99,27 +101,30 @@ namespace InfoHelper.Controls
 
             WindowInfo[] data = (WindowInfo[])Data;
 
+            Rect[] rectsToRender = new Rect[data.Length];
+
+            Pen pen = null;
+
+            object penResx = _windowBorderPen;
+
+            if (penResx != null)
+                pen = (Pen)penResx;
+
             for (int i = 0; i < data.Length; i++)
             {
                 object brushResx = GetBackgroundBrush(data[i].WindowState);
-                object penResx = _windowBorderPen;
 
                 SolidColorBrush brush = null;
-                Pen pen = null;
 
                 if (brushResx != null)
                     brush = (SolidColorBrush)brushResx;
 
-                if (penResx != null)
-                    pen = (Pen)penResx;
+                double xRatio = RenderSize.Width / Shared.ClientWorkSpaceWidth;
+                double yRatio = RenderSize.Height / Shared.ClientWorkSpaceHeight;
 
+                Rect scaledRect = new Rect((int)(data[i].Rectangle.X * xRatio), (int)(data[i].Rectangle.Y * yRatio), (int)(data[i].Rectangle.Width * xRatio), (int)(data[i].Rectangle.Height * yRatio));
 
-                double xRatio = 0, yRatio = 0;
-
-                xRatio = RenderSize.Width / Shared.ClientWorkSpaceWidth;
-                yRatio = RenderSize.Height / Shared.ClientWorkSpaceHeight;
-
-                Rect scaledRect = new Rect(data[i].Rectangle.X * xRatio, data[i].Rectangle.Y * yRatio, data[i].Rectangle.Width * xRatio, data[i].Rectangle.Height * yRatio);
+                rectsToRender[i] = scaledRect;
 
                 drawingContext.DrawRectangle(brush, pen, scaledRect);
 
@@ -145,6 +150,9 @@ namespace InfoHelper.Controls
                     drawingContext.DrawImage(image, imageRect);
                 }
             }
+
+            foreach (Rect rect in rectsToRender)
+                drawingContext.DrawRectangle(null, pen, rect);
         }
     }
 }

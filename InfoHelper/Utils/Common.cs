@@ -518,19 +518,6 @@ namespace InfoHelper.Utils
             #endregion
         }
 
-        public static BettingActionType ConvertGtoAction(GtoAction gtoAction)
-        {
-            return gtoAction switch
-            {
-                GtoAction.Call => BettingActionType.Call,
-                GtoAction.Check => BettingActionType.Check,
-                GtoAction.Fold => BettingActionType.Fold,
-                GtoAction.Bet => BettingActionType.Bet,
-                GtoAction.Raise => BettingActionType.Raise,
-                _ => BettingActionType.NoAction
-            };
-        }
-
         public static GtoAction ConvertSolverAction(SolverActionType input)
         {
             return input switch

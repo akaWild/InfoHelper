@@ -29,6 +29,8 @@ namespace InfoHelper.DataProcessor
     {
         private bool _isProcessingFinished = true;
 
+        private Point? _cursorPosition = null;
+
         private List<WindowContextInfo> _winContextInfos = new List<WindowContextInfo>();
 
         private BitmapsContainer _bitmapContainer;
@@ -225,6 +227,9 @@ namespace InfoHelper.DataProcessor
 
                 Point? cursor = windows.Length > 0 ? CursorManager.FindCursor(bmpDecor) : null;
 
+                if (cursor != null)
+                    _cursorPosition = cursor;
+
                 List<WindowContextInfo> winContextInfosCopy = null;
 
                 lock (_winContextLock)
@@ -238,7 +243,7 @@ namespace InfoHelper.DataProcessor
                 {
                     WindowState winState;
 
-                    windows[i].IsFocused = cursor != null && windows[i].Position.Contains(cursor.Value);
+                    windows[i].IsFocused = _cursorPosition != null && windows[i].Position.Contains(_cursorPosition.Value);
 
                     PokerWindow window = windows[i];
 
@@ -268,8 +273,8 @@ namespace InfoHelper.DataProcessor
 
                         Rectangle mouseRect = default;
 
-                        if (cursor != null)
-                            mouseRect = new Rectangle(cursor.Value.X - window.Position.X, cursor.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
+                        if (_cursorPosition != null)
+                            mouseRect = new Rectangle(_cursorPosition.Value.X - window.Position.X, _cursorPosition.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
 
                         regionsOverlapped = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
 
@@ -400,6 +405,8 @@ namespace InfoHelper.DataProcessor
             }
             finally
             {
+                _cursorPosition = null;
+
                 lock(_winContextLock)
                     _winContextInfos = new List<WindowContextInfo>();
 

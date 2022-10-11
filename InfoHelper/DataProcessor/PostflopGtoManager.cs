@@ -354,7 +354,21 @@ namespace InfoHelper.DataProcessor
 
                 float gtoPotOdds = gtoAmtToCall / (gtoPot + gtoAmtToCall);
 
-                float potOdds = (float)(gc.AmountToCall / (gc.TotalPot + gc.AmountToCall));
+                float[] playerBets = new float[6];
+
+                foreach (BettingAction action in postflopActions)
+                {
+                    if (gc.IsPlayerIn[action.Player - 1] != null && action.Amount > playerBets[action.Player - 1])
+                        playerBets[action.Player - 1] = (float)action.Amount;
+                }
+
+                for (int i = 0; i < playerBets.Length; i++)
+                {
+                    if (playerBets[i] > playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1])
+                        playerBets[i] = (float)(playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1]);
+                }
+
+                float potOdds = (float)(gc.AmountToCall / (gc.RoundPot + playerBets.Sum() + gc.AmountToCall));
 
                 float amountDiff = gtoPotOdds - potOdds;
                 float amountDiffPercent = potOdds == 0 ? 0 : amountDiff * 100 / potOdds;
@@ -404,7 +418,7 @@ namespace InfoHelper.DataProcessor
 
                     for (int i = 0; i < prevNodes.Count; i++)
                         title += $"{ConvertAction(prevNodes[i].ActionType, (prevNodes[i].Amount + prevNodes[i].Bets[prevNodes[i].Position]) / 10F, prevNodes[i].Position == heroRelativePosition)}" +
-                                 $"{(i == prevNodes.Count - 1 ? ")" : " - ")}";
+                                 $"{(i == prevNodes.Count - 1 ? ")" : "-")}";
 
                     string ConvertAction(SolverActionType action, float amount, bool hero)
                     {
@@ -584,7 +598,7 @@ namespace InfoHelper.DataProcessor
 
         private void InitializeFlopTree(GameContext gc)
         {
-            GameType gameType = gc.SmallBlindPosition == gc.BigBlindPosition ? GameType.Hu : GameType.SixMax;
+            GameType gameType = gc.SmallBlindPosition == gc.ButtonPosition ? GameType.Hu : GameType.SixMax;
 
             float heroInitStack = (float)gc.InitialStacks[gc.HeroPosition - 1];
 
@@ -637,6 +651,8 @@ namespace InfoHelper.DataProcessor
 
             List<PostflopEntryFacade> filteredPostflopEntries = new List<PostflopEntryFacade>();
 
+            int gtoStartIndent = (int)gameType - gc.IsPlayerIn.Count(p => p != null);
+
             foreach (PostflopEntry entry in _postflopEntries)
             {
                 if (entry.TableSize != (int)gameType)
@@ -644,9 +660,12 @@ namespace InfoHelper.DataProcessor
 
                 BettingAction[] gtoActions = ConvertGtoActions(entry.PreflopActions.Split("_"));
 
-                int gtoStartIndent = (int)gameType - gc.IsPlayerIn.Count(p => p != null);
+                bool okActionType = gtoActions.Length >= gtoStartIndent;
 
-                bool okActionType = gtoActions.Take(gtoStartIndent).All(action => action.ActionType == BettingActionType.Fold);
+                if (!okActionType)
+                    continue;
+
+                okActionType = gtoActions.Take(gtoStartIndent).All(action => action.ActionType == BettingActionType.Fold);
 
                 if(!okActionType)
                     continue;
@@ -917,7 +936,7 @@ namespace InfoHelper.DataProcessor
 
                 SolverTree solverTree = SolveTree(gc, trees[0], trees[1], out string solverError, out int solverRound);
 
-                //_solverManager.DumpTree(gc.TableId, $"D:\\Backup\\Projects\\Projects_GG\\GGPoker\\InfoHelper\\InfoHelper\\bin\\x64\\Debug\\net5.0-windows\\{gc.Round}.cfr", SolverTreeDumpMode.Full, 10);
+                _solverManager.DumpTree(gc.TableId, $"D:\\Backup\\Projects\\Projects_GG\\GGPoker\\InfoHelper\\InfoHelper\\bin\\x64\\Debug\\net5.0-windows\\{gc.Round}.cfr", SolverTreeDumpMode.Full, 10);
 
                 lock (gc.GtoLock)
                 {
@@ -1601,6 +1620,24 @@ namespace InfoHelper.DataProcessor
 
                         if (rangeIp[pocketIndex] < 1E-5)
                             rangeIp[pocketIndex] = rangeIp.Average();
+                    }
+
+                    if (rangeOop.Sum() < 1E-3)
+                    {
+                        solverError = "Oop range doesn't contain enough hands to solve";
+
+                        solverRound = solverTree.Round;
+
+                        return null;
+                    }
+
+                    if (rangeIp.Sum() < 1E-3)
+                    {
+                        solverError = "Ip range doesn't contain enough hands to solve";
+
+                        solverRound = solverTree.Round;
+
+                        return null;
                     }
 
                     string[] oopHandsStr = new string[oopHands.Length];

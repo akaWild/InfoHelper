@@ -30,7 +30,7 @@
     <SolidColorBrush x:Key="WrongCaptionBackWindowBackgroundBrush">#50FFA500</SolidColorBrush>
     <SolidColorBrush x:Key="ErrorFrontWindowBackgroundBrush">Red</SolidColorBrush>
     <SolidColorBrush x:Key="ErrorBackWindowBackgroundBrush">#50FF0000</SolidColorBrush>
-    <Pen x:Key="WindowBorderPen" Brush="Black" Thickness="0.5"></Pen>
+    <Pen x:Key="WindowBorderPen" Brush="Black" Thickness="1"></Pen>
     <BitmapImage x:Key="HeroActingImage" UriSource="../Images/bell.png"></BitmapImage>
     <system:Double x:Key="HeroActingImageSizeRatio">0.2</system:Double>
 

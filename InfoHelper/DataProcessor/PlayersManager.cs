@@ -40,9 +40,7 @@ namespace InfoHelper.DataProcessor
             _connectionString = sqlBuilder.ConnectionString;
 
             using (PlayerContext plContext = new PlayerContext(_connectionString, true))
-            {
                 players = plContext.Players.ToList();
-            }
 
             foreach (Player player in players)
                 player.Confirmed += Player_Confirmed;
