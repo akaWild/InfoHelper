@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using GameInformationUtility;
 using GtoDbUtility;
 using GtoUtility;
+using HashUtils;
 using HoldemHand;
 using InfoHelper.Db;
 using InfoHelper.Utils;
@@ -129,7 +130,7 @@ namespace InfoHelper.DataProcessor
                 return;
             }
 
-            float heroRoundStack = (float)gc.Stacks[gc.HeroPosition - 1].Value;
+            float heroRoundStack = (float)(gc.Stacks[gc.HeroPosition - 1].Value + gc.Bets[gc.HeroPosition - 1]);
 
             float villainRoundStack = -1;
 
@@ -137,7 +138,7 @@ namespace InfoHelper.DataProcessor
             {
                 if (gc.IsPlayerIn[i] != null && (bool)gc.IsPlayerIn[i] && i != gc.HeroPosition - 1)
                 {
-                    villainRoundStack = (float)gc.Stacks[i].Value;
+                    villainRoundStack = (float)(gc.Stacks[i].Value + gc.Bets[i]);
 
                     break;
                 }
@@ -903,7 +904,7 @@ namespace InfoHelper.DataProcessor
         {
             int initialButtonPosition = gc.ButtonPosition;
 
-            int initialHoleCardsHash = $"{gc.HoleCards[gc.HeroPosition - 1][0]}{gc.HoleCards[gc.HeroPosition - 1][1]}".GetHashCode();
+            int initialHoleCardsHash = $"{gc.HoleCards[gc.HeroPosition - 1][0]}{gc.HoleCards[gc.HeroPosition - 1][1]}".GetStableHashCode();
 
             SolverTree previousTree = null;
             SolverTree currentTree = null;
@@ -936,11 +937,9 @@ namespace InfoHelper.DataProcessor
 
                 SolverTree solverTree = SolveTree(gc, trees[0], trees[1], out string solverError, out int solverRound);
 
-                _solverManager.DumpTree(gc.TableId, $"D:\\Backup\\Projects\\Projects_GG\\GGPoker\\InfoHelper\\InfoHelper\\bin\\x64\\Debug\\net5.0-windows\\{gc.Round}.cfr", SolverTreeDumpMode.Full, 10);
-
                 lock (gc.GtoLock)
                 {
-                    if (initialButtonPosition == gc.ButtonPosition && initialHoleCardsHash == $"{gc.HoleCards[gc.HeroPosition - 1][0]}{gc.HoleCards[gc.HeroPosition - 1][1]}".GetHashCode())
+                    if (initialButtonPosition == gc.ButtonPosition && initialHoleCardsHash == $"{gc.HoleCards[gc.HeroPosition - 1][0]}{gc.HoleCards[gc.HeroPosition - 1][1]}".GetStableHashCode())
                     {
                         if (solverTree != null)
                         {
@@ -996,6 +995,8 @@ namespace InfoHelper.DataProcessor
                         nextToAct = 1;
                 }
 
+                int preflopRaisesCount = gc.Actions.Where(a => a.Round == 1).Count(a => a.ActionType == BettingActionType.Raise);
+
                 float[] oopBetsTurn = null;
                 float[] oopDonkBetsTurn = null;
                 float[] ipBetsTurn = null;
@@ -1016,40 +1017,173 @@ namespace InfoHelper.DataProcessor
                 float[] oopReraisesRiver = null;
                 float[] ipReraisesRiver = null;
 
-                if (gc.Round == 3)
+                #region Limp pot
+
+                if (preflopRaisesCount == 0)
                 {
-                    oopBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopBetsTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopBetsTurn;
-                    oopDonkBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopDonkBetsTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopDonkBetsTurn;
-                    ipBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.IpBetsTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.IpBetsTurn;
+                    if (gc.Round == 3)
+                    {
+                        oopBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopBetsTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopBetsTurn;
+                        oopDonkBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopDonkBetsTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopDonkBetsTurn;
+                        ipBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpBetsTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpBetsTurn;
 
-                    oopRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopRaisesTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopRaisesTurn;
-                    ipRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.IpRaisesTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.IpRaisesTurn;
+                        oopRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopRaisesTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopRaisesTurn;
+                        ipRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpRaisesTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpRaisesTurn;
 
-                    oopReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopReraisesTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopReraisesTurn;
-                    ipReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.IpReraisesTurn : Shared.SolverSizingsInfo.TurnTree.HeroIp.IpReraisesTurn;
+                        oopReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopReraisesTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopReraisesTurn;
+                        ipReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpReraisesTurn : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpReraisesTurn;
 
-                    oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopBetsRiver;
-                    oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopDonkBetsRiver;
-                    ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.IpBetsRiver;
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpBetsRiver;
 
-                    oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopRaisesRiver;
-                    ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.IpRaisesRiver;
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpRaisesRiver;
 
-                    oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.OopReraisesRiver;
-                    ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.TurnTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.TurnTree.HeroIp.IpReraisesRiver;
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpReraisesRiver;
+                    }
+                    else if (gc.Round == 4)
+                    {
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.IpReraisesRiver;
+                    }
                 }
-                else if (gc.Round == 4)
+
+                #endregion
+
+                #region Raise pot
+
+                if (preflopRaisesCount == 1)
                 {
-                    oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.OopBetsRiver;
-                    oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.OopDonkBetsRiver;
-                    ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.IpBetsRiver;
+                    if (gc.Round == 3)
+                    {
+                        oopBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopBetsTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopBetsTurn;
+                        oopDonkBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopDonkBetsTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopDonkBetsTurn;
+                        ipBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpBetsTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpBetsTurn;
 
-                    oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.OopRaisesRiver;
-                    ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.IpRaisesRiver;
+                        oopRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopRaisesTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopRaisesTurn;
+                        ipRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpRaisesTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpRaisesTurn;
 
-                    oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.OopReraisesRiver;
-                    ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RiverTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.RiverTree.HeroIp.IpReraisesRiver;
+                        oopReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopReraisesTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopReraisesTurn;
+                        ipReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpReraisesTurn : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpReraisesTurn;
+
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpReraisesRiver;
+                    }
+                    else if (gc.Round == 4)
+                    {
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.IpReraisesRiver;
+                    }
                 }
+
+                #endregion
+
+                #region 3bet pot
+
+                if (preflopRaisesCount == 2)
+                {
+                    if (gc.Round == 3)
+                    {
+                        oopBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopBetsTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopBetsTurn;
+                        oopDonkBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopDonkBetsTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopDonkBetsTurn;
+                        ipBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpBetsTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpBetsTurn;
+
+                        oopRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopRaisesTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopRaisesTurn;
+                        ipRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpRaisesTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpRaisesTurn;
+
+                        oopReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopReraisesTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopReraisesTurn;
+                        ipReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpReraisesTurn : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpReraisesTurn;
+
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpReraisesRiver;
+                    }
+                    else if (gc.Round == 4)
+                    {
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.IpReraisesRiver;
+                    }
+                }
+
+                #endregion
+
+                #region 4bet+ pot
+
+                if (preflopRaisesCount > 2)
+                {
+                    if (gc.Round == 3)
+                    {
+                        oopBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopBetsTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopBetsTurn;
+                        oopDonkBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopDonkBetsTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopDonkBetsTurn;
+                        ipBetsTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpBetsTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpBetsTurn;
+
+                        oopRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopRaisesTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopRaisesTurn;
+                        ipRaisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpRaisesTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpRaisesTurn;
+
+                        oopReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopReraisesTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopReraisesTurn;
+                        ipReraisesTurn = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpReraisesTurn : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpReraisesTurn;
+
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpReraisesRiver;
+                    }
+                    else if (gc.Round == 4)
+                    {
+                        oopBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopBetsRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopBetsRiver;
+                        oopDonkBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopDonkBetsRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopDonkBetsRiver;
+                        ipBetsRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.IpBetsRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.IpBetsRiver;
+
+                        oopRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopRaisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopRaisesRiver;
+                        ipRaisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.IpRaisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.IpRaisesRiver;
+
+                        oopReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopReraisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopReraisesRiver;
+                        ipReraisesRiver = heroRelativePosition == 0 ? Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.IpReraisesRiver : Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.IpReraisesRiver;
+                    }
+                }
+
+                #endregion
 
                 int villainPosition = -1;
 
@@ -1082,7 +1216,7 @@ namespace InfoHelper.DataProcessor
                 float heroPrevBets = (float)(gc.Actions.LastOrDefault(a => a.Round == initRound && a.Player == gc.HeroPosition)?.Amount ?? 0);
                 float villainPrevBets = (float)(gc.Actions.LastOrDefault(a => a.Round == initRound && a.Player == villainPosition)?.Amount ?? 0);
 
-                int effStackPostflop = (int)(Math.Min(gc.Stacks[gc.HeroPosition - 1].Value + heroPrevBets, gc.Stacks[villainPosition - 1].Value + villainPrevBets) * 10);
+                int effStackPostflop = (int)(Math.Round(Math.Min(gc.Stacks[gc.HeroPosition - 1].Value + heroPrevBets, gc.Stacks[villainPosition - 1].Value + villainPrevBets) * 10));
 
                 ActionInfo[] ConvertActions(List<BettingAction> actions)
                 {
@@ -1102,7 +1236,7 @@ namespace InfoHelper.DataProcessor
                             _ => SolverActionType.NoAction
                         };
 
-                        convertedActions[i] = new ActionInfo(solverActionType, (int)(action.Amount * 10), action.Round);
+                        convertedActions[i] = new ActionInfo(solverActionType, (int)(Math.Round(action.Amount * 10)), action.Round);
                     }
 
                     return convertedActions;
@@ -1111,11 +1245,11 @@ namespace InfoHelper.DataProcessor
                 PostflopTreeManager postflopTreeManager = new PostflopTreeManager(prevRoundRaiserPosition)
                 {
                     Actions = ConvertActions(gc.Actions),
-                    Bets = new int[] { 0, 0, (int)gc.RoundPot * 10},
-                    EffStackPreflop = (int)(Math.Min(gc.InitialStacks[gc.HeroPosition - 1].Value, gc.InitialStacks[villainPosition - 1].Value) * 10),
+                    Bets = new int[] { 0, 0, (int)(Math.Round(gc.RoundPot * 10))},
+                    EffStackPreflop = (int)(Math.Round(Math.Min(gc.InitialStacks[gc.HeroPosition - 1].Value, gc.InitialStacks[villainPosition - 1].Value) * 10)),
                     EffStackPostflop = effStackPostflop,
                     MinBet = 10,
-                    CurrentPot = (int)(gc.RoundPot * 10),
+                    CurrentPot = (int)(Math.Round(gc.RoundPot * 10)),
                     InitRound = initRound,
                     AllInThreshold = (float)Shared.AllInThreshold / 100,
                     BoardMask = Hand.ParseHand(board),

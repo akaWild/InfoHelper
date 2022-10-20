@@ -681,59 +681,237 @@ namespace InfoHelper.DataProcessor
 
             xmlDoc.Load(solverSizingsPath);
 
+            #region Limp pot
+
             //Turn tree
             //Hero oop
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Bets/OopDonkBets/OopDonkBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Bets/OopBets/OopBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Bets/IpBets/IpBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/TurnTree/HeroOop/Turn/Raises/OopRaises/OopRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Raises/IpRaises/IpRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Reraises/OopReraises/OopReraise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/Turn/Reraises/IpReraises/IpReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/Turn/Reraises/IpReraises/IpReraise"));
 
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Bets/OopBets/OopBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Bets/IpBets/IpBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Raises/OopRaises/OopRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Raises/IpRaises/IpRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
 
             //Hero ip
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Bets/OopDonkBets/OopDonkBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Bets/OopBets/OopBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Bets/IpBets/IpBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/TurnTree/HeroIp/Turn/Raises/OopRaises/OopRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Raises/IpRaises/IpRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Reraises/OopReraises/OopReraise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/Turn/Reraises/IpReraises/IpReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/Turn/Reraises/IpReraises/IpReraise"));
 
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Bets/OopBets/OopBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Bets/IpBets/IpBet"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Raises/OopRaises/OopRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Raises/IpRaises/IpRaise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
-            Shared.SolverSizingsInfo.TurnTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/TurnTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.LimpPot.TurnTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/TurnTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
 
             //River tree
             //Hero oop
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Bets/OopBets/OopBet"));
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Bets/IpBets/IpBet"));
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Raises/OopRaises/OopRaise"));
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Raises/IpRaises/IpRaise"));
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
-            Shared.SolverSizingsInfo.RiverTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
 
             //Hero ip
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Bets/OopBets/OopBet"));
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Bets/IpBets/IpBet"));
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Raises/OopRaises/OopRaise"));
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Raises/IpRaises/IpRaise"));
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
-            Shared.SolverSizingsInfo.RiverTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RiverTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.LimpPot.RiverTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/LimpPot/RiverTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            #endregion
+
+            #region Raise pot
+
+            //Turn tree
+            //Hero oop
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RaisePot.TurnTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/TurnTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            //River tree
+            //Hero oop
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.RaisePot.RiverTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/RaisePot/RiverTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            #endregion
+
+            #region 3bet pot
+
+            //Turn tree
+            //Hero oop
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.TurnTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/TurnTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            //River tree
+            //Hero oop
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.ThreeBetPot.RiverTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/ThreeBetPot/RiverTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            #endregion
+
+            #region 4bet+ pot
+
+            //Turn tree
+            //Hero oop
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopDonkBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpBetsTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes($"/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpRaisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpReraisesTurn = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/Turn/Reraises/IpReraises/IpReraise"));
+
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.TurnTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/TurnTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            //River tree
+            //Hero oop
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroOop.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroOop/River/Reraises/IpReraises/IpReraise"));
+
+            //Hero ip
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopDonkBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Bets/OopDonkBets/OopDonkBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Bets/OopBets/OopBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.IpBetsRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Bets/IpBets/IpBet"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Raises/OopRaises/OopRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.IpRaisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Raises/IpRaises/IpRaise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.OopReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Reraises/OopReraises/OopReraise"));
+            Shared.SolverSizingsInfo.FourBetPlusPot.RiverTree.HeroIp.IpReraisesRiver = ConvertNodesToSizingsArray(xmlDoc.SelectNodes("/SolverSizingSettings/FourBetPlusPot/RiverTree/HeroIp/River/Reraises/IpReraises/IpReraise"));
+
+            #endregion
 
             float[] ConvertNodesToSizingsArray(XmlNodeList nodeList)
             {

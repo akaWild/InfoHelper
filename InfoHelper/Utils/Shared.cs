@@ -47,75 +47,303 @@ namespace InfoHelper.Utils
 
         public static class SolverSizingsInfo
         {
-            public static class TurnTree
+            public static class LimpPot
             {
-                public static class HeroOop
+                public static class TurnTree
                 {
-                    //Turn
-                    public static float[] OopDonkBetsTurn { get; set; }
-                    public static float[] OopBetsTurn { get; set; }
-                    public static float[] IpBetsTurn { get; set; }
-                    public static float[] OopRaisesTurn { get; set; }
-                    public static float[] IpRaisesTurn { get; set; }
-                    public static float[] OopReraisesTurn { get; set; }
-                    public static float[] IpReraisesTurn { get; set; }
+                    public static class HeroOop
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
 
-                    //River
-                    public static float[] OopDonkBetsRiver { get; set; }
-                    public static float[] OopBetsRiver { get; set; }
-                    public static float[] IpBetsRiver { get; set; }
-                    public static float[] OopRaisesRiver { get; set; }
-                    public static float[] IpRaisesRiver { get; set; }
-                    public static float[] OopReraisesRiver { get; set; }
-                    public static float[] IpReraisesRiver { get; set; }
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
                 }
 
-                public static class HeroIp
+                public static class RiverTree
                 {
-                    //Turn
-                    public static float[] OopDonkBetsTurn { get; set; }
-                    public static float[] OopBetsTurn { get; set; }
-                    public static float[] IpBetsTurn { get; set; }
-                    public static float[] OopRaisesTurn { get; set; }
-                    public static float[] IpRaisesTurn { get; set; }
-                    public static float[] OopReraisesTurn { get; set; }
-                    public static float[] IpReraisesTurn { get; set; }
+                    public static class HeroOop
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
 
-                    //River
-                    public static float[] OopDonkBetsRiver { get; set; }
-                    public static float[] OopBetsRiver { get; set; }
-                    public static float[] IpBetsRiver { get; set; }
-                    public static float[] OopRaisesRiver { get; set; }
-                    public static float[] IpRaisesRiver { get; set; }
-                    public static float[] OopReraisesRiver { get; set; }
-                    public static float[] IpReraisesRiver { get; set; }
+                    public static class HeroIp
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
                 }
             }
 
-            public static class RiverTree
+            public static class RaisePot
             {
-                public static class HeroOop
+                public static class TurnTree
                 {
-                    //River
-                    public static float[] OopDonkBetsRiver { get; set; }
-                    public static float[] OopBetsRiver { get; set; }
-                    public static float[] IpBetsRiver { get; set; }
-                    public static float[] OopRaisesRiver { get; set; }
-                    public static float[] IpRaisesRiver { get; set; }
-                    public static float[] OopReraisesRiver { get; set; }
-                    public static float[] IpReraisesRiver { get; set; }
+                    public static class HeroOop
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
                 }
 
-                public static class HeroIp
+                public static class RiverTree
                 {
-                    //River
-                    public static float[] OopDonkBetsRiver { get; set; }
-                    public static float[] OopBetsRiver { get; set; }
-                    public static float[] IpBetsRiver { get; set; }
-                    public static float[] OopRaisesRiver { get; set; }
-                    public static float[] IpRaisesRiver { get; set; }
-                    public static float[] OopReraisesRiver { get; set; }
-                    public static float[] IpReraisesRiver { get; set; }
+                    public static class HeroOop
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+                }
+            }
+
+            public static class ThreeBetPot
+            {
+                public static class TurnTree
+                {
+                    public static class HeroOop
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+                }
+
+                public static class RiverTree
+                {
+                    public static class HeroOop
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+                }
+            }
+
+            public static class FourBetPlusPot
+            {
+                public static class TurnTree
+                {
+                    public static class HeroOop
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //Turn
+                        public static float[] OopDonkBetsTurn { get; set; }
+                        public static float[] OopBetsTurn { get; set; }
+                        public static float[] IpBetsTurn { get; set; }
+                        public static float[] OopRaisesTurn { get; set; }
+                        public static float[] IpRaisesTurn { get; set; }
+                        public static float[] OopReraisesTurn { get; set; }
+                        public static float[] IpReraisesTurn { get; set; }
+
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+                }
+
+                public static class RiverTree
+                {
+                    public static class HeroOop
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
+
+                    public static class HeroIp
+                    {
+                        //River
+                        public static float[] OopDonkBetsRiver { get; set; }
+                        public static float[] OopBetsRiver { get; set; }
+                        public static float[] IpBetsRiver { get; set; }
+                        public static float[] OopRaisesRiver { get; set; }
+                        public static float[] IpRaisesRiver { get; set; }
+                        public static float[] OopReraisesRiver { get; set; }
+                        public static float[] IpReraisesRiver { get; set; }
+                    }
                 }
             }
         }

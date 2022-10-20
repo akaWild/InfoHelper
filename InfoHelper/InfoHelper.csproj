@@ -54,6 +54,9 @@
     <Reference Include="HandEvaluator">
       <HintPath>..\..\..\..\Projects_new\Hand_Evaluator\Hand Evaluator\HandEvaluator\bin\Release\HandEvaluator.dll</HintPath>
     </Reference>
+    <Reference Include="HashManager">
+      <HintPath>..\..\..\HashManager\HashManager\bin\Release\net5.0\HashManager.dll</HintPath>
+    </Reference>
     <Reference Include="LibVBKernel32">
       <HintPath>C:\Users\Tolian\Desktop\EXE_NEW\Info Helper\LibVBKernel32.dll</HintPath>
     </Reference>
