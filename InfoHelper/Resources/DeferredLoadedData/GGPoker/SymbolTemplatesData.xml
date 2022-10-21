@@ -6024,7 +6024,26 @@
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
-              <GgRecordItems />
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="319, 119, 12, 9">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="BB_nd_2_1_1_st_out_tile6" Value="BB" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="309, 119, 6, 9">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageName="1_nd_2_2_1_st_out_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageName="2_nd_2_2_1_st_out_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageName="3_nd_2_2_1_st_out_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageName="4_nd_2_2_1_st_out_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageName="5_nd_2_2_1_st_out_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageName="6_nd_2_2_1_st_out_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageName="7_nd_2_2_1_st_out_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageName="8_nd_2_2_1_st_out_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageName="9_nd_2_2_1_st_out_tile6" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
@@ -10471,12 +10490,12 @@
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="174, 186, 11, 8">
+                <GgRecordItemInfo Rectangle="175, 186, 11, 8">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageName="BB_nd_4_1_6_bet_tile6" Value="BB" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="165, 186, 5, 8">
+                <GgRecordItemInfo Rectangle="166, 186, 5, 8">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageName="0_nd_4_2_6_bet_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageName="1_nd_4_2_6_bet_tile6" Value="1" />
@@ -10490,7 +10509,7 @@
                     <GgRecordItemValueInfo ItemImageName="9_nd_4_2_6_bet_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="159, 186, 5, 8">
+                <GgRecordItemInfo Rectangle="160, 186, 5, 8">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageName="0_nd_4_3_6_bet_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageName="1_nd_4_3_6_bet_tile6" Value="1" />
@@ -10504,7 +10523,7 @@
                     <GgRecordItemValueInfo ItemImageName="9_nd_4_3_6_bet_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="153, 186, 5, 8">
+                <GgRecordItemInfo Rectangle="154, 186, 5, 8">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageName="1_nd_4_4_6_bet_tile6" Value="1" />
                     <GgRecordItemValueInfo ItemImageName="2_nd_4_4_6_bet_tile6" Value="2" />

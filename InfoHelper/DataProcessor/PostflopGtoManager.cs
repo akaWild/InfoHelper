@@ -76,12 +76,10 @@ namespace InfoHelper.DataProcessor
             if (gc.Round == 2)
             {
                 if (gc.RoundChanged)
-                {
                     InitializeFlopTree(gc);
 
-                    if (gc.GtoError == null)
-                        ProcessTree(gc);
-                }
+                if (gc.GtoError == null)
+                    ProcessTree(gc);
             }
             else if (gc.Round == 3)
             {
