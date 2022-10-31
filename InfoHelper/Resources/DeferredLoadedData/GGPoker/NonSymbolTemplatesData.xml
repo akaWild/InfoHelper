@@ -908,7 +908,7 @@
         </GgTemplateInfo>
 
         <!--Dealer-->
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="1" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="1" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -921,7 +921,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="2" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="2" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -934,7 +934,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="3" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="3" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -947,7 +947,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="4" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -960,7 +960,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="5" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="5" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -973,7 +973,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="6" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Default\Dealer" Position="6" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2475,7 +2475,7 @@
         </GgTemplateInfo>
 
         <!--Dealer-->
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="1" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="1" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2488,7 +2488,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="2" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="2" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2501,7 +2501,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="3" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="3" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2514,7 +2514,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="4" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2527,7 +2527,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="5" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="5" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2540,7 +2540,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="6" Deviation="20">
+        <GgTemplateInfo TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="6" Deviation="30">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>

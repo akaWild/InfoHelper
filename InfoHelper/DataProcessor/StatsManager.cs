@@ -2,11 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+using InfoHelper.StatsEntities;
 
-namespace InfoHelper.StatsEntities
+namespace InfoHelper.DataProcessor
 {
     public static class StatsManager
     {
@@ -17,7 +15,7 @@ namespace InfoHelper.StatsEntities
             string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\StatsCsvFiles\\cell_sets.csv");
 
             if(!File.Exists(filePath))
-                throw new Exception("File \"cell_sets.csv\" doesn't exist in root application directory");
+                throw new Exception("File \"cell_sets.csv\" doesn't exist in Resources\\StatsCsvFiles directory");
 
             using FileStream fs = File.Open(filePath, FileMode.Open);
 

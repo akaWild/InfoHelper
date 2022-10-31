@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using GameInformationUtility;
+﻿using GameInformationUtility;
 using InfoHelper.ViewModel.DataEntities;
+using InfoHelper.ViewModel.States;
 
-namespace InfoHelper.ViewModel.States
+namespace InfoHelper.DataProcessor
 {
     public class HudsManager
     {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace InfoHelper.Utils
 {
-    public static class WinAPI
+    public static class WinApi
     {
         public const int GWL_STYLE = -16;
         public const int WS_SYSMENU = 0x80000;

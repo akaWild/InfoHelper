@@ -146,7 +146,7 @@ namespace InfoHelper.DataProcessor
 
                 byte* srcPtr = (byte*)arrayPointer.ToPointer();
 
-                WinAPI.Memcpy(dstPtr, srcPtr, DstStride * Shared.ClientWorkSpaceHeight);
+                WinApi.Memcpy(dstPtr, srcPtr, DstStride * Shared.ClientWorkSpaceHeight);
 
                 dstImg.UnlockBits(dstImgBitmapData);
             }

@@ -542,7 +542,7 @@ namespace InfoHelper.Windows
             {
                 IntPtr hwnd = new WindowInteropHelper(this).Handle;
 
-                WinAPI.SetWindowLong(hwnd, WinAPI.GWL_STYLE, WinAPI.GetWindowLong(hwnd, WinAPI.GWL_STYLE) & ~WinAPI.WS_SYSMENU);
+                WinApi.SetWindowLong(hwnd, WinApi.GWL_STYLE, WinApi.GetWindowLong(hwnd, WinApi.GWL_STYLE) & ~WinApi.WS_SYSMENU);
 
                 LoadData();
 

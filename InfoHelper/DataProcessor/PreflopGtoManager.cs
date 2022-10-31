@@ -45,7 +45,10 @@ namespace InfoHelper.DataProcessor
 
             for (int i = 0; i < gc.InitialStacks.Length; i++)
             {
-                if(gc.IsPlayerIn[i] == null || !(bool)gc.IsPlayerIn[i])
+                if (i == gc.HeroPosition - 1)
+                    continue;
+
+                if (gc.IsPlayerIn[i] == null || !(bool)gc.IsPlayerIn[i])
                     continue;
 
                 initStacksRemaining.Add((float)gc.InitialStacks[i]);
