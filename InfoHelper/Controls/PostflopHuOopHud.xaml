@@ -1,0 +1,265 @@
+﻿<UserControl x:Class="InfoHelper.Controls.PostflopHuOopHud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfoHelper.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding RvCB_BB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding RvCB_XB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding RvCB_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvFLTXRCB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvFLTXRCB_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvDelFLTXRCB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvDblFLTXRCB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding THREEBET_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvTHREEBET_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FOURBET_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding FvDELAY_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding RvDELAY_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding RvDELAY_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvFLTXRDELAY_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding RvSDELAY_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding DONK_BB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding DONK_XB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding DONK_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding DONK_F_BB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding DONK_F_XB_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding DONK_F_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvFLTDONK_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvFLTDONK_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvDelFLTDONK_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvDblFLTDONK_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding DONKDELAY_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding DONKDELAY_F_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding PROBE_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding PROBE_F_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding PROBE_F_B_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvFLTPROBE_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding SPROBE_F_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+        </Grid.RowDefinitions>
+        <!--Header-->
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Flop"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Turn"></local:CellControl>
+        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="River"></local:CellControl>
+        <!--FvCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvCB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvCB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvCB_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvCB_R}"></local:DataCellControl>
+        <!--RvCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="RvCB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_R}"></local:DataCellControl>
+        <!--RvCB_BB-->
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;BB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="3" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_F_B}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_F_BB}"></local:DataCellControl>
+        <!--RvCB_XB-->
+        <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;XB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="4" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="4" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_F_XB}"></local:DataCellControl>
+        <!--RvCB_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="5" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="5" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="5" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_T_B}"></local:DataCellControl>
+        <!--FvFLTXRCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="6" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvFLTXRCB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="6" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATXRCB_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATXRCB_R}"></local:DataCellControl>
+        <!--FvFLTXRCB_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="7" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="7" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="7" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATXRCB_T_B}"></local:DataCellControl>
+        <!--FvDelFLTXRCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="8" Style="{StaticResource DelFloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvDelFLTXRCB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="8" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="8" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="8" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDelFLOATXRCB_R}"></local:DataCellControl>
+        <!--FvDblFLTXRCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="9" Style="{StaticResource DblFloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvDblFLTXRCB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="9" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="9" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="9" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDblFLOATXRCB_R}"></local:DataCellControl>
+        <!--3BET-->
+        <local:CellControl Grid.Column="0" Grid.Row="10" Style="{StaticResource ThreeBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3BET"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="10" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding THREEBET_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="10" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding THREEBET_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="10" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding THREEBET_R}"></local:DataCellControl>
+        <!--Fv3BET-->
+        <local:CellControl Grid.Column="0" Grid.Row="11" Style="{StaticResource ThreeBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Fv3BET"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="11" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvTHREEBET_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="11" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvTHREEBET_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="11" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvTHREEBET_R}"></local:DataCellControl>
+        <!--4BET-->
+        <local:CellControl Grid.Column="0" Grid.Row="12" Style="{StaticResource FourBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4BET"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="12" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FOURBET_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="12" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FOURBET_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="12" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FOURBET_R}"></local:DataCellControl>
+        <!--FvDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="13" Style="{StaticResource DelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvDELAY"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="13" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="13" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDELAY_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="13" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDELAY_R}"></local:DataCellControl>
+        <!--FvDELAY_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="14" Style="{StaticResource DelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="14" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="14" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDELAY_T_B}"></local:DataCellControl>
+        <!--RvDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="15" Style="{StaticResource DelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="RvDELAY"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="15" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvDELAY_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvDELAY_R}"></local:DataCellControl>
+        <!--RvDELAY_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="16" Style="{StaticResource DelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="16" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="16" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvDELAY_T_B}"></local:DataCellControl>
+        <!--FvFLTXRDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="17" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvFLTXRDELAY"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="17" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="17" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="17" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATXRDELAY_R}"></local:DataCellControl>
+        <!--FvSDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="18" Style="{StaticResource SDelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvSDELAY"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="18" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="18" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="18" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvSDELAY_R}"></local:DataCellControl>
+        <!--RvSDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="19" Style="{StaticResource SDelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="RvSDELAY"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="19" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="19" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="19" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvSDELAY_R}"></local:DataCellControl>
+        <!--DONK-->
+        <local:CellControl Grid.Column="0" Grid.Row="20" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="DONK"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_R}"></local:DataCellControl>
+        <!--DONK_BB-->
+        <local:CellControl Grid.Column="0" Grid.Row="21" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;BB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="21" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_B}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_BB}"></local:DataCellControl>
+        <!--DONK_XB-->
+        <local:CellControl Grid.Column="0" Grid.Row="22" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;XB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="22" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="22" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="22" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_XB}"></local:DataCellControl>
+        <!--DONK_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="23" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="23" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="23" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="23" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_T_B}"></local:DataCellControl>
+        <!--DONK/F-->
+        <local:CellControl Grid.Column="0" Grid.Row="24" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="DONK/F"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_R}"></local:DataCellControl>
+        <!--DONK/F_BB-->
+        <local:CellControl Grid.Column="0" Grid.Row="25" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;BB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="25" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_F_B}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_F_BB}"></local:DataCellControl>
+        <!--DONK/F_XB-->
+        <local:CellControl Grid.Column="0" Grid.Row="26" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;XB"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="26" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="26" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="26" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_F_XB}"></local:DataCellControl>
+        <!--DONK/F_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="27" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="27" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="27" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="27" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONK_F_T_B}"></local:DataCellControl>
+        <!--FvFLTDONK-->
+        <local:CellControl Grid.Column="0" Grid.Row="28" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvFLTDONK"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="28" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="28" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATDONK_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="28" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATDONK_R}"></local:DataCellControl>
+        <!--FvFLTDONK_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="29" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="29" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="29" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="29" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATDONK_T_B}"></local:DataCellControl>
+        <!--FvDelFLTDONK-->
+        <local:CellControl Grid.Column="0" Grid.Row="30" Style="{StaticResource DelFloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvDelFLTDONK"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="30" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="30" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="30" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDelFLOATDONK_R}"></local:DataCellControl>
+        <!--FvDblFLTDONK-->
+        <local:CellControl Grid.Column="0" Grid.Row="31" Style="{StaticResource DblFloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvDblFLTDONK"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="31" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="31" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="31" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDblFLOATDONK_R}"></local:DataCellControl>
+        <!--DONKDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="32" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="DONKDELAY"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="32" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="32" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="32" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONKDELAY_R}"></local:DataCellControl>
+        <!--DONKDELAY/F-->
+        <local:CellControl Grid.Column="0" Grid.Row="33" Style="{StaticResource DonkPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="DONKDELAY/F"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="33" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="33" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="33" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding DONKDELAY_F_R}"></local:DataCellControl>
+        <!--PROBE-->
+        <local:CellControl Grid.Column="0" Grid.Row="34" Style="{StaticResource ProbePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="PROBE"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="34" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="34" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding PROBE_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="34" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding PROBE_R}"></local:DataCellControl>
+        <!--PROBE_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="35" Style="{StaticResource ProbePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="35" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="35" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="35" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding PROBE_T_B}"></local:DataCellControl>
+        <!--PROBE/F-->
+        <local:CellControl Grid.Column="0" Grid.Row="36" Style="{StaticResource ProbePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="PROBE/F"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="36" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="36" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding PROBE_F_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="36" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding PROBE_F_R}"></local:DataCellControl>
+        <!--PROBE/F_B-->
+        <local:CellControl Grid.Column="0" Grid.Row="37" Style="{StaticResource ProbePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="...&amp;B"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="37" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="37" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="37" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding PROBE_F_T_B}"></local:DataCellControl>
+        <!--FvFLTPROBE-->
+        <local:CellControl Grid.Column="0" Grid.Row="38" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvFLTPROBE"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="38" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="38" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="38" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvFLOATPROBE_R}"></local:DataCellControl>
+        <!--SPROBE-->
+        <local:CellControl Grid.Column="0" Grid.Row="39" Style="{StaticResource SProbePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="SPROBE"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="39" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="39" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="39" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding SPROBE_R}"></local:DataCellControl>
+        <!--SPROBE/F-->
+        <local:CellControl Grid.Column="0" Grid.Row="40" Style="{StaticResource SProbePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="SPROBE/F"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="40" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="40" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="40" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding SPROBE_F_R}"></local:DataCellControl>
+    </Grid>
+</UserControl>

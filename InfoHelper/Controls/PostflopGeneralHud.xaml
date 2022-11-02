@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="InfoHelper.Controls.PostflopGeneralHud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfoHelper.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="{Binding ThreeBet_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FvThreeBet_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+            <RowDefinition Height="{Binding FourBet_Row, Converter={StaticResource RowVisibilityConverter}}"/>
+        </Grid.RowDefinitions>
+        <!--Header-->
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Flop"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Turn"></local:CellControl>
+        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="River"></local:CellControl>
+        <!--Bet-->
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource BetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Bet"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bet_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bet_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bet_R}"></local:DataCellControl>
+        <!--FvBet-->
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource FvBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvBet"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvBet_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvBet_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvBet_R}"></local:DataCellControl>
+        <!--Raise-->
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource RaisePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Raise"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Raise_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Raise_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Raise_R}"></local:DataCellControl>
+        <!--FvRaise-->
+        <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource FvRaisePostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvRaise"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvRaise_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvRaise_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvRaise_R}"></local:DataCellControl>
+        <!--3bet-->
+        <local:CellControl Grid.Column="0" Grid.Row="5" Style="{StaticResource ThreeBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3bet"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding ThreeBet_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding ThreeBet_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding ThreeBet_R}"></local:DataCellControl>
+        <!--Fv3bet-->
+        <local:CellControl Grid.Column="0" Grid.Row="6" Style="{StaticResource ThreeBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Fv3bet"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvThreeBet_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvThreeBet_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvThreeBet_R}"></local:DataCellControl>
+        <!--4bet-->
+        <local:CellControl Grid.Column="0" Grid.Row="7" Style="{StaticResource FourBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4bet"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FourBet_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FourBet_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FourBet_R}"></local:DataCellControl>
+    </Grid>
+</UserControl>

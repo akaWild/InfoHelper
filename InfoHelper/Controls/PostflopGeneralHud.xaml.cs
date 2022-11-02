@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace InfoHelper.Controls
 {
     /// <summary>
-    /// Interaction logic for TurnHud.xaml
+    /// Interaction logic for RiverHud.xaml
     /// </summary>
-    public partial class TurnHud : UserControl
+    public partial class PostflopGeneralHud : UserControl
     {
-        public TurnHud()
+        public PostflopGeneralHud()
         {
             InitializeComponent();
         }

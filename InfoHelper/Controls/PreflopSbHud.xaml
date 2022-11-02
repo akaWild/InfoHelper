@@ -37,6 +37,7 @@
             <RowDefinition Height="{Binding Sb_RaiseIsolate_Limper_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Sb_3bet_CC_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Sb_3bet_Raiser_Vs_Bb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Sb_4bet_Range_Vs_Bb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Sb_4bet_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Sb_4bet_Vs_Bb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
         </Grid.RowDefinitions>
@@ -112,11 +113,13 @@
         <local:CellControl Grid.Column="0" Grid.Row="23" Style="{StaticResource ThreeBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3b (vs BB) p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="23" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_3bet_Raiser_Vs_Bb_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="23" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_3bet_Raiser_Vs_Bb_Raise}"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="24" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4bet p."></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Raise}"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="25" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs BB"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Vs_Bb_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Vs_Bb_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="24" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4b range (vs BB)"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="24" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Range_Vs_Bb}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="25" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4bet p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="25" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="26" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs BB"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="26" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Vs_Bb_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="26" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Sb_4bet_Vs_Bb_Raise}"></local:DataCellControl>
     </Grid>
 </UserControl>

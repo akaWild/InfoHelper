@@ -208,37 +208,65 @@
         <Setter Property="Background" Value="Indigo"/>
     </Style>
     <!--Postflop-->
-    <Style x:Key="CbCellHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="Black"/>
+    <Style x:Key="CbPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
         <Setter Property="Background" Value="DarkOrange"/>
     </Style>
-    <Style x:Key="BetPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+    <Style x:Key="FloatPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="LightSkyBlue"/>
+    </Style>
+    <Style x:Key="DelFloatPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="Blue"/>
+        <Setter Property="Background" Value="RoyalBlue"/>
     </Style>
-    <Style x:Key="BetXPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+    <Style x:Key="DblFloatPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="LimeGreen"/>
-    </Style>
-    <Style x:Key="FvBetPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="DodgerBlue"/>
-    </Style>
-    <Style x:Key="FvBetXPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="Yellow"/>
-    </Style>
-    <Style x:Key="RaisePostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="DarkOrange"/>
-    </Style>
-    <Style x:Key="FvRaisePostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="Orange"/>
+        <Setter Property="Background" Value="DeepSkyBlue"/>
     </Style>
     <Style x:Key="ThreeBetPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="Background" Value="DeepPink"/>
+        <Setter Property="Background" Value="Magenta"/>
+    </Style>
+    <Style x:Key="FourBetPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="DarkViolet"/>
+    </Style>
+    <Style x:Key="DelayPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="Yellow"/>
+    </Style>
+    <Style x:Key="SDelayPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="#FFC914"/>
+    </Style>
+    <Style x:Key="DonkPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Red"/>
+    </Style>
+    <Style x:Key="ProbePostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="Lime"/>
+    </Style>
+    <Style x:Key="SProbePostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="#1DCC34"/>
+    </Style>
+    <Style x:Key="BetPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="DeepSkyBlue"/>
+    </Style>
+    <Style x:Key="FvBetPostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Red"/>
+    </Style>
+    <Style x:Key="RaisePostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="DarkBlue"/>
+    </Style>
+    <Style x:Key="FvRaisePostflopHeaderStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Background" Value="Red"/>
     </Style>
 
 </ResourceDictionary>
