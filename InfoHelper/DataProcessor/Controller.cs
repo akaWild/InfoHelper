@@ -53,6 +53,8 @@ namespace InfoHelper.DataProcessor
 
         private readonly HudsManager _hudsManager;
 
+        private readonly StatManager _statManager;
+
         private readonly PreflopGtoManager _gtoPreflopManager;
 
         private readonly MethodInfo _findWindows;
@@ -110,11 +112,11 @@ namespace InfoHelper.DataProcessor
                     return Assembly.LoadFrom(requiredAssembly.FullName);
                 };
 
-                StatsManager.LoadCells();
-
                 _captureCardManager = new CaptureCardManager();
 
                 _hudsManager = new HudsManager(_mainWindowState);
+
+                _statManager = new StatManager();
 
                 _gtoPreflopManager = new PreflopGtoManager();
 
@@ -287,27 +289,45 @@ namespace InfoHelper.DataProcessor
 
                             if (analyzeResult)
                             {
-                                for (int j = 0; j < screenData.Nicks.Length; j++)
-                                {
-                                    if (!screenData.IsNickOverlapped[j])
-                                    {
-                                        (string name, bool isConfirmed) = _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
-
-                                        winContextInfo.GameContext.Players[j] = name;
-                                        winContextInfo.GameContext.IsPlayerConfirmed[j] = isConfirmed;
-                                    }
-                                }
-
-                                if(winContextInfo.GameContext.Round == 1)
+                                if (winContextInfo.GameContext.Round == 1)
                                     PokerRoomManager.ProcessData(window, screenData, bmpDecor);
                             }
 
-                            if (winContextInfo.GameContext.SituationChanged && winContextInfo.GameContext.Error == string.Empty)
+
+                            if (winContextInfo.GameContext.Error == string.Empty)
                             {
-                                if(winContextInfo.GameContext.Round == 1)
-                                    _gtoPreflopManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
-                                else
-                                    _gtoPostflopManager.GetPostflopGtoStrategy(winContextInfo.GameContext);
+                                for (int j = 0; j < screenData.Nicks.Length; j++)
+                                {
+                                    string name = winContextInfo.GameContext.Players[j];
+                                    bool isConfirmed = winContextInfo.GameContext.IsPlayerConfirmed[j];
+
+                                    if (!screenData.IsNickOverlapped[j])
+                                    {
+                                        (name, isConfirmed) = _playersManager.GetPlayer(screenData.NickImages[j].ToBitmapSource(), screenData.Nicks[j]);
+
+                                        if (!isConfirmed)
+                                            name = screenData.Nicks[j];
+                                    }
+                                    else
+                                    {
+                                        if (screenData.IsStackOverlapped[j])
+                                        {
+                                            name = null;
+                                            isConfirmed = false;
+                                        }
+                                    }
+
+                                    winContextInfo.GameContext.Players[j] = name;
+                                    winContextInfo.GameContext.IsPlayerConfirmed[j] = isConfirmed;
+                                }
+
+                                if (winContextInfo.GameContext.SituationChanged)
+                                {
+                                    if (winContextInfo.GameContext.Round == 1)
+                                        _gtoPreflopManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
+                                    else
+                                        _gtoPostflopManager.GetPostflopGtoStrategy(winContextInfo.GameContext);
+                                }
                             }
 
                             isHeroActing = winContextInfo.GameContext.Error == string.Empty;
@@ -335,7 +355,19 @@ namespace InfoHelper.DataProcessor
                 if (foregroundGameContext == null)
                     _hudsManager.ResetControls();
                 else
-                    _hudsManager.UpdateHuds(foregroundGameContext);
+                {
+                    StatSet[][] statSets = new StatSet[foregroundGameContext.Players.Length][];
+
+                    for (int i = 0; i < statSets.Length; i++)
+                    {
+                        if(!foregroundGameContext.IsPlayerConfirmed[i])
+                            continue;
+
+                        statSets[i] = _statManager.GetPlayer(foregroundGameContext.Players[i]);
+                    }
+
+                    _hudsManager.UpdateHuds(foregroundGameContext, statSets);
+                }
             }
             finally
             {
@@ -381,6 +413,8 @@ namespace InfoHelper.DataProcessor
                 _timer.Start();
 
                 _mainWindowState.ControlsState.Start();
+
+                _statManager.Start();
             }
             catch (Exception ex)
             {
@@ -415,6 +449,8 @@ namespace InfoHelper.DataProcessor
                 _hudsManager.ResetWindowsPanel();
 
                 _mainWindowState.ControlsState.Stop();
+
+                _statManager.Stop();
             }
         }
 

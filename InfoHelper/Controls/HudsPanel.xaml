@@ -43,7 +43,7 @@
             <local:PreflopGeneralHud Grid.Row="2" Margin="5" VerticalAlignment="Top"  
                               Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                 <local:PreflopGeneralHud.DataContext>
-                    <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PreflopGeneralHudState"/>
+                    <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.GeneralHudState"/>
                 </local:PreflopGeneralHud.DataContext>
             </local:PreflopGeneralHud>
         </Grid>

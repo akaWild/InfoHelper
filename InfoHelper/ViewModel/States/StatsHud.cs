@@ -25,6 +25,7 @@ namespace InfoHelper.ViewModel.States
             else
             {
                 bool valueFound = _cells.TryGetValue(binder.Name, out DataCell dc);
+
                 result = dc;
 
                 return valueFound;

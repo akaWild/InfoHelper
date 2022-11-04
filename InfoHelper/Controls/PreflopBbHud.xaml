@@ -39,28 +39,28 @@
             <RowDefinition Height="{Binding Bb_4bet_Vs_Sb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
         </Grid.RowDefinitions>
         <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="BB"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellPreflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Fold"></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellPreflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="X | F"></local:CellControl>
         <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellPreflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Raise"></local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource LimpHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Limp p."></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="1" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs EP"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="2" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Ep_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Ep_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs MP"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="3" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Mp_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Mp_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs CO"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="4" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Co_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Co_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="5" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs BTN"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="5" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Btn_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Btn_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="6" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="vs SB"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="6" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Sb_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="6" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Sb_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="7" Style="{StaticResource LimpVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="multiway"></local:CellControl>
-        <local:CellControl Grid.Column="1" Grid.Row="7" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Multi_Check}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="7" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Limp_Vs_Multi_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="8" Style="{StaticResource RaiseHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Raise p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="8" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Bb_Raise_Fold}"></local:DataCellControl>

@@ -116,11 +116,18 @@ namespace InfoHelper.Controls
 
             List<DataCell> dataCells = new List<DataCell>();
 
-            if(Data.CellData != null)
-                dataCells.Add(Data);
+            if (Data.CellData != null)
+            {
+                if (Data.ConnectedCells != null)
+                {
+                    if(Data.ConnectedCells.Length < 2)
+                        dataCells.Add(Data);
 
-            if(Data.ConnectedCells != null)
-                dataCells.AddRange(Data.ConnectedCells);
+                    dataCells.AddRange(Data.ConnectedCells);
+                }
+                else
+                    dataCells.Add(Data);
+            }
 
             if (dataCells.Count == 0)
                 return;

@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace InfoHelper.StatsEntities
 {
-    public class StatsPlayer
+    public class StatPlayer
     {
-        public StatsSet[] StatsSets { get; }
+        public StatSet[] StatSets { get; init; }
 
-        public StatsPlayer()
-        {
-
-        }
+        public DateTime LastAccessTime { get; set; } = DateTime.Now;
     }
 }

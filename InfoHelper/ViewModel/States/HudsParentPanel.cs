@@ -6,7 +6,7 @@
 
         public ViewModelNameState NameState { get; } = new ViewModelNameState();
 
-        public ViewModelStatsHud PreflopGeneralHudState { get; } = new ViewModelStatsHud();
+        public ViewModelStatsHud GeneralHudState { get; } = new ViewModelStatsHud();
 
         public ViewModelStatsHud SbPreflopHudState { get; } = new ViewModelStatsHud();
 
@@ -35,5 +35,7 @@
         public ViewModelPreflopMatrixState PreflopMatrixAltState { get; } = new ViewModelPreflopMatrixState();
 
         public ViewModelPostlopHandsTableState PostflopHandsPanelState { get; } = new ViewModelPostlopHandsTableState();
+
+        public ViewModelPostlopHandsTableState PostflopHandsPanelAltState { get; } = new ViewModelPostlopHandsTableState();
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InfoHelper.StatsEntities
 {
-    public abstract class DataCell
+    public abstract class DataCell : ICloneable
     {
         protected double Value = 0;
 
@@ -38,7 +38,9 @@ namespace InfoHelper.StatsEntities
 
         public abstract double CalculatedValue { get; }
 
-        public int Sample { get; private set; }
+        public int Sample { get; protected set; }
+
+        public abstract object Clone();
     }
 
     public class ValueCell : DataCell
@@ -46,13 +48,39 @@ namespace InfoHelper.StatsEntities
         public ValueCell(string name, string description) : base(name, description) { }
 
         public override double CalculatedValue => Sample;
+
+        public override object Clone()
+        {
+            ValueCell vc = new ValueCell(Name, Description)
+            {
+                Value = Value,
+                CellData = CellData,
+                DefaultValue = DefaultValue,
+                Sample = Sample
+            };
+
+            return vc;
+        }
     }
 
-    public class StatsCell : DataCell
+    public class StatCell : DataCell
     {
-        public StatsCell(string name, string description): base(name, description) { }
+        public StatCell(string name, string description): base(name, description) { }
 
         public override double CalculatedValue => Value * 100 / Sample;
+
+        public override object Clone()
+        {
+            StatCell sc = new StatCell(Name, Description)
+            {
+                Value = Value,
+                CellData = CellData,
+                DefaultValue = DefaultValue,
+                Sample = Sample
+            };
+
+            return sc;
+        }
     }
 
     public class EvCell : DataCell
@@ -60,5 +88,18 @@ namespace InfoHelper.StatsEntities
         public EvCell(string name, string description) : base(name, description) { }
 
         public override double CalculatedValue => Value * 100 / Sample;
+
+        public override object Clone()
+        {
+            EvCell ec = new EvCell(Name, Description)
+            {
+                Value = Value,
+                CellData = CellData,
+                DefaultValue = DefaultValue,
+                Sample = Sample
+            };
+
+            return ec;
+        }
     }
 }
