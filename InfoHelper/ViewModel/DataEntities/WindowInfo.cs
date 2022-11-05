@@ -7,7 +7,7 @@ using System.Windows;
 
 namespace InfoHelper.ViewModel.DataEntities
 {
-    public class WindowInfo
+    public class WindowInfo : IComparable<WindowInfo>
     {
         public Rect Rectangle { get; }
 
@@ -20,6 +20,19 @@ namespace InfoHelper.ViewModel.DataEntities
             Rectangle = rect;
             WindowState = winState;
             IsHeroActing = isHeroActing;
+        }
+
+        public int CompareTo(WindowInfo other)
+        {
+            int thisHash = Rectangle.GetHashCode(), otherHash = other.Rectangle.GetHashCode();
+
+            if (thisHash > otherHash)
+                return 1;
+
+            if (thisHash < otherHash)
+                return -1;
+
+            return 0;
         }
     }
 

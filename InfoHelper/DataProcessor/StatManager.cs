@@ -129,8 +129,8 @@ namespace InfoHelper.DataProcessor
 
             string[] headerParts = title.Split(';');
 
-            if (headerParts.Length != 7)
-                throw new Exception("Header row in file \"cell_sets.csv\" contains less or more than 7 elements");
+            if (headerParts.Length != 8)
+                throw new Exception("Header row in file \"cell_sets.csv\" contains less or more than 8 elements");
 
             List<string[]> records = new List<string[]>();
 
@@ -159,7 +159,7 @@ namespace InfoHelper.DataProcessor
                 if(cellType == null)
                     throw new Exception($"{record[1]} cell type was not found");
 
-                DataCell cell = (DataCell)Activator.CreateInstance(cellType, record[3], record[4]);
+                DataCell cell = (DataCell)Activator.CreateInstance(cellType, record[4], record[5]);
 
                 if(cell == null)
                     throw new Exception($"Failed to create instance of type {cellType.Name}");
@@ -177,6 +177,44 @@ namespace InfoHelper.DataProcessor
                         throw new Exception($"Failed to create instance of type {dataCellType.Name}");
 
                     cell.CellData = cellData;
+
+                    if (record[3] != string.Empty)
+                    {
+                        string[] betStrings = record[3].Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                        int[] bets = new int[betStrings.Length];
+
+                        for (int i = 0; i < betStrings.Length; i++)
+                        {
+                            if(!int.TryParse(betStrings[i], out int bet))
+                                throw new Exception($"{record[3]} bet ranges line has incorrect format");
+
+                            bets[i] = bet;
+                        }
+
+                        if(bets.Length > 3)
+                            throw new Exception("The total number of bet values must be 3 or less");
+
+                        Array.Sort(bets);
+
+                        BetRange[] betRanges = new BetRange[bets.Length + 1];
+
+                        int lowBound = 0;
+
+                        for (int i = 0; i < bets.Length; i++)
+                        {
+                            if(bets[i] <= 0)
+                                throw new Exception("Bet value must greater than 0");
+
+                            betRanges[i] = new BetRange() { LowBound = lowBound, UpperBound = bets[i] };
+
+                            lowBound = bets[i];
+                        }
+
+                        betRanges[^1] = new BetRange() { LowBound = bets[^1], UpperBound = int.MaxValue };
+
+                        cell.BetRanges = betRanges;
+                    }
                 }
 
                 if (cellGroup.Count(c => c.Name == cell.Name) != 0)
@@ -189,7 +227,7 @@ namespace InfoHelper.DataProcessor
             {
                 List<DataCell> cellGroup = CellGroups[record[0]];
 
-                DataCell dataCell = cellGroup.First(c => c.Name == record[3]);
+                DataCell dataCell = cellGroup.First(c => c.Name == record[4]);
 
                 string[] connectedCellsNames = record.TakeLast(2).Where(c => c != string.Empty).ToArray();
 

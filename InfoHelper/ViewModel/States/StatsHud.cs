@@ -4,6 +4,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using HashUtils;
 using InfoHelper.StatsEntities;
 
 namespace InfoHelper.ViewModel.States
@@ -13,6 +14,10 @@ namespace InfoHelper.ViewModel.States
         private readonly Dictionary<string, DataCell> _cells = new Dictionary<string, DataCell>();
 
         private readonly Dictionary<string, bool> _rowsVisible = new Dictionary<string, bool>();
+
+        public string PlayerName { get; set; }
+
+        public string SetName { get; set; }
 
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
@@ -52,6 +57,21 @@ namespace InfoHelper.ViewModel.States
 
             foreach (string row in rows)
                 _rowsVisible[row] = true;
+        }
+
+        public override void UpdateBindings()
+        {
+            string hashString = $"{Visible}{PlayerName}{SetName}";
+
+            foreach (var kv in _rowsVisible)
+                hashString += $"{kv.Key}";
+
+            int hashCode = hashString.GetStableHashCode();
+
+            if(hashCode != HashCode)
+                base.UpdateBindings();
+
+            HashCode = hashCode;
         }
     }
 }

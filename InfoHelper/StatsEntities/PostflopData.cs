@@ -8,5 +8,15 @@ namespace InfoHelper.StatsEntities
 {
     public class PostflopData
     {
+        public HandsGroup MainGroup { get; } = new HandsGroup();
+
+        public HandsGroup[] SubGroups { get; } = new HandsGroup[4];
+    }
+
+    public class HandsGroup
+    {
+        public int[] MadeHands { get; } = new int[50];
+
+        public int[] DrawHands { get; } = new int[50];
     }
 }

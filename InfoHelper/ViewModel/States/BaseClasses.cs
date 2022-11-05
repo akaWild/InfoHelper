@@ -31,13 +31,15 @@ namespace InfoHelper.ViewModel.States
 
     public abstract class ViewModelDeferredBindableState : ViewModelStateBase
     {
+        protected int HashCode;
+
         public override bool Visible
         {
             get => _visible;
             set => _visible = value;
         }
 
-        public void UpdateBindings()
+        public virtual void UpdateBindings()
         {
             OnPropertyChanged(string.Empty);
         }

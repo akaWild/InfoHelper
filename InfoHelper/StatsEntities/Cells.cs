@@ -18,6 +18,8 @@ namespace InfoHelper.StatsEntities
 
         public DataCell[] ConnectedCells { get; set; }
 
+        public BetRange[] BetRanges { get; set; }
+
         public double DefaultValue { get; set; } = double.NaN;
 
         protected DataCell(string name, string description)
@@ -55,6 +57,7 @@ namespace InfoHelper.StatsEntities
             {
                 Value = Value,
                 CellData = CellData,
+                BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
                 DefaultValue = DefaultValue,
                 Sample = Sample
             };
@@ -75,6 +78,7 @@ namespace InfoHelper.StatsEntities
             {
                 Value = Value,
                 CellData = CellData,
+                BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
                 DefaultValue = DefaultValue,
                 Sample = Sample
             };
@@ -95,11 +99,19 @@ namespace InfoHelper.StatsEntities
             {
                 Value = Value,
                 CellData = CellData,
+                BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
                 DefaultValue = DefaultValue,
                 Sample = Sample
             };
 
             return ec;
         }
+    }
+
+    public record BetRange
+    {
+        public int LowBound { get; init; }
+
+        public int UpperBound { get; init; }
     }
 }

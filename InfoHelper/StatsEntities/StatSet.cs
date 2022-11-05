@@ -137,5 +137,11 @@ namespace InfoHelper.StatsEntities
 
             return ss;
         }
+
+        public override string ToString()
+        {
+            return $"Game type: {GameType}\r\nRound: {Round}\r\nPosition: {Position}\r\nOpp position: {OppPosition}\r\nRelative position: {RelativePosition}\r\n" +
+                   $"Players on flop: {PlayersOnFlop}\r\nPreflop pot type: {PreflopPotType}\r\nPreflop actions: {PreflopActions}\r\nSet type: {SetType}";
+        }
     }
 }

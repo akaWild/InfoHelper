@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace InfoHelper
 {
@@ -32,6 +33,11 @@ namespace InfoHelper
             Current.ShutdownMode = ShutdownMode.OnMainWindowClose;
 
             base.OnStartup(e);
+        }
+
+        static App()
+        {
+            ToolTipService.ShowDurationProperty.OverrideMetadata(typeof(Control), new FrameworkPropertyMetadata(int.MaxValue));
         }
     }
 }
