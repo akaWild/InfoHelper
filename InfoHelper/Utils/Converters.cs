@@ -59,6 +59,30 @@ namespace InfoHelper.Utils
         }
     }
 
+    public class DataCellBackgroundConverter : IValueConverter
+    {
+        private object _notSelectedBackgroundBrush;
+        private object _selectedBackgroundBrush;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            if (value == null)
+                return _notSelectedBackgroundBrush;
+
+            _notSelectedBackgroundBrush ??= Application.Current.TryFindResource("NotSelectedDataCellBackground");
+            _selectedBackgroundBrush ??= Application.Current.TryFindResource("SelectedDataCellBackground");
+
+            DataCell dc = (DataCell)value;
+
+            return (dc.IsSelected) ? _selectedBackgroundBrush : _notSelectedBackgroundBrush;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public class BoolToGridRowHeightConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)

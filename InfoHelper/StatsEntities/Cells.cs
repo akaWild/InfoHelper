@@ -22,6 +22,8 @@ namespace InfoHelper.StatsEntities
 
         public double DefaultValue { get; set; } = double.NaN;
 
+        public bool IsSelected { get; set; }
+
         protected DataCell(string name, string description)
         {
             Name = name;
@@ -59,6 +61,7 @@ namespace InfoHelper.StatsEntities
                 CellData = CellData,
                 BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
                 DefaultValue = DefaultValue,
+                IsSelected = IsSelected,
                 Sample = Sample
             };
 
@@ -80,6 +83,7 @@ namespace InfoHelper.StatsEntities
                 CellData = CellData,
                 BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
                 DefaultValue = DefaultValue,
+                IsSelected = IsSelected,
                 Sample = Sample
             };
 
@@ -101,6 +105,7 @@ namespace InfoHelper.StatsEntities
                 CellData = CellData,
                 BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
                 DefaultValue = DefaultValue,
+                IsSelected = IsSelected,
                 Sample = Sample
             };
 

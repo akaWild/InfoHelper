@@ -19,6 +19,8 @@ namespace InfoHelper.ViewModel.States
 
         public string SetName { get; set; }
 
+        public static string SelectedCell { get; set; }
+
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
             if (binder.Name.EndsWith("Row"))
@@ -45,7 +47,11 @@ namespace InfoHelper.ViewModel.States
             _cells.Clear();
 
             foreach (DataCell cell in cells)
+            {
                 _cells[cell.Name] = cell;
+
+                _cells[cell.Name].IsSelected = false;
+            }
         }
 
         public void SetRows(string[] rows)
@@ -61,7 +67,7 @@ namespace InfoHelper.ViewModel.States
 
         public override void UpdateBindings()
         {
-            string hashString = $"{Visible}{PlayerName}{SetName}";
+            string hashString = $"{Visible}{PlayerName}{SetName}{SelectedCell != null && _cells.ContainsKey(SelectedCell)}";
 
             foreach (var kv in _rowsVisible)
                 hashString += $"{kv.Key}";

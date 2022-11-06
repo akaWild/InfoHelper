@@ -9,7 +9,7 @@ namespace InfoHelper.ViewModel.States
 
         public override void UpdateBindings()
         {
-            string hashString = $"{Visible}";
+            string hashString = $"{Visible}{Header ?? string.Empty}";
 
             if (PreflopData != null)
             {

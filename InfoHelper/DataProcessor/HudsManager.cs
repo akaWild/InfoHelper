@@ -391,6 +391,71 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].PostflopGeneralHudState.SetName = $"{generalPostflopSet}";
                     }
 
+                    DataCell selectedCell = null;
+                    DataCell missedCell = null;
+
+                    //Test!!!
+                    //selectedCell = _vmMain.HudsParentStates[i].PostflopHuIpHudState.Visible ? huIpPostflopSet.Cells.First(c => c.Name == "CB_F") : null;
+                    //missedCell = _vmMain.HudsParentStates[i].PostflopHuIpHudState.Visible ? huIpPostflopSet.Cells.First(c => c.Name == "CX_F") : null;
+
+                    if (selectedCell == null)
+                    {
+                        _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = false;
+                        _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = false;
+                    }
+                    else
+                    {
+                        if (selectedCell.CellData == null)
+                            throw new Exception($"Cell {selectedCell.Name} doesn't contain data");
+
+                        if (selectedCell.CellData is PreflopData preflopData)
+                        {
+                            _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = true;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = false;
+
+                            _vmMain.HudsParentStates[i].PreflopMatrixState.PreflopData = preflopData;
+                            _vmMain.HudsParentStates[i].PreflopMatrixState.Header = selectedCell.Description;
+                        }
+                        else if(selectedCell.CellData is PostflopData postflopData)
+                        {
+                            _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = false;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = true;
+
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.PostflopData = postflopData;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.Header = selectedCell.Description;
+                        }
+
+                        selectedCell.IsSelected = true;
+                    }
+
+                    if (missedCell == null)
+                    {
+                        _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
+                        _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = false;
+                    }
+                    else
+                    {
+                        if (missedCell.CellData == null)
+                            throw new Exception($"Cell {missedCell.Name} doesn't contain data");
+
+                        if (missedCell.CellData is PreflopData preflopData)
+                        {
+                            _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = true;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = false;
+
+                            _vmMain.HudsParentStates[i].PreflopMatrixAltState.PreflopData = preflopData;
+                        }
+                        else if (missedCell.CellData is PostflopData postflopData)
+                        {
+                            _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = true;
+
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.PostflopData = postflopData;
+                        }
+                    }
+
+                    ViewModelStatsHud.SelectedCell = selectedCell?.Name;
+
                     Position GetPlayerPosition(int player)
                     {
                         if (player == gc.SmallBlindPosition)
@@ -534,6 +599,12 @@ namespace InfoHelper.DataProcessor
                 _vmMain.HudsParentStates[i].PostflopHuIpHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].PostflopHuOopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].PostflopGeneralHudState.UpdateBindings();
+
+                _vmMain.HudsParentStates[i].PreflopMatrixState.UpdateBindings();
+                _vmMain.HudsParentStates[i].PreflopMatrixAltState.UpdateBindings();
+
+                _vmMain.HudsParentStates[i].PostflopHandsPanelState.UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.UpdateBindings();
             }
 
             _vmMain.GtoParentState.Error = gc.Error != string.Empty ? null : gc.GtoError;
@@ -576,6 +647,12 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.PostflopHuOopHudState.Visible = false;
                 vmHudsParent.PostflopGeneralHudState.Visible = false;
 
+                vmHudsParent.PreflopMatrixState.Visible = false;
+                vmHudsParent.PostflopHandsPanelState.Visible = false;
+
+                vmHudsParent.PreflopMatrixAltState.Visible = false;
+                vmHudsParent.PostflopHandsPanelAltState.Visible = false;
+
                 vmHudsParent.NameState.UpdateBindings();
                 vmHudsParent.ActionsState.UpdateBindings();
 
@@ -591,6 +668,12 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.PostflopHuIpHudState.UpdateBindings();
                 vmHudsParent.PostflopHuOopHudState.UpdateBindings();
                 vmHudsParent.PostflopGeneralHudState.UpdateBindings();
+
+                vmHudsParent.PreflopMatrixState.UpdateBindings();
+                vmHudsParent.PreflopMatrixAltState.UpdateBindings();
+
+                vmHudsParent.PostflopHandsPanelState.UpdateBindings();
+                vmHudsParent.PostflopHandsPanelAltState.UpdateBindings();
             }
 
             _vmMain.GtoParentState.Error = string.Empty;

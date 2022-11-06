@@ -105,6 +105,17 @@
         <SolidColorBrush>#000064</SolidColorBrush>
     </x:Array>
 
+    <!--Postflop hands table-->
+    <SolidColorBrush x:Key="PostflopHandsTableHeaderForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="PostflopHandsTableHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
+    <SolidColorBrush x:Key="PostflopHandsTableBackgroundBrush">BlanchedAlmond</SolidColorBrush>
+
+    <Style TargetType="controls:PostlopHandsTableControl">
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+    </Style>
+
     <!--Stats control cells-->
 
     <!--Border-->
@@ -141,9 +152,11 @@
     </Style>
     <Style TargetType="controls:DataCellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="Beige"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
+
+    <SolidColorBrush x:Key="NotSelectedDataCellBackground">Beige</SolidColorBrush>
+    <SolidColorBrush x:Key="SelectedDataCellBackground">BurlyWood</SolidColorBrush>
 
     <!--Groups-->
     <!--Preflop-->
