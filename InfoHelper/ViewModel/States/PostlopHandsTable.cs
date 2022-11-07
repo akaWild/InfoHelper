@@ -5,16 +5,16 @@ namespace InfoHelper.ViewModel.States
 {
     public class ViewModelPostlopHandsTableState : ViewModelDeferredBindableHeaderedState
     {
-        public PostflopData PostflopData { get; set; }
+        public HandsGroup HandsGroup { get; set; }
 
         public override void UpdateBindings()
         {
             string hashString = $"{Visible}{Header ?? string.Empty}";
 
-            if (PostflopData != null)
+            if (HandsGroup != null)
             {
-                for (int i = 0; i < PostflopData.MainGroup.MadeHands.Length; i++)
-                    hashString += $"{PostflopData.MainGroup.MadeHands[i]}{PostflopData.MainGroup.DrawHands[i]}";
+                for (int i = 0; i < HandsGroup.MadeHands.Length; i++)
+                    hashString += $"{HandsGroup.MadeHands[i]}{HandsGroup.DrawHands[i]}";
             }
 
             int hashCode = hashString.GetStableHashCode();

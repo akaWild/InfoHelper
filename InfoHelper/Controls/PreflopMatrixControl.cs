@@ -111,7 +111,7 @@ namespace InfoHelper.Controls
             double columnWidth = RenderSize.Width / 13, rowHeight = RenderSize.Height / (string.IsNullOrEmpty(Header) ? 13 : 14);
 
             if(!string.IsNullOrEmpty(Header))
-                drawingContext.DrawRectangle(_headerForegroundBrush, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, rowHeight)));
+                drawingContext.DrawRectangle(_headerBackgroundBrush, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, rowHeight)));
 
             double headerHeight = !string.IsNullOrEmpty(Header) ? rowHeight : 0;
 
@@ -125,7 +125,7 @@ namespace InfoHelper.Controls
 
             if (!string.IsNullOrEmpty(Header))
             {
-                FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, _headerBackgroundBrush, 1);
+                FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, _headerForegroundBrush, 1);
 
                 Point textLocation = new Point(RenderSize.Width / 2 - text.Width / 2, rowHeight / 2 - text.Height / 2);
 

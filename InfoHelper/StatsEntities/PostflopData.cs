@@ -10,7 +10,13 @@ namespace InfoHelper.StatsEntities
     {
         public HandsGroup MainGroup { get; } = new HandsGroup();
 
-        public HandsGroup[] SubGroups { get; } = new HandsGroup[4];
+        public HandsGroup[] SubGroups { get; } = new HandsGroup[4]
+        {
+            new HandsGroup(),
+            new HandsGroup(),
+            new HandsGroup(),
+            new HandsGroup()
+        };
     }
 
     public class HandsGroup
