@@ -94,7 +94,7 @@ namespace InfoHelper.Controls
 
                 drawingContext.DrawRectangle(_headerBackgroundBrush, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, headerHeight)));
 
-                FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, headerHeight - 2, _headerForegroundBrush, 1);
+                FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, headerHeight - 4, _headerForegroundBrush, 1);
 
                 Point textLocation = new Point(RenderSize.Width / 2 - text.Width / 2, headerHeight / 2 - text.Height / 2);
 

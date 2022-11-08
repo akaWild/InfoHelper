@@ -32,8 +32,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type controls:DataCellControl}">
-                    <Border 
-                        Background="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DataCellBackgroundConverter}}"
+                    <Border Background="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DataCellBackgroundConverter}}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
@@ -160,6 +159,29 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type controls:GeneralDataCellControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:GeneralDataCellControl}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Viewbox Stretch="Uniform" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource ValueConverter}">
+                                        <Binding Path="Data" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                        <Binding Path="Precision" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Viewbox>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

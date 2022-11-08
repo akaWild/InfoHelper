@@ -17,14 +17,14 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <local:DataCellControl Grid.Column="0" Grid.Row="0" Foreground="{StaticResource HandsForeground}" Background="{StaticResource HandsBackground}" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Data="{Binding Hands}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="0" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding Vpip}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="0" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding Pfr}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="0" Grid.Row="1" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Data="{Binding AggFq_F}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="1" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_T}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="1" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_R}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="0" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Data="{Binding WentToSd}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding WonOnSd}" ShowSample="False"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="2" HorizontalContentAlignment="Center" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding EvBb}" ShowSample="False" Precision="1"></local:DataCellControl>
+        <local:GeneralDataCellControl Grid.Column="0" Grid.Row="0" Foreground="{StaticResource HandsForeground}" Background="{StaticResource HandsBackground}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Data="{Binding Hands}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="1" Grid.Row="0" Background="{StaticResource VpipBackground}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding Vpip}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="2" Grid.Row="0" Background="{StaticResource AggrBackground}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding Pfr}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="0" Grid.Row="1" Background="{StaticResource AggrBackground}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Data="{Binding AggFq_F}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="1" Grid.Row="1" Background="{StaticResource AggrBackground}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_T}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="2" Grid.Row="1" Background="{StaticResource AggrBackground}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_R}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="0" Grid.Row="2" Background="{StaticResource SdBackground}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Data="{Binding WentToSd}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="1" Grid.Row="2" Background="{StaticResource SdBackground}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding WonOnSd}"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="2" Grid.Row="2" Background="{StaticResource EvBackground}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding EvBb}" Precision="1"></local:GeneralDataCellControl>
     </Grid>
 </UserControl>

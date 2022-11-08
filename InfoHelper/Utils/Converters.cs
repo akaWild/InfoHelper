@@ -25,7 +25,29 @@ namespace InfoHelper.Utils
             {
                 int.TryParse(values[1].ToString(), out int precision);
 
-                defaultValue = dataCell.Sample == 0 ? defaultValue : $"{Math.Round(dataCell.CalculatedValue, precision)}";
+                if (dataCell.Sample > 0)
+                {
+                    string postfix = string.Empty;
+
+                    double value = dataCell.CalculatedValue;
+
+                    if (dataCell.CalculatedValue >= 1000000)
+                    {
+                        value = dataCell.CalculatedValue / 1000000;
+
+                        postfix = "M";
+                    }
+                    else if (dataCell.CalculatedValue >= 1000)
+                    {
+                        value = dataCell.CalculatedValue / 1000;
+
+                        postfix = "K";
+                    }
+
+                    precision = dataCell.CalculatedValue >= 10000 ? 1 : (dataCell.CalculatedValue >= 1000 ? 2 : precision);
+
+                    defaultValue = $"{Math.Round(value, precision).ToString(CultureInfo.InvariantCulture)}{postfix}";
+                }
             }
 
             return defaultValue;
@@ -74,7 +96,7 @@ namespace InfoHelper.Utils
 
             DataCell dc = (DataCell)value;
 
-            return (dc.IsSelected) ? _selectedBackgroundBrush : _notSelectedBackgroundBrush;
+            return dc.IsSelected ? _selectedBackgroundBrush : _notSelectedBackgroundBrush;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
