@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -182,15 +183,11 @@ namespace InfoHelper.Controls
 
             if (Data.CellData != null)
             {
-                if (Data.ConnectedCells != null)
-                {
-                    if(Data.ConnectedCells.Length < 2)
-                        dataCells.Add(Data);
-
-                    dataCells.AddRange(Data.ConnectedCells);
-                }
-                else
+                if(!Regex.IsMatch(Data.Name, @"Fold|FCB|Fv|_F_F|_F_T|_F_R"))
                     dataCells.Add(Data);
+
+                if (Data.ConnectedCells != null)
+                    dataCells.AddRange(Data.ConnectedCells.Where(c => !Regex.IsMatch(c.Name, @"Fold|FCB|Fv|_F_F|_F_T|_F_R")));
             }
 
             if (dataCells.Count == 0)

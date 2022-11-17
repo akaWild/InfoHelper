@@ -17,7 +17,7 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="{Binding Ep_Isolate_Limper_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Ep_Squeeze_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
-            <RowDefinition Height="{Binding Ep_RaiseIsolate_Limper_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Ep_RaiseIsolate_Caller_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Ep_3bet_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Ep_3bet_Raiser_Vs_Mp_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Ep_3bet_Raiser_Vs_Co_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
@@ -50,9 +50,9 @@
         <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource SqueezeHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Sqz (rr) p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_Squeeze_Raiser_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_Squeeze_Raiser_Raise}"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (lr) p."></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_RaiseIsolate_Limper_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_RaiseIsolate_Limper_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (cr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_RaiseIsolate_Caller_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_RaiseIsolate_Caller_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="5" Style="{StaticResource ThreeBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3b (rr) p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_3bet_Raiser_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="5" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Ep_3bet_Raiser_Raise}"></local:DataCellControl>

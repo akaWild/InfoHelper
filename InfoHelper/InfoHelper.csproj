@@ -103,19 +103,19 @@
     <None Update="Resources\Settings\SolverSizingSettings.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\StatsCsvFiles\cell_sets.csv">
+    <None Update="Resources\CsvFiles\cell_sets.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="Resources\Settings\Settings.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\StatsCsvFiles\stat_sets.csv">
+    <None Update="Resources\CsvFiles\stat_sets.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\StatsCsvFiles\" />
+    <Folder Include="Resources\CsvFiles\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">

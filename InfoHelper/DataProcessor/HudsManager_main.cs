@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
+using System.Text.RegularExpressions;
 using GameInformationUtility;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.DataEntities;
@@ -10,7 +11,7 @@ using InfoHelper.ViewModel.States;
 
 namespace InfoHelper.DataProcessor
 {
-    public class HudsManager
+    public partial class HudsManager
     {
         private readonly ViewModelMain _vmMain;
 
@@ -39,9 +40,17 @@ namespace InfoHelper.DataProcessor
                     _vmMain.HudsParentStates[i].CoPreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].SbvsBbPreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].BbvsSbPreflopHudState.Visible = false;
-                    _vmMain.HudsParentStates[i].PostflopHuIpHudState.Visible = false;
-                    _vmMain.HudsParentStates[i].PostflopHuOopHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.Visible = false;
                     _vmMain.HudsParentStates[i].PostflopGeneralHudState.Visible = false;
+
+                    _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = false;
+
+                    _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = false;
                 }
                 else
                 {
@@ -59,21 +68,24 @@ namespace InfoHelper.DataProcessor
 
                     string actionsString = string.Empty;
 
-                    for (int j = 0; j < playerActions.Length; j++)
+                    if (gc.Error == string.Empty)
                     {
-                        if (j > 0 && playerActions[j - 1].Round < playerActions[j].Round)
-                            actionsString += "/";
+                        for (int j = 0; j < playerActions.Length; j++)
+                        {
+                            if (j > 0 && playerActions[j - 1].Round < playerActions[j].Round)
+                                actionsString += "/";
 
-                        if (playerActions[j].ActionType == BettingActionType.Fold)
-                            actionsString += "f";
-                        else if (playerActions[j].ActionType == BettingActionType.Check)
-                            actionsString += "x";
-                        else if (playerActions[j].ActionType == BettingActionType.Call)
-                            actionsString += "c";
-                        else if (playerActions[j].ActionType == BettingActionType.Bet)
-                            actionsString += "b";
-                        else if (playerActions[j].ActionType == BettingActionType.Raise)
-                            actionsString += "r";
+                            if (playerActions[j].ActionType == BettingActionType.Fold)
+                                actionsString += "f";
+                            else if (playerActions[j].ActionType == BettingActionType.Check)
+                                actionsString += "x";
+                            else if (playerActions[j].ActionType == BettingActionType.Call)
+                                actionsString += "c";
+                            else if (playerActions[j].ActionType == BettingActionType.Bet)
+                                actionsString += "b";
+                            else if (playerActions[j].ActionType == BettingActionType.Raise)
+                                actionsString += "r";
+                        }
                     }
 
                     _vmMain.HudsParentStates[i].ActionsState.Actions = actionsString;
@@ -84,7 +96,7 @@ namespace InfoHelper.DataProcessor
 
                     Round round = gc.Round < 2 ? Round.Preflop : Round.Postflop;
 
-                    Position position = GetPlayerPosition(i + 1);
+                    Position position = GetPlayerPosition(gc, i + 1);
 
                     Position oppPosition = Position.Any;
 
@@ -96,31 +108,49 @@ namespace InfoHelper.DataProcessor
 
                     PreflopActions preflActions = PreflopActions.Any;
 
+                    OtherPlayersActed otherPlayersActed = OtherPlayersActed.Any;
+
                     if (gc.Round > 1)
                     {
+                        BettingAction[] preflopActions = gc.Actions.Where(a => a.Round == 1).ToArray();
+
                         if (gc.PlayersSawFlop != 2)
                         {
-                            oppPosition = Position.Any;
-
-                            relativePosition = RelativePosition.Any;
-
                             playersOnFlop = PlayersOnFlop.Multiway;
+
+                            otherPlayersActed = OtherPlayersActed.Yes;
                         }
                         else
                         {
                             int oppIndexPosition = gc.IsPlayerIn.Select((p, k) => new {Value = p, Index = k}).First(item => item.Value != null && (bool)item.Value && item.Index != i).Index;
 
-                            oppPosition = GetPlayerPosition(oppIndexPosition + 1);
+                            otherPlayersActed = OtherPlayersActed.No;
 
-                            if (gameType == GameType.Hu)
-                                relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
-                            else
-                                relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
+                            foreach (BettingAction action in preflopActions)
+                            {
+                                if(action.Player == i + 1 || action.Player == oppIndexPosition + 1)
+                                    continue;
+
+                                if (action.ActionType is BettingActionType.Check or BettingActionType.Call or BettingActionType.Raise)
+                                {
+                                    otherPlayersActed = OtherPlayersActed.Yes;
+
+                                    break;
+                                }
+                            }
+
+                            if (otherPlayersActed == OtherPlayersActed.No)
+                            {
+                                oppPosition = GetPlayerPosition(gc, oppIndexPosition + 1);
+
+                                if (gameType == GameType.Hu)
+                                    relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
+                                else
+                                    relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
+                            }
 
                             playersOnFlop = PlayersOnFlop.Hu;
                         }
-
-                        BettingAction[] preflopActions = gc.Actions.Where(a => a.Round == 1).ToArray();
 
                         int callCount = 0;
                         int raiseCount = 0;
@@ -195,6 +225,9 @@ namespace InfoHelper.DataProcessor
 
                     #endregion
 
+                    ViewModelStatsHud preflopHud = null;
+                    ViewModelStatsHud postflopHud = null;
+
                     //General hud
                     StatSet generalSet = GetStatSet(SetType.General);
 
@@ -213,7 +246,7 @@ namespace InfoHelper.DataProcessor
 
                     BettingAction lastPlayerAction = playerActions.LastOrDefault();
 
-                    bool showHud = lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold;
+                    bool showHud = gc.Error == string.Empty && (lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold);
 
                     //Btn preflop hud
                     StatSet btnPreflopSet = GetStatSet(SetType.PreflopBtn);
@@ -229,6 +262,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].BtnPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].BtnPreflopHudState.SetName = $"{btnPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].BtnPreflopHudState.SetType = SetType.PreflopBtn;
+
+                        preflopHud = _vmMain.HudsParentStates[i].BtnPreflopHudState;
                     }
 
                     //Sb preflop hud
@@ -245,6 +282,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].SbPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].SbPreflopHudState.SetName = $"{sbPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].SbPreflopHudState.SetType = SetType.PreflopSb;
+
+                        preflopHud = _vmMain.HudsParentStates[i].SbPreflopHudState;
                     }
 
                     //Bb preflop hud
@@ -261,6 +302,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].BbPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].BbPreflopHudState.SetName = $"{bbPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].BbPreflopHudState.SetType = SetType.PreflopBb;
+
+                        preflopHud = _vmMain.HudsParentStates[i].BbPreflopHudState;
                     }
 
                     //Ep preflop hud
@@ -277,6 +322,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].EpPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].EpPreflopHudState.SetName = $"{epPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].EpPreflopHudState.SetType = SetType.PreflopEp;
+
+                        preflopHud = _vmMain.HudsParentStates[i].EpPreflopHudState;
                     }
 
                     //Mp preflop hud
@@ -293,6 +342,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].MpPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].MpPreflopHudState.SetName = $"{mpPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].MpPreflopHudState.SetType = SetType.PreflopMp;
+
+                        preflopHud = _vmMain.HudsParentStates[i].MpPreflopHudState;
                     }
 
                     //Co preflop hud
@@ -309,6 +362,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].CoPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].CoPreflopHudState.SetName = $"{coPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].CoPreflopHudState.SetType = SetType.PreflopCo;
+
+                        preflopHud = _vmMain.HudsParentStates[i].CoPreflopHudState;
                     }
 
                     //Sb vs Bb preflop hud
@@ -325,6 +382,10 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].SbvsBbPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].SbvsBbPreflopHudState.SetName = $"{sbvsbbPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].SbvsBbPreflopHudState.SetType = SetType.PreflopSbvsBb;
+
+                        preflopHud = _vmMain.HudsParentStates[i].SbvsBbPreflopHudState;
                     }
 
                     //Bb vs Sb preflop hud
@@ -341,44 +402,96 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].BbvsSbPreflopHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].BbvsSbPreflopHudState.SetName = $"{bbvssbPreflopSet}";
+
+                        _vmMain.HudsParentStates[i].BbvsSbPreflopHudState.SetType = SetType.PreflopBbvsSb;
+
+                        preflopHud = _vmMain.HudsParentStates[i].BbvsSbPreflopHudState;
                     }
 
-                    //Postflop Hu Ip hud
-                    StatSet huIpPostflopSet = GetStatSet(SetType.PostflopHuIp);
+                    //Postflop Hu Ip as raiser hud
+                    StatSet huIpRaiserPostflopSet = GetStatSet(SetType.PostflopHuIpRaiser);
 
-                    if (huIpPostflopSet == null || !showHud)
-                        _vmMain.HudsParentStates[i].PostflopHuIpHudState.Visible = false;
+                    if (huIpRaiserPostflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.Visible = false;
                     else
                     {
-                        _vmMain.HudsParentStates[i].PostflopHuIpHudState.Visible = true;
+                        _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.Visible = true;
 
-                        _vmMain.HudsParentStates[i].PostflopHuIpHudState.SetData(huIpPostflopSet.Cells);
+                        _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.SetData(huIpRaiserPostflopSet.Cells);
 
-                        _vmMain.HudsParentStates[i].PostflopHuIpHudState.PlayerName = gc.Players[i];
+                        _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.PlayerName = gc.Players[i];
 
-                        _vmMain.HudsParentStates[i].PostflopHuIpHudState.SetName = $"{huIpPostflopSet}";
+                        _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.SetName = $"{huIpRaiserPostflopSet}";
+
+                        _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.SetType = SetType.PostflopHuIpRaiser;
+
+                        postflopHud = _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState;
                     }
 
-                    //Postflop Hu Oop hud
-                    StatSet huOopPostflopSet = GetStatSet(SetType.PostflopHuOop);
+                    //Postflop Hu Ip as caller hud
+                    StatSet huIpCallerPostflopSet = GetStatSet(SetType.PostflopHuIpCaller);
 
-                    if (huIpPostflopSet != null || huOopPostflopSet == null || !showHud)
-                        _vmMain.HudsParentStates[i].PostflopHuOopHudState.Visible = false;
+                    if (postflopHud != null || huIpCallerPostflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.Visible = false;
                     else
                     {
-                        _vmMain.HudsParentStates[i].PostflopHuOopHudState.Visible = true;
+                        _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.Visible = true;
 
-                        _vmMain.HudsParentStates[i].PostflopHuOopHudState.SetData(huOopPostflopSet.Cells);
+                        _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.SetData(huIpCallerPostflopSet.Cells);
 
-                        _vmMain.HudsParentStates[i].PostflopHuOopHudState.PlayerName = gc.Players[i];
+                        _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.PlayerName = gc.Players[i];
 
-                        _vmMain.HudsParentStates[i].PostflopHuOopHudState.SetName = $"{huOopPostflopSet}";
+                        _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.SetName = $"{huIpCallerPostflopSet}";
+
+                        _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.SetType = SetType.PostflopHuIpCaller;
+
+                        postflopHud = _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState;
+                    }
+
+                    //Postflop Hu Oop as raiser hud
+                    StatSet huOopRaiserPostflopSet = GetStatSet(SetType.PostflopHuOopRaiser);
+
+                    if (postflopHud != null || huOopRaiserPostflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.SetData(huOopRaiserPostflopSet.Cells);
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.SetName = $"{huOopRaiserPostflopSet}";
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.SetType = SetType.PostflopHuOopRaiser;
+
+                        postflopHud = _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState;
+                    }
+
+                    //Postflop Hu Oop as caller hud
+                    StatSet huOopCallerPostflopSet = GetStatSet(SetType.PostflopHuOopCaller);
+
+                    if (postflopHud != null || huOopCallerPostflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.SetData(huOopCallerPostflopSet.Cells);
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.SetName = $"{huOopCallerPostflopSet}";
+
+                        _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.SetType = SetType.PostflopHuOopCaller;
+
+                        postflopHud = _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState;
                     }
 
                     //Postflop general hud
                     StatSet generalPostflopSet = GetStatSet(SetType.PostflopGeneral);
 
-                    if (huIpPostflopSet != null || huOopPostflopSet != null || generalPostflopSet == null || !showHud)
+                    if (postflopHud != null || generalPostflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].PostflopGeneralHudState.Visible = false;
                     else
                     {
@@ -389,9 +502,14 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].PostflopGeneralHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].PostflopGeneralHudState.SetName = $"{generalPostflopSet}";
+
+                        _vmMain.HudsParentStates[i].PostflopGeneralHudState.SetType = SetType.PostflopGeneral;
+
+                        postflopHud = _vmMain.HudsParentStates[i].PostflopGeneralHudState;
                     }
 
-                    DataCell selectedCell = null;
+                    DataCell selectedCell = ProcessSelectedHuds(gc, preflopHud, postflopHud);
+
                     DataCell missedCell = null;
 
                     if (selectedCell == null)
@@ -421,10 +539,21 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Header = selectedCell.Description;
                         }
 
-                        selectedCell.IsSelected = true;
+                        selectedCell.CellSelectedState = CellSelectedState.Selected;
+
+                        if (selectedCell.ConnectedCells != null)
+                        {
+                            if (selectedCell.ConnectedCells.Length > 0)
+                            {
+                                missedCell = selectedCell.ConnectedCells[^1];
+
+                                foreach (DataCell mc in selectedCell.ConnectedCells)
+                                    mc.CellSelectedState = CellSelectedState.Missed;
+                            }
+                        }
                     }
 
-                    if (missedCell == null)
+                    if (missedCell == null || Regex.IsMatch(missedCell.Name, @"Fold|FCB|Fv|_F_F|_F_T|_F_R"))
                     {
                         _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
                         _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = false;
@@ -453,49 +582,6 @@ namespace InfoHelper.DataProcessor
                     }
 
                     ViewModelStatsHud.SelectedCell = selectedCell?.Name;
-
-                    Position GetPlayerPosition(int player)
-                    {
-                        if (player == gc.SmallBlindPosition)
-                            return Position.Sb;
-
-                        if (player == gc.BigBlindPosition)
-                            return Position.Bb;
-
-                        if (player == gc.ButtonPosition)
-                            return Position.Btn;
-
-                        int nextToAct = gc.BigBlindPosition + 1;
-
-                        if (nextToAct == 7)
-                            nextToAct = 1;
-
-                        int positionShift = 1;
-
-                        while (true)
-                        {
-                            if (player == nextToAct)
-                                break;
-
-                            positionShift++;
-
-                            nextToAct++;
-
-                            if (nextToAct == 7)
-                                nextToAct = 1;
-                        }
-
-                        if (positionShift == 1)
-                            return Position.Ep;
-
-                        if (positionShift == 2)
-                            return Position.Mp;
-
-                        if (positionShift == 3)
-                            return Position.Co;
-
-                        throw new Exception($"Player {player} position was not found");
-                    }
 
                     StatSet GetStatSet(SetType setType)
                     {
@@ -528,6 +614,9 @@ namespace InfoHelper.DataProcessor
                                 continue;
 
                             if ((set.PreflopActions & preflActions) == 0)
+                                continue;
+
+                            if ((set.OtherPlayersActed & otherPlayersActed) == 0)
                                 continue;
 
                             if ((set.SetType & setType) == 0)
@@ -571,6 +660,9 @@ namespace InfoHelper.DataProcessor
                                 if (firstSet.PreflopActions != set.PreflopActions)
                                     return firstSet.PreflopActions < set.PreflopActions ? firstSet : set;
 
+                                if (firstSet.OtherPlayersActed != set.OtherPlayersActed)
+                                    return firstSet.OtherPlayersActed < set.OtherPlayersActed ? firstSet : set;
+
                                 if (firstSet.SetType != set.SetType)
                                     return firstSet.SetType < set.SetType ? firstSet : set;
 
@@ -594,8 +686,10 @@ namespace InfoHelper.DataProcessor
                 _vmMain.HudsParentStates[i].CoPreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].SbvsBbPreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].BbvsSbPreflopHudState.UpdateBindings();
-                _vmMain.HudsParentStates[i].PostflopHuIpHudState.UpdateBindings();
-                _vmMain.HudsParentStates[i].PostflopHuOopHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].PostflopGeneralHudState.UpdateBindings();
 
                 _vmMain.HudsParentStates[i].PreflopMatrixState.UpdateBindings();
@@ -641,8 +735,10 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.CoPreflopHudState.Visible = false;
                 vmHudsParent.SbvsBbPreflopHudState.Visible = false;
                 vmHudsParent.BbvsSbPreflopHudState.Visible = false;
-                vmHudsParent.PostflopHuIpHudState.Visible = false;
-                vmHudsParent.PostflopHuOopHudState.Visible = false;
+                vmHudsParent.PostflopHuIpRaiserHudState.Visible = false;
+                vmHudsParent.PostflopHuIpCallerHudState.Visible = false;
+                vmHudsParent.PostflopHuOopRaiserHudState.Visible = false;
+                vmHudsParent.PostflopHuOopCallerHudState.Visible = false;
                 vmHudsParent.PostflopGeneralHudState.Visible = false;
 
                 vmHudsParent.PreflopMatrixState.Visible = false;
@@ -663,8 +759,10 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.CoPreflopHudState.UpdateBindings();
                 vmHudsParent.SbvsBbPreflopHudState.UpdateBindings();
                 vmHudsParent.BbvsSbPreflopHudState.UpdateBindings();
-                vmHudsParent.PostflopHuIpHudState.UpdateBindings();
-                vmHudsParent.PostflopHuOopHudState.UpdateBindings();
+                vmHudsParent.PostflopHuIpRaiserHudState.UpdateBindings();
+                vmHudsParent.PostflopHuIpCallerHudState.UpdateBindings();
+                vmHudsParent.PostflopHuOopRaiserHudState.UpdateBindings();
+                vmHudsParent.PostflopHuOopCallerHudState.UpdateBindings();
                 vmHudsParent.PostflopGeneralHudState.UpdateBindings();
 
                 vmHudsParent.PreflopMatrixState.UpdateBindings();
@@ -689,5 +787,50 @@ namespace InfoHelper.DataProcessor
 
             _vmMain.WindowsInfoState.UpdateBindings();
         }
+
+        private Position GetPlayerPosition(GameContext gc, int player)
+        {
+            if (player == gc.SmallBlindPosition)
+                return Position.Sb;
+
+            if (player == gc.BigBlindPosition)
+                return Position.Bb;
+
+            if (player == gc.ButtonPosition)
+                return Position.Btn;
+
+            int nextToAct = gc.BigBlindPosition + 1;
+
+            if (nextToAct == 7)
+                nextToAct = 1;
+
+            int positionShift = 1;
+
+            while (true)
+            {
+                if (player == nextToAct)
+                    break;
+
+                positionShift++;
+
+                nextToAct++;
+
+                if (nextToAct == 7)
+                    nextToAct = 1;
+            }
+
+            if (positionShift == 1)
+                return Position.Ep;
+
+            if (positionShift == 2)
+                return Position.Mp;
+
+            if (positionShift == 3)
+                return Position.Co;
+
+            throw new Exception($"Player {player} position was not found");
+        }
+
+        private partial DataCell ProcessSelectedHuds(GameContext gc, ViewModelStatsHud preflopHud, ViewModelStatsHud postflopHud);
     }
 }

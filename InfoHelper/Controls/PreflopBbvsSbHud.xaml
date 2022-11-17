@@ -34,9 +34,9 @@
         <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource RaiseHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Raise p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_Raise_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_Raise_Raise}"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource LimpRaiseHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="L/R p."></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_LimpRaise_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_LimpRaise_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_RaiseIsolate_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_RaiseIsolate_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4b range"></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding BbvsSb_4bet_Range}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="5" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4bet p."></local:CellControl>

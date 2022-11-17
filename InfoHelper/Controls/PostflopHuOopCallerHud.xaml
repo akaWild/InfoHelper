@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="InfoHelper.Controls.PostflopHuOopHud"
+﻿<UserControl x:Class="InfoHelper.Controls.PostflopHuOopCallerHud"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -57,7 +57,7 @@
             <RowDefinition Height="{Binding SPROBE_F_Row, Converter={StaticResource RowVisibilityConverter}}"/>
         </Grid.RowDefinitions>
         <!--Header-->
-        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="HU OOP">
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="HU OOP (c)">
             <local:CellControl.ToolTip>
                 <ToolTip Content="{Binding SetName}"/>
             </local:CellControl.ToolTip>

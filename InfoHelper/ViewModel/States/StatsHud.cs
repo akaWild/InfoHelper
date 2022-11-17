@@ -19,7 +19,11 @@ namespace InfoHelper.ViewModel.States
 
         public string SetName { get; set; }
 
+        public SetType SetType { get; set; }
+
         public static string SelectedCell { get; set; }
+
+        public DataCell this[string name] => !_cells.ContainsKey(name) ? null : _cells[name];
 
         public override bool TryGetMember(GetMemberBinder binder, out object result)
         {
@@ -33,7 +37,9 @@ namespace InfoHelper.ViewModel.States
             {
                 bool valueFound = _cells.TryGetValue(binder.Name, out DataCell dc);
 
-                result = dc;
+                object cellCopy = dc?.ShallowCopy;
+
+                result = cellCopy;
 
                 return valueFound;
             }
@@ -50,7 +56,7 @@ namespace InfoHelper.ViewModel.States
             {
                 _cells[cell.Name] = cell;
 
-                _cells[cell.Name].IsSelected = false;
+                _cells[cell.Name].CellSelectedState = CellSelectedState.NotSelected;
             }
         }
 
@@ -67,14 +73,19 @@ namespace InfoHelper.ViewModel.States
 
         public override void UpdateBindings()
         {
-            string hashString = $"{Visible}{PlayerName}{SetName}{SelectedCell != null && _cells.ContainsKey(SelectedCell)}";
+            string selectedCell = null;
+
+            if (SelectedCell != null)
+                selectedCell = !_cells.ContainsKey(SelectedCell) ? null : _cells[SelectedCell].Name;
+
+            string hashString = $"{Visible}{PlayerName}{SetName}{selectedCell}";
 
             foreach (var kv in _rowsVisible)
                 hashString += $"{kv.Key}";
 
             int hashCode = hashString.GetStableHashCode();
 
-            if(hashCode != HashCode)
+            if (hashCode != HashCode)
                 base.UpdateBindings();
 
             HashCode = hashCode;

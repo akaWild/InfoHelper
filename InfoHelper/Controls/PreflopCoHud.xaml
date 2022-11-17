@@ -28,7 +28,7 @@
             <RowDefinition Height="{Binding Co_Squeeze_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Co_Squeeze_Caller_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Co_RaiseIsolate_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
-            <RowDefinition Height="{Binding Co_RaiseIsolate_Limper_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Co_RaiseIsolate_Caller_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Co_3bet_CC_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Co_3bet_Raiser_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Co_3bet_Raiser_Vs_Btn_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
@@ -91,9 +91,9 @@
         <local:CellControl Grid.Column="0" Grid.Row="14" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (rr) p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_RaiseIsolate_Raiser_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_RaiseIsolate_Raiser_Raise}"></local:DataCellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="15" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (lr) p."></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_RaiseIsolate_Limper_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_RaiseIsolate_Limper_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="15" Style="{StaticResource RaiseIsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="R/I (cr) p."></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_RaiseIsolate_Caller_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_RaiseIsolate_Caller_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="16" Style="{StaticResource ThreeBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="3b (CC) p."></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_3bet_CC_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Co_3bet_CC_Raise}"></local:DataCellControl>

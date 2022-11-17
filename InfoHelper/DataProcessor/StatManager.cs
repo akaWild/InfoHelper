@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Timers;
+using System.Threading;
+using System.Threading.Tasks;
 using InfoHelper.StatsEntities;
+using Timer = System.Timers.Timer;
 
 namespace InfoHelper.DataProcessor
 {
@@ -113,10 +115,10 @@ namespace InfoHelper.DataProcessor
 
         private static void LoadCellSets()
         {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\StatsCsvFiles\\cell_sets.csv");
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\CsvFiles\\cell_sets.csv");
 
             if(!File.Exists(filePath))
-                throw new Exception("File \"cell_sets.csv\" doesn't exist in Resources\\StatsCsvFiles directory");
+                throw new Exception("File \"cell_sets.csv\" doesn't exist in Resources\\CsvFiles directory");
 
             using FileStream fs = File.Open(filePath, FileMode.Open);
 
@@ -254,10 +256,10 @@ namespace InfoHelper.DataProcessor
 
         private static void LoadStatSets()
         {
-            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\StatsCsvFiles\\stat_sets.csv");
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\CsvFiles\\stat_sets.csv");
 
             if (!File.Exists(filePath))
-                throw new Exception("File \"stat_sets.csv\" doesn't exist in Resources\\StatsCsvFiles directory");
+                throw new Exception("File \"stat_sets.csv\" doesn't exist in Resources\\CsvFiles directory");
 
             using FileStream fs = File.Open(filePath, FileMode.Open);
 
@@ -270,8 +272,8 @@ namespace InfoHelper.DataProcessor
 
             string[] headerParts = title.Split(';');
 
-            if (headerParts.Length != 9)
-                throw new Exception("Header row in file \"stat_sets.csv\" contains less or more than 9 elements");
+            if (headerParts.Length != 10)
+                throw new Exception("Header row in file \"stat_sets.csv\" contains less or more than 10 elements");
 
             while (sr.Peek() >= 0)
             {
@@ -303,13 +305,16 @@ namespace InfoHelper.DataProcessor
                 if (!Enum.TryParse(parts[7], out PreflopActions preflopActions))
                     throw new Exception($"{parts[7]} is not defined or has incorrect format");
 
-                if (!Enum.TryParse(parts[8], out SetType setType))
+                if (!Enum.TryParse(parts[8], out OtherPlayersActed otherPlayersActed))
                     throw new Exception($"{parts[8]} is not defined or has incorrect format");
 
-                if (!CellGroups.ContainsKey(parts[8]))
-                    throw new Exception($"Cells set for {parts[8]} set type wasn't found");
+                if (!Enum.TryParse(parts[9], out SetType setType))
+                    throw new Exception($"{parts[9]} is not defined or has incorrect format");
 
-                DataCell[] cells = CellGroups[parts[8]].Select(c => (DataCell)c.Clone()).ToArray();
+                if (!CellGroups.ContainsKey(parts[9]))
+                    throw new Exception($"Cells set for {parts[9]} set type wasn't found");
+
+                DataCell[] cells = CellGroups[parts[9]].Select(c => (DataCell)c.Clone()).ToArray();
 
                 StatSet statSet = new StatSet()
                 {
@@ -321,6 +326,7 @@ namespace InfoHelper.DataProcessor
                     PlayersOnFlop = playersOnFlop,
                     PreflopPotType = preflopPotType,
                     PreflopActions = preflopActions,
+                    OtherPlayersActed = otherPlayersActed,
                     SetType = setType,
                     Cells = cells
                 };

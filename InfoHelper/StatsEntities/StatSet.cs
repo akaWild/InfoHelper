@@ -54,30 +54,40 @@ namespace InfoHelper.StatsEntities
     public enum PreflopPotType
     {
         Unknown = 0x00,
-        LimpPot = 0x01,
-        RaisePot = 0x02,
-        IsolatePot = 0x04,
-        ThreeBetPot = 0x08,
-        SqueezePot = 0x10,
-        RaiseIsolatePot = 0x20,
-        FourBetPot = 0x40,
-        FiveBetPot = 0x80,
-        Any = 0xFF
+        Unopened = 0x01,
+        LimpPot = 0x02,
+        RaisePot = 0x04,
+        IsolatePot = 0x08,
+        ThreeBetPot = 0x10,
+        SqueezePot = 0x20,
+        RaiseIsolatePot = 0x40,
+        FourBetPot = 0x80,
+        FiveBetPot = 0x100,
+        Any = 0x1FF
     }
 
     [Flags]
     public enum PreflopActions
     {
-        Check = 0x01,
-        Call = 0x02,
-        CallCall = 0x04,
-        CallRaise = 0x08,
-        Raise = 0x10,
-        RaiseCall = 0x20,
-        RaiseRaise = 0x40,
-        AnyCall = 0x80,
-        AnyRaise = 0x100,
-        Any = 0x1FF
+        NoActions = 0x01,
+        Check = 0x02,
+        Call = 0x04,
+        CallCall = 0x08,
+        CallRaise = 0x10,
+        Raise = 0x20,
+        RaiseCall = 0x40,
+        RaiseRaise = 0x80,
+        AnyCall = 0x100,
+        AnyRaise = 0x200,
+        Any = 0x3FF
+    }
+
+    [Flags]
+    public enum OtherPlayersActed
+    {
+        Yes = 0x01,
+        No = 0x02,
+        Any = 0x03
     }
 
     [Flags]
@@ -92,10 +102,12 @@ namespace InfoHelper.StatsEntities
         PreflopCo = 0x40,
         PreflopSbvsBb = 0x80,
         PreflopBbvsSb = 0x100,
-        PostflopHuIp = 0x200,
-        PostflopHuOop = 0x400,
-        PostflopGeneral = 0x800,
-        Any = 0xFFF
+        PostflopHuIpRaiser = 0x200,
+        PostflopHuIpCaller = 0x400,
+        PostflopHuOopRaiser = 0x800,
+        PostflopHuOopCaller = 0x1000,
+        PostflopGeneral = 0x2000,
+        Any = 0x3FFF
     }
 
     public class StatSet : ICloneable
@@ -118,6 +130,8 @@ namespace InfoHelper.StatsEntities
 
         public PreflopActions PreflopActions { get; init; }
 
+        public OtherPlayersActed OtherPlayersActed { get; init; }
+
         public SetType SetType { get; init; }
 
         public object Clone()
@@ -132,6 +146,7 @@ namespace InfoHelper.StatsEntities
                 PlayersOnFlop = PlayersOnFlop,
                 PreflopPotType = PreflopPotType,
                 PreflopActions = PreflopActions,
+                OtherPlayersActed = OtherPlayersActed,
                 SetType = SetType,
             };
 
@@ -141,7 +156,7 @@ namespace InfoHelper.StatsEntities
         public override string ToString()
         {
             return $"Game type: {GameType}\r\nRound: {Round}\r\nPosition: {Position}\r\nOpp position: {OppPosition}\r\nRelative position: {RelativePosition}\r\n" +
-                   $"Players on flop: {PlayersOnFlop}\r\nPreflop pot type: {PreflopPotType}\r\nPreflop actions: {PreflopActions}\r\nSet type: {SetType}";
+                   $"Players on flop: {PlayersOnFlop}\r\nPreflop pot type: {PreflopPotType}\r\nPreflop actions: {PreflopActions}\r\nOther players acted: {OtherPlayersActed}\r\nSet type: {SetType}";
         }
     }
 }

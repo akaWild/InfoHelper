@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace InfoHelper.StatsEntities
 {
@@ -22,7 +19,11 @@ namespace InfoHelper.StatsEntities
 
         public double DefaultValue { get; set; } = double.NaN;
 
-        public bool IsSelected { get; set; }
+        public int Sample { get; protected set; }
+
+        public object ShallowCopy => MemberwiseClone();
+
+        public CellSelectedState CellSelectedState { get; set; } = CellSelectedState.NotSelected;
 
         protected DataCell(string name, string description)
         {
@@ -40,11 +41,21 @@ namespace InfoHelper.StatsEntities
             Sample++;
         }
 
+        public object Clone()
+        {
+            DataCell dc = (DataCell)MemberwiseClone();
+
+            dc.Value = Value;
+            dc.CellData = CellData;
+            dc.BetRanges = BetRanges?.Select(br => br with { }).ToArray();
+            dc.DefaultValue = DefaultValue;
+            dc.CellSelectedState = CellSelectedState;
+            dc.Sample = Sample;
+
+            return dc;
+        }
+
         public abstract double CalculatedValue { get; }
-
-        public int Sample { get; protected set; }
-
-        public abstract object Clone();
     }
 
     public class ValueCell : DataCell
@@ -52,21 +63,6 @@ namespace InfoHelper.StatsEntities
         public ValueCell(string name, string description) : base(name, description) { }
 
         public override double CalculatedValue => Sample;
-
-        public override object Clone()
-        {
-            ValueCell vc = new ValueCell(Name, Description)
-            {
-                Value = Value,
-                CellData = CellData,
-                BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
-                DefaultValue = DefaultValue,
-                IsSelected = IsSelected,
-                Sample = Sample
-            };
-
-            return vc;
-        }
     }
 
     public class StatCell : DataCell
@@ -74,21 +70,6 @@ namespace InfoHelper.StatsEntities
         public StatCell(string name, string description): base(name, description) { }
 
         public override double CalculatedValue => Value * 100 / Sample;
-
-        public override object Clone()
-        {
-            StatCell sc = new StatCell(Name, Description)
-            {
-                Value = Value,
-                CellData = CellData,
-                BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
-                DefaultValue = DefaultValue,
-                IsSelected = IsSelected,
-                Sample = Sample
-            };
-
-            return sc;
-        }
     }
 
     public class EvCell : DataCell
@@ -96,21 +77,6 @@ namespace InfoHelper.StatsEntities
         public EvCell(string name, string description) : base(name, description) { }
 
         public override double CalculatedValue => Value * 100 / Sample;
-
-        public override object Clone()
-        {
-            EvCell ec = new EvCell(Name, Description)
-            {
-                Value = Value,
-                CellData = CellData,
-                BetRanges = BetRanges?.Select(br => br with { }).ToArray(),
-                DefaultValue = DefaultValue,
-                IsSelected = IsSelected,
-                Sample = Sample
-            };
-
-            return ec;
-        }
     }
 
     public record BetRange
@@ -118,5 +84,12 @@ namespace InfoHelper.StatsEntities
         public int LowBound { get; init; }
 
         public int UpperBound { get; init; }
+    }
+
+    public enum CellSelectedState
+    {
+        Missed,
+        Selected,
+        NotSelected
     }
 }

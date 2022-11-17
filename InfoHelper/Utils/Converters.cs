@@ -85,6 +85,7 @@ namespace InfoHelper.Utils
     {
         private object _notSelectedBackgroundBrush;
         private object _selectedBackgroundBrush;
+        private object _missedBackgroundBrush;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -93,10 +94,11 @@ namespace InfoHelper.Utils
 
             _notSelectedBackgroundBrush ??= Application.Current.TryFindResource("NotSelectedDataCellBackground");
             _selectedBackgroundBrush ??= Application.Current.TryFindResource("SelectedDataCellBackground");
+            _missedBackgroundBrush ??= Application.Current.TryFindResource("MissedDataCellBackground");
 
             DataCell dc = (DataCell)value;
 
-            return dc.IsSelected ? _selectedBackgroundBrush : _notSelectedBackgroundBrush;
+            return dc.CellSelectedState == CellSelectedState.Selected ? _selectedBackgroundBrush : (dc.CellSelectedState == CellSelectedState.Missed ? _missedBackgroundBrush : _notSelectedBackgroundBrush);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

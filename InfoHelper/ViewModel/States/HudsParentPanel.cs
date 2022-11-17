@@ -24,9 +24,13 @@
 
         public ViewModelStatsHud BbvsSbPreflopHudState { get; } = new ViewModelStatsHud();
 
-        public ViewModelStatsHud PostflopHuIpHudState { get; } = new ViewModelStatsHud();
+        public ViewModelStatsHud PostflopHuIpRaiserHudState { get; } = new ViewModelStatsHud();
 
-        public ViewModelStatsHud PostflopHuOopHudState { get; } = new ViewModelStatsHud();
+        public ViewModelStatsHud PostflopHuIpCallerHudState { get; } = new ViewModelStatsHud();
+
+        public ViewModelStatsHud PostflopHuOopRaiserHudState { get; } = new ViewModelStatsHud();
+
+        public ViewModelStatsHud PostflopHuOopCallerHudState { get; } = new ViewModelStatsHud();
 
         public ViewModelStatsHud PostflopGeneralHudState { get; } = new ViewModelStatsHud();
 

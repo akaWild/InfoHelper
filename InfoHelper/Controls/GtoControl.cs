@@ -454,9 +454,11 @@ namespace InfoHelper.Controls
                 (GtoAction.Raise, 1) => _raiseBrushes[0],
                 (GtoAction.Raise, 2) => _raiseBrushes[1],
                 (GtoAction.Raise, 3) => _raiseBrushes[2],
+                (GtoAction.Raise, 4) => _raiseBrushes[3],
                 (GtoAction.Bet, 1) => _raiseBrushes[0],
                 (GtoAction.Bet, 2) => _raiseBrushes[1],
                 (GtoAction.Bet, 3) => _raiseBrushes[2],
+                (GtoAction.Bet, 4) => _raiseBrushes[3],
                 _ => null
             };
         }
