@@ -52,7 +52,7 @@ namespace InfoHelper.Controls
         private const int PreflopPopupWidth = 500;
         private const int PreflopPopupOrdinaryHeight = 250;
 
-        private const int PostflopPopupWidth = 800;
+        private const int PostflopPopupWidth = 1000;
         private const int PostflopPopupOrdinaryHeight = 400;
 
         protected static Popup PreflopPopup { get; }
@@ -88,6 +88,7 @@ namespace InfoHelper.Controls
             //Postflop popup initialization
             Grid postflopGrid = new Grid();
 
+            postflopGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(2, GridUnitType.Star) });
             postflopGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
             postflopGrid.ColumnDefinitions.Add(new ColumnDefinition() { Width = new GridLength(1, GridUnitType.Star) });
 
@@ -96,8 +97,10 @@ namespace InfoHelper.Controls
             postflopGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
             postflopGrid.RowDefinitions.Add(new RowDefinition() { Height = new GridLength(1, GridUnitType.Star) });
 
-            PostlopHandsTableControl[] postflopHandTables = new PostlopHandsTableControl[8]
+            PostlopHandsTableControl[] postflopHandTables = new PostlopHandsTableControl[10]
             {
+                new PostlopHandsTableControl(),
+                new PostlopHandsTableControl(),
                 new PostlopHandsTableControl(),
                 new PostlopHandsTableControl(),
                 new PostlopHandsTableControl(),
@@ -110,21 +113,28 @@ namespace InfoHelper.Controls
 
             Grid.SetColumn(postflopHandTables[0], 0);
             Grid.SetColumn(postflopHandTables[1], 1);
-            Grid.SetColumn(postflopHandTables[2], 0);
+            Grid.SetColumn(postflopHandTables[2], 2);
             Grid.SetColumn(postflopHandTables[3], 1);
-            Grid.SetColumn(postflopHandTables[4], 0);
-            Grid.SetColumn(postflopHandTables[5], 1);
-            Grid.SetColumn(postflopHandTables[6], 0);
-            Grid.SetColumn(postflopHandTables[7], 1);
+            Grid.SetColumn(postflopHandTables[4], 2);
+            Grid.SetColumn(postflopHandTables[5], 0);
+            Grid.SetColumn(postflopHandTables[6], 1);
+            Grid.SetColumn(postflopHandTables[7], 2);
+            Grid.SetColumn(postflopHandTables[8], 1);
+            Grid.SetColumn(postflopHandTables[9], 2);
 
             Grid.SetRow(postflopHandTables[0], 0);
             Grid.SetRow(postflopHandTables[1], 0);
-            Grid.SetRow(postflopHandTables[2], 1);
+            Grid.SetRow(postflopHandTables[2], 0);
             Grid.SetRow(postflopHandTables[3], 1);
-            Grid.SetRow(postflopHandTables[4], 2);
+            Grid.SetRow(postflopHandTables[4], 1);
             Grid.SetRow(postflopHandTables[5], 2);
-            Grid.SetRow(postflopHandTables[6], 3);
-            Grid.SetRow(postflopHandTables[7], 3);
+            Grid.SetRow(postflopHandTables[6], 2);
+            Grid.SetRow(postflopHandTables[7], 2);
+            Grid.SetRow(postflopHandTables[8], 3);
+            Grid.SetRow(postflopHandTables[9], 3);
+
+            Grid.SetRowSpan(postflopHandTables[0], 2);
+            Grid.SetRowSpan(postflopHandTables[5], 2);
 
             postflopGrid.Children.Add(postflopHandTables[0]);
             postflopGrid.Children.Add(postflopHandTables[1]);
@@ -134,6 +144,8 @@ namespace InfoHelper.Controls
             postflopGrid.Children.Add(postflopHandTables[5]);
             postflopGrid.Children.Add(postflopHandTables[6]);
             postflopGrid.Children.Add(postflopHandTables[7]);
+            postflopGrid.Children.Add(postflopHandTables[8]);
+            postflopGrid.Children.Add(postflopHandTables[9]);
 
             PostflopPopup = new Popup
             {
@@ -231,95 +243,80 @@ namespace InfoHelper.Controls
         {
             Grid postflopGrid = (Grid)PostflopPopup.Child;
 
+            PostlopHandsTableControl[] postflopControls = postflopGrid.Children.Cast<PostlopHandsTableControl>().ToArray();
+
+            postflopControls[0].Data = ((PostflopData)postflopDataCells[0].CellData).MainGroup;
+            postflopControls[0].Header = postflopDataCells[0].Description;
+
             BetRange[] betRange1 = postflopDataCells[0].BetRanges;
-
-            PostlopHandsTableControl[] postflopControls = new PostlopHandsTableControl[8];
-
-            for (int i = 0; i < postflopControls.Length; i++)
-            {
-                int column = i % 2;
-                int row = i / 2;
-
-                postflopControls[i] = postflopGrid.Children.Cast<PostlopHandsTableControl>().First(c => Grid.GetColumn(c) == column && Grid.GetRow(c) == row);
-            }
 
             if (betRange1 == null)
             {
-                Grid.SetColumnSpan(postflopControls[0], 2);
-                Grid.SetRowSpan(postflopControls[0], 2);
+                Grid.SetColumnSpan(postflopControls[0], 3);
 
-                postflopControls[0].Visibility = Visibility.Visible;
-
-                for (int i = 1; i < 4; i++)
+                for (int i = 1; i < 5; i++)
                     postflopControls[i].Visibility = Visibility.Hidden;
-
-                postflopControls[0].Data = ((PostflopData)postflopDataCells[0].CellData).MainGroup;
-                postflopControls[0].Header = postflopDataCells[0].Description;
-
             }
             else
             {
                 Grid.SetColumnSpan(postflopControls[0], 1);
-                Grid.SetRowSpan(postflopControls[0], 1);
 
                 for (int i = 0; i < 4; i++)
                 {
                     if (i < betRange1.Length)
                     {
-                        postflopControls[i].Visibility = Visibility.Visible;
+                        postflopControls[i + 1].Visibility = Visibility.Visible;
 
-                        postflopControls[i].Data = ((PostflopData)postflopDataCells[0].CellData).SubGroups[i];
+                        postflopControls[i + 1].Data = ((PostflopData)postflopDataCells[0].CellData).SubGroups[i];
 
                         string amountString = betRange1[i].UpperBound == int.MaxValue ? $">{betRange1[i].LowBound}" : $"{betRange1[i].LowBound}<=..<{betRange1[i].UpperBound}";
 
-                        postflopControls[i].Header = $"{postflopDataCells[0].Description} ({amountString})";
+                        postflopControls[i + 1].Header = $"{amountString}";
                     }
                     else
-                        postflopControls[i].Visibility = Visibility.Hidden;
+                        postflopControls[i + 1].Visibility = Visibility.Hidden;
                 }
             }
 
             if (postflopDataCells.Length == 1)
             {
-                for (int i = 4; i < 8; i++)
+                for (int i = 5; i < 10; i++)
                     postflopControls[i].Visibility = Visibility.Hidden;
             }
             else
             {
+                postflopControls[5].Visibility = Visibility.Visible;
+
+                postflopControls[5].Data = ((PostflopData)postflopDataCells[1].CellData).MainGroup;
+                postflopControls[5].Header = postflopDataCells[1].Description;
+
                 BetRange[] betRange2 = postflopDataCells[1].BetRanges;
 
                 if (betRange2 == null)
                 {
-                    Grid.SetColumnSpan(postflopControls[4], 2);
-                    Grid.SetRowSpan(postflopControls[4], 2);
+                    Grid.SetColumnSpan(postflopControls[5], 3);
 
-                    postflopControls[4].Visibility = Visibility.Visible;
-
-                    for (int i = 5; i < 8; i++)
+                    for (int i = 6; i < 10; i++)
                         postflopControls[i].Visibility = Visibility.Hidden;
-
-                    postflopControls[4].Data = ((PostflopData)postflopDataCells[1].CellData).MainGroup;
-                    postflopControls[4].Header = postflopDataCells[1].Description;
                 }
                 else
                 {
-                    Grid.SetColumnSpan(postflopControls[4], 1);
-                    Grid.SetRowSpan(postflopControls[4], 1);
+                    Grid.SetColumnSpan(postflopControls[5], 1);
 
-                    for (int i = 4; i < 8; i++)
+                    for (int i = 0; i < 4; i++)
                     {
-                        if (i - 4 < betRange2.Length)
+                        if (i < betRange2.Length)
                         {
-                            postflopControls[i].Visibility = Visibility.Visible;
+                            postflopControls[i + 6].Visibility = Visibility.Visible;
 
-                            postflopControls[i].Data = ((PostflopData)postflopDataCells[1].CellData).SubGroups[i];
+                            postflopControls[i + 6].Data = ((PostflopData)postflopDataCells[1].CellData).SubGroups[i];
 
                             string amountString = betRange2[i].UpperBound == int.MaxValue ? $">{betRange2[i].LowBound}" : $"{betRange2[i].LowBound}<=..<{betRange2[i].UpperBound}";
 
-                            postflopControls[i].Header = $"{postflopDataCells[1].Description} ({amountString})";
+                            postflopControls[i + 6].Header = $"{amountString}";
                         }
                         else
-                            postflopControls[i].Visibility = Visibility.Hidden;
+                            postflopControls[i + 6].Visibility = Visibility.Hidden;
                     }
                 }
             }
