@@ -727,6 +727,8 @@ namespace InfoHelper.DataProcessor
                                         cellName = action.ActionType == BettingActionType.Bet ? "FLOAT_F" : "FLOATX_F";
                                     else if (actionSequences[0] == "xbr")
                                     {
+                                        postflopRows.UnionWith(new string[] { "FLOAT_F_Row" });
+
                                         if (action.ActionType == BettingActionType.Raise)
                                         {
                                             postflopRows.UnionWith(new string[] { "THREEBET_Row" });
@@ -734,9 +736,7 @@ namespace InfoHelper.DataProcessor
                                             cellName = "THREEBET_F";
                                         }
                                         else
-                                        {
-                                            //Nothing
-                                        }
+                                            cellName = "FLOAT_C_F";
                                     }
                                     else if (actionSequences[0] == "b")
                                         cellName = action.ActionType == BettingActionType.Raise ? "RvCB_F" : "CvCB_F";
@@ -749,7 +749,16 @@ namespace InfoHelper.DataProcessor
                                     if (actionSequences[0] == string.Empty)
                                         cellName = action.ActionType == BettingActionType.Bet ? "CB_F" : "CX_F";
                                     else if (actionSequences[0] == "xb")
-                                        cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_F";
+                                    {
+                                        if (action.ActionType == BettingActionType.Raise)
+                                        {
+                                            postflopRows.UnionWith(new string[] { "RvFLOAT_Row" });
+
+                                            cellName = "RvFLOAT_F";
+                                        }
+                                        else
+                                            cellName = "CvFLOAT_F";
+                                    }
                                     else if (actionSequences[0] == "br")
                                     {
                                         if (action.ActionType == BettingActionType.Raise)
@@ -938,9 +947,35 @@ namespace InfoHelper.DataProcessor
                                             postflopRows.UnionWith(new string[] { "THREEBET_Row" });
 
                                             cellName = "THREEBET_T";
+
+                                            if (actionSequences[0] == "xx")
+                                                postflopRows.UnionWith(new string[] { "DelFLOAT_F_Row" });
+                                            else if (actionSequences[0] == "bc")
+                                                postflopRows.UnionWith(new string[] { "FLOAT_F_Row" });
                                         }
                                         else
-                                            cellName = string.Empty;
+                                        {
+                                            if (actionSequences[0] == "xx")
+                                            {
+                                                postflopRows.UnionWith(new string[] { "DelFLOAT_F_Row" });
+
+                                                cellName = "DelFLOAT_C_T";
+                                            }
+                                            else if (actionSequences[0] == "xbc")
+                                                cellName = string.Empty;
+                                            else if (actionSequences[0] == "xbrc")
+                                                cellName = string.Empty;
+                                            else if (actionSequences[0] == "bc")
+                                            {
+                                                postflopRows.UnionWith(new string[] { "FLOAT_F_Row" });
+
+                                                cellName = "FLOAT_C_T";
+                                            }
+                                            else if (actionSequences[0] == "brc")
+                                                cellName = string.Empty;
+                                            else
+                                                cellName = string.Empty;
+                                        }
                                     }
                                     else if (actionSequences[1] == "b")
                                     {
@@ -958,7 +993,11 @@ namespace InfoHelper.DataProcessor
                                         else if (actionSequences[0] == "xbc")
                                             cellName = string.Empty;
                                         else if (actionSequences[0] == "xbrc")
-                                            cellName = string.Empty;
+                                        {
+                                            postflopRows.UnionWith(new string[] { "FLOAT_F_BB_Row" });
+
+                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "FLOAT_C_F_B";
+                                        }
                                         else if (actionSequences[0] == "bc")
                                             cellName = action.ActionType == BettingActionType.Raise ? "RvCB_T" : "CvCB_T";
                                         else if (actionSequences[0] == "brc")
@@ -979,7 +1018,11 @@ namespace InfoHelper.DataProcessor
                                         else if (actionSequences[0] == "xbc")
                                             cellName = string.Empty;
                                         else if (actionSequences[0] == "xbrc")
-                                            cellName = string.Empty;
+                                        {
+                                            postflopRows.UnionWith(new string[] { "RvFLOAT_BB_Row" });
+
+                                            cellName = action.ActionType == BettingActionType.Bet ? "RvFLOAT_F_B" : "RvFLOAT_F_X";
+                                        }
                                         else if (actionSequences[0] == "bc")
                                             cellName = action.ActionType == BettingActionType.Bet ? "CB_T" : "CX_T";
                                         else if (actionSequences[0] == "brc")
@@ -991,40 +1034,41 @@ namespace InfoHelper.DataProcessor
                                     {
                                         if (actionSequences[0] == "xx")
                                         {
-                                            if (action.ActionType == BettingActionType.Raise)
-                                                cellName = string.Empty;
-                                            else
-                                            {
-                                                postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row" });
+                                            postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row" });
 
-                                                cellName = "CvDelFLOAT_T";
+                                            if (action.ActionType == BettingActionType.Raise)
+                                            {
+                                                postflopRows.UnionWith(new string[] { "RvDelFLOAT_Row" });
+
+                                                cellName = "RvDelFLOAT_T";
                                             }
+                                            else
+                                                cellName = "CvDelFLOAT_T";
                                         }
                                         else if (actionSequences[0] == "xbc")
                                         {
-                                            if (action.ActionType == BettingActionType.Raise)
-                                                cellName = string.Empty;
-                                            else
-                                            {
-                                                postflopRows.UnionWith(new string[] { "FvFLOAT_BB_Row" });
+                                            postflopRows.UnionWith(new string[] { "FvFLOAT_BB_Row" });
 
-                                                cellName = "CvFLOAT_F_B";
-                                            }
+                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_F_B";
                                         }
                                         else if (actionSequences[0] == "xbrc")
                                             cellName = string.Empty;
                                         else if (actionSequences[0] == "bc")
-                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_T";
-                                        else if (actionSequences[0] == "brc")
                                         {
                                             if (action.ActionType == BettingActionType.Raise)
-                                                cellName = string.Empty;
-                                            else
                                             {
-                                                postflopRows.UnionWith(new string[] { "FCBvR_BB_Row" });
+                                                postflopRows.UnionWith(new string[] { "RvFLOAT_Row" });
 
-                                                cellName = "CCBvR_F_B";
+                                                cellName = "RvFLOAT_T";
                                             }
+                                            else
+                                                cellName = "CvFLOAT_T";
+                                        }
+                                        else if (actionSequences[0] == "brc")
+                                        {
+                                            postflopRows.UnionWith(new string[] { "FCBvR_BB_Row" });
+
+                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CCBvR_F_B";
                                         }
                                         else
                                             cellName = string.Empty;
@@ -1106,36 +1150,21 @@ namespace InfoHelper.DataProcessor
                                             cellName = action.ActionType == BettingActionType.Raise ? "RvCB_T" : "CvCB_T";
                                         else if (actionSequences[0] == "xbrc")
                                         {
-                                            if (action.ActionType == BettingActionType.Raise)
-                                                cellName = string.Empty;
-                                            else
-                                            {
-                                                postflopRows.UnionWith(new string[] { "FvFLOATXRCB_Row" });
+                                            postflopRows.UnionWith(new string[] { "FvFLOATXRCB_Row" });
 
-                                                cellName = "CvFLOATXRCB_T";
-                                            }
+                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATXRCB_T";
                                         }
                                         else if (actionSequences[0] == "bc")
                                         {
-                                            if (action.ActionType == BettingActionType.Raise)
-                                                cellName = string.Empty;
-                                            else
-                                            {
-                                                postflopRows.UnionWith(new string[] { "FvFLOATDONK_Row" });
+                                            postflopRows.UnionWith(new string[] { "FvFLOATDONK_Row" });
 
-                                                cellName = "CvFLOATDONK_T";
-                                            }
+                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATDONK_T";
                                         }
                                         else if (actionSequences[0] == "brc")
                                         {
-                                            if (action.ActionType == BettingActionType.Raise)
-                                                cellName = string.Empty;
-                                            else
-                                            {
-                                                postflopRows.UnionWith(new string[] { "DONK_F_BB_Row" });
+                                            postflopRows.UnionWith(new string[] { "DONK_F_BB_Row" });
 
-                                                cellName = "DONK_C_F_B";
-                                            }
+                                            cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "DONK_C_F_B";
                                         }
                                         else
                                             cellName = string.Empty;
@@ -1724,19 +1753,40 @@ namespace InfoHelper.DataProcessor
                                             postflopRows.UnionWith(new string[] { "THREEBET_Row" });
 
                                             cellName = "THREEBET_R";
+
+                                            if (actionSequences[1] == "xx")
+                                            {
+                                                if (actionSequences[0] == "xx")
+                                                    postflopRows.UnionWith(new string[] { "SDelFLOAT_F_Row" });
+                                                else if (actionSequences[0] == "bc")
+                                                    postflopRows.UnionWith(new string[] { "DelFLOAT_F_Row" });
+                                            }
+                                            else if (actionSequences[1] == "bc")
+                                            {
+                                                if (actionSequences[0] == "bc")
+                                                    postflopRows.UnionWith(new string[] { "FLOAT_F_Row" });
+                                            }
                                         }
                                         else
                                         {
                                             if (actionSequences[1] == "xx")
                                             {
                                                 if (actionSequences[0] == "xx")
-                                                    cellName = string.Empty;
+                                                {
+                                                    postflopRows.UnionWith(new string[] { "SDelFLOAT_F_Row" });
+
+                                                    cellName = "SDelFLOAT_C_R";
+                                                }
                                                 else if (actionSequences[0] == "xbc")
                                                     cellName = string.Empty;
                                                 else if (actionSequences[0] == "xbrc")
                                                     cellName = string.Empty;
                                                 else if (actionSequences[0] == "bc")
-                                                    cellName = string.Empty;
+                                                {
+                                                    postflopRows.UnionWith(new string[] { "DelFLOAT_F_Row" });
+
+                                                    cellName = "DelFLOAT_C_R";
+                                                }
                                                 else if (actionSequences[0] == "brc")
                                                     cellName = string.Empty;
                                                 else
@@ -1781,7 +1831,11 @@ namespace InfoHelper.DataProcessor
                                                 else if (actionSequences[0] == "xbrc")
                                                     cellName = string.Empty;
                                                 else if (actionSequences[0] == "bc")
-                                                    cellName = string.Empty;
+                                                {
+                                                    postflopRows.UnionWith(new string[] { "FLOAT_F_Row" });
+
+                                                    cellName = "FLOAT_C_R";
+                                                }
                                                 else if (actionSequences[0] == "brc")
                                                     cellName = string.Empty;
                                                 else
@@ -1824,7 +1878,11 @@ namespace InfoHelper.DataProcessor
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "FLOAT_F_XB_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "FLOAT_C_F_XB";
+                                            }
                                             else if (actionSequences[0] == "bc")
                                             {
                                                 if (action.ActionType == BettingActionType.Raise)
@@ -1859,13 +1917,21 @@ namespace InfoHelper.DataProcessor
                                         else if (actionSequences[1] == "xbrc")
                                         {
                                             if (actionSequences[0] == "xx")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "DelFLOAT_F_B_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "DelFLOAT_C_T_B";
+                                            }
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "bc")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "FLOAT_F_B_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "FLOAT_C_T_B";
+                                            }
                                             else if (actionSequences[0] == "brc")
                                                 cellName = string.Empty;
                                             else
@@ -1875,19 +1941,18 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDELAY_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDELAY_B_Row" });
 
-                                                    cellName = "CvDELAY_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDELAY_T_B";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "FLOAT_F_BB_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "FLOAT_C_F_BB";
+                                            }
                                             else if (actionSequences[0] == "bc")
                                                 cellName = action.ActionType == BettingActionType.Raise ? "RvCB_R" : "CvCB_R";
                                             else if (actionSequences[0] == "brc")
@@ -1928,7 +1993,11 @@ namespace InfoHelper.DataProcessor
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "RvFLOAT_XB_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Bet ? "RvFLOAT_F_XB" : "RvFLOAT_F_XX";
+                                            }
                                             else if (actionSequences[0] == "bc")
                                                 cellName = action.ActionType == BettingActionType.Bet ? "DELAY_R" : "DELAYX_R";
                                             else if (actionSequences[0] == "brc")
@@ -1954,13 +2023,21 @@ namespace InfoHelper.DataProcessor
                                         else if (actionSequences[1] == "xbrc")
                                         {
                                             if (actionSequences[0] == "xx")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "RvDelFLOAT_B_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Bet ? "RvDelFLOAT_T_B" : "RvDelFLOAT_T_X";
+                                            }
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "bc")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "RvFLOAT_B_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Bet ? "RvFLOAT_T_B" : "RvFLOAT_T_X";
+                                            }
                                             else if (actionSequences[0] == "brc")
                                                 cellName = string.Empty;
                                             else
@@ -1977,7 +2054,11 @@ namespace InfoHelper.DataProcessor
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
-                                                cellName = string.Empty;
+                                            {
+                                                postflopRows.UnionWith(new string[] { "RvFLOAT_BB_Row" });
+
+                                                cellName = action.ActionType == BettingActionType.Bet ? "RvFLOAT_F_BB" : "RvFLOAT_F_BX";
+                                            }
                                             else if (actionSequences[0] == "bc")
                                                 cellName = action.ActionType == BettingActionType.Bet ? "CB_R" : "CX_R";
                                             else if (actionSequences[0] == "brc")
@@ -2009,49 +2090,43 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvSDelFLOAT_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvSDelFLOAT_Row" });
 
-                                                    cellName = "CvSDelFLOAT_R";
+                                                if (action.ActionType == BettingActionType.Raise)
+                                                {
+                                                    postflopRows.UnionWith(new string[] { "RvSDelFLOAT_Row" });
+
+                                                    cellName = "RvSDelFLOAT_R";
                                                 }
+                                                else
+                                                    cellName = "CvSDelFLOAT_R";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOAT_XB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOAT_XB_Row" });
 
-                                                    cellName = "CvFLOAT_F_XB";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_F_XB";
                                             }
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "bc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row" });
 
-                                                    cellName = "CvDelFLOAT_R";
+                                                if (action.ActionType == BettingActionType.Raise)
+                                                {
+                                                    postflopRows.UnionWith(new string[] { "RvDelFLOAT_Row" });
+
+                                                    cellName = "RvDelFLOAT_R";
                                                 }
+                                                else
+                                                    cellName = "CvDelFLOAT_R";
                                             }
                                             else if (actionSequences[0] == "brc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FCBvR_XB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FCBvR_XB_Row" });
 
-                                                    cellName = "CCBvR_F_XB";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CCBvR_F_XB";
                                             }
                                             else
                                                 cellName = string.Empty;
@@ -2060,49 +2135,29 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDelFLOAT_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDelFLOAT_B_Row" });
 
-                                                    cellName = "CvDelFLOAT_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDelFLOAT_T_B";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOAT_BB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOAT_BB_Row" });
 
-                                                    cellName = "CvFLOAT_F_BB";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_F_BB";
                                             }
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "bc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOAT_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOAT_B_Row" });
 
-                                                    cellName = "CvFLOAT_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_T_B";
                                             }
                                             else if (actionSequences[0] == "brc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FCBvR_BB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FCBvR_BB_Row" });
 
-                                                    cellName = "CCBvR_F_BB";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CCBvR_F_BB";
                                             }
                                             else
                                                 cellName = string.Empty;
@@ -2126,21 +2181,25 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATDELAY_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATDELAY_Row" });
 
-                                                    cellName = "CvFLOATDELAY_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATDELAY_R";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "bc")
-                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOAT_R";
+                                            {
+                                                if (action.ActionType == BettingActionType.Raise)
+                                                {
+                                                    postflopRows.UnionWith(new string[] { "RvFLOAT_Row" });
+
+                                                    cellName = "RvFLOAT_R";
+                                                }
+                                                else
+                                                    cellName = "CvFLOAT_R";
+                                            }
                                             else if (actionSequences[0] == "brc")
                                                 cellName = string.Empty;
                                             else
@@ -2150,14 +2209,9 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "DELAY_F_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "DELAY_F_B_Row" });
 
-                                                    cellName = "DELAY_C_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "DELAY_C_T_B";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = string.Empty;
@@ -2165,14 +2219,9 @@ namespace InfoHelper.DataProcessor
                                                 cellName = string.Empty;
                                             else if (actionSequences[0] == "bc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FCBvR_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FCBvR_B_Row" });
 
-                                                    cellName = "CCBvR_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CCBvR_T_B";
                                             }
                                             else if (actionSequences[0] == "brc")
                                                 cellName = string.Empty;
@@ -2437,36 +2486,21 @@ namespace InfoHelper.DataProcessor
                                             }
                                             else if (actionSequences[0] == "xbrc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDelFLOATXRCB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDelFLOATXRCB_Row" });
 
-                                                    cellName = "CvDelFLOATXRCB_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDelFLOATXRCB_R";
                                             }
                                             else if (actionSequences[0] == "bc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDelFLOATDONK_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDelFLOATDONK_Row" });
 
-                                                    cellName = "CvDelFLOATDONK_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDelFLOATDONK_R";
                                             }
                                             else if (actionSequences[0] == "brc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "DONK_F_XB_Row" });
+                                                postflopRows.UnionWith(new string[] { "DONK_F_XB_Row" });
 
-                                                    cellName = "DONK_C_F_XB";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "DONK_C_F_XB";
                                             }
                                             else
                                                 cellName = string.Empty;
@@ -2475,49 +2509,29 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDELAY_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDELAY_B_Row" });
 
-                                                    cellName = "CvDELAY_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDELAY_T_B";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                                 cellName = action.ActionType == BettingActionType.Raise ? "RvCB_R" : "CvCB_R";
                                             else if (actionSequences[0] == "xbrc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATXRCB_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATXRCB_B_Row" });
 
-                                                    cellName = "CvFLOATXRCB_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATXRCB_T_B";
                                             }
                                             else if (actionSequences[0] == "bc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATDONK_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATDONK_B_Row" });
 
-                                                    cellName = "CvFLOATDONK_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATDONK_T_B";
                                             }
                                             else if (actionSequences[0] == "brc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "DONK_F_BB_Row" });
+                                                postflopRows.UnionWith(new string[] { "DONK_F_BB_Row" });
 
-                                                    cellName = "DONK_C_F_BB";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "DONK_C_F_BB";
                                             }
                                             else
                                                 cellName = string.Empty;
@@ -2526,25 +2540,15 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATXRDELAY_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATXRDELAY_Row" });
 
-                                                    cellName = "CvFLOATXRDELAY_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATXRDELAY_R";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATXRCB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATXRCB_Row" });
 
-                                                    cellName = "CvFLOATXRCB_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATXRCB_R";
                                             }
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
@@ -2559,47 +2563,27 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATPROBE_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATPROBE_Row" });
 
-                                                    cellName = "CvFLOATPROBE_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATPROBE_R";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvFLOATDONK_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvFLOATDONK_Row" });
 
-                                                    cellName = "CvFLOATDONK_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvFLOATDONK_R";
                                             }
                                             else if (actionSequences[0] == "xbrc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDblFLOATXRCB_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDblFLOATXRCB_Row" });
 
-                                                    cellName = "CvDblFLOATXRCB_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDblFLOATXRCB_R";
                                             }
                                             else if (actionSequences[0] == "bc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "FvDblFLOATDONK_Row" });
+                                                postflopRows.UnionWith(new string[] { "FvDblFLOATDONK_Row" });
 
-                                                    cellName = "CvDblFLOATDONK_R";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "CvDblFLOATDONK_R";
                                             }
                                             else if (actionSequences[0] == "brc")
                                                 cellName = string.Empty;
@@ -2610,25 +2594,15 @@ namespace InfoHelper.DataProcessor
                                         {
                                             if (actionSequences[0] == "xx")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "PROBE_F_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "PROBE_F_B_Row" });
 
-                                                    cellName = "PROBE_C_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "PROBE_C_T_B";
                                             }
                                             else if (actionSequences[0] == "xbc")
                                             {
-                                                if (action.ActionType == BettingActionType.Raise)
-                                                    cellName = string.Empty;
-                                                else
-                                                {
-                                                    postflopRows.UnionWith(new string[] { "DONK_F_B_Row" });
+                                                postflopRows.UnionWith(new string[] { "DONK_F_B_Row" });
 
-                                                    cellName = "DONK_C_T_B";
-                                                }
+                                                cellName = action.ActionType == BettingActionType.Raise ? string.Empty : "DONK_C_T_B";
                                             }
                                             else if (actionSequences[0] == "xbrc")
                                                 cellName = string.Empty;
@@ -2831,7 +2805,7 @@ namespace InfoHelper.DataProcessor
                             //Nothing
                         }
                         else if (actionSequences[0] == "xb")
-                            postflopRows.UnionWith(new string[] { "FLOAT_BB_Row" });
+                            postflopRows.UnionWith(new string[] { "FLOAT_BB_Row", "FLOAT_F_Row" });
                         else if (actionSequences[0] == "br")
                             postflopRows.UnionWith(new string[] { "RvCB_BB_Row" });
                     }
@@ -2839,11 +2813,9 @@ namespace InfoHelper.DataProcessor
                     else if (postflopHud.SetType == SetType.PostflopHuOopRaiser)
                     {
                         if (actionSequences[0] == "x")
-                            postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row", "FvFLOAT_BB_Row" });
+                            postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row", "FvFLOAT_BB_Row", "RvFLOAT_Row" });
                         else if (actionSequences[0] == "xbr")
-                        {
-                            //Nothing
-                        }
+                            postflopRows.UnionWith(new string[] { "RvFLOAT_BB_Row" });
                         else if (actionSequences[0] == "b")
                             postflopRows.UnionWith(new string[] { "FCBvR_BB_Row" });
                     }
@@ -2929,9 +2901,7 @@ namespace InfoHelper.DataProcessor
                             else if (actionSequences[0] == "xbc")
                                 postflopRows.UnionWith(new string[] { "FLOAT_BB_Row" });
                             else if (actionSequences[0] == "xbrc")
-                            {
-                                //Nothing
-                            }
+                                postflopRows.UnionWith(new string[] { "FLOAT_F_BB_Row" });
                             else if (actionSequences[0] == "bc")
                             {
                                 //Nothing
@@ -2942,7 +2912,7 @@ namespace InfoHelper.DataProcessor
                         else if (actionSequences[1] == "xb")
                         {
                             if (actionSequences[0] == "xx")
-                                postflopRows.UnionWith(new string[] { "DelFLOAT_B_Row" });
+                                postflopRows.UnionWith(new string[] { "DelFLOAT_B_Row", "DelFLOAT_F_Row" });
                             else if (actionSequences[0] == "xbc")
                             {
                                 //Nothing
@@ -2952,7 +2922,7 @@ namespace InfoHelper.DataProcessor
                                 //Nothing
                             }
                             else if (actionSequences[0] == "bc")
-                                postflopRows.UnionWith(new string[] { "FLOAT_B_Row" });
+                                postflopRows.UnionWith(new string[] { "FLOAT_B_Row", "FLOAT_F_Row" });
                             else if (actionSequences[0] == "brc")
                             {
                                 //Nothing
@@ -2984,24 +2954,20 @@ namespace InfoHelper.DataProcessor
                         if (actionSequences[1] == "x")
                         {
                             if (actionSequences[0] == "xx")
-                                postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row", "FvDelFLOAT_B_Row" });
+                                postflopRows.UnionWith(new string[] { "FvDelFLOAT_Row", "FvDelFLOAT_B_Row", "RvDelFLOAT_Row" });
                             else if (actionSequences[0] == "xbc")
                                 postflopRows.UnionWith(new string[] { "FvFLOAT_BB_Row", "FvFLOAT_XB_Row" });
                             else if (actionSequences[0] == "xbrc")
-                            {
-                                //Nothing
-                            }
+                                postflopRows.UnionWith(new string[] { "RvFLOAT_XB_Row" });
                             else if (actionSequences[0] == "bc")
-                                postflopRows.UnionWith(new string[] { "FvFLOAT_B_Row", "FvDelFLOAT_Row" });
+                                postflopRows.UnionWith(new string[] { "FvFLOAT_B_Row", "FvDelFLOAT_Row", "RvFLOAT_Row" });
                             else if (actionSequences[0] == "brc")
                                 postflopRows.UnionWith(new string[] { "FCBvR_BB_Row", "FCBvR_XB_Row" });
                         }
                         else if (actionSequences[1] == "xbr")
                         {
                             if (actionSequences[0] == "xx")
-                            {
-                                //Nothing
-                            }
+                                postflopRows.UnionWith(new string[] { "RvDelFLOAT_B_Row" });
                             else if (actionSequences[0] == "xbc")
                             {
                                 //Nothing
@@ -3011,9 +2977,7 @@ namespace InfoHelper.DataProcessor
                                 //Nothing
                             }
                             else if (actionSequences[0] == "bc")
-                            {
-                                //Nothing
-                            }
+                                postflopRows.UnionWith(new string[] { "RvFLOAT_B_Row" });
                             else if (actionSequences[0] == "brc")
                             {
                                 //Nothing
@@ -3028,9 +2992,7 @@ namespace InfoHelper.DataProcessor
                                 //Nothing
                             }
                             else if (actionSequences[0] == "xbrc")
-                            {
-                                //Nothing
-                            }
+                                postflopRows.UnionWith(new string[] { "RvFLOAT_BB_Row" });
                             else if (actionSequences[0] == "bc")
                                 postflopRows.UnionWith(new string[] { "FCBvR_B_Row" });
                             else if (actionSequences[0] == "brc")
@@ -3317,9 +3279,7 @@ namespace InfoHelper.DataProcessor
                                 else if (actionSequences[0] == "xbc")
                                     postflopRows.UnionWith(new string[] { "FLOAT_XB_Row" });
                                 else if (actionSequences[0] == "xbrc")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "FLOAT_F_XB_Row" });
                                 else if (actionSequences[0] == "bc")
                                     postflopRows.UnionWith(new string[] { "RvDELAY_Row", "DelFLOAT_Row" });
                                 else if (actionSequences[0] == "brc")
@@ -3347,9 +3307,7 @@ namespace InfoHelper.DataProcessor
                             else if (actionSequences[1] == "xbrc")
                             {
                                 if (actionSequences[0] == "xx")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "DelFLOAT_F_B_Row" });
                                 else if (actionSequences[0] == "xbc")
                                 {
                                     //Nothing
@@ -3359,9 +3317,7 @@ namespace InfoHelper.DataProcessor
                                     //Nothing
                                 }
                                 else if (actionSequences[0] == "bc")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "FLOAT_F_B_Row" });
                                 else if (actionSequences[0] == "brc")
                                 {
                                     //Nothing
@@ -3376,9 +3332,7 @@ namespace InfoHelper.DataProcessor
                                     //Nothing
                                 }
                                 else if (actionSequences[0] == "xbrc")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "FLOAT_F_BB_Row" });
                                 else if (actionSequences[0] == "bc")
                                 {
                                     //Nothing
@@ -3413,9 +3367,7 @@ namespace InfoHelper.DataProcessor
                             if (actionSequences[1] == "xx")
                             {
                                 if (actionSequences[0] == "xx")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "SDelFLOAT_F_Row" });
                                 else if (actionSequences[0] == "xbc")
                                 {
                                     //Nothing
@@ -3425,9 +3377,7 @@ namespace InfoHelper.DataProcessor
                                     //Nothing
                                 }
                                 else if (actionSequences[0] == "bc")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "DelFLOAT_F_Row" });
                                 else if (actionSequences[0] == "brc")
                                 {
                                     //Nothing
@@ -3494,9 +3444,7 @@ namespace InfoHelper.DataProcessor
                                     //Nothing
                                 }
                                 else if (actionSequences[0] == "bc")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "FLOAT_F_Row" });
                                 else if (actionSequences[0] == "brc")
                                 {
                                     //Nothing
@@ -3535,7 +3483,7 @@ namespace InfoHelper.DataProcessor
                             if (actionSequences[1] == "xx")
                             {
                                 if (actionSequences[0] == "xx")
-                                    postflopRows.UnionWith(new string[] { "FvSDelFLOAT_Row" });
+                                    postflopRows.UnionWith(new string[] { "FvSDelFLOAT_Row", "RvSDelFLOAT_Row" });
                                 else if (actionSequences[0] == "xbc")
                                     postflopRows.UnionWith(new string[] { "FvFLOAT_XB_Row" });
                                 else if (actionSequences[0] == "xbrc")
@@ -3602,9 +3550,7 @@ namespace InfoHelper.DataProcessor
                                     //Nothing
                                 }
                                 else if (actionSequences[0] == "bc")
-                                {
-                                    //Nothing
-                                }
+                                    postflopRows.UnionWith(new string[] { "RvFLOAT_Row" });
                                 else if (actionSequences[0] == "brc")
                                 {
                                     //Nothing

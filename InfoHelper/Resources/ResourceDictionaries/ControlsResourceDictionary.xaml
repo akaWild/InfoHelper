@@ -151,12 +151,18 @@
         <Setter Property="ShowSample" Value="False"></Setter>
     </Style>
 
-    <SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
+    <!--<SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
     <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
     <SolidColorBrush x:Key="VpipBackground">#DCFFDC</SolidColorBrush>
     <SolidColorBrush x:Key="AggrBackground">#CEB5AB</SolidColorBrush>
     <SolidColorBrush x:Key="SdBackground">#D2D2D2</SolidColorBrush>
-    <SolidColorBrush x:Key="EvBackground">#CACC6A</SolidColorBrush>
+    <SolidColorBrush x:Key="EvBackground">#CACC6A</SolidColorBrush>-->
+    <SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
+    <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
+    <SolidColorBrush x:Key="VpipBackground">Beige</SolidColorBrush>
+    <SolidColorBrush x:Key="AggrBackground">Beige</SolidColorBrush>
+    <SolidColorBrush x:Key="SdBackground">Beige</SolidColorBrush>
+    <SolidColorBrush x:Key="EvBackground">Beige</SolidColorBrush>
 
     <!--Other panels-->
     <Style x:Key="EmptyCellStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">

@@ -535,6 +535,27 @@ PostflopHuIpRaiser;StatCell;PostflopData;;FLOATPROBEX_R;Call turn probet and che
 PostflopHuIpRaiser;StatCell;PostflopData;;FvSPROBE_R;Fold to super river probet;CvSPROBE_R;RvSPROBE_R
 PostflopHuIpRaiser;StatCell;PostflopData;;CvSPROBE_R;Call super river probet;FvSPROBE_R;RvSPROBE_R
 PostflopHuIpRaiser;StatCell;PostflopData;;RvSPROBE_R;Raise super river probet;CvSPROBE_R;
+PostflopHuIpRaiser;StatCell;PostflopData;35, 70, 100;Bet_F;Bet flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;35, 70, 100;Bet_T;Bet turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;35, 70, 100;Bet_R;Bet river;;
+PostflopHuIpRaiser;StatCell;PostflopData;;Check_F;Check flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;;Check_T;Check turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;;Check_R;Check river;;
+PostflopHuIpRaiser;StatCell;PostflopData;;FvBet_F;Fold to bet flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;;FvBet_T;Fold to bet turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;;FvBet_R;Fold to bet river;;
+PostflopHuIpRaiser;StatCell;PostflopData;;CvBet_F;Call bet flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;;CvBet_T;Call bet turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;;CvBet_R;Call bet river;;
+PostflopHuIpRaiser;StatCell;PostflopData;;Raise_F;Raise flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;;Raise_T;Raise turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;;Raise_R;Raise river;;
+PostflopHuIpRaiser;StatCell;PostflopData;;FvRaise_F;Fold to raise flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;;FvRaise_T;Fold to raise turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;;FvRaise_R;Fold to raise river;;
+PostflopHuIpRaiser;StatCell;PostflopData;;CvRaise_F;Call raise flop;;
+PostflopHuIpRaiser;StatCell;PostflopData;;CvRaise_T;Call raise turn;;
+PostflopHuIpRaiser;StatCell;PostflopData;;CvRaise_R;Call raise river;;
 PostflopHuIpCaller;StatCell;PostflopData;;FvCB_F;Fold to continuation bet flop;CvCB_F;RvCB_F
 PostflopHuIpCaller;StatCell;PostflopData;;FvCB_T;Fold to continuation bet turn;CvCB_T;RvCB_T
 PostflopHuIpCaller;StatCell;PostflopData;;FvCB_R;Fold to continuation bet river;CvCB_R;RvCB_R
@@ -593,14 +614,57 @@ PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;FLOAT_F_XB;Float bet flop, 
 PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_XX;Float bet flop, check/check turn and check river;FLOAT_F_XB;
 PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;FLOAT_T_B;Float bet turn and bet river;FLOAT_T_X;
 PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_T_X;Float bet turn and check river;FLOAT_T_B;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_F;Float bet/fold flop;FLOAT_C_F;THREEBET_F
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_T;Float bet/fold turn;FLOAT_C_T;THREEBET_T
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_R;Float bet/fold river;FLOAT_C_R;THREEBET_R
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_F;Float bet/call flop;FLOAT_F_F;THREEBET_F
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_T;Float bet/call turn;FLOAT_F_T;THREEBET_T
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_R;Float bet/call river;FLOAT_F_R;THREEBET_R
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_F_B;Float bet/call flop and fold to turn bet;FLOAT_C_F_B;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_F_BB;Float bet/call flop, call turn bet and fold to river bet;FLOAT_C_F_BB;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_F_B;Float bet/call flop and call turn bet;FLOAT_F_F_B;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_F_BB;Float bet/call flop, call turn bet and call river bet;FLOAT_F_F_BB;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_F_XB;Float bet/call flop, check/check turn and fold to river bet;FLOAT_C_F_XB;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_F_XB;Float bet/call flop, check/check turn and call river bet;FLOAT_F_F_XB;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_F_T_B;Float bet/call turn and fold to river bet;FLOAT_C_T_B;
+PostflopHuIpCaller;StatCell;PostflopData;;FLOAT_C_T_B;Float bet/call turn and call river bet;FLOAT_F_T_B;
 PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;DelFLOAT_T;Delay float bet turn;DelFLOATX_T;
 PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;DelFLOAT_R;Delay float bet river;DelFLOATX_R;
 PostflopHuIpCaller;StatCell;PostflopData;;DelFLOATX_T;Delay float check turn;DelFLOAT_T;
 PostflopHuIpCaller;StatCell;PostflopData;;DelFLOATX_R;Delay float check river;DelFLOAT_R;
 PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;DelFLOAT_T_B;Delay float bet turn and bet river;DelFLOAT_T_X;
 PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_T_X;Delay float bet turn and check river;DelFLOAT_T_B;
+PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_F_T;Delay float bet/fold turn;DelFLOAT_C_T;THREEBET_T
+PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_F_R;Delay float bet/fold river;DelFLOAT_C_R;THREEBET_R
+PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_C_T;Delay float bet/call turn;DelFLOAT_F_T;THREEBET_T
+PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_C_R;Delay float bet/call river;DelFLOAT_F_R;THREEBET_R
+PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_F_T_B;Delay float bet/call turn and fold to river bet;DelFLOAT_C_T_B;
+PostflopHuIpCaller;StatCell;PostflopData;;DelFLOAT_C_T_B;Delay float bet/call turn and call river bet;DelFLOAT_F_T_B;
 PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;SDelFLOAT_R;Super delay float bet river;SDelFLOATX_R;
 PostflopHuIpCaller;StatCell;PostflopData;;SDelFLOATX_R;Super delay float check river;SDelFLOAT_R;
+PostflopHuIpCaller;StatCell;PostflopData;;SDelFLOAT_F_R;Super delay float bet/fold river;SDelFLOAT_C_R;THREEBET_R
+PostflopHuIpCaller;StatCell;PostflopData;;SDelFLOAT_C_R;Super delay float bet/call river;SDelFLOAT_F_R;THREEBET_R
+PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;Bet_F;Bet flop;;
+PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;Bet_T;Bet turn;;
+PostflopHuIpCaller;StatCell;PostflopData;35, 70, 100;Bet_R;Bet river;;
+PostflopHuIpCaller;StatCell;PostflopData;;Check_F;Check flop;;
+PostflopHuIpCaller;StatCell;PostflopData;;Check_T;Check turn;;
+PostflopHuIpCaller;StatCell;PostflopData;;Check_R;Check river;;
+PostflopHuIpCaller;StatCell;PostflopData;;FvBet_F;Fold to bet flop;;
+PostflopHuIpCaller;StatCell;PostflopData;;FvBet_T;Fold to bet turn;;
+PostflopHuIpCaller;StatCell;PostflopData;;FvBet_R;Fold to bet river;;
+PostflopHuIpCaller;StatCell;PostflopData;;CvBet_F;Call bet flop;;
+PostflopHuIpCaller;StatCell;PostflopData;;CvBet_T;Call bet turn;;
+PostflopHuIpCaller;StatCell;PostflopData;;CvBet_R;Call bet river;;
+PostflopHuIpCaller;StatCell;PostflopData;;Raise_F;Raise flop;;
+PostflopHuIpCaller;StatCell;PostflopData;;Raise_T;Raise turn;;
+PostflopHuIpCaller;StatCell;PostflopData;;Raise_R;Raise river;;
+PostflopHuIpCaller;StatCell;PostflopData;;FvRaise_F;Fold to raise flop;;
+PostflopHuIpCaller;StatCell;PostflopData;;FvRaise_T;Fold to raise turn;;
+PostflopHuIpCaller;StatCell;PostflopData;;FvRaise_R;Fold to raise river;;
+PostflopHuIpCaller;StatCell;PostflopData;;CvRaise_F;Call raise flop;;
+PostflopHuIpCaller;StatCell;PostflopData;;CvRaise_T;Call raise turn;;
+PostflopHuIpCaller;StatCell;PostflopData;;CvRaise_R;Call raise river;;
 PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;CB_F;Continuation bet flop;CX_F;
 PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;CB_T;Continuation bet turn;CX_T;
 PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;CB_R;Continuation bet river;CX_R;
@@ -651,9 +715,9 @@ PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;SDELAY_R;Super delay conti
 PostflopHuOopRaiser;StatCell;PostflopData;;SDELAYX_R;Super delay continuation check river;SDELAY_R;
 PostflopHuOopRaiser;StatCell;PostflopData;;SDELAY_F_R;Super delay continuation bet/fold river;SDELAY_C_R;THREEBET_R
 PostflopHuOopRaiser;StatCell;PostflopData;;SDELAY_C_R;Super delay continuation bet/call river;SDELAY_F_R;THREEBET_R
-PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_F;Fold to float bet flop;CvFLOAT_F;
-PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_T;Fold to float bet turn;CvFLOAT_T;
-PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_R;Fold to float bet river;CvFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_F;Fold to float bet flop;CvFLOAT_F;RvFLOAT_F
+PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_T;Fold to float bet turn;CvFLOAT_T;RvFLOAT_T
+PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_R;Fold to float bet river;CvFLOAT_R;RvFLOAT_R
 PostflopHuOopRaiser;StatCell;PostflopData;;CvFLOAT_F;Call float bet flop;FvFLOAT_F;
 PostflopHuOopRaiser;StatCell;PostflopData;;CvFLOAT_T;Call float bet turn;FvFLOAT_T;
 PostflopHuOopRaiser;StatCell;PostflopData;;CvFLOAT_R;Call float bet river;FvFLOAT_R;
@@ -665,14 +729,51 @@ PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_F_XB;Call float bet flop, che
 PostflopHuOopRaiser;StatCell;PostflopData;;CvFLOAT_F_XB;Call float bet flop, check/check turn and call river bet;FvFLOAT_F_XB;
 PostflopHuOopRaiser;StatCell;PostflopData;;FvFLOAT_T_B;Call float bet turn and fold to river bet;CvFLOAT_T_B;
 PostflopHuOopRaiser;StatCell;PostflopData;;CvFLOAT_T_B;Call float bet turn and call river bet;FvFLOAT_T_B;
-PostflopHuOopRaiser;StatCell;PostflopData;;FvDelFLOAT_T;Fold to delay float bet turn;CvDelFLOAT_T;
-PostflopHuOopRaiser;StatCell;PostflopData;;FvDelFLOAT_R;Fold to delay float bet river;CvDelFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_F;Raise float bet flop;CvFLOAT_F;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_T;Raise float bet turn;CvFLOAT_T;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_R;Raise float bet river;CvFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;RvFLOAT_F_B;Raise float bet flop and bet turn;RvFLOAT_F_X;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;RvFLOAT_F_BB;Raise float bet flop, bet turn and bet river;RvFLOAT_F_BX;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_F_X;Raise float bet flop and check turn;RvFLOAT_F_B;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_F_BX;Raise float bet flop, bet turn and check river;RvFLOAT_F_BB;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;RvFLOAT_F_XB;Raise float bet flop, check/check turn and bet river;RvFLOAT_F_XX;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_F_XX;Raise float bet flop, check/check turn and check river;RvFLOAT_F_XB;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;RvFLOAT_T_B;Raise float bet turn and bet river;RvFLOAT_T_X;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvFLOAT_T_X;Raise float bet turn and check river;RvFLOAT_T_B;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvDelFLOAT_T;Fold to delay float bet turn;CvDelFLOAT_T;RvDelFLOAT_T
+PostflopHuOopRaiser;StatCell;PostflopData;;FvDelFLOAT_R;Fold to delay float bet river;CvDelFLOAT_R;RvDelFLOAT_R
 PostflopHuOopRaiser;StatCell;PostflopData;;CvDelFLOAT_T;Call delay float bet turn;FvDelFLOAT_T;
 PostflopHuOopRaiser;StatCell;PostflopData;;CvDelFLOAT_R;Call delay float bet river;FvDelFLOAT_R;
 PostflopHuOopRaiser;StatCell;PostflopData;;FvDelFLOAT_T_B;Call delay float bet turn and fold to river bet;CvDelFLOAT_T_B;
 PostflopHuOopRaiser;StatCell;PostflopData;;CvDelFLOAT_T_B;Call delay float bet turn and call river bet;FvDelFLOAT_T_B;
-PostflopHuOopRaiser;StatCell;PostflopData;;FvSDelFLOAT_R;Fold to super delay float bet river;CvSDelFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvDelFLOAT_T;Raise delay float bet turn;CvDelFLOAT_T;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvDelFLOAT_R;Raise delay float bet river;CvDelFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;RvDelFLOAT_T_B;Raise delay float bet turn and bet river;RvDelFLOAT_T_X;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvDelFLOAT_T_X;Raise delay float bet turn and check river;RvDelFLOAT_T_B;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvSDelFLOAT_R;Fold to super delay float bet river;CvSDelFLOAT_R;RvSDelFLOAT_R
 PostflopHuOopRaiser;StatCell;PostflopData;;CvSDelFLOAT_R;Call super delay float bet river;FvSDelFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;;RvSDelFLOAT_R;Raise super delay float bet river;CvSDelFLOAT_R;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;Bet_F;Bet flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;Bet_T;Bet turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;35, 70, 100;Bet_R;Bet river;;
+PostflopHuOopRaiser;StatCell;PostflopData;;Check_F;Check flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;;Check_T;Check turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;;Check_R;Check river;;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvBet_F;Fold to bet flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvBet_T;Fold to bet turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvBet_R;Fold to bet river;;
+PostflopHuOopRaiser;StatCell;PostflopData;;CvBet_F;Call bet flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;;CvBet_T;Call bet turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;;CvBet_R;Call bet river;;
+PostflopHuOopRaiser;StatCell;PostflopData;;Raise_F;Raise flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;;Raise_T;Raise turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;;Raise_R;Raise river;;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvRaise_F;Fold to raise flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvRaise_T;Fold to raise turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;;FvRaise_R;Fold to raise river;;
+PostflopHuOopRaiser;StatCell;PostflopData;;CvRaise_F;Call raise flop;;
+PostflopHuOopRaiser;StatCell;PostflopData;;CvRaise_T;Call raise turn;;
+PostflopHuOopRaiser;StatCell;PostflopData;;CvRaise_R;Call raise river;;
 PostflopHuOopCaller;StatCell;PostflopData;;FvCB_F;Fold to continuation bet flop;CvCB_F;RvCB_F
 PostflopHuOopCaller;StatCell;PostflopData;;FvCB_T;Fold to continuation bet turn;CvCB_T;RvCB_T
 PostflopHuOopCaller;StatCell;PostflopData;;FvCB_R;Fold to continuation bet river;CvCB_R;RvCB_R
@@ -787,6 +888,27 @@ PostflopHuOopCaller;StatCell;PostflopData;35, 70, 100;SPROBE_R;Super probet rive
 PostflopHuOopCaller;StatCell;PostflopData;;SPROBEX_R;Super probe check river;SPROBE_R;
 PostflopHuOopCaller;StatCell;PostflopData;;SPROBE_F_R;Super probet/fold river;SPROBE_C_R;THREEBET_R
 PostflopHuOopCaller;StatCell;PostflopData;;SPROBE_C_R;Super probet/call river;SPROBE_F_R;THREEBET_R
+PostflopHuOopCaller;StatCell;PostflopData;35, 70, 100;Bet_F;Bet flop;;
+PostflopHuOopCaller;StatCell;PostflopData;35, 70, 100;Bet_T;Bet turn;;
+PostflopHuOopCaller;StatCell;PostflopData;35, 70, 100;Bet_R;Bet river;;
+PostflopHuOopCaller;StatCell;PostflopData;;Check_F;Check flop;;
+PostflopHuOopCaller;StatCell;PostflopData;;Check_T;Check turn;;
+PostflopHuOopCaller;StatCell;PostflopData;;Check_R;Check river;;
+PostflopHuOopCaller;StatCell;PostflopData;;FvBet_F;Fold to bet flop;;
+PostflopHuOopCaller;StatCell;PostflopData;;FvBet_T;Fold to bet turn;;
+PostflopHuOopCaller;StatCell;PostflopData;;FvBet_R;Fold to bet river;;
+PostflopHuOopCaller;StatCell;PostflopData;;CvBet_F;Call bet flop;;
+PostflopHuOopCaller;StatCell;PostflopData;;CvBet_T;Call bet turn;;
+PostflopHuOopCaller;StatCell;PostflopData;;CvBet_R;Call bet river;;
+PostflopHuOopCaller;StatCell;PostflopData;;Raise_F;Raise flop;;
+PostflopHuOopCaller;StatCell;PostflopData;;Raise_T;Raise turn;;
+PostflopHuOopCaller;StatCell;PostflopData;;Raise_R;Raise river;;
+PostflopHuOopCaller;StatCell;PostflopData;;FvRaise_F;Fold to raise flop;;
+PostflopHuOopCaller;StatCell;PostflopData;;FvRaise_T;Fold to raise turn;;
+PostflopHuOopCaller;StatCell;PostflopData;;FvRaise_R;Fold to raise river;;
+PostflopHuOopCaller;StatCell;PostflopData;;CvRaise_F;Call raise flop;;
+PostflopHuOopCaller;StatCell;PostflopData;;CvRaise_T;Call raise turn;;
+PostflopHuOopCaller;StatCell;PostflopData;;CvRaise_R;Call raise river;;
 PostflopGeneral;StatCell;PostflopData;35, 70, 100;Bet_F;Bet flop;Check_F;
 PostflopGeneral;StatCell;PostflopData;35, 70, 100;Bet_T;Bet turn;Check_T;
 PostflopGeneral;StatCell;PostflopData;35, 70, 100;Bet_R;Bet river;Check_R;
