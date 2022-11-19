@@ -7,9 +7,9 @@ using InfoHelper.Utils;
 
 namespace InfoHelper.StatsEntities
 {
-    public class PreflopData
+    public class PreflopData : CellDataBase
     {
-        private readonly int[] _data = new int[169];
+        public int[] PocketHands { get; private set; }= new int[169];
 
         public void AddHand(string hc1, string hc2)
         {
@@ -23,9 +23,16 @@ namespace InfoHelper.StatsEntities
             if (firstCardFaceValue != secondCardFaceValue)
                 hand += hc1[1] == hc2[1] ? "s" : "o";
 
-            _data[Array.IndexOf(Common.HoleCards, hand)]++;
+            PocketHands[Array.IndexOf(Common.HoleCards, hand)]++;
         }
 
-        public int this[int index] => _data[index];
+        public override object Clone()
+        {
+            PreflopData preflopData = (PreflopData)MemberwiseClone();
+
+            preflopData.PocketHands = PocketHands.ToArray();
+
+            return preflopData;
+        }
     }
 }

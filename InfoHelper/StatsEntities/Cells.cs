@@ -5,7 +5,7 @@ namespace InfoHelper.StatsEntities
 {
     public abstract class DataCell : ICloneable
     {
-        protected double Value = 0;
+        protected float Value = 0;
 
         public string Name { get; }
 
@@ -17,7 +17,7 @@ namespace InfoHelper.StatsEntities
 
         public BetRange[] BetRanges { get; set; }
 
-        public double DefaultValue { get; set; } = double.NaN;
+        public float DefaultValue { get; set; } = float.NaN;
 
         public int Sample { get; protected set; }
 
@@ -31,7 +31,7 @@ namespace InfoHelper.StatsEntities
             Description = description;
         }
 
-        public void IncrementValue(double value = 1)
+        public void IncrementValue(float value = 1)
         {
             Value += value;
         }
@@ -45,12 +45,8 @@ namespace InfoHelper.StatsEntities
         {
             DataCell dc = (DataCell)MemberwiseClone();
 
-            dc.Value = Value;
-            dc.CellData = CellData;
+            dc.CellData = ((CellDataBase)CellData)?.Clone();
             dc.BetRanges = BetRanges?.Select(br => br with { }).ToArray();
-            dc.DefaultValue = DefaultValue;
-            dc.CellSelectedState = CellSelectedState;
-            dc.Sample = Sample;
 
             return dc;
         }

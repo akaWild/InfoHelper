@@ -69,6 +69,9 @@ namespace InfoHelper.Controls
         {
             base.OnRender(drawingContext);
 
+            if(Visibility != Visibility.Visible)
+                return;
+
             HandsGroup handsGroup = (HandsGroup)Data;
 
             if(handsGroup == null)
@@ -103,54 +106,76 @@ namespace InfoHelper.Controls
                 drawingContext.DrawLine(_pen, new Point(0, headerHeight), new Point(RenderSize.Width, headerHeight));
             }
 
-            double graphHeight = RenderSize.Height - headerHeight;
+            double groupGraphHeight = (RenderSize.Height - headerHeight) / 3;
 
-            int max = handsGroup.MadeHands.Select((v, i) => v + handsGroup.DrawHands[i]).Max();
+            int max = handsGroup.MadeHands.Select((v, i) => v + handsGroup.DrawHands[i] + handsGroup.ComboHands[i]).Max();
 
-            int sum = handsGroup.MadeHands.Sum() + handsGroup.DrawHands.Sum();
+            double columnWidth = RenderSize.Width / HandsGroup.HandCategoriesCount;
 
-            int groups = handsGroup.MadeHands.Length;
+            double yIndent = headerHeight;
 
-            double columnSpaceRatio = 0.2;
+            RenderHandsGroup(handsGroup.MadeHands, handsGroup.MadeHandsDefaultValue, Brushes.DarkGreen);
 
-            double columnWidth = RenderSize.Width / (groups + columnSpaceRatio * (groups + 1));
+            yIndent += groupGraphHeight;
 
-            double xIndent = columnSpaceRatio * columnWidth;
+            drawingContext.DrawLine(_pen, new Point(0, yIndent), new Point(RenderSize.Width, yIndent));
 
-            for (int i = 0; i < groups; i++)
+            RenderHandsGroup(handsGroup.ComboHands, handsGroup.ComboHandsDefaultValue, Brushes.Blue);
+
+            yIndent += groupGraphHeight;
+
+            drawingContext.DrawLine(_pen, new Point(0, yIndent), new Point(RenderSize.Width, yIndent));
+
+            RenderHandsGroup(handsGroup.DrawHands, handsGroup.DrawHandsDefaultValue, Brushes.Red);
+
+            void RenderHandsGroup(int[] hands, float defaultValue, SolidColorBrush brush)
             {
-                int madeHands = handsGroup.MadeHands[i], drawHands = handsGroup.DrawHands[i];
+                double xIndent = 0;
 
-                double columnRatio = (double)(madeHands + drawHands) / max;
-
-                double columnHeight = graphHeight * columnRatio;
-
-                double yIndent = (1 - columnRatio) * graphHeight + headerHeight;
-
-                if (madeHands > 0)
+                for (int i = 0; i < hands.Length; i++)
                 {
-                    Rect rect = new Rect(xIndent, yIndent, columnWidth, columnHeight * ((double)madeHands / (madeHands + drawHands)));
+                    int handGroupsCount = hands[i];
 
-                    drawingContext.DrawRectangle(Brushes.ForestGreen, null, rect);
+                    double columnHeightRatio = (double)handGroupsCount / max;
 
-                    yIndent += rect.Height;
+                    double columnHeight = groupGraphHeight * columnHeightRatio;
+
+                    double columnYIndent = yIndent + (1 - columnHeightRatio) * groupGraphHeight;
+
+                    if (handGroupsCount > 0)
+                    {
+                        Rect rect = new Rect(xIndent, columnYIndent, columnWidth, columnHeight);
+
+                        drawingContext.DrawRectangle(brush, null, rect);
+                    }
+
+                    xIndent += columnWidth;
                 }
 
-                if (drawHands > 0)
-                {
-                    Rect rect = new Rect(xIndent, yIndent, columnWidth, columnHeight * ((double)drawHands / (madeHands + drawHands)));
+                float handsSum = hands.Sum();
 
-                    drawingContext.DrawRectangle(Brushes.Red, null, rect);
+                float avgEq = hands.Select((h, i) => handsSum == 0 ? 0 : h * (i + 1) / handsSum).Sum();
+
+                string groupText = $"Avg eq: {(avgEq == 0 ? "--" : Math.Round(avgEq, 1))}%";
+
+                if (avgEq > 0 && !float.IsNaN(defaultValue))
+                {
+                    string sign = string.Empty;
+
+                    if (avgEq > defaultValue)
+                        sign = "+";
+                    else if (avgEq < defaultValue)
+                        sign = "-";
+
+                    groupText += $" ({sign}{Math.Abs(avgEq - defaultValue)})";
                 }
 
-                xIndent += columnWidth + columnSpaceRatio * columnWidth;
+                FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _headerForegroundBrush, 1);
+
+                Point textLocation = new Point(3, yIndent);
+
+                drawingContext.DrawText(formattedText, textLocation);
             }
-
-            FormattedText attemptsText = new FormattedText($"{sum}", CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, graphHeight - 10, _foregroundColor, 1);
-
-            Point attemptsLocation = new Point(0, headerHeight + graphHeight / 2 - attemptsText.Height / 2);
-
-            drawingContext.DrawText(attemptsText, attemptsLocation);
         }
     }
 }

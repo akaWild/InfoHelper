@@ -118,7 +118,7 @@ namespace InfoHelper.Controls
             for (int i = 0; i < 13; i++)
             {
                 for (int j = 0; j < 13; j++)
-                    drawingContext.DrawRectangle(GetValueBackgroundBrush(((PreflopData)Data)?[i * 13 + j] ?? 0), null, new Rect(new Point(j * columnWidth, i * rowHeight + headerHeight), new Size(columnWidth, rowHeight)));
+                    drawingContext.DrawRectangle(GetValueBackgroundBrush(((PreflopData)Data)?.PocketHands[i * 13 + j] ?? 0), null, new Rect(new Point(j * columnWidth, i * rowHeight + headerHeight), new Size(columnWidth, rowHeight)));
             }
 
             double rowIndent = 0;
@@ -142,7 +142,7 @@ namespace InfoHelper.Controls
 
                 for (int j = 0; j < 13; j++)
                 {
-                    FormattedText text = new FormattedText(Common.HoleCards[i * 13 + j], CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, GetValueForegroundBrush(((PreflopData)Data)?[i * 13 + j] ?? 0), 1);
+                    FormattedText text = new FormattedText(Common.HoleCards[i * 13 + j], CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, GetValueForegroundBrush(((PreflopData)Data)?.PocketHands[i * 13 + j] ?? 0), 1);
 
                     Point textLocation = new Point(columnIndent + columnWidth / 2 - text.Width / 2, rowIndent + rowHeight / 2 - text.Height / 2);
 

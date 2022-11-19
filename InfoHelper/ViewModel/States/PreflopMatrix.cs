@@ -14,7 +14,7 @@ namespace InfoHelper.ViewModel.States
             if (PreflopData != null)
             {
                 for (int i = 0; i < 169; i++)
-                    hashString += $"{PreflopData[i]}";
+                    hashString += $"{PreflopData.PocketHands[i]}";
             }
 
             int hashCode = hashString.GetStableHashCode();

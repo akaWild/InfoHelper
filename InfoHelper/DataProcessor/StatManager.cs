@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -81,7 +82,7 @@ namespace InfoHelper.DataProcessor
                 {
                     StatSet[] statSetsCopy = StatSets.Select(ss => (StatSet)ss.Clone()).ToArray();
 
-                    foreach (StatSet statSet in statSetsCopy)
+                    Parallel.ForEach<StatSet>(statSetsCopy, statSet =>
                     {
                         DataCell[] cells = CellGroups[$"{statSet.SetType}"].ToArray();
 
@@ -98,7 +99,7 @@ namespace InfoHelper.DataProcessor
                         }
 
                         statSet.Cells = cellsCopy;
-                    }
+                    });
 
                     StatPlayer newPlayer = new StatPlayer() { StatSets = statSetsCopy };
 

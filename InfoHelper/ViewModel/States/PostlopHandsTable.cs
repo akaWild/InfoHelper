@@ -1,4 +1,5 @@
-﻿using HashUtils;
+﻿using System.Text;
+using HashUtils;
 using InfoHelper.StatsEntities;
 
 namespace InfoHelper.ViewModel.States
@@ -11,11 +12,15 @@ namespace InfoHelper.ViewModel.States
         {
             string hashString = $"{Visible}{Header ?? string.Empty}";
 
+            StringBuilder sb = new StringBuilder();
+
             if (HandsGroup != null)
             {
-                for (int i = 0; i < HandsGroup.MadeHands.Length; i++)
-                    hashString += $"{HandsGroup.MadeHands[i]}{HandsGroup.DrawHands[i]}";
+                for (int i = 0; i < HandsGroup.HandCategoriesCount; i++)
+                    sb.Append($"{HandsGroup.MadeHands[i]}{HandsGroup.DrawHands[i]}{HandsGroup.ComboHands[i]}");
             }
+
+            hashString += sb.ToString();
 
             int hashCode = hashString.GetStableHashCode();
 
