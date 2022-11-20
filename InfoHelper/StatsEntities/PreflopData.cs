@@ -9,7 +9,7 @@ namespace InfoHelper.StatsEntities
 {
     public class PreflopData : CellDataBase
     {
-        public int[] PocketHands { get; private set; }= new int[169];
+        public ushort[] PocketHands { get; private set; } = new ushort[169];
 
         public void AddHand(string hc1, string hc2)
         {

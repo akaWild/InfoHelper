@@ -24,7 +24,7 @@ namespace InfoHelper.DataProcessor
 
         private static readonly List<StatSet> StatSets = new List<StatSet>();
 
-        private const int ExpireTimeout = 180;
+        private const int ExpireTimeout = 10;
 
         private const int TimerInterval = 10;
 
@@ -49,7 +49,15 @@ namespace InfoHelper.DataProcessor
                     }
 
                     foreach (string player in playersToRemove)
+                    {
+                        StatPlayer statPlayer = _players[player];
+
                         _players.Remove(player);
+
+                        statPlayer.Dispose();
+
+                        GC.Collect();
+                    }
                 }
 
                 if (!_shouldStop)
@@ -68,8 +76,19 @@ namespace InfoHelper.DataProcessor
         {
             _shouldStop = true;
 
-            lock(_playersLock)
-                _players.Clear();
+            lock (_playersLock)
+            {
+                foreach (string player in _players.Keys)
+                {
+                    StatPlayer statPlayer = _players[player];
+
+                    _players.Remove(player);
+
+                    statPlayer.Dispose();
+                }
+
+                GC.Collect();
+            }
         }
 
         public StatSet[] GetPlayer(string player)
@@ -185,11 +204,11 @@ namespace InfoHelper.DataProcessor
                     {
                         string[] betStrings = record[3].Split(",", StringSplitOptions.RemoveEmptyEntries);
 
-                        int[] bets = new int[betStrings.Length];
+                        ushort[] bets = new ushort[betStrings.Length];
 
                         for (int i = 0; i < betStrings.Length; i++)
                         {
-                            if(!int.TryParse(betStrings[i], out int bet))
+                            if(!ushort.TryParse(betStrings[i], out ushort bet))
                                 throw new Exception($"{record[3]} bet ranges line has incorrect format");
 
                             bets[i] = bet;
@@ -202,7 +221,7 @@ namespace InfoHelper.DataProcessor
 
                         BetRange[] betRanges = new BetRange[bets.Length + 1];
 
-                        int lowBound = 0;
+                        ushort lowBound = 0;
 
                         for (int i = 0; i < bets.Length; i++)
                         {
@@ -214,7 +233,7 @@ namespace InfoHelper.DataProcessor
                             lowBound = bets[i];
                         }
 
-                        betRanges[^1] = new BetRange() { LowBound = bets[^1], UpperBound = int.MaxValue };
+                        betRanges[^1] = new BetRange() { LowBound = bets[^1], UpperBound = ushort.MaxValue };
 
                         cell.BetRanges = betRanges;
                     }

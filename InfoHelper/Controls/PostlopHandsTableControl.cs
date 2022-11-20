@@ -128,9 +128,11 @@ namespace InfoHelper.Controls
 
             RenderHandsGroup(handsGroup.DrawHands, handsGroup.DrawHandsDefaultValue, Brushes.Red);
 
-            void RenderHandsGroup(int[] hands, float defaultValue, SolidColorBrush brush)
+            void RenderHandsGroup(ushort[] hands, float defaultValue, SolidColorBrush brush)
             {
                 double xIndent = 0;
+
+                float handsSum = 0;
 
                 for (int i = 0; i < hands.Length; i++)
                 {
@@ -149,10 +151,10 @@ namespace InfoHelper.Controls
                         drawingContext.DrawRectangle(brush, null, rect);
                     }
 
+                    handsSum += handGroupsCount;
+
                     xIndent += columnWidth;
                 }
-
-                float handsSum = hands.Sum();
 
                 float avgEq = hands.Select((h, i) => handsSum == 0 ? 0 : h * (i + 1) / handsSum).Sum();
 

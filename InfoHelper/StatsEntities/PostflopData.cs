@@ -39,11 +39,11 @@ namespace InfoHelper.StatsEntities
 
         public float ComboHandsDefaultValue = float.NaN;
 
-        public int[] MadeHands { get; private set; } = new int[HandCategoriesCount];
+        public ushort[] MadeHands { get; private set; } = new ushort[HandCategoriesCount];
 
-        public int[] DrawHands { get; private set; } = new int[HandCategoriesCount];
+        public ushort[] DrawHands { get; private set; } = new ushort[HandCategoriesCount];
 
-        public int[] ComboHands { get; private set; } = new int[HandCategoriesCount];
+        public ushort[] ComboHands { get; private set; } = new ushort[HandCategoriesCount];
 
         public object Clone()
         {

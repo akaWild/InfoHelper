@@ -19,7 +19,7 @@ namespace InfoHelper.StatsEntities
 
         public float DefaultValue { get; set; } = float.NaN;
 
-        public int Sample { get; protected set; }
+        public uint Sample { get; protected set; }
 
         public object ShallowCopy => MemberwiseClone();
 
@@ -77,12 +77,12 @@ namespace InfoHelper.StatsEntities
 
     public record BetRange
     {
-        public int LowBound { get; init; }
+        public ushort LowBound { get; init; }
 
-        public int UpperBound { get; init; }
+        public ushort UpperBound { get; init; }
     }
 
-    public enum CellSelectedState
+    public enum CellSelectedState : byte
     {
         Missed,
         Selected,
