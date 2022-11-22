@@ -16,6 +16,7 @@
         <utils:AnalyzerInfoForegroundConverter x:Key="AnalyzerInfoForegroundConverter"/>
         <utils:SolverInfoTextConverter x:Key="SolverInfoTextConverter"/>
         <utils:SolverInfoForegroundConverter x:Key="SolverInfoForegroundConverter"/>
+        <utils:HandTypeForegroundConverter x:Key="HandTypeForegroundConverter"/>
         <utils:ErrorMessageConverter x:Key="ErrorMessageConverter"/>
     </Window.Resources>
     <DockPanel LastChildFill="True"  Background="{DynamicResource CurrentFormBackColor}">
@@ -40,8 +41,7 @@
             <Border Grid.ColumnSpan="4" BorderThickness="0, 1, 0, 1">
                 <Viewbox HorizontalAlignment="Left">
                     <StackPanel Orientation="Horizontal">
-                        <Button Margin="5" Command="{Binding ControlsState.StartStopCommand}" Content="{Binding ControlsState.StartButtonText, UpdateSourceTrigger=PropertyChanged}">
-                        </Button>
+                        <Button Margin="5" Command="{Binding ControlsState.StartStopCommand}" Content="{Binding ControlsState.StartButtonText, UpdateSourceTrigger=PropertyChanged}"/>
                         <Button Margin="0, 5, 5, 5" Command="{Binding ControlsState.FlushPicturesCommand}">Save</Button>
                         <CheckBox Margin="0, 5, 5, 5" Content="Save pictures" VerticalAlignment="Center" Command="{Binding ControlsState.SavePicturesCommand}">
                             <CheckBox.Style>
@@ -54,6 +54,9 @@
                                 </Style>
                             </CheckBox.Style>
                         </CheckBox>
+                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="Black" FontSize="18" Text="{Binding  ControlsState.PotOdds}"/>
+                        <TextBlock Margin="0, 5, 5, 5" VerticalAlignment="Center" Foreground="{Binding  ControlsState.HandType, Converter={StaticResource HandTypeForegroundConverter}}" 
+                                   FontSize="18" Text="{Binding  ControlsState.Equity}"/>
                         <ProgressBar Margin="0, 5, 5, 5" Width="150" Visibility="{Binding Visible, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
                                      Minimum="{Binding MinValue, UpdateSourceTrigger=PropertyChanged}" Maximum="{Binding MaxValue, UpdateSourceTrigger=PropertyChanged}" 
                                      Value="{Binding Value, UpdateSourceTrigger=PropertyChanged}">

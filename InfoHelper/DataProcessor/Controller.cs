@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Threading;
 using BitmapHelper;
 using GameInformationUtility;
+using HoldemHand;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
 using InfoHelper.ViewModel.DataEntities;
@@ -326,7 +327,23 @@ namespace InfoHelper.DataProcessor
                                     if (winContextInfo.GameContext.Round == 1)
                                         _gtoPreflopManager.GetPreflopGtoStrategy(winContextInfo.GameContext);
                                     else
+                                    {
                                         _gtoPostflopManager.GetPostflopGtoStrategy(winContextInfo.GameContext);
+
+                                        GameContext gc = winContextInfo.GameContext;
+
+                                        if (gc.RoundChanged)
+                                        {
+                                            ulong pocketMask = Hand.ParseHand($"{gc.HoleCards[gc.HeroPosition - 1][0]}{gc.HoleCards[gc.HeroPosition - 1][1]}");
+                                            ulong boardMask = Hand.ParseHand($"{gc.FlopCard1}{gc.FlopCard2}{gc.FlopCard3}{gc.TurnCard ?? string.Empty}{gc.RiverCard ?? string.Empty}");
+
+                                            gc.HeroHandData = new HeroHandInfo()
+                                            {
+                                                Equity = HandManager.CalculateHandEquity(pocketMask, boardMask),
+                                                HandType = HandManager.GetMadeHandType(pocketMask, boardMask)
+                                            };
+                                        }
+                                    }
                                 }
                             }
 

@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using GameInformationUtility;
+using HoldemHand;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.DataEntities;
 using InfoHelper.ViewModel.States;
@@ -22,6 +24,44 @@ namespace InfoHelper.DataProcessor
 
         public void UpdateHuds(GameContext gc, StatSet[][] statSets)
         {
+            //Pot odds
+            if (gc.Error == string.Empty)
+            {
+                float[] playerBets = new float[6];
+
+                foreach (BettingAction action in gc.Actions.Where(a => a.Round == gc.Round))
+                {
+                    if (gc.IsPlayerIn[action.Player - 1] != null && action.Amount > playerBets[action.Player - 1])
+                        playerBets[action.Player - 1] = (float)action.Amount;
+                }
+
+                for (int i = 0; i < playerBets.Length; i++)
+                {
+                    if (playerBets[i] > playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1])
+                        playerBets[i] = (float)(playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1]);
+                }
+
+                float potOdds = (float)(gc.AmountToCall / (playerBets.Sum() + gc.AmountToCall + gc.RoundPot));
+
+                _vmMain.ControlsState.PotOdds = potOdds == 0 ? null : $"P/O: {Math.Round(potOdds * 100, 1).ToString(CultureInfo.InvariantCulture)}%";
+            }
+            else
+                _vmMain.ControlsState.PotOdds = null;
+
+            //Hand equity and type
+            if (gc.Error == string.Empty && gc.Round > 1)
+            {
+                HeroHandInfo handInfo = (HeroHandInfo)gc.HeroHandData;
+
+                _vmMain.ControlsState.Equity = $"Eq: {Math.Round(handInfo.Equity, 1).ToString(CultureInfo.InvariantCulture)}%";
+                _vmMain.ControlsState.HandType = handInfo.HandType;
+            }
+            else
+            {
+                _vmMain.ControlsState.Equity = null;
+                _vmMain.ControlsState.HandType = HandType.None;
+            }
+
             _vmMain.AnalyzerInfoState.Info = gc.Error;
 
             for (int i = 0; i < gc.Players.Length; i++)
@@ -719,6 +759,11 @@ namespace InfoHelper.DataProcessor
 
         public void ResetControls()
         {
+            _vmMain.ControlsState.PotOdds = null;
+
+            _vmMain.ControlsState.Equity = null;
+            _vmMain.ControlsState.HandType = HandType.None;
+
             _vmMain.AnalyzerInfoState.Info = null;
 
             foreach (ViewModelHudsParent vmHudsParent in _vmMain.HudsParentStates)

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Windows.Input;
 using System.Windows.Threading;
+using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
+using InfoHelper.ViewModel.DataEntities;
 using Microsoft.VisualBasic;
 
 namespace InfoHelper.ViewModel.States
@@ -60,6 +62,42 @@ namespace InfoHelper.ViewModel.States
             private set
             {
                 _startButtonText = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+        private string _equity;
+        public string Equity
+        {
+            get => _equity;
+            set
+            {
+                _equity = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+        private HandType _handType;
+        public HandType HandType
+        {
+            get => _handType;
+            set
+            {
+                _handType = value;
+
+                OnPropertyChanged();
+            }
+        }
+
+        private string _potOdds;
+        public string PotOdds
+        {
+            get => _potOdds;
+            set
+            {
+                _potOdds = value;
 
                 OnPropertyChanged();
             }

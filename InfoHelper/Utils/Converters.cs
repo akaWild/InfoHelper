@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
 using InfoHelper.StatsEntities;
+using InfoHelper.ViewModel.DataEntities;
 
 namespace InfoHelper.Utils
 {
@@ -133,13 +134,34 @@ namespace InfoHelper.Utils
         }
     }
 
+    public class HandTypeForegroundConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            HandType handType = (HandType)value;
+
+            return handType switch
+            {
+                HandType.MadeHand => Brushes.ForestGreen,
+                HandType.DrawHand => Brushes.Red,
+                HandType.ComboHand => Brushes.Blue,
+                _ => null,
+            };
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public class ErrorMessageConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             string error = value?.ToString();
 
-            return string.IsNullOrEmpty(error) || error.Length < 200 ? error : $"{error.Substring(0, 200)}..."; 
+            return string.IsNullOrEmpty(error) || error.Length < 160 ? error : $"{error.Substring(0, 160)}..."; 
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

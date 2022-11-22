@@ -158,7 +158,7 @@ namespace InfoHelper.Controls
 
                 float avgEq = hands.Select((h, i) => handsSum == 0 ? 0 : h * (i + 1) / handsSum).Sum();
 
-                string groupText = $"Avg eq: {(avgEq == 0 ? "--" : Math.Round(avgEq, 1))}%";
+                string groupText = $"Avg eq: {(avgEq == 0 ? "--" : Math.Round(avgEq, 1).ToString(CultureInfo.InvariantCulture))}%";
 
                 if (avgEq > 0 && !float.IsNaN(defaultValue))
                 {

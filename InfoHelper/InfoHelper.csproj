@@ -78,6 +78,9 @@
     <Reference Include="SolverUtility">
       <HintPath>..\..\..\..\Projects_new\SolverUtility v1.2\SolverUtility\bin\Release\SolverUtility.dll</HintPath>
     </Reference>
+    <Reference Include="StatDbUtility">
+      <HintPath>..\..\..\StatDbUtility\StatDbUtility\bin\Release\net5.0\StatDbUtility.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <ItemGroup>

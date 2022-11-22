@@ -10,7 +10,7 @@ using Timer = System.Timers.Timer;
 
 namespace InfoHelper.DataProcessor
 {
-    public class StatManager
+    public partial class StatManager
     {
         private bool _shouldStop = false;
 
@@ -18,13 +18,15 @@ namespace InfoHelper.DataProcessor
 
         private readonly object _playersLock = new object();
 
+        private readonly Dictionary<string, CancellationTokenSource> _tasksCancellationTokens = new Dictionary<string, CancellationTokenSource>();
+
         private readonly Timer _timer;
 
         private static readonly Dictionary<string, List<DataCell>> CellGroups = new Dictionary<string, List<DataCell>>();
 
         private static readonly List<StatSet> StatSets = new List<StatSet>();
 
-        private const int ExpireTimeout = 10;
+        private const int ExpireTimeout = 300;
 
         private const int TimerInterval = 10;
 
@@ -50,6 +52,10 @@ namespace InfoHelper.DataProcessor
 
                     foreach (string player in playersToRemove)
                     {
+                        _tasksCancellationTokens[player].Cancel();
+
+                        _tasksCancellationTokens.Remove(player);
+
                         StatPlayer statPlayer = _players[player];
 
                         _players.Remove(player);
@@ -80,6 +86,10 @@ namespace InfoHelper.DataProcessor
             {
                 foreach (string player in _players.Keys)
                 {
+                    _tasksCancellationTokens[player].Cancel();
+
+                    _tasksCancellationTokens.Remove(player);
+
                     StatPlayer statPlayer = _players[player];
 
                     _players.Remove(player);
@@ -123,6 +133,14 @@ namespace InfoHelper.DataProcessor
                     StatPlayer newPlayer = new StatPlayer() { StatSets = statSetsCopy };
 
                     _players[player] = newPlayer;
+
+                    CancellationTokenSource cancelTokenSource = new CancellationTokenSource();
+
+                    CancellationToken token = cancelTokenSource.Token;
+
+                    _tasksCancellationTokens.Add(player, cancelTokenSource);
+
+                    Task.Factory.StartNew(() => GetPlayerStats(player, statSetsCopy, token), token);
                 }
 
                 output = _players[player];
@@ -132,6 +150,8 @@ namespace InfoHelper.DataProcessor
 
             return output.StatSets;
         }
+
+        private partial void GetPlayerStats(string player, StatSet[] statSets, CancellationToken token);
 
         private static void LoadCellSets()
         {
