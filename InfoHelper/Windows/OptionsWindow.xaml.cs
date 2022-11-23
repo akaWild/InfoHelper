@@ -101,6 +101,12 @@ namespace InfoHelper.Windows
 
                                     break;
 
+                                case "MinDeviationSample":
+
+                                    _viewModel.MinDeviationSample = node.Attributes["Value"].Value;
+
+                                    break;
+
                                 case "ScreenshotSaveInterval":
 
                                     _viewModel.ScreenshotSaveInterval = node.Attributes["Value"].Value;
@@ -331,6 +337,10 @@ namespace InfoHelper.Windows
 
             xmlWriter.WriteStartElement("GetLastNHands");
             xmlWriter.WriteAttributeString("Value", _viewModel.GetLastNHands);
+            xmlWriter.WriteEndElement();
+
+            xmlWriter.WriteStartElement("MinDeviationSample");
+            xmlWriter.WriteAttributeString("Value", _viewModel.MinDeviationSample);
             xmlWriter.WriteEndElement();
 
             xmlWriter.WriteStartElement("ScreenshotSaveInterval");
@@ -589,6 +599,8 @@ namespace InfoHelper.Windows
             public string BitmapsBuffer { get; set; }
 
             public string GetLastNHands { get; set; }
+
+            public string MinDeviationSample { get; set; }
 
             public string TimerInterval { get; set; }
 

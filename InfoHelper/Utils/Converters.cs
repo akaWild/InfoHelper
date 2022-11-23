@@ -237,10 +237,7 @@ namespace InfoHelper.Utils
 
             bool isSolving = (bool)values[1];
 
-            if (isSolving)
-                return "Solver is running";
-
-            return error;
+            return isSolving ? "Solver is running" : error;
         }
 
         public object[] ConvertBack(object values, Type[] targetTypes, object parameter, CultureInfo culture)
@@ -272,4 +269,62 @@ namespace InfoHelper.Utils
             throw new NotImplementedException();
         }
     }
+
+    public class DeviationsRectBrushConverter : IValueConverter
+    {
+        private SolidColorBrush[] _deviationBrushesList;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _deviationBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBrushes");
+
+            DataCell dataCell = (DataCell)value;
+
+            if (dataCell == null || float.IsNaN(dataCell.DefaultValue) || dataCell.Sample < Shared.MinDeviationSample)
+                return null;
+
+            if (_deviationBrushesList == null)
+                throw new Exception("Deviation brushes were not found");
+
+            if (_deviationBrushesList.Length % 2 != 0)
+                throw new Exception("Deviation brushes list contains odd number of elements");
+
+            float calculatedValue = dataCell.CalculatedValue;
+
+            float deviation = calculatedValue - dataCell.DefaultValue;
+
+            bool straightOrder = deviation >= 0 ? dataCell.RevertColors : !dataCell.RevertColors;
+
+            int index = (int)Math.Abs(deviation) / 2;
+
+            if (index >= _deviationBrushesList.Length / 2)
+                index = _deviationBrushesList.Length / 2 - 1;
+
+            return straightOrder ? _deviationBrushesList[index] : _deviationBrushesList[new Index(index + 1, true)];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class DeviationsRectBorderConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            DataCell dataCell = (DataCell)value;
+
+            if (dataCell == null || float.IsNaN(dataCell.DefaultValue) || dataCell.Sample < Shared.MinDeviationSample)
+                return Brushes.Transparent;
+
+            return Brushes.Black;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
 }

@@ -93,6 +93,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
                     <Grid Grid.Row="0">
                         <Grid.ColumnDefinitions>
@@ -144,10 +145,20 @@
                             <ColumnDefinition Width="5*"/>
                             <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Min sample to show deviation</TextBlock>
+                        <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding MinDeviationSample, Mode=TwoWay}"/>
+                    </Grid>
+                    <Grid Grid.Row="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="7*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="5*"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Timer interval (ms)</TextBlock>
                         <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding TimerInterval, Mode=TwoWay}"/>
                     </Grid>
-                    <Grid Grid.Row="5">
+                    <Grid Grid.Row="6">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="7*"/>
                             <ColumnDefinition Width="3*"/>
@@ -157,7 +168,7 @@
                         <TextBlock Grid.Column="0" Grid.Row="0" Margin="5, 0 5, 5">Screenshot save interval (ms)</TextBlock>
                         <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding ScreenshotSaveInterval, Mode=TwoWay}"/>
                     </Grid>
-                    <Grid Grid.Row="6">
+                    <Grid Grid.Row="7">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="7*"/>
                             <ColumnDefinition Width="3*"/>
@@ -167,7 +178,7 @@
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Window expire timeout (s)</TextBlock>
                         <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding WindowExpireTimeout, Mode=TwoWay}"/>
                     </Grid>
-                    <Grid Grid.Row="7">
+                    <Grid Grid.Row="8">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="7*"/>
                             <ColumnDefinition Width="4*"/>
@@ -177,7 +188,7 @@
                         <TextBlock Grid.Column="0" Grid.Row="0" Margin="5, 0 5, 5" VerticalAlignment="Center">Client mouse cursor template</TextBlock>
                         <ComboBox Grid.Column="1" Grid.ColumnSpan="2" Margin="0, 0 5, 5" ItemsSource="{Binding ClientMouseCursorTemplates}" SelectedItem="{Binding SelectedClientMouseCursorTemplate}"/>
                     </Grid>
-                    <Grid Grid.Row="8">
+                    <Grid Grid.Row="9">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="7*"/>
                             <ColumnDefinition Width="3*"/>
@@ -187,7 +198,7 @@
                         <TextBlock Grid.Column="0" Margin="5, 0 5, 5">Cursor search threads (-1 dflt)</TextBlock>
                         <TextBox Grid.Column="1" Margin="0, 0, 5, 5" Text="{Binding CursorSearchThreads, Mode=TwoWay}"/>
                     </Grid>
-                    <Grid Grid.Row="9">
+                    <Grid Grid.Row="10">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="7*"/>
                             <ColumnDefinition Width="3*"/>

@@ -11,6 +11,10 @@
     </utils:AttemptsConverter>
     <utils:DataCellBackgroundConverter x:Key="DataCellBackgroundConverter">
     </utils:DataCellBackgroundConverter>
+    <utils:DeviationsRectBrushConverter x:Key="DeviationsRectBrushConverter">
+    </utils:DeviationsRectBrushConverter>
+    <utils:DeviationsRectBorderConverter x:Key="DeviationsRectBorderConverter">
+    </utils:DeviationsRectBorderConverter>
     <Style TargetType="{x:Type controls:CellControl}">
         <Setter Property="Template">
             <Setter.Value>
@@ -55,6 +59,11 @@
                                         </MultiBinding>
                                     </TextBlock.Text>
                                 </TextBlock>
+                            </Viewbox>
+                            <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform" Margin ="0, 0, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <Rectangle Fill="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBrushConverter}}"
+                                    Width="200" Height="200" Stroke="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBorderConverter}}" 
+                                    StrokeThickness="2" SnapsToDevicePixels="True"/>
                             </Viewbox>
                             <Viewbox Grid.Column="1" Grid.Row="1" Stretch="Uniform" Margin ="0, 0, 2, 0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                                 <TextBlock>
@@ -172,16 +181,31 @@
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                        <Viewbox Stretch="Uniform" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-                            <TextBlock>
-                                <TextBlock.Text>
-                                    <MultiBinding Converter="{StaticResource ValueConverter}">
-                                        <Binding Path="Data" RelativeSource="{RelativeSource TemplatedParent}"/>
-                                        <Binding Path="Precision" RelativeSource="{RelativeSource TemplatedParent}"/>
-                                    </MultiBinding>
-                                </TextBlock.Text>
-                            </TextBlock>
-                        </Viewbox>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="4*"/>
+                                <RowDefinition Height="6*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="4*"/>
+                                <ColumnDefinition Width="6*"/>
+                            </Grid.ColumnDefinitions>
+                            <Viewbox Grid.Column="0" Grid.Row="0" Stretch="Uniform" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                                <TextBlock>
+                                    <TextBlock.Text>
+                                        <MultiBinding Converter="{StaticResource ValueConverter}">
+                                            <Binding Path="Data" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                            <Binding Path="Precision" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </Viewbox>
+                            <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform" Margin ="0, 0, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <Rectangle Fill="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBrushConverter}}"
+                                           Width="200" Height="200" Stroke="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBorderConverter}}" 
+                                           StrokeThickness="2" SnapsToDevicePixels="True"/>
+                            </Viewbox>
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

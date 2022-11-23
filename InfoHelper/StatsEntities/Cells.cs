@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace InfoHelper.StatsEntities
 {
     public abstract class DataCell : ICloneable
     {
-        protected float Value = 0;
+        protected float Value;
 
         public string Name { get; }
 
         public string Description { get; }
+
+        public bool RevertColors { get; }
 
         public object CellData { get; set; }
 
@@ -29,6 +32,7 @@ namespace InfoHelper.StatsEntities
         {
             Name = name;
             Description = description;
+            RevertColors = Regex.IsMatch(name, @"Fold|FCB|Fv|_F_F|_F_T|_F_R");
         }
 
         public void IncrementValue(float value = 1)
@@ -51,28 +55,28 @@ namespace InfoHelper.StatsEntities
             return dc;
         }
 
-        public abstract double CalculatedValue { get; }
+        public abstract float CalculatedValue { get; }
     }
 
     public class ValueCell : DataCell
     {
         public ValueCell(string name, string description) : base(name, description) { }
 
-        public override double CalculatedValue => Sample;
+        public override float CalculatedValue => Sample;
     }
 
     public class StatCell : DataCell
     {
         public StatCell(string name, string description): base(name, description) { }
 
-        public override double CalculatedValue => Value * 100 / Sample;
+        public override float CalculatedValue => Value * 100 / Sample;
     }
 
     public class EvCell : DataCell
     {
         public EvCell(string name, string description) : base(name, description) { }
 
-        public override double CalculatedValue => Value * 100 / Sample;
+        public override float CalculatedValue => Value * 100 / Sample;
     }
 
     public record BetRange

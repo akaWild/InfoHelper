@@ -269,7 +269,7 @@ namespace InfoHelper.Controls
 
                         postflopControls[i + 1].Data = ((PostflopData)postflopDataCells[0].CellData).SubGroups[i];
 
-                        string amountString = betRange1[i].UpperBound == int.MaxValue ? $">{betRange1[i].LowBound}" : $"{betRange1[i].LowBound}<=..<{betRange1[i].UpperBound}";
+                        string amountString = betRange1[i].UpperBound == ushort.MaxValue ? $">={betRange1[i].LowBound}" : $"{betRange1[i].LowBound}<=..<{betRange1[i].UpperBound}";
 
                         postflopControls[i + 1].Header = $"{amountString}";
                     }
@@ -311,7 +311,7 @@ namespace InfoHelper.Controls
 
                             postflopControls[i + 6].Data = ((PostflopData)postflopDataCells[1].CellData).SubGroups[i];
 
-                            string amountString = betRange2[i].UpperBound == int.MaxValue ? $">{betRange2[i].LowBound}" : $"{betRange2[i].LowBound}<=..<{betRange2[i].UpperBound}";
+                            string amountString = betRange2[i].UpperBound == ushort.MaxValue ? $">={betRange2[i].LowBound}" : $"{betRange2[i].LowBound}<=..<{betRange2[i].UpperBound}";
 
                             postflopControls[i + 6].Header = $"{amountString}";
                         }

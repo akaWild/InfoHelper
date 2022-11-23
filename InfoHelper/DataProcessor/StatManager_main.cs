@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Threading;
@@ -35,6 +36,8 @@ namespace InfoHelper.DataProcessor
             LoadCellSets();
 
             LoadStatSets();
+
+            LoadDefaultValues();
 
             _timer = new Timer(TimerInterval * 1000) { AutoReset = false };
 
@@ -111,23 +114,23 @@ namespace InfoHelper.DataProcessor
                 {
                     StatSet[] statSetsCopy = StatSets.Select(ss => (StatSet)ss.Clone()).ToArray();
 
-                    Parallel.ForEach<StatSet>(statSetsCopy, statSet =>
+                    Parallel.For(0, statSetsCopy.Length, i =>
                     {
-                        DataCell[] cells = CellGroups[$"{statSet.SetType}"].ToArray();
+                        DataCell[] cells = StatSets[i].Cells.ToArray();
 
                         DataCell[] cellsCopy = cells.Select(c => (DataCell)c.Clone()).ToArray();
 
-                        for (int i = 0; i < cells.Length; i++)
+                        for (int j = 0; j < cells.Length; j++)
                         {
-                            if (cells[i].ConnectedCells == null)
+                            if (cells[j].ConnectedCells == null)
                                 continue;
 
-                            DataCell[] connectedCellsCopy = cells[i].ConnectedCells.Select(c => cellsCopy.First(c1 => c1.Name == c.Name)).ToArray();
+                            DataCell[] connectedCellsCopy = cells[j].ConnectedCells.Select(c => cellsCopy.First(c1 => c1.Name == c.Name)).ToArray();
 
-                            cellsCopy[i].ConnectedCells = connectedCellsCopy;
+                            cellsCopy[j].ConnectedCells = connectedCellsCopy;
                         }
 
-                        statSet.Cells = cellsCopy;
+                        statSetsCopy[i].Cells = cellsCopy;
                     });
 
                     StatPlayer newPlayer = new StatPlayer() { StatSets = statSetsCopy };
@@ -315,6 +318,8 @@ namespace InfoHelper.DataProcessor
             if (headerParts.Length != 10)
                 throw new Exception("Header row in file \"stat_sets.csv\" contains less or more than 10 elements");
 
+            int linesCounter = 1;
+
             while (sr.Peek() >= 0)
             {
                 string line = sr.ReadLine();
@@ -322,37 +327,37 @@ namespace InfoHelper.DataProcessor
                 string[] parts = line.Split(';');
 
                 if(!Enum.TryParse(parts[0], out GameType gameType))
-                    throw new Exception($"{parts[0]} is not defined or has incorrect format");
+                    throw new Exception($"Game type at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[1], out Round round))
-                    throw new Exception($"{parts[1]} is not defined or has incorrect format");
+                    throw new Exception($"Round at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[2], out Position position))
-                    throw new Exception($"{parts[2]} is not defined or has incorrect format");
+                    throw new Exception($"Position at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[3], out RelativePosition relativePosition))
-                    throw new Exception($"{parts[3]} is not defined or has incorrect format");
+                    throw new Exception($"Relative position at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[4], out Position oppPosition))
-                    throw new Exception($"{parts[4]} is not defined or has incorrect format");
+                    throw new Exception($"Opponent position at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[5], out PlayersOnFlop playersOnFlop))
-                    throw new Exception($"{parts[5]} is not defined or has incorrect format");
+                    throw new Exception($"Number of players on flop type at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[6], out PreflopPotType preflopPotType))
-                    throw new Exception($"{parts[6]} is not defined or has incorrect format");
+                    throw new Exception($"Preflop pot type at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[7], out PreflopActions preflopActions))
-                    throw new Exception($"{parts[7]} is not defined or has incorrect format");
+                    throw new Exception($"Preflop actions type at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[8], out OtherPlayersActed otherPlayersActed))
-                    throw new Exception($"{parts[8]} is not defined or has incorrect format");
+                    throw new Exception($"Other players acted type at line {linesCounter} is not defined or has incorrect format");
 
                 if (!Enum.TryParse(parts[9], out SetType setType))
-                    throw new Exception($"{parts[9]} is not defined or has incorrect format");
+                    throw new Exception($"Set type at line {linesCounter} is not defined or has incorrect format");
 
                 if (!CellGroups.ContainsKey(parts[9]))
-                    throw new Exception($"Cells set for {parts[9]} set type wasn't found");
+                    throw new Exception($"Cells set at line {linesCounter} wasn't found");
 
                 DataCell[] cells = CellGroups[parts[9]].Select(c => (DataCell)c.Clone()).ToArray();
 
@@ -372,6 +377,157 @@ namespace InfoHelper.DataProcessor
                 };
 
                 StatSets.Add(statSet);
+
+                linesCounter++;
+            }
+        }
+
+        private static void LoadDefaultValues()
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\CsvFiles\\default_values.csv");
+
+            if (!File.Exists(filePath))
+                throw new Exception("File \"default_values.csv\" doesn't exist in Resources\\CsvFiles directory");
+
+            using FileStream fs = File.Open(filePath, FileMode.Open);
+
+            StreamReader sr = new StreamReader(fs);
+
+            string title = sr.ReadLine();
+
+            if (title == null)
+                throw new Exception("File \"default_values.csv\" doesn't contain header");
+
+            string[] headerParts = title.Split(';');
+
+            if (headerParts.Length != 17)
+                throw new Exception("Header row in file \"default_values.csv\" contains less or more than 17 elements");
+
+            int linesCounter = 1;
+
+            while (sr.Peek() >= 0)
+            {
+                string line = sr.ReadLine();
+
+                string[] parts = line.Split(';');
+
+                if (!Enum.TryParse(parts[0], out GameType gameType))
+                    throw new Exception($"Game type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[1], out Round round))
+                    throw new Exception($"Round at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[2], out Position position))
+                    throw new Exception($"Position at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[3], out RelativePosition relativePosition))
+                    throw new Exception($"Relative position at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[4], out Position oppPosition))
+                    throw new Exception($"Opponent position at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[5], out PlayersOnFlop playersOnFlop))
+                    throw new Exception($"Number of players on flop type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[6], out PreflopPotType preflopPotType))
+                    throw new Exception($"Preflop pot type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[7], out PreflopActions preflopActions))
+                    throw new Exception($"Preflop actions type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[8], out OtherPlayersActed otherPlayersActed))
+                    throw new Exception($"Other players acted type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[9], out SetType setType))
+                    throw new Exception($"Set type at line {linesCounter} is not defined or has incorrect format");
+
+                string cellName = parts[10];
+
+                if(cellName == string.Empty)
+                    throw new Exception($"Cell name at line {linesCounter} is not defined");
+
+                if (parts[11] == string.Empty)
+                    throw new Exception($"Cell default value at line {linesCounter} is not defined");
+
+                if (!float.TryParse(parts[11], NumberStyles.Any, CultureInfo.InvariantCulture, out float cellDefaultValue))
+                    throw new Exception($"Cell default value at line {linesCounter} has incorrect format");
+
+                float[] mainGroupDfltValues = new float[] { float.NaN, float.NaN, float.NaN };
+
+                if (parts[12] != string.Empty)
+                {
+                    string[] mainGroupParts = parts[12].Split(",");
+
+                    if (mainGroupParts.Length != 3)
+                        throw new Exception($"Cell main group default values at line {linesCounter} are defined, but have incorrect format");
+
+                    for (int i = 0; i < mainGroupParts.Length; i++)
+                    {
+                        if (mainGroupParts[i] == string.Empty)
+                            continue;
+
+                        if (!float.TryParse(mainGroupParts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out mainGroupDfltValues[i]))
+                            throw new Exception($"Cell main group default values at line {linesCounter} are defined, but have incorrect format");
+                    }
+                }
+
+                float[][] subGroupDefaultValues = new float[][]
+                {
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                };
+
+                for (int i = 13; i < parts.Length; i++)
+                {
+                    if (parts[i] != string.Empty)
+                    {
+                        string[] subGroupParts = parts[i].Split(",");
+
+                        if (subGroupParts.Length != 3)
+                            throw new Exception($"Cell subgroup {i - 13} default values at line {linesCounter} are defined, but have incorrect format");
+
+                        for (int j = 0; j < subGroupParts.Length; j++)
+                        {
+                            if (subGroupParts[j] == string.Empty)
+                                continue;
+
+                            if (!float.TryParse(subGroupParts[j], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupDefaultValues[i - 13][j]))
+                                throw new Exception($"Cell subgroup {i - 13} default values at line {linesCounter} are defined, but have incorrect format");
+                        }
+                    }
+                }
+
+                StatSet matchedSet = StatSets.FirstOrDefault(s => s.GameType == gameType && s.Round == round && s.Position == position && s.RelativePosition == relativePosition && s.OppPosition == oppPosition &&
+                                                                  s.PlayersOnFlop == playersOnFlop && s.PreflopPotType == preflopPotType && s.PreflopActions == preflopActions && s.OtherPlayersActed == otherPlayersActed &&
+                                                                  s.SetType == setType);
+
+                if(matchedSet == null)
+                    throw new Exception("No matched set found");
+
+                DataCell matchedCell = matchedSet.Cells.FirstOrDefault(c => c.Name == cellName);
+
+                if (matchedCell == null)
+                    throw new Exception("No matched data cell found");
+
+                matchedCell.DefaultValue = cellDefaultValue;
+
+                if (matchedCell.CellData is PostflopData pd)
+                {
+                    pd.MainGroup.MadeHandsDefaultValue = mainGroupDfltValues[0];
+                    pd.MainGroup.DrawHandsDefaultValue = mainGroupDfltValues[1];
+                    pd.MainGroup.ComboHandsDefaultValue = mainGroupDfltValues[2];
+
+                    for (int i = 0; i < subGroupDefaultValues.Length; i++)
+                    {
+                        pd.SubGroups[i].MadeHandsDefaultValue = subGroupDefaultValues[i][0];
+                        pd.SubGroups[i].DrawHandsDefaultValue = subGroupDefaultValues[i][1];
+                        pd.SubGroups[i].ComboHandsDefaultValue = subGroupDefaultValues[i][2];
+                    }
+                }
+
+                linesCounter++;
             }
         }
     }

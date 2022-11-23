@@ -50,6 +50,8 @@ namespace InfoHelper.DataProcessor
 
             string getLastNHandsStr = string.Empty;
 
+            string minDeviationSampleStr = string.Empty;
+
             string timerIntervalStr = string.Empty;
 
             string screenshotSaveIntervalStr = string.Empty;
@@ -146,6 +148,12 @@ namespace InfoHelper.DataProcessor
                             case "GetLastNHands":
 
                                 getLastNHandsStr = node.Attributes["Value"].Value;
+
+                                break;
+
+                            case "MinDeviationSample":
+
+                                minDeviationSampleStr = node.Attributes["Value"].Value;
 
                                 break;
 
@@ -362,8 +370,18 @@ namespace InfoHelper.DataProcessor
             if (!int.TryParse(getLastNHandsStr, out int getLastNHands))
                 throw new Exception("Get last n hands value has incorrect format");
 
-            if (getLastNHands < 1)
-                throw new Exception("Get last n hands value should be more than 0");
+            if (getLastNHands is < 1 or > 1000000)
+                throw new Exception("Get last n hands value should be between 1 and 1000000");
+
+            //Min deviation sample
+            if (string.IsNullOrEmpty(minDeviationSampleStr))
+                throw new Exception("Minimum deviation sample value is not specified");
+
+            if (!int.TryParse(minDeviationSampleStr, out int minDeviationSample))
+                throw new Exception("Minimum deviation sample value has incorrect format");
+
+            if (minDeviationSample is < 1 or > 100)
+                throw new Exception("Minimum deviation sample value should be between 1 and 100");
 
             //Timer
             if (string.IsNullOrEmpty(timerIntervalStr))
@@ -372,7 +390,7 @@ namespace InfoHelper.DataProcessor
             if (!int.TryParse(timerIntervalStr, out int timerInterval))
                 throw new Exception("Timer interval has incorrect format");
 
-            if (timerInterval < 1 || timerInterval > 1000)
+            if (timerInterval is < 1 or > 1000)
                 throw new Exception("Timer interval should be between 1 and 1000");
 
             //Screenshot save interval
@@ -392,7 +410,7 @@ namespace InfoHelper.DataProcessor
             if (!int.TryParse(windowExpireTimeoutStr, out int windowExpireTimeout))
                 throw new Exception("Window expire timeout has incorrect format");
 
-            if (windowExpireTimeout <= 0 || windowExpireTimeout > 59)
+            if (windowExpireTimeout is <= 0 or > 59)
                 throw new Exception("Window expire timeout should be between 1 and 59");
 
             TimeSpan windowInfoExpireTimeout = new TimeSpan(0, 0, 0, windowExpireTimeout);
@@ -642,6 +660,7 @@ namespace InfoHelper.DataProcessor
             Shared.SnapshotsFolder = snapshotsFolder;
             Shared.BitmapsBuffer = bitmapsBuffer;
             Shared.GetLastNHands = getLastNHands;
+            Shared.MinDeviationSample = minDeviationSample;
             Shared.TimerInterval = timerInterval;
             Shared.ScreenshotSaveInterval = screenshotSaveInterval;
             Shared.WindowExpireTimeout = windowInfoExpireTimeout;

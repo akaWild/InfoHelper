@@ -19,6 +19,7 @@ namespace InfoHelper.Utils
         public static string SnapshotsFolder { get; set; }
         public static int BitmapsBuffer { get; set; }
         public static int GetLastNHands { get; set; }
+        public static int MinDeviationSample { get; set; }
         public static int TimerInterval { get; set; }
         public static int ScreenshotSaveInterval { get; set; }
         public static TimeSpan WindowExpireTimeout { get; set; }

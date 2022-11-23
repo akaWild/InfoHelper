@@ -30,7 +30,7 @@ namespace InfoHelper.Controls
         {
             base.OnRenderSizeChanged(sizeInfo);
 
-            Shared.CellHeight = 0.06 * sizeInfo.NewSize.Height;
+            Shared.CellHeight = 0.07 * sizeInfo.NewSize.Height;
         }
     }
 }

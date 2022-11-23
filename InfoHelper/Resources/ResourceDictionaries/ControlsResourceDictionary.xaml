@@ -71,7 +71,6 @@
         <SolidColorBrush>#FEC0B8</SolidColorBrush>
     </x:Array>
 
-
     <!--Preflop matrix-->
     <SolidColorBrush x:Key="PreflopMatrixHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PreflopMatrixHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
@@ -145,18 +144,56 @@
     </Style>
 
     <!--Content-->
+    <!--Deviations brushes-->
+    <x:Array x:Key="DeviationBrushes" Type="SolidColorBrush">
+        <SolidColorBrush>#D9EBD9</SolidColorBrush>
+        <SolidColorBrush>#CCE5CC</SolidColorBrush>
+        <SolidColorBrush>#BFDEBF</SolidColorBrush>
+        <SolidColorBrush>#B3D8B3</SolidColorBrush>
+        <SolidColorBrush>#A6D1A6</SolidColorBrush>
+        <SolidColorBrush>#99CB99</SolidColorBrush>
+        <SolidColorBrush>#8CC48C</SolidColorBrush>
+        <SolidColorBrush>#80BE80</SolidColorBrush>
+        <SolidColorBrush>#73B773</SolidColorBrush>
+        <SolidColorBrush>#66B066</SolidColorBrush>
+        <SolidColorBrush>#59AA59</SolidColorBrush>
+        <SolidColorBrush>#4CA34C</SolidColorBrush>
+        <SolidColorBrush>#409D40</SolidColorBrush>
+        <SolidColorBrush>#339633</SolidColorBrush>
+        <SolidColorBrush>#269026</SolidColorBrush>
+        <SolidColorBrush>#1A891A</SolidColorBrush>
+        <SolidColorBrush>#0D830D</SolidColorBrush>
+        <SolidColorBrush>#007C00</SolidColorBrush>
+        <SolidColorBrush>#005D00</SolidColorBrush>
+        <SolidColorBrush>#004A00</SolidColorBrush>
+        <SolidColorBrush>#4A0000</SolidColorBrush>
+        <SolidColorBrush>#5D0000</SolidColorBrush>
+        <SolidColorBrush>#7C0000</SolidColorBrush>
+        <SolidColorBrush>#830D0D</SolidColorBrush>
+        <SolidColorBrush>#891A1A</SolidColorBrush>
+        <SolidColorBrush>#902626</SolidColorBrush>
+        <SolidColorBrush>#963333</SolidColorBrush>
+        <SolidColorBrush>#9D4040</SolidColorBrush>
+        <SolidColorBrush>#A34D4D</SolidColorBrush>
+        <SolidColorBrush>#AA5959</SolidColorBrush>
+        <SolidColorBrush>#B06666</SolidColorBrush>
+        <SolidColorBrush>#B77373</SolidColorBrush>
+        <SolidColorBrush>#BE8080</SolidColorBrush>
+        <SolidColorBrush>#C48C8C</SolidColorBrush>
+        <SolidColorBrush>#CB9999</SolidColorBrush>
+        <SolidColorBrush>#D1A6A6</SolidColorBrush>
+        <SolidColorBrush>#D8B3B3</SolidColorBrush>
+        <SolidColorBrush>#DEBFBF</SolidColorBrush>
+        <SolidColorBrush>#E5CCCC</SolidColorBrush>
+        <SolidColorBrush>#EBD9D9</SolidColorBrush>
+    </x:Array>
+
     <!--General panel-->
     <Style TargetType="controls:GeneralDataCellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="ShowSample" Value="False"></Setter>
     </Style>
 
-    <!--<SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
-    <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
-    <SolidColorBrush x:Key="VpipBackground">#DCFFDC</SolidColorBrush>
-    <SolidColorBrush x:Key="AggrBackground">#CEB5AB</SolidColorBrush>
-    <SolidColorBrush x:Key="SdBackground">#D2D2D2</SolidColorBrush>
-    <SolidColorBrush x:Key="EvBackground">#CACC6A</SolidColorBrush>-->
     <SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
     <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
     <SolidColorBrush x:Key="VpipBackground">Beige</SolidColorBrush>

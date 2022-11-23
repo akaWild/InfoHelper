@@ -169,7 +169,7 @@ namespace InfoHelper.Controls
                     else if (avgEq < defaultValue)
                         sign = "-";
 
-                    groupText += $" ({sign}{Math.Abs(avgEq - defaultValue)})";
+                    groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - defaultValue, 1)).ToString(CultureInfo.InvariantCulture)})";
                 }
 
                 FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _headerForegroundBrush, 1);

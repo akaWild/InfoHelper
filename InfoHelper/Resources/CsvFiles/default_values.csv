@@ -1,0 +1,3 @@
+Game type;Round;Position;Relative position;Opponent position;Players on flop;Preflop pot type;Preflop actions;Other players acted;Set type;Cell name;Stat default value;Main group dflt values;Sg1 dflt vals;Sg2 dflt vals;Sg3 dflt vals;Sg4 dflt vals
+SixMax;Postflop;Co;Ip;Bb;Hu;RaisePot;Raise;No;PostflopHuIpRaiser;CB_F;65.1;, 45.89,;1,,;1,5,84.7;;
+SixMax;Any;Co;Any;Any;Any;Any;Any;Any;PreflopCo;Co_Unopened_Fold;50;;;;;
