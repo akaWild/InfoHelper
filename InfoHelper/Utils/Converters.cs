@@ -283,6 +283,9 @@ namespace InfoHelper.Utils
             if (dataCell == null || float.IsNaN(dataCell.DefaultValue) || dataCell.Sample < Shared.MinDeviationSample)
                 return null;
 
+            if (dataCell is ValueCell or EvCell)
+                return null;
+
             if (_deviationBrushesList == null)
                 throw new Exception("Deviation brushes were not found");
 
@@ -318,7 +321,7 @@ namespace InfoHelper.Utils
             if (dataCell == null || float.IsNaN(dataCell.DefaultValue) || dataCell.Sample < Shared.MinDeviationSample)
                 return Brushes.Transparent;
 
-            return Brushes.Black;
+            return dataCell is ValueCell or EvCell ? null : Brushes.Black;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -327,4 +330,41 @@ namespace InfoHelper.Utils
         }
     }
 
+    public class EvCellForegroundConverter : IValueConverter
+    {
+        private SolidColorBrush[] _evBrushesList;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("EvBrushes");
+
+            DataCell dataCell = (DataCell)value;
+
+            if (dataCell is not EvCell)
+                return null;
+
+            if (_evBrushesList == null)
+                throw new Exception("Ev brushes were not found");
+
+            if (_evBrushesList.Length % 2 != 0)
+                throw new Exception("Ev brushes list contains odd number of elements");
+
+            if (dataCell.Sample == 0)
+                return Brushes.Black;
+
+            bool straightOrder = dataCell.CalculatedValue > 0;
+
+            int index = (int)Math.Abs(dataCell.CalculatedValue);
+
+            if (index >= _evBrushesList.Length / 2)
+                index = _evBrushesList.Length / 2 - 1;
+
+            return straightOrder ? _evBrushesList[index] : _evBrushesList[new Index(index + 1, true)];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
