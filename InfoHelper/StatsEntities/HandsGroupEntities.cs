@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace InfoHelper.StatsEntities
 {
-    public class PostflopData : CellDataBase
+    public abstract class HandsGroupBase : ICloneable
     {
-        public HandsGroup MainGroup { get; private set; } = new HandsGroup();
+        public int[] CounterActions { get; set; } = new int[3];
 
-        public HandsGroup[] SubGroups { get; private set; } = new HandsGroup[4]
-        {
-            new HandsGroup(),
-            new HandsGroup(),
-            new HandsGroup(),
-            new HandsGroup()
-        };
+        public abstract object Clone();
+    }
+
+    public class PreflopHandsGroup : HandsGroupBase
+    {
+        public int[] PocketHands { get; private set; } = new int[169];
 
         public override object Clone()
         {
-            PostflopData postflopData = (PostflopData)MemberwiseClone();
+            PreflopHandsGroup preflopData = (PreflopHandsGroup)MemberwiseClone();
 
-            postflopData.MainGroup = (HandsGroup)MainGroup.Clone();
-            postflopData.SubGroups = SubGroups.Select(sg => (HandsGroup)sg.Clone()).ToArray();
+            preflopData.CounterActions = CounterActions.ToArray();
 
-            return postflopData;
+            preflopData.PocketHands = PocketHands.ToArray();
+
+            return preflopData;
         }
     }
 
-    public class HandsGroup : ICloneable
+    public class PostflopHandsGroup : HandsGroupBase
     {
         public const int HandCategoriesCount = 100;
 
@@ -45,9 +45,11 @@ namespace InfoHelper.StatsEntities
 
         public ushort[] ComboHands { get; private set; } = new ushort[HandCategoriesCount];
 
-        public object Clone()
+        public override object Clone()
         {
-            HandsGroup hg = (HandsGroup)MemberwiseClone();
+            PostflopHandsGroup hg = (PostflopHandsGroup)MemberwiseClone();
+
+            hg.CounterActions = CounterActions.ToArray();
 
             hg.MadeHands = MadeHands.ToArray();
             hg.DrawHands = DrawHands.ToArray();

@@ -189,23 +189,60 @@
     </x:Array>
 
     <!--General panel-->
+    <SolidColorBrush x:Key="DefaultGeneralForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="DefaultGeneralBackgroundBrush">Beige</SolidColorBrush>
+
     <Style TargetType="controls:GeneralDataCellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="Beige"/>
-        <Setter Property="ShowSample" Value="False"></Setter>
+        <Setter Property="Foreground" Value="{StaticResource DefaultGeneralForegroundBrush}"/>
+        <Setter Property="Background" Value="{StaticResource DefaultGeneralBackgroundBrush}"/>
+        <Setter Property="ShowSample" Value="False"/>
     </Style>
+
+    <x:Array x:Key="EvForegroundBrushes" Type="SolidColorBrush">
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>Black</SolidColorBrush>
+    </x:Array>
 
     <SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
     <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
-
-    <x:Array x:Key="EvBrushes" Type="SolidColorBrush">
-        <SolidColorBrush>#59AA59</SolidColorBrush>
-        <SolidColorBrush>#007C00</SolidColorBrush>
-        <SolidColorBrush>#005D00</SolidColorBrush>
-        <SolidColorBrush>#5D0000</SolidColorBrush>
-        <SolidColorBrush>#830D0D</SolidColorBrush>
-        <SolidColorBrush>#9D4040</SolidColorBrush>
-    </x:Array>
 
     <!--Other panels-->
     <Style x:Key="EmptyCellStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">

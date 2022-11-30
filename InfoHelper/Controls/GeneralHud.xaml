@@ -10,6 +10,8 @@
     <UserControl.Resources>
         <utils:EvCellForegroundConverter x:Key="EvCellForegroundConverter">
         </utils:EvCellForegroundConverter>
+        <utils:EvCellBackgroundConverter x:Key="EvCellBackgroundConverter">
+        </utils:EvCellBackgroundConverter>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -30,6 +32,6 @@
         <local:GeneralDataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_R}"></local:GeneralDataCellControl>
         <local:GeneralDataCellControl Grid.Column="0" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Data="{Binding WentToSd}"></local:GeneralDataCellControl>
         <local:GeneralDataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding WonOnSd}"></local:GeneralDataCellControl>
-        <local:GeneralDataCellControl Grid.Column="2" Grid.Row="2" Foreground="{Binding EvBb, Converter={StaticResource EvCellForegroundConverter}}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding EvBb}" Precision="1"></local:GeneralDataCellControl>
+        <local:GeneralDataCellControl Grid.Column="2" Grid.Row="2" Foreground="{Binding EvBb, Converter={StaticResource EvCellForegroundConverter}}" Background="{Binding EvBb, Converter={StaticResource EvCellBackgroundConverter}}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding EvBb}" Precision="1"></local:GeneralDataCellControl>
     </Grid>
 </UserControl>

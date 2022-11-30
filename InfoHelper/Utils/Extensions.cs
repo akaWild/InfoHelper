@@ -39,18 +39,7 @@ namespace InfoHelper.Utils
         {
             return new Rect(drawingRectangle.X, drawingRectangle.Y, drawingRectangle.Width, drawingRectangle.Height);
         }
-
-        //public static BitmapSource ToBitmapSource(this Bitmap bitmap)
-        //{
-        //    BitmapSource bs = Imaging.CreateBitmapSourceFromHBitmap(
-        //        bitmap.GetHbitmap(),
-        //        IntPtr.Zero,
-        //        Int32Rect.Empty,
-        //        BitmapSizeOptions.FromEmptyOptions());
-
-        //    return bs;
-        //}
-
+        
         public static BitmapSource ToBitmapSource(this Bitmap bitmap)
         {
             BitmapData bitmapData = bitmap.LockBits(new Rectangle(0, 0, bitmap.Width, bitmap.Height), ImageLockMode.ReadOnly, bitmap.PixelFormat);

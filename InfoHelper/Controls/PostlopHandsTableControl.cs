@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -14,6 +15,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InfoHelper.StatsEntities;
+using Brushes = System.Windows.Media.Brushes;
+using Pen = System.Windows.Media.Pen;
+using Point = System.Windows.Point;
+using Size = System.Windows.Size;
 
 namespace InfoHelper.Controls
 {
@@ -50,6 +55,8 @@ namespace InfoHelper.Controls
     {
         private const int HeaderHeight = 18;
 
+        private const float CounterActionsWidth = 0.075f;
+
         private readonly Typeface _typeFace = new Typeface("Tahoma");
 
         private Pen _pen;
@@ -72,7 +79,7 @@ namespace InfoHelper.Controls
             if(Visibility != Visibility.Visible)
                 return;
 
-            HandsGroup handsGroup = (HandsGroup)Data;
+            PostflopHandsGroup handsGroup = (PostflopHandsGroup)Data;
 
             if(handsGroup == null)
                 return;
@@ -89,28 +96,30 @@ namespace InfoHelper.Controls
 
             drawingContext.DrawRectangle(_backgroundColor, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, RenderSize.Height)));
 
+            double counterActionsWidth = RenderSize.Width * CounterActionsWidth;
+
             double headerHeight = 0;
 
             if (!string.IsNullOrEmpty(Header))
             {
                 headerHeight = HeaderHeight;
 
-                drawingContext.DrawRectangle(_headerBackgroundBrush, null, new Rect(new Point(0, 0), new Size(RenderSize.Width, headerHeight)));
+                drawingContext.DrawRectangle(_headerBackgroundBrush, null, new Rect(new Point(counterActionsWidth, 0), new Size(RenderSize.Width - counterActionsWidth, headerHeight)));
 
                 FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, headerHeight - 4, _headerForegroundBrush, 1);
 
-                Point textLocation = new Point(RenderSize.Width / 2 - text.Width / 2, headerHeight / 2 - text.Height / 2);
+                Point textLocation = new Point(counterActionsWidth + (RenderSize.Width - counterActionsWidth)/ 2 - text.Width / 2, headerHeight / 2 - text.Height / 2);
 
                 drawingContext.DrawText(text, textLocation);
 
-                drawingContext.DrawLine(_pen, new Point(0, headerHeight), new Point(RenderSize.Width, headerHeight));
+                drawingContext.DrawLine(_pen, new Point(counterActionsWidth, headerHeight), new Point(RenderSize.Width, headerHeight));
             }
 
             double groupGraphHeight = (RenderSize.Height - headerHeight) / 3;
 
             int max = handsGroup.MadeHands.Select((v, i) => v + handsGroup.DrawHands[i] + handsGroup.ComboHands[i]).Max();
 
-            double columnWidth = RenderSize.Width / HandsGroup.HandCategoriesCount;
+            double columnWidth = RenderSize.Width / PostflopHandsGroup.HandCategoriesCount;
 
             double yIndent = headerHeight;
 
@@ -118,19 +127,54 @@ namespace InfoHelper.Controls
 
             yIndent += groupGraphHeight;
 
-            drawingContext.DrawLine(_pen, new Point(0, yIndent), new Point(RenderSize.Width, yIndent));
+            drawingContext.DrawLine(_pen, new Point(counterActionsWidth, yIndent), new Point(RenderSize.Width, yIndent));
 
             RenderHandsGroup(handsGroup.ComboHands, handsGroup.ComboHandsDefaultValue, Brushes.Blue);
 
             yIndent += groupGraphHeight;
 
-            drawingContext.DrawLine(_pen, new Point(0, yIndent), new Point(RenderSize.Width, yIndent));
+            drawingContext.DrawLine(_pen, new Point(counterActionsWidth, yIndent), new Point(RenderSize.Width, yIndent));
 
             RenderHandsGroup(handsGroup.DrawHands, handsGroup.DrawHandsDefaultValue, Brushes.Red);
 
+            int[] counterActions = handsGroup.CounterActions;
+
+            int counterActionsSum = counterActions.Sum();
+
+            if (counterActionsSum > 0)
+            {
+                double counterActionsYIndent = 0;
+
+                for (int i = 0; i < counterActions.Length; i++)
+                {
+                    if (counterActions[i] == 0)
+                        continue;
+
+                    SolidColorBrush brush = i switch
+                    {
+                        0 => Brushes.Red,
+                        1 => Brushes.ForestGreen,
+                        2 => Brushes.Blue,
+                        _ => null
+                    };
+
+                    double ratio = (double)counterActions[i] / counterActionsSum;
+
+                    double counterActionsHeight = RenderSize.Height * ratio;
+
+                    drawingContext.DrawRectangle(brush, null, new Rect(new Point(0, counterActionsYIndent), new Size(counterActionsWidth, counterActionsHeight)));
+
+                    counterActionsYIndent += counterActionsHeight;
+                }
+            }
+            else
+                drawingContext.DrawRectangle(Brushes.DarkGray, null, new Rect(new Point(0, 0), new Size(counterActionsWidth, RenderSize.Height)));
+
+            drawingContext.DrawLine(_pen, new Point(counterActionsWidth, 0), new Point(counterActionsWidth, RenderSize.Height));
+
             void RenderHandsGroup(ushort[] hands, float defaultValue, SolidColorBrush brush)
             {
-                double xIndent = 0;
+                double xIndent = counterActionsWidth;
 
                 float handsSum = 0;
 
@@ -174,7 +218,7 @@ namespace InfoHelper.Controls
 
                 FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _headerForegroundBrush, 1);
 
-                Point textLocation = new Point(3, yIndent);
+                Point textLocation = new Point(counterActionsWidth + 3, yIndent);
 
                 drawingContext.DrawText(formattedText, textLocation);
             }

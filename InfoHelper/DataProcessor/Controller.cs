@@ -288,12 +288,7 @@ namespace InfoHelper.DataProcessor
                             bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
                                 winContextInfo.GameContext });
 
-                            if (analyzeResult)
-                            {
-                                if (winContextInfo.GameContext.Round == 1)
-                                    PokerRoomManager.ProcessData(window, screenData, bmpDecor);
-                            }
-
+                            PokerRoomManager.ProcessData(window, screenData, bmpDecor);
 
                             if (winContextInfo.GameContext.Error == string.Empty)
                             {

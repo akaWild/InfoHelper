@@ -333,10 +333,12 @@ namespace InfoHelper.Utils
     public class EvCellForegroundConverter : IValueConverter
     {
         private SolidColorBrush[] _evBrushesList;
+        private SolidColorBrush _evDefaultBrush;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("EvBrushes");
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("EvForegroundBrushes");
+            _evDefaultBrush ??= (SolidColorBrush)Application.Current.TryFindResource("DefaultGeneralForegroundBrush");
 
             DataCell dataCell = (DataCell)value;
 
@@ -350,11 +352,51 @@ namespace InfoHelper.Utils
                 throw new Exception("Ev brushes list contains odd number of elements");
 
             if (dataCell.Sample == 0)
-                return Brushes.Black;
+                return _evDefaultBrush;
 
             bool straightOrder = dataCell.CalculatedValue > 0;
 
-            int index = (int)Math.Abs(dataCell.CalculatedValue);
+            int index = (int)(Math.Abs(dataCell.CalculatedValue) / 0.3);
+
+            if (index >= _evBrushesList.Length / 2)
+                index = _evBrushesList.Length / 2 - 1;
+
+            return straightOrder ? _evBrushesList[index] : _evBrushesList[new Index(index + 1, true)];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class EvCellBackgroundConverter : IValueConverter
+    {
+        private SolidColorBrush[] _evBrushesList;
+        private SolidColorBrush _evDefaultBrush;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBrushes");
+            _evDefaultBrush ??= (SolidColorBrush)Application.Current.TryFindResource("DefaultGeneralBackgroundBrush");
+
+            DataCell dataCell = (DataCell)value;
+
+            if (dataCell is not EvCell)
+                return null;
+
+            if (_evBrushesList == null)
+                throw new Exception("Ev brushes were not found");
+
+            if (_evBrushesList.Length % 2 != 0)
+                throw new Exception("Ev brushes list contains odd number of elements");
+
+            if (dataCell.Sample == 0)
+                return _evDefaultBrush;
+
+            bool straightOrder = dataCell.CalculatedValue > 0;
+
+            int index = (int)(Math.Abs(dataCell.CalculatedValue) / 0.3);
 
             if (index >= _evBrushesList.Length / 2)
                 index = _evBrushesList.Length / 2 - 1;

@@ -15,7 +15,7 @@ namespace InfoHelper.DataProcessor
 {
     public class PokerRoomManager
     {
-        private static readonly Dictionary<string, DateTime> SavedFiles = new Dictionary<string, DateTime>();
+        private static readonly Dictionary<string, List<string>> HandPlayers = new Dictionary<string, List<string>>();
 
         public static void ProcessData(PokerWindow pokerWindow, ScreenParserData screenData, BitmapDecorator bmp)
         {
@@ -25,7 +25,7 @@ namespace InfoHelper.DataProcessor
                 {
                     string hc1 = screenData.HoleCards[3][0], hc2 = screenData.HoleCards[3][1];
 
-                    if (screenData.DealerPosition != null && !string.IsNullOrEmpty(hc1) && !string.IsNullOrEmpty(hc2))
+                    if (screenData.DealerPosition != null && !string.IsNullOrEmpty(hc1) && !string.IsNullOrEmpty(hc2) && screenData.Nicks[3] != null)
                     {
                         string tableId = $"{pokerWindow.PokerWindowInfo.TableId}";
 
@@ -33,14 +33,31 @@ namespace InfoHelper.DataProcessor
 
                         string dealerId = $"{screenData.DealerPosition}";
 
-                        string fileName = $"{tableId}_{handId}_{dealerId}";
+                        string key = $"{tableId}_{handId}_{dealerId}";
 
-                        if (!SavedFiles.ContainsKey(fileName) || DateTime.Now.Subtract(SavedFiles[fileName]).TotalSeconds > 10)
+                        bool needSave = false;
+
+                        if (!HandPlayers.ContainsKey(key))
                         {
-                            bmp.Crop(pokerWindow.Position).Save(Path.Combine(Shared.PicturesSaveFolder, $"{fileName}_{DateTime.Now.Ticks}.bmp"));
+                            HandPlayers.Add(key, new List<string>(screenData.Nicks.Where(n => n != null)));
 
-                            SavedFiles[fileName] = DateTime.Now;
+                            needSave = true;
                         }
+                        else
+                        {
+                            foreach (string nick in screenData.Nicks)
+                            {
+                                if(nick == null || HandPlayers[key].Contains(nick))
+                                    continue;
+
+                                HandPlayers[key].Add(nick);
+
+                                needSave = true;
+                            }
+                        }
+
+                        if(needSave)
+                            bmp.Crop(pokerWindow.Position).Save(Path.Combine(Shared.PicturesSaveFolder, $"{key}_{DateTime.Now.Ticks}.bmp"));
                     }
                 }
             }

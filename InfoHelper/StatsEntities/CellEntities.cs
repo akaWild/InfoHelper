@@ -20,6 +20,8 @@ namespace InfoHelper.StatsEntities
 
         public BetRange[] BetRanges { get; set; }
 
+        public char BetType { get; set; }
+
         public float DefaultValue { get; set; } = float.NaN;
 
         public uint Sample { get; protected set; }
@@ -81,9 +83,9 @@ namespace InfoHelper.StatsEntities
 
     public record BetRange
     {
-        public ushort LowBound { get; init; }
+        public float LowBound { get; init; }
 
-        public ushort UpperBound { get; init; }
+        public float UpperBound { get; init; }
     }
 
     public enum CellSelectedState : byte

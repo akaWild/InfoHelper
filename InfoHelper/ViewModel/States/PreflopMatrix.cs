@@ -5,16 +5,16 @@ namespace InfoHelper.ViewModel.States
 {
     public class ViewModelPreflopMatrixState : ViewModelDeferredBindableHeaderedState
     {
-        public PreflopData PreflopData { get; set; }
+        public PreflopHandsGroup PreflopHandsGroup { get; set; }
 
         public override void UpdateBindings()
         {
             string hashString = $"{Visible}{Header ?? string.Empty}";
 
-            if (PreflopData != null)
+            if (PreflopHandsGroup != null)
             {
                 for (int i = 0; i < 169; i++)
-                    hashString += $"{PreflopData.PocketHands[i]}";
+                    hashString += $"{PreflopHandsGroup.PocketHands[i]}";
             }
 
             int hashCode = hashString.GetStableHashCode();

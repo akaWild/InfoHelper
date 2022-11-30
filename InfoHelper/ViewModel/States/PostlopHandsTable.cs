@@ -6,7 +6,7 @@ namespace InfoHelper.ViewModel.States
 {
     public class ViewModelPostlopHandsTableState : ViewModelDeferredBindableHeaderedState
     {
-        public HandsGroup HandsGroup { get; set; }
+        public PostflopHandsGroup PostflopHandsGroup { get; set; }
 
         public override void UpdateBindings()
         {
@@ -14,10 +14,10 @@ namespace InfoHelper.ViewModel.States
 
             StringBuilder sb = new StringBuilder();
 
-            if (HandsGroup != null)
+            if (PostflopHandsGroup != null)
             {
-                for (int i = 0; i < HandsGroup.HandCategoriesCount; i++)
-                    sb.Append($"{HandsGroup.MadeHands[i]}{HandsGroup.DrawHands[i]}{HandsGroup.ComboHands[i]}");
+                for (int i = 0; i < PostflopHandsGroup.HandCategoriesCount; i++)
+                    sb.Append($"{PostflopHandsGroup.MadeHands[i]}{PostflopHandsGroup.DrawHands[i]}{PostflopHandsGroup.ComboHands[i]}");
             }
 
             hashString += sb.ToString();

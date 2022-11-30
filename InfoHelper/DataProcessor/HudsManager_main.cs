@@ -567,7 +567,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = true;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = false;
 
-                            _vmMain.HudsParentStates[i].PreflopMatrixState.PreflopData = preflopData;
+                            _vmMain.HudsParentStates[i].PreflopMatrixState.PreflopHandsGroup = (PreflopHandsGroup)preflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PreflopMatrixState.Header = selectedCell.Description;
                         }
                         else if(selectedCell.CellData is PostflopData postflopData)
@@ -575,7 +575,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = false;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = true;
 
-                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.HandsGroup = postflopData.MainGroup;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.PostflopHandsGroup = (PostflopHandsGroup)postflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Header = selectedCell.Description;
                         }
 
@@ -608,7 +608,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = true;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = false;
 
-                            _vmMain.HudsParentStates[i].PreflopMatrixAltState.PreflopData = preflopData;
+                            _vmMain.HudsParentStates[i].PreflopMatrixAltState.PreflopHandsGroup = (PreflopHandsGroup)preflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PreflopMatrixAltState.Header = missedCell.Description;
                         }
                         else if (missedCell.CellData is PostflopData postflopData)
@@ -616,7 +616,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = true;
 
-                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.HandsGroup = postflopData.MainGroup;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.PostflopHandsGroup = (PostflopHandsGroup)postflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Header = missedCell.Description;
                         }
                     }
