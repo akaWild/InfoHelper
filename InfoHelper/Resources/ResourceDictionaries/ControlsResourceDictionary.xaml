@@ -108,7 +108,7 @@
     <!--Postflop hands table-->
     <SolidColorBrush x:Key="PostflopHandsTableHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
-    <SolidColorBrush x:Key="PostflopHandsTableForegroundBrush">#1E000000</SolidColorBrush>
+    <SolidColorBrush x:Key="PostflopHandsTableForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableBackgroundBrush">Beige</SolidColorBrush>
     <Pen x:Key="PostflopHandsTablePen" Brush="Black" Thickness="1"></Pen>
 

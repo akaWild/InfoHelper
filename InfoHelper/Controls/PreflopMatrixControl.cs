@@ -50,7 +50,7 @@ namespace InfoHelper.Controls
     /// </summary>
     public class PreflopMatrixControl : HeaderedControl
     {
-        private const float CounterActionsWidth = 0.075f;
+        private const int CounterActionsWidth = 30;
 
         private readonly Typeface _typeFace = new Typeface("Tahoma");
 
@@ -108,23 +108,21 @@ namespace InfoHelper.Controls
                 return _backgroundBrushesList[sample - 1];
             }
 
-            double counterActionsWidth = RenderSize.Width * CounterActionsWidth;
+            double handsCanvasWidth = RenderSize.Width - CounterActionsWidth;
 
-            double handsCanvasWidth = RenderSize.Width - counterActionsWidth;
-
-            drawingContext.DrawRectangle(_defaultBackgroundColor, null, new Rect(new Point(counterActionsWidth, 0), new Size(handsCanvasWidth, RenderSize.Height)));
+            drawingContext.DrawRectangle(_defaultBackgroundColor, null, new Rect(new Point(CounterActionsWidth, 0), new Size(handsCanvasWidth, RenderSize.Height)));
 
             double columnWidth = handsCanvasWidth / 13, rowHeight = RenderSize.Height / (string.IsNullOrEmpty(Header) ? 13 : 14);
 
             if(!string.IsNullOrEmpty(Header))
-                drawingContext.DrawRectangle(_headerBackgroundBrush, null, new Rect(new Point(counterActionsWidth, 0), new Size(handsCanvasWidth, rowHeight)));
+                drawingContext.DrawRectangle(_headerBackgroundBrush, null, new Rect(new Point(CounterActionsWidth, 0), new Size(handsCanvasWidth, rowHeight)));
 
             double headerHeight = !string.IsNullOrEmpty(Header) ? rowHeight : 0;
 
             for (int i = 0; i < 13; i++)
             {
                 for (int j = 0; j < 13; j++)
-                    drawingContext.DrawRectangle(GetValueBackgroundBrush(((PreflopHandsGroup)Data)?.PocketHands[i * 13 + j] ?? 0), null, new Rect(new Point(counterActionsWidth + j * columnWidth, i * rowHeight + headerHeight), new Size(columnWidth, rowHeight)));
+                    drawingContext.DrawRectangle(GetValueBackgroundBrush(((PreflopHandsGroup)Data)?.PocketHands[i * 13 + j] ?? 0), null, new Rect(new Point(CounterActionsWidth + j * columnWidth, i * rowHeight + headerHeight), new Size(columnWidth, rowHeight)));
             }
 
             double rowIndent = 0;
@@ -133,18 +131,18 @@ namespace InfoHelper.Controls
             {
                 FormattedText text = new FormattedText(Header, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, rowHeight - 2, _headerForegroundBrush, 1);
 
-                Point textLocation = new Point(counterActionsWidth + handsCanvasWidth / 2 - text.Width / 2, rowHeight / 2 - text.Height / 2);
+                Point textLocation = new Point(CounterActionsWidth + handsCanvasWidth / 2 - text.Width / 2, rowHeight / 2 - text.Height / 2);
 
                 drawingContext.DrawText(text, textLocation);
 
                 rowIndent += rowHeight;
 
-                drawingContext.DrawLine(_borderPen, GetPoint(counterActionsWidth, rowIndent), GetPoint(RenderSize.Width, rowIndent));
+                drawingContext.DrawLine(_borderPen, GetPoint(CounterActionsWidth, rowIndent), GetPoint(RenderSize.Width, rowIndent));
             }
 
             for (int i = 0; i < 13; i++)
             {
-                double columnIndent = counterActionsWidth;
+                double columnIndent = CounterActionsWidth;
 
                 for (int j = 0; j < 13; j++)
                 {
@@ -163,7 +161,7 @@ namespace InfoHelper.Controls
                 rowIndent += rowHeight;
 
                 if (i != 12)
-                    drawingContext.DrawLine(_borderPen, GetPoint(counterActionsWidth, rowIndent), GetPoint(RenderSize.Width, rowIndent));
+                    drawingContext.DrawLine(_borderPen, GetPoint(CounterActionsWidth, rowIndent), GetPoint(RenderSize.Width, rowIndent));
             }
 
             PreflopHandsGroup handsGroup = (PreflopHandsGroup)Data;
@@ -196,15 +194,30 @@ namespace InfoHelper.Controls
 
                     double counterActionsHeight = RenderSize.Height * ratio;
 
-                    drawingContext.DrawRectangle(brush, null, new Rect(new Point(0, counterActionsYIndent), new Size(counterActionsWidth, counterActionsHeight)));
+                    Size counterActionsSize = new Size(CounterActionsWidth, counterActionsHeight);
+
+                    drawingContext.DrawRectangle(brush, null, new Rect(new Point(0, counterActionsYIndent), counterActionsSize));
+
+                    FormattedText text = new FormattedText($"{Math.Round(ratio * 100)}%", CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, CounterActionsWidth - 8, Brushes.White, 1);
+
+                    if (text.Width < counterActionsSize.Height)
+                    {
+                        Point textLocation = new Point((float)CounterActionsWidth / 2 - text.Height / 2, counterActionsYIndent + counterActionsSize.Height / 2 + text.Width / 2);
+
+                        drawingContext.PushTransform(new RotateTransform(-90, textLocation.X, textLocation.Y));
+
+                        drawingContext.DrawText(text, textLocation);
+
+                        drawingContext.Pop();
+                    }
 
                     counterActionsYIndent += counterActionsHeight;
                 }
             }
             else
-                drawingContext.DrawRectangle(Brushes.DarkGray, null, new Rect(new Point(0, 0), new Size(counterActionsWidth, RenderSize.Height)));
+                drawingContext.DrawRectangle(Brushes.DarkGray, null, new Rect(new Point(0, 0), new Size(CounterActionsWidth, RenderSize.Height)));
 
-            drawingContext.DrawLine(_borderPen, new Point(counterActionsWidth, 0), new Point(counterActionsWidth, RenderSize.Height));
+            drawingContext.DrawLine(_borderPen, new Point(CounterActionsWidth, 0), new Point(CounterActionsWidth, RenderSize.Height));
         }
     }
 }
