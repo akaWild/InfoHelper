@@ -42,6 +42,9 @@
     <Reference Include="BitmapDecorator">
       <HintPath>..\..\..\BitmapDecorator\BitmapDecorator\bin\Release\net5.0\BitmapDecorator.dll</HintPath>
     </Reference>
+    <Reference Include="FlopEquityUtility">
+      <HintPath>..\..\..\FlopEquityUtility\FlopEquityUtility\bin\Release\net5.0\FlopEquityUtility.dll</HintPath>
+    </Reference>
     <Reference Include="GameInformationUtility">
       <HintPath>..\..\..\GameInformationUtility\GameInformationUtility\bin\Release\net5.0\GameInformationUtility.dll</HintPath>
     </Reference>

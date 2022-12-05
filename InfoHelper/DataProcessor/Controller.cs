@@ -121,6 +121,8 @@ namespace InfoHelper.DataProcessor
 
                 _gtoPreflopManager = new PreflopGtoManager();
 
+                HandManager.LoadFlopEquityData();
+
                 Assembly assemblyWindowsManager = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
 
                 Type windowsManagerType = assemblyWindowsManager.GetType("PokerWindowsManager.PokerWindowsManager");

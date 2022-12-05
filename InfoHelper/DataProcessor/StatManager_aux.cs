@@ -9,6 +9,7 @@ using InfoHelper.Db;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
 using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 
 namespace InfoHelper.DataProcessor
 {
@@ -24,6 +25,10 @@ namespace InfoHelper.DataProcessor
             };
 
             using StatDbContext statDbContext = new StatDbContext(sqlBuilder.ConnectionString);
+
+            statDbContext.ChangeTracker.AutoDetectChangesEnabled = false;
+
+            statDbContext.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
 
             var playerData =
                 (from ph in statDbContext.PlayerHands
