@@ -250,6 +250,11 @@
         <Setter Property="Background" Value="Beige"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
+    <Style x:Key="FourBetRangeCellStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Background" Value="Beige"/>
+        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+    </Style>
     <Style TargetType="controls:DataCellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>

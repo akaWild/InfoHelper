@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using GameInformationUtility;
 using GtoUtility;
 using SolverUtility;
+using StatUtility;
 
 namespace InfoHelper.Utils
 {
@@ -543,6 +544,77 @@ namespace InfoHelper.Utils
                 card = cards[0][0].ToString() + cards[1][0] + (cards[0][1] == cards[1][1] ? "s" : "o");
 
             return card;
+        }
+
+        public static Position GetPlayerPosition(int[] blindsPositions, int player, bool[] initialPlayers)
+        {
+            if (player == blindsPositions[0])
+                return Position.Sb;
+
+            if (player == blindsPositions[1])
+                return Position.Bb;
+
+            if (player == blindsPositions[2])
+                return Position.Btn;
+
+            int nextToAct = blindsPositions[1] + 1;
+
+            if (nextToAct == 7)
+                nextToAct = 1;
+
+            int positionShift = 1;
+
+            while (true)
+            {
+                if (player == nextToAct)
+                    break;
+
+                positionShift++;
+
+                nextToAct++;
+
+                if (nextToAct == 7)
+                    nextToAct = 1;
+            }
+
+            positionShift += GetOutPlayers(player);
+
+            if (positionShift == 1)
+                return Position.Ep;
+
+            if (positionShift == 2)
+                return Position.Mp;
+
+            if (positionShift == 3)
+                return Position.Co;
+
+            throw new Exception($"Player {player} position was not found");
+
+            int GetOutPlayers(int currentPosition)
+            {
+                int outPlayers = 0;
+
+                int nxt = currentPosition + 1;
+
+                if (nxt == 7)
+                    nxt = 1;
+
+                while (true)
+                {
+                    if (!initialPlayers[nxt - 1])
+                        outPlayers++;
+
+                    if (nxt == blindsPositions[1])
+                        break;
+
+                    nxt++;
+
+                    if (nxt == 7)
+                        nxt = 1;
+                }
+
+                return outPlayers;
+            }
         }
     }
 }

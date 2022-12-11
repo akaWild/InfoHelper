@@ -4,16 +4,22 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using InfoHelper.StatsEntities;
+using StatUtility;
 using Timer = System.Timers.Timer;
 
 namespace InfoHelper.DataProcessor
 {
+    public delegate void StatExceptionThrownEventHandler(Exception exception);
+
     public partial class StatManager
     {
+        public event StatExceptionThrownEventHandler StatExceptionThrown;
+
         private bool _shouldStop = false;
 
         private readonly Dictionary<string, StatPlayer> _players = new Dictionary<string, StatPlayer>();
@@ -144,7 +150,20 @@ namespace InfoHelper.DataProcessor
 
                     _tasksCancellationTokens.Add(player, cancelTokenSource);
 
-                    Task.Factory.StartNew(() => GetPlayerStats(player, statSetsCopy, token), token);
+                    Task.Factory.StartNew(() => GetPlayerStats(player, statSetsCopy, token), token).ContinueWith(t =>
+                    {
+                        if(_shouldStop)
+                            return;
+
+                        _shouldStop = true;
+
+                        Exception ex = t.Exception;
+
+                        while (ex is AggregateException && ex.InnerException != null)
+                            ex = ex.InnerException;
+
+                        StatExceptionThrown?.Invoke(ex);
+                    }, TaskContinuationOptions.OnlyOnFaulted);
                 }
 
                 output = _players[player];
@@ -191,6 +210,8 @@ namespace InfoHelper.DataProcessor
                 records.Add(record);
             }
 
+            Assembly statAssembly = Assembly.GetAssembly(typeof(DataCell));
+
             foreach (string[] record in records)
             {
                 string key = record[0];
@@ -200,7 +221,7 @@ namespace InfoHelper.DataProcessor
 
                 List<DataCell> cellGroup = CellGroups[key];
 
-                Type cellType = Type.GetType($"{typeof(DataCell).Namespace}.{record[1]}");
+                Type cellType = Type.GetType($"{typeof(DataCell).Namespace}.{record[1]}, {statAssembly.FullName}");
 
                 if(cellType == null)
                     throw new Exception($"{record[1]} cell type was not found");
@@ -212,7 +233,7 @@ namespace InfoHelper.DataProcessor
 
                 if (record[2] != string.Empty)
                 {
-                    Type dataCellType = Type.GetType($"{typeof(DataCell).Namespace}.{record[2]}");
+                    Type dataCellType = Type.GetType($"{typeof(DataCell).Namespace}.{record[2]}, {statAssembly.FullName}");
 
                     if (dataCellType == null)
                         throw new Exception($"{record[2]} cell data type was not found");
@@ -226,48 +247,56 @@ namespace InfoHelper.DataProcessor
 
                     if (record[3] != string.Empty)
                     {
-                        if (record[4] == string.Empty)
-                            throw new Exception("Bet type is not provided");
-
-                        if(!Regex.IsMatch(record[4], @"b|x|p"))
-                            throw new Exception("Bet type has incorrect format");
-
-                        string[] betStrings = record[3].Split(",", StringSplitOptions.RemoveEmptyEntries);
-
-                        float[] bets = new float[betStrings.Length];
-
-                        for (int i = 0; i < betStrings.Length; i++)
+                        //If no cell data => skip
+                        if (cell.CellData != null)
                         {
-                            if(!float.TryParse(betStrings[i], NumberStyles.Any, CultureInfo.InvariantCulture, out float bet))
-                                throw new Exception($"{record[3]} bet ranges line has incorrect format");
+                            //If fold, call or check cell => skip
+                            if (!Regex.IsMatch(cell.Name, @"Fold|FCB|Fv|_F_F|_F_T|_F_R") && !Regex.IsMatch(cell.Name, @"Call|CCB|Cv|_C_F|_C_T|_C_R") && !Regex.IsMatch(cell.Name, @"Check|X_F|X_T|X_R|_F_X|_F_BX|_F_XX|_T_X"))
+                            {
+                                if (record[4] == string.Empty)
+                                    throw new Exception("Bet type is not provided");
 
-                            bets[i] = bet;
+                                if (!Regex.IsMatch(record[4], @"b|x|p"))
+                                    throw new Exception("Bet type has incorrect format");
+
+                                string[] betStrings = record[3].Split(",", StringSplitOptions.RemoveEmptyEntries);
+
+                                float[] bets = new float[betStrings.Length];
+
+                                for (int i = 0; i < betStrings.Length; i++)
+                                {
+                                    if (!float.TryParse(betStrings[i], NumberStyles.Any, CultureInfo.InvariantCulture, out float bet))
+                                        throw new Exception($"{record[3]} bet ranges line has incorrect format");
+
+                                    bets[i] = bet;
+                                }
+
+                                if (bets.Length > 3)
+                                    throw new Exception("The total number of bet values must be 3 or less");
+
+                                Array.Sort(bets);
+
+                                BetRange[] betRanges = new BetRange[bets.Length + 1];
+
+                                float lowBound = 0;
+
+                                for (int i = 0; i < bets.Length; i++)
+                                {
+                                    if (bets[i] <= 0)
+                                        throw new Exception("Bet value must greater than 0");
+
+                                    betRanges[i] = new BetRange() { LowBound = lowBound, UpperBound = bets[i] };
+
+                                    lowBound = bets[i];
+                                }
+
+                                betRanges[^1] = new BetRange() { LowBound = bets[^1], UpperBound = float.MaxValue };
+
+                                cell.BetRanges = betRanges;
+
+                                cell.BetType = record[4].Trim()[0];
+                            }
                         }
-
-                        if(bets.Length > 3)
-                            throw new Exception("The total number of bet values must be 3 or less");
-
-                        Array.Sort(bets);
-
-                        BetRange[] betRanges = new BetRange[bets.Length + 1];
-
-                        float lowBound = 0;
-
-                        for (int i = 0; i < bets.Length; i++)
-                        {
-                            if(bets[i] <= 0)
-                                throw new Exception("Bet value must greater than 0");
-
-                            betRanges[i] = new BetRange() { LowBound = lowBound, UpperBound = bets[i] };
-
-                            lowBound = bets[i];
-                        }
-
-                        betRanges[^1] = new BetRange() { LowBound = bets[^1], UpperBound = float.MaxValue };
-
-                        cell.BetRanges = betRanges;
-
-                        cell.BetType = record[4].Trim()[0];
                     }
                     else
                     {
@@ -460,11 +489,13 @@ namespace InfoHelper.DataProcessor
                 if(cellName == string.Empty)
                     throw new Exception($"Cell name at line {linesCounter} is not defined");
 
-                if (parts[11] == string.Empty)
-                    throw new Exception($"Cell default value at line {linesCounter} is not defined");
+                float cellDefaultValue = float.NaN;
 
-                if (!float.TryParse(parts[11], NumberStyles.Any, CultureInfo.InvariantCulture, out float cellDefaultValue))
-                    throw new Exception($"Cell default value at line {linesCounter} has incorrect format");
+                if (parts[11] != string.Empty)
+                {
+                    if (!float.TryParse(parts[11], NumberStyles.Any, CultureInfo.InvariantCulture, out cellDefaultValue))
+                        throw new Exception($"Cell default value at line {linesCounter} is defined, but has incorrect format");
+                }
 
                 StatSet matchedSet = StatSets.FirstOrDefault(s => s.GameType == gameType && s.Round == round && s.Position == position && s.RelativePosition == relativePosition && s.OppPosition == oppPosition &&
                                                                   s.PlayersOnFlop == playersOnFlop && s.PreflopPotType == preflopPotType && s.PreflopActions == preflopActions && s.OtherPlayersActed == otherPlayersActed &&
@@ -482,7 +513,11 @@ namespace InfoHelper.DataProcessor
                 matchedCell.DefaultValue = cellDefaultValue;
 
                 if (matchedCell.CellData is not PostflopData pd)
-                    return;
+                {
+                    linesCounter++;
+
+                    continue;
+                }
 
                 float[] mainGroupDfltValues = new float[] { float.NaN, float.NaN, float.NaN };
 

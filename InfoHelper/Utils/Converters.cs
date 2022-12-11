@@ -7,8 +7,11 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Media;
+using HandUtility;
+using InfoHelper.DataProcessor;
 using InfoHelper.StatsEntities;
 using InfoHelper.ViewModel.DataEntities;
+using StatUtility;
 
 namespace InfoHelper.Utils
 {
@@ -405,6 +408,27 @@ namespace InfoHelper.Utils
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class FourBetRangeCellConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            string defaultValue = "---";
+
+            if (values[0] is DataCell dataCell1 && values[1] is DataCell dataCell2)
+            {
+                if (dataCell1.Sample > 0 && dataCell2.Sample > 0)
+                    defaultValue = $"{Math.Round(dataCell1.CalculatedValue * dataCell2.CalculatedValue / 100, 1).ToString(CultureInfo.InvariantCulture)}% range";
+            }
+
+            return defaultValue;
+        }
+
+        public object[] ConvertBack(object values, Type[] targetTypes, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
         }

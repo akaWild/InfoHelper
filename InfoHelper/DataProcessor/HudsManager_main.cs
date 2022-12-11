@@ -6,10 +6,13 @@ using System.Linq;
 using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using GameInformationUtility;
+using HandUtility;
 using HoldemHand;
 using InfoHelper.StatsEntities;
+using InfoHelper.Utils;
 using InfoHelper.ViewModel.DataEntities;
 using InfoHelper.ViewModel.States;
+using StatUtility;
 
 namespace InfoHelper.DataProcessor
 {
@@ -132,11 +135,13 @@ namespace InfoHelper.DataProcessor
 
                     #region Retrieve Set variables
 
+                    bool[] initialPlayers = gc.Stacks.Select(s => s != null).ToArray();
+
                     GameType gameType = gc.SmallBlindPosition == gc.ButtonPosition ? GameType.Hu : GameType.SixMax;
 
                     Round round = gc.Round < 2 ? Round.Preflop : Round.Postflop;
 
-                    Position position = GetPlayerPosition(gc, i + 1);
+                    Position position = Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, i + 1, initialPlayers);
 
                     Position oppPosition = Position.Any;
 
@@ -181,7 +186,7 @@ namespace InfoHelper.DataProcessor
 
                             if (otherPlayersActed == OtherPlayersActed.No)
                             {
-                                oppPosition = GetPlayerPosition(gc, oppIndexPosition + 1);
+                                oppPosition = Common.GetPlayerPosition(new int[] {gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition}, oppIndexPosition + 1, initialPlayers);
 
                                 if (gameType == GameType.Hu)
                                     relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
@@ -265,11 +270,25 @@ namespace InfoHelper.DataProcessor
 
                     #endregion
 
+                    StatSetManager statSetManager = new StatSetManager()
+                    {
+                        StatSets = statSets[i],
+                        GameType = gameType,
+                        Round = round,
+                        Position = position,
+                        RelativePosition = relativePosition,
+                        OppPosition = oppPosition,
+                        PlayersOnFlop = playersOnFlop,
+                        PreflopPotType = preflopPotType,
+                        PreflopActions = preflActions,
+                        OtherPlayersActed = otherPlayersActed
+                    };
+
                     ViewModelStatsHud preflopHud = null;
                     ViewModelStatsHud postflopHud = null;
 
                     //General hud
-                    StatSet generalSet = GetStatSet(SetType.General);
+                    StatSet generalSet = statSetManager.GetStatSet(SetType.General);
 
                     if (generalSet == null)
                         _vmMain.HudsParentStates[i].GeneralHudState.Visible = false;
@@ -289,7 +308,7 @@ namespace InfoHelper.DataProcessor
                     bool showHud = gc.Error == string.Empty && (lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold);
 
                     //Btn preflop hud
-                    StatSet btnPreflopSet = GetStatSet(SetType.PreflopBtn);
+                    StatSet btnPreflopSet = statSetManager.GetStatSet(SetType.PreflopBtn);
 
                     if (btnPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].BtnPreflopHudState.Visible = false;
@@ -309,7 +328,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Sb preflop hud
-                    StatSet sbPreflopSet = GetStatSet(SetType.PreflopSb);
+                    StatSet sbPreflopSet = statSetManager.GetStatSet(SetType.PreflopSb);
 
                     if (sbPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].SbPreflopHudState.Visible = false;
@@ -329,7 +348,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Bb preflop hud
-                    StatSet bbPreflopSet = GetStatSet(SetType.PreflopBb);
+                    StatSet bbPreflopSet = statSetManager.GetStatSet(SetType.PreflopBb);
 
                     if (bbPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].BbPreflopHudState.Visible = false;
@@ -349,7 +368,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Ep preflop hud
-                    StatSet epPreflopSet = GetStatSet(SetType.PreflopEp);
+                    StatSet epPreflopSet = statSetManager.GetStatSet(SetType.PreflopEp);
 
                     if (epPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].EpPreflopHudState.Visible = false;
@@ -369,7 +388,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Mp preflop hud
-                    StatSet mpPreflopSet = GetStatSet(SetType.PreflopMp);
+                    StatSet mpPreflopSet = statSetManager.GetStatSet(SetType.PreflopMp);
 
                     if (mpPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].MpPreflopHudState.Visible = false;
@@ -389,7 +408,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Co preflop hud
-                    StatSet coPreflopSet = GetStatSet(SetType.PreflopCo);
+                    StatSet coPreflopSet = statSetManager.GetStatSet(SetType.PreflopCo);
 
                     if (coPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].CoPreflopHudState.Visible = false;
@@ -409,7 +428,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Sb vs Bb preflop hud
-                    StatSet sbvsbbPreflopSet = GetStatSet(SetType.PreflopSbvsBb);
+                    StatSet sbvsbbPreflopSet = statSetManager.GetStatSet(SetType.PreflopSbvsBb);
 
                     if (sbvsbbPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].SbvsBbPreflopHudState.Visible = false;
@@ -429,7 +448,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Bb vs Sb preflop hud
-                    StatSet bbvssbPreflopSet = GetStatSet(SetType.PreflopBbvsSb);
+                    StatSet bbvssbPreflopSet = statSetManager.GetStatSet(SetType.PreflopBbvsSb);
 
                     if (bbvssbPreflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].BbvsSbPreflopHudState.Visible = false;
@@ -449,7 +468,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Postflop Hu Ip as raiser hud
-                    StatSet huIpRaiserPostflopSet = GetStatSet(SetType.PostflopHuIpRaiser);
+                    StatSet huIpRaiserPostflopSet = statSetManager.GetStatSet(SetType.PostflopHuIpRaiser);
 
                     if (huIpRaiserPostflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].PostflopHuIpRaiserHudState.Visible = false;
@@ -469,7 +488,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Postflop Hu Ip as caller hud
-                    StatSet huIpCallerPostflopSet = GetStatSet(SetType.PostflopHuIpCaller);
+                    StatSet huIpCallerPostflopSet = statSetManager.GetStatSet(SetType.PostflopHuIpCaller);
 
                     if (postflopHud != null || huIpCallerPostflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].PostflopHuIpCallerHudState.Visible = false;
@@ -489,7 +508,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Postflop Hu Oop as raiser hud
-                    StatSet huOopRaiserPostflopSet = GetStatSet(SetType.PostflopHuOopRaiser);
+                    StatSet huOopRaiserPostflopSet = statSetManager.GetStatSet(SetType.PostflopHuOopRaiser);
 
                     if (postflopHud != null || huOopRaiserPostflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].PostflopHuOopRaiserHudState.Visible = false;
@@ -509,7 +528,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Postflop Hu Oop as caller hud
-                    StatSet huOopCallerPostflopSet = GetStatSet(SetType.PostflopHuOopCaller);
+                    StatSet huOopCallerPostflopSet = statSetManager.GetStatSet(SetType.PostflopHuOopCaller);
 
                     if (postflopHud != null || huOopCallerPostflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].PostflopHuOopCallerHudState.Visible = false;
@@ -529,7 +548,7 @@ namespace InfoHelper.DataProcessor
                     }
 
                     //Postflop general hud
-                    StatSet generalPostflopSet = GetStatSet(SetType.PostflopGeneral);
+                    StatSet generalPostflopSet = statSetManager.GetStatSet(SetType.PostflopGeneral);
 
                     if (postflopHud != null || generalPostflopSet == null || !showHud)
                         _vmMain.HudsParentStates[i].PostflopGeneralHudState.Visible = false;
@@ -622,96 +641,6 @@ namespace InfoHelper.DataProcessor
                     }
 
                     ViewModelStatsHud.SelectedCell = selectedCell?.Name;
-
-                    StatSet GetStatSet(SetType setType)
-                    {
-                        if (statSets[i] == null)
-                            return null;
-
-                        List<StatSet> matchedSets = new List<StatSet>();
-
-                        foreach (StatSet set in statSets[i])
-                        {
-                            if ((set.GameType & gameType) == 0)
-                                continue;
-
-                            if ((set.Round & round) == 0)
-                                continue;
-
-                            if ((set.Position & position) == 0)
-                                continue;
-
-                            if ((set.RelativePosition & relativePosition) == 0)
-                                continue;
-
-                            if ((set.OppPosition & oppPosition) == 0)
-                                continue;
-
-                            if ((set.PlayersOnFlop & playersOnFlop) == 0)
-                                continue;
-
-                            if ((set.PreflopPotType & preflopPotType) == 0)
-                                continue;
-
-                            if ((set.PreflopActions & preflActions) == 0)
-                                continue;
-
-                            if ((set.OtherPlayersActed & otherPlayersActed) == 0)
-                                continue;
-
-                            if ((set.SetType & setType) == 0)
-                                continue;
-
-                            matchedSets.Add(set);
-                        }
-
-                        if (matchedSets.Count == 1)
-                            return matchedSets[0];
-
-                        if (matchedSets.Count > 1)
-                        {
-                            StatSet firstSet = matchedSets[0];
-
-                            for (int j = 1; j < matchedSets.Count; j++)
-                            {
-                                StatSet set = matchedSets[j];
-
-                                if (firstSet.GameType != set.GameType)
-                                    return firstSet.GameType < set.GameType ? firstSet : set;
-
-                                if (firstSet.Round != set.Round)
-                                    return firstSet.Round < set.Round ? firstSet : set;
-
-                                if (firstSet.Position != set.Position)
-                                    return firstSet.Position < set.Position ? firstSet : set;
-
-                                if (firstSet.RelativePosition != set.RelativePosition)
-                                    return firstSet.RelativePosition < set.RelativePosition ? firstSet : set;
-
-                                if (firstSet.OppPosition != set.OppPosition)
-                                    return firstSet.OppPosition < set.OppPosition ? firstSet : set;
-
-                                if (firstSet.PlayersOnFlop != set.PlayersOnFlop)
-                                    return firstSet.PlayersOnFlop < set.PlayersOnFlop ? firstSet : set;
-
-                                if (firstSet.PreflopPotType != set.PreflopPotType)
-                                    return firstSet.PreflopPotType < set.PreflopPotType ? firstSet : set;
-
-                                if (firstSet.PreflopActions != set.PreflopActions)
-                                    return firstSet.PreflopActions < set.PreflopActions ? firstSet : set;
-
-                                if (firstSet.OtherPlayersActed != set.OtherPlayersActed)
-                                    return firstSet.OtherPlayersActed < set.OtherPlayersActed ? firstSet : set;
-
-                                if (firstSet.SetType != set.SetType)
-                                    return firstSet.SetType < set.SetType ? firstSet : set;
-
-                                throw new Exception($"Stat set for player {i + 1} contain identical records");
-                            }
-                        }
-
-                        return null;
-                    }
                 }
 
                 _vmMain.HudsParentStates[i].NameState.UpdateBindings();
@@ -831,49 +760,6 @@ namespace InfoHelper.DataProcessor
             _vmMain.WindowsInfoState.WinInfos = null;
 
             _vmMain.WindowsInfoState.UpdateBindings();
-        }
-
-        private Position GetPlayerPosition(GameContext gc, int player)
-        {
-            if (player == gc.SmallBlindPosition)
-                return Position.Sb;
-
-            if (player == gc.BigBlindPosition)
-                return Position.Bb;
-
-            if (player == gc.ButtonPosition)
-                return Position.Btn;
-
-            int nextToAct = gc.BigBlindPosition + 1;
-
-            if (nextToAct == 7)
-                nextToAct = 1;
-
-            int positionShift = 1;
-
-            while (true)
-            {
-                if (player == nextToAct)
-                    break;
-
-                positionShift++;
-
-                nextToAct++;
-
-                if (nextToAct == 7)
-                    nextToAct = 1;
-            }
-
-            if (positionShift == 1)
-                return Position.Ep;
-
-            if (positionShift == 2)
-                return Position.Mp;
-
-            if (positionShift == 3)
-                return Position.Co;
-
-            throw new Exception($"Player {player} position was not found");
         }
 
         private partial DataCell ProcessSelectedHuds(GameContext gc, ViewModelStatsHud preflopHud, ViewModelStatsHud postflopHud);

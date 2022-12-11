@@ -42,9 +42,6 @@
     <Reference Include="BitmapDecorator">
       <HintPath>..\..\..\BitmapDecorator\BitmapDecorator\bin\Release\net5.0\BitmapDecorator.dll</HintPath>
     </Reference>
-    <Reference Include="FlopEquityUtility">
-      <HintPath>..\..\..\FlopEquityUtility\FlopEquityUtility\bin\Release\net5.0\FlopEquityUtility.dll</HintPath>
-    </Reference>
     <Reference Include="GameInformationUtility">
       <HintPath>..\..\..\GameInformationUtility\GameInformationUtility\bin\Release\net5.0\GameInformationUtility.dll</HintPath>
     </Reference>
@@ -56,6 +53,9 @@
     </Reference>
     <Reference Include="HandEvaluator">
       <HintPath>..\..\..\..\Projects_new\Hand_Evaluator\Hand Evaluator\HandEvaluator\bin\Release\HandEvaluator.dll</HintPath>
+    </Reference>
+    <Reference Include="HandUtility">
+      <HintPath>..\..\..\HandUtility\HandUtility\bin\Release\net5.0\HandUtility.dll</HintPath>
     </Reference>
     <Reference Include="HashManager">
       <HintPath>..\..\..\HashManager\HashManager\bin\Release\net5.0\HashManager.dll</HintPath>
@@ -83,6 +83,9 @@
     </Reference>
     <Reference Include="StatDbUtility">
       <HintPath>..\..\..\StatDbUtility\StatDbUtility\bin\Release\net5.0\StatDbUtility.dll</HintPath>
+    </Reference>
+    <Reference Include="StatUtility">
+      <HintPath>..\..\..\StatUtility\StatUtility\bin\Release\net5.0\StatUtility.dll</HintPath>
     </Reference>
   </ItemGroup>
 

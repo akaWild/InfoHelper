@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HashUtils;
 using InfoHelper.StatsEntities;
+using StatUtility;
 
 namespace InfoHelper.ViewModel.States
 {

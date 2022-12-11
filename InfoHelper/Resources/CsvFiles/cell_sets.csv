@@ -80,10 +80,6 @@ PreflopBtn;StatCell;PreflopData;;;Btn_3bet_Raiser_Vs_Bb_Raise;BTN raise (3 bet p
 PreflopBtn;StatCell;PreflopData;;;Btn_3bet_Raiser_Vs_Multi_Fold;BTN fold (3 bet pot as raiser multiway);Btn_3bet_Raiser_Vs_Multi_Call;Btn_3bet_Raiser_Vs_Multi_Raise
 PreflopBtn;StatCell;PreflopData;;;Btn_3bet_Raiser_Vs_Multi_Call;BTN call (3 bet pot as raiser multiway);Btn_3bet_Raiser_Vs_Multi_Fold;Btn_3bet_Raiser_Vs_Multi_Raise
 PreflopBtn;StatCell;PreflopData;;;Btn_3bet_Raiser_Vs_Multi_Raise;BTN raise (3 bet pot as raiser multiway);Btn_3bet_Raiser_Vs_Multi_Call;
-PreflopBtn;StatCell;;;;Btn_4bet_Range;BTN 4 bet range;;
-PreflopBtn;StatCell;;;;Btn_4bet_Range_Vs_Sb;BTN 4 bet range vs SB;;
-PreflopBtn;StatCell;;;;Btn_4bet_Range_Vs_Bb;BTN 4 bet range vs BB;;
-PreflopBtn;StatCell;;;;Btn_4bet_Range_Vs_Multi;BTN 4 bet range multiway;;
 PreflopBtn;StatCell;PreflopData;;;Btn_4bet_Fold;BTN fold (4 bet pot);Btn_4bet_Call;Btn_4bet_Raise
 PreflopBtn;StatCell;PreflopData;;;Btn_4bet_Call;BTN call (4 bet pot);Btn_4bet_Fold;Btn_4bet_Raise
 PreflopBtn;StatCell;PreflopData;;;Btn_4bet_Raise;BTN raise (4 bet pot);Btn_4bet_Call;
@@ -156,7 +152,6 @@ PreflopSb;StatCell;PreflopData;;;Sb_3bet_CC_Raise;SB raise (3 bet pot as cold ca
 PreflopSb;StatCell;PreflopData;;;Sb_3bet_Raiser_Vs_Bb_Fold;SB fold (3 bet pot as raiser vs BB);Sb_3bet_Raiser_Vs_Bb_Call;Sb_3bet_Raiser_Vs_Bb_Raise
 PreflopSb;StatCell;PreflopData;;;Sb_3bet_Raiser_Vs_Bb_Call;SB call (3 bet pot as raiser vs BB);Sb_3bet_Raiser_Vs_Bb_Fold;Sb_3bet_Raiser_Vs_Bb_Raise
 PreflopSb;StatCell;PreflopData;;;Sb_3bet_Raiser_Vs_Bb_Raise;SB raise (3 bet pot as raiser vs BB);Sb_3bet_Raiser_Vs_Bb_Call;
-PreflopSb;StatCell;;;;Sb_4bet_Range_Vs_Bb;SB 4 bet range vs BB;;
 PreflopSb;StatCell;PreflopData;;;Sb_4bet_Fold;SB fold (4 bet pot);Sb_4bet_Call;Sb_4bet_Raise
 PreflopSb;StatCell;PreflopData;;;Sb_4bet_Call;SB call (4 bet pot);Sb_4bet_Fold;Sb_4bet_Raise
 PreflopSb;StatCell;PreflopData;;;Sb_4bet_Raise;SB raise (4 bet pot);Sb_4bet_Call;
@@ -216,7 +211,6 @@ PreflopSb;StatCell;PreflopData;;;Bb_RaiseIsolate_Caller_Raise;BB raise (raise is
 PreflopBb;StatCell;PreflopData;;;Bb_RaiseIsolate_Vs_Sb_Fold;BB fold (raise isolate pot vs SB);Bb_RaiseIsolate_Vs_Sb_Call;Bb_RaiseIsolate_Vs_Sb_Raise
 PreflopBb;StatCell;PreflopData;;;Bb_RaiseIsolate_Vs_Sb_Call;BB call (raise isolate pot vs SB);Bb_RaiseIsolate_Vs_Sb_Fold;Bb_RaiseIsolate_Vs_Sb_Raise
 PreflopBb;StatCell;PreflopData;;;Bb_RaiseIsolate_Vs_Sb_Raise;BB raise (raise isolate pot vs SB);Bb_RaiseIsolate_Vs_Sb_Call;
-PreflopBb;StatCell;;;;Bb_4bet_Range_Vs_Sb;BB 4 bet range vs SB;;
 PreflopBb;StatCell;PreflopData;;;Bb_3bet_CC_Fold;BB fold (3 bet pot as cold caller);Bb_3bet_CC_Call;Bb_3bet_CC_Raise
 PreflopBb;StatCell;PreflopData;;;Bb_3bet_CC_Call;BB call (3 bet pot as cold caller);Bb_3bet_CC_Fold;Bb_3bet_CC_Raise
 PreflopBb;StatCell;PreflopData;;;Bb_3bet_CC_Raise;BB raise (3 bet pot as cold caller);Bb_3bet_CC_Call;
@@ -259,25 +253,18 @@ PreflopEp;StatCell;PreflopData;;;Ep_3bet_Raiser_Vs_Bb_Raise;EP raise (3 bet pot 
 PreflopEp;StatCell;PreflopData;;;Ep_3bet_Raiser_Vs_Multi_Fold;EP fold (3 bet pot as raiser multiway);Ep_3bet_Raiser_Vs_Multi_Call;Ep_3bet_Raiser_Vs_Multi_Raise
 PreflopEp;StatCell;PreflopData;;;Ep_3bet_Raiser_Vs_Multi_Call;EP call (3 bet pot as raiser multiway);Ep_3bet_Raiser_Vs_Multi_Fold;Ep_3bet_Raiser_Vs_Multi_Raise
 PreflopEp;StatCell;PreflopData;;;Ep_3bet_Raiser_Vs_Multi_Raise;EP raise (3 bet pot as raiser multiway);Ep_3bet_Raiser_Vs_Multi_Call;
-PreflopEp;StatCell;;;;Ep_4bet_Range;EP 4 bet range;;
-PreflopEp;StatCell;;;;Ep_4bet_Range_Vs_Mp;EP 4 bet range vs MP;;
-PreflopEp;StatCell;;;;Ep_4bet_Range_Vs_Co;EP 4 bet range vs CO;;
-PreflopEp;StatCell;;;;Ep_4bet_Range_Vs_Btn;EP 4 bet range vs BTN;;
-PreflopEp;StatCell;;;;Ep_4bet_Range_Vs_Sb;EP 4 bet range vs SB;;
-PreflopEp;StatCell;;;;Ep_4bet_Range_Vs_Bb;EP 4 bet range vs BB;;
-PreflopEp;StatCell;;;;Ep_4bet_Range_Vs_Multi;EP 4 bet range multiway;;
 PreflopEp;StatCell;PreflopData;;;Ep_4bet_Fold;EP fold (4 bet pot);Ep_4bet_Call;Ep_4bet_Raise
 PreflopEp;StatCell;PreflopData;;;Ep_4bet_Call;EP call (4 bet pot);Ep_4bet_Fold;Ep_4bet_Raise
 PreflopEp;StatCell;PreflopData;;;Ep_4bet_Raise;EP raise (4 bet pot);Ep_4bet_Call;
 PreflopMp;StatCell;PreflopData;;;Mp_Unopened_Fold;MP fold (unopened pot);Mp_Unopened_Call;Mp_Unopened_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_Unopened_Call;MP call (unopened pot);Mp_Unopened_Fold;Mp_Unopened_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_Unopened_Raise;MP raise (unopened pot);Mp_Unopened_Call;
-PreflopMp;StatCell;PreflopData;;;Mp_Limp_Fold;MP fold (limp pot);Mp_Limp_Call;Mp_Limp_Raise
-PreflopMp;StatCell;PreflopData;;;Mp_Limp_Call;MP call (limp pot);Mp_Limp_Fold;Mp_Limp_Raise
-PreflopMp;StatCell;PreflopData;;;Mp_Limp_Raise;MP raise (limp pot);Mp_Limp_Call;
-PreflopMp;StatCell;PreflopData;;;Mp_Raise_Fold;MP fold (raise pot);Mp_Raise_Call;Mp_Raise_Raise
-PreflopMp;StatCell;PreflopData;;;Mp_Raise_Call;MP call (raise pot);Mp_Raise_Fold;Mp_Raise_Raise
-PreflopMp;StatCell;PreflopData;;;Mp_Raise_Raise;MP raise (raise pot);Mp_Raise_Call;
+PreflopMp;StatCell;PreflopData;;;Mp_Limp_Vs_Ep_Fold;MP fold (limp pot);Mp_Limp_Vs_Ep_Call;Mp_Limp_Vs_Ep_Raise
+PreflopMp;StatCell;PreflopData;;;Mp_Limp_Vs_Ep_Call;MP call (limp pot);Mp_Limp_Vs_Ep_Fold;Mp_Limp_Vs_Ep_Raise
+PreflopMp;StatCell;PreflopData;;;Mp_Limp_Vs_Ep_Raise;MP raise (limp pot);Mp_Limp_Vs_Ep_Call;
+PreflopMp;StatCell;PreflopData;;;Mp_Raise_Vs_Ep_Fold;MP fold (raise pot);Mp_Raise_Vs_Ep_Call;Mp_Raise_Vs_Ep_Raise
+PreflopMp;StatCell;PreflopData;;;Mp_Raise_Vs_Ep_Call;MP call (raise pot);Mp_Raise_Vs_Ep_Fold;Mp_Raise_Vs_Ep_Raise
+PreflopMp;StatCell;PreflopData;;;Mp_Raise_Vs_Ep_Raise;MP raise (raise pot);Mp_Raise_Vs_Ep_Call;
 PreflopMp;StatCell;PreflopData;;;Mp_Isolate_Limper_Fold;MP fold (isolate pot as limper);Mp_Isolate_Limper_Call;Mp_Isolate_Limper_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_Isolate_Limper_Call;MP call (isolate pot as limper);Mp_Isolate_Limper_Fold;Mp_Isolate_Limper_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_Isolate_Limper_Raise;MP raise (isolate pot as limper);Mp_Isolate_Limper_Call;
@@ -311,12 +298,6 @@ PreflopMp;StatCell;PreflopData;;;Mp_3bet_Raiser_Vs_Bb_Raise;MP raise (3 bet pot 
 PreflopMp;StatCell;PreflopData;;;Mp_3bet_Raiser_Vs_Multi_Fold;MP fold (3 bet pot as raiser multiway);Mp_3bet_Raiser_Vs_Multi_Call;Mp_3bet_Raiser_Vs_Multi_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_3bet_Raiser_Vs_Multi_Call;MP call (3 bet pot as raiser multiway);Mp_3bet_Raiser_Vs_Multi_Fold;Mp_3bet_Raiser_Vs_Multi_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_3bet_Raiser_Vs_Multi_Raise;MP raise (3 bet pot as raiser multiway);Mp_3bet_Raiser_Vs_Multi_Call;
-PreflopMp;StatCell;;;;Mp_4bet_Range;MP 4 bet range;;
-PreflopMp;StatCell;;;;Mp_4bet_Range_Vs_Co;MP 4 bet range vs CO;;
-PreflopMp;StatCell;;;;Mp_4bet_Range_Vs_Btn;MP 4 bet range vs BTN;;
-PreflopMp;StatCell;;;;Mp_4bet_Range_Vs_Sb;MP 4 bet range vs SB;;
-PreflopMp;StatCell;;;;Mp_4bet_Range_Vs_Bb;MP 4 bet range vs BB;;
-PreflopMp;StatCell;;;;Mp_4bet_Range_Vs_Multi;MP 4 bet range multiway;;
 PreflopMp;StatCell;PreflopData;;;Mp_4bet_Fold;MP fold (4 bet pot);Mp_4bet_Call;Mp_4bet_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_4bet_Call;MP call (4 bet pot);Mp_4bet_Fold;Mp_4bet_Raise
 PreflopMp;StatCell;PreflopData;;;Mp_4bet_Raise;MP raise (4 bet pot);Mp_4bet_Call;
@@ -383,11 +364,6 @@ PreflopCo;StatCell;PreflopData;;;Co_3bet_Raiser_Vs_Bb_Raise;CO raise (3 bet pot 
 PreflopCo;StatCell;PreflopData;;;Co_3bet_Raiser_Vs_Multi_Fold;CO fold (3 bet pot as raiser multiway);Co_3bet_Raiser_Vs_Multi_Call;Co_3bet_Raiser_Vs_Multi_Raise
 PreflopCo;StatCell;PreflopData;;;Co_3bet_Raiser_Vs_Multi_Call;CO call (3 bet pot as raiser multiway);Co_3bet_Raiser_Vs_Multi_Fold;Co_3bet_Raiser_Vs_Multi_Raise
 PreflopCo;StatCell;PreflopData;;;Co_3bet_Raiser_Vs_Multi_Raise;CO raise (3 bet pot as raiser multiway);Co_3bet_Raiser_Vs_Multi_Call;
-PreflopCo;StatCell;;;;Co_4bet_Range;CO 4 bet range;;
-PreflopCo;StatCell;;;;Co_4bet_Range_Vs_Btn;CO 4 bet range vs BTN;;
-PreflopCo;StatCell;;;;Co_4bet_Range_Vs_Sb;CO 4 bet range vs SB;;
-PreflopCo;StatCell;;;;Co_4bet_Range_Vs_Bb;CO 4 bet range vs BB;;
-PreflopCo;StatCell;;;;Co_4bet_Range_Vs_Multi;CO 4 bet range multiway;;
 PreflopCo;StatCell;PreflopData;;;Co_4bet_Fold;CO fold (4 bet pot);Co_4bet_Call;Co_4bet_Raise
 PreflopCo;StatCell;PreflopData;;;Co_4bet_Call;CO call (4 bet pot);Co_4bet_Fold;Co_4bet_Raise
 PreflopCo;StatCell;PreflopData;;;Co_4bet_Raise;CO raise (4 bet pot);Co_4bet_Call;
@@ -400,7 +376,6 @@ PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_Isolate_Raise;SB vs BB HU  raise (is
 PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_3bet_Fold;SB vs BB HU  fold (3 bet pot);SbvsBb_3bet_Call;SbvsBb_3bet_Raise
 PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_3bet_Call;SB vs BB HU  call (3 bet pot);SbvsBb_3bet_Fold;SbvsBb_3bet_Raise
 PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_3bet_Raise;SB vs BB HU  raise (3 bet pot);SbvsBb_3bet_Call;
-PreflopSbvsBb;StatCell;;;;SbvsBb_4bet_Range;SB vs BB HU 4 bet range;;
 PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_4bet_Fold;SB vs BB HU  fold (4 bet pot);SbvsBb_4bet_Call;SbvsBb_4bet_Raise
 PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_4bet_Call;SB vs BB HU  call (4 bet pot);SbvsBb_4bet_Fold;SbvsBb_4bet_Raise
 PreflopSbvsBb;StatCell;PreflopData;;;SbvsBb_4bet_Raise;SB vs BB HU  raise (4 bet pot);SbvsBb_4bet_Call;
@@ -415,7 +390,6 @@ PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_Raise_Raise;BB vs SB HU  raise (rais
 PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_RaiseIsolate_Fold;BB vs SB HU  fold (raise isolate pot);BbvsSb_RaiseIsolate_Call;BbvsSb_RaiseIsolate_Raise
 PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_RaiseIsolate_Call;BB vs SB HU  call (raise isolate pot);BbvsSb_RaiseIsolate_Fold;BbvsSb_RaiseIsolate_Raise
 PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_RaiseIsolate_Raise;BB vs SB HU  raise (raise isolate pot);BbvsSb_RaiseIsolate_Call;
-PreflopBbvsSb;StatCell;;;;BbvsSb_4bet_Range;BB vs SB HU 4 bet range;;
 PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_4bet_Fold;BB vs SB HU  fold (4 bet pot);BbvsSb_4bet_Call;BbvsSb_4bet_Raise
 PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_4bet_Call;BB vs SB HU  call (4 bet pot);BbvsSb_4bet_Fold;BbvsSb_4bet_Raise
 PreflopBbvsSb;StatCell;PreflopData;;;BbvsSb_4bet_Raise;BB vs SB HU  raise (4 bet pot);BbvsSb_4bet_Call;

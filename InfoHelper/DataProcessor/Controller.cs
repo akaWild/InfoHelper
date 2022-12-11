@@ -7,13 +7,16 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.Json;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using BitmapHelper;
 using GameInformationUtility;
+using HandUtility;
 using HoldemHand;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
@@ -22,6 +25,7 @@ using InfoHelper.ViewModel.States;
 using InfoHelper.Windows;
 using PokerWindowsUtility;
 using ScreenParserUtility;
+using StatUtility;
 using Application = System.Windows.Application;
 
 namespace InfoHelper.DataProcessor
@@ -67,6 +71,8 @@ namespace InfoHelper.DataProcessor
         private readonly PlayersWindow _playersWindow;
 
         private readonly object _winContextLock = new object();
+
+        private readonly Dictionary<string, object> _hashImagesDictionary = new Dictionary<string, object>();
 
         public Controller(ViewModelMain vmMain, ViewModelPlayers vmPlayers)
         {
@@ -119,9 +125,16 @@ namespace InfoHelper.DataProcessor
 
                 _statManager = new StatManager();
 
-                _gtoPreflopManager = new PreflopGtoManager();
+                _statManager.StatExceptionThrown += exception =>
+                {
+                    HandleException(exception, ErrorType.Ordinary);
 
-                HandManager.LoadFlopEquityData();
+                    Stop();
+
+                    Task.Factory.StartNew(SavePictures);
+                };
+
+                _gtoPreflopManager = new PreflopGtoManager();
 
                 Assembly assemblyWindowsManager = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\PokerWindowsManager.dll"));
 
@@ -287,10 +300,25 @@ namespace InfoHelper.DataProcessor
                         {
                             ScreenParserData screenData = screenParser.ParseWindow();
 
-                            bool analyzeResult = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
+                            _ = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
                                 winContextInfo.GameContext });
 
                             PokerRoomManager.ProcessData(window, screenData, bmpDecor);
+
+                            for (int j = 0; j < screenData.Nicks.Length; j++)
+                            {
+                                string nickHash = screenData.Nicks[j];
+
+                                if(nickHash == null)
+                                    continue;
+
+                                if (!_hashImagesDictionary.ContainsKey(nickHash))
+                                {
+                                    screenData.NickImages[j].Save(Path.Combine(Shared.PlayersImagesFolder, $"{nickHash}.png"));
+
+                                    _hashImagesDictionary.Add(nickHash, null);
+                                }
+                            }
 
                             if (winContextInfo.GameContext.Error == string.Empty)
                             {
@@ -402,6 +430,18 @@ namespace InfoHelper.DataProcessor
 
                 _mainWindowState.ControlsState.ResetError();
 
+                _hashImagesDictionary.Clear();
+
+                string[] hashImagesFiles = Directory.GetFiles(Shared.PlayersImagesFolder, "*.png");
+
+                foreach (string hashImageFile in hashImagesFiles)
+                {
+                    Match hashImageFileMatch = Regex.Match(Path.GetFileNameWithoutExtension(hashImageFile), "^(?<hash>[a-f0-9]{64})$");
+
+                    if(hashImageFileMatch.Success)
+                        _hashImagesDictionary.Add(hashImageFileMatch.Groups["hash"].Value, null);
+                }
+
                 if (_bitmapContainer == null)
                     _bitmapContainer = new BitmapsContainer(Shared.BitmapsBuffer);
                 else
@@ -438,6 +478,9 @@ namespace InfoHelper.DataProcessor
 
         private void Stop()
         {
+            if (!_timer.IsEnabled)
+                return;
+
             _timer.Stop();
 
             try

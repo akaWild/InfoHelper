@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InfoHelper.StatsEntities;
 using InfoHelper.Utils;
+using StatUtility;
 
 namespace InfoHelper.Controls
 {

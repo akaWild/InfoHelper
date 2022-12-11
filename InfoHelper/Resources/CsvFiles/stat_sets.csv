@@ -78,6 +78,8 @@ SixMax;Postflop;Sb;Oop;Co;Hu;ThreeBetPot;Raise;No;PostflopHuOopRaiser
 SixMax;Postflop;Sb;Oop;Btn;Hu;ThreeBetPot;Raise;No;PostflopHuOopRaiser
 SixMax;Postflop;Sb;Oop;Bb;Hu;ThreeBetPot;Raise;No;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Multiway;ThreeBetPot;Raise;Yes;PostflopGeneral
+SixMax;Postflop;Sb;Any;Any;Hu;SqueezePot;Raise;Any;PostflopGeneral
+SixMax;Postflop;Sb;Any;Any;Multiway;SqueezePot;Raise;Yes;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Hu;IsolatePot;Call;Any;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Multiway;IsolatePot;Call;Yes;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Hu;RaiseIsolatePot;Raise;Any;PostflopGeneral
@@ -104,8 +106,6 @@ SixMax;Postflop;Sb;Any;Any;Hu;RaiseIsolatePot;CallCall;Any;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Multiway;RaiseIsolatePot;CallCall;Yes;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Hu;FourBetPot;RaiseRaise;Any;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Multiway;FourBetPot;RaiseRaise;Yes;PostflopGeneral
-SixMax;Postflop;Sb;Any;Any;Hu;RaiseIsolatePot;CallCall;Any;PostflopGeneral
-SixMax;Postflop;Sb;Any;Any;Multiway;RaiseIsolatePot;CallCall;Yes;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Hu;ThreeBetPot;Call;Any;PostflopGeneral
 SixMax;Postflop;Sb;Any;Any;Multiway;ThreeBetPot;Call;Yes;PostflopGeneral
 SixMax;Postflop;Sb;Oop;Bb;Hu;ThreeBetPot;RaiseCall;No;PostflopHuOopCaller
@@ -135,6 +135,8 @@ SixMax;Postflop;Bb;Oop;Co;Hu;ThreeBetPot;Raise;No;PostflopHuOopRaiser
 SixMax;Postflop;Bb;Oop;Btn;Hu;ThreeBetPot;Raise;No;PostflopHuOopRaiser
 SixMax;Postflop;Bb;Ip;Sb;Hu;ThreeBetPot;Raise;No;PostflopHuIpRaiser
 SixMax;Postflop;Bb;Any;Any;Multiway;ThreeBetPot;Raise;Yes;PostflopGeneral
+SixMax;Postflop;Bb;Any;Any;Hu;SqueezePot;Raise;Any;PostflopGeneral
+SixMax;Postflop;Bb;Any;Any;Multiway;SqueezePot;Raise;Yes;PostflopGeneral
 SixMax;Postflop;Bb;Any;Any;Hu;IsolatePot;Call;Any;PostflopGeneral
 SixMax;Postflop;Bb;Any;Any;Multiway;IsolatePot;Call;Yes;PostflopGeneral
 SixMax;Postflop;Bb;Any;Any;Hu;RaiseIsolatePot;Raise;Any;PostflopGeneral
@@ -243,6 +245,8 @@ SixMax;Postflop;Co;Ip;Ep;Hu;ThreeBetPot;Raise;No;PostflopHuIpRaiser
 SixMax;Postflop;Co;Ip;Mp;Hu;ThreeBetPot;Raise;No;PostflopHuIpRaiser
 SixMax;Postflop;Co;Any;Any;Hu;ThreeBetPot;Raise;Any;PostflopGeneral
 SixMax;Postflop;Co;Any;Any;Multiway;ThreeBetPot;Raise;Yes;PostflopGeneral
+SixMax;Postflop;Co;Any;Any;Hu;SqueezePot;Raise;Any;PostflopGeneral
+SixMax;Postflop;Co;Any;Any;Multiway;SqueezePot;Raise;Yes;PostflopGeneral
 SixMax;Postflop;Co;Any;Any;Hu;IsolatePot;Call;Any;PostflopGeneral
 SixMax;Postflop;Co;Any;Any;Multiway;IsolatePot;Call;Yes;PostflopGeneral
 SixMax;Postflop;Co;Any;Any;Hu;RaiseIsolatePot;Raise;Any;PostflopGeneral

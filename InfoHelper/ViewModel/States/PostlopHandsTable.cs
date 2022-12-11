@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using HashUtils;
 using InfoHelper.StatsEntities;
+using StatUtility;
 
 namespace InfoHelper.ViewModel.States
 {

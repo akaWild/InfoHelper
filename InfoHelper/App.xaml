@@ -12,6 +12,7 @@
             </ResourceDictionary.MergedDictionaries>
             <utils:BoolToGridRowHeightConverter x:Key="RowVisibilityConverter"/>
             <utils:BoolToHiddenVisibilityConverter x:Key="BoolToHiddenVisibilityConverter"/>
+            <utils:FourBetRangeCellConverter x:Key="FourBetRangeCellConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

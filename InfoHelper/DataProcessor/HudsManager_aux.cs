@@ -6,7 +6,9 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using GameInformationUtility;
 using InfoHelper.StatsEntities;
+using InfoHelper.Utils;
 using InfoHelper.ViewModel.States;
+using StatUtility;
 
 namespace InfoHelper.DataProcessor
 {
@@ -47,7 +49,9 @@ namespace InfoHelper.DataProcessor
                     break;
             }
 
-            Position heroPosition = GetPlayerPosition(gc, gc.HeroPosition);
+            bool[] initialPlayers = gc.Stacks.Select(s => s != null).ToArray();
+
+            Position heroPosition = Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, gc.HeroPosition, initialPlayers);
 
             BettingAction[] preflopActions = gc.Actions.Where(a => a.Round == 1 && a.ActionType != BettingActionType.PostSb && a.ActionType != BettingActionType.PostBb).ToArray();
 
@@ -58,7 +62,7 @@ namespace InfoHelper.DataProcessor
                 if (action.Player == gc.HeroPosition)
                     continue;
 
-                if (GetPlayerPosition(gc, action.Player) == playerPosition)
+                if (Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, action.Player, initialPlayers) == playerPosition)
                 {
                     player = action.Player;
 
@@ -110,7 +114,7 @@ namespace InfoHelper.DataProcessor
                                 }
                                 else
                                 {
-                                    Position limperPosition = GetPlayerPosition(gc, preflopActions.First(a => a.ActionType == BettingActionType.Call).Player);
+                                    Position limperPosition = Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, preflopActions.First(a => a.ActionType == BettingActionType.Call).Player, initialPlayers);
 
                                     preflopRows.Add($"{playerPosition}_Limp_Vs_{limperPosition}_Row");
 
@@ -141,7 +145,7 @@ namespace InfoHelper.DataProcessor
                                 }
                                 else
                                 {
-                                    Position raiserPosition = GetPlayerPosition(gc, preflopActions.First(a => a.ActionType == BettingActionType.Raise).Player);
+                                    Position raiserPosition = Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, preflopActions.First(a => a.ActionType == BettingActionType.Raise).Player, initialPlayers);
 
                                     preflopRows.Add($"{playerPosition}_Raise_Vs_{raiserPosition}_Row");
 
@@ -629,7 +633,7 @@ namespace InfoHelper.DataProcessor
                 if (action.Player == player)
                 {
                     //Multiway
-                    if (gc.PlayersSawFlop != 2)
+                    if (postflopHud.SetType == SetType.PostflopGeneral)
                     {
                         string roundAbbr = string.Empty;
 
@@ -1892,7 +1896,7 @@ namespace InfoHelper.DataProcessor
                                                     cellName = "RvDELAY_R";
                                                 }
                                                 else
-                                                    cellName = "CvDELAY_T";
+                                                    cellName = "CvDELAY_R";
                                             }
                                             else if (actionSequences[0] == "brc")
                                                 cellName = string.Empty;
@@ -2757,7 +2761,7 @@ namespace InfoHelper.DataProcessor
 
             //Update at hero turn
             //Multiway
-            if (gc.PlayersSawFlop != 2)
+            if (postflopHud.SetType == SetType.PostflopGeneral)
             {
                 int betsRaisesCount = actionSequences[gc.Round - 2].Count(a => a is 'b' or 'r');
 

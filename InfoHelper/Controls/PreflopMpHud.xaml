@@ -47,11 +47,11 @@
         <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Unopened_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Unopened_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource LimpHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Vs Limp    "></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Limp_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Limp_Raise}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Limp_Vs_Ep_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Limp_Vs_Ep_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource RaiseHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Vs Raise   "></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Raise_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Raise_Raise}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Raise_Vs_Ep_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Raise_Vs_Ep_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="4" Style="{StaticResource IsolateHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Vs Iso (lr)"></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Isolate_Limper_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="4" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_Isolate_Limper_Raise}"></local:DataCellControl>
@@ -86,17 +86,59 @@
         <local:DataCellControl Grid.Column="1" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_3bet_Raiser_Vs_Multi_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="14" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_3bet_Raiser_Vs_Multi_Raise}"></local:DataCellControl>
         <local:CellControl Grid.Column="0" Grid.Row="15" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4b range   "></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="15" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" HorizontalContentAlignment="Center" Data="{Binding Mp_4bet_Range}"></local:DataCellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="15" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_3bet_Raiser_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="16" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="      vs CO"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="16" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" HorizontalContentAlignment="Center" Data="{Binding Mp_4bet_Range_Vs_Co}"></local:DataCellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="16" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_3bet_Raiser_Vs_Co_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="17" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="     vs BTN"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="17" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" HorizontalContentAlignment="Center" Data="{Binding Mp_4bet_Range_Vs_Btn}"></local:DataCellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="17" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_3bet_Raiser_Vs_Btn_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="18" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="      vs SB"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="18" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" HorizontalContentAlignment="Center" Data="{Binding Mp_4bet_Range_Vs_Sb}"></local:DataCellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="18" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_3bet_Raiser_Vs_Bb_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="19" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="      vs BB"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="19" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" HorizontalContentAlignment="Center" Data="{Binding Mp_4bet_Range_Vs_Bb}"></local:DataCellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="19" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_3bet_Raiser_Vs_Sb_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="20" Style="{StaticResource FourBetVsHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="   multiway"></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="20" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" HorizontalContentAlignment="Center" Data="{Binding Mp_4bet_Range_Vs_Multi}"></local:DataCellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="20" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_3bet_Raiser_Vs_Multi_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
         <local:CellControl Grid.Column="0" Grid.Row="21" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Vs 4bet    "></local:CellControl>
         <local:DataCellControl Grid.Column="1" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_4bet_Fold}"></local:DataCellControl>
         <local:DataCellControl Grid.Column="2" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_4bet_Raise}"></local:DataCellControl>
