@@ -118,7 +118,7 @@ namespace InfoHelper.Controls
 
             int max = handsGroup.MadeHands.Select((v, i) => v + handsGroup.DrawHands[i] + handsGroup.ComboHands[i]).Max();
 
-            double columnWidth = RenderSize.Width / PostflopHandsGroup.HandCategoriesCount;
+            double columnWidth = (RenderSize.Width - CounterActionsWidth) / PostflopHandsGroup.HandCategoriesCount;
 
             double yIndent = headerHeight;
 
@@ -214,27 +214,30 @@ namespace InfoHelper.Controls
                     xIndent += columnWidth;
                 }
 
-                float avgEq = hands.Select((h, i) => handsSum == 0 ? 0 : h * (i + 1) / handsSum).Sum();
-
-                string groupText = $"Avg eq: {(avgEq == 0 ? "--" : Math.Round(avgEq, 1).ToString(CultureInfo.InvariantCulture))}%";
-
-                if (avgEq > 0 && !float.IsNaN(defaultValue))
+                if (handsSum > 0)
                 {
-                    string sign = string.Empty;
+                    float avgEq = hands.Select((h, i) => handsSum == 0 ? 0 : h * (i + 1) / handsSum).Sum();
 
-                    if (avgEq > defaultValue)
-                        sign = "+";
-                    else if (avgEq < defaultValue)
-                        sign = "-";
+                    string groupText = $"[{(handsSum >= 100 ? "++" : handsSum)}] Eq: {Math.Round(avgEq, 1).ToString(CultureInfo.InvariantCulture)}%";
 
-                    groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - defaultValue, 1)).ToString(CultureInfo.InvariantCulture)})";
+                    if (avgEq > 0 && !float.IsNaN(defaultValue))
+                    {
+                        string sign = string.Empty;
+
+                        if (avgEq > defaultValue)
+                            sign = "+";
+                        else if (avgEq < defaultValue)
+                            sign = "-";
+
+                        groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - defaultValue, 1)).ToString(CultureInfo.InvariantCulture)})";
+                    }
+
+                    FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _foregroundColor, 1);
+
+                    Point textLocation = new Point(CounterActionsWidth + 3, yIndent);
+
+                    drawingContext.DrawText(formattedText, textLocation);
                 }
-
-                FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _foregroundColor, 1);
-
-                Point textLocation = new Point(CounterActionsWidth + 3, yIndent);
-
-                drawingContext.DrawText(formattedText, textLocation);
             }
         }
     }
