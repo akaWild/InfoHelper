@@ -11,10 +11,12 @@
             <OopBets>
               <OopBet>0.35</OopBet>
               <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
               <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -29,39 +31,53 @@
             <OopReraises>
               <OopReraise>0.5</OopReraise>
               <OopReraise>1</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
               <IpReraise>1</IpReraise>
+			  <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </Turn>
         <River>
           <Bets>
             <OopDonkBets>
-              <OopDonkBet>1</OopDonkBet>
+              <OopDonkBet>0.7</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-              <OopBet>1</OopBet>
+              <OopBet>0.35</OopBet>
+              <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
-              <IpBet>1</IpBet>
+              <IpBet>0.35</IpBet>
+              <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
+              <OopRaise>0.5</OopRaise>
               <OopRaise>1</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
+              <IpRaise>0.5</IpRaise>
               <IpRaise>1</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
+              <OopReraise>0.5</OopReraise>
               <OopReraise>1</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
+              <IpReraise>0.5</IpReraise>
               <IpReraise>1</IpReraise>
+			  <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -70,68 +86,78 @@
         <Turn>
           <Bets>
             <OopDonkBets>
-              <OopDonkBet>0.5</OopDonkBet>
-              <OopDonkBet>1</OopDonkBet>
+              <OopDonkBet>0.7</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-              <OopBet>0.5</OopBet>
-              <OopBet>1</OopBet>
+              <OopBet>0.35</OopBet>
+              <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
-              <IpBet>0.4</IpBet>
+              <IpBet>0.35</IpBet>
               <IpBet>0.7</IpBet>
-              <IpBet>1.05</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
-              <OopRaise>0.5</OopRaise>
-              <OopRaise>1</OopRaise>
+              <OopRaise>0.7</OopRaise>
             </OopRaises>
             <IpRaises>
-              <IpRaise>0.5</IpRaise>
-              <IpRaise>1</IpRaise>
-              <IpRaise>1.5</IpRaise>
+              <IpRaise>0.7</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
               <OopReraise>0.5</OopReraise>
               <OopReraise>1</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
               <IpReraise>1</IpReraise>
-              <IpReraise>1.5</IpReraise>
+              <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </Turn>
         <River>
           <Bets>
             <OopDonkBets>
-              <OopDonkBet>1</OopDonkBet>
+              <OopDonkBet>0.7</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-              <OopBet>1</OopBet>
+              <OopBet>0.35</OopBet>
+              <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
-              <IpBet>1</IpBet>
+              <IpBet>0.35</IpBet>
+              <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
-              <OopRaise>1</OopRaise>
+              <OopRaise>0.5</OopRaise>
+			  <OopRaise>1</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
-              <IpRaise>1</IpRaise>
+              <IpRaise>0.5</IpRaise>
+			  <IpRaise>1</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
+              <OopReraise>0.5</OopReraise>
               <OopReraise>1</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
+              <IpReraise>0.5</IpReraise>
               <IpReraise>1</IpReraise>
+              <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -142,40 +168,42 @@
         <River>
           <Bets>
             <OopDonkBets>
-              <OopDonkBet>0.4</OopDonkBet>
               <OopDonkBet>0.7</OopDonkBet>
-              <OopDonkBet>1.05</OopDonkBet>
+              <OopDonkBet>1.5</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-              <OopBet>0.4</OopBet>
+              <OopBet>0.35</OopBet>
               <OopBet>0.7</OopBet>
-              <OopBet>1.05</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
-              <IpBet>0.5</IpBet>
-              <IpBet>1</IpBet>
+              <IpBet>0.35</IpBet>
+              <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.5</OopRaise>
               <OopRaise>1</OopRaise>
-              <OopRaise>1.5</OopRaise>
+              <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.5</IpRaise>
               <IpRaise>1</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
               <OopReraise>0.5</OopReraise>
               <OopReraise>1</OopReraise>
-              <OopReraise>1.5</OopReraise>
+              <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
               <IpReraise>1</IpReraise>
+			  <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -188,35 +216,38 @@
               <OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-              <OopBet>0.5</OopBet>
-              <OopBet>1</OopBet>
+              <OopBet>0.35</OopBet>
+              <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
-              <IpBet>0.4</IpBet>
+              <IpBet>0.35</IpBet>
               <IpBet>0.7</IpBet>
-              <IpBet>1.05</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.5</OopRaise>
               <OopRaise>1</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.5</IpRaise>
               <IpRaise>1</IpRaise>
-              <IpRaise>1.5</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
               <OopReraise>0.5</OopReraise>
               <OopReraise>1</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
               <IpReraise>1</IpReraise>
-              <IpReraise>1.5</IpReraise>
+              <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -238,7 +269,7 @@
             <IpBets>
               <IpBet>0.35</IpBet>
               <IpBet>0.7</IpBet>
-			        <IpBet>1.5</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -267,35 +298,35 @@
             </OopDonkBets>
             <OopBets>
               <OopBet>0.35</OopBet>
-			        <OopBet>0.7</OopBet>
-			        <OopBet>1.5</OopBet>
-			        <OopBet>10</OopBet>
+			  <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
+			  <OopBet>10</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
-			        <IpBet>0.7</IpBet>
-			        <IpBet>1.5</IpBet>
-			        <IpBet>10</IpBet>
+			  <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
+			  <IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.7</OopRaise>
-			        <OopRaise>10</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.7</IpRaise>
-			        <IpRaise>10</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
               <OopReraise>0.5</OopReraise>
-			        <OopReraise>10</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
-			        <IpReraise>10</IpReraise>
+			  <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -309,23 +340,23 @@
             </OopDonkBets>
             <OopBets>
               <OopBet>0.35</OopBet>
-			        <OopBet>0.7</OopBet>
-			        <OopBet>1.5</OopBet>
+			  <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
-			        <IpBet>0.7</IpBet>
-			        <IpBet>1.5</IpBet>
+			  <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.7</OopRaise>
-			        <OopRaise>10</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.7</IpRaise>
-			        <IpRaise>10</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
@@ -343,39 +374,39 @@
           <Bets>
             <OopDonkBets>
               <OopDonkBet>0.5</OopDonkBet>
-			        <OopDonkBet>1</OopDonkBet>
+			  <OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
               <OopBet>0.35</OopBet>
-			        <OopBet>0.7</OopBet>
-			        <OopBet>1.5</OopBet>
-			        <OopBet>10</OopBet>
+			  <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
+			  <OopBet>10</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
-			        <IpBet>0.7</IpBet>
-			        <IpBet>1.5</IpBet>
-			        <IpBet>10</IpBet>
+			  <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
+			  <IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.7</OopRaise>
-			        <OopRaise>10</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.7</IpRaise>
-			        <IpRaise>10</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
             <OopReraises>
               <OopReraise>0.5</OopReraise>
-			        <OopReraise>10</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
-			        <IpReraise>10</IpReraise>
+			  <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -390,25 +421,25 @@
             </OopDonkBets>
             <OopBets>
               <OopBet>0.35</OopBet>
-			        <OopBet>0.7</OopBet>
-			        <OopBet>1.5</OopBet>
-			        <OopBet>10</OopBet>
+			  <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
+			  <OopBet>10</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
-			        <IpBet>0.7</IpBet>
-			        <IpBet>1.5</IpBet>
-			        <IpBet>10</IpBet>
+			  <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
+			  <IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.7</OopRaise>
-			        <OopRaise>10</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.7</IpRaise>
-			        <IpRaise>10</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
@@ -432,25 +463,25 @@
             </OopDonkBets>
             <OopBets>
               <OopBet>0.35</OopBet>
-			        <OopBet>0.7</OopBet>
-			        <OopBet>1.5</OopBet>
-			        <OopBet>10</OopBet>
+			  <OopBet>0.7</OopBet>
+			  <OopBet>1.5</OopBet>
+			  <OopBet>10</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
-			        <IpBet>0.7</IpBet>
-			        <IpBet>1.5</IpBet>
-			        <IpBet>10</IpBet>
+			  <IpBet>0.7</IpBet>
+			  <IpBet>1.5</IpBet>
+			  <IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.7</OopRaise>
-			        <OopRaise>10</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.7</IpRaise>
-			        <IpRaise>10</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
@@ -511,13 +542,13 @@
             </OopDonkBets>
             <OopBets>
               <OopBet>0.35</OopBet>
-			        <OopBet>0.7</OopBet>
-			        <OopBet>10</OopBet>
+			  <OopBet>0.7</OopBet>
+			  <OopBet>10</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
-			        <IpBet>0.7</IpBet>
-			        <IpBet>10</IpBet>
+			  <IpBet>0.7</IpBet>
+			  <IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -531,11 +562,11 @@
           <Reraises>
             <OopReraises>
               <OopReraise>0.5</OopReraise>
-			        <OopReraise>10</OopReraise>
+			  <OopReraise>10</OopReraise>
             </OopReraises>
             <IpReraises>
               <IpReraise>0.5</IpReraise>
-			        <IpReraise>10</IpReraise>
+			  <IpReraise>10</IpReraise>
             </IpReraises>
           </Reraises>
         </River>
@@ -548,8 +579,8 @@
               <OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
@@ -578,28 +609,28 @@
         <River>
           <Bets>
             <OopDonkBets>
-				      <OopDonkBet>0.5</OopDonkBet>
-				      <OopDonkBet>1</OopDonkBet>
+				<OopDonkBet>0.5</OopDonkBet>
+				<OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
               <OopRaise>0.7</OopRaise>
-			        <OopRaise>10</OopRaise>
+			  <OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
               <IpRaise>0.7</IpRaise>
-			        <IpRaise>10</IpRaise>
+			  <IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
@@ -621,14 +652,14 @@
               <OopDonkBet>0.7</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -659,14 +690,14 @@
               <OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -701,12 +732,12 @@
             <OopBets>
               <OopBet>0.35</OopBet>
               <OopBet>0.7</OopBet>
-			        <OopBet>10</OopBet>
+			  <OopBet>10</OopBet>
             </OopBets>
             <IpBets>
               <IpBet>0.35</IpBet>
               <IpBet>0.7</IpBet>
-			        <IpBet>10</IpBet>
+			  <IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -734,24 +765,24 @@
               <OopDonkBet>0.7</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
             <OopRaises>
-				      <OopRaise>0.6</OopRaise>
-				      <OopRaise>10</OopRaise>
+				<OopRaise>0.6</OopRaise>
+				<OopRaise>10</OopRaise>
             </OopRaises>
             <IpRaises>
-				      <IpRaise>0.6</IpRaise>
-				      <IpRaise>10</IpRaise>
+				<IpRaise>0.6</IpRaise>
+				<IpRaise>10</IpRaise>
             </IpRaises>
           </Raises>
           <Reraises>
@@ -772,14 +803,14 @@
               <OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -804,18 +835,18 @@
         <River>
           <Bets>
             <OopDonkBets>
-				      <OopDonkBet>0.5</OopDonkBet>
-				      <OopDonkBet>1</OopDonkBet>
+				<OopDonkBet>0.5</OopDonkBet>
+				<OopDonkBet>1</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -844,14 +875,14 @@
             <OopDonkBets>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>
@@ -882,14 +913,14 @@
               <OopDonkBet>10</OopDonkBet>
             </OopDonkBets>
             <OopBets>
-				      <OopBet>0.35</OopBet>
-				      <OopBet>0.7</OopBet>
-				      <OopBet>10</OopBet>
+				<OopBet>0.35</OopBet>
+				<OopBet>0.7</OopBet>
+				<OopBet>10</OopBet>
             </OopBets>
             <IpBets>
-				      <IpBet>0.35</IpBet>
-				      <IpBet>0.7</IpBet>
-				      <IpBet>10</IpBet>
+				<IpBet>0.35</IpBet>
+				<IpBet>0.7</IpBet>
+				<IpBet>10</IpBet>
             </IpBets>
           </Bets>
           <Raises>

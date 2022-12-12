@@ -82,6 +82,14 @@ namespace InfoHelper.DataProcessor
 
             Player player = (Player)sender;
 
+            using FileStream fileStream = new FileStream(Path.Combine(Shared.PlayersImagesFolder, $"{player.Hash}.png"), FileMode.Create);
+
+            BitmapEncoder encoder = new PngBitmapEncoder();
+
+            encoder.Frames.Add(BitmapFrame.Create(player.Image));
+
+            encoder.Save(fileStream);
+
             if (!plContext.Players.Contains(player))
                 plContext.Players.Add(player);
             else

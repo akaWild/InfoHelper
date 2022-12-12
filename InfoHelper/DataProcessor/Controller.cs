@@ -72,8 +72,6 @@ namespace InfoHelper.DataProcessor
 
         private readonly object _winContextLock = new object();
 
-        private readonly Dictionary<string, object> _hashImagesDictionary = new Dictionary<string, object>();
-
         public Controller(ViewModelMain vmMain, ViewModelPlayers vmPlayers)
         {
             _mainWindowState = vmMain;
@@ -305,21 +303,6 @@ namespace InfoHelper.DataProcessor
 
                             PokerRoomManager.ProcessData(window, screenData, bmpDecor);
 
-                            for (int j = 0; j < screenData.Nicks.Length; j++)
-                            {
-                                string nickHash = screenData.Nicks[j];
-
-                                if(nickHash == null)
-                                    continue;
-
-                                if (!_hashImagesDictionary.ContainsKey(nickHash))
-                                {
-                                    screenData.NickImages[j].Save(Path.Combine(Shared.PlayersImagesFolder, $"{nickHash}.png"));
-
-                                    _hashImagesDictionary.Add(nickHash, null);
-                                }
-                            }
-
                             if (winContextInfo.GameContext.Error == string.Empty)
                             {
                                 for (int j = 0; j < screenData.Nicks.Length; j++)
@@ -429,18 +412,6 @@ namespace InfoHelper.DataProcessor
                     Thread.Sleep(10);
 
                 _mainWindowState.ControlsState.ResetError();
-
-                _hashImagesDictionary.Clear();
-
-                string[] hashImagesFiles = Directory.GetFiles(Shared.PlayersImagesFolder, "*.png");
-
-                foreach (string hashImageFile in hashImagesFiles)
-                {
-                    Match hashImageFileMatch = Regex.Match(Path.GetFileNameWithoutExtension(hashImageFile), "^(?<hash>[a-f0-9]{64})$");
-
-                    if(hashImageFileMatch.Success)
-                        _hashImagesDictionary.Add(hashImageFileMatch.Groups["hash"].Value, null);
-                }
 
                 if (_bitmapContainer == null)
                     _bitmapContainer = new BitmapsContainer(Shared.BitmapsBuffer);
