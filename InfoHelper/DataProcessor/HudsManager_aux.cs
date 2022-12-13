@@ -410,7 +410,7 @@ namespace InfoHelper.DataProcessor
                         else
                             cellName = string.Empty;
                     }
-                    else if (preflopPotType == PreflopPotType.Unknown)
+                    else if (preflopPotType == PreflopPotType.Other)
                         cellName = string.Empty;
                 }
 
@@ -438,7 +438,7 @@ namespace InfoHelper.DataProcessor
                     else if (raiseCount == 3)
                         preflopPotType = PreflopPotType.FiveBetPot;
                     else
-                        preflopPotType = PreflopPotType.Unknown;
+                        preflopPotType = PreflopPotType.Other;
 
                     raiseCount++;
                 }

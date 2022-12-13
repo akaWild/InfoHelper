@@ -225,7 +225,7 @@ namespace InfoHelper.DataProcessor
                                 else if (raiseCount == 3)
                                     preflopPotType = PreflopPotType.FiveBetPot;
                                 else
-                                    preflopPotType = PreflopPotType.Unknown;
+                                    preflopPotType = PreflopPotType.Other;
 
                                 raiseCount++;
                             }

@@ -40,8 +40,8 @@ namespace InfoHelper.DataProcessor
                 join p in statDbContext.Players
                     on ph.PlayerId equals p.Id
                 where p.PlayerName == player
-                orderby h.DateTimePlayed
-                select new { h, ph }).Take(Shared.GetLastNHands);
+                orderby h.DateTimePlayed descending
+                 select new { h, ph }).Take(Shared.GetLastNHands);
 
             foreach (var record in playerData.AsQueryable())
             {
@@ -216,7 +216,7 @@ namespace InfoHelper.DataProcessor
                             else if (raiseCount == 3)
                                 preflopPotType = PreflopPotType.FiveBetPot;
                             else
-                                preflopPotType = PreflopPotType.Unknown;
+                                preflopPotType = PreflopPotType.Other;
 
                             raiseCount++;
                         }
@@ -852,7 +852,7 @@ namespace InfoHelper.DataProcessor
                         else if (raiseCount == 3)
                             preflopPotType = PreflopPotType.FiveBetPot;
                         else
-                            preflopPotType = PreflopPotType.Unknown;
+                            preflopPotType = PreflopPotType.Other;
 
                         raiseCount++;
                     }
