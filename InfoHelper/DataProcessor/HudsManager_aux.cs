@@ -49,7 +49,7 @@ namespace InfoHelper.DataProcessor
                     break;
             }
 
-            bool[] initialPlayers = gc.Stacks.Select(s => s != null).ToArray();
+            bool[] initialPlayers = gc.InitialStacks.Select(s => s != null).ToArray();
 
             Position heroPosition = Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, gc.HeroPosition, initialPlayers);
 
@@ -516,6 +516,8 @@ namespace InfoHelper.DataProcessor
                         if (!preflopRows.Contains($"{playerPosition}_Isolate_CC_Row"))
                             preflopRows.Add($"{playerPosition}_Isolate_Limper_Row");
                     }
+                    else if(preflActions == PreflopActions.Raise)
+                        preflopRows.Add($"{playerPosition}_RaiseIsolate_Raiser_Row");
                 }
                 else if (preflopPotType == PreflopPotType.ThreeBetPot)
                 {

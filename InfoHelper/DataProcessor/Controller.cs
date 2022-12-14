@@ -385,7 +385,7 @@ namespace InfoHelper.DataProcessor
 
                     for (int i = 0; i < statSets.Length; i++)
                     {
-                        if(!foregroundGameContext.IsPlayerConfirmed[i])
+                        if(i == foregroundGameContext.HeroPosition - 1 || !foregroundGameContext.IsPlayerConfirmed[i])
                             continue;
 
                         statSets[i] = _statManager.GetPlayer(foregroundGameContext.Players[i]);

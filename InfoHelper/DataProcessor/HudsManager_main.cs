@@ -69,6 +69,9 @@ namespace InfoHelper.DataProcessor
 
             for (int i = 0; i < gc.Players.Length; i++)
             {
+                if (i == gc.HeroPosition - 1)
+                    continue;
+
                 if (gc.InitialStacks[i] == null || gc.Players[i] == null)
                 {
                     _vmMain.HudsParentStates[i].ActionsState.Visible = false;
@@ -135,7 +138,7 @@ namespace InfoHelper.DataProcessor
 
                     #region Retrieve Set variables
 
-                    bool[] initialPlayers = gc.Stacks.Select(s => s != null).ToArray();
+                    bool[] initialPlayers = gc.InitialStacks.Select(s => s != null).ToArray();
 
                     GameType gameType = gc.SmallBlindPosition == gc.ButtonPosition ? GameType.Hu : GameType.SixMax;
 
@@ -305,7 +308,8 @@ namespace InfoHelper.DataProcessor
 
                     BettingAction lastPlayerAction = playerActions.LastOrDefault();
 
-                    bool showHud = gc.Error == string.Empty && (lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold);
+                    //bool showHud = gc.Error == string.Empty && (lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold);
+                    bool showHud = lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold;
 
                     //Btn preflop hud
                     StatSet btnPreflopSet = statSetManager.GetStatSet(SetType.PreflopBtn);
