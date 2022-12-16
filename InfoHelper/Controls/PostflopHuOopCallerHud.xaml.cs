@@ -18,7 +18,7 @@ namespace InfoHelper.Controls
     /// <summary>
     /// Interaction logic for TurnHud.xaml
     /// </summary>
-    public partial class PostflopHuOopCallerHud : UserControl
+    public partial class PostflopHuOopCallerHud : HudBase
     {
         public PostflopHuOopCallerHud()
         {

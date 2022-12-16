@@ -18,7 +18,7 @@ namespace InfoHelper.Controls
     /// <summary>
     /// Interaction logic for FlopHud.xaml
     /// </summary>
-    public partial class PostflopHuIpRaiserHud : UserControl
+    public partial class PostflopHuIpRaiserHud : HudBase
     {
         public PostflopHuIpRaiserHud()
         {

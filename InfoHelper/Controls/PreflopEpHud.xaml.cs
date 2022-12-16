@@ -18,7 +18,7 @@ namespace InfoHelper.Controls
     /// <summary>
     /// Interaction logic for PreflopEpHud.xaml
     /// </summary>
-    public partial class PreflopEpHud : UserControl
+    public partial class PreflopEpHud : HudBase
     {
         public PreflopEpHud()
         {
