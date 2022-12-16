@@ -50,5 +50,12 @@ namespace InfoHelper.Controls
 
             HudToolTip.IsOpen = true;
         }
+
+        protected override void OnMouseLeave(MouseEventArgs e)
+        {
+            base.OnMouseLeave(e);
+
+            HudToolTip.IsOpen = false;
+        }
     }
 }
