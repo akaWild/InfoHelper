@@ -8,6 +8,8 @@
 
         public ViewModelStatsHud GeneralHudState { get; } = new ViewModelStatsHud();
 
+        public ViewModelStatsHud AggressionHudState { get; } = new ViewModelStatsHud();
+
         public ViewModelStatsHud SbPreflopHudState { get; } = new ViewModelStatsHud();
 
         public ViewModelStatsHud BbPreflopHudState { get; } = new ViewModelStatsHud();

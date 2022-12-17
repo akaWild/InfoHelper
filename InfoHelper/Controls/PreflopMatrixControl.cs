@@ -53,6 +53,8 @@ namespace InfoHelper.Controls
     {
         private const int CounterActionsWidth = 30;
 
+        private readonly ToolTip _preflopMatrixToolTip;
+
         private readonly Typeface _typeFace = new Typeface("Tahoma");
 
         private Pen _borderPen;
@@ -66,6 +68,13 @@ namespace InfoHelper.Controls
         static PreflopMatrixControl()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PreflopMatrixControl), new FrameworkPropertyMetadata(typeof(PreflopMatrixControl)));
+        }
+
+        public PreflopMatrixControl()
+        {
+            _preflopMatrixToolTip = new ToolTip();
+
+            ToolTip = _preflopMatrixToolTip;
         }
 
         protected override void OnRender(DrawingContext drawingContext)
@@ -219,6 +228,46 @@ namespace InfoHelper.Controls
                 drawingContext.DrawRectangle(Brushes.DarkGray, null, new Rect(new Point(0, 0), new Size(CounterActionsWidth, RenderSize.Height)));
 
             drawingContext.DrawLine(_borderPen, new Point(CounterActionsWidth, 0), new Point(CounterActionsWidth, RenderSize.Height));
+        }
+
+
+        protected override void OnMouseMove(MouseEventArgs e)
+        {
+            base.OnMouseMove(e);
+
+            _preflopMatrixToolTip.IsOpen = false;
+
+            if (Data is not PreflopHandsGroup phg)
+                return;
+
+            double xIndent = CounterActionsWidth, yIndent = !string.IsNullOrEmpty(Header) ? RenderSize.Height / 14 : 0;
+
+            double columnWidth = (RenderSize.Width - xIndent) / 13, rowHeight = (RenderSize.Height - yIndent) / 13;
+
+            Point position = Mouse.GetPosition(this);
+
+            if (position.X < xIndent || position.X > RenderSize.Width)
+                return;
+
+            if (position.Y < yIndent || position.Y > RenderSize.Height)
+                return;
+
+            int i = (int)Math.Floor((position.Y - yIndent) / rowHeight), j = (int)Math.Floor((position.X - xIndent) / columnWidth);
+
+            string cards = Common.HoleCards[i * 13 + j];
+
+            int value = phg.PocketHands[i * 13 + j];
+
+            _preflopMatrixToolTip.Content = $"{cards} ({value})";
+
+            _preflopMatrixToolTip.IsOpen = true;
+        }
+
+        protected override void OnMouseLeave(MouseEventArgs e)
+        {
+            base.OnMouseLeave(e);
+
+            _preflopMatrixToolTip.IsOpen = false;
         }
     }
 }

@@ -1,0 +1,41 @@
+﻿<local:HudBase x:Class="InfoHelper.Controls.AggressionHud"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:InfoHelper.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--Header-->
+        <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="Aggr">
+            <local:CellControl.ToolTip>
+                <ToolTip Content="{Binding SetName}"/>
+            </local:CellControl.ToolTip>
+        </local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Flop"></local:CellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="Turn"></local:CellControl>
+        <local:CellControl Grid.Column="3" Grid.Row="0" Style="{StaticResource CellPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Text="River"></local:CellControl>
+        <!--Aggression-->
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource BetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Aggr    "></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding AggFq_R}"></local:DataCellControl>
+        <!--Fold to aggression-->
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource FvBetPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvAggr  "></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvAggFq_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvAggFq_T}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="3" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvAggFq_R}"></local:DataCellControl>
+    </Grid>
+</local:HudBase>

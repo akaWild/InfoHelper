@@ -43,10 +43,10 @@ namespace InfoHelper.Controls
             if (dc is ValueCell or EvCell)
                 return;
 
-            HudToolTip.Content = $"{dc.Name}: {dc.Value}/{dc.Sample}";
+            HudToolTip.Content = $"{dc.Description}: {dc.Value}/{dc.Sample}";
 
             if (!float.IsNaN(dc.DefaultValue))
-                HudToolTip.Content += $" (Dflt value: {Math.Round(dc.DefaultValue, 1).ToString(CultureInfo.InvariantCulture)}%)";
+                HudToolTip.Content += $" Dflt value: {Math.Round(dc.DefaultValue, 1).ToString(CultureInfo.InvariantCulture)}%";
 
             HudToolTip.IsOpen = true;
         }

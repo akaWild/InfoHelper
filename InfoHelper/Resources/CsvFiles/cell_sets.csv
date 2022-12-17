@@ -916,3 +916,9 @@ PostflopGeneral;StatCell;PostflopData;;;CvThreeBet_R;Call 3 bet river;FvThreeBet
 PostflopGeneral;StatCell;PostflopData;;;FourBet_F;4 bet flop;CvThreeBet_F;
 PostflopGeneral;StatCell;PostflopData;;;FourBet_T;4 bet turn;CvThreeBet_T;
 PostflopGeneral;StatCell;PostflopData;;;FourBet_R;4 bet river;CvThreeBet_R;
+AggFqPostflop;StatCell;;;;AggFq_F;Aggression frequency flop;;
+AggFqPostflop;StatCell;;;;AggFq_T;Aggression frequency turn;;
+AggFqPostflop;StatCell;;;;AggFq_R;Aggression frequency river;;
+AggFqPostflop;StatCell;;;;FvAggFq_F;Fold to aggression frequency flop;;
+AggFqPostflop;StatCell;;;;FvAggFq_T;Fold to aggression frequency turn;;
+AggFqPostflop;StatCell;;;;FvAggFq_R;Fold to aggression frequency river;;

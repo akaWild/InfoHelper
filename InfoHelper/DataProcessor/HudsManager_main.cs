@@ -78,6 +78,7 @@ namespace InfoHelper.DataProcessor
                     _vmMain.HudsParentStates[i].NameState.Visible = false;
 
                     _vmMain.HudsParentStates[i].GeneralHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].AggressionHudState.Visible = false;
                     _vmMain.HudsParentStates[i].BtnPreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].SbPreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].BbPreflopHudState.Visible = false;
@@ -187,15 +188,12 @@ namespace InfoHelper.DataProcessor
                                 }
                             }
 
-                            if (otherPlayersActed == OtherPlayersActed.No)
-                            {
-                                oppPosition = Common.GetPlayerPosition(new int[] {gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition}, oppIndexPosition + 1, initialPlayers);
+                            oppPosition = Common.GetPlayerPosition(new int[] {gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition}, oppIndexPosition + 1, initialPlayers);
 
-                                if (gameType == GameType.Hu)
-                                    relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
-                                else
-                                    relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
-                            }
+                            if (gameType == GameType.Hu)
+                                relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
+                            else
+                                relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
 
                             playersOnFlop = PlayersOnFlop.Hu;
                         }
@@ -310,6 +308,22 @@ namespace InfoHelper.DataProcessor
 
                     //bool showHud = gc.Error == string.Empty && (lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold);
                     bool showHud = lastPlayerAction == null || lastPlayerAction.ActionType != BettingActionType.Fold;
+
+                    //Aggression hud
+                    StatSet aggressionSet = statSetManager.GetStatSet(SetType.AggFqPostflop);
+
+                    if (aggressionSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].AggressionHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].AggressionHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].AggressionHudState.SetData(aggressionSet.Cells);
+
+                        _vmMain.HudsParentStates[i].AggressionHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].AggressionHudState.SetName = $"{aggressionSet}";
+                    }
 
                     //Btn preflop hud
                     StatSet btnPreflopSet = statSetManager.GetStatSet(SetType.PreflopBtn);
@@ -651,6 +665,7 @@ namespace InfoHelper.DataProcessor
                 _vmMain.HudsParentStates[i].ActionsState.UpdateBindings();
 
                 _vmMain.HudsParentStates[i].GeneralHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].AggressionHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].BtnPreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].SbPreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].BbPreflopHudState.UpdateBindings();
@@ -705,6 +720,7 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.ActionsState.Visible = false;
 
                 vmHudsParent.GeneralHudState.Visible = false;
+                vmHudsParent.AggressionHudState.Visible = false;
                 vmHudsParent.BtnPreflopHudState.Visible = false;
                 vmHudsParent.SbPreflopHudState.Visible = false;
                 vmHudsParent.BbPreflopHudState.Visible = false;
@@ -729,6 +745,7 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.ActionsState.UpdateBindings();
 
                 vmHudsParent.GeneralHudState.UpdateBindings();
+                vmHudsParent.AggressionHudState.UpdateBindings();
                 vmHudsParent.BtnPreflopHudState.UpdateBindings();
                 vmHudsParent.SbPreflopHudState.UpdateBindings();
                 vmHudsParent.BbPreflopHudState.UpdateBindings();

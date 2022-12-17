@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 using HandUtility;
@@ -173,15 +174,12 @@ namespace InfoHelper.DataProcessor
                             }
                         }
 
-                        if (otherPlayersActed == OtherPlayersActed.No)
-                        {
-                            oppPosition = Common.GetPlayerPosition(new int[] { sbPosition, bbPosition, btnPosition }, oppIndexPosition + 1, isPlayerIn);
+                        oppPosition = Common.GetPlayerPosition(new int[] { sbPosition, bbPosition, btnPosition }, oppIndexPosition + 1, isPlayerIn);
 
-                            if (gameType == GameType.Hu)
-                                relativePosition = sbPosition == playerPosition ? RelativePosition.Ip : RelativePosition.Oop;
-                            else
-                                relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
-                        }
+                        if (gameType == GameType.Hu)
+                            relativePosition = sbPosition == playerPosition ? RelativePosition.Ip : RelativePosition.Oop;
+                        else
+                            relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
 
                         playersOnFlop = PlayersOnFlop.Hu;
                     }
@@ -305,13 +303,17 @@ namespace InfoHelper.DataProcessor
                 if (preflopSet == null)
                     throw new Exception("Preflop set wasn't found");
 
+                StatSet aggressionSet = null;
+
                 StatSet postflopSet = null;
 
                 if (playerActedOnFlop)
                 {
+                    aggressionSet = statSetManager.GetStatSet(SetType.AggFqPostflop);
+
                     foreach (SetType setTypeValue in Enum.GetValues<SetType>())
                     {
-                        if (!$"{setTypeValue}".Contains("Postflop"))
+                        if(!Regex.IsMatch($"{setTypeValue}", "^Postflop"))
                             continue;
 
                         postflopSet = statSetManager.GetStatSet(setTypeValue);
@@ -873,10 +875,12 @@ namespace InfoHelper.DataProcessor
 
                 #endregion
 
-                #region Filling postflop set
+                #region Filling aggression and postflop sets
 
                 if (postflopSet == null)
                     continue;
+
+                Dictionary<string, DataCell> aggressionCellsDict = aggressionSet?.Cells.ToDictionary(k => k.Name, v => v);
 
                 Dictionary<string, DataCell> postflopCellsDict = postflopSet.Cells.ToDictionary(k => k.Name, v => v);
 
@@ -943,6 +947,23 @@ namespace InfoHelper.DataProcessor
                             roundAbbr = "_R";
 
                         int betsRaisesCount = actionSequences[action.Round - 2].Count(a => a is 'b' or 'r');
+
+                        if(aggressionSet != null)
+                        {
+                            if (action.CanRaise)
+                                aggressionCellsDict[$"AggFq{roundAbbr}"].IncrementSample();
+
+                            if (action.ActionType is 5 or 6)
+                                aggressionCellsDict[$"AggFq{roundAbbr}"].IncrementValue();
+
+                            if (currentBet > 0)
+                            {
+                                aggressionCellsDict[$"FvAggFq{roundAbbr}"].IncrementSample();
+
+                                if (action.ActionType is 2)
+                                    aggressionCellsDict[$"FvAggFq{roundAbbr}"].IncrementValue();
+                            }
+                        }
 
                         //Multiway
                         if (postflopSet.SetType == SetType.PostflopGeneral)
