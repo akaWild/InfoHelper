@@ -61,7 +61,8 @@ namespace InfoHelper.Controls
         private readonly Typeface _typeFace = new Typeface("Tahoma");
 
         private Pen _pen;
-        private Pen _valuePen;
+        private Pen _avgValuePen;
+        private Pen _dfltValuePen;
         private Pen _dashedPen;
 
         private SolidColorBrush _headerForegroundBrush;
@@ -92,7 +93,8 @@ namespace InfoHelper.Controls
             VisualEdgeMode = EdgeMode.Aliased;
 
             _pen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTablePen");
-            _valuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableValuePen");
+            _avgValuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableAvgValuePen");
+            _dfltValuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDfltValuePen");
             _dashedPen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDashedPen");
 
             _headerForegroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("PostflopHandsTableHeaderForegroundBrush");
@@ -261,9 +263,16 @@ namespace InfoHelper.Controls
                             groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - defaultValue, 1)).ToString(CultureInfo.InvariantCulture)})";
                         }
 
-                        double lineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100;
+                        double avgValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100;
 
-                        drawingContext.DrawLine(_valuePen, new Point(lineIndent, yIndent), new Point(lineIndent, yIndent + groupGraphHeight));
+                        drawingContext.DrawLine(_avgValuePen, new Point(avgValueLineIndent, yIndent), new Point(avgValueLineIndent, yIndent + groupGraphHeight));
+
+                        if (!float.IsNaN(defaultValue))
+                        {
+                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * defaultValue / 100;
+
+                            drawingContext.DrawLine(_dfltValuePen, new Point(dfltValueLineIndent, yIndent), new Point(dfltValueLineIndent, yIndent + groupGraphHeight));
+                        }
                     }
 
                     FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _foregroundColor, 1);

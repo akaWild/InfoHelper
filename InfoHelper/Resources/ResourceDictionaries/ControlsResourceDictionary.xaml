@@ -112,7 +112,12 @@
     <SolidColorBrush x:Key="PostflopHandsTableBackgroundBrush">Beige</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableDeviationBackgroundBrush">LightGray</SolidColorBrush>
     <Pen x:Key="PostflopHandsTablePen" Brush="Black" Thickness="1"/>
-    <Pen x:Key="PostflopHandsTableValuePen" Brush="DarkOrange" Thickness="2"/>
+    <Pen x:Key="PostflopHandsTableAvgValuePen" Brush="DarkOrange" Thickness="2"/>
+    <Pen x:Key="PostflopHandsTableDfltValuePen" Brush="DodgerBlue" Thickness="2">
+        <Pen.DashStyle>
+            <DashStyle Dashes="2,4"/>
+        </Pen.DashStyle>
+    </Pen>
     <Pen x:Key="PostflopHandsTableDashedPen" Brush="Black">
         <Pen.DashStyle>
             <DashStyle Dashes="2,6"/>
