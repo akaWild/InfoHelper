@@ -60,7 +60,7 @@ namespace InfoHelper.Controls
 
         private readonly Typeface _typeFace = new Typeface("Tahoma");
 
-        private Pen _pen;
+        private Pen _defaultPen;
         private Pen _avgValuePen;
         private Pen _dfltValuePen;
         private Pen _dashedPen;
@@ -69,6 +69,7 @@ namespace InfoHelper.Controls
         private SolidColorBrush _headerBackgroundBrush;
 
         private SolidColorBrush _foregroundColor;
+        private SolidColorBrush _gtoForegroundColor;
         private SolidColorBrush _backgroundColor;
 
         private SolidColorBrush _deviationBackgroudColor;
@@ -92,7 +93,7 @@ namespace InfoHelper.Controls
 
             VisualEdgeMode = EdgeMode.Aliased;
 
-            _pen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTablePen");
+            _defaultPen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDefaultPen");
             _avgValuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableAvgValuePen");
             _dfltValuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDfltValuePen");
             _dashedPen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDashedPen");
@@ -101,6 +102,7 @@ namespace InfoHelper.Controls
             _headerBackgroundBrush ??= (SolidColorBrush)Application.Current.TryFindResource("PostflopHandsTableHeaderBackgroundBrush");
 
             _foregroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("PostflopHandsTableForegroundBrush");
+            _gtoForegroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("PostflopHandsTableGtoForegroundBrush");
             _backgroundColor ??= (SolidColorBrush)Application.Current.TryFindResource("PostflopHandsTableBackgroundBrush");
 
             _deviationBackgroudColor ??= (SolidColorBrush)Application.Current.TryFindResource("PostflopHandsTableDeviationBackgroundBrush");
@@ -121,7 +123,7 @@ namespace InfoHelper.Controls
 
                 drawingContext.DrawText(text, textLocation);
 
-                drawingContext.DrawLine(_pen, new Point(CounterActionsWidth, headerHeight), new Point(RenderSize.Width, headerHeight));
+                drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, headerHeight), new Point(RenderSize.Width, headerHeight));
             }
 
             double groupGraphHeight = (RenderSize.Height - headerHeight) / 3;
@@ -132,7 +134,7 @@ namespace InfoHelper.Controls
 
             double yIndent = headerHeight;
 
-            RenderHandsGroup(handsGroup.MadeHands, handsGroup.MadeHandsDefaultValue, Brushes.DarkGreen);
+            RenderHandsGroup(handsGroup.MadeHands, handsGroup.MadeHandsDefaultValue, handsGroup.MadeHandsGtoValue, Brushes.DarkGreen);
 
             yIndent += groupGraphHeight;
 
@@ -140,16 +142,16 @@ namespace InfoHelper.Controls
 
             groupLineIndents[0] = yIndent;
 
-            RenderHandsGroup(handsGroup.ComboHands, handsGroup.ComboHandsDefaultValue, Brushes.Blue);
+            RenderHandsGroup(handsGroup.ComboHands, handsGroup.ComboHandsDefaultValue, handsGroup.ComboHandsGtoValue, Brushes.Blue);
 
             yIndent += groupGraphHeight;
 
             groupLineIndents[1] = yIndent;
 
-            drawingContext.DrawLine(_pen, new Point(CounterActionsWidth, groupLineIndents[0]), new Point(RenderSize.Width, groupLineIndents[0]));
-            drawingContext.DrawLine(_pen, new Point(CounterActionsWidth, groupLineIndents[1]), new Point(RenderSize.Width, groupLineIndents[1]));
+            drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, groupLineIndents[0]), new Point(RenderSize.Width, groupLineIndents[0]));
+            drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, groupLineIndents[1]), new Point(RenderSize.Width, groupLineIndents[1]));
 
-            RenderHandsGroup(handsGroup.DrawHands, handsGroup.DrawHandsDefaultValue, Brushes.Red);
+            RenderHandsGroup(handsGroup.DrawHands, handsGroup.DrawHandsDefaultValue, handsGroup.DrawHandsGtoValue, Brushes.Red);
 
             for (int i = 1; i < 4; i++)
             {
@@ -206,9 +208,9 @@ namespace InfoHelper.Controls
             else
                 drawingContext.DrawRectangle(Brushes.DarkGray, null, new Rect(new Point(0, 0), new Size(CounterActionsWidth, RenderSize.Height)));
 
-            drawingContext.DrawLine(_pen, new Point(CounterActionsWidth, 0), new Point(CounterActionsWidth, RenderSize.Height));
+            drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, 0), new Point(CounterActionsWidth, RenderSize.Height));
 
-            void RenderHandsGroup(ushort[] hands, float defaultValue, SolidColorBrush brush)
+            void RenderHandsGroup(ushort[] hands, float defaultValue, float gtoValue, SolidColorBrush groupsBrush)
             {
                 double xIndent = CounterActionsWidth;
 
@@ -239,7 +241,7 @@ namespace InfoHelper.Controls
                     {
                         Rect rect = new Rect(xIndent, columnYIndent, columnWidth, columnHeight);
 
-                        drawingContext.DrawRectangle(brush, null, rect);
+                        drawingContext.DrawRectangle(groupsBrush, null, rect);
                     }
 
                     xIndent += columnWidth;
@@ -251,31 +253,38 @@ namespace InfoHelper.Controls
 
                     if (avgEq > 0)
                     {
-                        if (!float.IsNaN(defaultValue))
+                        float value = float.NaN;
+
+                        if (!float.IsNaN(gtoValue))
+                            value = gtoValue;
+                        else if (!float.IsNaN(defaultValue))
+                            value = defaultValue;
+
+                        if (!float.IsNaN(value))
                         {
                             string sign = string.Empty;
 
-                            if (avgEq > defaultValue)
+                            if (avgEq > value)
                                 sign = "+";
-                            else if (avgEq < defaultValue)
+                            else if (avgEq < value)
                                 sign = "-";
 
-                            groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - defaultValue, 1)).ToString(CultureInfo.InvariantCulture)})";
+                            groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - value, 1)).ToString(CultureInfo.InvariantCulture)})";
                         }
 
                         double avgValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100;
 
                         drawingContext.DrawLine(_avgValuePen, new Point(avgValueLineIndent, yIndent), new Point(avgValueLineIndent, yIndent + groupGraphHeight));
 
-                        if (!float.IsNaN(defaultValue))
+                        if (!float.IsNaN(value))
                         {
-                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * defaultValue / 100;
+                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * value / 100;
 
                             drawingContext.DrawLine(_dfltValuePen, new Point(dfltValueLineIndent, yIndent), new Point(dfltValueLineIndent, yIndent + groupGraphHeight));
                         }
                     }
 
-                    FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, _foregroundColor, 1);
+                    FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, float.IsNaN(gtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
 
                     Point textLocation = new Point(CounterActionsWidth + 3, yIndent);
 

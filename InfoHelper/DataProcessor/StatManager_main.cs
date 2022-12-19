@@ -46,6 +46,8 @@ namespace InfoHelper.DataProcessor
 
             LoadDefaultValues();
 
+            LoadGtoValues();
+
             _timer = new Timer(TimerInterval * 1000) { AutoReset = false };
 
             _timer.Elapsed += (sender, args) =>
@@ -579,6 +581,165 @@ namespace InfoHelper.DataProcessor
                     postflopSubGroup.MadeHandsDefaultValue = subGroupDefaultValues[i][0];
                     postflopSubGroup.DrawHandsDefaultValue = subGroupDefaultValues[i][1];
                     postflopSubGroup.ComboHandsDefaultValue = subGroupDefaultValues[i][2];
+                }
+
+                linesCounter++;
+            }
+        }
+
+        private static void LoadGtoValues()
+        {
+            string filePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\CsvFiles\\gto_values.csv");
+
+            if (!File.Exists(filePath))
+                throw new Exception("File \"gto_values.csv\" doesn't exist in Resources\\CsvFiles directory");
+
+            using FileStream fs = File.Open(filePath, FileMode.Open);
+
+            StreamReader sr = new StreamReader(fs);
+
+            string title = sr.ReadLine();
+
+            if (title == null)
+                throw new Exception("File \"gto_values.csv\" doesn't contain header");
+
+            string[] headerParts = title.Split(';');
+
+            if (headerParts.Length != 17)
+                throw new Exception("Header row in file \"gto_values.csv\" contains less or more than 17 elements");
+
+            int linesCounter = 1;
+
+            while (sr.Peek() >= 0)
+            {
+                string line = sr.ReadLine();
+
+                string[] parts = line.Split(';');
+
+                if (!Enum.TryParse(parts[0], out GameType gameType))
+                    throw new Exception($"Game type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[1], out Round round))
+                    throw new Exception($"Round at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[2], out Position position))
+                    throw new Exception($"Position at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[3], out RelativePosition relativePosition))
+                    throw new Exception($"Relative position at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[4], out Position oppPosition))
+                    throw new Exception($"Opponent position at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[5], out PlayersOnFlop playersOnFlop))
+                    throw new Exception($"Number of players on flop type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[6], out PreflopPotType preflopPotType))
+                    throw new Exception($"Preflop pot type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[7], out PreflopActions preflopActions))
+                    throw new Exception($"Preflop actions type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[8], out OtherPlayersActed otherPlayersActed))
+                    throw new Exception($"Other players acted type at line {linesCounter} is not defined or has incorrect format");
+
+                if (!Enum.TryParse(parts[9], out SetType setType))
+                    throw new Exception($"Set type at line {linesCounter} is not defined or has incorrect format");
+
+                string cellName = parts[10];
+
+                if (cellName == string.Empty)
+                    throw new Exception($"Cell name at line {linesCounter} is not defined");
+
+                float cellGtoValue = float.NaN;
+
+                if (parts[11] != string.Empty)
+                {
+                    if (!float.TryParse(parts[11], NumberStyles.Any, CultureInfo.InvariantCulture, out cellGtoValue))
+                        throw new Exception($"Cell gto value at line {linesCounter} is defined, but has incorrect format");
+                }
+
+                StatSet matchedSet = StatSets.FirstOrDefault(s => s.GameType == gameType && s.Round == round && s.Position == position && s.RelativePosition == relativePosition && s.OppPosition == oppPosition &&
+                                                                  s.PlayersOnFlop == playersOnFlop && s.PreflopPotType == preflopPotType && s.PreflopActions == preflopActions && s.OtherPlayersActed == otherPlayersActed &&
+                                                                  s.SetType == setType);
+
+                if (matchedSet == null)
+                    throw new Exception("No matched set found");
+
+                DataCell matchedCell = matchedSet.Cells.FirstOrDefault(c => c.Name == cellName);
+
+                if (matchedCell == null)
+                    throw new Exception("No matched data cell found");
+
+                matchedCell.GtoValue = cellGtoValue;
+
+                if (matchedCell.CellData is not PostflopData pd)
+                {
+                    linesCounter++;
+
+                    continue;
+                }
+
+                float[] mainGroupGtoValues = new float[] { float.NaN, float.NaN, float.NaN };
+
+                if (parts[12] != string.Empty)
+                {
+                    string[] mainGroupParts = parts[12].Split(",");
+
+                    if (mainGroupParts.Length != 3)
+                        throw new Exception($"Cell main group gto values at line {linesCounter} are defined, but have incorrect format");
+
+                    for (int i = 0; i < mainGroupParts.Length; i++)
+                    {
+                        if (mainGroupParts[i] == string.Empty)
+                            continue;
+
+                        if (!float.TryParse(mainGroupParts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out mainGroupGtoValues[i]))
+                            throw new Exception($"Cell main group gto values at line {linesCounter} are defined, but have incorrect format");
+                    }
+                }
+
+                float[][] subGroupGtoValues = new float[][]
+                {
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN, float.NaN},
+                };
+
+                for (int i = 13; i < parts.Length; i++)
+                {
+                    if (parts[i] != string.Empty)
+                    {
+                        string[] subGroupParts = parts[i].Split(",");
+
+                        if (subGroupParts.Length != 3)
+                            throw new Exception($"Cell subgroup {i - 13} gto values at line {linesCounter} are defined, but have incorrect format");
+
+                        for (int j = 0; j < subGroupParts.Length; j++)
+                        {
+                            if (subGroupParts[j] == string.Empty)
+                                continue;
+
+                            if (!float.TryParse(subGroupParts[j], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupGtoValues[i - 13][j]))
+                                throw new Exception($"Cell subgroup {i - 13} gto values at line {linesCounter} are defined, but have incorrect format");
+                        }
+                    }
+                }
+
+                PostflopHandsGroup postflopMainGroup = (PostflopHandsGroup)pd.MainGroup;
+
+                postflopMainGroup.MadeHandsGtoValue = mainGroupGtoValues[0];
+                postflopMainGroup.DrawHandsGtoValue = mainGroupGtoValues[1];
+                postflopMainGroup.ComboHandsGtoValue = mainGroupGtoValues[2];
+
+                for (int i = 0; i < subGroupGtoValues.Length; i++)
+                {
+                    PostflopHandsGroup postflopSubGroup = (PostflopHandsGroup)pd.SubGroups[i];
+
+                    postflopSubGroup.MadeHandsGtoValue = subGroupGtoValues[i][0];
+                    postflopSubGroup.DrawHandsGtoValue = subGroupGtoValues[i][1];
+                    postflopSubGroup.ComboHandsGtoValue = subGroupGtoValues[i][2];
                 }
 
                 linesCounter++;

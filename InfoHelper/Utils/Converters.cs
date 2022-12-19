@@ -85,6 +85,33 @@ namespace InfoHelper.Utils
         }
     }
 
+    public class DataCellForegroundConverter : IValueConverter
+    {
+        private object _gtoForegroundBrush;
+        private object _defaultForegroundBrush;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _gtoForegroundBrush ??= Application.Current.TryFindResource("GtoDataCellForeground");
+            _defaultForegroundBrush ??= Application.Current.TryFindResource("DefaultDataCellForeground");
+
+            DataCell dataCell = (DataCell)value;
+
+            if (dataCell == null || dataCell.Sample < Shared.MinDeviationSample)
+                return _defaultForegroundBrush;
+
+            if (dataCell is ValueCell or EvCell)
+                return _defaultForegroundBrush;
+
+            return !float.IsNaN(dataCell.GtoValue) ? _gtoForegroundBrush : _defaultForegroundBrush;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public class DataCellBackgroundConverter : IValueConverter
     {
         private object _notSelectedBackgroundBrush;
@@ -96,7 +123,7 @@ namespace InfoHelper.Utils
             if (value == null)
                 return _notSelectedBackgroundBrush;
 
-            _notSelectedBackgroundBrush ??= Application.Current.TryFindResource("NotSelectedDataCellBackground");
+            _notSelectedBackgroundBrush ??= Application.Current.TryFindResource("DefaultDataCellBackground");
             _selectedBackgroundBrush ??= Application.Current.TryFindResource("SelectedDataCellBackground");
             _missedBackgroundBrush ??= Application.Current.TryFindResource("MissedDataCellBackground");
 
@@ -273,13 +300,13 @@ namespace InfoHelper.Utils
         }
     }
 
-    public class DeviationsRectBrushConverter : IValueConverter
+    public class DeviationsForegroundConverter : IValueConverter
     {
         private SolidColorBrush[] _deviationBrushesList;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            _deviationBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBrushes");
+            _deviationBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationForegroundBrushes");
 
             DataCell dataCell = (DataCell)value;
 
@@ -287,6 +314,16 @@ namespace InfoHelper.Utils
                 return null;
 
             if (dataCell is ValueCell or EvCell)
+                return null;
+
+            float returnValue = float.NaN;
+
+            if (!float.IsNaN(dataCell.GtoValue))
+                returnValue = dataCell.GtoValue;
+            else if (!float.IsNaN(dataCell.DefaultValue))
+                returnValue = dataCell.DefaultValue;
+
+            if (float.IsNaN(returnValue))
                 return null;
 
             if (_deviationBrushesList == null)
@@ -297,7 +334,7 @@ namespace InfoHelper.Utils
 
             float calculatedValue = dataCell.CalculatedValue;
 
-            float deviation = calculatedValue - dataCell.DefaultValue;
+            float deviation = calculatedValue - returnValue;
 
             bool straightOrder = deviation >= 0 ? dataCell.RevertColors : !dataCell.RevertColors;
 
@@ -315,16 +352,78 @@ namespace InfoHelper.Utils
         }
     }
 
-    public class DeviationsRectBorderConverter : IValueConverter
+    public class DeviationsRectBrushConverter : IValueConverter
+    {
+        private SolidColorBrush[] _deviationBrushesList;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _deviationBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBackgroundBrushes");
+
+            DataCell dataCell = (DataCell)value;
+
+            if (dataCell == null || float.IsNaN(dataCell.DefaultValue) || dataCell.Sample < Shared.MinDeviationSample)
+                return null;
+
+            if (dataCell is ValueCell or EvCell)
+                return null;
+
+            float returnValue = float.NaN;
+
+            if (!float.IsNaN(dataCell.GtoValue))
+                returnValue = dataCell.GtoValue;
+            else if (!float.IsNaN(dataCell.DefaultValue))
+                returnValue = dataCell.DefaultValue;
+
+            if (float.IsNaN(returnValue))
+                return null;
+
+            if (_deviationBrushesList == null)
+                throw new Exception("Deviation brushes were not found");
+
+            if (_deviationBrushesList.Length % 2 != 0)
+                throw new Exception("Deviation brushes list contains odd number of elements");
+
+            float calculatedValue = dataCell.CalculatedValue;
+
+            float deviation = calculatedValue - returnValue;
+
+            bool straightOrder = deviation >= 0 ? dataCell.RevertColors : !dataCell.RevertColors;
+
+            int index = (int)Math.Abs(deviation) / 2;
+
+            if (index >= _deviationBrushesList.Length / 2)
+                index = _deviationBrushesList.Length / 2 - 1;
+
+            return straightOrder ? _deviationBrushesList[index] : _deviationBrushesList[new Index(index + 1, true)];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class DeviationsTextConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             DataCell dataCell = (DataCell)value;
 
-            if (dataCell == null || float.IsNaN(dataCell.DefaultValue) || dataCell.Sample < Shared.MinDeviationSample)
-                return Brushes.Transparent;
+            if (dataCell == null || dataCell.Sample < Shared.MinDeviationSample)
+                return null;
 
-            return dataCell is ValueCell or EvCell ? null : Brushes.Black;
+            if (dataCell is ValueCell or EvCell)
+                return null;
+
+            float returnValue = float.NaN;
+
+            if (!float.IsNaN(dataCell.GtoValue))
+                returnValue = dataCell.GtoValue;
+            else if (!float.IsNaN(dataCell.DefaultValue))
+                returnValue = dataCell.DefaultValue;
+
+            return float.IsNaN(returnValue) ? null : Math.Round(returnValue);
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
@@ -340,7 +439,7 @@ namespace InfoHelper.Utils
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("EvForegroundBrushes");
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationForegroundBrushes");
             _evDefaultBrush ??= (SolidColorBrush)Application.Current.TryFindResource("DefaultGeneralForegroundBrush");
 
             DataCell dataCell = (DataCell)value;
@@ -380,7 +479,7 @@ namespace InfoHelper.Utils
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBrushes");
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBackgroundBrushes");
             _evDefaultBrush ??= (SolidColorBrush)Application.Current.TryFindResource("DefaultGeneralBackgroundBrush");
 
             DataCell dataCell = (DataCell)value;

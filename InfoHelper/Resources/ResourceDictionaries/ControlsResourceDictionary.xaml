@@ -109,9 +109,10 @@
     <SolidColorBrush x:Key="PostflopHandsTableHeaderForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableHeaderBackgroundBrush">BurlyWood</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableForegroundBrush">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="PostflopHandsTableGtoForegroundBrush">Blue</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableBackgroundBrush">Beige</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableDeviationBackgroundBrush">LightGray</SolidColorBrush>
-    <Pen x:Key="PostflopHandsTablePen" Brush="Black" Thickness="1"/>
+    <Pen x:Key="PostflopHandsTableDefaultPen" Brush="Black" Thickness="1"/>
     <Pen x:Key="PostflopHandsTableAvgValuePen" Brush="DarkOrange" Thickness="2"/>
     <Pen x:Key="PostflopHandsTableDfltValuePen" Brush="DodgerBlue" Thickness="2">
         <Pen.DashStyle>
@@ -157,7 +158,7 @@
 
     <!--Content-->
     <!--Deviations brushes-->
-    <x:Array x:Key="DeviationBrushes" Type="SolidColorBrush">
+    <x:Array x:Key="DeviationBackgroundBrushes" Type="SolidColorBrush">
         <SolidColorBrush>#D9EBD9</SolidColorBrush>
         <SolidColorBrush>#CCE5CC</SolidColorBrush>
         <SolidColorBrush>#BFDEBF</SolidColorBrush>
@@ -207,14 +208,12 @@
     <Style TargetType="controls:GeneralDataCellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="{StaticResource DefaultGeneralForegroundBrush}"/>
         <Setter Property="Background" Value="{StaticResource DefaultGeneralBackgroundBrush}"/>
+        <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Bottom"/>
         <Setter Property="ShowSample" Value="False"/>
     </Style>
 
-    <x:Array x:Key="EvForegroundBrushes" Type="SolidColorBrush">
-        <SolidColorBrush>Black</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>
+    <x:Array x:Key="DeviationForegroundBrushes" Type="SolidColorBrush">
         <SolidColorBrush>Black</SolidColorBrush>
         <SolidColorBrush>Black</SolidColorBrush>
         <SolidColorBrush>Black</SolidColorBrush>
@@ -236,9 +235,13 @@
         <SolidColorBrush>White</SolidColorBrush>
         <SolidColorBrush>White</SolidColorBrush>
         <SolidColorBrush>White</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>
-        <SolidColorBrush>Black</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
+        <SolidColorBrush>White</SolidColorBrush>
         <SolidColorBrush>Black</SolidColorBrush>
         <SolidColorBrush>Black</SolidColorBrush>
         <SolidColorBrush>Black</SolidColorBrush>
@@ -257,24 +260,28 @@
     <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
 
     <!--Other panels-->
+    <SolidColorBrush x:Key="DefaultDataCellForeground">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="GtoDataCellForeground">Blue</SolidColorBrush>
+
+    <SolidColorBrush x:Key="DefaultDataCellBackground">Beige</SolidColorBrush>
+    <SolidColorBrush x:Key="SelectedDataCellBackground">BurlyWood</SolidColorBrush>
+    <SolidColorBrush x:Key="MissedDataCellBackground">#BAF3FF</SolidColorBrush>
+
     <Style x:Key="EmptyCellStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="Beige"/>
+        <Setter Property="Background" Value="{StaticResource DefaultDataCellBackground}"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
     </Style>
     <Style x:Key="FourBetRangeCellStyle" TargetType="controls:CellControl" BasedOn="{StaticResource CellBorderStyle}">
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="Background" Value="Beige"/>
+        <Setter Property="Background" Value="{StaticResource DefaultDataCellBackground}"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
     </Style>
     <Style TargetType="controls:DataCellControl" BasedOn="{StaticResource CellBorderStyle}">
-        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="Foreground" Value="{StaticResource DefaultDataCellForeground}"/>
         <Setter Property="HorizontalContentAlignment" Value="Left"/>
+        <Setter Property="VerticalContentAlignment" Value="Bottom"/>
     </Style>
-
-    <SolidColorBrush x:Key="NotSelectedDataCellBackground">Beige</SolidColorBrush>
-    <SolidColorBrush x:Key="SelectedDataCellBackground">BurlyWood</SolidColorBrush>
-    <SolidColorBrush x:Key="MissedDataCellBackground">#BAF3FF</SolidColorBrush>
 
     <!--Groups-->
     <!--Preflop-->

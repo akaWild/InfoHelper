@@ -5,16 +5,13 @@
     xmlns:controls="clr-namespace:InfoHelper.Controls"
     xmlns:utils="clr-namespace:InfoHelper.Utils">
 
-    <utils:ValueConverter x:Key="ValueConverter">
-    </utils:ValueConverter>
-    <utils:AttemptsConverter x:Key="AttemptsConverter">
-    </utils:AttemptsConverter>
-    <utils:DataCellBackgroundConverter x:Key="DataCellBackgroundConverter">
-    </utils:DataCellBackgroundConverter>
-    <utils:DeviationsRectBrushConverter x:Key="DeviationsRectBrushConverter">
-    </utils:DeviationsRectBrushConverter>
-    <utils:DeviationsRectBorderConverter x:Key="DeviationsRectBorderConverter">
-    </utils:DeviationsRectBorderConverter>
+    <utils:ValueConverter x:Key="ValueConverter"/>
+    <utils:AttemptsConverter x:Key="AttemptsConverter"/>
+    <utils:DataCellForegroundConverter x:Key="DataCellForegroundConverter"/>
+    <utils:DataCellBackgroundConverter x:Key="DataCellBackgroundConverter"/>
+    <utils:DeviationsForegroundConverter x:Key="DeviationsForegroundConverter"/>
+    <utils:DeviationsRectBrushConverter x:Key="DeviationsRectBrushConverter"/>
+    <utils:DeviationsTextConverter x:Key="DeviationsTextConverter"/>
     <Style TargetType="{x:Type controls:CellControl}">
         <Setter Property="Template">
             <Setter.Value>
@@ -41,17 +38,18 @@
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="4*"/>
-                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="5*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="2.5*"/>
+                                <ColumnDefinition Width="3.5*"/>
                             </Grid.ColumnDefinitions>
-                            <Viewbox Grid.Column="0" Grid.Row="0" Stretch="Uniform" Margin="2, 0, 0, 0" 
+                            <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Stretch="Uniform" Margin="0, 3, 0, -2" 
                                      HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
-                                     VerticalAlignment="Top" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                                <TextBlock>
+                                     VerticalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=VerticalContentAlignment}">
+                                <TextBlock Foreground="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DataCellForegroundConverter}}">
                                     <TextBlock.Text>
                                         <MultiBinding Converter="{StaticResource ValueConverter}">
                                             <Binding Path="Data" RelativeSource="{RelativeSource TemplatedParent}"/>
@@ -60,12 +58,12 @@
                                     </TextBlock.Text>
                                 </TextBlock>
                             </Viewbox>
-                            <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform" Margin ="0, 0, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
-                                <Rectangle Fill="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBrushConverter}}"
-                                    Width="200" Height="200" Stroke="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBorderConverter}}" 
-                                    StrokeThickness="2" SnapsToDevicePixels="True"/>
+                            <Border Grid.Column="2" Grid.Row="0" Background="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBrushConverter}}"/>
+                            <Viewbox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Stretch="Uniform" Margin="0, -2, 1, -1" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsTextConverter}}" 
+                                           Foreground="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsForegroundConverter}}"/>
                             </Viewbox>
-                            <Viewbox Grid.Column="1" Grid.Row="1" Stretch="Uniform" Margin ="0, 0, 2, 0" HorizontalAlignment="Right" VerticalAlignment="Bottom">
+                            <Viewbox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Stretch="Uniform" Margin ="0, -2, 1, -1" HorizontalAlignment="Right" VerticalAlignment="Bottom">
                                 <TextBlock>
                                     <TextBlock.Text>
                                         <MultiBinding Converter="{StaticResource AttemptsConverter}">
@@ -183,14 +181,17 @@
                             BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="4*"/>
-                                <RowDefinition Height="6*"/>
+                                <RowDefinition Height="5*"/>
+                                <RowDefinition Height="5*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="3.4*"/>
+                                <ColumnDefinition Width="2.6*"/>
                             </Grid.ColumnDefinitions>
-                            <Viewbox Grid.Column="0" Grid.Row="0" Stretch="Uniform" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.ColumnSpan="2" Grid.RowSpan="2">
+                            <Viewbox Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3" Grid.RowSpan="2" Stretch="Uniform" Margin="4, 0, 0, 0" 
+                                     HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
+                                     VerticalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=VerticalContentAlignment}">
                                 <TextBlock>
                                     <TextBlock.Text>
                                         <MultiBinding Converter="{StaticResource ValueConverter}">
@@ -200,10 +201,10 @@
                                     </TextBlock.Text>
                                 </TextBlock>
                             </Viewbox>
-                            <Viewbox Grid.Column="1" Grid.Row="0" Stretch="Uniform" Margin ="0, 0, 0, 0" HorizontalAlignment="Right" VerticalAlignment="Top">
-                                <Rectangle Fill="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBrushConverter}}"
-                                           Width="200" Height="200" Stroke="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBorderConverter}}" 
-                                           StrokeThickness="2" SnapsToDevicePixels="True"/>
+                            <Border Grid.Column="2" Grid.Row="0" Background="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsRectBrushConverter}}"/>
+                            <Viewbox Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Stretch="Uniform" Margin="0, -2, 1, -1" HorizontalAlignment="Right" VerticalAlignment="Top">
+                                <TextBlock Text="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsTextConverter}}" 
+                                           Foreground="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsForegroundConverter}}"/>
                             </Viewbox>
                         </Grid>
                     </Border>

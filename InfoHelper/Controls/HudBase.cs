@@ -48,6 +48,9 @@ namespace InfoHelper.Controls
             if (!float.IsNaN(dc.DefaultValue))
                 HudToolTip.Content += $" Dflt value: {Math.Round(dc.DefaultValue, 1).ToString(CultureInfo.InvariantCulture)}%";
 
+            if (!float.IsNaN(dc.GtoValue))
+                HudToolTip.Content += $" Gto value: {Math.Round(dc.GtoValue, 1).ToString(CultureInfo.InvariantCulture)}%";
+
             HudToolTip.IsOpen = true;
         }
 
