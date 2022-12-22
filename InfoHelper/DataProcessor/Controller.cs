@@ -343,12 +343,15 @@ namespace InfoHelper.DataProcessor
                                         if (gc.RoundChanged)
                                         {
                                             ulong pocketMask = Hand.ParseHand($"{gc.HoleCards[gc.HeroPosition - 1][0]}{gc.HoleCards[gc.HeroPosition - 1][1]}");
-                                            ulong boardMask = Hand.ParseHand($"{gc.FlopCard1}{gc.FlopCard2}{gc.FlopCard3}{gc.TurnCard ?? string.Empty}{gc.RiverCard ?? string.Empty}");
+
+                                            ulong flopMask = Hand.ParseHand($"{gc.FlopCard1}{gc.FlopCard2}{gc.FlopCard3}");
+                                            ulong turnCardMask = gc.TurnCard == null ? 0ul : Hand.ParseHand(gc.TurnCard);
+                                            ulong riverCardMask = gc.RiverCard == null ? 0ul : Hand.ParseHand(gc.RiverCard);
 
                                             gc.HeroHandData = new HeroHandInfo()
                                             {
-                                                Equity = HandManager.CalculateHandEquity(pocketMask, boardMask),
-                                                HandType = HandManager.GetMadeHandType(pocketMask, boardMask)
+                                                Equity = HandManager.CalculateHandEquity(pocketMask, flopMask | turnCardMask | riverCardMask),
+                                                HandType = HandManager.GetHandType(pocketMask, flopMask, turnCardMask, riverCardMask)
                                             };
                                         }
                                     }

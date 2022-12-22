@@ -915,20 +915,19 @@ namespace InfoHelper.DataProcessor
 
                         if (pocketMask != 0ul)
                         {
-                            string board = null;
+                            ulong flopMask = Hand.ParseHand($"{record.h.FlopCard1}{record.h.FlopCard2}{record.h.FlopCard3}");
+                            ulong turnCardMask = 0ul;
+                            ulong riverCardMask = 0ul;
 
-                            if(action.Round == 2)
-                                board = $"{record.h.FlopCard1}{record.h.FlopCard2}{record.h.FlopCard3}";
-                            else if(action.Round == 3)
-                                board = $"{record.h.FlopCard1}{record.h.FlopCard2}{record.h.FlopCard3}{record.h.TurnCard}";
-                            else if (action.Round == 4)
-                                board = $"{record.h.FlopCard1}{record.h.FlopCard2}{record.h.FlopCard3}{record.h.TurnCard}{record.h.RiverCard}";
+                            if (action.Round > 2)
+                                turnCardMask = Hand.ParseHand($"{record.h.TurnCard}");
 
-                            ulong boardMask = Hand.ParseHand(board);
+                            if (action.Round > 3)
+                                riverCardMask = Hand.ParseHand($"{record.h.RiverCard}");
 
-                            handEquity = Math.Round(HandManager.CalculateHandEquity(pocketMask, boardMask));
+                            handEquity = Math.Round(HandManager.CalculateHandEquity(pocketMask, flopMask | turnCardMask | riverCardMask));
 
-                            handType = HandManager.GetMadeHandType(pocketMask, boardMask);
+                            handType = HandManager.GetHandType(pocketMask, flopMask, turnCardMask, riverCardMask);
                         }
                     }
 
@@ -2280,12 +2279,18 @@ namespace InfoHelper.DataProcessor
                             if (handEquity > 0)
                                 handIndex = (int)handEquity - 1;
 
-                            if (handType == HandType.MadeHand)
+                            bool isMadeHand = (handType & HandType.MadeHand) != 0;
+                            bool isDrawHand = (handType & HandType.DrawHand) != 0;
+
+                            if (isDrawHand)
+                            {
+                                if(isMadeHand)
+                                    handsGroup.ComboHands[handIndex]++;
+                                else
+                                    handsGroup.DrawHands[handIndex]++;
+                            }
+                            else
                                 handsGroup.MadeHands[handIndex]++;
-                            else if (handType == HandType.DrawHand)
-                                handsGroup.DrawHands[handIndex]++;
-                            else if (handType == HandType.ComboHand)
-                                handsGroup.ComboHands[handIndex]++;
                         }
                     }
 

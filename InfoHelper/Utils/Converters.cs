@@ -170,12 +170,14 @@ namespace InfoHelper.Utils
         {
             HandType handType = (HandType)value;
 
-            return handType switch
+            bool isMadeHand = (handType & HandType.MadeHand) != 0;
+            bool isDrawHand = (handType & HandType.DrawHand) != 0;
+
+            return (isMadeHand, isDrawHand) switch
             {
-                HandType.MadeHand => Brushes.ForestGreen,
-                HandType.DrawHand => Brushes.Red,
-                HandType.ComboHand => Brushes.Blue,
-                _ => null,
+                (false, true) => Brushes.Red,
+                (true, true) => Brushes.Blue,
+                _ => Brushes.ForestGreen,
             };
         }
 
