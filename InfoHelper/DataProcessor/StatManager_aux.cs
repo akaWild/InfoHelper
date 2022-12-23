@@ -894,7 +894,7 @@ namespace InfoHelper.DataProcessor
 
                 ulong pocketMask = playerHoleCards[0] != null && playerHoleCards[1] != null ? Hand.ParseHand($"{playerHoleCards[0]}{playerHoleCards[1]}") : 0ul;
 
-                double handEquity = double.NaN;
+                double handDistance = double.NaN;
 
                 HandType handType = HandType.None;
 
@@ -925,7 +925,7 @@ namespace InfoHelper.DataProcessor
                             if (action.Round > 3)
                                 riverCardMask = Hand.ParseHand($"{record.h.RiverCard}");
 
-                            handEquity = Math.Round(HandManager.CalculateHandEquity(pocketMask, flopMask | turnCardMask | riverCardMask));
+                            handDistance = Math.Round(HandManager.CalculateHandDistance(pocketMask, flopMask | turnCardMask | riverCardMask));
 
                             handType = HandManager.GetHandType(pocketMask, flopMask, turnCardMask, riverCardMask);
                         }
@@ -2271,13 +2271,13 @@ namespace InfoHelper.DataProcessor
 
                         void AddPostflopHand(PostflopHandsGroup handsGroup)
                         {
-                            if (double.IsNaN(handEquity) || handType == HandType.None)
+                            if (double.IsNaN(handDistance) || handType == HandType.None)
                                 return;
 
                             int handIndex = 0;
 
-                            if (handEquity > 0)
-                                handIndex = (int)handEquity - 1;
+                            if (handDistance > 0)
+                                handIndex = (int)handDistance - 1;
 
                             bool isMadeHand = (handType & HandType.MadeHand) != 0;
                             bool isDrawHand = (handType & HandType.DrawHand) != 0;
