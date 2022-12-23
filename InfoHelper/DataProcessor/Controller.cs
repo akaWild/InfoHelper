@@ -350,7 +350,7 @@ namespace InfoHelper.DataProcessor
 
                                             gc.HeroHandData = new HeroHandInfo()
                                             {
-                                                Equity = HandManager.CalculateHandDistance(pocketMask, flopMask | turnCardMask | riverCardMask),
+                                                Equity = HandManager.CalculateHandEquity(pocketMask, flopMask | turnCardMask | riverCardMask),
                                                 HandType = HandManager.GetHandType(pocketMask, flopMask, turnCardMask, riverCardMask)
                                             };
                                         }
