@@ -2280,7 +2280,7 @@ namespace InfoHelper.DataProcessor
                                 handIndex = (int)handEquity - 1;
 
                             bool isMadeHand = (handType & HandType.MadeHand) != 0;
-                            bool isDrawHand = (handType & HandType.DrawHand) != 0;
+                            bool isDrawHand = (handType & HandType.DrawHand) != 0 || (handType & HandType.MissedDrawHand) != 0;
 
                             if (isDrawHand)
                             {

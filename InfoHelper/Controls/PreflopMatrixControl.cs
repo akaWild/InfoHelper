@@ -230,7 +230,6 @@ namespace InfoHelper.Controls
             drawingContext.DrawLine(_borderPen, new Point(CounterActionsWidth, 0), new Point(CounterActionsWidth, RenderSize.Height));
         }
 
-
         protected override void OnMouseMove(MouseEventArgs e)
         {
             base.OnMouseMove(e);

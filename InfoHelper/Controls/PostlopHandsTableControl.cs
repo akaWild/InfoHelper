@@ -91,8 +91,6 @@ namespace InfoHelper.Controls
             if(handsGroup == null)
                 return;
 
-            VisualEdgeMode = EdgeMode.Aliased;
-
             _defaultPen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDefaultPen");
             _avgValuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableAvgValuePen");
             _dfltValuePen ??= (Pen)Application.Current.TryFindResource("PostflopHandsTableDfltValuePen");
@@ -226,7 +224,7 @@ namespace InfoHelper.Controls
 
                     double x1 = (avgEq - sigma) / 100, x2 = (avgEq + sigma) / 100;
 
-                    drawingContext.DrawRectangle(_deviationBackgroudColor, null, new Rect(CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * x1, yIndent, (RenderSize.Width - CounterActionsWidth) * (x2 - x1), groupGraphHeight));
+                    drawingContext.DrawRectangle(_deviationBackgroudColor, null, new Rect(CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * x1 - columnWidth / 2, yIndent, (RenderSize.Width - CounterActionsWidth) * (x2 - x1), groupGraphHeight));
                 }
 
                 foreach (int handGroupsCount in hands)
@@ -272,19 +270,21 @@ namespace InfoHelper.Controls
                             groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - value, 1)).ToString(CultureInfo.InvariantCulture)})";
                         }
 
-                        double avgValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100;
+                        double avgValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100 - columnWidth / 2;
 
                         drawingContext.DrawLine(_avgValuePen, new Point(avgValueLineIndent, yIndent), new Point(avgValueLineIndent, yIndent + groupGraphHeight));
 
                         if (!float.IsNaN(value))
                         {
-                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * value / 100;
+                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * value / 100 - columnWidth / 2;
 
                             drawingContext.DrawLine(_dfltValuePen, new Point(dfltValueLineIndent, yIndent), new Point(dfltValueLineIndent, yIndent + groupGraphHeight));
                         }
                     }
 
                     FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, float.IsNaN(gtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
+
+                    formattedText.SetFontWeight(FontWeights.Bold);
 
                     Point textLocation = new Point(CounterActionsWidth + 3, yIndent);
 
