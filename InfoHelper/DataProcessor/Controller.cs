@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.Json;
 using System.Text.RegularExpressions;
@@ -143,6 +144,8 @@ namespace InfoHelper.DataProcessor
                 Assembly assemblyScreenParser = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ScreenParser.dll"));
 
                 _screenParserType = assemblyScreenParser.GetType("Parser.ScreenParser");
+
+                RuntimeHelpers.RunClassConstructor(_screenParserType.TypeHandle);
 
                 Assembly assemblyParserDataAnalyzer = Assembly.LoadFile(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources\\GGPoker\\ParserDataAnalyzer.dll"));
 

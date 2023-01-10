@@ -131,6 +131,10 @@
 
   <ItemGroup>
     <Folder Include="Resources\CsvFiles\" />
+    <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\BoardCard\" />
+    <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\HoleCard\" />
+    <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\Pot\" />
+    <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\RoundPot\" />
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
