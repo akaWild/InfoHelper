@@ -6306,108 +6306,123 @@
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="321, 162, 11, 8">
+                <GgRecordItemInfo Rectangle="327, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_tile6" Value="BB" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="313, 162, 4, 8">
+                <GgRecordItemInfo Rectangle="321, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-              </GgRecordItems>
-            </GgRecordInfo>
-            <GgRecordInfo>
-              <GgRecordItems>
-                <GgRecordItemInfo Rectangle="324, 162, 11, 8">
+                <GgRecordItemInfo Rectangle="311, 162, 6, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_tile6" Value="BB" />
-                  </RecordItemValues>
-                </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="316, 162, 5, 8">
-                  <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
-                  </RecordItemValues>
-                </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="310, 162, 5, 8">
-                  <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="327, 162, 11, 8">
+                <GgRecordItemInfo Rectangle="330, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_tile6" Value="BB" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="319, 162, 4, 8">
+                <GgRecordItemInfo Rectangle="324, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="313, 162, 5, 8">
+                <GgRecordItemInfo Rectangle="315, 162, 6, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="307, 162, 5, 8">
+                <GgRecordItemInfo Rectangle="309, 162, 6, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="333, 162, 5, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="327, 162, 5, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="318, 162, 6, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="312, 162, 6, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="306, 162, 6, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -6417,167 +6432,177 @@
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="326, 162, 11, 8">
+                <GgRecordItemInfo Rectangle="332, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_tile6" Value="BB" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="317, 162, 5, 8">
+                <GgRecordItemInfo Rectangle="326, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="316, 162, 6, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="315, 162, 1, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="._bet_tile6" Value="." />
+                    <GgRecordItemValueInfo ItemImageNameMask="._bet_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="309, 162, 5, 8">
+                <GgRecordItemInfo Rectangle="308, 162, 6, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="329, 162, 11, 8">
+                <GgRecordItemInfo Rectangle="335, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_tile6" Value="BB" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="320, 162, 5, 8">
+                <GgRecordItemInfo Rectangle="329, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet_wb_tile6" Value="B" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="319, 162, 6, 8">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="317, 162, 2, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="._bet_tile6" Value="." />
+                    <GgRecordItemValueInfo ItemImageNameMask="._bet_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="312, 162, 4, 8">
+                <GgRecordItemInfo Rectangle="311, 162, 6, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="306, 162, 5, 8">
+                <GgRecordItemInfo Rectangle="305, 162, 6, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
-            <GgRecordInfo>
+            <!--<GgRecordInfo>
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="331, 162, 11, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_tile6" Value="BB" />
+                    <GgRecordItemValueInfo ItemImageNameMask="BB_bet_wb_tile6" Value="BB" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="322, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="320, 162, 1, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="._bet_tile6" Value="." />
+                    <GgRecordItemValueInfo ItemImageNameMask="._bet_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="314, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="308, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_tile6" Value="0" />
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet_wb_tile6" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
                 <GgRecordItemInfo Rectangle="302, 162, 5, 8">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_tile6" Value="1" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_tile6" Value="2" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_tile6" Value="3" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_tile6" Value="4" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_tile6" Value="5" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_tile6" Value="6" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_tile6" Value="7" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_tile6" Value="8" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_tile6" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet_wb_tile6" Value="1" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet_wb_tile6" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet_wb_tile6" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet_wb_tile6" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet_wb_tile6" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet_wb_tile6" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet_wb_tile6" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet_wb_tile6" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet_wb_tile6" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
-            </GgRecordInfo>
+            </GgRecordInfo>-->
             <GgRecordInfo>
               <GgRecordItems />
             </GgRecordInfo>
