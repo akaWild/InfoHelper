@@ -2029,58 +2029,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="193, 202, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc1_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc1_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc1_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc1_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc1_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc1_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc1_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc1_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc1_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc1_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc1_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc1_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc1_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc1_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc1_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc1_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc1_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc1_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc1_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc1_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc1_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc1_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc1_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc1_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc1_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc1_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc1_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc1_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc1_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc1_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc1_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc1_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc1_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc1_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc1_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc1_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc1_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc1_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc1_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc1_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc1_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc1_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc1_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc1_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc1_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc1_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc1_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc1_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc1_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc1_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc1_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc1_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc1_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc1_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc1_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc1_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -2093,58 +2093,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="247, 202, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc2_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc2_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc2_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc2_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc2_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc2_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc2_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc2_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc2_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc2_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc2_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc2_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc2_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc2_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc2_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc2_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc2_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc2_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc2_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc2_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc2_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc2_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc2_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc2_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc2_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc2_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc2_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc2_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc2_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc2_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc2_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc2_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc2_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc2_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc2_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc2_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc2_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc2_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc2_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc2_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc2_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc2_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc2_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc2_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc2_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc2_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc2_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc2_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc2_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc2_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc2_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc2_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc2_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc2_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc2_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc2_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -2157,58 +2157,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="301, 202, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc3_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc3_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc3_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc3_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc3_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc3_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc3_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc3_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc3_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc3_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc3_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc3_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc3_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc3_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc3_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc3_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc3_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc3_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc3_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc3_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc3_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc3_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc3_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc3_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc3_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc3_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc3_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc3_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc3_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc3_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc3_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc3_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc3_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc3_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc3_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc3_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc3_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc3_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc3_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc3_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc3_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc3_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc3_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc3_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc3_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc3_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc3_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc3_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc3_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc3_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc3_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc3_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc3_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc3_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc3_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc3_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -2221,58 +2221,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="355, 202, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc4_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc4_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc4_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc4_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc4_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc4_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc4_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc4_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc4_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc4_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc4_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc4_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc4_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc4_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc4_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc4_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc4_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc4_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc4_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc4_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc4_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc4_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc4_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc4_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc4_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc4_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc4_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc4_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc4_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc4_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc4_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc4_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc4_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc4_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc4_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc4_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc4_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc4_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc4_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc4_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc4_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc4_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc4_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc4_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc4_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc4_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc4_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc4_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc4_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc4_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc4_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc4_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc4_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc4_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc4_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc4_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -2285,58 +2285,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="409, 202, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc5_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc5_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc5_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_bc5_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc5_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc5_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc5_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_bc5_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc5_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc5_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc5_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_bc5_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc5_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc5_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc5_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_bc5_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc5_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc5_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc5_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_bc5_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc5_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc5_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc5_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_bc5_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc5_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc5_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc5_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_bc5_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc5_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc5_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc5_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_bc5_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc5_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc5_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc5_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_bc5_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc5_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc5_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc5_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_bc5_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc5_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc5_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc5_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_bc5_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc5_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc5_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc5_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_bc5_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc5_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc5_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc5_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_bc5_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc5_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc5_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc5_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc5_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -2351,58 +2351,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="282, 355, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc1_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc1_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc1_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc1_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc1_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc1_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc1_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc1_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc1_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc1_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc1_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc1_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc1_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc1_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc1_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc1_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc1_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc1_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc1_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc1_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc1_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc1_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc1_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc1_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc1_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc1_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc1_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc1_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc1_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc1_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc1_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc1_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc1_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc1_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc1_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc1_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc1_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc1_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc1_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc1_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc1_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc1_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc1_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc1_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc1_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc1_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc1_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc1_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc1_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc1_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc1_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc1_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -2415,58 +2415,58 @@
               <GgRecordItems>
                 <GgRecordItemInfo Rectangle="318, 353, 10, 10">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc2_tile6" Value="2c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc2_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc2_tile6" Value="2d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="2_v2_hc2_tile6" Value="2h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc2_tile6" Value="3c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc2_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc2_tile6" Value="3d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="3_v2_hc2_tile6" Value="3h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc2_tile6" Value="4c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc2_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc2_tile6" Value="4d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="4_v2_hc2_tile6" Value="4h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc2_tile6" Value="5c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc2_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc2_tile6" Value="5d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="5_v2_hc2_tile6" Value="5h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc2_tile6" Value="6c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc2_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc2_tile6" Value="6d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="6_v2_hc2_tile6" Value="6h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc2_tile6" Value="7c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc2_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc2_tile6" Value="7d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="7_v2_hc2_tile6" Value="7h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc2_tile6" Value="8c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc2_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc2_tile6" Value="8d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="8_v2_hc2_tile6" Value="8h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc2_tile6" Value="9c" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc2_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc2_tile6" Value="9d" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="9_v2_hc2_tile6" Value="9h" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc2_tile6" Value="Tc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc2_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc2_tile6" Value="Td" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="T_v2_hc2_tile6" Value="Th" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc2_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc2_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc2_tile6" Value="Jd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_v2_hc2_tile6" Value="Jh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc2_tile6" Value="Qc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc2_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc2_tile6" Value="Qd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="Q_v2_hc2_tile6" Value="Qh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc2_tile6" Value="Kc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc2_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc2_tile6" Value="Kd" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="K_v2_hc2_tile6" Value="Kh" DarkRRange="{135,165}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc2_tile6" Value="Ac" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc2_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc2_tile6" Value="Ad" DarkBRange="{137,167}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="A_v2_hc2_tile6" Value="Ah" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_tile6" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_tile6" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_tile6" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_tile6" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>

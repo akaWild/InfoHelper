@@ -602,7 +602,10 @@ namespace InfoHelper.Utils
                 while (true)
                 {
                     if (!initialPlayers[nxt - 1])
-                        outPlayers++;
+                    {
+                        if(!blindsPositions.Contains(nxt))
+                            outPlayers++;
+                    }
 
                     if (nxt == blindsPositions[1])
                         break;
