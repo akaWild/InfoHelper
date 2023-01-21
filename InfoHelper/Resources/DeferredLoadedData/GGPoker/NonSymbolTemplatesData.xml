@@ -4,320 +4,320 @@
     <GgTableInfo TableType="Default">
       <GgTemplates>
         <!--Board card V1-->
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="1" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="257, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="257, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="257, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="2" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="329, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="329, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="329, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="3" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="3" ApplyOtsu="true"  OtsuErrorTolerance="0.05" Rectangle="401, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="401, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="401, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="4" ApplyOtsu="true"  OtsuErrorTolerance="0.05" Rectangle="473, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="473, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="473, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="5" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV1" TemplatesFolder="Templates\Default\BoardCard" Position="5" ApplyOtsu="true"  OtsuErrorTolerance="0.05" Rectangle="545, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="545, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="545, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -326,320 +326,320 @@
         </GgTemplateInfo>
 
         <!--Board card V2-->
-        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="1" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="257, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="257, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="257, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="2" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="329, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="329, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="329, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="3" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="3" ApplyOtsu="true"  OtsuErrorTolerance="0.05" Rectangle="401, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="401, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="401, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="4" ApplyOtsu="true"  OtsuErrorTolerance="0.05" Rectangle="473, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="473, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="473, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="5" Deviation="20">
+        <GgTemplateInfo TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="5" ApplyOtsu="true"  OtsuErrorTolerance="0.05" Rectangle="545, 258, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="545, 259, 10, 8">
+                <GgRecordItemInfo Rectangle="545, 258, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_bc_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_bc_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_bc_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_bc_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_bc_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_bc_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_bc_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_bc_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_bc_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_bc_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_bc_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_bc_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_bc_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_bc_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_bc_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_bc_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_bc_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_bc_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_bc_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_bc_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_bc_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_bc_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_bc_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_bc_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_bc_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_bc_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_bc_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_bc_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_bc_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_bc_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_bc_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_bc_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_bc_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_bc_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_bc_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_bc_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_bc_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_bc_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_bc_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_bc_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_bc_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_bc_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_bc_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_bc_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_bc_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_bc_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_bc_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_bc_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_bc_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_bc_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_bc_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_bc_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bc_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bc_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bc_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bc_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bc_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bc_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bc_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bc_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_bc_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_bc_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_bc_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_bc_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_bc_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -648,128 +648,128 @@
         </GgTemplateInfo>
 
         <!--Hole card V1-->
-        <GgTemplateInfo TemplateName="HoleCard1V1" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="HoleCard1V1" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="375, 463, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="375, 463, 10, 8">
+                <GgRecordItemInfo Rectangle="375, 463, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_hc1_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_hc1_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_hc1_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_hc1_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_hc1_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_hc1_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_hc1_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_hc1_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_hc1_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_hc1_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_hc1_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_hc1_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_hc1_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_hc1_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_hc1_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_hc1_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_hc1_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_hc1_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_hc1_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_hc1_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_hc1_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_hc1_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_hc1_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_hc1_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_hc1_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_hc1_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_hc1_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_hc1_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_hc1_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_hc1_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_hc1_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_hc1_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_hc1_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_hc1_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_hc1_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_hc1_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_hc1_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_hc1_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_hc1_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_hc1_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_hc1_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_hc1_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_hc1_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_hc1_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_hc1_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_hc1_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_hc1_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_hc1_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_hc1_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_hc1_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_hc1_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_hc1_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCard2V1" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="HoleCard2V1" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="423, 458, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="423, 458, 10, 8">
+                <GgRecordItemInfo Rectangle="423, 458, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v1_hc2_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v1_hc2_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v1_hc2_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v1_hc2_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v1_hc2_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v1_hc2_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v1_hc2_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v1_hc2_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v1_hc2_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v1_hc2_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v1_hc2_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v1_hc2_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v1_hc2_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v1_hc2_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v1_hc2_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v1_hc2_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v1_hc2_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v1_hc2_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v1_hc2_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v1_hc2_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v1_hc2_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v1_hc2_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v1_hc2_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v1_hc2_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v1_hc2_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v1_hc2_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v1_hc2_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v1_hc2_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v1_hc2_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v1_hc2_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v1_hc2_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v1_hc2_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v1_hc2_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v1_hc2_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v1_hc2_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v1_hc2_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v1_hc2_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v1_hc2_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v1_hc2_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v1_hc2_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v1_hc2_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v1_hc2_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v1_hc2_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v1_hc2_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v1_hc2_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v1_hc2_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v1_hc2_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v1_hc2_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v1_hc2_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v1_hc2_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v1_hc2_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v1_hc2_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v1_bw_dflt" Value="2c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v1_bw_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v1_bw_dflt" Value="2d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v1_bw_dflt" Value="2h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v1_bw_dflt" Value="3c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v1_bw_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v1_bw_dflt" Value="3d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v1_bw_dflt" Value="3h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v1_bw_dflt" Value="4c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v1_bw_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v1_bw_dflt" Value="4d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v1_bw_dflt" Value="4h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v1_bw_dflt" Value="5c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v1_bw_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v1_bw_dflt" Value="5d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v1_bw_dflt" Value="5h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v1_bw_dflt" Value="6c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v1_bw_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v1_bw_dflt" Value="6d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v1_bw_dflt" Value="6h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v1_bw_dflt" Value="7c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v1_bw_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v1_bw_dflt" Value="7d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v1_bw_dflt" Value="7h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v1_bw_dflt" Value="8c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v1_bw_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v1_bw_dflt" Value="8d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v1_bw_dflt" Value="8h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v1_bw_dflt" Value="9c" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v1_bw_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v1_bw_dflt" Value="9d" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v1_bw_dflt" Value="9h" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v1_bw_dflt" Value="Tc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v1_bw_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v1_bw_dflt" Value="Td" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v1_bw_dflt" Value="Th" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v1_bw_dflt" Value="Jc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v1_bw_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v1_bw_dflt" Value="Jd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v1_bw_dflt" Value="Jh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v1_bw_dflt" Value="Qc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v1_bw_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v1_bw_dflt" Value="Qd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v1_bw_dflt" Value="Qh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v1_bw_dflt" Value="Kc" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v1_bw_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v1_bw_dflt" Value="Kd" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v1_bw_dflt" Value="Kh" DarkRRange="{185,215}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v1_bw_dflt" Value="Ac" DarkGRange="{125,155}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v1_bw_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v1_bw_dflt" Value="Ad" DarkBRange="{180,210}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v1_bw_dflt" Value="Ah" DarkRRange="{185,215}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -778,128 +778,128 @@
         </GgTemplateInfo>
 
         <!--Hole card V2-->
-        <GgTemplateInfo TemplateName="HoleCard1V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="HoleCard1V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="375, 463, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="375, 463, 10, 8">
+                <GgRecordItemInfo Rectangle="375, 463, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_hc1_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_hc1_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_hc1_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_hc1_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_hc1_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_hc1_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_hc1_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_hc1_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_hc1_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_hc1_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_hc1_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_hc1_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_hc1_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_hc1_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_hc1_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_hc1_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_hc1_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_hc1_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_hc1_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_hc1_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_hc1_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_hc1_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_hc1_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_hc1_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_hc1_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_hc1_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_hc1_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_hc1_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_hc1_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_hc1_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_hc1_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_hc1_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_hc1_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_hc1_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_hc1_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_hc1_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_hc1_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_hc1_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_hc1_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_hc1_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_hc1_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_hc1_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_hc1_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_hc1_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_hc1_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_hc1_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_hc1_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_hc1_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_hc1_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_hc1_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_hc1_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_hc1_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc1_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc1_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc1_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc1_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc1_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc1_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc1_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc1_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc1_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc1_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc1_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc1_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc1_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="HoleCard2V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" Deviation="20">
+        <GgTemplateInfo TemplateName="HoleCard2V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" Rectangle="423, 458, 10, 14">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="423, 458, 10, 8">
+                <GgRecordItemInfo Rectangle="423, 458, 10, 14">
                   <RecordItemValues>
-                    <GgRecordItemValueInfo ItemImageNameMask="2c_v2_hc2_dflt" Value="2c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2s_v2_hc2_dflt" Value="2s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2d_v2_hc2_dflt" Value="2d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="2h_v2_hc2_dflt" Value="2h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3c_v2_hc2_dflt" Value="3c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3s_v2_hc2_dflt" Value="3s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3d_v2_hc2_dflt" Value="3d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="3h_v2_hc2_dflt" Value="3h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4c_v2_hc2_dflt" Value="4c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4s_v2_hc2_dflt" Value="4s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4d_v2_hc2_dflt" Value="4d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="4h_v2_hc2_dflt" Value="4h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5c_v2_hc2_dflt" Value="5c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5s_v2_hc2_dflt" Value="5s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5d_v2_hc2_dflt" Value="5d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="5h_v2_hc2_dflt" Value="5h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6c_v2_hc2_dflt" Value="6c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6s_v2_hc2_dflt" Value="6s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6d_v2_hc2_dflt" Value="6d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="6h_v2_hc2_dflt" Value="6h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7c_v2_hc2_dflt" Value="7c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7s_v2_hc2_dflt" Value="7s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7d_v2_hc2_dflt" Value="7d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="7h_v2_hc2_dflt" Value="7h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8c_v2_hc2_dflt" Value="8c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8s_v2_hc2_dflt" Value="8s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8d_v2_hc2_dflt" Value="8d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="8h_v2_hc2_dflt" Value="8h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9c_v2_hc2_dflt" Value="9c" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9s_v2_hc2_dflt" Value="9s" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9d_v2_hc2_dflt" Value="9d" />
-                    <GgRecordItemValueInfo ItemImageNameMask="9h_v2_hc2_dflt" Value="9h" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Tc_v2_hc2_dflt" Value="Tc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ts_v2_hc2_dflt" Value="Ts" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Td_v2_hc2_dflt" Value="Td" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Th_v2_hc2_dflt" Value="Th" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jc_v2_hc2_dflt" Value="Jc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Js_v2_hc2_dflt" Value="Js" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jd_v2_hc2_dflt" Value="Jd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Jh_v2_hc2_dflt" Value="Jh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qc_v2_hc2_dflt" Value="Qc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qs_v2_hc2_dflt" Value="Qs" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qd_v2_hc2_dflt" Value="Qd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Qh_v2_hc2_dflt" Value="Qh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kc_v2_hc2_dflt" Value="Kc" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ks_v2_hc2_dflt" Value="Ks" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kd_v2_hc2_dflt" Value="Kd" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Kh_v2_hc2_dflt" Value="Kh" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ac_v2_hc2_dflt" Value="Ac" />
-                    <GgRecordItemValueInfo ItemImageNameMask="As_v2_hc2_dflt" Value="As" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ad_v2_hc2_dflt" Value="Ad" />
-                    <GgRecordItemValueInfo ItemImageNameMask="Ah_v2_hc2_dflt" Value="Ah" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_dflt" Value="2c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_dflt" Value="2s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_dflt" Value="2d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_hc2_v2_wb_dflt" Value="2h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_dflt" Value="3c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_dflt" Value="3s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_dflt" Value="3d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="3_hc2_v2_wb_dflt" Value="3h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_dflt" Value="4c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_dflt" Value="4s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_dflt" Value="4d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="4_hc2_v2_wb_dflt" Value="4h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_dflt" Value="5c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_dflt" Value="5s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_dflt" Value="5d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="5_hc2_v2_wb_dflt" Value="5h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_dflt" Value="6c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_dflt" Value="6s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_dflt" Value="6d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="6_hc2_v2_wb_dflt" Value="6h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_dflt" Value="7c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_dflt" Value="7s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_dflt" Value="7d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="7_hc2_v2_wb_dflt" Value="7h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_dflt" Value="8c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_dflt" Value="8s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_dflt" Value="8d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="8_hc2_v2_wb_dflt" Value="8h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_dflt" Value="9c" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_dflt" Value="9s" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_dflt" Value="9d" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="9_hc2_v2_wb_dflt" Value="9h" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_dflt" Value="Tc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_dflt" Value="Ts" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_dflt" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_dflt" Value="Qd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_dflt" Value="Qh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_dflt" Value="Kc" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_dflt" Value="Ks" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_dflt" Value="Kd" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="K_hc2_v2_wb_dflt" Value="Kh" DarkRRange="{135,165}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_dflt" Value="Ac" DarkGRange="{130,160}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_dflt" Value="As" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_dflt" Value="Ad" DarkBRange="{137,167}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="A_hc2_v2_wb_dflt" Value="Ah" DarkRRange="{135,165}"/>
                   </RecordItemValues>
                 </GgRecordItemInfo>
               </GgRecordItems>
@@ -1620,7 +1620,7 @@
         </GgTemplateInfo>
 
         <!--Nick validity-->
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="1" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="1" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1633,7 +1633,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="2" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="2" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1646,7 +1646,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="3" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="3" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1659,7 +1659,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="4" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="4" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1672,7 +1672,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="5" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="5" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1685,7 +1685,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="6" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Default\NickValidity" Position="6" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1700,7 +1700,7 @@
         </GgTemplateInfo>
 
         <!--Stack validity (top)-->
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="1" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="1" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1713,7 +1713,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="2" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="2" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1726,7 +1726,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="3" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="3" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1739,7 +1739,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="4" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="4" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1752,7 +1752,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="5" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="5" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1765,7 +1765,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="6" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Default\StackValidity" Position="6" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1780,7 +1780,7 @@
         </GgTemplateInfo>
 
         <!--Stack validity (bottom)-->
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="1" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="1" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1793,7 +1793,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="2" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="2" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1806,7 +1806,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="3" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="3" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1819,7 +1819,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="4" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="4" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1832,7 +1832,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="5" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="5" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -1845,7 +1845,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="6" Deviation="0">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Default\StackValidity" Position="6" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2713,7 +2713,7 @@
         </GgTemplateInfo>
 
         <!--Nick validity-->
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="1" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="1" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2726,7 +2726,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="2" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="2" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2739,7 +2739,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="3" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="3" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2752,7 +2752,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="4" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="4" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2765,7 +2765,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="5" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="5" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2778,7 +2778,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="6" Deviation="0">
+        <GgTemplateInfo TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="6" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2793,7 +2793,7 @@
         </GgTemplateInfo>
 
         <!--Stack validity (top)-->
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="1" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="1" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2806,7 +2806,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="2" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="2" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2819,7 +2819,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="3" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="3" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2832,7 +2832,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="4" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="4" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2845,7 +2845,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="5" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="5" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2858,7 +2858,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="6" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="6" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2873,7 +2873,7 @@
         </GgTemplateInfo>
 
         <!--Stack validity (bottom)-->
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="1" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="1" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2886,7 +2886,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="2" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="2" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2899,7 +2899,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="3" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="3" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2912,7 +2912,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="4" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="4" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2925,7 +2925,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="5" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="5" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
@@ -2938,7 +2938,7 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="6" Deviation="4">
+        <GgTemplateInfo TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="6" Deviation="5">
           <GgRecords>
             <GgRecordInfo>
               <GgRecordItems>
