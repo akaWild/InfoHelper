@@ -253,6 +253,9 @@ namespace InfoHelper.Controls
 
             int i = (int)Math.Floor((position.Y - yIndent) / rowHeight), j = (int)Math.Floor((position.X - xIndent) / columnWidth);
 
+            if (i > 12 || j > 12)
+                return;
+
             string cards = Common.HoleCards[i * 13 + j];
 
             int value = phg.PocketHands[i * 13 + j];
