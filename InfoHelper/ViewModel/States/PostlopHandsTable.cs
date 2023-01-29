@@ -9,19 +9,11 @@ namespace InfoHelper.ViewModel.States
     {
         public PostflopHandsGroup PostflopHandsGroup { get; set; }
 
+        public int Round { get; set; }
+
         public override void UpdateBindings()
         {
-            string hashString = $"{Visible}{Header ?? string.Empty}";
-
-            StringBuilder sb = new StringBuilder();
-
-            if (PostflopHandsGroup != null)
-            {
-                for (int i = 0; i < PostflopHandsGroup.HandCategoriesCount; i++)
-                    sb.Append($"{PostflopHandsGroup.MadeHands[i]}{PostflopHandsGroup.DrawHands[i]}{PostflopHandsGroup.ComboHands[i]}");
-            }
-
-            hashString += sb.ToString();
+            string hashString = $"{Visible}{Round}{Header ?? string.Empty}{PostflopHandsGroup?.MadeHandsAccumulatedEquity}{PostflopHandsGroup?.DrawHandsAccumulatedEquity}";
 
             int hashCode = hashString.GetStableHashCode();
 

@@ -885,7 +885,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_dflt" Value="Td" DarkBRange="{137,167}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_dflt" Value="Th" DarkRRange="{135,165}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Js" DarkRRange="{41,43}" DarkGRange="{41,43}" DarkBRange="{41,43}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Jd" DarkBRange="{137,167}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_dflt" Value="Jh" DarkRRange="{135,165}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_dflt" Value="Qc" DarkGRange="{130,160}"/>
@@ -2452,7 +2452,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Td" DarkBRange="{137,167}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Th" DarkRRange="{135,165}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Js" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Js" DarkRRange="{43,47}" DarkGRange="{43,47}" DarkBRange="{43,47}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}"/>

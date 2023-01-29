@@ -521,13 +521,13 @@ namespace InfoHelper.DataProcessor
                     continue;
                 }
 
-                float[] mainGroupDfltValues = new float[] { float.NaN, float.NaN, float.NaN };
+                float[] mainGroupDfltValues = new float[] { float.NaN, float.NaN };
 
                 if (parts[12] != string.Empty)
                 {
                     string[] mainGroupParts = parts[12].Split(",");
 
-                    if (mainGroupParts.Length != 3)
+                    if (mainGroupParts.Length != 2)
                         throw new Exception($"Cell main group default values at line {linesCounter} are defined, but have incorrect format");
 
                     for (int i = 0; i < mainGroupParts.Length; i++)
@@ -542,10 +542,10 @@ namespace InfoHelper.DataProcessor
 
                 float[][] subGroupDefaultValues = new float[][]
                 {
-                    new float[]{float.NaN, float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
                 };
 
                 for (int i = 13; i < parts.Length; i++)
@@ -554,7 +554,7 @@ namespace InfoHelper.DataProcessor
                     {
                         string[] subGroupParts = parts[i].Split(",");
 
-                        if (subGroupParts.Length != 3)
+                        if (subGroupParts.Length != 2)
                             throw new Exception($"Cell subgroup {i - 13} default values at line {linesCounter} are defined, but have incorrect format");
 
                         for (int j = 0; j < subGroupParts.Length; j++)
@@ -572,7 +572,6 @@ namespace InfoHelper.DataProcessor
 
                 postflopMainGroup.MadeHandsDefaultValue = mainGroupDfltValues[0];
                 postflopMainGroup.DrawHandsDefaultValue = mainGroupDfltValues[1];
-                postflopMainGroup.ComboHandsDefaultValue = mainGroupDfltValues[2];
 
                 for (int i = 0; i < subGroupDefaultValues.Length; i++)
                 {
@@ -580,7 +579,6 @@ namespace InfoHelper.DataProcessor
 
                     postflopSubGroup.MadeHandsDefaultValue = subGroupDefaultValues[i][0];
                     postflopSubGroup.DrawHandsDefaultValue = subGroupDefaultValues[i][1];
-                    postflopSubGroup.ComboHandsDefaultValue = subGroupDefaultValues[i][2];
                 }
 
                 linesCounter++;
@@ -680,13 +678,13 @@ namespace InfoHelper.DataProcessor
                     continue;
                 }
 
-                float[] mainGroupGtoValues = new float[] { float.NaN, float.NaN, float.NaN };
+                float[] mainGroupGtoValues = new float[] { float.NaN, float.NaN };
 
                 if (parts[12] != string.Empty)
                 {
                     string[] mainGroupParts = parts[12].Split(",");
 
-                    if (mainGroupParts.Length != 3)
+                    if (mainGroupParts.Length != 2)
                         throw new Exception($"Cell main group gto values at line {linesCounter} are defined, but have incorrect format");
 
                     for (int i = 0; i < mainGroupParts.Length; i++)
@@ -701,10 +699,10 @@ namespace InfoHelper.DataProcessor
 
                 float[][] subGroupGtoValues = new float[][]
                 {
-                    new float[]{float.NaN, float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
+                    new float[]{float.NaN, float.NaN},
                 };
 
                 for (int i = 13; i < parts.Length; i++)
@@ -713,7 +711,7 @@ namespace InfoHelper.DataProcessor
                     {
                         string[] subGroupParts = parts[i].Split(",");
 
-                        if (subGroupParts.Length != 3)
+                        if (subGroupParts.Length != 2)
                             throw new Exception($"Cell subgroup {i - 13} gto values at line {linesCounter} are defined, but have incorrect format");
 
                         for (int j = 0; j < subGroupParts.Length; j++)
@@ -731,7 +729,6 @@ namespace InfoHelper.DataProcessor
 
                 postflopMainGroup.MadeHandsGtoValue = mainGroupGtoValues[0];
                 postflopMainGroup.DrawHandsGtoValue = mainGroupGtoValues[1];
-                postflopMainGroup.ComboHandsGtoValue = mainGroupGtoValues[2];
 
                 for (int i = 0; i < subGroupGtoValues.Length; i++)
                 {
@@ -739,7 +736,6 @@ namespace InfoHelper.DataProcessor
 
                     postflopSubGroup.MadeHandsGtoValue = subGroupGtoValues[i][0];
                     postflopSubGroup.DrawHandsGtoValue = subGroupGtoValues[i][1];
-                    postflopSubGroup.ComboHandsGtoValue = subGroupGtoValues[i][2];
                 }
 
                 linesCounter++;

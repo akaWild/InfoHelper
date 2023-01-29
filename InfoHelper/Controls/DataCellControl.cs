@@ -370,6 +370,9 @@ namespace InfoHelper.Controls
 
             PostlopHandsTableControl[] postflopControls = postflopGrid.Children.Cast<PostlopHandsTableControl>().ToArray();
 
+            int round = postflopDataCells[0].Round;
+
+            postflopControls[0].Round = round;
             postflopControls[0].Data = ((PostflopData)postflopDataCells[0].CellData).MainGroup;
             postflopControls[0].Header = postflopDataCells[0].Description;
 
@@ -392,6 +395,7 @@ namespace InfoHelper.Controls
                     {
                         postflopControls[i + 1].Visibility = Visibility.Visible;
 
+                        postflopControls[i + 1].Round = round;
                         postflopControls[i + 1].Data = ((PostflopData)postflopDataCells[0].CellData).SubGroups[i];
 
                         string lowBound = $"{Math.Round(betRange1[i].LowBound).ToString(CultureInfo.InvariantCulture)}";
@@ -415,6 +419,7 @@ namespace InfoHelper.Controls
             {
                 postflopControls[5].Visibility = Visibility.Visible;
 
+                postflopControls[5].Round = round;
                 postflopControls[5].Data = ((PostflopData)postflopDataCells[1].CellData).MainGroup;
                 postflopControls[5].Header = postflopDataCells[1].Description;
 
@@ -437,6 +442,7 @@ namespace InfoHelper.Controls
                         {
                             postflopControls[i + 6].Visibility = Visibility.Visible;
 
+                            postflopControls[i + 6].Round = round;
                             postflopControls[i + 6].Data = ((PostflopData)postflopDataCells[1].CellData).SubGroups[i];
 
                             string lowBound = $"{Math.Round(betRange2[i].LowBound).ToString(CultureInfo.InvariantCulture)}";

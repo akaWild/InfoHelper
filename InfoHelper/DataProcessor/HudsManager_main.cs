@@ -612,6 +612,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PreflopMatrixState.Visible = false;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = true;
 
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.Round = selectedCell.Round;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.PostflopHandsGroup = (PostflopHandsGroup)postflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Header = selectedCell.Description;
                         }
@@ -653,6 +654,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = true;
 
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Round = missedCell.Round;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.PostflopHandsGroup = (PostflopHandsGroup)postflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Header = missedCell.Description;
                         }

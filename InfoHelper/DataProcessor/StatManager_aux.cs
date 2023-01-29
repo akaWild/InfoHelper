@@ -2274,23 +2274,85 @@ namespace InfoHelper.DataProcessor
                             if (double.IsNaN(handEquity) || handType == HandType.None)
                                 return;
 
-                            int handIndex = 0;
+                            int handIndex = (int)(handEquity / (100 / PostflopHandsGroup.HandCategoriesCount));
 
-                            if (handEquity > 0)
-                                handIndex = (int)handEquity - 1;
+                            if (handIndex == PostflopHandsGroup.HandCategoriesCount)
+                                handIndex = PostflopHandsGroup.HandCategoriesCount - 1;
 
                             bool isMadeHand = (handType & HandType.MadeHand) != 0;
-                            bool isDrawHand = (handType & HandType.DrawHand) != 0 || (handType & HandType.MissedDrawHand) != 0;
+                            bool isDrawHand = (handType & HandType.DrawHand) != 0;
+                            bool isMissedDrawHand = (handType & HandType.MissedDrawHand) != 0;
 
                             if (isDrawHand)
                             {
-                                if(isMadeHand)
-                                    handsGroup.ComboHands[handIndex]++;
+                                bool isGs = (handType & HandType.Gutshot) != 0;
+                                bool isSd = (handType & HandType.StraightDraw) != 0;
+                                bool isFd = (handType & HandType.FlushDraw) != 0;
+
+                                if (isMadeHand)
+                                {
+                                    if (isFd)
+                                    {
+                                        if (isGs || isSd)
+                                            handsGroup.MadeHands[3][handIndex]++;
+                                        else
+                                            handsGroup.MadeHands[2][handIndex]++;
+                                    }
+                                    else if (isSd)
+                                        handsGroup.MadeHands[1][handIndex]++;
+                                    else
+                                        handsGroup.MadeHands[0][handIndex]++;
+
+                                    handsGroup.MadeHandsAccumulatedEquity += handEquity;
+                                }
                                 else
-                                    handsGroup.DrawHands[handIndex]++;
+                                {
+                                    if (isFd)
+                                    {
+                                        if (isGs || isSd)
+                                            handsGroup.DrawHands[3][handIndex]++;
+                                        else
+                                            handsGroup.DrawHands[2][handIndex]++;
+                                    }
+                                    else if (isSd)
+                                        handsGroup.DrawHands[1][handIndex]++;
+                                    else
+                                        handsGroup.DrawHands[0][handIndex]++;
+
+                                    handsGroup.DrawHandsAccumulatedEquity += handEquity;
+                                }
+                            }
+                            else if (isMissedDrawHand)
+                            {
+                                bool isMissedGs = (handType & HandType.MissedGutshot) != 0;
+                                bool isMissedSd = (handType & HandType.MissedStraightDraw) != 0;
+                                bool isMissedFd = (handType & HandType.MissedFlushDraw) != 0;
+
+                                if (isMadeHand)
+                                    handsGroup.MadeHands[^1][handIndex]++;
+                                else
+                                {
+                                    if (isMissedFd)
+                                    {
+                                        if (isMissedGs || isMissedSd)
+                                            handsGroup.MadeHands[3][handIndex]++;
+                                        else
+                                            handsGroup.MadeHands[2][handIndex]++;
+                                    }
+                                    else if (isMissedSd)
+                                        handsGroup.MadeHands[1][handIndex]++;
+                                    else
+                                        handsGroup.MadeHands[0][handIndex]++;
+                                }
+
+                                handsGroup.MadeHandsAccumulatedEquity += handEquity;
                             }
                             else
-                                handsGroup.MadeHands[handIndex]++;
+                            {
+                                handsGroup.MadeHands[^1][handIndex]++;
+
+                                handsGroup.MadeHandsAccumulatedEquity += handEquity;
+                            }
                         }
                     }
 

@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using InfoHelper.StatsEntities;
 using StatUtility;
+using Brush = System.Windows.Media.Brush;
 using Brushes = System.Windows.Media.Brushes;
 using Pen = System.Windows.Media.Pen;
 using Point = System.Windows.Point;
@@ -79,6 +80,15 @@ namespace InfoHelper.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PostlopHandsTableControl), new FrameworkPropertyMetadata(typeof(PostlopHandsTableControl)));
         }
 
+        public int Round
+        {
+            get => (int)GetValue(RoundProperty);
+            set => SetValue(RoundProperty, value);
+        }
+
+        public static readonly DependencyProperty RoundProperty =
+            DependencyProperty.Register("Round", typeof(int), typeof(PostlopHandsTableControl), new PropertyMetadata(0));
+
         protected override void OnRender(DrawingContext drawingContext)
         {
             base.OnRender(drawingContext);
@@ -124,32 +134,47 @@ namespace InfoHelper.Controls
                 drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, headerHeight), new Point(RenderSize.Width, headerHeight));
             }
 
-            double groupGraphHeight = (RenderSize.Height - headerHeight) / 3;
+            int panelsCount = Round == 4 ? 1 : 2;
 
-            int max = handsGroup.MadeHands.Select((v, i) => v + handsGroup.DrawHands[i] + handsGroup.ComboHands[i]).Max();
+            double groupGraphHeight = (RenderSize.Height - headerHeight) / panelsCount;
+
+            if (panelsCount < 2)
+                groupGraphHeight -= HeaderHeight;
+
+            int max = 0;
+
+            for (int i = 0; i < PostflopHandsGroup.HandCategoriesCount; i++)
+            {
+                int mhSum = handsGroup.MadeHands.Select(h => (int)h[i]).Sum();
+
+                if (mhSum > max)
+                    max = mhSum;
+
+                int dhSum = handsGroup.DrawHands.Select(h => (int)h[i]).Sum();
+
+                if (dhSum > max)
+                    max = dhSum;
+            }
 
             double columnWidth = (RenderSize.Width - CounterActionsWidth) / PostflopHandsGroup.HandCategoriesCount;
 
             double yIndent = headerHeight;
 
-            RenderHandsGroup(handsGroup.MadeHands, handsGroup.MadeHandsDefaultValue, handsGroup.MadeHandsGtoValue, Brushes.DarkGreen);
+            if (panelsCount < 2)
+                yIndent += HeaderHeight;
+
+            RenderHandsGroup(handsGroup.MadeHandsDefaultValue, handsGroup.MadeHandsGtoValue, true);
 
             yIndent += groupGraphHeight;
 
-            double[] groupLineIndents = new double[2];
+            if (panelsCount == 2)
+            {
+                RenderHandsGroup(handsGroup.DrawHandsDefaultValue, handsGroup.DrawHandsGtoValue, false);
 
-            groupLineIndents[0] = yIndent;
-
-            RenderHandsGroup(handsGroup.ComboHands, handsGroup.ComboHandsDefaultValue, handsGroup.ComboHandsGtoValue, Brushes.Blue);
-
-            yIndent += groupGraphHeight;
-
-            groupLineIndents[1] = yIndent;
-
-            drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, groupLineIndents[0]), new Point(RenderSize.Width, groupLineIndents[0]));
-            drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, groupLineIndents[1]), new Point(RenderSize.Width, groupLineIndents[1]));
-
-            RenderHandsGroup(handsGroup.DrawHands, handsGroup.DrawHandsDefaultValue, handsGroup.DrawHandsGtoValue, Brushes.Red);
+                drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, headerHeight + groupGraphHeight), new Point(RenderSize.Width, headerHeight + groupGraphHeight));
+            }
+            else
+                drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, headerHeight + HeaderHeight), new Point(RenderSize.Width, headerHeight + HeaderHeight));
 
             for (int i = 1; i < 4; i++)
             {
@@ -204,45 +229,78 @@ namespace InfoHelper.Controls
                 }
             }
             else
-                drawingContext.DrawRectangle(Brushes.DarkGray, null, new Rect(new Point(0, 0), new Size(CounterActionsWidth, RenderSize.Height)));
+                drawingContext.DrawRectangle(Brushes.DimGray, null, new Rect(new Point(0, 0), new Size(CounterActionsWidth, RenderSize.Height)));
 
             drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, 0), new Point(CounterActionsWidth, RenderSize.Height));
 
-            void RenderHandsGroup(ushort[] hands, float defaultValue, float gtoValue, SolidColorBrush groupsBrush)
+            void RenderHandsGroup(float defaultValue, float gtoValue, bool isMadeHands)
             {
-                double xIndent = CounterActionsWidth;
+                double xIndent = RenderSize.Width - columnWidth;
 
-                float handsSum = hands.Sum(v => v);
+                ushort[][] hands = isMadeHands ? handsGroup.MadeHands : handsGroup.DrawHands;
+
+                float accumEquity = (float)(isMadeHands ? handsGroup.MadeHandsAccumulatedEquity : handsGroup.DrawHandsAccumulatedEquity);
+
+                float handsSum = hands.SelectMany(h => h).Select(v => (int)v).Sum();
 
                 float avgEq = 0;
 
                 if (handsSum > 0)
+                    avgEq = accumEquity / handsSum;
+
+                int accumHands = 0;
+
+                for (int i = PostflopHandsGroup.HandCategoriesCount - 1; i >= 0; i--)
                 {
-                    avgEq = hands.Select((h, i) => handsSum == 0 ? 0 : h * (i + 1) / handsSum).Sum();
+                    double columnYIndent = yIndent + groupGraphHeight;
 
-                    double sigma = Math.Sqrt(hands.Select((h, i) => Math.Pow(i + 1 - avgEq, 2) * h).Sum() / handsSum);
-
-                    double x1 = (avgEq - sigma) / 100, x2 = (avgEq + sigma) / 100;
-
-                    drawingContext.DrawRectangle(_deviationBackgroudColor, null, new Rect(CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * x1 - columnWidth / 2, yIndent, (RenderSize.Width - CounterActionsWidth) * (x2 - x1), groupGraphHeight));
-                }
-
-                foreach (int handGroupsCount in hands)
-                {
-                    double columnHeightRatio = (double)handGroupsCount / max;
-
-                    double columnHeight = groupGraphHeight * columnHeightRatio;
-
-                    double columnYIndent = yIndent + (1 - columnHeightRatio) * groupGraphHeight;
-
-                    if (handGroupsCount > 0)
+                    for (int j = 0; j < hands.Length; j++)
                     {
-                        Rect rect = new Rect(xIndent, columnYIndent, columnWidth, columnHeight);
+                        int handsCount = hands[j][i];
 
-                        drawingContext.DrawRectangle(groupsBrush, null, rect);
+                        if (handsCount > 0)
+                        {
+                            double columnHeightRatio = (double)handsCount / max;
+
+                            double columnHeight = groupGraphHeight * columnHeightRatio;
+
+                            Rect rect = new Rect(xIndent, columnYIndent - columnHeight, columnWidth, columnHeight);
+
+                            drawingContext.DrawRectangle(GetColumnBrush(j), null, rect);
+
+                            columnYIndent -= columnHeight;
+                        }
+
+                        accumHands += handsCount;
                     }
 
-                    xIndent += columnWidth;
+                    if (panelsCount < 2 && i % 2 == 0)
+                    {
+                        string text = handsSum == 0 ? "0" : $"{Math.Round(accumHands * 100 / handsSum).ToString(CultureInfo.InvariantCulture)}";
+
+                        FormattedText formattedText = new FormattedText(text, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, HeaderHeight - 5, _foregroundColor, 1);
+
+                        Point textLocation = new Point(xIndent + columnWidth - formattedText.Width / 2, headerHeight + (float)HeaderHeight / 2 - formattedText.Height / 2);
+
+                        drawingContext.DrawText(formattedText, textLocation);
+
+                        drawingContext.DrawLine(_defaultPen, new Point(xIndent, headerHeight), new Point(xIndent, headerHeight + HeaderHeight));
+                    }
+
+                    xIndent -= columnWidth;
+                }
+
+                Brush GetColumnBrush(int index)
+                {
+                    return index switch
+                    {
+                        4 => Brushes.DarkGray,
+                        3 => Brushes.Blue,
+                        2 => Brushes.Red,
+                        1 => Brushes.Green,
+                        0 => Brushes.DarkOrange,
+                        _ => throw new Exception("Unknown index")
+                    };
                 }
 
                 if (handsSum > 0)
@@ -259,30 +317,21 @@ namespace InfoHelper.Controls
                             value = defaultValue;
 
                         if (!float.IsNaN(value))
-                        {
-                            string sign = string.Empty;
+                            groupText += $" ({Math.Round(value, 1).ToString(CultureInfo.InvariantCulture)}%)";
 
-                            if (avgEq > value)
-                                sign = "+";
-                            else if (avgEq < value)
-                                sign = "-";
-
-                            groupText += $" ({sign}{Math.Abs(Math.Round(avgEq - value, 1)).ToString(CultureInfo.InvariantCulture)})";
-                        }
-
-                        double avgValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100 - columnWidth / 2;
+                        double avgValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * avgEq / 100;
 
                         drawingContext.DrawLine(_avgValuePen, new Point(avgValueLineIndent, yIndent), new Point(avgValueLineIndent, yIndent + groupGraphHeight));
 
                         if (!float.IsNaN(value))
                         {
-                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * value / 100 - columnWidth / 2;
+                            double dfltValueLineIndent = CounterActionsWidth + (RenderSize.Width - CounterActionsWidth) * value / 100;
 
                             drawingContext.DrawLine(_dfltValuePen, new Point(dfltValueLineIndent, yIndent), new Point(dfltValueLineIndent, yIndent + groupGraphHeight));
                         }
                     }
 
-                    FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, groupGraphHeight / 5, float.IsNaN(gtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
+                    FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, (RenderSize.Height - headerHeight) / 14, float.IsNaN(gtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
 
                     formattedText.SetFontWeight(FontWeights.Bold);
 
