@@ -521,64 +521,34 @@ namespace InfoHelper.DataProcessor
                     continue;
                 }
 
-                float[] mainGroupDfltValues = new float[] { float.NaN, float.NaN };
+                float mainGroupDfltValue = float.NaN;
 
                 if (parts[12] != string.Empty)
                 {
-                    string[] mainGroupParts = parts[12].Split(",");
-
-                    if (mainGroupParts.Length != 2)
-                        throw new Exception($"Cell main group default values at line {linesCounter} are defined, but have incorrect format");
-
-                    for (int i = 0; i < mainGroupParts.Length; i++)
-                    {
-                        if (mainGroupParts[i] == string.Empty)
-                            continue;
-
-                        if (!float.TryParse(mainGroupParts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out mainGroupDfltValues[i]))
-                            throw new Exception($"Cell main group default values at line {linesCounter} are defined, but have incorrect format");
-                    }
+                    if (!float.TryParse(parts[12], NumberStyles.Any, CultureInfo.InvariantCulture, out mainGroupDfltValue))
+                        throw new Exception($"Cell main group default value at line {linesCounter} is defined, but has incorrect format");
                 }
 
-                float[][] subGroupDefaultValues = new float[][]
-                {
-                    new float[]{float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN},
-                };
+                float[] subGroupDefaultValues = new float[] { float.NaN, float.NaN, float.NaN, float.NaN };
 
                 for (int i = 13; i < parts.Length; i++)
                 {
                     if (parts[i] != string.Empty)
                     {
-                        string[] subGroupParts = parts[i].Split(",");
-
-                        if (subGroupParts.Length != 2)
+                        if (!float.TryParse(parts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupDefaultValues[i - 13]))
                             throw new Exception($"Cell subgroup {i - 13} default values at line {linesCounter} are defined, but have incorrect format");
-
-                        for (int j = 0; j < subGroupParts.Length; j++)
-                        {
-                            if (subGroupParts[j] == string.Empty)
-                                continue;
-
-                            if (!float.TryParse(subGroupParts[j], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupDefaultValues[i - 13][j]))
-                                throw new Exception($"Cell subgroup {i - 13} default values at line {linesCounter} are defined, but have incorrect format");
-                        }
                     }
                 }
 
                 PostflopHandsGroup postflopMainGroup = (PostflopHandsGroup)pd.MainGroup;
 
-                postflopMainGroup.MadeHandsDefaultValue = mainGroupDfltValues[0];
-                postflopMainGroup.DrawHandsDefaultValue = mainGroupDfltValues[1];
+                postflopMainGroup.DefaultValue = mainGroupDfltValue;
 
                 for (int i = 0; i < subGroupDefaultValues.Length; i++)
                 {
                     PostflopHandsGroup postflopSubGroup = (PostflopHandsGroup)pd.SubGroups[i];
 
-                    postflopSubGroup.MadeHandsDefaultValue = subGroupDefaultValues[i][0];
-                    postflopSubGroup.DrawHandsDefaultValue = subGroupDefaultValues[i][1];
+                    postflopSubGroup.DefaultValue = subGroupDefaultValues[i];
                 }
 
                 linesCounter++;
@@ -678,64 +648,34 @@ namespace InfoHelper.DataProcessor
                     continue;
                 }
 
-                float[] mainGroupGtoValues = new float[] { float.NaN, float.NaN };
+                float mainGroupGtoValue = float.NaN;
 
                 if (parts[12] != string.Empty)
                 {
-                    string[] mainGroupParts = parts[12].Split(",");
-
-                    if (mainGroupParts.Length != 2)
-                        throw new Exception($"Cell main group gto values at line {linesCounter} are defined, but have incorrect format");
-
-                    for (int i = 0; i < mainGroupParts.Length; i++)
-                    {
-                        if (mainGroupParts[i] == string.Empty)
-                            continue;
-
-                        if (!float.TryParse(mainGroupParts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out mainGroupGtoValues[i]))
-                            throw new Exception($"Cell main group gto values at line {linesCounter} are defined, but have incorrect format");
-                    }
+                    if (!float.TryParse(parts[12], NumberStyles.Any, CultureInfo.InvariantCulture, out mainGroupGtoValue))
+                        throw new Exception($"Cell main group gto value at line {linesCounter} is defined, but has incorrect format");
                 }
 
-                float[][] subGroupGtoValues = new float[][]
-                {
-                    new float[]{float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN},
-                    new float[]{float.NaN, float.NaN},
-                };
+                float[] subGroupGtoValues = new float[] { float.NaN, float.NaN, float.NaN, float.NaN };
 
                 for (int i = 13; i < parts.Length; i++)
                 {
                     if (parts[i] != string.Empty)
                     {
-                        string[] subGroupParts = parts[i].Split(",");
-
-                        if (subGroupParts.Length != 2)
+                        if (!float.TryParse(parts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupGtoValues[i - 13]))
                             throw new Exception($"Cell subgroup {i - 13} gto values at line {linesCounter} are defined, but have incorrect format");
-
-                        for (int j = 0; j < subGroupParts.Length; j++)
-                        {
-                            if (subGroupParts[j] == string.Empty)
-                                continue;
-
-                            if (!float.TryParse(subGroupParts[j], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupGtoValues[i - 13][j]))
-                                throw new Exception($"Cell subgroup {i - 13} gto values at line {linesCounter} are defined, but have incorrect format");
-                        }
                     }
                 }
 
                 PostflopHandsGroup postflopMainGroup = (PostflopHandsGroup)pd.MainGroup;
 
-                postflopMainGroup.MadeHandsGtoValue = mainGroupGtoValues[0];
-                postflopMainGroup.DrawHandsGtoValue = mainGroupGtoValues[1];
+                postflopMainGroup.GtoValue = mainGroupGtoValue;
 
                 for (int i = 0; i < subGroupGtoValues.Length; i++)
                 {
                     PostflopHandsGroup postflopSubGroup = (PostflopHandsGroup)pd.SubGroups[i];
 
-                    postflopSubGroup.MadeHandsGtoValue = subGroupGtoValues[i][0];
-                    postflopSubGroup.DrawHandsGtoValue = subGroupGtoValues[i][1];
+                    postflopSubGroup.GtoValue = subGroupGtoValues[i];
                 }
 
                 linesCounter++;

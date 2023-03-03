@@ -111,19 +111,19 @@
     <SolidColorBrush x:Key="PostflopHandsTableForegroundBrush">Black</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableGtoForegroundBrush">Blue</SolidColorBrush>
     <SolidColorBrush x:Key="PostflopHandsTableBackgroundBrush">Beige</SolidColorBrush>
-    <SolidColorBrush x:Key="PostflopHandsTableDeviationBackgroundBrush">LightGray</SolidColorBrush>
+    <SolidColorBrush x:Key="PostflopHandsTableOutOfRangeBackgroundBrush">DarkGray</SolidColorBrush>
     <Pen x:Key="PostflopHandsTableDefaultPen" Brush="Black" Thickness="1"/>
-    <Pen x:Key="PostflopHandsTableAvgValuePen" Brush="Black" Thickness="2"/>
-    <Pen x:Key="PostflopHandsTableDfltValuePen" Brush="Black" Thickness="2">
-        <Pen.DashStyle>
-            <DashStyle Dashes="2,4"/>
-        </Pen.DashStyle>
-    </Pen>
-    <Pen x:Key="PostflopHandsTableDashedPen" Brush="Black">
-        <Pen.DashStyle>
-            <DashStyle Dashes="2,6"/>
-        </Pen.DashStyle>
-    </Pen>
+    <Pen x:Key="PostflopHandsTableGroupDelimiterPen" Brush="Black" Thickness="2"/>
+
+    <x:Array x:Key="PostflopHandsTableBackgroundColors" Type="SolidColorBrush">
+        <SolidColorBrush>Red</SolidColorBrush>
+        <SolidColorBrush>Orange</SolidColorBrush>
+        <SolidColorBrush>Yellow</SolidColorBrush>
+        <SolidColorBrush>ForestGreen</SolidColorBrush>
+        <SolidColorBrush>LightSkyBlue</SolidColorBrush>
+        <SolidColorBrush>Blue</SolidColorBrush>
+        <SolidColorBrush>DarkViolet</SolidColorBrush>
+    </x:Array>
 
     <Style TargetType="controls:PostlopHandsTableControl">
         <Setter Property="BorderBrush" Value="Black"/>

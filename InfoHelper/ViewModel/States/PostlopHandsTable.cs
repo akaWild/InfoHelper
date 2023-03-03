@@ -13,7 +13,7 @@ namespace InfoHelper.ViewModel.States
 
         public override void UpdateBindings()
         {
-            string hashString = $"{Visible}{Round}{Header ?? string.Empty}{PostflopHandsGroup?.MadeHandsAccumulatedEquity}{PostflopHandsGroup?.DrawHandsAccumulatedEquity}";
+            string hashString = $"{Visible}{Round}{Header ?? string.Empty}{PostflopHandsGroup?.AccumulatedEv}";
 
             int hashCode = hashString.GetStableHashCode();
 

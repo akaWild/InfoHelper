@@ -51,17 +51,17 @@ namespace InfoHelper.DataProcessor
             else
                 _vmMain.ControlsState.PotOdds = null;
 
-            //Hand equity and type
+            //Hand ev and type
             if (gc.Error == string.Empty && gc.Round > 1)
             {
                 HeroHandInfo handInfo = (HeroHandInfo)gc.HeroHandData;
 
-                _vmMain.ControlsState.Equity = $"Eq: {Math.Round(handInfo.Equity, 1).ToString(CultureInfo.InvariantCulture)}%";
+                _vmMain.ControlsState.Ev = $"Ev: {Math.Round(handInfo.Ev, 1).ToString(CultureInfo.InvariantCulture)}";
                 _vmMain.ControlsState.HandType = handInfo.HandType;
             }
             else
             {
-                _vmMain.ControlsState.Equity = null;
+                _vmMain.ControlsState.Ev = null;
                 _vmMain.ControlsState.HandType = HandType.None;
             }
 
@@ -711,7 +711,7 @@ namespace InfoHelper.DataProcessor
         {
             _vmMain.ControlsState.PotOdds = null;
 
-            _vmMain.ControlsState.Equity = null;
+            _vmMain.ControlsState.Ev = null;
             _vmMain.ControlsState.HandType = HandType.None;
 
             _vmMain.AnalyzerInfoState.Info = null;

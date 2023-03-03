@@ -357,10 +357,12 @@ namespace InfoHelper.DataProcessor
                                             ulong turnCardMask = gc.TurnCard == null ? 0ul : Hand.ParseHand(gc.TurnCard);
                                             ulong riverCardMask = gc.RiverCard == null ? 0ul : Hand.ParseHand(gc.RiverCard);
 
+                                            double ev = HandManager.GetHandData(pocketMask, flopMask, turnCardMask, riverCardMask, out HandType handType);
+
                                             gc.HeroHandData = new HeroHandInfo()
                                             {
-                                                Equity = HandManager.CalculateHandEquity(pocketMask, flopMask | turnCardMask | riverCardMask),
-                                                HandType = HandManager.GetHandType(pocketMask, flopMask, turnCardMask, riverCardMask)
+                                                Ev = ev,
+                                                HandType = handType
                                             };
                                         }
                                     }

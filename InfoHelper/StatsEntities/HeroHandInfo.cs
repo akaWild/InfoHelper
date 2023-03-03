@@ -5,7 +5,7 @@ namespace InfoHelper.StatsEntities
 {
     public class HeroHandInfo
     {
-        public double Equity { get; init; }
+        public double Ev { get; init; }
 
         public HandType HandType { get; init; } = HandType.None;
     }

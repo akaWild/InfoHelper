@@ -69,13 +69,13 @@ namespace InfoHelper.ViewModel.States
             }
         }
 
-        private string _equity;
-        public string Equity
+        private string _ev;
+        public string Ev
         {
-            get => _equity;
+            get => _ev;
             set
             {
-                _equity = value;
+                _ev = value;
 
                 OnPropertyChanged();
             }
