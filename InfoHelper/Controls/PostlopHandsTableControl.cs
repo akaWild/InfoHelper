@@ -94,9 +94,9 @@ namespace InfoHelper.Controls
                 new int[2] {32, 100},
                 new int[2] {5, 76},
                 new int[2] {14, 68},
-                new int[2] {6, 75},
+                new int[2] {5, 75},
                 new int[2] {8, 75},
-                new int[2] {2, 55},
+                new int[2] {2, 56},
                 new int[2] {2, 41},
                 new int[2] {0, 39},
                 new int[2] {0, 27},
@@ -111,21 +111,21 @@ namespace InfoHelper.Controls
             new int[16][]
             {
                 new int[2] {31, 100},
-                new int[2] {6, 83},
+                new int[2] {5, 83},
                 new int[2] {2, 82},
                 new int[2] {1, 68},
                 new int[2] {6, 63},
-                new int[2] {3, 47},
+                new int[2] {2, 47},
                 new int[2] {2, 39},
                 new int[2] {1, 37},
                 new int[2] {0, 30},
                 new int[2] {0, 27},
                 new int[2] {0, 24},
                 new int[2] {0, 44},
-                new int[2] {0, 44},
-                new int[2] {0, 44},
-                new int[2] {0, 44},
-                new int[2] {0, 44}
+                new int[2] {0, 19},
+                new int[2] {0, 19},
+                new int[2] {0, 11},
+                new int[2] {0, 19}
             },
         };
 
