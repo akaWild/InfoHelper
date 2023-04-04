@@ -301,11 +301,11 @@ namespace InfoHelper.DataProcessor
                         {
                             ScreenParserData screenData = screenParser.ParseWindow();
 
-                            //Test!!!
-                            if (screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
-                            {
+                            ////Test!!!
+                            //if (screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
+                            //{
 
-                            }
+                            //}
 
                             _ = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
                                 winContextInfo.GameContext });
