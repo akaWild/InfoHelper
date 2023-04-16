@@ -25,6 +25,8 @@ namespace InfoHelper.Db
         public StatDbContext(string connectionString)
         {
             _connectionString = connectionString;
+
+            Database.SetCommandTimeout(60);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
