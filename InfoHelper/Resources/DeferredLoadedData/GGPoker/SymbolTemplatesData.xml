@@ -625,12 +625,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="1" ApplyOtsu="true" Rectangle="392, 148, 67, 12">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="1" ApplyOtsu="true" Rectangle="392, 149, 67, 12">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="392, 148, 67, 12">
+                <GgRecordItemInfo Rectangle="392, 149, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack1_wb_dflt" Value="AllIn" />
                   </RecordItemValues>
@@ -640,7 +640,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="392, 148, 67, 12">
+                <GgRecordItemInfo Rectangle="392, 149, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack1_wb_dflt" Value="SittingOut" />
                   </RecordItemValues>
@@ -650,17 +650,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="436, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="435, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="427, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="426, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="414, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="413, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
@@ -674,7 +674,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="405, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="404, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_dflt" Value="3" />
@@ -692,17 +692,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="440, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="439, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="431, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="430, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="418, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="417, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
@@ -716,7 +716,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="409, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="408, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
@@ -730,7 +730,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="400, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="399, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_dflt" Value="3" />
@@ -748,17 +748,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="438, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="439, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="429, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="428, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="416, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="415, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_dflt" Value="3" />
@@ -771,12 +771,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="412, 148, 4, 12">
+                <GgRecordItemInfo Rectangle="411, 149, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack1_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="402, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="401, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_dflt" Value="3" />
@@ -794,17 +794,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="443, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="442, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="434, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="433, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="421, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="420, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_dflt" Value="3" />
@@ -817,12 +817,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="417, 148, 4, 12">
+                <GgRecordItemInfo Rectangle="416, 149, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack1_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="407, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="406, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
@@ -836,7 +836,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="398, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="397, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_dflt" Value="3" />
@@ -854,17 +854,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="448, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="447, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="439, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="438, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="426, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="425, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
@@ -877,12 +877,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="9_stack1_wb_dflt" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="422, 148, 4, 12">
+                <GgRecordItemInfo Rectangle="421, 149, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack1_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="412, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="411, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
@@ -896,7 +896,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="9_stack1_wb_dflt" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="403, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="402, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
@@ -910,7 +910,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="9_stack1_wb_dflt" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="394, 148, 10, 12">
+                <GgRecordItemInfo Rectangle="393, 149, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_dflt" Value="1" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_dflt" Value="2" />
@@ -927,12 +927,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="2" ApplyOtsu="true" Rectangle="698, 208, 67, 12">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="2" ApplyOtsu="true" Rectangle="698, 209, 67, 12">
           <GgRecords>
             <!--All_in-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="698, 208, 67, 12">
+                <GgRecordItemInfo Rectangle="698, 209, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack2_wb_dflt" Value="AllIn" />
                   </RecordItemValues>
@@ -942,7 +942,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="698, 208, 67, 12">
+                <GgRecordItemInfo Rectangle="698, 209, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack2_wb_dflt" Value="SittingOut" />
                   </RecordItemValues>
@@ -952,17 +952,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="737, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="736, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="728, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="727, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="715, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="714, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -980,17 +980,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="742, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="741, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="733, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="732, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="720, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="719, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1004,7 +1004,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="711, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="710, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1022,17 +1022,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="746, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="745, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="737, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="736, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="724, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="723, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1046,7 +1046,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="715, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="714, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1060,7 +1060,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="706, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="705, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1078,17 +1078,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="744, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="743, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="735, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="734, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="722, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="721, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1101,12 +1101,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="718, 208, 4, 12">
+                <GgRecordItemInfo Rectangle="717, 209, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack2_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="708, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="707, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1125,17 +1125,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="748, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="747, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="739, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="738, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="726, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="725, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1148,12 +1148,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="722, 208, 4, 12">
+                <GgRecordItemInfo Rectangle="721, 209, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack2_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="712, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="711, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1167,7 +1167,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="703, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="702, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1185,17 +1185,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="753, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="752, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="744, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="743, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="731, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="730, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1208,12 +1208,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="727, 208, 4, 12">
+                <GgRecordItemInfo Rectangle="726, 209, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack2_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="717, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="716, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1227,7 +1227,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="708, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="707, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
@@ -1241,7 +1241,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="699, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="698, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_dflt" Value="3" />
@@ -1258,12 +1258,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="3" ApplyOtsu="true" Rectangle="724, 455, 67, 12">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="3" ApplyOtsu="true" Rectangle="724, 456, 67, 12">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="724, 455, 67, 12">
+                <GgRecordItemInfo Rectangle="724, 456, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack3_wb_dflt" Value="AllIn" />
                   </RecordItemValues>
@@ -1273,7 +1273,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="724, 455, 67, 12">
+                <GgRecordItemInfo Rectangle="724, 456, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack3_wb_dflt" Value="SittingOut" />
                   </RecordItemValues>
@@ -1283,17 +1283,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="763, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="762, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="754, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="753, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="741, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="740, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_dflt" Value="3" />
@@ -1311,17 +1311,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="768, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="767, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="759, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="758, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="746, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="745, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1335,7 +1335,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="737, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="736, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_dflt" Value="3" />
@@ -1353,17 +1353,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="772, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="771, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="763, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="762, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="750, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="749, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1377,7 +1377,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="741, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="740, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1391,7 +1391,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="732, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="731, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_dflt" Value="3" />
@@ -1409,17 +1409,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="770, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="769, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="761, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="760, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="748, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="747, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_dflt" Value="3" />
@@ -1432,12 +1432,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="744, 455, 4, 12">
+                <GgRecordItemInfo Rectangle="743, 456, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack3_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="734, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="733, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1456,17 +1456,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="775, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="774, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="766, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="765, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="753, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="752, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_dflt" Value="3" />
@@ -1479,12 +1479,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="749, 455, 4, 12">
+                <GgRecordItemInfo Rectangle="748, 456, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack3_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="739, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="738, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1498,7 +1498,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="730, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="729, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_dflt" Value="3" />
@@ -1516,17 +1516,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="780, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="779, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="771, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="770, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="758, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="757, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1539,12 +1539,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="9_stack3_wb_dflt" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="754, 455, 4, 12">
+                <GgRecordItemInfo Rectangle="753, 456, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack3_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="744, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="743, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
@@ -1558,7 +1558,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="9_stack3_wb_dflt" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="735, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="734, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
@@ -1572,7 +1572,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="9_stack3_wb_dflt" Value="9" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="726, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="725, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_dflt" Value="1" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_dflt" Value="2" />
@@ -1589,12 +1589,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="4" ApplyOtsu="true" Rectangle="388, 560, 76, 14">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="4" ApplyOtsu="true" Rectangle="388, 561, 76, 14">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="388, 560, 76, 14">
+                <GgRecordItemInfo Rectangle="388, 561, 76, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack4_wb_dflt" Value="AllIn" />
                   </RecordItemValues>
@@ -1604,7 +1604,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="388, 560, 76, 14">
+                <GgRecordItemInfo Rectangle="388, 561, 76, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack4_wb_dflt" Value="SittingOut" />
                   </RecordItemValues>
@@ -1614,17 +1614,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="432, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="431, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="422, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="421, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="408, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="407, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1642,17 +1642,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="437, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="436, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="427, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="426, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="413, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="412, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1666,7 +1666,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="403, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="402, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1684,17 +1684,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="442, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="441, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="432, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="431, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="418, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="417, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1708,7 +1708,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="408, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="407, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1722,7 +1722,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="398, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="397, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1740,17 +1740,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="440, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="439, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="430, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="429, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="416, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="415, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1763,12 +1763,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="411, 560, 5, 14">
+                <GgRecordItemInfo Rectangle="410, 561, 5, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack4_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="400, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="399, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1787,17 +1787,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="445, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="444, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="435, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="434, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="421, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="420, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1810,12 +1810,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="416, 560, 5, 14">
+                <GgRecordItemInfo Rectangle="415, 561, 5, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack4_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="405, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="404, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1829,7 +1829,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="395, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="394, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1847,17 +1847,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="450, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="449, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="440, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="439, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="426, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="425, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1870,12 +1870,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="421, 560, 5, 14">
+                <GgRecordItemInfo Rectangle="420, 561, 5, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack4_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="410, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="409, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1889,7 +1889,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="400, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="399, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
@@ -1903,7 +1903,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="390, 560, 11, 14">
+                <GgRecordItemInfo Rectangle="389, 561, 13, 14">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_dflt" Value="3" />
@@ -1920,12 +1920,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="5" ApplyOtsu="true" Rectangle="60, 455, 67, 12">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="5" ApplyOtsu="true" Rectangle="60, 456, 67, 12">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="60, 455, 67, 12">
+                <GgRecordItemInfo Rectangle="60, 456, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack5_wb_dflt" Value="AllIn" />
                   </RecordItemValues>
@@ -1935,7 +1935,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="60, 455, 67, 12">
+                <GgRecordItemInfo Rectangle="60, 456, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack5_wb_dflt" Value="SittingOut" />
                   </RecordItemValues>
@@ -1945,17 +1945,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="100, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="99, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="91, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="90, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="77, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="76, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -1973,17 +1973,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="104, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="103, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="95, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="94, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="82, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="81, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
@@ -1997,7 +1997,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="73, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="72, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -2015,17 +2015,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="108, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="107, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="99, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="98, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="86, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="85, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
@@ -2039,7 +2039,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="77, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="76, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
@@ -2053,7 +2053,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="68, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="67, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -2071,17 +2071,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="111, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="110, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="102, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="101, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="89, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="88, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -2094,12 +2094,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="85, 455, 4, 12">
+                <GgRecordItemInfo Rectangle="84, 456, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack5_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="75, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="74, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
@@ -2113,7 +2113,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="66, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="65, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -2131,17 +2131,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="116, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="115, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="107, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="106, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="94, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="93, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -2154,12 +2154,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="90, 455, 4, 12">
+                <GgRecordItemInfo Rectangle="89, 456, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack5_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="80, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="79, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
@@ -2173,7 +2173,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="71, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="70, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
@@ -2187,7 +2187,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="62, 455, 10, 12">
+                <GgRecordItemInfo Rectangle="61, 456, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_dflt" Value="3" />
@@ -2204,12 +2204,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="6" ApplyOtsu="true" Rectangle="87, 208, 67, 12">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="6" ApplyOtsu="true" Rectangle="87, 209, 67, 12">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="87, 208, 67, 12">
+                <GgRecordItemInfo Rectangle="87, 209, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack6_wb_dflt" Value="AllIn" />
                   </RecordItemValues>
@@ -2219,7 +2219,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="87, 208, 67, 12">
+                <GgRecordItemInfo Rectangle="87, 209, 67, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack6_wb_dflt" Value="SittingOut" />
                   </RecordItemValues>
@@ -2229,17 +2229,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="126, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="125, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="117, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="116, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="104, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="103, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2257,17 +2257,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="131, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="130, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="122, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="121, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="109, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="108, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2281,7 +2281,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="100, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="99, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2299,17 +2299,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="135, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="134, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="126, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="125, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="113, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="112, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2323,7 +2323,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="104, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="103, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2337,7 +2337,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="95, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="94, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2355,17 +2355,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="133, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="132, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="124, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="123, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="111, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="110, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2378,12 +2378,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="107, 208, 4, 12">
+                <GgRecordItemInfo Rectangle="106, 209, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack6_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="97, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="96, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2402,17 +2402,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="137, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="136, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="128, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="127, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="115, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="114, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2425,12 +2425,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="111, 208, 4, 12">
+                <GgRecordItemInfo Rectangle="110, 209, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack6_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="101, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="100, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2444,7 +2444,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="92, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="91, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2462,17 +2462,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="142, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="141, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="133, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="132, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_dflt" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="120, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="119, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -2485,12 +2485,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="116, 208, 4, 12">
+                <GgRecordItemInfo Rectangle="115, 209, 4, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack6_wb_dflt" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="106, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="105, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2504,7 +2504,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="97, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="96, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_dflt" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
@@ -2518,7 +2518,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_dflt" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="88, 208, 10, 12">
+                <GgRecordItemInfo Rectangle="87, 209, 12, 12">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_dflt" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_dflt" Value="3" />
@@ -4617,12 +4617,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="1" ApplyOtsu="true" Rectangle="290, 119, 60, 9">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="1" ApplyOtsu="true" Rectangle="290, 120, 60, 9">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="290, 119, 60, 9">
+                <GgRecordItemInfo Rectangle="290, 120, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack1_wb_tile6" Value="AllIn" />
                   </RecordItemValues>
@@ -4632,7 +4632,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="290, 119, 60, 9">
+                <GgRecordItemInfo Rectangle="290, 120, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack1_wb_tile6" Value="SittingOut" />
                   </RecordItemValues>
@@ -4642,17 +4642,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="325, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="324, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="318, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="317, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="308, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="307, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4670,17 +4670,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="329, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="328, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="322, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="321, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="312, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="311, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4694,7 +4694,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="305, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="304, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4712,17 +4712,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="332, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="331, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="325, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="324, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="315, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="314, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4736,7 +4736,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="308, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="307, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4750,7 +4750,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="301, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="300, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4768,17 +4768,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="331, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="330, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="324, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="323, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="314, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="313, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4791,12 +4791,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="311, 119, 3, 9">
+                <GgRecordItemInfo Rectangle="310, 120, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack1_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="303, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="302, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4815,17 +4815,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="334, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="333, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="327, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="326, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="317, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="316, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4838,12 +4838,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="314, 119, 3, 9">
+                <GgRecordItemInfo Rectangle="313, 120, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack1_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="306, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="305, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4857,7 +4857,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="299, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="298, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4875,17 +4875,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="338, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="337, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="331, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="330, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack1_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="321, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="320, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4898,12 +4898,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="318, 119, 3, 9">
+                <GgRecordItemInfo Rectangle="317, 120, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack1_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="310, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="309, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4917,7 +4917,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="303, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="302, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack1_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
@@ -4931,7 +4931,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack1_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="296, 119, 8, 9">
+                <GgRecordItemInfo Rectangle="295, 120, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack1_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack1_wb_tile6" Value="3" />
@@ -4948,12 +4948,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="2" ApplyOtsu="true" Rectangle="520, 164, 60, 9">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="2" ApplyOtsu="true" Rectangle="520, 165, 60, 9">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="520, 164, 60, 9">
+                <GgRecordItemInfo Rectangle="520, 165, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack2_wb_tile6" Value="AllIn" />
                   </RecordItemValues>
@@ -4963,7 +4963,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="520, 164, 60, 9">
+                <GgRecordItemInfo Rectangle="520, 165, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack2_wb_tile6" Value="SittingOut" />
                   </RecordItemValues>
@@ -4973,17 +4973,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="555, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="554, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="548, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="547, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="538, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="537, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5001,17 +5001,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="559, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="558, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="552, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="551, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="542, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="541, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5025,7 +5025,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="535, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="534, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5043,17 +5043,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="562, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="561, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="555, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="554, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="545, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="544, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5067,7 +5067,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="538, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="537, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5081,7 +5081,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="531, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="530, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5099,17 +5099,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="561, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="560, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="554, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="553, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="544, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="543, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5122,12 +5122,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="541, 164, 3, 9">
+                <GgRecordItemInfo Rectangle="540, 165, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack2_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="533, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="532, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5146,17 +5146,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="564, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="563, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="557, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="556, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="547, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="546, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5169,12 +5169,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="544, 164, 3, 9">
+                <GgRecordItemInfo Rectangle="543, 165, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack2_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="536, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="535, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5188,7 +5188,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="529, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="528, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5206,17 +5206,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="568, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="567, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="561, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="560, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack2_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="551, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="550, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5229,12 +5229,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="548, 164, 3, 9">
+                <GgRecordItemInfo Rectangle="547, 165, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack2_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="540, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="539, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5248,7 +5248,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="533, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="532, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack2_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
@@ -5262,7 +5262,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack2_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="526, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="525, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack2_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack2_wb_tile6" Value="3" />
@@ -5279,12 +5279,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="3" ApplyOtsu="true" Rectangle="540, 350, 60, 9">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="3" ApplyOtsu="true" Rectangle="540, 351, 60, 9">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="540, 350, 60, 9">
+                <GgRecordItemInfo Rectangle="540, 351, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack3_wb_tile6" Value="AllIn" />
                   </RecordItemValues>
@@ -5294,7 +5294,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="540, 350, 60, 9">
+                <GgRecordItemInfo Rectangle="540, 351, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack3_wb_tile6" Value="SittingOut" />
                   </RecordItemValues>
@@ -5304,17 +5304,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="575, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="574, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="568, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="567, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="558, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="557, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5332,17 +5332,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="579, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="578, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="572, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="571, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="562, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="561, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5356,7 +5356,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="555, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="554, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5374,17 +5374,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="582, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="581, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="575, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="574, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="565, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="564, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5398,7 +5398,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="558, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="557, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5412,7 +5412,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="551, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="550, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5430,17 +5430,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="581, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="580, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="574, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="573, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="564, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="563, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5453,12 +5453,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="561, 350, 3, 9">
+                <GgRecordItemInfo Rectangle="560, 351, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack3_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="553, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="552, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5477,17 +5477,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="584, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="583, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="577, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="576, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="567, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="566, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5500,12 +5500,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="564, 350, 3, 9">
+                <GgRecordItemInfo Rectangle="563, 351, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack3_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="556, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="555, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5519,7 +5519,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="549, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="548, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5537,17 +5537,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="588, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="587, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="581, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="580, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack3_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="571, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="570, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5560,12 +5560,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="568, 350, 3, 9">
+                <GgRecordItemInfo Rectangle="567, 351, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack3_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="560, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="559, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5579,7 +5579,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="553, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="552, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack3_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
@@ -5593,7 +5593,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack3_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="546, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="545, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack3_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack3_wb_tile6" Value="3" />
@@ -5610,12 +5610,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="4" ApplyOtsu="true" Rectangle="287, 429, 66, 10">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="4" ApplyOtsu="true" Rectangle="287, 430, 66, 10">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="287, 429, 66, 10">
+                <GgRecordItemInfo Rectangle="287, 430, 66, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack4_wb_tile6" Value="AllIn" />
                   </RecordItemValues>
@@ -5625,7 +5625,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="287, 429, 66, 10">
+                <GgRecordItemInfo Rectangle="287, 430, 66, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack4_wb_tile6" Value="SittingOut" />
                   </RecordItemValues>
@@ -5635,17 +5635,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="326, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="325, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="318, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="317, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="307, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="306, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5663,17 +5663,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="330, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="329, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="322, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="321, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="311, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="310, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5687,7 +5687,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="303, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="302, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5705,17 +5705,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="334, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="333, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="326, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="325, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="315, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="314, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5729,7 +5729,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="307, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="306, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5743,7 +5743,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="299, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="298, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5761,17 +5761,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="332, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="331, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="324, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="323, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="313, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="312, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5784,12 +5784,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="310, 429, 3, 10">
+                <GgRecordItemInfo Rectangle="309, 430, 3, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack4_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="301, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="300, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5808,17 +5808,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="336, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="335, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="328, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="327, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="317, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="316, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5831,12 +5831,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="314, 429, 3, 10">
+                <GgRecordItemInfo Rectangle="313, 430, 3, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack4_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="305, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="304, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5850,7 +5850,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="297, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="296, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5868,17 +5868,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="340, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="339, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="332, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="331, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack4_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="321, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="320, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5891,12 +5891,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="318, 429, 3, 10">
+                <GgRecordItemInfo Rectangle="317, 430, 3, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack4_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="309, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="308, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5910,7 +5910,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="301, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="300, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack4_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
@@ -5924,7 +5924,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack4_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="293, 429, 9, 10">
+                <GgRecordItemInfo Rectangle="292, 430, 11, 10">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack4_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack4_wb_tile6" Value="3" />
@@ -5941,12 +5941,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="5" ApplyOtsu="true" Rectangle="40, 350, 60, 9">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="5" ApplyOtsu="true" Rectangle="40, 351, 60, 9">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="40, 350, 60, 9">
+                <GgRecordItemInfo Rectangle="40, 351, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack5_wb_tile6" Value="AllIn" />
                   </RecordItemValues>
@@ -5956,7 +5956,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="40, 350, 60, 9">
+                <GgRecordItemInfo Rectangle="40, 351, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack5_wb_tile6" Value="SittingOut" />
                   </RecordItemValues>
@@ -5966,17 +5966,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="75, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="74, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="68, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="67, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="58, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="57, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -5994,17 +5994,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="79, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="78, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="72, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="71, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="62, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="61, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6018,7 +6018,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="55, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="54, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6036,17 +6036,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="82, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="81, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="75, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="74, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="65, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="64, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6060,7 +6060,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="58, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="57, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6074,7 +6074,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="51, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="50, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6092,17 +6092,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="81, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="80, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="74, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="73, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="64, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="63, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6115,12 +6115,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="61, 350, 3, 9">
+                <GgRecordItemInfo Rectangle="60, 351, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack5_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="53, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="52, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6139,17 +6139,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="84, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="83, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="77, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="76, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="67, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="66, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6162,12 +6162,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="64, 350, 3, 9">
+                <GgRecordItemInfo Rectangle="63, 351, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack5_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="56, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="55, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6181,7 +6181,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="49, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="48, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6199,17 +6199,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="88, 350, 12, 9">
+                <GgRecordItemInfo Rectangle="87, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="81, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="80, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack5_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="71, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="70, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6222,12 +6222,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="68, 350, 3, 9">
+                <GgRecordItemInfo Rectangle="67, 351, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack5_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="60, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="59, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6241,7 +6241,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="53, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="52, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack5_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
@@ -6255,7 +6255,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack5_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="46, 350, 8, 9">
+                <GgRecordItemInfo Rectangle="45, 351, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack5_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack5_wb_tile6" Value="3" />
@@ -6272,12 +6272,12 @@
             </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
-        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="6" ApplyOtsu="true" Rectangle="60, 164, 60, 9">
+        <GgTemplateInfo TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="6" ApplyOtsu="true" Rectangle="60, 165, 60, 9">
           <GgRecords>
             <!--All-In-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="60, 164, 60, 9">
+                <GgRecordItemInfo Rectangle="60, 165, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="AllIn_stack6_wb_tile6" Value="AllIn" />
                   </RecordItemValues>
@@ -6287,7 +6287,7 @@
             <!--Sitting out-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="60, 164, 60, 9">
+                <GgRecordItemInfo Rectangle="60, 165, 60, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="SittingOut_stack6_wb_tile6" Value="SittingOut" />
                   </RecordItemValues>
@@ -6297,17 +6297,17 @@
             <!--1 digit no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="95, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="94, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="88, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="87, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="78, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="77, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6325,17 +6325,17 @@
             <!--2 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="99, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="98, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="92, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="91, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="82, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="81, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6349,7 +6349,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="75, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="74, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6367,17 +6367,17 @@
             <!--3 digits no dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="102, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="101, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="95, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="94, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="85, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="84, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6391,7 +6391,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="78, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="77, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6405,7 +6405,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="71, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="70, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6423,17 +6423,17 @@
             <!--2 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="101, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="100, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="94, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="93, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="84, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="83, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6446,12 +6446,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="81, 164, 3, 9">
+                <GgRecordItemInfo Rectangle="80, 165, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack6_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="73, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="72, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6470,17 +6470,17 @@
             <!--3 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="104, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="103, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="97, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="96, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="87, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="86, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6493,12 +6493,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="84, 164, 3, 9">
+                <GgRecordItemInfo Rectangle="83, 165, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack6_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="76, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="75, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6512,7 +6512,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="69, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="68, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6530,17 +6530,17 @@
             <!--4 digits with dot-->
             <GgRecordInfo>
               <GgRecordItems>
-                <GgRecordItemInfo Rectangle="108, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="107, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="101, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="100, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="B_stack6_wb_tile6" Value="B" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="91, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="90, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
@@ -6553,12 +6553,12 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="88, 164, 3, 9">
+                <GgRecordItemInfo Rectangle="87, 165, 3, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="._stack6_wb_tile6" Value="." />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="80, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="79, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6572,7 +6572,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="73, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="72, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="0_stack6_wb_tile6" Value="0" />
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
@@ -6586,7 +6586,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="1_stack6_wb_tile6" Value="1" />
                   </RecordItemValues>
                 </GgRecordItemInfo>
-                <GgRecordItemInfo Rectangle="66, 164, 8, 9">
+                <GgRecordItemInfo Rectangle="65, 165, 10, 9">
                   <RecordItemValues>
                     <GgRecordItemValueInfo ItemImageNameMask="2_stack6_wb_tile6" Value="2" />
                     <GgRecordItemValueInfo ItemImageNameMask="3_stack6_wb_tile6" Value="3" />
