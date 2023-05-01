@@ -302,7 +302,7 @@ namespace InfoHelper.DataProcessor
                             ScreenParserData screenData = screenParser.ParseWindow();
 
                             ////Test!!!
-                            //if (screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
+                            //if (screenData.Stacks.Any(s => s is "") || screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
                             //{
 
                             //}
