@@ -14,13 +14,15 @@ using InfoHelper.ViewModel.States;
 using Microsoft.Data.SqlClient;
 using PlayerControlsLibrary;
 
+using DbPlayer = StatDbUtility.Player;
+
 namespace InfoHelper.DataProcessor
 {
     public class PlayersManager
     {
         private readonly ViewModelPlayers _playersViewModel;
 
-        private readonly string _connectionString;
+        private readonly string _ggPlayersConnectionString;
 
         private readonly object _lock = new object();
 
@@ -28,24 +30,42 @@ namespace InfoHelper.DataProcessor
         {
             _playersViewModel = viewModel;
 
-            ICollection<Player> players;
+            ICollection<Player> ggPlayers;
 
-            SqlConnectionStringBuilder sqlBuilder = new SqlConnectionStringBuilder
+            _ggPlayersConnectionString = new SqlConnectionStringBuilder
             {
                 DataSource = Shared.ServerName,
                 IntegratedSecurity = true,
                 InitialCatalog = "PlayersGG"
-            };
+            }.ConnectionString;
 
-            _connectionString = sqlBuilder.ConnectionString;
+            using (PlayerContext plContext = new PlayerContext(_ggPlayersConnectionString, true))
+                ggPlayers = plContext.Players.ToList();
 
-            using (PlayerContext plContext = new PlayerContext(_connectionString, true))
-                players = plContext.Players.ToList();
+            ICollection<DbPlayer> dbPlayers;
 
-            foreach (Player player in players)
+            string dbPlayersConnectionString = new SqlConnectionStringBuilder
+            {
+                DataSource = Shared.ServerName,
+                IntegratedSecurity = true,
+                InitialCatalog = Shared.DbName
+            }.ConnectionString;
+
+            using (StatDbContext statDbContext = new StatDbContext(dbPlayersConnectionString))
+                dbPlayers = statDbContext.Players.ToList();
+
+            foreach (DbPlayer player in dbPlayers)
+            {
+                Player matchedPlayer = ggPlayers.FirstOrDefault(p => p.Name == player.PlayerName);
+
+                if (matchedPlayer == null)
+                    ggPlayers.Add(new Player() {Name = player.PlayerName});
+            }
+
+            foreach (Player player in ggPlayers)
                 player.Confirmed += Player_Confirmed;
 
-            _playersViewModel.Players = new ObservableCollection<Player>(players);
+            _playersViewModel.Players = new ObservableCollection<Player>(ggPlayers);
 
             BindingOperations.EnableCollectionSynchronization(_playersViewModel.Players, _lock);
         }
@@ -78,7 +98,7 @@ namespace InfoHelper.DataProcessor
 
         private void Player_Confirmed(object sender, EventArgs e)
         {
-            using PlayerContext plContext = new PlayerContext(_connectionString, false);
+            using PlayerContext plContext = new PlayerContext(_ggPlayersConnectionString, false);
 
             Player player = (Player)sender;
 
