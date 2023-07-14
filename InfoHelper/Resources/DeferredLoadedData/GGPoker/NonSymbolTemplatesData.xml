@@ -2453,7 +2453,7 @@
                     <GgRecordItemValueInfo ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Th" DarkRRange="{135,165}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jc" DarkGRange="{130,160}" DarkRRange="{0,100}" DarkBRange="{0,100}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Js" DarkRRange="{43,47}" DarkGRange="{43,47}" DarkBRange="{43,47}"/>
-                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jd" DarkBRange="{137,167}" DarkRRange="{0,100}" DarkGRange="{0,110}"/>
+                    <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jd" DarkBRange="{140,164}" DarkRRange="{0,100}" DarkGRange="{0,110}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jh" DarkRRange="{135,165}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qc" DarkGRange="{130,160}" DarkRRange="{0,100}" DarkBRange="{0,100}"/>
                     <GgRecordItemValueInfo ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qs" DarkRRange="{0,100}" DarkGRange="{0,100}" DarkBRange="{0,100}"/>
