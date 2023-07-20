@@ -268,9 +268,8 @@ namespace InfoHelper.DataProcessor
                     }
                 }
 
-                StatSetManager statSetManager = new StatSetManager()
+                StatSetManager statSetManager = new StatSetManager(statSets)
                 {
-                    StatSets = statSets,
                     GameType = gameType,
                     Round = round,
                     Position = position,
@@ -291,7 +290,7 @@ namespace InfoHelper.DataProcessor
 
                 foreach (SetType setTypeValue in Enum.GetValues<SetType>())
                 {
-                    if(!$"{setTypeValue}".Contains("Preflop"))
+                    if (!Regex.IsMatch($"{setTypeValue}", "^Preflop"))
                         continue;
 
                     preflopSet = statSetManager.GetStatSet(setTypeValue);
@@ -305,11 +304,28 @@ namespace InfoHelper.DataProcessor
 
                 StatSet aggressionSet = null;
 
+                StatSet postflop4PreflopSet = null;
+
                 StatSet postflopSet = null;
 
                 if (playerActedOnFlop)
                 {
                     aggressionSet = statSetManager.GetStatSet(SetType.AggFqPostflop);
+
+                    statSetManager.Round = Round.Preflop;
+
+                    foreach (SetType setTypeValue in Enum.GetValues<SetType>())
+                    {
+                        if (!Regex.IsMatch($"{setTypeValue}", "4Preflop$"))
+                            continue;
+
+                        postflop4PreflopSet = statSetManager.GetStatSet(setTypeValue);
+
+                        if (postflop4PreflopSet != null)
+                            break;
+                    }
+
+                    statSetManager.Round = round;
 
                     foreach (SetType setTypeValue in Enum.GetValues<SetType>())
                     {
@@ -881,6 +897,8 @@ namespace InfoHelper.DataProcessor
                     continue;
 
                 Dictionary<string, DataCell> aggressionCellsDict = aggressionSet?.Cells.ToDictionary(k => k.Name, v => v);
+
+                Dictionary<string, DataCell> postflop4PreflopCellsDict = postflop4PreflopSet?.Cells.ToDictionary(k => k.Name, v => v);
 
                 Dictionary<string, DataCell> postflopCellsDict = postflopSet.Cells.ToDictionary(k => k.Name, v => v);
 
@@ -2148,6 +2166,267 @@ namespace InfoHelper.DataProcessor
                                                         cellNames = new string[] { "DONK_C_R", "DONK_F_R", null };
                                                 }
                                             }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        //Flop
+                        if (action.Round == 2)
+                        {
+                            if (actionSequences[0] is not ("brr" or "xbrr"))
+                            {
+                                //IP preflop raiser
+                                if (postflop4PreflopSet?.SetType == SetType.IpRaiser4Preflop)
+                                {
+                                    if (actionSequences[0] == "x")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("CB_F", out DataCell cbfCell);
+
+                                        cbfCell?.IncrementSample();
+
+                                        if (action.ActionType == 5)
+                                            cbfCell?.IncrementValue();
+                                    }
+                                    else if (actionSequences[0] == "xbr")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FCBvR_F", out DataCell fcbvrfCell);
+
+                                        fcbvrfCell?.IncrementSample();
+
+                                        if (action.ActionType == 2)
+                                            fcbvrfCell?.IncrementValue();
+                                    }
+                                    else if (actionSequences[0] == "b")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FvDONK_F", out DataCell fvdonkfCell);
+
+                                        fvdonkfCell?.IncrementSample();
+
+                                        if (action.ActionType == 2)
+                                            fvdonkfCell?.IncrementValue();
+                                    }
+                                }
+                                //IP preflop caller
+                                else if (postflop4PreflopSet?.SetType == SetType.IpCaller4Preflop)
+                                {
+                                    if (actionSequences[0] == "x")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FLOAT_F", out DataCell floatfCell);
+
+                                        floatfCell?.IncrementSample();
+
+                                        if (action.ActionType == 5)
+                                            floatfCell?.IncrementValue();
+                                    }
+                                    else if (actionSequences[0] == "b")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FvCB_F", out DataCell fcbfCell);
+
+                                        fcbfCell?.IncrementSample();
+
+                                        if (action.ActionType == 2)
+                                            fcbfCell?.IncrementValue();
+
+                                        postflop4PreflopCellsDict.TryGetValue("RvCB_F", out DataCell rcbfCell);
+
+                                        if (action.CanRaise)
+                                            rcbfCell?.IncrementSample();
+
+                                        if (action.ActionType == 6)
+                                            rcbfCell?.IncrementValue();
+                                    }
+                                }
+                                //OOP preflop raiser
+                                else if (postflop4PreflopSet?.SetType == SetType.OopRaiser4Preflop)
+                                {
+                                    if (actionSequences[0] == string.Empty)
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("CB_F", out DataCell cbfCell);
+
+                                        cbfCell?.IncrementSample();
+
+                                        if (action.ActionType == 5)
+                                            cbfCell?.IncrementValue();
+                                    }
+                                    else if (actionSequences[0] == "xb")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FvFLOAT_F", out DataCell fvfloatfCell);
+
+                                        fvfloatfCell?.IncrementSample();
+
+                                        if (action.ActionType == 2)
+                                            fvfloatfCell?.IncrementValue();
+                                    }
+                                    else if (actionSequences[0] == "br")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FCBvR_F", out DataCell fcbvrfCell);
+
+                                        fcbvrfCell?.IncrementSample();
+
+                                        if (action.ActionType == 2)
+                                            fcbvrfCell?.IncrementValue();
+                                    }
+                                }
+                                //OOP preflop caller
+                                else if (postflop4PreflopSet?.SetType == SetType.OopCaller4Preflop)
+                                {
+                                    if (actionSequences[0] == string.Empty)
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("DONK_F", out DataCell donkfCell);
+
+                                        donkfCell?.IncrementSample();
+
+                                        if (action.ActionType == 5)
+                                            donkfCell?.IncrementValue();
+                                    }
+                                    else if (actionSequences[0] == "xb")
+                                    {
+                                        postflop4PreflopCellsDict.TryGetValue("FvCB_F", out DataCell fcbfCell);
+
+                                        fcbfCell?.IncrementSample();
+
+                                        if (action.ActionType == 2)
+                                            fcbfCell?.IncrementValue();
+
+                                        postflop4PreflopCellsDict.TryGetValue("RvCB_F", out DataCell rcbfCell);
+
+                                        if (action.CanRaise)
+                                            rcbfCell?.IncrementSample();
+
+                                        if (action.ActionType == 6)
+                                            rcbfCell?.IncrementValue();
+                                    }
+                                }
+                            }
+                        }
+                        //Turn
+                        else if (action.Round == 3)
+                        {
+                            if (actionSequences[1] is not ("brr" or "xbrr"))
+                            {
+                                //IP preflop raiser
+                                if (postflop4PreflopSet?.SetType == SetType.IpRaiser4Preflop)
+                                {
+                                    if (actionSequences[1] == "x")
+                                    {
+                                        if (actionSequences[0] == "xx")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("DELAY_T", out DataCell delaytCell);
+
+                                            delaytCell?.IncrementSample();
+
+                                            if (action.ActionType == 5)
+                                                delaytCell?.IncrementValue();
+                                        }
+                                        else if (actionSequences[0] == "xbc")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("CB_T", out DataCell cbtCell);
+
+                                            cbtCell?.IncrementSample();
+
+                                            if (action.ActionType == 5)
+                                                cbtCell?.IncrementValue();
+                                        }
+                                    }
+                                    else if (actionSequences[1] == "b")
+                                    {
+                                        if (actionSequences[0] == "xx")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("FvPROBE_T", out DataCell fvprobetCell);
+
+                                            fvprobetCell?.IncrementSample();
+
+                                            if (action.ActionType == 2)
+                                                fvprobetCell?.IncrementValue();
+                                        }
+                                    }
+                                }
+                                //IP preflop caller
+                                else if (postflop4PreflopSet?.SetType == SetType.IpCaller4Preflop)
+                                {
+                                    if (actionSequences[1] == "b")
+                                    {
+                                        if (actionSequences[0] == "xx")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("FvDELAY_T", out DataCell fvdelaytCell);
+
+                                            fvdelaytCell?.IncrementSample();
+
+                                            if (action.ActionType == 2)
+                                                fvdelaytCell?.IncrementValue();
+                                        }
+                                        else if (actionSequences[0] == "bc")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("FvCB_T", out DataCell fvcbtCell);
+
+                                            fvcbtCell?.IncrementSample();
+
+                                            if (action.ActionType == 2)
+                                                fvcbtCell?.IncrementValue();
+                                        }
+                                    }
+                                }
+                                //OOP preflop raiser
+                                else if (postflop4PreflopSet?.SetType == SetType.OopRaiser4Preflop)
+                                {
+                                    if (actionSequences[1] == string.Empty)
+                                    {
+                                        if (actionSequences[0] == "xx")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("DELAY_T", out DataCell delaytCell);
+
+                                            delaytCell?.IncrementSample();
+
+                                            if (action.ActionType == 5)
+                                                delaytCell?.IncrementValue();
+                                        }
+                                        else if (actionSequences[0] == "bc")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("CB_T", out DataCell cbtCell);
+
+                                            cbtCell?.IncrementSample();
+
+                                            if (action.ActionType == 5)
+                                                cbtCell?.IncrementValue();
+                                        }
+                                    }
+                                }
+                                //OOP preflop caller
+                                else if (postflop4PreflopSet?.SetType == SetType.OopCaller4Preflop)
+                                {
+                                    if (actionSequences[1] == string.Empty)
+                                    {
+                                        if (actionSequences[0] == "xx")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("PROBE_T", out DataCell probetCell);
+
+                                            probetCell?.IncrementSample();
+
+                                            if (action.ActionType == 5)
+                                                probetCell?.IncrementValue();
+                                        }
+                                    }
+                                    else if (actionSequences[1] == "xb")
+                                    {
+                                        if (actionSequences[0] == "xx")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("FvDELAY_T", out DataCell fvdelaytCell);
+
+                                            fvdelaytCell?.IncrementSample();
+
+                                            if (action.ActionType == 2)
+                                                fvdelaytCell?.IncrementValue();
+                                        }
+                                        else if (actionSequences[0] == "xbc")
+                                        {
+                                            postflop4PreflopCellsDict.TryGetValue("FvCB_T", out DataCell fvcbtCell);
+
+                                            fvcbtCell?.IncrementSample();
+
+                                            if (action.ActionType == 2)
+                                                fvcbtCell?.IncrementValue();
                                         }
                                     }
                                 }

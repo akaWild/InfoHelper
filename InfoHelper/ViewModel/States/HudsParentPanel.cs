@@ -10,6 +10,14 @@
 
         public ViewModelStatsHud AggressionHudState { get; } = new ViewModelStatsHud();
 
+        public ViewModelStatsHud IpRaiser4PreflopHudState { get; } = new ViewModelStatsHud();
+
+        public ViewModelStatsHud IpCaller4PreflopHudState { get; } = new ViewModelStatsHud();
+
+        public ViewModelStatsHud OopRaiser4PreflopHudState { get; } = new ViewModelStatsHud();
+
+        public ViewModelStatsHud OopCaller4PreflopHudState { get; } = new ViewModelStatsHud();
+
         public ViewModelStatsHud SbPreflopHudState { get; } = new ViewModelStatsHud();
 
         public ViewModelStatsHud BbPreflopHudState { get; } = new ViewModelStatsHud();

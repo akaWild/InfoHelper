@@ -47,12 +47,36 @@
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.GeneralHudState"/>
                     </local:GeneralHud.DataContext>
                 </local:GeneralHud>
-                <local:AggressionHud Margin="5" VerticalAlignment="Top"  
+                <local:AggressionHud Margin="5, 5, 5, 0" VerticalAlignment="Top"  
                                   Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
                     <local:AggressionHud.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.AggressionHudState"/>
                     </local:AggressionHud.DataContext>
                 </local:AggressionHud>
+                <local:IpRaiser4PreflopHud Margin="5, 5, 5, 0" VerticalAlignment="Top"  
+                                     Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:IpRaiser4PreflopHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.IpRaiser4PreflopHudState"/>
+                    </local:IpRaiser4PreflopHud.DataContext>
+                </local:IpRaiser4PreflopHud>
+                <local:OopRaiser4PreflopHud Margin="5, 5, 5, 0" VerticalAlignment="Top"  
+                                            Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:OopRaiser4PreflopHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.OopRaiser4PreflopHudState"/>
+                    </local:OopRaiser4PreflopHud.DataContext>
+                </local:OopRaiser4PreflopHud>
+                <local:IpCaller4PreflopHud Margin="5, 5, 5, 0" VerticalAlignment="Top"  
+                                           Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:IpCaller4PreflopHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.IpCaller4PreflopHudState"/>
+                    </local:IpCaller4PreflopHud.DataContext>
+                </local:IpCaller4PreflopHud>
+                <local:OopCaller4PreflopHud Margin="5, 5, 5, 0" VerticalAlignment="Top"  
+                                           Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:OopCaller4PreflopHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.OopCaller4PreflopHudState"/>
+                    </local:OopCaller4PreflopHud.DataContext>
+                </local:OopCaller4PreflopHud>
             </StackPanel>
         </Grid>
         <local:PreflopBtnHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 

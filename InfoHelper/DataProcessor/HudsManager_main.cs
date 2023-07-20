@@ -79,6 +79,10 @@ namespace InfoHelper.DataProcessor
 
                     _vmMain.HudsParentStates[i].GeneralHudState.Visible = false;
                     _vmMain.HudsParentStates[i].AggressionHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.Visible = false;
+                    _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].BtnPreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].SbPreflopHudState.Visible = false;
                     _vmMain.HudsParentStates[i].BbPreflopHudState.Visible = false;
@@ -159,121 +163,142 @@ namespace InfoHelper.DataProcessor
 
                     OtherPlayersActed otherPlayersActed = OtherPlayersActed.Any;
 
-                    if (gc.Round > 1)
+                    void UpdateSetVariables(int rnd, BettingAction[] prflActions, bool?[] isPlayerIn)
                     {
-                        BettingAction[] preflopActions = gc.Actions.Where(a => a.Round == 1).ToArray();
+                        oppPosition = Position.Any;
 
-                        if (gc.PlayersSawFlop != 2)
+                        relativePosition = RelativePosition.Any;
+
+                        playersOnFlop = PlayersOnFlop.Any;
+
+                        preflopPotType = PreflopPotType.Any;
+
+                        preflActions = PreflopActions.Any;
+
+                        otherPlayersActed = OtherPlayersActed.Any;
+
+                        if (rnd > 1)
                         {
-                            playersOnFlop = PlayersOnFlop.Multiway;
-
-                            otherPlayersActed = OtherPlayersActed.Yes;
-                        }
-                        else
-                        {
-                            int oppIndexPosition = gc.IsPlayerIn.Select((p, k) => new {Value = p, Index = k}).First(item => item.Value != null && (bool)item.Value && item.Index != i).Index;
-
-                            otherPlayersActed = OtherPlayersActed.No;
-
-                            foreach (BettingAction action in preflopActions)
+                            if (isPlayerIn.Count(p => p != null && (bool)p) > 2)
                             {
-                                if(action.Player == i + 1 || action.Player == oppIndexPosition + 1)
-                                    continue;
+                                playersOnFlop = PlayersOnFlop.Multiway;
 
-                                if (action.ActionType is BettingActionType.Check or BettingActionType.Call or BettingActionType.Raise)
-                                {
-                                    otherPlayersActed = OtherPlayersActed.Yes;
-
-                                    break;
-                                }
+                                otherPlayersActed = OtherPlayersActed.Yes;
                             }
-
-                            oppPosition = Common.GetPlayerPosition(new int[] {gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition}, oppIndexPosition + 1, initialPlayers);
-
-                            if (gameType == GameType.Hu)
-                                relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
                             else
-                                relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
-
-                            playersOnFlop = PlayersOnFlop.Hu;
-                        }
-
-                        int callCount = 0;
-                        int raiseCount = 0;
-
-                        foreach (BettingAction action in preflopActions)
-                        {
-                            if (action.ActionType == BettingActionType.Call)
                             {
-                                if (raiseCount == 0)
-                                    preflopPotType = PreflopPotType.LimpPot;
+                                int oppIndexPosition = isPlayerIn.Select((p, k) => new { Value = p, Index = k }).First(item => item.Value != null && (bool)item.Value && item.Index != i).Index;
 
-                                callCount++;
-                            }
-                            else if (action.ActionType == BettingActionType.Raise)
-                            {
-                                if (raiseCount == 0)
-                                    preflopPotType = callCount == 0 ? PreflopPotType.RaisePot : PreflopPotType.IsolatePot;
-                                else if (raiseCount == 1)
+                                otherPlayersActed = OtherPlayersActed.No;
+
+                                foreach (BettingAction action in prflActions)
                                 {
-                                    if (preflopPotType == PreflopPotType.IsolatePot)
-                                        preflopPotType = PreflopPotType.RaiseIsolatePot;
-                                    else if (preflopPotType == PreflopPotType.RaisePot)
-                                        preflopPotType = callCount == 0 ? PreflopPotType.ThreeBetPot : PreflopPotType.SqueezePot;
+                                    if (action.Player == i + 1 || action.Player == oppIndexPosition + 1)
+                                        continue;
+
+                                    if (action.ActionType is BettingActionType.Check or BettingActionType.Call or BettingActionType.Raise)
+                                    {
+                                        otherPlayersActed = OtherPlayersActed.Yes;
+
+                                        break;
+                                    }
                                 }
-                                else if (raiseCount == 2)
-                                    preflopPotType = PreflopPotType.FourBetPot;
-                                else if (raiseCount == 3)
-                                    preflopPotType = PreflopPotType.FiveBetPot;
+
+                                oppPosition = Common.GetPlayerPosition(new int[] { gc.SmallBlindPosition, gc.BigBlindPosition, gc.ButtonPosition }, oppIndexPosition + 1, initialPlayers);
+
+                                if (gameType == GameType.Hu)
+                                    relativePosition = gc.SmallBlindPosition == i + 1 ? RelativePosition.Ip : RelativePosition.Oop;
                                 else
-                                    preflopPotType = PreflopPotType.Other;
+                                    relativePosition = position > oppPosition ? RelativePosition.Ip : RelativePosition.Oop;
 
-                                raiseCount++;
+                                playersOnFlop = PlayersOnFlop.Hu;
                             }
-                        }
 
-                        BettingAction[] playerPreflopActions = playerActions.Where(a => a.Round == 1).ToArray();
+                            int callCount = 0;
+                            int raiseCount = 0;
 
-                        if (playerPreflopActions.Length == 1)
-                        {
-                            if (playerPreflopActions[0].ActionType == BettingActionType.Check)
-                                preflActions = PreflopActions.Check;
-                            else if (playerPreflopActions[0].ActionType == BettingActionType.Call)
-                                preflActions = PreflopActions.Call;
-                            else if (playerPreflopActions[0].ActionType == BettingActionType.Raise)
-                                preflActions = PreflopActions.Raise;
-                        }
-                        else if (playerPreflopActions.Length == 2)
-                        {
-                            if (playerPreflopActions[0].ActionType == BettingActionType.Call)
+                            foreach (BettingAction action in prflActions)
                             {
-                                if (playerPreflopActions[1].ActionType == BettingActionType.Call)
-                                    preflActions = PreflopActions.CallCall;
-                                else if (playerPreflopActions[1].ActionType == BettingActionType.Raise)
-                                    preflActions = PreflopActions.CallRaise;
+                                if (action.ActionType == BettingActionType.Call)
+                                {
+                                    if (raiseCount == 0)
+                                        preflopPotType = PreflopPotType.LimpPot;
+
+                                    callCount++;
+                                }
+                                else if (action.ActionType == BettingActionType.Raise)
+                                {
+                                    if (raiseCount == 0)
+                                        preflopPotType = callCount == 0 ? PreflopPotType.RaisePot : PreflopPotType.IsolatePot;
+                                    else if (raiseCount == 1)
+                                    {
+                                        if (preflopPotType == PreflopPotType.IsolatePot)
+                                            preflopPotType = PreflopPotType.RaiseIsolatePot;
+                                        else if (preflopPotType == PreflopPotType.RaisePot)
+                                            preflopPotType = callCount == 0 ? PreflopPotType.ThreeBetPot : PreflopPotType.SqueezePot;
+                                    }
+                                    else if (raiseCount == 2)
+                                        preflopPotType = PreflopPotType.FourBetPot;
+                                    else if (raiseCount == 3)
+                                        preflopPotType = PreflopPotType.FiveBetPot;
+                                    else
+                                        preflopPotType = PreflopPotType.Other;
+
+                                    raiseCount++;
+                                }
                             }
-                            else if (playerPreflopActions[0].ActionType == BettingActionType.Raise)
+
+                            BettingAction[] playerPreflopActions = prflActions.Where(a => a.Player == i + 1 && a.ActionType != BettingActionType.PostSb && a.ActionType != BettingActionType.PostBb).ToArray();
+
+                            if(playerPreflopActions[^1].ActionType == BettingActionType.Fold)
+                                preflActions = PreflopActions.Fold;
+                            else
                             {
-                                if (playerPreflopActions[1].ActionType == BettingActionType.Call)
-                                    preflActions = PreflopActions.RaiseCall;
-                                else if (playerPreflopActions[1].ActionType == BettingActionType.Raise)
-                                    preflActions = PreflopActions.RaiseRaise;
+                                if (playerPreflopActions.Length == 1)
+                                {
+                                    if (playerPreflopActions[0].ActionType == BettingActionType.Check)
+                                        preflActions = PreflopActions.Check;
+                                    else if (playerPreflopActions[0].ActionType == BettingActionType.Call)
+                                        preflActions = PreflopActions.Call;
+                                    else if (playerPreflopActions[0].ActionType == BettingActionType.Raise)
+                                        preflActions = PreflopActions.Raise;
+                                }
+                                else if (playerPreflopActions.Length == 2)
+                                {
+                                    if (playerPreflopActions[0].ActionType == BettingActionType.Call)
+                                    {
+                                        if (playerPreflopActions[1].ActionType == BettingActionType.Call)
+                                            preflActions = PreflopActions.CallCall;
+                                        else if (playerPreflopActions[1].ActionType == BettingActionType.Raise)
+                                            preflActions = PreflopActions.CallRaise;
+                                    }
+                                    else if (playerPreflopActions[0].ActionType == BettingActionType.Raise)
+                                    {
+                                        if (playerPreflopActions[1].ActionType == BettingActionType.Call)
+                                            preflActions = PreflopActions.RaiseCall;
+                                        else if (playerPreflopActions[1].ActionType == BettingActionType.Raise)
+                                            preflActions = PreflopActions.RaiseRaise;
+                                    }
+                                }
+                                else if (playerPreflopActions.Length > 2)
+                                {
+                                    if (playerPreflopActions[^1].ActionType == BettingActionType.Call)
+                                        preflActions = PreflopActions.AnyCall;
+                                    else if (playerPreflopActions[^1].ActionType == BettingActionType.Raise)
+                                        preflActions = PreflopActions.AnyRaise;
+                                }
                             }
-                        }
-                        else if (playerPreflopActions.Length > 2)
-                        {
-                            if (playerPreflopActions[^1].ActionType == BettingActionType.Call)
-                                preflActions = PreflopActions.AnyCall;
-                            else if (playerPreflopActions[^1].ActionType == BettingActionType.Raise)
-                                preflActions = PreflopActions.AnyRaise;
                         }
                     }
 
                     #endregion
 
-                    StatSetManager statSetManager = new StatSetManager()
+                    BettingAction[] preflopActions = gc.Actions.Where(a => a.Round == 1).ToArray();
+
+                    UpdateSetVariables(gc.Round, preflopActions, gc.IsPlayerIn);
+
+                    StatSetManager statSetManager = new StatSetManager(statSets[i])
                     {
-                        StatSets = statSets[i],
                         GameType = gameType,
                         Round = round,
                         Position = position,
@@ -323,6 +348,185 @@ namespace InfoHelper.DataProcessor
                         _vmMain.HudsParentStates[i].AggressionHudState.PlayerName = gc.Players[i];
 
                         _vmMain.HudsParentStates[i].AggressionHudState.SetName = $"{aggressionSet}";
+                    }
+
+                    BettingAction lastPreflopRaiserAction = preflopActions.LastOrDefault(a => a.ActionType == BettingActionType.Raise);
+
+                    StatSet ipRaiserPostflop4PreflopSet = null;
+                    StatSet oopRaiserPostflop4PreflopSet = null;
+
+                    if (lastPreflopRaiserAction != null)
+                    {
+                        if (!lastPreflopRaiserAction.IsAllIn)
+                        {
+                            List<BettingAction> preflopActionsTemp = preflopActions.ToList();
+
+                            preflopActionsTemp.Add(new BettingAction(gc.HeroPosition, 1, 0, BettingActionType.Call, false));
+
+                            bool?[] isPlayerInTemp = gc.IsPlayerIn.ToArray();
+
+                            int nextPlayer = gc.HeroPosition + 1;
+
+                            while (true)
+                            {
+                                if (nextPlayer == 7)
+                                    nextPlayer = 1;
+
+                                if (nextPlayer == lastPreflopRaiserAction.Player)
+                                    break;
+
+                                if (isPlayerInTemp[nextPlayer - 1] != null && (bool)isPlayerInTemp[nextPlayer - 1])
+                                {
+                                    preflopActionsTemp.Add(new BettingAction(nextPlayer, 1, 0, BettingActionType.Fold, false));
+
+                                    isPlayerInTemp[nextPlayer - 1] = false;
+                                }
+
+                                nextPlayer++;
+                            }
+
+                            UpdateSetVariables(2, preflopActionsTemp.ToArray(), isPlayerInTemp);
+
+                            StatSetManager statSetManagerAsHeroCaller = new StatSetManager(statSets[i])
+                            {
+                                GameType = gameType,
+                                Round = round,
+                                Position = position,
+                                RelativePosition = relativePosition,
+                                OppPosition = oppPosition,
+                                PlayersOnFlop = playersOnFlop,
+                                PreflopPotType = preflopPotType,
+                                PreflopActions = preflActions,
+                                OtherPlayersActed = otherPlayersActed
+                            };
+
+                            ipRaiserPostflop4PreflopSet = statSetManagerAsHeroCaller.GetStatSet(SetType.IpRaiser4Preflop);
+                            oopRaiserPostflop4PreflopSet = statSetManagerAsHeroCaller.GetStatSet(SetType.OopRaiser4Preflop);
+                        }
+                    }
+
+                    //Ip raiser postflop 4 preflop hud
+                    if (ipRaiserPostflop4PreflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.SetData(ipRaiserPostflop4PreflopSet.Cells);
+
+                        _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.SetName = $"{ipRaiserPostflop4PreflopSet}";
+
+                        _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.SetType = SetType.IpRaiser4Preflop;
+                    }
+
+                    //Oop raiser postflop 4 preflop hud
+                    if (oopRaiserPostflop4PreflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.SetData(oopRaiserPostflop4PreflopSet.Cells);
+
+                        _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.SetName = $"{oopRaiserPostflop4PreflopSet}";
+
+                        _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.SetType = SetType.OopRaiser4Preflop;
+                    }
+
+                    StatSet ipCallerPostflop4PreflopSet = null;
+                    StatSet oopCallerPostflop4PreflopSet = null;
+
+                    bool unopenedPot = preflopActions.All(a => a.ActionType is BettingActionType.PostSb or BettingActionType.PostBb or BettingActionType.Fold);
+
+                    if (lastPreflopRaiserAction != null || unopenedPot)
+                    {
+                        if(!(lastPreflopRaiserAction?.IsAllIn ?? false))
+                        {
+                            List<BettingAction> preflopActionTemp = preflopActions.ToList();
+
+                            preflopActionTemp.Add(new BettingAction(gc.HeroPosition, 1, 0, BettingActionType.Raise, false));
+
+                            bool?[] isPlayerInTemp = gc.IsPlayerIn.ToArray();
+
+                            int nextPlayer = gc.HeroPosition + 1;
+
+                            while (true)
+                            {
+                                if (nextPlayer == 7)
+                                    nextPlayer = 1;
+
+                                if (nextPlayer == gc.HeroPosition)
+                                    break;
+
+                                if (isPlayerInTemp[nextPlayer - 1] != null && (bool)isPlayerInTemp[nextPlayer - 1])
+                                {
+                                    if ((lastPreflopRaiserAction != null && nextPlayer == lastPreflopRaiserAction.Player) || unopenedPot)
+                                        preflopActionTemp.Add(new BettingAction(nextPlayer, 1, 0, BettingActionType.Call, false));
+                                    else
+                                    {
+                                        preflopActionTemp.Add(new BettingAction(nextPlayer, 1, 0, BettingActionType.Fold, false));
+
+                                        isPlayerInTemp[nextPlayer - 1] = false;
+                                    }
+                                }
+
+                                nextPlayer++;
+                            }
+
+                            UpdateSetVariables(2, preflopActionTemp.ToArray(), isPlayerInTemp);
+
+                            StatSetManager statSetManagerAsHeroRaiser = new StatSetManager(statSets[i])
+                            {
+                                GameType = gameType,
+                                Round = round,
+                                Position = position,
+                                RelativePosition = relativePosition,
+                                OppPosition = oppPosition,
+                                PlayersOnFlop = playersOnFlop,
+                                PreflopPotType = preflopPotType,
+                                PreflopActions = preflActions,
+                                OtherPlayersActed = otherPlayersActed
+                            };
+
+                            ipCallerPostflop4PreflopSet = statSetManagerAsHeroRaiser.GetStatSet(SetType.IpCaller4Preflop);
+                            oopCallerPostflop4PreflopSet = statSetManagerAsHeroRaiser.GetStatSet(SetType.OopCaller4Preflop);
+                        }
+                    }
+
+                    //Ip caller postflop 4 preflop hud
+                    if (ipCallerPostflop4PreflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.SetData(ipCallerPostflop4PreflopSet.Cells);
+
+                        _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.SetName = $"{ipCallerPostflop4PreflopSet}";
+
+                        _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.SetType = SetType.IpCaller4Preflop;
+                    }
+
+                    //Oop caller postflop 4 preflop hud
+                    if (oopCallerPostflop4PreflopSet == null || !showHud)
+                        _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.Visible = false;
+                    else
+                    {
+                        _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.Visible = true;
+
+                        _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.SetData(oopCallerPostflop4PreflopSet.Cells);
+
+                        _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.PlayerName = gc.Players[i];
+
+                        _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.SetName = $"{oopCallerPostflop4PreflopSet}";
+
+                        _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.SetType = SetType.OopCaller4Preflop;
                     }
 
                     //Btn preflop hud
@@ -668,6 +872,10 @@ namespace InfoHelper.DataProcessor
 
                 _vmMain.HudsParentStates[i].GeneralHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].AggressionHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].IpRaiser4PreflopHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].IpCaller4PreflopHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].OopRaiser4PreflopHudState.UpdateBindings();
+                _vmMain.HudsParentStates[i].OopCaller4PreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].BtnPreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].SbPreflopHudState.UpdateBindings();
                 _vmMain.HudsParentStates[i].BbPreflopHudState.UpdateBindings();
@@ -723,6 +931,10 @@ namespace InfoHelper.DataProcessor
 
                 vmHudsParent.GeneralHudState.Visible = false;
                 vmHudsParent.AggressionHudState.Visible = false;
+                vmHudsParent.IpRaiser4PreflopHudState.Visible = false;
+                vmHudsParent.IpCaller4PreflopHudState.Visible = false;
+                vmHudsParent.OopRaiser4PreflopHudState.Visible = false;
+                vmHudsParent.OopCaller4PreflopHudState.Visible = false;
                 vmHudsParent.BtnPreflopHudState.Visible = false;
                 vmHudsParent.SbPreflopHudState.Visible = false;
                 vmHudsParent.BbPreflopHudState.Visible = false;
@@ -748,6 +960,10 @@ namespace InfoHelper.DataProcessor
 
                 vmHudsParent.GeneralHudState.UpdateBindings();
                 vmHudsParent.AggressionHudState.UpdateBindings();
+                vmHudsParent.IpRaiser4PreflopHudState.UpdateBindings();
+                vmHudsParent.IpCaller4PreflopHudState.UpdateBindings();
+                vmHudsParent.OopRaiser4PreflopHudState.UpdateBindings();
+                vmHudsParent.OopCaller4PreflopHudState.UpdateBindings();
                 vmHudsParent.BtnPreflopHudState.UpdateBindings();
                 vmHudsParent.SbPreflopHudState.UpdateBindings();
                 vmHudsParent.BbPreflopHudState.UpdateBindings();

@@ -1,0 +1,38 @@
+﻿<local:HudBase x:Class="InfoHelper.Controls.IpCaller4PreflopHud"
+         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+         xmlns:local="clr-namespace:InfoHelper.Controls"
+         mc:Ignorable="d" 
+         d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <!--FvCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="0" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="FvCB    "></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="0" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding FvCB_F}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="0" BorderThickness="{StaticResource CellTopMiddleRightBorderThickness}" Data="{Binding FvCB_T}"></local:DataCellControl>
+        <!--RvCB-->
+        <local:CellControl Grid.Column="0" Grid.Row="1" Style="{StaticResource CbPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="RvCB    "></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="1" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding RvCB_F}"></local:DataCellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="1" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <!--FvDELAY-->
+        <local:CellControl Grid.Column="0" Grid.Row="2" Style="{StaticResource DelayPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FvDELAY "></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.Row="2" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="2" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FvDELAY_T}"></local:DataCellControl>
+        <!--FLOAT-->
+        <local:CellControl Grid.Column="0" Grid.Row="3" Style="{StaticResource FloatPostflopHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="FLOAT   "></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="3" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding FLOAT_F}"></local:DataCellControl>
+        <local:CellControl Grid.Column="2" Grid.Row="3" Style="{StaticResource EmptyCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}"></local:CellControl>
+    </Grid>
+</local:HudBase>

@@ -34,6 +34,7 @@
             <RowDefinition Height="{Binding Mp_4bet_Range_Vs_Sb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Mp_4bet_Range_Vs_Bb_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Mp_4bet_Range_Vs_Multi_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
+            <RowDefinition Height="{Binding Mp_4bet_Range_SqzPot_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
             <RowDefinition Height="{Binding Mp_4bet_Row, Converter={StaticResource RowVisibilityConverter}}"></RowDefinition>
         </Grid.RowDefinitions>
         <local:CellControl Grid.Column="0" Grid.Row="0" Background="DarkGray" Style="{StaticResource CellBorderStyle}" BorderThickness="{StaticResource CellTopLeftBorderThickness}" Text="MP">
@@ -139,8 +140,17 @@
                 </MultiBinding>
             </local:CellControl.Text>
         </local:CellControl>
-        <local:CellControl Grid.Column="0" Grid.Row="21" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Vs 4bet    "></local:CellControl>
-        <local:DataCellControl Grid.Column="1" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_4bet_Fold}"></local:DataCellControl>
-        <local:DataCellControl Grid.Column="2" Grid.Row="21" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_4bet_Raise}"></local:DataCellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="21" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="4b range   "></local:CellControl>
+        <local:CellControl Grid.Column="1" Grid.ColumnSpan="2" Grid.Row="21" Style="{StaticResource FourBetRangeCellStyle}" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}">
+            <local:CellControl.Text>
+                <MultiBinding Converter="{StaticResource FourBetRangeCellConverter}">
+                    <Binding Path="Mp_Unopened_Raise"/>
+                    <Binding Path="Mp_Squeeze_Raiser_Raise"/>
+                </MultiBinding>
+            </local:CellControl.Text>
+        </local:CellControl>
+        <local:CellControl Grid.Column="0" Grid.Row="22" Style="{StaticResource FourBetHeaderStyle}" BorderThickness="{StaticResource CellMiddleBottomLeftBorderThickness}" Text="Vs 4bet    "></local:CellControl>
+        <local:DataCellControl Grid.Column="1" Grid.Row="22" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_4bet_Fold}"></local:DataCellControl>
+        <local:DataCellControl Grid.Column="2" Grid.Row="22" BorderThickness="{StaticResource CellMiddleBottomMiddleRightBorderThickness}" Data="{Binding Mp_4bet_Raise}"></local:DataCellControl>
     </Grid>
 </local:HudBase>

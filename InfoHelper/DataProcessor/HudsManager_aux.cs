@@ -275,6 +275,9 @@ namespace InfoHelper.DataProcessor
 
                             cellName = $"{playerPosition}_Squeeze_Raiser_{action.ActionType}";
 
+                            if (action.ActionType == BettingActionType.Raise)
+                                preflopRows.Add($"{playerPosition}_4bet_Range_SqzPot_Row");
+
                             preflActions = Enum.Parse<PreflopActions>($"{preflActions}{action.ActionType}");
                         }
                     }
