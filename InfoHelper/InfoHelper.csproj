@@ -131,6 +131,7 @@
 
   <ItemGroup>
     <Folder Include="Resources\CsvFiles\" />
+    <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Default\Bet\" />
     <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\BoardCard\" />
     <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\HoleCard\" />
     <Folder Include="Resources\DeferredLoadedData\GGPoker\Templates\Tile6\Pot\" />
