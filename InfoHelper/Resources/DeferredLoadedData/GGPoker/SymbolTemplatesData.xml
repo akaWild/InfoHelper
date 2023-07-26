@@ -3734,6 +3734,80 @@
                 </GgRecordItemInfo>
               </GgRecordItems>
             </GgRecordInfo>
+            <!--4 digits with dot-->
+            <GgRecordInfo>
+              <GgRecordItems>
+                <GgRecordItemInfo Rectangle="224, 383, 9, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet5_wb_dflt" Value="B" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="216, 383, 9, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="B_bet5_wb_dflt" Value="B" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="205, 383, 9, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet5_wb_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet5_wb_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet5_wb_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet5_wb_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet5_wb_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet5_wb_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet5_wb_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet5_wb_dflt" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet5_wb_dflt" Value="1" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="202, 383, 2, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="._bet5_wb_dflt" Value="." />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="194, 383, 9, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet5_wb_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet5_wb_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet5_wb_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet5_wb_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet5_wb_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet5_wb_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet5_wb_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet5_wb_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet5_wb_dflt" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet5_wb_dflt" Value="1" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="186, 383, 9, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="0_bet5_wb_dflt" Value="0" />
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet5_wb_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet5_wb_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet5_wb_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet5_wb_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet5_wb_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet5_wb_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet5_wb_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet5_wb_dflt" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet5_wb_dflt" Value="1" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+                <GgRecordItemInfo Rectangle="178, 383, 9, 11">
+                  <RecordItemValues>
+                    <GgRecordItemValueInfo ItemImageNameMask="2_bet5_wb_dflt" Value="2" />
+                    <GgRecordItemValueInfo ItemImageNameMask="3_bet5_wb_dflt" Value="3" />
+                    <GgRecordItemValueInfo ItemImageNameMask="4_bet5_wb_dflt" Value="4" />
+                    <GgRecordItemValueInfo ItemImageNameMask="5_bet5_wb_dflt" Value="5" />
+                    <GgRecordItemValueInfo ItemImageNameMask="6_bet5_wb_dflt" Value="6" />
+                    <GgRecordItemValueInfo ItemImageNameMask="7_bet5_wb_dflt" Value="7" />
+                    <GgRecordItemValueInfo ItemImageNameMask="8_bet5_wb_dflt" Value="8" />
+                    <GgRecordItemValueInfo ItemImageNameMask="9_bet5_wb_dflt" Value="9" />
+                    <GgRecordItemValueInfo ItemImageNameMask="1_bet5_wb_dflt" Value="1" />
+                  </RecordItemValues>
+                </GgRecordItemInfo>
+              </GgRecordItems>
+            </GgRecordInfo>
           </GgRecords>
         </GgTemplateInfo>
         <GgTemplateInfo TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="6" ApplyOtsu="true" Rectangle="192, 238, 66, 11">
