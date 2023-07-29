@@ -7,11 +7,12 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction LightRRange="{199,238}" LightGRange="{166,190}" LightBRange="{41,48}"/>
+                <GgRecordRestriction LightRRange="{199,238}" LightGRange="{166,190}" LightBRange="{41,50}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="t_pot_wb_dflt" Value="t"/>
                 <GgRecordItem ItemImageNameMask="o_pot_wb_dflt" Value="o"/>
+                <GgRecordItem ItemImageNameMask="ot_pot_wb_dflt" Value="t"/>
                 <GgRecordItem ItemImageNameMask="c_pot_wb_dflt" Value="c"/>
                 <GgRecordItem ItemImageNameMask="._pot_wb_dflt" Value="."/>
                 <GgRecordItem ItemImageNameMask="0_pot_wb_dflt" Value="0"/>
@@ -33,7 +34,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{207,224}" LightGRange="{215,230}" LightBRange="{207,224}"/>
+                <GgRecordRestriction  LightRRange="{207,230}" LightGRange="{207,230}" LightBRange="{207,230}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._rpot_wb_dflt" Value="."/>
@@ -267,7 +268,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{195,214}" LightGRange="{202,219}" LightBRange="{195,216}"/>
+                <GgRecordRestriction  LightRRange="{195,219}" LightGRange="{195,219}" LightBRange="{195,219}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_dflt" Value="."/>
@@ -289,7 +290,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{195,225}" LightGRange="{209,226}" LightBRange="{204,225}"/>
+                <GgRecordRestriction  LightRRange="{195,226}" LightGRange="{195,226}" LightBRange="{195,226}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_dflt" Value="."/>
@@ -311,7 +312,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{194,211}" LightGRange="{202,215}" LightBRange="{194,211}"/>
+                <GgRecordRestriction  LightRRange="{194,215}" LightGRange="{194,215}" LightBRange="{194,215}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_dflt" Value="."/>
@@ -333,7 +334,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{193,214}" LightGRange="{204,221}" LightBRange="{195,214}"/>
+                <GgRecordRestriction  LightRRange="{193,221}" LightGRange="{193,221}" LightBRange="{193,221}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_dflt" Value="."/>
@@ -355,7 +356,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{194,211}" LightGRange="{202,217}" LightBRange="{196,210}"/>
+                <GgRecordRestriction  LightRRange="{194,217}" LightGRange="{194,217}" LightBRange="{194,217}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_dflt" Value="."/>
@@ -377,7 +378,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{204,221}" LightGRange="{210,225}" LightBRange="{204,221}"/>
+                <GgRecordRestriction  LightRRange="{204,225}" LightGRange="{204,225}" LightBRange="{204,225}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_dflt" Value="."/>
@@ -391,6 +392,403 @@
                 <GgRecordItem ItemImageNameMask="7_bet_wb_dflt" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_bet_wb_dflt" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_bet_wb_dflt" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+      </GgTemplates>
+    </GgTableInfo>
+    <GgTableInfo TableType="Tile6">
+      <GgTemplates>
+        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile6\Pot" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="319, 180, 54, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction LightRRange="{195,234}" LightGRange="{160,189}" LightBRange="{39,48}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="t_pot_wb_tile6" Value="t"/>
+                <GgRecordItem ItemImageNameMask="o_pot_wb_tile6" Value="o"/>
+                <GgRecordItem ItemImageNameMask="ot_pot_wb_tile6" Value="t"/>
+                <GgRecordItem ItemImageNameMask="c_pot_wb_tile6" Value="c"/>
+                <GgRecordItem ItemImageNameMask="._pot_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_pot_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_pot_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_pot_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_pot_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_pot_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_pot_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_pot_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_pot_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_pot_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_pot_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Tile6\RoundPot" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="293, 277, 54, 10">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{192,240}" LightGRange="{192,240}" LightBRange="{192,240}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._rpot_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_rpot_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_rpot_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_rpot_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_rpot_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_rpot_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_rpot_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_rpot_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_rpot_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_rpot_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_rpot_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="1" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="290, 118, 60, 13">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="2" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="520, 163, 60, 13">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="3" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="540, 349, 60, 13">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="287, 428, 66, 14">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="5" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="40, 349, 60, 13">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="6" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="60, 163, 60, 13">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="1" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="296, 161, 54, 10">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{209,250}" LightGRange="{209,250}" LightBRange="{209,250}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="2" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="443, 185, 54, 10">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{202,249}" LightGRange="{202,249}" LightBRange="{202,249}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="3" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="458, 295, 54, 10">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{203,255}" LightGRange="{203,255}" LightBRange="{203,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="296, 317, 54, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{190,239}" LightGRange="{190,239}" LightBRange="{190,239}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="5" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="128, 295, 54, 10">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{201,249}" LightGRange="{201,249}" LightBRange="{201,249}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile6" Value="9"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="6" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="143, 185, 54, 10">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{190,245}" LightGRange="{190,245}" LightBRange="{190,245}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile6" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile6" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile6" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile6" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile6" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile6" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile6" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile6" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile6" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile6" Value="9"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>

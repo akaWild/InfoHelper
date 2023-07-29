@@ -1363,5 +1363,1046 @@
         </GgTemplate>
       </GgTemplates>
     </GgTableInfo>
+    <GgTableInfo TableType="Tile6">
+      <GgTemplates>
+        <!--Board card V2-->
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="1" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="190, 201, 16, 16">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{15,36}" DarkGRange="{137,143}" DarkBRange="{35,53}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_bc1_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_bc1_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_bc1_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_bc1_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_bc1_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_bc1_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_bc1_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_bc1_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_bc1_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_bc1_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_bc1_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_bc1_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_bc1_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_bc1_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_bc1_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="2" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="244, 201, 16, 16">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{15,36}" DarkGRange="{137,143}" DarkBRange="{35,53}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_bc2_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_bc2_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_bc2_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_bc2_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_bc2_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_bc2_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_bc2_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_bc2_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_bc2_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_bc2_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_bc2_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_bc2_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_bc2_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_bc2_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_bc2_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="3" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="298, 201, 16, 16">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{15,36}" DarkGRange="{137,143}" DarkBRange="{35,53}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_bc3_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_bc3_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_bc3_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_bc3_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_bc3_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_bc3_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_bc3_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_bc3_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_bc3_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_bc3_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_bc3_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_bc3_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_bc3_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_bc3_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_bc3_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="352, 201, 16, 16">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{15,36}" DarkGRange="{137,143}" DarkBRange="{35,53}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_bc4_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_bc4_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_bc4_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_bc4_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_bc4_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_bc4_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_bc4_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_bc4_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_bc4_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_bc4_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_bc4_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_bc4_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_bc4_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_bc4_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_bc4_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="5" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="407, 201, 16, 16">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{15,36}" DarkGRange="{137,143}" DarkBRange="{35,53}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_bc5_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_bc5_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_bc5_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_bc5_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_bc5_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_bc5_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_bc5_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_bc5_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_bc5_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_bc5_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_bc5_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_bc5_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_bc5_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_bc5_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_bc5_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Hole card V2-->
+        <GgTemplate TemplateName="HoleCard1V2" TemplatesFolder="Templates\Tile6\HoleCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="280, 353, 16, 18">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{12,33}" DarkGRange="{136,143}" DarkBRange="{31,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_hc1_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{40,55}" DarkGRange="{38,56}" DarkBRange="{38,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_hc1_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{16,37}" DarkGRange="{79,92}" DarkBRange="{146,152}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_hc1_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{143,151}" DarkGRange="{16,35}" DarkBRange="{16,34}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_hc1_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_hc1_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_hc1_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_hc1_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_hc1_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_hc1_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_hc1_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_hc1_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_hc1_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_hc1_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_hc1_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_hc1_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCard2V2" TemplatesFolder="Templates\Tile6\HoleCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="316, 350, 16, 18">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{15,32}" DarkGRange="{136,143}" DarkBRange="{34,51}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2c"/>
+                <GgRecordItem ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3c"/>
+                <GgRecordItem ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4c"/>
+                <GgRecordItem ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5c"/>
+                <GgRecordItem ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6c"/>
+                <GgRecordItem ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7c"/>
+                <GgRecordItem ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8c"/>
+                <GgRecordItem ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9c"/>
+                <GgRecordItem ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Tc"/>
+                <GgRecordItem ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jc"/>
+                <GgRecordItem ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qc"/>
+                <GgRecordItem ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Kc"/>
+                <GgRecordItem ItemImageNameMask="A_hc2_v2_wb_tile6" Value="Ac"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{42,55}" DarkGRange="{41,56}" DarkBRange="{42,55}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2s"/>
+                <GgRecordItem ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3s"/>
+                <GgRecordItem ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4s"/>
+                <GgRecordItem ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5s"/>
+                <GgRecordItem ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6s"/>
+                <GgRecordItem ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7s"/>
+                <GgRecordItem ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8s"/>
+                <GgRecordItem ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9s"/>
+                <GgRecordItem ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Ts"/>
+                <GgRecordItem ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Js"/>
+                <GgRecordItem ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qs"/>
+                <GgRecordItem ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Ks"/>
+                <GgRecordItem ItemImageNameMask="A_hc2_v2_wb_tile6" Value="As"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{19,34}" DarkGRange="{81,90}" DarkBRange="{147,150}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2d"/>
+                <GgRecordItem ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3d"/>
+                <GgRecordItem ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4d"/>
+                <GgRecordItem ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5d"/>
+                <GgRecordItem ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6d"/>
+                <GgRecordItem ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7d"/>
+                <GgRecordItem ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8d"/>
+                <GgRecordItem ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9d"/>
+                <GgRecordItem ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Td"/>
+                <GgRecordItem ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jd"/>
+                <GgRecordItem ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qd"/>
+                <GgRecordItem ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Kd"/>
+                <GgRecordItem ItemImageNameMask="A_hc2_v2_wb_tile6" Value="Ad"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction DarkRRange="{145,150}" DarkGRange="{20,35}" DarkBRange="{19,34}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2h"/>
+                <GgRecordItem ItemImageNameMask="3_hc2_v2_wb_tile6" Value="3h"/>
+                <GgRecordItem ItemImageNameMask="4_hc2_v2_wb_tile6" Value="4h"/>
+                <GgRecordItem ItemImageNameMask="5_hc2_v2_wb_tile6" Value="5h"/>
+                <GgRecordItem ItemImageNameMask="6_hc2_v2_wb_tile6" Value="6h"/>
+                <GgRecordItem ItemImageNameMask="7_hc2_v2_wb_tile6" Value="7h"/>
+                <GgRecordItem ItemImageNameMask="8_hc2_v2_wb_tile6" Value="8h"/>
+                <GgRecordItem ItemImageNameMask="9_hc2_v2_wb_tile6" Value="9h"/>
+                <GgRecordItem ItemImageNameMask="T_hc2_v2_wb_tile6" Value="Th"/>
+                <GgRecordItem ItemImageNameMask="J_hc2_v2_wb_tile6" Value="Jh"/>
+                <GgRecordItem ItemImageNameMask="Q_hc2_v2_wb_tile6" Value="Qh"/>
+                <GgRecordItem ItemImageNameMask="K_hc2_v2_wb_tile6" Value="Kh"/>
+                <GgRecordItem ItemImageNameMask="A_hc2_v2_wb_tile6" Value="Ah"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Dealer-->
+        <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="1" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="300, 142, 2, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="1_dlr_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="2" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="499, 171, 2, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_dlr_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="3" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="505, 313, 2, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="3_dlr_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="4" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="276, 332, 2, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="4_dlr_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="5" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="136, 313, 2, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="5_dlr_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="6" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="141, 171, 2, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="6_dlr_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Hole card validity V4-->
+        <GgTemplate TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="1" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="287, 62, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="1_v4_hcval1_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="2" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="517, 107, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_v4_hcval1_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="3" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="537, 293, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="3_v4_hcval1_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="4" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="283, 367, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="4_v4_hcval1_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="5" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="37, 293, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="5_v4_hcval1_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity1V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="6" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="57, 107, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="6_v4_hcval1_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="1" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="349, 62, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="1_v4_hcval2_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="2" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="579, 107, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_v4_hcval2_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="3" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="599, 293, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="3_v4_hcval2_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="4" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="352, 367, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="4_v4_hcval2_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="5" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="99, 293, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="5_v4_hcval2_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="HoleCardValidity2V4" TemplatesFolder="Templates\Tile6\HoleCardValidity" Position="6" Deviation="30" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="119, 107, 3, 3">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="6_v4_hcval2_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Nick validity-->
+        <GgTemplate TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="1" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="311, 102, 20, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="1_nickval_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="2" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="541, 147, 20, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_nickval_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="3" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="561, 333, 20, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="3_nickval_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="4" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="309, 410, 25, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="4_nickval_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="5" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="61, 333, 20, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="5_nickval_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="NickValidity" TemplatesFolder="Templates\Tile6\NickValidity" Position="6" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="81, 147, 20, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="6_nickval_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Stack validity (top)-->
+        <GgTemplate TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="1" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="291, 116, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="1_stvalu_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="2" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="520, 161, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_stvalu_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="3" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="540, 347, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="3_stvalu_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="4" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="287, 426, 67, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="4_stvalu_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="5" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="41, 347, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="5_stvalu_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityTop" TemplatesFolder="Templates\Tile6\StackValidity" Position="6" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="61, 161, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="6_stvalu_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Stack validity (bottom)-->
+        <GgTemplate TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="1" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="291, 130, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="1_stvalb_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="2" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="520, 175, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="2_stvalb_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="3" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="540, 361, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="3_stvalb_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="4" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="287, 441, 67, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="4_stvalb_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="5" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="41, 361, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="5_stvalb_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="StackValidityBottom" TemplatesFolder="Templates\Tile6\StackValidity" Position="6" Deviation="5" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="61, 175, 60, 1">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="6_stvalb_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Button V1-->
+        <GgTemplate TemplateName="ButtonFoldV1" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="419, 431, 21, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v1_fold_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCheckV1" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="496, 431, 31, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v1_check_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCheckCallV1" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="401, 431, 58, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v1_checkcall_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCallV1" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="502, 423, 19, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v1_call_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonBetV1" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="585, 423, 17, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v1_bet_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonRaiseV1" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="573, 423, 41, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v1_raise_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <!--Button V2-->
+        <GgTemplate TemplateName="ButtonFoldV2" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="419, 432, 21, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v2_fold_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCheckV2" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="496, 432, 31, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v2_check_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCheckCallV2" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="401, 432, 58, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v2_checkcall_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCallV2" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="502, 424, 19, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v2_call_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonBetV2" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="585, 424, 17, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v2_bet_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonRaiseV2" TemplatesFolder="Templates\Tile6\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="573, 424, 41, 9">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v2_raise_tile6" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+      </GgTemplates>
+    </GgTableInfo>
   </GgTables>
 </GgTemplatesInfo>
