@@ -285,22 +285,22 @@ namespace InfoHelper.DataProcessor
 
                         bool regionsOverlapped = false;
 
-                        IScreenParser screenParser = (IScreenParser)_screenParserType.GetConstructor(new[]
-                        {
-                            typeof(BitmapDecorator), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
-                        }).Invoke(new object[] { bmpDecor, window.Position, window.TableSize.ToString(), Shared.CardBackIndex, Shared.DeckIndex });
-
                         Rectangle mouseRect = default;
 
                         if (_cursorPosition != null)
                             mouseRect = new Rectangle(_cursorPosition.Value.X - window.Position.X, _cursorPosition.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
 
-                        regionsOverlapped = mouseRect != default && screenParser.RestrictedRegions.ContainsRect(mouseRect);
+                        IScreenParser screenParser = (IScreenParser)_screenParserType.GetConstructor(new[]
+                        {
+                            typeof(BitmapDecorator), typeof(Rectangle), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
+                        }).Invoke(new object[] { bmpDecor, window.Position, mouseRect, window.TableSize.ToString(), Shared.CardBackIndex, Shared.DeckIndex });
+
+                        ScreenParserData screenData = screenParser.ParseWindow();
+
+                        regionsOverlapped = screenData.IsWindowOverlappedByMouse;
 
                         if (!regionsOverlapped)
                         {
-                            ScreenParserData screenData = screenParser.ParseWindow();
-
                             ////Test!!!
                             //if (screenData.Stacks.Any(s => s is "") || screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
                             //{
