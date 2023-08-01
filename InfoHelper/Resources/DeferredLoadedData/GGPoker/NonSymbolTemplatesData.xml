@@ -1792,7 +1792,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{12,33}" DarkGRange="{136,143}" DarkBRange="{31,50}"/>
+                <GgRecordRestriction DarkRRange="{12,35}" DarkGRange="{136,143}" DarkBRange="{31,50}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_hc1_v2_wb_tile6" Value="2c"/>
@@ -1876,7 +1876,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{15,32}" DarkGRange="{136,143}" DarkBRange="{34,51}"/>
+                <GgRecordRestriction DarkRRange="{15,35}" DarkGRange="{136,143}" DarkBRange="{34,51}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_hc2_v2_wb_tile6" Value="2c"/>

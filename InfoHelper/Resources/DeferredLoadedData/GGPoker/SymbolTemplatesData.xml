@@ -404,7 +404,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction LightRRange="{195,234}" LightGRange="{160,189}" LightBRange="{39,48}"/>
+                <GgRecordRestriction LightRRange="{195,239}" LightGRange="{160,192}" LightBRange="{39,50}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="t_pot_wb_tile6" Value="t"/>
@@ -462,7 +462,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{220,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
+                <GgRecordRestriction  LightRRange="{218,246}" LightGRange="{46,50}" LightBRange="{46,50}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem Value="AllIn"/>
@@ -481,6 +481,7 @@
                 <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile6" Value="54"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>
@@ -516,6 +517,7 @@
                 <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile6" Value="54"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>
@@ -551,6 +553,7 @@
                 <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile6" Value="54"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>
@@ -586,6 +589,7 @@
                 <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile6" Value="54"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>
@@ -621,6 +625,7 @@
                 <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile6" Value="54"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>
@@ -656,6 +661,7 @@
                 <GgRecordItem ItemImageNameMask="7_stack_wb_tile6" Value="7"/>
                 <GgRecordItem ItemImageNameMask="8_stack_wb_tile6" Value="8"/>
                 <GgRecordItem ItemImageNameMask="9_stack_wb_tile6" Value="9"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile6" Value="54"/>
               </GgRecordItems>
             </GgRecord>
           </GgRecords>
@@ -665,7 +671,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{209,250}" LightGRange="{209,250}" LightBRange="{209,250}"/>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
@@ -687,7 +693,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{202,249}" LightGRange="{202,249}" LightBRange="{202,249}"/>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
@@ -709,7 +715,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{203,255}" LightGRange="{203,255}" LightBRange="{203,255}"/>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
@@ -731,7 +737,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{190,239}" LightGRange="{190,239}" LightBRange="{190,239}"/>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
@@ -753,7 +759,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{201,249}" LightGRange="{201,249}" LightBRange="{201,249}"/>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
@@ -775,7 +781,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{190,245}" LightGRange="{190,245}" LightBRange="{190,245}"/>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._bet_wb_tile6" Value="."/>
