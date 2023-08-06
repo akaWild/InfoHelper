@@ -1390,7 +1390,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+                <GgRecordRestriction DarkRRange="{43,56}" DarkGRange="{42,56}" DarkBRange="{43,56}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2s"/>
@@ -1410,7 +1410,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+                <GgRecordRestriction DarkRRange="{19,38}" DarkGRange="{80,92}" DarkBRange="{145,151}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2d"/>
@@ -1430,7 +1430,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{19,36}" DarkBRange="{18,35}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc1_v2_wb_tile6" Value="2h"/>
@@ -1474,7 +1474,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+                <GgRecordRestriction DarkRRange="{43,56}" DarkGRange="{42,56}" DarkBRange="{43,56}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2s"/>
@@ -1494,7 +1494,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+                <GgRecordRestriction DarkRRange="{19,38}" DarkGRange="{80,92}" DarkBRange="{145,151}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2d"/>
@@ -1514,7 +1514,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{19,36}" DarkBRange="{18,35}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc2_v2_wb_tile6" Value="2h"/>
@@ -1558,7 +1558,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+                <GgRecordRestriction DarkRRange="{43,56}" DarkGRange="{42,56}" DarkBRange="{43,56}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2s"/>
@@ -1578,7 +1578,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+                <GgRecordRestriction DarkRRange="{19,38}" DarkGRange="{80,92}" DarkBRange="{145,151}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2d"/>
@@ -1598,7 +1598,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{19,36}" DarkBRange="{18,35}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc3_v2_wb_tile6" Value="2h"/>
@@ -1642,7 +1642,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+                <GgRecordRestriction DarkRRange="{43,56}" DarkGRange="{42,56}" DarkBRange="{43,56}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2s"/>
@@ -1662,7 +1662,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+                <GgRecordRestriction DarkRRange="{19,38}" DarkGRange="{80,92}" DarkBRange="{145,151}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2d"/>
@@ -1682,7 +1682,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{19,36}" DarkBRange="{18,35}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc4_v2_wb_tile6" Value="2h"/>
@@ -1726,7 +1726,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{43,55}" DarkGRange="{42,55}" DarkBRange="{43,55}"/>
+                <GgRecordRestriction DarkRRange="{43,56}" DarkGRange="{42,56}" DarkBRange="{43,56}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2s"/>
@@ -1746,7 +1746,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{21,38}" DarkGRange="{81,92}" DarkBRange="{146,151}"/>
+                <GgRecordRestriction DarkRRange="{19,38}" DarkGRange="{80,92}" DarkBRange="{145,151}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2d"/>
@@ -1766,7 +1766,7 @@
             </GgRecord>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{21,34}" DarkBRange="{20,33}"/>
+                <GgRecordRestriction DarkRRange="{143,150}" DarkGRange="{19,36}" DarkBRange="{18,35}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="2_bc5_v2_wb_tile6" Value="2h"/>

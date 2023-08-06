@@ -225,6 +225,12 @@ namespace InfoHelper.Controls
                         groupText += $" ({Math.Round(value, 1).ToString(CultureInfo.InvariantCulture)})";
                 }
 
+                double madeHandsSumRatio = Math.Round(handsGroup.Hands.Take(12 * PostflopHandsGroup.HandCategoriesCount).Select(v => (int)v).Sum() * 100 / handsSum);
+
+                double drawHandsSumRatio = 100 - madeHandsSumRatio;
+
+                groupText += $" M/D: {madeHandsSumRatio.ToString(CultureInfo.InvariantCulture)}/{drawHandsSumRatio.ToString(CultureInfo.InvariantCulture)}%";
+
                 FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, InfoHeight - 6, float.IsNaN(handsGroup.GtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
 
                 Point textLocation = new Point(CounterActionsWidth + 3, yIndent + InfoHeight / 2f - formattedText.Height / 2);

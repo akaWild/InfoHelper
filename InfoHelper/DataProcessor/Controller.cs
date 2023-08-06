@@ -301,31 +301,35 @@ namespace InfoHelper.DataProcessor
 
                         if (!regionsOverlapped)
                         {
-                            //Test!!!
-                            if (screenData.Stacks.Any(s => s is "") || screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
-                            {
 
-                            }
+                            #region Test
 
-                            string[] holeCards = new string[] { screenData.HoleCards[3][0], screenData.HoleCards[3][1] };
+                            //if (screenData.Stacks.Any(s => s is "") || screenData.Bets.Any(b => b.Contains(" ")) || screenData.Stacks.Any(s => s != null && s.Contains(" ")) || screenData.Pot.Contains(" ") || screenData.RoundPot.Contains(" "))
+                            //{
 
-                            foreach (string card in holeCards)
-                            {
-                                if (card.Length > 0 && card == new string(' ', card.Length))
-                                {
+                            //}
 
-                                }
-                            }
+                            //string[] holeCards = new string[] { screenData.HoleCards[3][0], screenData.HoleCards[3][1] };
 
-                            string[] flopCards = new string[] { screenData.FlopCard1, screenData.FlopCard2, screenData.FlopCard3, screenData.TurnCard, screenData.RiverCard };
+                            //foreach (string card in holeCards)
+                            //{
+                            //    if (card.Length > 0 && card == new string(' ', card.Length))
+                            //    {
 
-                            foreach (string card in flopCards)
-                            {
-                                if (card.Length > 0 && card == new string(' ', card.Length))
-                                {
+                            //    }
+                            //}
 
-                                }
-                            }
+                            //string[] flopCards = new string[] { screenData.FlopCard1, screenData.FlopCard2, screenData.FlopCard3, screenData.TurnCard, screenData.RiverCard };
+
+                            //foreach (string card in flopCards)
+                            //{
+                            //    if (card.Length > 0 && card == new string(' ', card.Length))
+                            //    {
+
+                            //    }
+                            //}
+
+                            #endregion
 
                             _ = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
                                 winContextInfo.GameContext });
