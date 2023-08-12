@@ -170,7 +170,8 @@
                     </local:PreflopMatrixControl.DataContext>
                 </local:PreflopMatrixControl>
                 <local:PostlopHandsTableControl Grid.Row="0" Margin="0, 5, 5, 2.5" Data="{Binding PostflopHandsGroup, UpdateSourceTrigger=PropertyChanged}" Round="{Binding Round, UpdateSourceTrigger=PropertyChanged}"
-                                                Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                                Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                                ShowGroupHeader="{Binding ShowGroupHeader, UpdateSourceTrigger=PropertyChanged}">
                     <local:PostlopHandsTableControl.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopHandsPanelState"/>
                     </local:PostlopHandsTableControl.DataContext>
@@ -182,7 +183,8 @@
                     </local:PreflopMatrixControl.DataContext>
                 </local:PreflopMatrixControl>
                 <local:PostlopHandsTableControl Grid.Row="1" Margin="0, 2.5, 5, 5" Data="{Binding PostflopHandsGroup, UpdateSourceTrigger=PropertyChanged}" Round="{Binding Round, UpdateSourceTrigger=PropertyChanged}"
-                                                Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                                                Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}"
+                                                ShowGroupHeader="{Binding ShowGroupHeader, UpdateSourceTrigger=PropertyChanged}">
                     <local:PostlopHandsTableControl.DataContext>
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopHandsPanelAltState"/>
                     </local:PostlopHandsTableControl.DataContext>

@@ -156,6 +156,15 @@ namespace InfoHelper.Controls
         public static readonly DependencyProperty RoundProperty =
             DependencyProperty.Register("Round", typeof(int), typeof(PostlopHandsTableControl), new PropertyMetadata(0));
 
+        public bool ShowGroupHeader
+        {
+            get => (bool)GetValue(ShowGroupHeaderProperty);
+            set => SetValue(ShowGroupHeaderProperty, value);
+        }
+
+        public static readonly DependencyProperty ShowGroupHeaderProperty =
+            DependencyProperty.Register("ShowGroupHeader", typeof(bool), typeof(PostlopHandsTableControl), new PropertyMetadata(false));
+
         protected override void OnRender(DrawingContext drawingContext)
         {
             base.OnRender(drawingContext);
@@ -204,43 +213,50 @@ namespace InfoHelper.Controls
 
             double yIndent = headerHeight;
 
-            float handsSum = handsGroup.Hands.Select(v => (int)v).Sum();
+            double infoHeight = 0;
 
-            if (handsSum > 0)
+            if (ShowGroupHeader)
             {
-                float avgEv = (float)handsGroup.AccumulatedEv / handsSum;
+                infoHeight = InfoHeight;
 
-                string groupText = $"[{(handsSum >= 100 ? "++" : handsSum)}] Ev: {Math.Round(avgEv, 1).ToString(CultureInfo.InvariantCulture)}";
+                float handsSum = handsGroup.Hands.Select(v => (int)v).Sum();
 
-                if (avgEv > 0)
+                if (handsSum > 0)
                 {
-                    float value = float.NaN;
+                    float avgEv = (float)handsGroup.AccumulatedEv / handsSum;
 
-                    if (!float.IsNaN(handsGroup.GtoValue))
-                        value = handsGroup.GtoValue;
-                    else if (!float.IsNaN(handsGroup.DefaultValue))
-                        value = handsGroup.DefaultValue;
+                    string groupText = $"[{(handsSum >= 100 ? "++" : handsSum)}] Ev: {Math.Round(avgEv, 1).ToString(CultureInfo.InvariantCulture)}";
 
-                    if (!float.IsNaN(value))
-                        groupText += $" ({Math.Round(value, 1).ToString(CultureInfo.InvariantCulture)})";
+                    if (avgEv > 0)
+                    {
+                        float value = float.NaN;
+
+                        if (!float.IsNaN(handsGroup.GtoValue))
+                            value = handsGroup.GtoValue;
+                        else if (!float.IsNaN(handsGroup.DefaultValue))
+                            value = handsGroup.DefaultValue;
+
+                        if (!float.IsNaN(value))
+                            groupText += $" ({Math.Round(avgEv - value, 1).ToString("+0.#;-0.#", CultureInfo.InvariantCulture)})";
+                    }
+
+                    double madeHandsSumRatio = Math.Round(handsGroup.Hands.Take(12 * PostflopHandsGroup.HandCategoriesCount).Select(v => (int)v).Sum() * 100 / handsSum);
+
+                    double drawHandsSumRatio = 100 - madeHandsSumRatio;
+
+                    groupText += $" M/D: {madeHandsSumRatio.ToString(CultureInfo.InvariantCulture)}/{drawHandsSumRatio.ToString(CultureInfo.InvariantCulture)}%";
+
+                    FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, infoHeight - 6, float.IsNaN(handsGroup.GtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
+
+                    Point textLocation = new Point(CounterActionsWidth + 3, yIndent + infoHeight / 2f - formattedText.Height / 2);
+
+                    drawingContext.DrawText(formattedText, textLocation);
                 }
 
-                double madeHandsSumRatio = Math.Round(handsGroup.Hands.Take(12 * PostflopHandsGroup.HandCategoriesCount).Select(v => (int)v).Sum() * 100 / handsSum);
+                yIndent += infoHeight;
 
-                double drawHandsSumRatio = 100 - madeHandsSumRatio;
-
-                groupText += $" M/D: {madeHandsSumRatio.ToString(CultureInfo.InvariantCulture)}/{drawHandsSumRatio.ToString(CultureInfo.InvariantCulture)}%";
-
-                FormattedText formattedText = new FormattedText(groupText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, InfoHeight - 6, float.IsNaN(handsGroup.GtoValue) ? _foregroundColor : _gtoForegroundColor, 1);
-
-                Point textLocation = new Point(CounterActionsWidth + 3, yIndent + InfoHeight / 2f - formattedText.Height / 2);
-
-                drawingContext.DrawText(formattedText, textLocation);
+                drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, yIndent), new Point(RenderSize.Width, yIndent));
             }
-
-            yIndent += InfoHeight;
-
-            drawingContext.DrawLine(_defaultPen, new Point(CounterActionsWidth, yIndent), new Point(RenderSize.Width, yIndent));
 
             double groupNameWidth = GroupNameWidthRatio * (RenderSize.Width - CounterActionsWidth);
 
@@ -248,7 +264,7 @@ namespace InfoHelper.Controls
 
             double cellWidth = (RenderSize.Width - CounterActionsWidth - groupNameWidth) / PostflopHandsGroup.HandCategoriesCount;
 
-            double cellHeight = (RenderSize.Height - headerHeight - InfoHeight) / rows;
+            double cellHeight = (RenderSize.Height - headerHeight - infoHeight) / rows;
 
             for (int i = 0; i < rows; i++)
             {
@@ -263,7 +279,7 @@ namespace InfoHelper.Controls
 
             double xIndent = CounterActionsWidth + groupNameWidth;
 
-            yIndent = headerHeight + InfoHeight;
+            yIndent = headerHeight + infoHeight;
 
             double evPerCell = PostflopHandsGroup.NutHandsEvThreshold / (PostflopHandsGroup.HandCategoriesCount - 1);
 
@@ -366,12 +382,12 @@ namespace InfoHelper.Controls
             {
                 xIndent = CounterActionsWidth + groupNameWidth + (i + 1) * cellWidth;
                 
-                drawingContext.DrawLine(_defaultPen, new Point(xIndent, headerHeight + InfoHeight), new Point(xIndent, RenderSize.Height));
+                drawingContext.DrawLine(_defaultPen, new Point(xIndent, headerHeight + infoHeight), new Point(xIndent, RenderSize.Height));
             }
 
             for (int i = 0; i < rows - 1; i++)
             {
-                yIndent = headerHeight + InfoHeight + (i + 1) * cellHeight;
+                yIndent = headerHeight + infoHeight + (i + 1) * cellHeight;
 
                 drawingContext.DrawLine(i == 11 ? _defaultGroupDelimiterPen : _defaultPen, new Point(CounterActionsWidth, yIndent), new Point(RenderSize.Width, yIndent));
             }

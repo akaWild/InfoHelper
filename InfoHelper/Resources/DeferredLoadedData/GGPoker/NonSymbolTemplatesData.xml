@@ -4,7 +4,7 @@
     <GgTableInfo TableType="Default">
       <GgTemplates>
         <!--Board card V2-->
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="1" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="253, 257, 21, 21">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="253, 257, 21, 21">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -88,7 +88,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="2" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="325, 257, 21, 21">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="325, 257, 21, 21">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -172,7 +172,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="3" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="397, 257, 21, 21">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="397, 257, 21, 21">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -256,7 +256,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="469, 257, 21, 21">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="469, 257, 21, 21">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -340,7 +340,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="5" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="541, 257, 21, 21">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Default\BoardCard" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="541, 257, 21, 21">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -426,7 +426,7 @@
         </GgTemplate>
 
         <!--Hole card V2-->
-        <GgTemplate TemplateName="HoleCard1V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="371, 460, 22, 22">
+        <GgTemplate TemplateName="HoleCard1V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="371, 460, 22, 22">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -510,7 +510,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="HoleCard2V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="419, 457, 22, 22">
+        <GgTemplate TemplateName="HoleCard2V2" TemplatesFolder="Templates\Default\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="419, 457, 22, 22">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1366,7 +1366,7 @@
     <GgTableInfo TableType="Tile6">
       <GgTemplates>
         <!--Board card V2-->
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="1" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="190, 201, 16, 16">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="190, 201, 16, 16">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1450,7 +1450,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="2" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="244, 201, 16, 16">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="244, 201, 16, 16">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1534,7 +1534,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="3" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="298, 201, 16, 16">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="298, 201, 16, 16">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1618,7 +1618,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="352, 201, 16, 16">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="352, 201, 16, 16">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1702,7 +1702,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="5" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="407, 201, 16, 16">
+        <GgTemplate TemplateName="BoardCardV2" TemplatesFolder="Templates\Tile6\BoardCard" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="407, 201, 16, 16">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1788,7 +1788,7 @@
         </GgTemplate>
 
         <!--Hole card V2-->
-        <GgTemplate TemplateName="HoleCard1V2" TemplatesFolder="Templates\Tile6\HoleCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="280, 353, 16, 18">
+        <GgTemplate TemplateName="HoleCard1V2" TemplatesFolder="Templates\Tile6\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="280, 353, 16, 18">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1872,7 +1872,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="HoleCard2V2" TemplatesFolder="Templates\Tile6\HoleCard" Position="4" ApplyOtsu="true" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="ByHash" Rectangle="316, 350, 16, 18">
+        <GgTemplate TemplateName="HoleCard2V2" TemplatesFolder="Templates\Tile6\HoleCard" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="316, 350, 16, 18">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>

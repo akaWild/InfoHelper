@@ -529,16 +529,7 @@ namespace InfoHelper.DataProcessor
                         throw new Exception($"Cell main group default value at line {linesCounter} is defined, but has incorrect format");
                 }
 
-                float[] subGroupDefaultValues = new float[] { float.NaN, float.NaN, float.NaN, float.NaN };
-
-                for (int i = 13; i < parts.Length; i++)
-                {
-                    if (parts[i] != string.Empty)
-                    {
-                        if (!float.TryParse(parts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupDefaultValues[i - 13]))
-                            throw new Exception($"Cell subgroup {i - 13} default values at line {linesCounter} are defined, but have incorrect format");
-                    }
-                }
+                float[] subGroupDefaultValues = new float[] { mainGroupDfltValue, mainGroupDfltValue, mainGroupDfltValue, mainGroupDfltValue };
 
                 PostflopHandsGroup postflopMainGroup = (PostflopHandsGroup)pd.MainGroup;
 
@@ -656,16 +647,7 @@ namespace InfoHelper.DataProcessor
                         throw new Exception($"Cell main group gto value at line {linesCounter} is defined, but has incorrect format");
                 }
 
-                float[] subGroupGtoValues = new float[] { float.NaN, float.NaN, float.NaN, float.NaN };
-
-                for (int i = 13; i < parts.Length; i++)
-                {
-                    if (parts[i] != string.Empty)
-                    {
-                        if (!float.TryParse(parts[i], NumberStyles.Any, CultureInfo.InvariantCulture, out subGroupGtoValues[i - 13]))
-                            throw new Exception($"Cell subgroup {i - 13} gto values at line {linesCounter} are defined, but have incorrect format");
-                    }
-                }
+                float[] subGroupGtoValues = new float[] { mainGroupGtoValue, mainGroupGtoValue, mainGroupGtoValue, mainGroupGtoValue };
 
                 PostflopHandsGroup postflopMainGroup = (PostflopHandsGroup)pd.MainGroup;
 

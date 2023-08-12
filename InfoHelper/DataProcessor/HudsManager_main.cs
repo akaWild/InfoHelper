@@ -32,21 +32,93 @@ namespace InfoHelper.DataProcessor
             {
                 float[] playerBets = new float[6];
 
+                BettingAction lastHeroActionCurrentRound = null;
+
+                BettingAction lastOppAggrActionCurrentRound = null;
+
+                float currentPot = 0;
+
+                float oppBetToPotRatio = 0;
+
                 foreach (BettingAction action in gc.Actions.Where(a => a.Round == gc.Round))
                 {
                     if (gc.IsPlayerIn[action.Player - 1] != null && action.Amount > playerBets[action.Player - 1])
-                        playerBets[action.Player - 1] = (float)action.Amount;
-                }
+                    {
+                        float amount = (float)action.Amount;
 
-                for (int i = 0; i < playerBets.Length; i++)
-                {
-                    if (playerBets[i] > playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1])
-                        playerBets[i] = (float)(playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1]);
+                        if (amount > playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1])
+                            amount = (float)(playerBets[gc.HeroPosition - 1] + gc.Stacks[gc.HeroPosition - 1]);
+
+                        float amountDelta = amount - playerBets[action.Player - 1];
+
+                        if (action.Player == gc.HeroPosition)
+                        {
+                            if (action.ActionType is not (BettingActionType.PostSb or BettingActionType.PostBb))
+                            {
+                                lastHeroActionCurrentRound = action;
+
+                                lastOppAggrActionCurrentRound = null;
+
+                                oppBetToPotRatio = 0;
+                            }
+                        }
+                        else
+                        {
+                            if (action.ActionType is BettingActionType.Bet or BettingActionType.Raise)
+                            {
+                                if (lastOppAggrActionCurrentRound != null)
+                                {
+                                    lastOppAggrActionCurrentRound = null;
+
+                                    oppBetToPotRatio = 0;
+                                }
+                                else
+                                {
+                                    float maxBet = playerBets.Max();
+
+                                    float amountToEqual = maxBet - playerBets[action.Player - 1];
+
+                                    lastOppAggrActionCurrentRound = action;
+
+                                    oppBetToPotRatio = (float)((amountDelta - amountToEqual) / (currentPot + gc.RoundPot + amountToEqual));
+                                }
+                            }
+                        }
+
+                        playerBets[action.Player - 1] = amount;
+
+                        currentPot += amountDelta;
+                    }
                 }
 
                 float potOdds = (float)(gc.AmountToCall / (playerBets.Sum() + gc.AmountToCall + gc.RoundPot));
 
-                _vmMain.ControlsState.PotOdds = potOdds == 0 ? null : $"P/O: {Math.Round(potOdds * 100, 1).ToString(CultureInfo.InvariantCulture)}%";
+                if (potOdds == 0)
+                    _vmMain.ControlsState.PotOdds = null;
+                else
+                {
+                    string potOddsStr = $"P/O: {Math.Round(potOdds * 100, 1).ToString(CultureInfo.InvariantCulture)}%";
+
+                    if (lastOppAggrActionCurrentRound != null)
+                    {
+                        if (gc.Round == 1)
+                        {
+                            if (lastHeroActionCurrentRound == null)
+                                potOddsStr += $" (Opp raise: {Math.Round(playerBets[lastOppAggrActionCurrentRound.Player - 1], 1).ToString(CultureInfo.InvariantCulture)} bb)";
+                            else
+                                potOddsStr += $" (Opp raise: {Math.Round(playerBets[lastOppAggrActionCurrentRound.Player - 1] / playerBets[lastHeroActionCurrentRound.Player - 1], 1).ToString(CultureInfo.InvariantCulture)}x)";
+                        }
+                        else
+                        {
+                            if(lastHeroActionCurrentRound  == null)
+                                potOddsStr += $" (Opp bet: {Math.Round(oppBetToPotRatio * 100, 1).ToString(CultureInfo.InvariantCulture)}% p)";
+                            else
+                                potOddsStr += $" (Opp raise: {Math.Round(oppBetToPotRatio * 100, 1).ToString(CultureInfo.InvariantCulture)}% p)";
+                        }
+                    }
+
+                    _vmMain.ControlsState.PotOdds = potOddsStr;
+                }
             }
             else
                 _vmMain.ControlsState.PotOdds = null;
@@ -817,6 +889,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Visible = true;
 
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Round = selectedCell.Round;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelState.ShowGroupHeader = true;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.PostflopHandsGroup = (PostflopHandsGroup)postflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelState.Header = selectedCell.Description;
                         }
@@ -859,6 +932,7 @@ namespace InfoHelper.DataProcessor
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = true;
 
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Round = missedCell.Round;
+                            _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.ShowGroupHeader = true;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.PostflopHandsGroup = (PostflopHandsGroup)postflopData.MainGroup;
                             _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Header = missedCell.Description;
                         }

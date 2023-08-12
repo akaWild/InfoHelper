@@ -11,9 +11,11 @@ namespace InfoHelper.ViewModel.States
 
         public int Round { get; set; }
 
+        public bool ShowGroupHeader { get; set; }
+
         public override void UpdateBindings()
         {
-            string hashString = $"{Visible}{Round}{Header ?? string.Empty}{PostflopHandsGroup?.AccumulatedEv}";
+            string hashString = $"{Visible}{Round}{ShowGroupHeader}{Header ?? string.Empty}{PostflopHandsGroup?.AccumulatedEv}";
 
             int hashCode = hashString.GetStableHashCode();
 
