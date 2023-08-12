@@ -522,6 +522,7 @@
                 <GgRecordItem ItemImageNameMask="9_pot_wb_tile6" Value="9"/>
                 <GgRecordItem ItemImageNameMask="24_pot_wb_tile6" Value="24"/>
                 <GgRecordItem ItemImageNameMask="34_pot_wb_tile6" Value="34"/>
+                <GgRecordItem ItemImageNameMask="43_pot_wb_tile6" Value="43"/>
                 <GgRecordItem ItemImageNameMask="44_pot_wb_tile6" Value="44"/>
                 <GgRecordItem ItemImageNameMask="54_pot_wb_tile6" Value="54"/>
                 <GgRecordItem ItemImageNameMask="64_pot_wb_tile6" Value="64"/>
@@ -552,6 +553,7 @@
                 <GgRecordItem ItemImageNameMask="9_rpot_wb_tile6" Value="9"/>
                 <GgRecordItem ItemImageNameMask="24_rpot_wb_tile6" Value="24"/>
                 <GgRecordItem ItemImageNameMask="34_rpot_wb_tile6" Value="34"/>
+                <GgRecordItem ItemImageNameMask="43_rpot_wb_tile6" Value="43"/>
                 <GgRecordItem ItemImageNameMask="44_rpot_wb_tile6" Value="44"/>
                 <GgRecordItem ItemImageNameMask="54_rpot_wb_tile6" Value="54"/>
                 <GgRecordItem ItemImageNameMask="64_rpot_wb_tile6" Value="64"/>
