@@ -12,6 +12,12 @@
     <utils:DeviationsForegroundConverter x:Key="DeviationsForegroundConverter"/>
     <utils:DeviationsRectBrushConverter x:Key="DeviationsRectBrushConverter"/>
     <utils:DeviationsTextConverter x:Key="DeviationsTextConverter"/>
+    <utils:PostflopSizingRangeCellConverter x:Key="PostflopSizingRangeCellConverter"/>
+    <utils:PostflopSizingSampleCellConverter x:Key="PostflopSizingSampleCellConverter"/>
+    <utils:PostflopSizingEvCellConverter x:Key="PostflopSizingEvCellConverter"/>
+    <utils:PostflopSizingEvForegroundConverter x:Key="PostflopSizingEvForegroundConverter"/>
+    <utils:PostflopSizingEvBackgroundConverter x:Key="PostflopSizingEvBackgroundConverter"/>
+
     <Style TargetType="{x:Type controls:CellControl}">
         <Setter Property="Template">
             <Setter.Value>
@@ -207,6 +213,71 @@
                                            Foreground="{Binding Path=Data, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DeviationsForegroundConverter}}"/>
                             </Viewbox>
                         </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type controls:PostflopSizingRangeCellControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:PostflopSizingRangeCellControl}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Viewbox Stretch="Uniform" Margin="2, 0, 2, 0" HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
+                                 VerticalAlignment="Center">
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource PostflopSizingRangeCellConverter}">
+                                        <Binding Path="LowBound" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                        <Binding Path="UpperBound" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type controls:PostflopSizingSampleCellControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:PostflopSizingSampleCellControl}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Viewbox Stretch="Uniform" Margin="2, 0, 2, 0" HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
+                                 VerticalAlignment="Center">
+                            <TextBlock Text="{Binding Path=Sample, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource PostflopSizingSampleCellConverter}}"/>
+                        </Viewbox>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type controls:PostflopSizingEvCellControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type controls:PostflopSizingEvCellControl}">
+                    <Border Background="{Binding Path=EvDelta, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource PostflopSizingEvBackgroundConverter}}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <Viewbox Stretch="Uniform" Margin="2, 0, 2, 0" HorizontalAlignment="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=HorizontalContentAlignment}" 
+                                 VerticalAlignment="Center">
+                            <TextBlock Foreground="{Binding Path=EvDelta, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource PostflopSizingEvForegroundConverter}}">
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource PostflopSizingEvCellConverter}">
+                                        <Binding Path="Ev" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                        <Binding Path="EvDelta" RelativeSource="{RelativeSource TemplatedParent}"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </Viewbox>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

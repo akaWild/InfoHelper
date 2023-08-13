@@ -77,6 +77,36 @@
                         <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.OopCaller4PreflopHudState"/>
                     </local:OopCaller4PreflopHud.DataContext>
                 </local:OopCaller4PreflopHud>
+                <local:PostflopSizingHud Margin="5, 5, 5, 0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1"
+                                         Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:PostflopSizingHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopSizingTableStates[0]"/>
+                    </local:PostflopSizingHud.DataContext>
+                </local:PostflopSizingHud>
+                <local:PostflopSizingHud Margin="5, 0, 5, 0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1, 0, 1, 1"
+                                         Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:PostflopSizingHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopSizingTableStates[1]"/>
+                    </local:PostflopSizingHud.DataContext>
+                </local:PostflopSizingHud>
+                <local:PostflopSizingHud Margin="5, 0, 5, 0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1, 0, 1, 1"
+                                         Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:PostflopSizingHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopSizingTableStates[2]"/>
+                    </local:PostflopSizingHud.DataContext>
+                </local:PostflopSizingHud>
+                <local:PostflopSizingHud Margin="5, 0, 5, 0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1, 0, 1, 1"
+                                         Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:PostflopSizingHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopSizingTableStates[3]"/>
+                    </local:PostflopSizingHud.DataContext>
+                </local:PostflopSizingHud>
+                <local:PostflopSizingHud Margin="5, 0, 5, 0" VerticalAlignment="Top" BorderBrush="Black" BorderThickness="1, 0, 1, 1"
+                                         Visibility="{Binding Visible, FallbackValue=Collapsed, Converter={StaticResource BoolToHiddenVisibilityConverter}, UpdateSourceTrigger=PropertyChanged}">
+                    <local:PostflopSizingHud.DataContext>
+                        <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:HudsPanel}}" Path="DataContext.PostflopSizingTableStates[4]"/>
+                    </local:PostflopSizingHud.DataContext>
+                </local:PostflopSizingHud>
             </StackPanel>
         </Grid>
         <local:PreflopBtnHud Grid.Column="1" VerticalAlignment="Top" Margin="0, 5, 5, 5" 

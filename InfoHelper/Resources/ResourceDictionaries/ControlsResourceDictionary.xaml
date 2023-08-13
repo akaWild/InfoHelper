@@ -259,6 +259,12 @@
     <SolidColorBrush x:Key="HandsForeground">White</SolidColorBrush>
     <SolidColorBrush x:Key="HandsBackground">Blue</SolidColorBrush>
 
+    <!--Postflop sizing panel-->
+    <SolidColorBrush x:Key="PostflopSizingRangeForeground">Black</SolidColorBrush>
+    <SolidColorBrush x:Key="PostflopSizingRangeBackground">SandyBrown</SolidColorBrush>
+
+    <SolidColorBrush x:Key="DefaultPostflopSizingBackground">Beige</SolidColorBrush>
+
     <!--Other panels-->
     <SolidColorBrush x:Key="DefaultDataCellForeground">Black</SolidColorBrush>
     <SolidColorBrush x:Key="GtoDataCellForeground">Blue</SolidColorBrush>

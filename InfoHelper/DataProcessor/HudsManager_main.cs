@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
-using System.Runtime.InteropServices.ComTypes;
 using System.Text.RegularExpressions;
 using GameInformationUtility;
 using HandUtility;
@@ -174,6 +173,12 @@ namespace InfoHelper.DataProcessor
 
                     _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
                     _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.Visible = false;
+
+                    _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopSizingTableStates[1].Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopSizingTableStates[2].Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopSizingTableStates[3].Visible = false;
+                    _vmMain.HudsParentStates[i].PostflopSizingTableStates[4].Visible = false;
                 }
                 else
                 {
@@ -908,6 +913,87 @@ namespace InfoHelper.DataProcessor
                         }
                     }
 
+                    if (selectedCell == null || selectedCell.Round == 1)
+                    {
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].Visible = false;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[1].Visible = false;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[2].Visible = false;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[3].Visible = false;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[4].Visible = false;
+                    }
+                    else
+                    {
+                        if(selectedCell.CellData is not PostflopData postflopData)
+                            throw new Exception($"Cell {selectedCell.Name} has wrong data format");
+
+                        (int sampleMg, float evMg, float evDeltaMg) = GetPostflopSizingData((PostflopHandsGroup)postflopData.MainGroup);
+
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].Visible = true;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].LowBound = float.MinValue;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].UpperBound = float.MaxValue;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].Sample = sampleMg;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].Ev = evMg;
+                        _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].EvDelta = evDeltaMg;
+
+                        if (selectedCell.BetRanges == null)
+                        {
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[1].Visible = false;
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[2].Visible = false;
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[3].Visible = false;
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[4].Visible = false;
+                        }
+                        else
+                        {
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[1].Visible = selectedCell.BetRanges.Length > 0;
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[2].Visible = selectedCell.BetRanges.Length > 1;
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[3].Visible = selectedCell.BetRanges.Length > 2;
+                            _vmMain.HudsParentStates[i].PostflopSizingTableStates[4].Visible = selectedCell.BetRanges.Length > 3;
+
+                            HandsGroupBase[] subGroups = postflopData.SubGroups;
+
+                            for (int j = 0; j < selectedCell.BetRanges.Length; j++)
+                            {
+                                _vmMain.HudsParentStates[i].PostflopSizingTableStates[j + 1].LowBound = selectedCell.BetRanges[j].LowBound;
+                                _vmMain.HudsParentStates[i].PostflopSizingTableStates[j + 1].UpperBound = selectedCell.BetRanges[j].UpperBound;
+
+                                (int sampleSg, float evSg, float evDeltaSg) = GetPostflopSizingData((PostflopHandsGroup)subGroups[j]);
+
+                                _vmMain.HudsParentStates[i].PostflopSizingTableStates[j + 1].Sample = sampleSg;
+                                _vmMain.HudsParentStates[i].PostflopSizingTableStates[j + 1].Ev = evSg;
+                                _vmMain.HudsParentStates[i].PostflopSizingTableStates[j + 1].EvDelta = evDeltaSg;
+                            }
+                        }
+
+                        (int, float, float) GetPostflopSizingData(PostflopHandsGroup phg)
+                        {
+                            int sample = 0;
+
+                            float ev = 0, evDelta = float.NaN;
+
+                            sample = phg.Hands.Select(v => (int)v).Sum();
+
+                            if (sample > 0)
+                            {
+                                ev = (float)phg.AccumulatedEv / sample;
+
+                                if (ev > 0)
+                                {
+                                    float value = float.NaN;
+
+                                    if (!float.IsNaN(phg.GtoValue))
+                                        value = phg.GtoValue;
+                                    else if (!float.IsNaN(phg.DefaultValue))
+                                        value = phg.DefaultValue;
+
+                                    if (!float.IsNaN(value))
+                                        evDelta = ev - value;
+                                }
+                            }
+
+                            return (sample, ev, evDelta);
+                        }
+                    }
+
                     if (missedCell == null || Regex.IsMatch(missedCell.Name, @"Fold|FCB|Fv|_F_F|_F_T|_F_R"))
                     {
                         _vmMain.HudsParentStates[i].PreflopMatrixAltState.Visible = false;
@@ -969,6 +1055,12 @@ namespace InfoHelper.DataProcessor
 
                 _vmMain.HudsParentStates[i].PostflopHandsPanelState.UpdateBindings();
                 _vmMain.HudsParentStates[i].PostflopHandsPanelAltState.UpdateBindings();
+
+                _vmMain.HudsParentStates[i].PostflopSizingTableStates[0].UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopSizingTableStates[1].UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopSizingTableStates[2].UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopSizingTableStates[3].UpdateBindings();
+                _vmMain.HudsParentStates[i].PostflopSizingTableStates[4].UpdateBindings();
             }
 
             _vmMain.GtoParentState.Error = gc.Error != string.Empty ? null : gc.GtoError;
@@ -1029,6 +1121,12 @@ namespace InfoHelper.DataProcessor
                 vmHudsParent.PreflopMatrixAltState.Visible = false;
                 vmHudsParent.PostflopHandsPanelAltState.Visible = false;
 
+                vmHudsParent.PostflopSizingTableStates[0].Visible = false;
+                vmHudsParent.PostflopSizingTableStates[1].Visible = false;
+                vmHudsParent.PostflopSizingTableStates[2].Visible = false;
+                vmHudsParent.PostflopSizingTableStates[3].Visible = false;
+                vmHudsParent.PostflopSizingTableStates[4].Visible = false;
+
                 vmHudsParent.NameState.UpdateBindings();
                 vmHudsParent.ActionsState.UpdateBindings();
 
@@ -1057,6 +1155,12 @@ namespace InfoHelper.DataProcessor
 
                 vmHudsParent.PostflopHandsPanelState.UpdateBindings();
                 vmHudsParent.PostflopHandsPanelAltState.UpdateBindings();
+
+                vmHudsParent.PostflopSizingTableStates[0].UpdateBindings();
+                vmHudsParent.PostflopSizingTableStates[1].UpdateBindings();
+                vmHudsParent.PostflopSizingTableStates[2].UpdateBindings();
+                vmHudsParent.PostflopSizingTableStates[3].UpdateBindings();
+                vmHudsParent.PostflopSizingTableStates[4].UpdateBindings();
             }
 
             _vmMain.GtoParentState.Error = string.Empty;

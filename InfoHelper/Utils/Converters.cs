@@ -534,4 +534,145 @@ namespace InfoHelper.Utils
             throw new NotImplementedException();
         }
     }
+
+    public class PostflopSizingRangeCellConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            float lowBound = (float)values[0], upperBound = (float)values[1];
+
+            if (Math.Abs(lowBound - float.MinValue) < 0.01 && Math.Abs(upperBound - float.MaxValue) < 0.01)
+                return "All";
+
+            string output = Math.Abs(lowBound - float.MinValue) < 0.01 ? "(-∞;" : $"[{lowBound.ToString(CultureInfo.InvariantCulture)};";
+
+            output += Math.Abs(upperBound - float.MaxValue) < 0.01 ? "+∞)" : $"{upperBound.ToString(CultureInfo.InvariantCulture)})";
+
+            return output;
+        }
+
+        public object[] ConvertBack(object values, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class PostflopSizingSampleCellConverter : IValueConverter
+    {
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            int sample = (int)value;
+
+            string output = "---";
+
+            if (sample > 0)
+                output = sample >= 100 ? "++" : $"{sample}";
+
+            return output;
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class PostflopSizingEvCellConverter : IMultiValueConverter
+    {
+        public object Convert(object[] values, Type targetType, object parameter, CultureInfo culture)
+        {
+            float ev = (float)values[0], evDelta = (float)values[1];
+
+            string output = "---";
+
+            if (ev > 0)
+            {
+                output = $"{Math.Round(ev, 1).ToString(CultureInfo.InvariantCulture)}";
+
+                if(!float.IsNaN(evDelta))
+                    output += $" ({Math.Round(evDelta, 1).ToString("+0.#;-0.#", CultureInfo.InvariantCulture)})";
+            }
+
+            return output;
+        }
+
+        public object[] ConvertBack(object values, Type[] targetTypes, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class PostflopSizingEvForegroundConverter : IValueConverter
+    {
+        private SolidColorBrush[] _evBrushesList;
+        private SolidColorBrush _evDefaultBrush;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationForegroundBrushes");
+            _evDefaultBrush ??= (SolidColorBrush)Application.Current.TryFindResource("DefaultGeneralForegroundBrush");
+
+            float evDelta = (float)value;
+
+            if (float.IsNaN(evDelta))
+                return _evDefaultBrush;
+
+            if (_evBrushesList == null)
+                throw new Exception("Ev brushes were not found");
+
+            if (_evBrushesList.Length % 2 != 0)
+                throw new Exception("Ev brushes list contains odd number of elements");
+
+            bool straightOrder = evDelta < 0;
+
+            int index = (int)Math.Round(Math.Abs(evDelta));
+
+            if (index >= _evBrushesList.Length / 2)
+                index = _evBrushesList.Length / 2 - 1;
+
+            return straightOrder ? _evBrushesList[index] : _evBrushesList[new Index(index + 1, true)];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    public class PostflopSizingEvBackgroundConverter : IValueConverter
+    {
+        private SolidColorBrush[] _evBrushesList;
+        private SolidColorBrush _evDefaultBrush;
+
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            _evBrushesList ??= (SolidColorBrush[])Application.Current.TryFindResource("DeviationBackgroundBrushes");
+            _evDefaultBrush ??= (SolidColorBrush)Application.Current.TryFindResource("DefaultGeneralBackgroundBrush");
+
+            float evDelta = (float)value;
+
+            if (float.IsNaN(evDelta))
+                return _evDefaultBrush;
+
+            if (_evBrushesList == null)
+                throw new Exception("Ev brushes were not found");
+
+            if (_evBrushesList.Length % 2 != 0)
+                throw new Exception("Ev brushes list contains odd number of elements");
+
+            bool straightOrder = evDelta < 0;
+
+            int index = (int)Math.Round(Math.Abs(evDelta));
+
+            if (index >= _evBrushesList.Length / 2)
+                index = _evBrushesList.Length / 2 - 1;
+
+            return straightOrder ? _evBrushesList[index] : _evBrushesList[new Index(index + 1, true)];
+        }
+
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
+    }
 }

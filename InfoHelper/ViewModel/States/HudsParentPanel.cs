@@ -18,6 +18,15 @@
 
         public ViewModelStatsHud OopCaller4PreflopHudState { get; } = new ViewModelStatsHud();
 
+        public PostflopSizingTableState[] PostflopSizingTableStates { get; } = new PostflopSizingTableState[5]
+        {
+            new PostflopSizingTableState(),
+            new PostflopSizingTableState(),
+            new PostflopSizingTableState(),
+            new PostflopSizingTableState(),
+            new PostflopSizingTableState()
+        };
+
         public ViewModelStatsHud SbPreflopHudState { get; } = new ViewModelStatsHud();
 
         public ViewModelStatsHud BbPreflopHudState { get; } = new ViewModelStatsHud();
