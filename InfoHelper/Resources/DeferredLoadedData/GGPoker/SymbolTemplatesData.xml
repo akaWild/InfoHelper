@@ -496,6 +496,503 @@
         </GgTemplate>
       </GgTemplates>
     </GgTableInfo>
+    <GgTableInfo TableType="Tile4">
+      <GgTemplates>
+        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile4\Pot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="355, 197, 62, 12">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction LightRRange="{195,239}" LightGRange="{160,192}" LightBRange="{39,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="t_pot_wb_tile4" Value="t"/>
+                <GgRecordItem ItemImageNameMask="o_pot_wb_tile4" Value="o"/>
+                <GgRecordItem ItemImageNameMask="ot_pot_wb_tile4" Value="t"/>
+                <GgRecordItem ItemImageNameMask="c_pot_wb_tile4" Value="c"/>
+                <GgRecordItem ItemImageNameMask="._pot_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_pot_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_pot_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_pot_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_pot_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_pot_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_pot_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_pot_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_pot_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_pot_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_pot_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_pot_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_pot_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="43_pot_wb_tile4" Value="43"/>
+                <GgRecordItem ItemImageNameMask="44_pot_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_pot_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_pot_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_pot_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_pot_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Tile4\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="330, 305, 52, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{192,240}" LightGRange="{192,240}" LightBRange="{192,240}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._rpot_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_rpot_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_rpot_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_rpot_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_rpot_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_rpot_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_rpot_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_rpot_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_rpot_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_rpot_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_rpot_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_rpot_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_rpot_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="43_rpot_wb_tile4" Value="43"/>
+                <GgRecordItem ItemImageNameMask="44_rpot_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_rpot_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_rpot_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_rpot_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_rpot_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="324, 128, 66, 14">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{212,255}" LightGRange="{45,50}" LightBRange="{45,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_stack_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_stack_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_stack_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_stack_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_stack_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_stack_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="580, 178, 66, 14">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{212,255}" LightGRange="{45,50}" LightBRange="{45,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_stack_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_stack_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_stack_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_stack_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_stack_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_stack_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="602, 385, 66, 14">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{212,255}" LightGRange="{45,50}" LightBRange="{45,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_stack_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_stack_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_stack_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_stack_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_stack_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_stack_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="321, 473, 72, 15">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{212,255}" LightGRange="{45,50}" LightBRange="{45,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_stack_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_stack_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_stack_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_stack_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_stack_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_stack_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="46, 385, 66, 14">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{212,255}" LightGRange="{45,50}" LightBRange="{45,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_stack_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_stack_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_stack_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_stack_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_stack_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_stack_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="68, 178, 66, 14">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{80,93}" LightGRange="{80,93}" LightBRange="{80,93}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="SittingOut"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{212,255}" LightGRange="{45,50}" LightBRange="{45,50}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem Value="AllIn"/>
+              </GgRecordItems>
+            </GgRecord>
+            <GgRecord>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._stack_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_stack_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_stack_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_stack_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_stack_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_stack_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_stack_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_stack_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_stack_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_stack_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_stack_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_stack_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_stack_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_stack_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_stack_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_stack_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_stack_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_stack_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="329, 176, 60, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_bet_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_bet_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_bet_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_bet_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_bet_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_bet_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_bet_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="493, 203, 60, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_bet_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_bet_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_bet_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_bet_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_bet_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_bet_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_bet_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="510, 325, 60, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_bet_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_bet_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_bet_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_bet_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_bet_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_bet_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_bet_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="329, 349, 60, 12">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_bet_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_bet_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_bet_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_bet_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_bet_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_bet_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_bet_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="142, 325, 60, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_bet_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_bet_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_bet_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_bet_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_bet_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_bet_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_bet_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="159, 203, 60, 11">
+          <GgRecords>
+            <GgRecord>
+              <GgRecordRestrictions>
+                <GgRecordRestriction  LightRRange="{180,255}" LightGRange="{180,255}" LightBRange="{180,255}"/>
+              </GgRecordRestrictions>
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="._bet_wb_tile4" Value="."/>
+                <GgRecordItem ItemImageNameMask="0_bet_wb_tile4" Value="0"/>
+                <GgRecordItem ItemImageNameMask="1_bet_wb_tile4" Value="1"/>
+                <GgRecordItem ItemImageNameMask="2_bet_wb_tile4" Value="2"/>
+                <GgRecordItem ItemImageNameMask="3_bet_wb_tile4" Value="3"/>
+                <GgRecordItem ItemImageNameMask="4_bet_wb_tile4" Value="4"/>
+                <GgRecordItem ItemImageNameMask="5_bet_wb_tile4" Value="5"/>
+                <GgRecordItem ItemImageNameMask="6_bet_wb_tile4" Value="6"/>
+                <GgRecordItem ItemImageNameMask="7_bet_wb_tile4" Value="7"/>
+                <GgRecordItem ItemImageNameMask="8_bet_wb_tile4" Value="8"/>
+                <GgRecordItem ItemImageNameMask="9_bet_wb_tile4" Value="9"/>
+                <GgRecordItem ItemImageNameMask="24_bet_wb_tile4" Value="24"/>
+                <GgRecordItem ItemImageNameMask="34_bet_wb_tile4" Value="34"/>
+                <GgRecordItem ItemImageNameMask="44_bet_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="54_bet_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="64_bet_wb_tile4" Value="64"/>
+                <GgRecordItem ItemImageNameMask="84_bet_wb_tile4" Value="84"/>
+                <GgRecordItem ItemImageNameMask="94_bet_wb_tile4" Value="94"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+      </GgTemplates>
+    </GgTableInfo>
     <GgTableInfo TableType="Tile6">
       <GgTemplates>
         <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile6\Pot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="319, 180, 54, 11">
