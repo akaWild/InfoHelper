@@ -17,6 +17,8 @@ namespace InfoHelper.ViewModel.DataEntities
 
         public GtoStrategy[] PocketStrategies { get; init; }
 
+        public double[] StrategySizings { get; init; }
+
         public GtoDiffs GtoDiffs { get; init; }
 
         public string Pocket { get; init; }

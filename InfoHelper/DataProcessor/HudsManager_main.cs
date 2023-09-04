@@ -100,6 +100,21 @@ namespace InfoHelper.DataProcessor
 
                     if (lastOppAggrActionCurrentRound != null)
                     {
+                        if (gc.Stacks[lastOppAggrActionCurrentRound.Player - 1] > 0 && gc.Stacks[gc.HeroPosition - 1] > gc.AmountToCall)
+                        {
+                            if (gc.Stacks[lastOppAggrActionCurrentRound.Player - 1] / gc.InitialStacks[lastOppAggrActionCurrentRound.Player - 1] <= 0.3)
+                            {
+                                double oppExtraAmount = gc.Stacks[lastOppAggrActionCurrentRound.Player - 1].Value;
+
+                                if (oppExtraAmount > gc.Stacks[gc.HeroPosition - 1] - gc.AmountToCall)
+                                    oppExtraAmount = gc.Stacks[gc.HeroPosition - 1].Value - gc.AmountToCall;
+
+                                float potOddsVsAllIn = (float)((gc.AmountToCall + oppExtraAmount) / (playerBets.Sum() + gc.AmountToCall + 2 * oppExtraAmount + gc.RoundPot));
+
+                                potOddsStr += $"/{Math.Round(potOddsVsAllIn * 100, 1).ToString(CultureInfo.InvariantCulture)}%";
+                            }
+                        }
+
                         if (gc.Round == 1)
                         {
                             if (lastHeroActionCurrentRound == null)

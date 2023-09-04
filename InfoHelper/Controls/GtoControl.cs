@@ -271,11 +271,15 @@ namespace InfoHelper.Controls
 
             //Legend
             double legendHeight = RenderSize.Height * LegendHeight / 2;
-            double legendWidth = RenderSize.Width * 0.2;
+            double legendWidth = RenderSize.Width * 0.25;
 
             strategies = gtoData.PocketStrategies;
 
+            double[] strategySizings = gtoData.StrategySizings;
+
             raisesCounter = 0;
+
+            float maxEv = strategies.Max(s => s.Ev);
 
             for (int i = 0; i < strategies.Length; i++)
             {
@@ -304,12 +308,38 @@ namespace InfoHelper.Controls
                 string outputText = $"{ConvertAction(strategies[i].ActionInfo.Action)}";
 
                 if (strategies[i].ActionInfo.Amount > 0)
-                    outputText += $"{Math.Round(strategies[i].ActionInfo.Amount, gtoData.Round == 1 ? 2 : 1).ToString(CultureInfo.InvariantCulture)}";
+                {
+                    int roundPrecision = 0;
 
-                if(strategies[i].Abs > 0)
-                    outputText += $" ({Math.Round(strategies[i].Ev, gtoData.Round == 1 ? 2 : 1).ToString(CultureInfo.InvariantCulture)})";
+                    if (gtoData.Round == 1)
+                        roundPrecision = 2;
+                    else
+                        roundPrecision = strategies[i].ActionInfo.Amount > 100 ? 0 : 1;
 
-                FormattedText text = new FormattedText(outputText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHeight - 17, _foregroundBrush, 1);
+                    outputText += $"{Math.Round(strategies[i].ActionInfo.Amount, roundPrecision).ToString(CultureInfo.InvariantCulture)}";
+                }
+
+                if (strategies[i].Abs > 0 && strategies[i].Ev < maxEv)
+                {
+                    int roundPrecision = 0;
+
+                    if (gtoData.Round == 1)
+                        roundPrecision = 2;
+                    else
+                        roundPrecision = maxEv - strategies[i].Ev > 10 ? 0 : 1;
+
+                    outputText += $" ({Math.Round(strategies[i].Ev - maxEv, roundPrecision).ToString(CultureInfo.InvariantCulture)})";
+                }
+
+                if (strategySizings != null && strategySizings[i] > 0)
+                {
+                    if(Math.Abs(strategySizings[i] - double.MaxValue) < 0.01)
+                        outputText += " AI";
+                    else
+                        outputText += $" {Math.Round(strategySizings[i] * 100).ToString(CultureInfo.InvariantCulture)}%";
+                }
+
+                FormattedText text = new FormattedText(outputText, CultureInfo.InvariantCulture, FlowDirection.LeftToRight, _typeFace, legendHeight - 15.5, _foregroundBrush, 1);
 
                 Point textLocation = new Point(legendRect.X + xIndent, legendRect.Y + legendRect.Height / 2 - text.Height / 2);
 
@@ -318,7 +348,7 @@ namespace InfoHelper.Controls
 
             //Legend hand
             double legendHandHeight = RenderSize.Height * LegendHeight;
-            double legendHandWidth = RenderSize.Width * 0.4;
+            double legendHandWidth = RenderSize.Width * 0.25;
 
             Rect legendHandRect = new Rect(RenderSize.Width - legendHandWidth, headerHeight + bodyHeight, legendHandWidth, legendHandHeight);
 

@@ -496,6 +496,18 @@ namespace InfoHelper.DataProcessor
                     handStrategies[Common.PioRangesMask[handIndex]] = strategies;
                 }
 
+                double[] strategySizings = new double[destNode.ChildNodes.Length];
+
+                for (int i = 0; i < destNode.ChildNodes.Length; i++)
+                {
+                    int heroBet = destNode.ChildNodes[i].Bets[destNode.ChildNodes[i].Position], oppBet = destNode.ChildNodes[i].Bets[destNode.ChildNodes[i].Position == 1 ? 0 : 1];
+
+                    int betDiff = oppBet - heroBet;
+
+                    if (destNode.ChildNodes[i].Amount > betDiff)
+                        strategySizings[i] = destNode.ChildNodes[i].IsAllIn ? double.MaxValue : ((double)destNode.ChildNodes[i].Amount - betDiff) / (destNode.ChildNodes[i].CurrentPot + betDiff);
+                }
+
                 for (int i = 0; i < Common.HoleCards.Length; i++)
                 {
                     string hand = Common.HoleCards[i];
@@ -575,6 +587,7 @@ namespace InfoHelper.DataProcessor
                     },
                     GtoStrategyContainer = gtoStrategyContainer,
                     PocketStrategies = pocketStrategies,
+                    StrategySizings = strategySizings,
                     Pocket = pocket,
                     PocketRender = pocketRender,
                     Title = title,
