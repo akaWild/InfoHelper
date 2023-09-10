@@ -3,7 +3,7 @@
   <GgTables>
     <GgTableInfo TableType="Default">
       <GgTemplates>
-        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Default\Pot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="425, 229, 70, 15">
+        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Default\Pot" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="425, 229, 70, 15">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -37,7 +37,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Default\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="392, 358, 66, 14">
+        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Default\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="392, 358, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -67,7 +67,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="389, 147, 70, 17">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="389, 147, 70, 17">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -109,7 +109,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="695, 207, 70, 17">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="695, 207, 70, 17">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -151,7 +151,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="721, 454, 70, 17">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="721, 454, 70, 17">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -193,7 +193,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="385, 559, 79, 18">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="385, 559, 79, 18">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -235,7 +235,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="57, 454, 70, 17">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="57, 454, 70, 17">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -277,7 +277,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="84, 207, 70, 17">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Default\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="84, 207, 70, 17">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -320,7 +320,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="393, 203, 70, 15">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="393, 203, 70, 15">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -349,7 +349,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="589, 236, 70, 14">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="589, 236, 70, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -378,7 +378,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="609, 381, 70, 15">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="609, 381, 70, 15">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -407,7 +407,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="393, 411, 70, 15">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="393, 411, 70, 15">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -436,7 +436,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="170, 381, 70, 15">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="170, 381, 70, 15">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -465,7 +465,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="190, 236, 70, 14">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Default\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="190, 236, 70, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -498,7 +498,7 @@
     </GgTableInfo>
     <GgTableInfo TableType="Tile4">
       <GgTemplates>
-        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile4\Pot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="355, 197, 62, 12">
+        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile4\Pot" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="355, 197, 62, 12">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -533,7 +533,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Tile4\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="330, 305, 52, 11">
+        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Tile4\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="330, 305, 52, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -555,7 +555,9 @@
                 <GgRecordItem ItemImageNameMask="34_rpot_wb_tile4" Value="34"/>
                 <GgRecordItem ItemImageNameMask="43_rpot_wb_tile4" Value="43"/>
                 <GgRecordItem ItemImageNameMask="44_rpot_wb_tile4" Value="44"/>
+                <GgRecordItem ItemImageNameMask="50_rpot_wb_tile4" Value="50"/>
                 <GgRecordItem ItemImageNameMask="54_rpot_wb_tile4" Value="54"/>
+                <GgRecordItem ItemImageNameMask="60_rpot_wb_tile4" Value="60"/>
                 <GgRecordItem ItemImageNameMask="64_rpot_wb_tile4" Value="64"/>
                 <GgRecordItem ItemImageNameMask="84_rpot_wb_tile4" Value="84"/>
                 <GgRecordItem ItemImageNameMask="94_rpot_wb_tile4" Value="94"/>
@@ -564,7 +566,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="324, 128, 66, 14">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="324, 128, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -606,7 +608,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="580, 178, 66, 14">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="580, 178, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -648,7 +650,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="602, 385, 66, 14">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="602, 385, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -690,7 +692,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="321, 473, 72, 15">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="321, 473, 72, 15">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -732,7 +734,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="46, 385, 66, 14">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="46, 385, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -774,7 +776,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="68, 178, 66, 14">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile4\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="68, 178, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -817,7 +819,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="329, 176, 60, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="329, 176, 60, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -846,7 +848,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="493, 203, 60, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="493, 203, 60, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -875,7 +877,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="510, 325, 60, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="510, 325, 60, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -904,7 +906,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="329, 349, 60, 12">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="329, 349, 60, 12">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -933,7 +935,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="142, 325, 60, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="142, 325, 60, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -962,7 +964,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="159, 203, 60, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile4\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="159, 203, 60, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -995,7 +997,7 @@
     </GgTableInfo>
     <GgTableInfo TableType="Tile6">
       <GgTemplates>
-        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile6\Pot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="319, 180, 54, 11">
+        <GgTemplate TemplateName="Pot" TemplatesFolder="Templates\Tile6\Pot" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="319, 180, 54, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1030,7 +1032,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Tile6\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="293, 277, 54, 10">
+        <GgTemplate TemplateName="RoundPot" TemplatesFolder="Templates\Tile6\RoundPot" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="293, 277, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1061,7 +1063,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="290, 118, 60, 13">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="290, 118, 60, 13">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1103,7 +1105,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="520, 163, 60, 13">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="520, 163, 60, 13">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1145,7 +1147,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="540, 349, 60, 13">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="540, 349, 60, 13">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1187,7 +1189,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="287, 428, 66, 14">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="287, 428, 66, 14">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1229,7 +1231,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="40, 349, 60, 13">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="40, 349, 60, 13">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1271,7 +1273,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="60, 163, 60, 13">
+        <GgTemplate TemplateName="Stack" TemplatesFolder="Templates\Tile6\Stack" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="60, 163, 60, 13">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1314,7 +1316,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 161, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 161, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1343,7 +1345,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="443, 185, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="443, 185, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1372,7 +1374,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="458, 295, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="458, 295, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1401,7 +1403,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 317, 54, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 317, 54, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1430,7 +1432,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="128, 295, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="128, 295, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1459,7 +1461,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0.05" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="143, 185, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="143, 185, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>

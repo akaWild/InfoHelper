@@ -2460,7 +2460,7 @@
         <!--Button V2-->
         <GgTemplate TemplateName="ButtonFoldV2" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
           <GgRecords>
-            <GgRecord Rectangle="466, 476, 24, 10">
+            <GgRecord Rectangle="466, 476, 23, 10">
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="btn_v2_fold_tile4" Value="Ok"/>
               </GgRecordItems>
@@ -2469,7 +2469,7 @@
         </GgTemplate>
         <GgTemplate TemplateName="ButtonCheckV2" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
           <GgRecords>
-            <GgRecord Rectangle="552, 476, 34, 10">
+            <GgRecord Rectangle="551, 476, 35, 10">
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="btn_v2_check_tile4" Value="Ok"/>
               </GgRecordItems>
@@ -2496,7 +2496,7 @@
         </GgTemplate>
         <GgTemplate TemplateName="ButtonBetV2" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
           <GgRecords>
-            <GgRecord Rectangle="651, 468, 19, 10">
+            <GgRecord Rectangle="650, 468, 19, 10">
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="btn_v2_bet_tile4" Value="Ok"/>
               </GgRecordItems>
@@ -2505,7 +2505,7 @@
         </GgTemplate>
         <GgTemplate TemplateName="ButtonRaiseV2" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
           <GgRecords>
-            <GgRecord Rectangle="638, 468, 45, 10">
+            <GgRecord Rectangle="637, 468, 45, 10">
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="btn_v2_raise_tile4" Value="Ok"/>
               </GgRecordItems>
