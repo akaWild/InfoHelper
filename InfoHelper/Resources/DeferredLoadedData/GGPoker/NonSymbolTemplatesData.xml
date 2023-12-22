@@ -2512,6 +2512,62 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
+
+        <!--Button V3-->
+        <GgTemplate TemplateName="ButtonFoldV3" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="466, 477, 24, 10">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v3_fold_tile4" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCheckV3" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="552, 477, 35, 10">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v3_check_tile4" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCheckCallV3" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="446, 477, 64, 10">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v3_checkcall_tile4" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonCallV3" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="558, 469, 21, 10">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v3_call_tile4" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonBetV3" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="651, 469, 19, 10">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v3_bet_tile4" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
+        <GgTemplate TemplateName="ButtonRaiseV3" TemplatesFolder="Templates\Tile4\Button" Position="0" Deviation="0" CompareMethod="Sequential">
+          <GgRecords>
+            <GgRecord Rectangle="638, 469, 45, 10">
+              <GgRecordItems>
+                <GgRecordItem ItemImageNameMask="btn_v3_raise_tile4" Value="Ok"/>
+              </GgRecordItems>
+            </GgRecord>
+          </GgRecords>
+        </GgTemplate>
       </GgTemplates>
     </GgTableInfo>
     <GgTableInfo TableType="Tile6">
