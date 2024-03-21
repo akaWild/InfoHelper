@@ -1036,7 +1036,7 @@
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
-                <GgRecordRestriction  LightRRange="{192,242}" LightGRange="{192,242}" LightBRange="{192,242}"/>
+                <GgRecordRestriction  LightRRange="{192,244}" LightGRange="{192,244}" LightBRange="{192,244}"/>
               </GgRecordRestrictions>
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="._rpot_wb_tile6" Value="."/>
