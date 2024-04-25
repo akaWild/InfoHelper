@@ -1,21 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Text.Json;
-using System.Text.RegularExpressions;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Threading;
-using BitmapHelper;
+﻿using BitmapHelper;
 using GameInformationUtility;
 using HandUtility;
 using HoldemHand;
@@ -27,6 +10,17 @@ using InfoHelper.Windows;
 using PokerWindowsUtility;
 using ScreenParserUtility;
 using StatUtility;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Windows.Threading;
 using Application = System.Windows.Application;
 
 namespace InfoHelper.DataProcessor
@@ -196,9 +190,9 @@ namespace InfoHelper.DataProcessor
             {
                 bool retrieveSettingsResult = _settingsManager.RetrieveSettings();
 
-                if(retrieveSettingsResult)
+                if (retrieveSettingsResult)
                     _mainWindowState.ControlsState.ResetError();
-                else 
+                else
                     _mainWindowState.ControlsState.SetError(_settingsManager.Error, ErrorType.Settings);
             }
         }
@@ -268,7 +262,7 @@ namespace InfoHelper.DataProcessor
 
                     bool isHeroActing = false;
 
-                    if(!window.CaptionMatched)
+                    if (!window.CaptionMatched)
                         winState = window.IsFocused ? WindowState.WrongCaptionFront : WindowState.WrongCaptionBack;
                     else
                     {
@@ -290,10 +284,12 @@ namespace InfoHelper.DataProcessor
                         if (_cursorPosition != null)
                             mouseRect = new Rectangle(_cursorPosition.Value.X - window.Position.X, _cursorPosition.Value.Y - window.Position.Y, Shared.MouseCursor.Width, Shared.MouseCursor.Height);
 
+                        using BitmapDecorator bmpScreenParser = new BitmapDecorator(bmpDecor.Copy());
+
                         IScreenParser screenParser = (IScreenParser)_screenParserType.GetConstructor(new[]
                         {
                             typeof(BitmapDecorator), typeof(Rectangle), typeof(Rectangle), typeof(string), typeof(int), typeof(int)
-                        }).Invoke(new object[] { bmpDecor, window.Position, mouseRect, window.TableSize.ToString(), Shared.CardBackIndex, Shared.DeckIndex });
+                        }).Invoke(new object[] { bmpScreenParser, window.Position, mouseRect, window.TableSize.ToString(), Shared.CardBackIndex, Shared.DeckIndex });
 
                         ScreenParserData screenData = screenParser.ParseWindow();
 
@@ -330,7 +326,7 @@ namespace InfoHelper.DataProcessor
 
                             #endregion
 
-                            _ = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1), 
+                            _ = (bool)_analyzeParserData.Invoke(null, new object[] { screenData, Math.Round((double)window.PokerWindowInfo.SmallBlind / (double)window.PokerWindowInfo.BigBlind, 1),
                                 winContextInfo.GameContext });
 
                             PokerRoomManager.ProcessData(window, screenData, bmpDecor);
@@ -398,7 +394,7 @@ namespace InfoHelper.DataProcessor
                                 foregroundGameContext = winContextInfo.GameContext;
                         }
 
-                        if(regionsOverlapped)
+                        if (regionsOverlapped)
                             winState = window.IsFocused ? WindowState.ErrorFront : WindowState.ErrorBack;
                         else
                             winState = window.IsFocused ? WindowState.OkFront : WindowState.OkBack;
@@ -422,7 +418,7 @@ namespace InfoHelper.DataProcessor
 
                     for (int i = 0; i < statSets.Length; i++)
                     {
-                        if(i == foregroundGameContext.HeroPosition - 1 || !foregroundGameContext.IsPlayerConfirmed[i])
+                        if (i == foregroundGameContext.HeroPosition - 1 || !foregroundGameContext.IsPlayerConfirmed[i])
                             continue;
 
                         statSets[i] = _statManager.GetPlayer(foregroundGameContext.Players[i]);
@@ -506,7 +502,7 @@ namespace InfoHelper.DataProcessor
             {
                 _cursorPosition = null;
 
-                lock(_winContextLock)
+                lock (_winContextLock)
                     _winContextInfos = new List<WindowContextInfo>();
 
                 _hudsManager.ResetControls();
