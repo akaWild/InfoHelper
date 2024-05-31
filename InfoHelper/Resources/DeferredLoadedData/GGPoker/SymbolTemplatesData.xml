@@ -1316,7 +1316,7 @@
           </GgRecords>
         </GgTemplate>
 
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 161, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="1" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 159, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1345,7 +1345,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="443, 185, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="2" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="443, 181, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1374,7 +1374,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="458, 295, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="3" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="465, 294, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1403,7 +1403,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 317, 54, 11">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="4" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="296, 316, 54, 11">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1432,7 +1432,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="128, 295, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="5" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="121, 294, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
@@ -1461,7 +1461,7 @@
             </GgRecord>
           </GgRecords>
         </GgTemplate>
-        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="143, 185, 54, 10">
+        <GgTemplate TemplateName="Bet" TemplatesFolder="Templates\Tile6\Bet" Position="6" ApplyOtsu="true" OtsuErrorTolerance="0" SplitSymbols="true" ApplyThinning="true" ApplyTransform="true" CompareMethod="Sequential" Rectangle="143, 181, 54, 10">
           <GgRecords>
             <GgRecord>
               <GgRecordRestrictions>
