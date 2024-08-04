@@ -3167,7 +3167,7 @@
         <!--Dealer-->
         <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="1" Deviation="30" CompareMethod="Sequential">
           <GgRecords>
-            <GgRecord Rectangle="274, 142, 2, 2">
+            <GgRecord Rectangle="291, 144, 2, 2">
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="1_dlr_tile6" Value="Ok"/>
               </GgRecordItems>
@@ -3194,7 +3194,7 @@
         </GgTemplate>
         <GgTemplate TemplateName="Dealer" TemplatesFolder="Templates\Tile6\Dealer" Position="4" Deviation="30" CompareMethod="Sequential">
           <GgRecords>
-            <GgRecord Rectangle="375, 335, 2, 2">
+            <GgRecord Rectangle="278, 332, 2, 2">
               <GgRecordItems>
                 <GgRecordItem ItemImageNameMask="4_dlr_tile6" Value="Ok"/>
               </GgRecordItems>
